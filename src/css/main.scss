@@ -1,0 +1,19 @@
+// 1. Configuration and helpers
+@import 'utils/variables', 'utils/mixins';
+
+// 2. Vendors(third party related)
+// @import 'vendors/normalize';
+
+// 3. Base stuff
+@import 'base/reset', 'base/typography';
+
+// 4. Layout-related sections
+@import 'layout/header';
+@import 'layout/footer';
+
+// 5. Components
+@import 'components/button', 'components/input', 'components/select', 'components/cookie';
+
+// 6. Page-specific styles
+@import 'pages/index', 'pages/about', 'pages/product',
+'pages/ecosystem', 'pages/contact', 'pages/success', 'pages/brandStory';

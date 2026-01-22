@@ -1,0 +1,115 @@
+.cookie-container {
+    width: 80vw;
+    max-width: 1440px;
+    padding: 28px;
+    position: fixed;
+    bottom: 12px;
+    background-color: white;
+    border-radius: 16px;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+        width: 80vw;
+    }
+
+    @media (max-width: 768px) {
+        width: 80vw;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .see-more {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 8px 0;
+        }
+    }
+
+    .content {
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 16px;
+        line-height: 20.86px;
+
+        @media (max-width: 768px) {
+            overflow: hidden;
+            white-space: normal;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+
+            &.is-see-all {
+                display: -webkit-box;
+                -webkit-box-orient: initial;
+                -webkit-line-clamp: 0 !important;
+            }
+        }
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 12px;
+
+        .inner {
+            width: 40%;
+            display: flex;
+
+            @media (max-width: 1024px) and (min-width: 769px) {
+                width: 60%;
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        .btn {
+            margin-left: 12px;
+            padding: 10px 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+
+            @media (max-width: 768px) {
+                padding: 10px 0;
+                margin-left: 0;
+            }
+        }
+
+        .accept {
+            background-color: #FE8B05;
+            color: white;
+            border-radius: 6px;
+            font-weight: 800;
+            width: 65%;
+        }
+
+        .check {
+            color: #7D939B;
+            border-radius: 6px;
+            font-weight: 400;
+            width: 35%;
+            border: 1px solid #7D939B;
+
+            @media (max-width: 768px) {
+                margin-left: 6px;
+            }
+        }
+
+
+    }
+}

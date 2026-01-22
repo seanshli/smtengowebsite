@@ -1,0 +1,349 @@
+/* 對齊 */
+@each $ta in $text-align {
+  .ta#{$ta} {
+    text-align: map-get($text-align-base, $ta);
+  }
+}
+
+@each $ta in $text-align {
+  @each $rwd in $rwd-breakpoints {
+    @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+      .ta-#{$rwd}-#{$ta} {
+        text-align: map-get($text-align-base, $ta);
+      }
+    }
+  }
+}
+
+/* background-color 背景顏色 */
+@each $color in $colors {
+  .bg-#{$color} {
+    background-color: map-get($text-color, $color);
+  }
+}
+
+@each $color in $gray-color {
+  .bg-#{$color} {
+    background-color: '#'+#{$color};
+  }
+}
+
+/* color 文字顏色 */
+@each $color in $colors {
+  .text-#{$color} {
+    color: map-get($text-color, $color);
+  }
+}
+
+@each $color in $gray-color {
+  .text-#{$color} {
+    color: '#'+#{$color};
+  }
+}
+
+@each $rwd in $rwd-breakpoints {
+  @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+    @each $color in $colors {
+      .text-#{$rwd}-#{$color} {
+        color: map-get($text-color, $color);
+      }
+    }
+    
+    @each $color in $gray-color {
+      .text-#{$rwd}-#{$color} {
+        color: '#'+#{$color};
+      }
+    }
+  }
+}
+
+/* font-size 文字大小 */
+@for $i from 1 through 150 {
+  .fz-#{$i} {
+    font-size: $fz-root * $i;
+  }
+}
+
+@each $d in $padding-direction {
+  @each $rwd in $rwd-breakpoints {
+    @for $i from 1 through 150 {
+      @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+        .fz-#{$rwd}-#{$i} {
+          font-size: $fz-root * $i;
+        }
+      }
+    }
+  }
+}
+
+/* line-height 文字行高 */
+@for $i from 1 through 150 {
+  .lh-#{$i} {
+    line-height: $fz-root * $i;
+  }
+}
+
+@each $d in $padding-direction {
+  @each $rwd in $rwd-breakpoints {
+    @for $i from 1 through 150 {
+      @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+        .lh-#{$rwd}-#{$i} {
+          line-height: $fz-root * $i;
+        }
+      }
+    }
+  }
+}
+
+/* font-style 斜體字 */
+.italic {
+  font-style: italic;
+}
+
+
+/* font-weight 文字粗細 */
+@for $i from 1 through 9 {
+  .fw-#{$i*100} {
+    font-weight: $i * 100;
+  }
+}
+
+@each $rwd in $rwd-breakpoints {
+  @for $i from 1 through 9 {
+    @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+      .fw-#{$rwd}-#{$i*100} {
+        font-weight: $i * 100;
+      }
+    }
+  }
+}
+
+@each $w in $fw-code {
+  .fw-#{$w} {
+    font-weight: map-get($font-weight-base, $w);
+  }
+}
+
+@each $w in $fw-code {
+  @each $rwd in $rwd-breakpoints {
+    @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+      .fw-#{$rwd}-#{$w} {
+        font-weight: map-get($font-weight-base, $w);
+      }
+    }
+  }
+}
+
+/* Spacing - margin */
+@for $i from 0 through 100 {
+  .m-#{$i*2} {
+    margin: $spacer * $i !important;
+  }
+
+  .mx-#{$i*2} {
+    margin-left: $spacer * $i !important;
+    margin-right: $spacer * $i !important;
+  }
+
+  .my-#{$i*2} {
+    margin-top: $spacer * $i !important;
+    margin-bottom: $spacer * $i !important;
+  }
+}
+
+@each $d in $margin-direction {
+  @for $i from 0 through 100 {
+    .m#{$d}-#{$i*2} {
+      margin-#{map-get($margin-direction-base, $d)}: $spacer * $i !important;
+    }
+  }
+}
+
+@each $d in $margin-direction {
+  @each $rwd in $rwd-breakpoints {
+    @for $i from 0 through 100 {
+      @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+        .m-#{$rwd}-#{$i*2} {
+          margin: $spacer * $i !important;
+        }
+
+        .mx-#{$rwd}-#{$i*2} {
+          margin-left: $spacer * $i !important;
+          margin-right: $spacer * $i !important;
+        }
+
+        .my-#{$rwd}-#{$i*2} {
+          margin-top: $spacer * $i !important;
+          margin-bottom: $spacer * $i !important;
+        }
+
+        .m#{$d}-#{$rwd}-#{$i*2} {
+          margin-#{map-get($margin-direction-base, $d)}: $spacer * $i !important;
+        }
+      }
+    }
+  }
+}
+
+/* Spacing - padding */
+@for $i from 0 through 100 {
+  .p-#{$i*2} {
+    padding: $spacer * $i !important;
+  }
+
+  .px-#{$i*2} {
+    padding-left: $spacer * $i !important;
+    padding-right: $spacer * $i !important;
+  }
+
+  .py-#{$i*2} {
+    padding-top: $spacer * $i !important;
+    padding-bottom: $spacer * $i !important;
+  }
+}
+
+@each $d in $padding-direction {
+  @for $i from 0 through 100 {
+    .p#{$d}-#{$i*2} {
+      padding-#{map-get($padding-direction-base, $d)}: $spacer * $i !important;
+    }
+  }
+}
+
+@each $d in $padding-direction {
+  @each $rwd in $rwd-breakpoints {
+    @for $i from 0 through 100 {
+      @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+        .p-#{$rwd}-#{$i*2} {
+          padding: $spacer * $i !important;
+        }
+
+        .px-#{$rwd}-#{$i*2} {
+          padding-left: $spacer * $i !important;
+          padding-right: $spacer * $i !important;
+        }
+
+        .py-#{$rwd}-#{$i*2} {
+          padding-top: $spacer * $i !important;
+          padding-bottom: $spacer * $i !important;
+        }
+
+        .p#{$d}-#{$rwd}-#{$i*2} {
+          padding-#{map-get($padding-direction-base, $d)}: $spacer * $i !important;
+        }
+      }
+    }
+  }
+}
+
+/* Display */
+@each $d in $display {
+  .d-#{$d} {
+    display: $d;
+  }
+}
+
+@each $d in $display {
+  @each $rwd in $rwd-breakpoints {
+    @media (max-width:map-get($rwd-breakpoint-base, $rwd)) and (min-width:map-get($rwd-breakpoint-min, $rwd)) {
+      .d-#{$rwd}-#{$d} {
+        display: $d;
+      }
+    }
+  }
+}
+
+/* Position */
+@each $p in $position {
+  .pos-#{$p} {
+    position: map-get($position-base, $p);
+  }
+}
+
+@each $p in $position {
+  @each $rwd in $rwd-breakpoints {
+    @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+      .pos-#{$rwd}-#{$p} {
+        position: map-get($position-base, $p);
+      }
+    }
+  }
+}
+
+
+/* Flex */
+/* Flex Direction */
+@each $fd in $flex-direction {
+  .fd-#{$fd} {
+    flex-direction: $fd;
+  }
+}
+
+@each $fd in $flex-direction {
+  @each $rwd in $rwd-breakpoints {
+    @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+      .fd-#{$rwd}-#{$fd} {
+        flex-direction: $fd;
+      }
+    }
+  }
+}
+
+/* Flex Wrap */
+@each $fxw in $flex-wrap {
+  .fxw-#{$fxw} {
+    flex-wrap: map-get($flex-wrap-base, $fxw);
+  }
+}
+
+@each $fxw in $flex-wrap {
+  @each $rwd in $rwd-breakpoints {
+    @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+      .fxw-#{$rwd}-#{$fxw} {
+        flex-wrap: map-get($flex-wrap-base, $fxw);
+      }
+    }
+  }
+}
+
+/* justify-content */
+/* align-items */
+@each $jc in $justify-content {
+  .jc-#{$jc} {
+    justify-content: map-get($justify-content-base, $jc);
+  }
+
+  .ai-#{$jc} {
+    align-items: map-get($justify-content-base, $jc);
+  }
+
+  .as-#{$jc} {
+    align-self: map-get($justify-content-base, $jc);
+  }
+
+  .ac-#{$jc} {
+    align-content: map-get($justify-content-base, $jc);
+  }
+}
+
+@each $jc in $justify-content {
+  @each $rwd in $rwd-breakpoints {
+    @media (max-width:map-get($rwd-breakpoint-base, $rwd)) {
+      .jc-#{$rwd}-#{$jc} {
+        justify-content: map-get($justify-content-base, $jc);
+      }
+
+      .ai-#{$rwd}-#{$jc} {
+        align-items: map-get($justify-content-base, $jc);
+      }
+
+      .as-#{$rwd}-#{$jc} {
+        align-self: map-get($justify-content-base, $jc);
+      }
+
+      .ac-#{$rwd}-#{$jc} {
+        align-content: map-get($justify-content-base, $jc);
+      }
+    }
+  }
+}
