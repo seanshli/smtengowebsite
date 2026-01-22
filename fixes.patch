@@ -1,0 +1,241 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+--- .gitignore
++++ .gitignore
+@@ -12,3 +12,17 @@
+ # Built Visual Studio Code Extensions
+ *.vsix
+ 
++# macOS
++.DS_Store
++
++# Node
++node_modules/
++dist/
++
++# Logs
++npm-debug.log*
++yarn-debug.log*
++yarn-error.log*
++
++# Archives
++*.zip
+
+--- src/layout/header.vue
++++ src/layout/header.vue
+@@ -1,10 +1,8 @@
+ <template>
+   <header class="header">
+-    <a class="logo" href=" ">
+-      <router-link to="/">
++    <router-link class="logo" to="/">
+         <img class="logo-engo" src="../assets/logo.svg" alt="enGo Logo" />
+       </router-link>
+-    </a>
+     <nav class="menu-container">
+       <router-link to="/"
+         ><span class="home">{{ $t('header.home') }}</span></router-link
+@@ -41,12 +39,12 @@
+           <span class="link">{{ $t('header.product') }}</span>
+           <div class="dropdown-content">
+-            <router-link to="product?jump=oxygen"
++            <router-link :to="{ path: '/product', query: { jump: 'oxygen' } }"
+               ><span class="dropdown-link"
+                 >{{ $t('header.dropdownLink3') }}</span
+               ></router-link
+             >
+-            <router-link to="product?jump=oxygen1"
++            <router-link :to="{ path: '/product', query: { jump: 'oxygen1' } }"
+               ><span class="dropdown-link"
+                 >{{ $t('header.dropdownLink4') }}</span
+               ></router-link
+             >
+           </div>
+         </div>
+
+--- src/App.vue
++++ src/App.vue
+@@ -1,16 +1,16 @@
+ <script setup lang="ts">
+-import { RouterLink, RouterView } from 'vue-router'
++import { RouterView, useRoute } from 'vue-router'
+ import Header from '@/layout/header.vue'
+ import Footer from '@/layout/footer.vue'
+ import Cookie from '@/components/cookie.vue'
+-import { useRouter } from 'vue-router'
+ import { computed } from 'vue'
+ 
++const route = useRoute()
++
+ const isShowHeaderFooter = computed(() => {
+-  return window.location.pathname !== '/display'
++  return route.path !== '/display'
+ })
+ </script>
+ 
+ <template>
+   <Header v-if="isShowHeaderFooter"></Header>
+   <Cookie v-if="isShowHeaderFooter"></Cookie>
+   <RouterView />
+   <Footer v-if="isShowHeaderFooter"></Footer>
+ </template>
+
+--- src/router/index.ts
++++ src/router/index.ts
+@@ -1,14 +1,7 @@
+ import { createRouter, createWebHistory } from 'vue-router'
+-import HomeView from '@/views/index.vue'
+ 
+ const router = createRouter({
+   history: createWebHistory(import.meta.env.BASE_URL),
+   routes: [
+-    {
+-      path: '/:pathMatch(.*)*',
+-      name: 'Not Found',
+-      component: HomeView
+-    },
+     {
+       path: '/',
+       name: 'home',
+       component: () => import('@/views/index.vue')
+     },
+@@ -78,6 +71,12 @@
+       component: () => import('@/views/success.vue')
+     }
++    ,
++    {
++      path: '/:pathMatch(.*)*',
++      name: 'not-found',
++      component: () => import('@/views/NotFound.vue')
++    }
+   ]
+ })
+ 
+ export default router
+
+--- src/layout/footer.vue
++++ src/layout/footer.vue
+@@ -112,7 +112,7 @@
+ export default defineComponent({
+-  name: 'Header',
++  name: 'Footer',
+   setup() {
+     const selectedLanguage = ref('zh') // 預設語言
+ 
+     const changeLanguage = () => {
+
+--- src/components/cookie.vue
++++ src/components/cookie.vue
+@@ -10,13 +10,14 @@
+     <div class="cookie-container">
+       <div class="cookie">
+         <div class="btn accept" @click="accept">
+-          <span>{{ $t('cookie.accpet') }}</span>
++          <span>{{ $t('cookie.accept') }}</span>
+         </div>
+-        <div class="btn check">
+-          <span>{{ $t('cookie.check') }}</span>
+-        </div>
++        <a class="btn check" href="/privatePolicy.pdf" target="_blank" rel="noopener">
++          <span>{{ $t('cookie.check') }}</span>
++        </a>
+       </div>
+     </div>
+   </div>
+ </template>
+
+--- src/views/contact.vue
++++ src/views/contact.vue
+@@ -249,20 +249,22 @@
+ 
+     const getPlanOptions = async () => {
+       try {
+-        const response: any = await fetch(`${config.hostname}/service/WATER_SERVICE`, {
++        const response = await fetch(`${config.hostname}/service/WATER_SERVICE`, {
+           method: 'GET',
+           headers: { 'Content-Type': 'application/json' }
+         })
+ 
+-        if (response.status !== 200) {
++        if (!response.ok) {
+           handleError()
+           return
+         }
+ 
+-        planOptions.value = response.model.content
++        const json = await response.json()
++        planOptions.value = json?.model?.content ?? res.model.content
+       } catch (error) {
+         console.log(error)
+         handleError()
+       }
+     }
+ 
+-    // getPlanOptions()
++    getPlanOptions()
+
+--- src/views/NotFound.vue
++++ src/views/NotFound.vue
+@@ -0,0 +1,70 @@
++<template>
++  <section class="not-found">
++    <div class="container">
++      <h1>404</h1>
++      <p>Page not found</p>
++
++      <div class="actions">
++        <router-link to="/" class="btn primary">Back to Home</router-link>
++        <router-link to="/contact" class="btn">Contact Us</router-link>
++      </div>
++    </div>
++  </section>
++</template>
++
++<script setup lang="ts"></script>
++
++<style scoped lang="scss">
++.not-found {
++  min-height: 70vh;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  padding: 64px 16px;
++
++  .container {
++    text-align: center;
++  }
++
++  h1 {
++    font-size: 72px;
++    margin: 0 0 12px;
++    line-height: 1;
++  }
++
++  p {
++    font-size: 18px;
++    margin: 0 0 24px;
++  }
++
++  .actions {
++    display: flex;
++    gap: 12px;
++    justify-content: center;
++  }
++
++  .btn {
++    display: inline-flex;
++    align-items: center;
++    justify-content: center;
++    padding: 10px 16px;
++    border-radius: 8px;
++    border: 1px solid #ddd;
++    text-decoration: none;
++    font-weight: 600;
++  }
++
++  .primary {
++    border-color: #111;
++  }
++}
++</style>
