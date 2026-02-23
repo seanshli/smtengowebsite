@@ -165,6 +165,12 @@ const handleSearch = () => {
         const features = bestMatch.features[locale.value] || bestMatch.features.zh || bestMatch.features
         
         response = `**${name}**\n\n${specsLabel}: ${specs}\n${featuresLabel}: ${features}`
+        if (bestMatch.link) {
+          const fullLink = bestMatch.link.startsWith('http') 
+            ? bestMatch.link 
+            : `${window.location.origin}${bestMatch.link}`
+          response += `\n\n${t('chatbot.found_info')}\n${fullLink}`
+        }
         messages.value.push({ role: 'assistant', text: response })
       } else if (bestMatch.answer) {
         const lang = locale.value as string
