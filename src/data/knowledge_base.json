@@ -146,6 +146,26 @@
     ],
     "faqs": [
         {
+            "id": "contact_page",
+            "keywords": [
+                "聯絡我們",
+                "contact us",
+                "客服",
+                "諮詢"
+            ],
+            "link": "/contact"
+        },
+        {
+            "id": "showroom_booking",
+            "keywords": [
+                "展示間預約",
+                "預約展示間",
+                "book showroom",
+                "showroom reservation"
+            ],
+            "link": "/contact"
+        },
+        {
             "id": "showroom",
             "keywords": [
                 "showroom",
