@@ -255,13 +255,13 @@ export default defineComponent({
       
       console.log('data', data)
       try {
-        const response = await fetch(`${config.hostname}/contact-us`, {
+        const response = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         })
 
-        if (response.status !== 200) {
+        if (!response.ok) {
           handleError()
           return
         }
