@@ -3,7 +3,7 @@
     <div class="mission-section-image-container">
       <img
         class="mission-section-image"
-        src="../assets/images/technology.jpeg"
+        src="/images/technology.jpeg"
         alt="mission background technology"
       />
       <div class="image-gradient-overlay"></div>

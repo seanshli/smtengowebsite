@@ -2,7 +2,7 @@
   <header class="header">
     <a class="logo" href=" ">
       <router-link to="/">
-        <img class="logo-engo" src="../assets/logo.svg" alt="enGo Logo" />
+        <img class="logo-engo" src="/assets/logo.svg" alt="enGo Logo" />
       </router-link>
     </a>
     <nav class="menu-container">
@@ -23,6 +23,7 @@
           <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
           <router-link to="product?jump=oxygen">{{ $t('footer.secondLink') }}</router-link>
           <router-link to="product?jump=oxygen1">{{ $t('product.air_purifier.title') }}</router-link>
+          <router-link to="product?jump=packages">{{ $t('product.packages.tag') }}</router-link>
           
         </div>
       </div>
@@ -31,6 +32,8 @@
       -->
       
       <a @click="toMall">{{ $t('mallTitle') }}</a>
+      <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
+      <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
       <router-link to="/contact">{{ $t('contactTitle') }}</router-link>
       <select
         v-model="selectedLanguage"
@@ -41,6 +44,7 @@
         <option value="en">{{ $t('english') }}</option>
         <option value="zh">{{ $t('chinese') }}</option>
         <option value="fr">{{ $t('french') }}</option>
+        <option value="ja">{{ $t('japanese') }}</option>
       </select>
     </nav>
     <button class="menu-icon" @click="toggleMenu()">
@@ -51,7 +55,7 @@
   </header>
   <div class="collapsible-menu-container hidden">
     <button class="close-menu" @click="toggleMenu()">
-      <img class="close-menu-icon" src="../assets/images/close-line-icon.svg" alt="close menu" />
+      <img class="close-menu-icon" src="/images/close-line-icon.svg" alt="close menu" />
     </button>
     <nav class="collapsible-menu-nav">
       <div class="menu">
@@ -64,6 +68,7 @@
           <option value="en">{{ $t('english') }}</option>
           <option value="zh">{{ $t('chinese') }}</option>
           <option value="fr">{{ $t('french') }}</option>
+          <option value="ja">{{ $t('japanese') }}</option>
         </select>
 
         <router-link to="/">{{ $t('homeTitle') }}</router-link>
@@ -77,7 +82,10 @@
         <router-link to="/product" class="sublink">{{ $t('footer.firstLink') }}</router-link>
         <router-link to="product?jump=oxygen" class="sublink">{{ $t('footer.secondLink') }}</router-link>
         <router-link to="product?jump=oxygen1" class="sublink">{{ $t('product.air_purifier.title') }}</router-link>
+        <router-link to="product?jump=packages" class="sublink">{{ $t('product.packages.tag') }}</router-link>
         <a @click="toMall">{{ $t('mallTitle') }}</a>
+        <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
+        <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
         <router-link to="/contact">{{ $t('contactTitle') }}</router-link>
       </div>
     </nav>
@@ -90,12 +98,12 @@
 </style>
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { changeLocale, type LanguageType } from '../main'
+import { changeLocale, type LanguageType, i18n } from '../main'
 
 export default defineComponent({
   name: 'Header',
   setup() {
-    const selectedLanguage = ref<LanguageType>('zh')
+    const selectedLanguage = ref<LanguageType>(i18n.global.locale.value || 'zh')
 
     const toggleMenu = () => {
       const menu = document.querySelector('.collapsible-menu-container')

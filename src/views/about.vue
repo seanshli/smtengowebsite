@@ -20,7 +20,7 @@
         <div class="core-value-section-bg-container">
           <img
             class="core-value-section-bg"
-            src="../assets/images/family.jpeg"
+            src="/images/family.jpeg"
             alt="core value background"
           />
         </div>
@@ -30,7 +30,7 @@
       <div class="mission-section-image-container">
         <img
           class="mission-section-image"
-          src="../assets/images/technology.jpeg"
+          src="/images/technology.jpeg"
           alt="mission background technology"
         />
         <div class="image-gradient-overlay"></div>
@@ -73,7 +73,7 @@
             <div class="vision-number vision-number-red">01</div>
             <img
               class="vision-image"
-              src="../assets/images/business-model-icon.svg"
+              src="/images/business-model-icon.svg"
               alt="business model icon"
             />
             <div class="vision-text">{{ $t('vision1') }}</div>
@@ -82,38 +82,38 @@
             <div class="vision-number vision-number-light-blue">02</div>
             <img
               class="vision-image"
-              src="../assets/images/artificial-intelligence-ai-icon.svg"
+              src="/images/artificial-intelligence-ai-icon.svg"
               alt="artificial intelligence ai icon"
             />
             <div class="vision-text">{{ $t('vision2') }}</div>
           </div>
           <div class="vision-block">
             <div class="vision-number vision-number-blue">03</div>
-            <img class="vision-image" src="../assets/images/sharing-icon.svg" alt="branding icon" />
+            <img class="vision-image" src="/images/sharing-icon.svg" alt="branding icon" />
             <div class="vision-text">{{ $t('vision3') }}</div>
           </div>
           <div class="vision-block">
             <div class="vision-number vision-number-green">04</div>
             <img
               class="vision-image"
-              src="../assets/images/shelf-shelves-icon.svg"
+              src="/images/shelf-shelves-icon.svg"
               alt="shelves icon"
             />
             <div class="vision-text">{{ $t('vision4') }}</div>
           </div>
           <div class="vision-block">
             <div class="vision-number vision-number-yellow">05</div>
-            <img class="vision-image" src="../assets/images/iot-icon.svg" alt="iot icon" />
+            <img class="vision-image" src="/images/iot-icon.svg" alt="iot icon" />
             <div class="vision-text">{{ $t('vision5') }}</div>
           </div>
           <div class="vision-block">
             <div class="vision-number vision-number-red">06</div>
-            <img class="vision-image" src="../assets/images/engo-coin.svg" alt="enGo icon" />
+            <img class="vision-image" src="/images/engo-coin.svg" alt="enGo icon" />
             <div class="vision-text">{{ $t('vision6') }}</div>
           </div>
           <div class="vision-block">
             <div class="vision-number vision-number-light-blue">07</div>
-            <img class="vision-image" src="../assets/images/b2b2c.svg" alt="b2c framework icon" />
+            <img class="vision-image" src="/images/b2b2c.svg" alt="b2c framework icon" />
             <div class="vision-text">{{ $t('vision7') }}</div>
           </div>
         </div>

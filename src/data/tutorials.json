@@ -1,0 +1,241 @@
+[
+    {
+        "id": "individual",
+        "title": {
+            "zh": "個人用戶",
+            "en": "For Individuals",
+            "fr": "Pour les particuliers",
+            "ja": "個人ユーザー向け"
+        },
+        "description": {
+            "zh": "運用 AI 智慧家居解決方案，賦能您的日常生活。",
+            "en": "Empowering your daily life with AI-driven smart home solutions.",
+            "fr": "Améliorez votre quotidien grâce aux solutions de maison intelligente pilotées par IA.",
+            "ja": "AIを活用したスマートホームソリューションで、日常生活をより豊かに。"
+        },
+        "steps": [
+            {
+                "title": {
+                    "zh": "設定中樞",
+                    "en": "Setup Hub",
+                    "fr": "Configurer le concentrateur",
+                    "ja": "ハブのセットアップ"
+                },
+                "content": {
+                    "zh": "開箱並將您的 enGo AI 中樞連接到家庭網路。",
+                    "en": "Unbox and connect your enGo AI Hub to your home network.",
+                    "fr": "Déballez et connectez votre concentrateur enGo AI à votre réseau domestique.",
+                    "ja": "enGo AIハブを開封し、自宅のネットワークに接続します。"
+                }
+            },
+            {
+                "title": {
+                    "zh": "連接設備",
+                    "en": "Connect Devices",
+                    "fr": "Connecter les appareils",
+                    "ja": "デバイスの接続"
+                },
+                "content": {
+                    "zh": "同步您的照明、淨水器和空氣清淨機。",
+                    "en": "Sync your lighting, water purifier, and air cleaner.",
+                    "fr": "Synchronisez vos éclairages, votre purificateur d'eau et votre purificateur d'air.",
+                    "ja": "照明、浄水器、空気清浄機を同期させます。"
+                }
+            },
+            {
+                "title": {
+                    "zh": "語音控制",
+                    "en": "Voice Control",
+                    "fr": "Commande vocale",
+                    "ja": "音声操作"
+                },
+                "content": {
+                    "zh": "配置語音指令以實現無縫互動。",
+                    "en": "Configure voice commands for seamless interaction.",
+                    "fr": "Configurez les commandes vocales pour une interaction fluide.",
+                    "ja": "シームレスな操作のために音声コマンドを設定します。"
+                }
+            },
+            {
+                "title": {
+                    "zh": "套裝方案建議",
+                    "en": "Package Suggestion",
+                    "fr": "Suggestion de forfaits",
+                    "ja": "セットプランの提案"
+                },
+                "content": {
+                    "zh": "挑選適合您預算與需求的 [套裝方案](/product?jump=packages)。",
+                    "en": "Choose the [Package Plans](/product?jump=packages) that best fits your budget and needs.",
+                    "fr": "Choisissez les [Forfaits](/product?jump=packages) qui correspondent le mieux à votre budget et à vos besoins.",
+                    "ja": "ご予算やニーズに合わせた [セットプラン](/product?jump=packages) をお選びください。"
+                }
+            }
+        ]
+    },
+    {
+        "id": "designer",
+        "title": {
+            "zh": "室內設計師",
+            "en": "For Interior Designers",
+            "fr": "Pour les architectes d'intérieur",
+            "ja": "インテリアデザイナー向け"
+        },
+        "description": {
+            "zh": "為您的客戶將科技與美學完美結合。",
+            "en": "Integrating technology with aesthetics for your clients.",
+            "fr": "Intégrez la technologie à l'esthétique pour vos clients.",
+            "ja": "クライアントのために、テクノロジーと美学を融合。"
+        },
+        "steps": [
+            {
+                "title": {
+                    "zh": "設計規劃",
+                    "en": "Design Planning",
+                    "fr": "Planification de la conception",
+                    "ja": "デザイン計画"
+                },
+                "content": {
+                    "zh": "在早期設計階段納入智慧家居佈線。",
+                    "en": "Incorporate smart home wiring in your early design phase.",
+                    "fr": "Incorporez le câblage de la maison intelligente dès la phase de conception initiale.",
+                    "ja": "設計の初期段階でスマートホームの配線を組み込みます。"
+                }
+            },
+            {
+                "title": {
+                    "zh": "產品選擇",
+                    "en": "Product Selection",
+                    "fr": "Sélection de produits",
+                    "ja": "製品の選択"
+                },
+                "content": {
+                    "zh": "根據您的設計風格選擇合適的 enGo 模組。",
+                    "en": "Choose the right enGo modules for your design style.",
+                    "fr": "Choisissez les modules enGo adaptés à votre style de conception.",
+                    "ja": "デザインスタイルに合わせて最適なenGoモジュールを選択。"
+                }
+            },
+            {
+                "title": {
+                    "zh": "套裝方案建議",
+                    "en": "Package Suggestion",
+                    "fr": "Suggestion de forfaits",
+                    "ja": "セットプランの提案"
+                },
+                "content": {
+                    "zh": "為您的建案選擇最合算的 [套裝方案](/product?jump=packages)。",
+                    "en": "Choose the best value [Package Plans](/product?jump=packages) for your projects.",
+                    "fr": "Choisissez les meilleurs [Forfaits](/product?jump=packages) pour vos projets.",
+                    "ja": "プロジェクトに最適な [セットプラン](/product?jump=packages) を選択してください。"
+                }
+            }
+        ]
+    },
+    {
+        "id": "builder",
+        "title": {
+            "zh": "建商與合作夥伴",
+            "en": "For Builders & Partners",
+            "fr": "Pour les constructeurs et partenaires",
+            "ja": "建設業者・パートナー向け"
+        },
+        "description": {
+            "zh": "為大型專案標準化智慧家居基礎設施。",
+            "en": "Standardizing smart home infrastructure for large-scale projects.",
+            "fr": "Standardisez l'infrastructure de la maison intelligente pour les projets à grande échelle.",
+            "ja": "大規模プロジェクト向けに、スマートホームのインフラを標準化。"
+        },
+        "steps": [
+            {
+                "title": {
+                    "zh": "預先佈線",
+                    "en": "Pre-wiring",
+                    "fr": "Pré-câblage",
+                    "ja": "事前配線"
+                },
+                "content": {
+                    "zh": "在新建案中實施 enGo 就緒的基礎設施。",
+                    "en": "Implementation of enGo ready infrastructure in new builds.",
+                    "fr": "Mise en œuvre d'une infrastructure prête pour enGo dans les nouvelles constructions.",
+                    "ja": "新築物件にenGo対応のインフラを実装します。"
+                }
+            },
+            {
+                "title": {
+                    "zh": "整案管理",
+                    "en": "Fleet Management",
+                    "fr": "Gestion de flotte",
+                    "ja": "一括管理"
+                },
+                "content": {
+                    "zh": "透過 enGo 企業儀表板管理多個單元。",
+                    "en": "Manage multiple units via the enGo enterprise dashboard.",
+                    "fr": "Gérez plusieurs unités via le tableau de bord d'entreprise enGo.",
+                    "ja": "enGoエンタープライズダッシュボードで複数のユニットを管理。"
+                }
+            }
+        ],
+        "partners": [
+            {
+                "category": {
+                    "zh": "空氣機",
+                    "en": "Air Purifiers",
+                    "ja": "空気清浄機",
+                    "fr": "Purificateurs d'air"
+                },
+                "name": {
+                    "zh": "米多力",
+                    "en": "Medole",
+                    "ja": "米多力",
+                    "fr": "Medole"
+                },
+                "url": "https://www.medole.com.tw/list/hanging-hidden-air-duct-dehumidifier.htm"
+            },
+            {
+                "category": {
+                    "zh": "廚具",
+                    "en": "Kitchenware",
+                    "ja": "厨房機器",
+                    "fr": "Ustensiles de cuisine"
+                },
+                "name": {
+                    "zh": "大雅",
+                    "en": "Taya Kitchen",
+                    "ja": "大雅廚具",
+                    "fr": "Cuisine Taya"
+                },
+                "url": "https://www.tayakitchen.com.tw"
+            },
+            {
+                "category": {
+                    "zh": "功能櫃",
+                    "en": "Functional Cabinets",
+                    "ja": "機能的なキャビネット",
+                    "fr": "Armoires fonctionnelles"
+                },
+                "name": {
+                    "zh": "合野木業",
+                    "en": "He-Ye Wood",
+                    "ja": "合野木業",
+                    "fr": "Bois He-Ye"
+                },
+                "url": "https://www.he-ye.com/heye/f_f_map.aspx"
+            },
+            {
+                "category": {
+                    "zh": "能源管理",
+                    "en": "Energy Management",
+                    "ja": "エネルギー管理",
+                    "fr": "Gestion de l'énergie"
+                },
+                "name": {
+                    "zh": "嘉義達光電",
+                    "en": "LedaPlus",
+                    "ja": "嘉義達光電",
+                    "fr": "LedaPlus"
+                },
+                "url": "https://www.ledaplus.com.tw"
+            }
+        ]
+    }
+]

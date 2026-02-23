@@ -10,6 +10,10 @@
     h3 {
         font-size: 48px;
         letter-spacing: 0.15rem;
+
+        @media (max-width: 768px) {
+            font-size: 32px;
+        }
     }
 }
 
@@ -80,23 +84,114 @@
     }
 
     @media (max-width: 768px) {
-        padding-top: 10vh;
+        padding-top: 5vh;
         margin-left: 0px;
+        margin-bottom: 50px;
 
         .page-title {
             margin-left: 10%;
+
+            img {
+                max-width: 80%;
+            }
         }
 
         .section-second-title {
             margin-left: 10%;
             padding-top: 8px !important;
+            font-size: 1.2rem;
         }
 
         .pragraph-container {
             align-items: center;
+            padding: 0 10%;
+
+            p {
+                font-size: 0.95rem;
+                text-align: center;
+            }
         }
     }
 }
+
+// WHY enGo Section
+.why-engo-section {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: 200px;
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    .why-engo-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $brand-orange;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .why-engo-tagline-en {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .why-engo-tagline-zh {
+        font-size: 1.1rem;
+        color: #555;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .why-engo-benefits {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            font-size: 1.1rem;
+            color: #333;
+            padding: 10px 0;
+            line-height: 1.5;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 0;
+        margin: 20px 5%;
+        padding: 20px;
+        max-width: 90%;
+
+        .why-engo-title {
+            font-size: 1.5rem;
+        }
+
+        .why-engo-tagline-en {
+            font-size: 1.1rem;
+        }
+
+        .why-engo-tagline-zh {
+            font-size: 1rem;
+        }
+
+        .why-engo-benefits li {
+            font-size: 1rem;
+            padding: 8px 0;
+        }
+    }
+}
+
 
 .home-section-engo-icon-container {
     position: absolute;

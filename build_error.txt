@@ -1,0 +1,68 @@
+
+> smtengoweb@0.0.0 build-only
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+DEPRECATION WARNING: Sass's behavior for declarations that appear after nested
+rules will be changing to match the behavior specified by CSS in an upcoming
+version. To keep the existing behavior, move the declaration above the nested
+rule. To opt into the new behavior, wrap the declaration in `& {}`.
+
+More info: https://sass-lang.com/d/mixed-decls
+
+    ╷
+298 │ ┌         @media (max-width: 768px) {
+299 │ │             border: 3px solid #043655;
+300 │ │             border-radius: 16px;
+301 │ │             max-width: 300px;
+302 │ │             height: 300px;
+303 │ │             display: flex;
+304 │ │             flex-direction: column;
+305 │ │             justify-content: space-between;
+306 │ │         }
+    │ └─── nested rule
+... │
+308 │           background-color: rgba(255, 255, 255, 0.781);
+    │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ declaration
+    ╵
+    src/css/pages/_product.scss 308:9  @import
+    src/css/main.scss 18:39            root stylesheet
+
+✓ 76 modules transformed.
+x Build failed in 819ms
+error during build:
+[vite:css] [sass] Undefined variable.
+    ╷
+232 │         background: $brand-blue;
+    │                     ^^^^^^^^^^^
+    ╵
+  src/css/pages/_contact.scss 232:21  @import
+  src/views/contact.vue 2:9           root stylesheet
+file: /Users/seanli/web/smtengowebsite/src/views/contact.vue?vue&type=style&index=0&scoped=710bb7c2&lang.scss
+
+Error: Undefined variable.
+    ╷
+232 │         background: $brand-blue;
+    │                     ^^^^^^^^^^^
+    ╵
+  src/css/pages/_contact.scss 232:21  @import
+  src/views/contact.vue 2:9           root stylesheet
+
+Error: Undefined variable.
+    ╷
+232 │         background: $brand-blue;
+    │                     ^^^^^^^^^^^
+    ╵
+  src/css/pages/_contact.scss 232:21  @import
+  src/views/contact.vue 2:9           root stylesheet
+    at Object.wrapException (/Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:2161:43)
+    at /Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:83862:23
+    at _wrapJsFunctionForAsync_closure.$protected (/Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:4900:15)
+    at _wrapJsFunctionForAsync_closure.call$2 (/Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:35592:12)
+    at Object._asyncStartSync (/Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:4864:20)
+    at _EvaluateVisitor2.visitVariableExpression$body$_EvaluateVisitor0 (/Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:83868:16)
+    at _EvaluateVisitor2.visitVariableExpression$1 (/Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:83842:19)
+    at VariableExpression0.accept$1$1 (/Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:115917:22)
+    at VariableExpression0.accept$1 (/Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:115920:19)
+    at /Users/seanli/web/smtengowebsite/node_modules/sass/sass.dart.js:81927:41

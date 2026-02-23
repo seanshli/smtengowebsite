@@ -10,19 +10,27 @@
         <span class="subtitle link" @click="jumpToProduct">{{ $t('footer.secondLink') }}</span>
         <!-- 水維氧AI智慧淨水系 -->
         <span class="subtitle link" @click="jumpToProduct1">{{ $t('product.air_purifier.title') }}</span>
+        <!-- 使用教學 -->
+        <router-link to="/tutorial" class="subtitle link">{{ $t('footer.tutorial') }}</router-link>
+        <!-- 案例分享 -->
+        <router-link to="/cases" class="subtitle link">{{ $t('footer.cases') }}</router-link>
       </div>
       <div class="upper-right">
         <!-- 關於enGo -->
         <router-link to="/brand" class="title">{{ $t('footer.about') }}</router-link>
         <!-- 公司介紹 -->
         <router-link to="/" class="subtitle">{{ $t('footer.brand') }}</router-link>
+        <!-- 使用教學 -->
+        <router-link to="/tutorial" class="subtitle">{{ $t('footer.tutorial') }}</router-link>
+        <!-- 案例分享 -->
+        <router-link to="/cases" class="subtitle">{{ $t('footer.cases') }}</router-link>
         <!-- 聯絡我們 -->
         <router-link to="/contact" class="subtitle">{{ $t('footer.contactUs') }}</router-link>
       </div>
     </div>
     <div class="bottom">
       <div class="img-container">
-        <img class="logo_footer" src="../assets/images/footer_logo_white.png" />
+        <img class="logo_footer" src="/images/footer_logo_white.png" />
       </div>
       <div class="info-container">
         <div class="left">
@@ -40,27 +48,28 @@
           </div>
         </div>
         <div class="right">
+          <router-link to="/login" class="login-footer-link">{{ $t('login') || '登入' }}</router-link>
           <img
-            class="link_icon"
-            src="../assets/images/link_FB.png"
+            class="link_icon hover-scale"
+            src="/images/link_FB.png"
             alt="facebook link"
             @click="jumpToFB"
           />
           <img
-            class="link_icon"
-            src="../assets/images/link_Line.png"
+            class="link_icon hover-scale"
+            src="/images/link_Line.png"
             alt="line link"
             @click="jumpToLine"
           />
           <img
-            class="link_icon"
-            src="../assets/images/ig_icon.png"
+            class="link_icon hover-scale"
+            src="/images/ig_icon.png"
             alt="ig link"
             @click="jumpToIg"
           />
           <img
-            class="link_icon"
-            src="../assets/images/yt_icon.png"
+            class="link_icon hover-scale"
+            src="/images/yt_icon.png"
             alt="yt link"
             @click="jumpToYt"
           />
@@ -72,13 +81,13 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { changeLocale, type LanguageType } from '../main'
+import { changeLocale, type LanguageType, i18n } from '../main'
 import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'Header',
   setup() {
-    const selectedLanguage = ref<LanguageType>('zh')
+    const selectedLanguage = ref<LanguageType>(i18n.global.locale.value || 'zh')
     const router = useRouter()
 
     const toggleMenu = () => {
@@ -136,3 +145,32 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped lang="scss">
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.login-footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-right: 20px;
+  padding: 5px 15px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  transition: all 0.3s;
+  &:hover {
+    background: #fff;
+    color: #c46043;
+  }
+}
+
+.footer {
+  /* Existing styles are handled by main.scss or scoped here if any */
+}
+</style>

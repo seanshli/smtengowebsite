@@ -10,26 +10,26 @@
       <!-- 【平板】立即購買 -->
       <!-- 
       <div class="buy-now-tab-btn" @click="buyNow">
-        <img src="../assets/images/shopping-cart.png" />
+        <img src="/images/shopping-cart.png" />
       </div>
       -->
       <!-- 【桌機】滑到最上icon -->
       <div class="scroll-top-btn" @click="scrollToTop">
-        <img src="../assets/images/scroll-top.png" />
+        <img src="/images/scroll-top.png" alt="scroll to top" />
       </div>
       <div class="tablet_intro mt-mob-56 pb-44 pb-tab-20" :class="{ 'mt-70': hasHeader }">
         <div class="container title_wrap d-flex fd-column ai-c text-white mt-54 mb-24 mt-mob-40">
-          <h2 class="h2-title fz-48 lh-70 fz-mob-24 lh-mob-34 fw-600">
+          <h1 class="h2-title fz-48 lh-70 fz-mob-24 lh-mob-34 fw-600">
             <!-- AI智慧家居全能管家 -->
             {{ $t('product.tablet_intro.title') }}
-          </h2>
+          </h1>
           <div class="subtitle fz-24 lh-36 fz-mob-14 lh-mob-18 fw-500 fw-mob-700">
             <!-- enGo智慧中控平板，可用AI語音操作，整合智慧管家、商城、食譜、物業連結及訊息管理。 -->
-            <img class="engo-white" src="../assets/images/footer_logo_white.png" />
+            <img class="engo-white" src="/images/footer_logo_white.png" />
             {{ $t('product.tablet_intro.info') }}
           </div>
         </div>
-        <img src="../assets/images/tablet_1.png" alt="tablet photo" />
+        <img src="/images/tablet_1.png" alt="tablet photo" />
       </div>
       <div class="gradient_container_i">
         <div class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
@@ -37,7 +37,7 @@
             <div
               class="badge text-white bg-grey-blue2 fz-mob-18 lh-mob-26 fw-mob-500 py-10 px-20 py-mob-12 px-mob-18"
             >
-              <img class="pr-8" src="../assets/logo_G.svg" alt="engo logo branding" />
+              <img class="pr-8" src="/assets/logo_G.svg" alt="engo logo branding" />
               <!-- 產品介紹 -->
               {{ $t('product.brand_intro.badge') }}
             </div>
@@ -45,7 +45,7 @@
               class="product-describe fz-72 fw-700 text-grey-blue tac mt-36 mb-56 d-tab-none d-mob-none"
             >
               <!-- 【桌機】AI智慧管家中控平板 -->
-              <img src="../assets/images/logo_darkblue.svg" />
+              <img src="/images/logo_darkblue.svg" />
               {{ $t('product.brand_intro.title') }}
             </h2>
             <!-- 【手機】家中的大小事，都是智管家的事... -->
@@ -70,7 +70,7 @@
           </div>
           <div class="brand_desc d-flex">
             <div class="brand_desc_img d-mob-none">
-              <img src="../assets/images/Frame74.png" alt="廚房平板位置" />
+              <img src="/images/Frame74.png" alt="廚房平板位置" />
             </div>
             <div class="brand_desc_info pl-72 pr-100 pr-tab-74 px-mob-24 text-grey-blue fw-500">
               <h3 class="fw-500 fz-36 lh-50 text-grey-blue tac pt-30 mb-32 d-tab-none d-mob-none">
@@ -163,7 +163,7 @@
               </div>
             </div>
             <div>
-              <img src="../assets/file-badge.svg" alt="專利icon" />
+              <img src="/assets/file-badge.svg" alt="專利icon" />
             </div>
           </div>
           <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
@@ -190,7 +190,7 @@
               </div>
             </div>
             <div>
-              <img src="../assets/brain__circuit.svg" alt="AI功能 icon" />
+              <img src="/assets/brain__circuit.svg" alt="AI功能 icon" />
             </div>
           </div>
           <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
@@ -212,7 +212,7 @@
               </div>
             </div>
             <div>
-              <img src="../assets/lightbulb.svg" alt="研發 icon" />
+              <img src="/assets/lightbulb.svg" alt="研發 icon" />
             </div>
           </div>
           <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
@@ -239,7 +239,7 @@
               </div>
             </div>
             <div>
-              <img src="../assets/test_tubes.svg" alt="驗證測試 icon" />
+              <img src="/assets/test_tubes.svg" alt="驗證測試 icon" />
             </div>
           </div>
         </div>
@@ -247,7 +247,7 @@
         <div class="d-mob-flex jc-se px-20 py-24 d-none d-tab-none">
           <div class="count_card text-grey-blue2 px-8 py-10">
             <div class="d-flex jc-fs">
-              <img src="../assets/file-badge.svg" alt="專利icon" />
+              <img src="/assets/file-badge.svg" alt="專利icon" />
             </div>
             <div class="pos-r tac">
               <div class="fz-72 fw-500 mb-12 d-flex jc-c ai-fs">
@@ -274,7 +274,7 @@
           </div>
           <div class="count_card text-grey-blue2 px-8 py-10">
             <div class="d-flex jc-fs">
-              <img src="../assets/brain__circuit.svg" alt="AI功能 icon" />
+              <img src="/assets/brain__circuit.svg" alt="AI功能 icon" />
             </div>
             <div class="pos-r tac">
               <div class="fz-72 fw-500 mb-12 d-flex jc-c ai-fs">
@@ -303,7 +303,7 @@
         <div class="d-mob-flex jc-se px-20 mb-24 d-none d-tab-none">
           <div class="count_card text-grey-blue2 px-8 py-10">
             <div class="d-flex jc-fs">
-              <img src="../assets/test_tubes.svg" alt="驗證測試 icon" />
+              <img src="/assets/test_tubes.svg" alt="驗證測試 icon" />
             </div>
             <div class="pos-r tac">
               <div class="fz-72 fw-500 mb-12 d-flex jc-c ai-fs">
@@ -339,7 +339,7 @@
           </div>
           <div class="count_card text-grey-blue2 px-8 py-10">
             <div class="d-flex jc-fs">
-              <img src="../assets/lightbulb.svg" alt="研發 icon" />
+              <img src="/assets/lightbulb.svg" alt="研發 icon" />
             </div>
             <div class="pos-r tac">
               <div class="fz-72 fw-500 mb-12 d-flex jc-c ai-fs">
@@ -365,7 +365,7 @@
           class="tablet_function pt-64 pb-80 px-118 px-tab-50 pt-mob-60 pb-mob-40 px-mob-10 pos-r"
         >
           <div class="tag text-white d-flex ai-c py-8 px-16 ml-mob-0">
-            <img class="pr-4" src="../assets/joystick.svg" alt="function icon" />
+            <img class="pr-4" src="/assets/joystick.svg" alt="function icon" />
             <div>
               <!-- 功能介紹 -->
               {{ $t('product.tablet_function.tag') }}
@@ -375,7 +375,7 @@
           <div class="pos-r d-mob-none">
             <div class="d-flex jc-fe pt-162">
               <div class="tablet_img pos-r">
-                <img src="../assets/images/tablet_1.png" alt="平板介面介紹" />
+                <img src="/images/tablet_1.png" alt="平板介面介紹" />
                 <div class="annotation annotation_A" :class="{ animate2: targetIsVisible }"></div>
                 <div class="annotation annotation_B" :class="{ animate2: targetIsVisible }"></div>
                 <div class="annotation annotation_C" :class="{ animate2: targetIsVisible }"></div>
@@ -444,7 +444,7 @@
           <div class="mob_img_wrap d-none d-mob-block">
             <div class="d-flex jc-c ai-fe fz-24 fw-700 text-white">
               <!-- 【桌機】AI智慧管家中控平板 -->
-              <img class="engo-white mr-8" src="../assets/images/footer_logo_white.png" />
+              <img class="engo-white mr-8" src="/images/footer_logo_white.png" />
               <h3 class="fz-24 fw-700 text-white">
                 {{ $t('product.brand_intro.title') }}
               </h3>
@@ -467,7 +467,7 @@
             >
               <swiper-slide class="px-30 pt-20 pb-24">
                 <div class="tablet_img pos-r mb-24">
-                  <img src="../assets/images/tablet_1.png" alt="平板介面介紹" />
+                  <img src="/images/tablet_1.png" alt="平板介面介紹" />
                   <div class="annotation annotation_A" :class="{ animate2: targetIsVisible }"></div>
                 </div>
                 <h4 class="text-gold fz-32 lh-46 fz-tab-24 lh-tab-34 fw-700">
@@ -481,7 +481,7 @@
               </swiper-slide>
               <swiper-slide class="px-30 pt-20 pb-24">
                 <div class="tablet_img pos-r mb-24">
-                  <img src="../assets/images/tablet_1.png" alt="平板介面介紹" />
+                  <img src="/images/tablet_1.png" alt="平板介面介紹" />
                   <div class="annotation annotation_C" :class="{ animate2: targetIsVisible }"></div>
                   <div class="annotation annotation_D" :class="{ animate2: targetIsVisible }"></div>
                 </div>
@@ -496,7 +496,7 @@
               </swiper-slide>
               <swiper-slide class="px-30 pt-20 pb-24">
                 <div class="tablet_img pos-r mb-24">
-                  <img src="../assets/images/tablet_1.png" alt="平板介面介紹" />
+                  <img src="/images/tablet_1.png" alt="平板介面介紹" />
                   <div class="annotation annotation_B" :class="{ animate2: targetIsVisible }"></div>
                 </div>
                 <h4 class="text-gold fz-32 lh-46 fz-tab-24 lh-tab-34 fw-700">
@@ -529,7 +529,7 @@
             </div>
           </div>
           <div class="tag text-white px-16 py-8 mb-30 d-flex">
-            <img src="../assets/glasswater.svg" alt="智慧應用icon" />
+            <img src="/assets/glasswater.svg" alt="智慧應用icon" />
             <span>
               <!-- 智慧應用 -->
               {{ $t('product.engo_products.btn') }}
@@ -550,10 +550,10 @@
           </h3>
           <div class="two-machines-bg pos-r d-none d-tab-block d-mob-block mt-0 mt-tab-60 mt-mob-0">
             <div class="machine01 pos-a">
-              <img src="../assets/two-machines01.png" alt="兩機一體" />
+              <img src="/assets/two-machines01.png" alt="兩機一體" />
             </div>
             <div class="machine02 pos-a d-flex fd-column ai-fe">
-              <img class="mb-40" src="../assets/two-machines02.png" alt="兩機一體" />
+              <img class="mb-40" src="/assets/two-machines02.png" alt="兩機一體" />
               <h4 class="fz-16 lh-20 tar d-tab-none">
                 <!-- 從進水到出水層層把關，濾芯狀態看得見 -->
                 {{ $t('product.engo_products.info') }}
@@ -596,11 +596,11 @@
           </div>
           <div class="filter-core container px-mob-24">
             <div class="qr-code-container">
-              <img src="../assets/images/qr-code.png" />
+              <img src="/images/qr-code.png" />
               <div class="">投保證書</div>
             </div>
-            <img class="d-mob-none" src="../assets/images/filter_side.png" alt="濾芯" />
-            <img class="d-none d-mob-block" src="../assets/images/filter_core.png" alt="濾芯" />
+            <img class="d-mob-none" src="/images/filter_side.png" alt="濾芯" />
+            <img class="d-none d-mob-block" src="/images/filter_core.png" alt="濾芯" />
             <div class="d-none d-mob-flex fd-column ai-fe fz-16 lh-20 fw-700">
               <!-- 1. 一體式水路板 -->
               1. {{ $t('product.water_filter.filterCore01') }}<br />
@@ -611,7 +611,7 @@
         </div>
         <div class="filter_strength container pt-116 pt-mob-30">
           <div class="tag mb-18">
-            <img src="../assets/layers.svg" alt="產品特點 icon" />
+            <img src="/assets/layers.svg" alt="產品特點 icon" />
             <!-- 產品特點 -->
             {{ $t('product.filter_strength.tag') }}
           </div>
@@ -637,10 +637,10 @@
             </div>
           </div>
           <div class="water-loop container px-mob-24">
-            <img class="d-mob-none" src="../assets/images/water_loop.png" alt="強效過濾濾芯" />
+            <img class="d-mob-none" src="/images/water_loop.png" alt="強效過濾濾芯" />
             <img
               class="d-none d-mob-block"
-              src="../assets/images/water_loop_mob.png"
+              src="/images/water_loop_mob.png"
               alt="強效過濾濾芯"
             />
           </div>
@@ -652,7 +652,7 @@
             {{ $t('product.filter_types.title') }}
           </h3>
           <div class="img_wrap d-mob-none">
-            <img src="../assets/images/filter_types.png" alt="強效過濾濾心" />
+            <img src="/images/filter_types.png" alt="強效過濾濾心" />
           </div>
           <div class="img_wrap d-none d-mob-block">
             <swiper
@@ -672,13 +672,13 @@
               :lazy="true"
             >
               <swiper-slide>
-                <img src="../assets/images/SRM.png" alt="SRM 富鍶礦化濾心" />
+                <img src="/images/SRM.png" alt="SRM 富鍶礦化濾心" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/RO.png" alt="RO逆滲透膜" />
+                <img src="/images/RO.png" alt="RO逆滲透膜" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/PPC.png" alt="PPC複合濾芯" />
+                <img src="/images/PPC.png" alt="PPC複合濾芯" />
               </swiper-slide>
             </swiper>
           </div>
@@ -703,7 +703,7 @@
           >
             <!-- 查看更多 -->
             {{ $t('product.filter_levels.detail') }}
-            <img class="pl-4" src="../assets/arrow_down.svg" alt="arrow_down icon" />
+            <img class="pl-4" src="/assets/arrow_down.svg" alt="arrow_down icon" />
           </div>
         </div>
       </div>
@@ -711,10 +711,10 @@
         :class="{ expand: targetExpand, close: !targetExpand }"
         class="filter_levels_mob d-none d-mob-block bg-grey-blue2"
       >
-        <img src="../assets/images/filter_level_mob.png" />
+        <img src="/images/filter_level_mob.png" />
       </div>
       <div class="filter_levels d-flex fd-column ai-c d-mob-none">
-        <img src="../assets/images/filter_level.png" />
+        <img src="/images/filter_level.png" />
         <div class="container filter-text-container">
           <h2 class="title text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fw-700 mb-46 mb-tab-24">
             <!-- 進口RO，AI智慧淨濾，只為安心 -->
@@ -739,11 +739,11 @@
             class="close_img_btn jc-c ai-c py-10 px-10 text-grey-blue2 bg-white"
             :class="{ 'd-none': !targetExpand, 'd-flex': targetExpand }"
           >
-            <img src="../assets/arrow_up.svg" alt="arrow_down icon" />
+            <img src="/assets/arrow_up.svg" alt="arrow_down icon" />
           </div>
         </div>
         <div class="d-none d-mob-block pos-r">
-          <img class="pos-a pl-24" src="../assets/water_drop.svg" alt="水滴icon" />
+          <img class="pos-a pl-24" src="/assets/water_drop.svg" alt="水滴icon" />
           <div class="p-mob-24">
             <!-- 好 {鍶} 低鈉，分子礦化~固骨髓 -->
             <i18n-t
@@ -779,7 +779,7 @@
           </template>
         </i18n-t>
         <div class="si_wrap p-32 d-flex ai-fs d-mob-none">
-          <img class="pr-20" src="../assets/water_drop.svg" alt="水滴icon" />
+          <img class="pr-20" src="/assets/water_drop.svg" alt="水滴icon" />
           <h6 class="fz-32 lh-48 fw-500">
             <!-- 運用泉感極淨科技，創研分子礦化技術，增加以原始礦源為標準研發的泉感極淨礦層，將鍶原子與水分子有機結合，打造分子級富鍶低鈉好水，不僅提升口感，更能幫助提升骨質密度，增進鈣質代謝，適量補充還能預防蛀牙、強化骨髓。 -->
             {{ $t('product.filter_si.desc') }}
@@ -790,7 +790,7 @@
         <div class="baby_intro_img"></div>
         <div class="baby_intro_info">
           <div class="intro_wrap py-200 px-160 py-tab-100 px-tab-60">
-            <img class="mb-8" src="../assets/water_drop.svg" alt="水滴 icon" />
+            <img class="mb-8" src="/assets/water_drop.svg" alt="水滴 icon" />
             <h6 class="text-white fz-40 lh-58 fz-tab-28 lh-tab-36 fw-700 mb-8">
               <!-- 口感清甜，淨飲更有味 -->
               {{ $t('product.baby_intro.title') }}
@@ -809,12 +809,12 @@
               <!-- 水維氧AI智慧淨水系統 -->
               {{ $t('product.filter_list.title') }}
             </h3>
-            <img src="../assets/water_drop.svg" alt="水滴 icon" />
+            <img src="/assets/water_drop.svg" alt="水滴 icon" />
           </div>
           <div class="filter_list">
             <ul class="text_0">
               <li class="list_header fz-40 lh-58 fz-tab-32 lh-tab-46">
-                <img src="../assets/check.svg" alt="斷水設計" />
+                <img src="/assets/check.svg" alt="斷水設計" />
                 <span>
                   <!-- 漏水監控斷水設計 -->
                   {{ $t('product.filter_list.list01.title') }}
@@ -829,7 +829,7 @@
           <div class="filter_list">
             <ul class="text_0">
               <li class="list_header fz-40 lh-58 fz-tab-32 lh-tab-46">
-                <img src="../assets/check.svg" alt="即時掌控水值" />
+                <img src="/assets/check.svg" alt="即時掌控水值" />
                 <span>
                   <!-- 即時掌控TDS水值 -->
                   {{ $t('product.filter_list.list02.title') }}
@@ -844,7 +844,7 @@
           <div class="filter_list">
             <ul class="text_0">
               <li class="list_header fz-40 lh-58 fz-tab-32 lh-tab-46">
-                <img src="../assets/check.svg" alt="濾芯狀態智慧提醒" />
+                <img src="/assets/check.svg" alt="濾芯狀態智慧提醒" />
                 <span>
                   <!-- 濾芯狀態智慧提醒 -->
                   {{ $t('product.filter_list.list03.title') }}
@@ -859,7 +859,7 @@
           <div class="filter_list">
             <ul class="text_0">
               <li class="list_header fz-40 lh-58 fz-tab-32 lh-tab-46">
-                <img src="../assets/fault.svg" alt="傳統淨水器" />
+                <img src="/assets/fault.svg" alt="傳統淨水器" />
                 <span>
                   <!-- 傳統淨水器 -->
                   {{ $t('product.filter_list.list04.title') }}
@@ -884,7 +884,7 @@
       <!-- 產品優勢 -->
       <div class="productAdvantages pb-32 px-24 d-none d-mob-flex fd-column">
         <div class="tag as-fs mb-32">
-          <img src="../assets/radar.svg" alt="產品比較 icon" />
+          <img src="/assets/radar.svg" alt="產品比較 icon" />
           <span>
             <!-- 產品優勢 -->
             {{ $t('product.advantages') }}
@@ -893,7 +893,7 @@
         <div class="filter_list mb-12">
           <ul>
             <li class="list_header d-flex ai-c">
-              <img class="mr-8" src="../assets/check.svg" alt="斷水設計" />
+              <img class="mr-8" src="/assets/check.svg" alt="斷水設計" />
               <span class="fz-24 lh-30 fw-900 text-grey-blue2">
                 <!-- 漏水監控斷水設計 -->
                 {{ $t('product.filter_list.list01.title') }}
@@ -908,7 +908,7 @@
         <div class="filter_list mb-12">
           <ul>
             <li class="list_header d-flex ai-c">
-              <img class="mr-8" src="../assets/check.svg" alt="即時掌控水值" />
+              <img class="mr-8" src="/assets/check.svg" alt="即時掌控水值" />
               <span class="fz-24 lh-30 fw-900 text-grey-blue2">
                 <!-- 即時掌控TDS水值 -->
                 {{ $t('product.filter_list.list02.title') }}
@@ -923,7 +923,7 @@
         <div class="filter_list mb-12">
           <ul>
             <li class="list_header d-flex ai-c">
-              <img class="mr-8" src="../assets/check.svg" alt="濾芯狀態智慧提醒" />
+              <img class="mr-8" src="/assets/check.svg" alt="濾芯狀態智慧提醒" />
               <span class="fz-24 lh-30 fw-900 text-grey-blue2">
                 <!-- 濾芯狀態智慧提醒 -->
                 {{ $t('product.filter_list.list03.title') }}
@@ -938,7 +938,7 @@
         <div class="filter_list">
           <ul>
             <li class="list_header d-flex ai-c">
-              <img class="mr-8" src="../assets/fault.svg" alt="傳統淨水器" />
+              <img class="mr-8" src="/assets/fault.svg" alt="傳統淨水器" />
               <span class="fz-24 lh-30 fw-900 text-grey-blue2">
                 <!-- 傳統淨水器 -->
                 {{ $t('product.filter_list.list04.title') }}
@@ -962,7 +962,7 @@
       <div class="background_B">
         <div class="competitor container d-flex fd-column ai-c py-80 py-mob-0">
           <div class="tag as-fs mb-12">
-            <img src="../assets/radar.svg" alt="{{ $t('product.air_purifier.tag') }} icon" />
+            <img src="/assets/radar.svg" alt="{{ $t('product.air_purifier.tag') }} icon" />
             <span>
               <!-- 產品比較 -->
               {{ $t('product.competitor.tag') }}
@@ -973,7 +973,7 @@
             {{ $t('product.competitor.title') }}
           </h2>
           <div class="competitor_img d-mob-none">
-            <img src="../assets/images/competitors.png" alt="" />
+            <img src="/images/competitors.png" alt="" />
           </div>
           <div class="competitor_img d-none d-mob-block">
             <swiper
@@ -994,27 +994,27 @@
               :lazy="true"
             >
               <swiper-slide>
-                <img src="../assets/images/M3_brand_engo.png" alt="3 牌淨水系統" />
+                <img src="/images/M3_brand_engo.png" alt="3 牌淨水系統" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/B_brand_engo.png" alt="B 牌淨水系統" />
+                <img src="/images/B_brand_engo.png" alt="B 牌淨水系統" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/S_brand_engo.png" alt="S 牌淨水系統" />
+                <img src="/images/S_brand_engo.png" alt="S 牌淨水系統" />
               </swiper-slide>
             </swiper>
           </div>
         </div>
         <!-- <div class="purchase container d-flex fd-column ai-c pb-80 d-mob-none">
           <div class="tag as-fs mb-12">
-            <img class="pr-8" src="../assets/shopping_bag.svg" alt="購買方式" />
+            <img class="pr-8" src="/assets/shopping_bag.svg" alt="購買方式" />
             <span>
               {{ $t('product.purchase.tag') }}
             </span>
           </div>
 
           <div class="card_2 flex_horizontal">
-            <img src="../assets/images/pack.png" alt="早鳥優惠價" />
+            <img src="/images/pack.png" alt="早鳥優惠價" />
             <div class="d-flex fd-column jc-sa p-24 pos-r">
               <div class="btn_wrap">
                 <span class="flag">
@@ -1044,7 +1044,7 @@
         <div class="background_B">
         <div class="competitor container d-flex fd-column ai-c py-80 py-mob-0">
           <div class="tag as-fs mb-12">
-            <img src="../assets/radar.svg" alt="{{ $t('product.air_purifier.tag') }} icon" />
+            <img src="/assets/radar.svg" alt="{{ $t('product.air_purifier.tag') }} icon" />
             <span>
               <!-- 產品比較 -->
               {{ $t('product.air_purifier.tag') }}
@@ -1055,14 +1055,14 @@
             {{ $t('product.air_purifier.title') }}
           </h2>
           <div class="competitor_img d-mob-none">
-            <img src="../assets/images/AirPurifier001.png" alt="" />
-            <img src="../assets/images/AirPurifier002.png" alt="" />
-            <img src="../assets/images/AirPurifier003.png" alt="" />
-            <img src="../assets/images/AirPurifier004.png" alt="" />
-            <img src="../assets/images/AirPurifier005.png" alt="" />
-            <img src="../assets/images/AirPurifier006.png" alt="" />
-            <img src="../assets/images/AirPurifier007.png" alt="" />
-            <img src="../assets/images/AirPurifier008.png" alt="" />
+            <img src="/images/AirPurifier001.png" alt="" />
+            <img src="/images/AirPurifier002.png" alt="" />
+            <img src="/images/AirPurifier003.png" alt="" />
+            <img src="/images/AirPurifier004.png" alt="" />
+            <img src="/images/AirPurifier005.png" alt="" />
+            <img src="/images/AirPurifier006.png" alt="" />
+            <img src="/images/AirPurifier007.png" alt="" />
+            <img src="/images/AirPurifier008.png" alt="" />
           </div>
           <div class="competitor_img d-none d-mob-block">
             <swiper
@@ -1083,36 +1083,133 @@
               :lazy="true"
             >
               <swiper-slide>
-                <img src="../assets/images/AirPurifier001.png" alt="空氣清淨機" />
+                <img src="/images/AirPurifier001.png" alt="空氣清淨機" />
               </swiper-slide>
                <swiper-slide>
-                <img src="../assets/images/AirPurifier002.png" alt="空氣清淨機" />
+                <img src="/images/AirPurifier002.png" alt="空氣清淨機" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/AirPurifier003.png" alt="空氣清淨機" />
+                <img src="/images/AirPurifier003.png" alt="空氣清淨機" />
               </swiper-slide> 
               <swiper-slide>
-                <img src="../assets/images/AirPurifier004.png" alt="空氣清淨機" />
+                <img src="/images/AirPurifier004.png" alt="空氣清淨機" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/AirPurifier005.png" alt="空氣清淨機" />
+                <img src="/images/AirPurifier005.png" alt="空氣清淨機" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/AirPurifier006.png" alt="空氣清淨機" />
+                <img src="/images/AirPurifier006.png" alt="空氣清淨機" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/AirPurifier007.png" alt="空氣清淨機" />
+                <img src="/images/AirPurifier007.png" alt="空氣清淨機" />
               </swiper-slide>
               <swiper-slide>
-                <img src="../assets/images/AirPurifier008.png" alt="空氣清淨機" />
+                <img src="/images/AirPurifier008.png" alt="空氣清淨機" />
               </swiper-slide>                                                                                   
             </swiper>
           </div>
         </div>
       </div>
+      <!-- 套裝方案 -->
+      <div id="packages" class="package-section container py-100 py-mob-60">
+        <div class="tag as-fs mb-32">
+          <img src="/assets/layers.svg" alt="Package Plans icon" />
+          <span>{{ $t('product.packages.tag') || '套裝方案' }}</span>
+        </div>
+        <h2 class="fz-48 fw-700 text-grey-blue mb-56 tac">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</h2>
+        
+        <div class="package-grid">
+          <div v-for="pkg in packages.main_packages" :key="pkg.id" class="package-card" :class="{ 'luxury': pkg.id === 'luxury' }">
+            <div class="p-card-header">
+              <h3 class="pkg-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h3>
+              <p class="pkg-usage text-grey-666">{{ (pkg.suggested_usage as any)[locale] || pkg.suggested_usage['zh'] }}</p>
+              <div class="pkg-price">{{ pkg.price }}</div>
+            </div>
+            
+            <div class="p-card-body">
+              <div class="spec-group">
+                <h4>{{ $t('product.packages.functions') || '核心功能' }}</h4>
+                <ul>
+                  <li v-for="f in ((pkg.functions as any)[locale] || pkg.functions['zh'])" :key="f">{{ f }}</li>
+                </ul>
+              </div>
+              
+              <div class="spec-group">
+                <h4>{{ $t('product.packages.scenarios') || '情境控制' }}</h4>
+                <ul>
+                  <li v-for="s in ((pkg.scenarios as any)[locale] || pkg.scenarios['zh'])" :key="s">{{ s }}</li>
+                </ul>
+              </div>
+              
+              <div class="spec-group">
+                <h4>{{ $t('product.packages.components') || '套裝組件' }}</h4>
+                <ul>
+                  <li v-for="c in ((pkg.components as any)[locale] || pkg.components['zh'])" :key="c">{{ c }}</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="p-card-footer">
+              <button class="buy-pkg-btn" @click="buyNow">{{ $t('product.purchase.btn') }}</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 可增選套裝方案 -->
+        <h3 class="fz-32 fw-700 text-grey-blue mt-100 mb-48 tac">{{ $t('product.packages.addOns') }}</h3>
+        <div class="addon-grid">
+           <div v-for="pkg in packages.add_on_packages" :key="pkg.id" class="addon-card">
+            <h4 class="addon-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h4>
+            <ul class="addon-specs">
+              <li v-for="item in ((pkg.components as any)[locale] || pkg.components['zh'])" :key="item">{{ item }}</li>
+            </ul>
+            <div class="addon-footer">
+               <button class="buy-addon-btn" @click="buyNow">{{ $t('product.purchase.btn') }}</button>
+            </div>
+          </div>
+
+          
+          <!-- Catalog Menu Trigger -->
+          <div class="addon-card other-link" @click="openCatalogMenu">
+            <h4 class="addon-name">{{ $t('product.packages.otherOptions') }}</h4>
+            <div class="catalog-icon">
+              <img src="/assets/file-badge.svg" alt="Catalog" />
+            </div>
+            <p class="tac text-grey-666 fz-14 px-20">{{ $t('product.viewDetails') || '查看所有產品' }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 產品評論區 -->
+      <div class="product-reviews container py-80 py-mob-40">
+        <h2 class="fz-48 fw-700 text-grey-blue mb-40 tac">{{ $t('product.reviews.title') || '用戶評價' }}</h2>
+        <div class="reviews-list mb-60">
+          <div v-for="(review, index) in reviews" :key="index" class="review-item p-24 mb-20 bg-white shadow-sm border-radius-15">
+            <div class="d-flex jc-sb ai-c mb-12">
+              <span class="user-name fw-700">{{ review.name }}</span>
+              <span class="review-date fz-14 text-grey">{{ review.date }}</span>
+            </div>
+            <p class="review-text fz-16 lh-24">{{ review.comment }}</p>
+          </div>
+        </div>
+        <div class="add-review p-32 bg-grey-blue2 text-white border-radius-20">
+          <h3 class="fz-24 mb-20">{{ $t('product.reviews.add') || '發表評論' }}</h3>
+          <form @submit.prevent="submitReview">
+            <div class="mb-16">
+              <input v-model="newReview.name" type="text" placeholder="您的姓名" class="w-100 p-12 border-radius-8 border-none" required />
+            </div>
+            <div class="mb-16">
+              <textarea v-model="newReview.comment" placeholder="您的寶貴意見..." class="w-100 p-12 border-radius-8 border-none" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="bg-orange2 text-white border-none py-12 px-32 border-radius-30 fw-500 cursor-pointer hover-scale">
+              {{ $t('submitForm') }}
+            </button>
+          </form>
+        </div>
+      </div>
       <div class="purchase-btn pos-f bg-orange2 d-none d-mob-block" @click="buyNow">
         <div class="container d-flex jc-c ai-c py-20">
-          <img class="mr-4" src="../assets/shopping-cart.svg" alt="購物車 icon" />
+          <img class="mr-4" src="/assets/shopping-cart.svg" alt="購物車 icon" />
           <span class="text-white fw-500">
             <!-- 立即訂購 -->
             {{ $t('product.purchase.btn') }}
@@ -1120,6 +1217,20 @@
         </div>
       </div>
     </div>
+    
+    <CatalogMenu
+      v-if="isCatalogMenuOpen"
+      :isOpen="isCatalogMenuOpen"
+      @close="closeCatalogMenu"
+      @select="selectCatalogProduct"
+    />
+
+    <ProductCatalog 
+      v-if="isCatalogOpen" 
+      :isOpen="isCatalogOpen" 
+      :product="selectedCatalogItem" 
+      @close="closeCatalog" 
+    />
   </section>
 </template>
 <script lang="ts">
@@ -1129,19 +1240,26 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { defineComponent, ref, watchEffect } from 'vue'
+import { defineComponent, ref, watchEffect, defineAsyncComponent } from 'vue'
 import type { CountUpOptions, ICountUp } from 'vue-countup-v3'
 import CountUp from 'vue-countup-v3'
 import { useRouter } from 'vue-router'
+import { useAnalytics } from '@/utils/analytics'
+import { useI18n } from 'vue-i18n'
+import packagesData from '@/data/packages.json'
 
 export default defineComponent({
   name: 'Product',
   components: {
     CountUp,
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    ProductCatalog: defineAsyncComponent(() => import('@/components/ProductCatalog.vue')),
+    CatalogMenu: defineAsyncComponent(() => import('@/components/CatalogMenu.vue'))
   },
   setup() {
+    const { t, locale } = useI18n()
+    const packages = ref(packagesData)
     const observeTarget = ref(null)
     const targetIsVisible = ref(false)
     const router = useRouter()
@@ -1184,6 +1302,15 @@ export default defineComponent({
           }
         }, 100)
       }
+      if (router.currentRoute.value.query && router.currentRoute.value.query.jump === 'packages') {
+        setTimeout(() => {
+          let pkgElement: any = document.getElementById('packages')
+          if (pkgElement !== undefined) {
+             const top = pkgElement.getBoundingClientRect().top + window.pageYOffset - 100
+             window.scrollTo({ top, behavior: 'smooth' })
+          }
+        }, 100)
+      }
     })
 
     const { stop } = useIntersectionObserver(
@@ -1214,6 +1341,51 @@ export default defineComponent({
       window.scrollTo(0, 0)
     }
 
+    const toMall = () => {
+      window.open('https://drive.google.com/file/d/1nWgn0EpNhq-n6Vmes8rHGLD8RmcZOCwN/view?usp=sharing')
+    }
+
+    const isCatalogOpen = ref(false)
+    const isCatalogMenuOpen = ref(false)
+    const selectedCatalogItem = ref(null)
+
+    const openCatalogMenu = () => {
+      isCatalogMenuOpen.value = true
+    }
+
+    const closeCatalogMenu = () => {
+      isCatalogMenuOpen.value = false
+    }
+
+    const selectCatalogProduct = (item: any) => {
+      selectedCatalogItem.value = item
+      isCatalogMenuOpen.value = false
+      setTimeout(() => {
+        isCatalogOpen.value = true
+      }, 100)
+    }
+
+    const closeCatalog = () => {
+      isCatalogOpen.value = false
+      selectedCatalogItem.value = null
+    }
+
+
+    const reviews = ref([
+      { name: t('product.reviews.sample1.name'), date: '2024-05-20', comment: t('product.reviews.sample1.comment') },
+      { name: t('product.reviews.sample2.name'), date: '2024-06-15', comment: t('product.reviews.sample2.comment') }
+    ])
+    const newReview = ref({ name: '', comment: '' })
+    const { trackEvent } = useAnalytics()
+
+    const submitReview = () => {
+      const today = new Date().toISOString().split('T')[0]
+      reviews.value.unshift({ ...newReview.value, date: today })
+      trackEvent('submit_product_review', { name: newReview.value.name })
+      newReview.value = { name: '', comment: '' }
+      alert('感謝您的評價！')
+    }
+
     return {
       buyNow,
       targetIsVisible,
@@ -1229,8 +1401,210 @@ export default defineComponent({
       closeImg,
       isExpandWrReadMore,
       expandReadMore,
-      scrollToTop
+      scrollToTop,
+      reviews,
+      newReview,
+      submitReview,
+      packages,
+      locale,
+      toMall,
+      isCatalogOpen,
+      isCatalogMenuOpen,
+      selectedCatalogItem,
+      openCatalogMenu,
+      closeCatalogMenu,
+      selectCatalogProduct,
+      closeCatalog
     }
   }
 })
 </script>
+
+<style scoped lang="scss">
+.package-section {
+  .package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  .package-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+      border-color: #c46043;
+    }
+
+    &.luxury {
+      background: #043655;
+      color: white;
+      .pkg-name { color: #d4a753; }
+      .pkg-usage, .pkg-price { color: #eee; }
+      .spec-group h4 { color: #d4a753; border-bottom-color: rgba(212, 167, 83, 0.3); }
+      .spec-group ul li { color: #ccc; }
+      .buy-pkg-btn { background: #d4a753; color: #043655; }
+    }
+
+    .p-card-header {
+      margin-bottom: 30px;
+      text-align: center;
+      .pkg-name { font-size: 1.8rem; font-weight: 700; color: #043655; margin-bottom: 8px; }
+      .pkg-usage { font-size: 1rem; margin-bottom: 16px; font-weight: 500; }
+      .pkg-price { font-size: 2rem; font-weight: 800; color: #c46043; }
+    }
+
+    .p-card-body {
+      flex: 1;
+      .spec-group {
+        margin-bottom: 24px;
+        h4 { 
+          font-size: 1.1rem; 
+          font-weight: 700; 
+          margin-bottom: 12px; 
+          color: #c46043;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 8px;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            color: #555;
+            &::before {
+              content: '✓';
+              position: absolute;
+              left: 0;
+              color: #c46043;
+            }
+          }
+        }
+      }
+    }
+
+    .p-card-footer {
+      margin-top: 20px;
+      .buy-pkg-btn {
+        width: 100%;
+        padding: 16px;
+        border-radius: 30px;
+        border: none;
+        background: #c46043;
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: opacity 0.3s;
+        &:hover { opacity: 0.9; }
+      }
+    }
+  }
+
+  .addon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .addon-card {
+      background: #fff8f5;
+      border: 1px solid #f9e1d8;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+
+      &.other-link {
+        border-style: dashed;
+        cursor: pointer;
+        background: #fdfdfd;
+        justify-content: center;
+        align-items: center;
+        &:hover { background: #fff; transform: scale(1.02); }
+        .catalog-icon {
+          width: 50px;
+          margin: 15px 0;
+          opacity: 0.7;
+          img { width: 100%; }
+        }
+      }
+
+      &:hover:not(.other-link) {
+        border-color: #c46043;
+        box-shadow: 0 8px 24px rgba(196, 96, 67, 0.1);
+      }
+
+      .addon-name {
+        color: #c46043;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .addon-specs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        li {
+          font-size: 0.9rem;
+          color: #666;
+          margin-bottom: 10px;
+          position: relative;
+          padding-left: 18px;
+          line-height: 1.4;
+          &::before {
+            content: '+';
+            position: absolute;
+            left: 0;
+            color: #d4a753;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .addon-footer {
+        margin-top: 24px;
+        .buy-addon-btn {
+          width: 100%;
+          padding: 12px;
+          border-radius: 25px;
+          border: 1px solid #c46043;
+          background: transparent;
+          color: #c46043;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            background: #c46043;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+</style>

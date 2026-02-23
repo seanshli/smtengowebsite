@@ -1,0 +1,789 @@
+{
+    "main_packages": [
+        {
+            "id": "basic",
+            "name": {
+                "zh": "旗艦中控 基礎版",
+                "en": "Basic Smart Hub Edition",
+                "ja": "スマートハブ基礎版",
+                "fr": "Édition Hub Intelligent de Base"
+            },
+            "price": "NT$ 25,800",
+            "suggested_usage": {
+                "zh": "小資族 / 一房一廳 / 套房推薦",
+                "en": "Studio / 1BR / Budget Friendly",
+                "ja": "ワンルーム / 1K / 単身者向け",
+                "fr": "Studio / T1 / Budget économique"
+            },
+            "functions": {
+                "zh": [
+                    "智慧中控平台",
+                    "全屋燈光單迴路控制",
+                    "環境溫濕度監控",
+                    "App 遠端管理"
+                ],
+                "en": [
+                    "Smart Control Hub",
+                    "Single-loop Lighting Control",
+                    "Climate Monitoring",
+                    "App Remote Management"
+                ],
+                "fr": [
+                    "Centre de contrôle intelligent",
+                    "Contrôle d'éclairage à boucle unique",
+                    "Surveillance du climat",
+                    "Gestion à distance via App"
+                ],
+                "ja": [
+                    "スマートコントロールハブ",
+                    "シングルループ照明制御",
+                    "環境温湿度モニタリング",
+                    "アプリ遠隔管理"
+                ]
+            },
+            "scenarios": {
+                "zh": [
+                    "回家模式 (自動亮燈)",
+                    "離家模式 (一鍵關燈)",
+                    "睡眠情境設定"
+                ],
+                "en": [
+                    "Welcome Home (Auto Light)",
+                    "Leave Home (One-tap Off)",
+                    "Sleep Mode Configuration"
+                ],
+                "fr": [
+                    "Bienvenue à la maison (Lumière auto)",
+                    "Départ (Extinction d'un geste)",
+                    "Configuration du mode Sommeil"
+                ],
+                "ja": [
+                    "帰宅モード (自動点灯)",
+                    "外出モード (一括消灯)",
+                    "睡眠モード設定"
+                ]
+            },
+            "components": {
+                "zh": [
+                    "enGo 智慧中控平板 x1",
+                    "智慧開關 (單切) x2",
+                    "人體感應器 x1"
+                ],
+                "en": [
+                    "enGo Smart Tablet x1",
+                    "Smart Switch (Single) x2",
+                    "Motion Sensor x1"
+                ],
+                "fr": [
+                    "Tablette intelligente enGo x1",
+                    "Interrupteur intelligent x2",
+                    "Capteur de mouvement x1"
+                ],
+                "ja": [
+                    "enGoスマートタブレット x1",
+                    "スマートスイッチ x2",
+                    "人感センサー x1"
+                ]
+            }
+        },
+        {
+            "id": "advanced",
+            "name": {
+                "zh": "全屋智慧 進階版",
+                "en": "Advanced Full-House Edition",
+                "ja": "全自動スマート進階版",
+                "fr": "Édition Avancée Maison Connectée"
+            },
+            "price": "NT$ 52,800",
+            "suggested_usage": {
+                "zh": "兩房兩廳 / 小家庭智慧首選",
+                "en": "2BR Apartment / Smart Family Choice",
+                "ja": "2LDK / 小家族のスマートな選択",
+                "fr": "Appartement T3 / Choix famille connectée"
+            },
+            "functions": {
+                "zh": [
+                    "全域語音聲控整合",
+                    "智慧冷氣自動調節",
+                    "多迴路燈光聯動",
+                    "家電遠端控制"
+                ],
+                "en": [
+                    "Universal Voice Integration",
+                    "Smart AC Automation",
+                    "Multi-loop Light Linkage",
+                    "Device Remote Control"
+                ],
+                "fr": [
+                    "Intégration vocale universelle",
+                    "Automatisation intelligente AC",
+                    "Liaison d'éclairage multi-boucles",
+                    "Contrôle d'appareils à distance"
+                ],
+                "ja": [
+                    "ユニバーサル音声統合",
+                    "スマートエアコン自動化",
+                    "マルチループ照明連動",
+                    "家電遠隔操作"
+                ]
+            },
+            "scenarios": {
+                "zh": [
+                    "影音劇院情境",
+                    "動態感應自動走廊燈",
+                    "冷氣恆溫自動化"
+                ],
+                "en": [
+                    "Home Theater Scene",
+                    "Motion-activated Hallway",
+                    "AC Temperature Auto-Logic"
+                ],
+                "fr": [
+                    "Scène Cinéma Maison",
+                    "Couloir activé par mouvement",
+                    "Logique auto température AC"
+                ],
+                "ja": [
+                    "ホームシアターシーン",
+                    "動体検知廊下照明",
+                    "エアコン温度自動制御"
+                ]
+            },
+            "components": {
+                "zh": [
+                    "enGo 智慧中控平板 x1",
+                    "智慧開關 x5",
+                    "紅外線控制模組 x1",
+                    "高精度感測器 x2"
+                ],
+                "en": [
+                    "enGo Smart Tablet x1",
+                    "Smart Switch x5",
+                    "IR Control Module x1",
+                    "Precision Sensors x2"
+                ],
+                "fr": [
+                    "Tablette intelligente enGo x1",
+                    "Interrupteur intelligent x5",
+                    "Module de contrôle IR x1",
+                    "Capteurs de précision x2"
+                ],
+                "ja": [
+                    "enGoスマートタブレット x1",
+                    "スマートスイッチ x5",
+                    "赤外線制御モジュール x1",
+                    "高精度センサー x2"
+                ]
+            }
+        },
+        {
+            "id": "luxury",
+            "name": {
+                "zh": "奢華宅邸 豪華版",
+                "en": "Luxury Villa Edition",
+                "ja": "プレミアム豪華版",
+                "fr": "Édition Villa de Luxe"
+            },
+            "price": "NT$ 88,800+",
+            "suggested_usage": {
+                "zh": "三房以上 / 透天別墅 / 頂級玩家",
+                "en": "3BR+ / Villa / Premium Experience",
+                "ja": "3LDK以上 / 一軒家 / プレミアム体験",
+                "fr": "Appartement T4+ / Villa / Expérience Premium"
+            },
+            "functions": {
+                "zh": [
+                    "全屋智能安防覆蓋",
+                    "智慧窗簾與環境聯動",
+                    "空氣水質實時監控",
+                    "瓦斯水管安全防護"
+                ],
+                "en": [
+                    "Full House Security Mesh",
+                    "Smart Curtain Automation",
+                    "Air/Water Quality Watch",
+                    "Water/Gas Leak Prevention"
+                ],
+                "fr": [
+                    "Maillage de sécurité complet",
+                    "Automatisation des rideaux",
+                    "Surveillance air et eau",
+                    "Prévention fuite eau et gaz"
+                ],
+                "ja": [
+                    "全家セキュリティメッシュ",
+                    "スマートカーテン自動化",
+                    "空気・水質モニタリング",
+                    "漏水・ガス漏れ防止"
+                ]
+            },
+            "scenarios": {
+                "zh": [
+                    "全方位離家警戒",
+                    "晨曦喚醒 (自動開簾)",
+                    "環境自動淨化模式"
+                ],
+                "en": [
+                    "Full House Arm Mode",
+                    "Morning Wake-up (Curtains)",
+                    "Auto Air Purification"
+                ],
+                "fr": [
+                    "Mode Armé Maison Complète",
+                    "Réveil Matinal (Rideaux)",
+                    "Purification d'Air Automatique"
+                ],
+                "ja": [
+                    "フルハウス警戒モード",
+                    "モーニングウェイクアップ",
+                    "自動空気清浄モード"
+                ]
+            },
+            "components": {
+                "zh": [
+                    "enGo 旗艦中控平板 x2",
+                    "智慧開關 x10",
+                    "窗簾馬達 x2",
+                    "漏水閥控制 x1",
+                    "空氣清淨連動器 x1"
+                ],
+                "en": [
+                    "enGo Flagship Tablet x2",
+                    "Smart Switch x10",
+                    "Curtain Motor x2",
+                    "Leak Control Valve x1",
+                    "Air Purifier Link x1"
+                ],
+                "fr": [
+                    "Tablette amirale enGo x2",
+                    "Interrupteur intelligent x10",
+                    "Moteur de rideau x2",
+                    "Vanne de contrôle de fuite x1",
+                    "Séquenceur purificateur d'air x1"
+                ],
+                "ja": [
+                    "enGoフラッグシップタブレット x2",
+                    "スマートスイッチ x10",
+                    "カーテンモーター x2",
+                    "漏水制御バルブ x1",
+                    "空気清浄機連携器 x1"
+                ]
+            }
+        }
+    ],
+    "add_on_packages": [
+        {
+            "id": "health",
+            "name": {
+                "zh": "enGo 健康套裝",
+                "en": "enGo Health Package",
+                "ja": "enGo 健康セット",
+                "fr": "Pack Santé enGo"
+            },
+            "components": {
+                "zh": [
+                    "enGo 中控平板 + 管理系統",
+                    "enGo 水精靈 (RO + 礦物質 + 記量)",
+                    "enGo 智慧 3合1 空氣清淨機 (清淨機 + 藍牙喇叭 + 無線充)"
+                ],
+                "en": [
+                    "enGo Hub + Management System",
+                    "enGo Water Fairy (RO + Minerals + Meter)",
+                    "enGo Smart 3-in-1 Air Purifier (Purifier + BT Speaker + Wireless Charge)"
+                ],
+                "fr": [
+                    "Hub enGo + Système de gestion",
+                    "enGo Water Fairy (RO + Minéraux + Compteur)",
+                    "Purificateur d'air intelligent 3-en-1 (Purificateur + HP BT + Charge sans fil)"
+                ],
+                "ja": [
+                    "enGo コントロールパネル + 管理システム",
+                    "enGo 水精靈 (RO + 鉱物質 + 計量)",
+                    "enGo スマート 3-in-1 空気清浄機 (清浄機 + Bluetoothスピーカー + ワイヤレス充電)"
+                ]
+            }
+        },
+        {
+            "id": "kitchen",
+            "name": {
+                "zh": "enGo 智能廚房套裝",
+                "en": "enGo Smart Kitchen Package",
+                "ja": "enGo スマートキッチンセット",
+                "fr": "Pack Cuisine Intelligente enGo"
+            },
+            "components": {
+                "zh": [
+                    "智能斷水閥",
+                    "enGo 中控平板 + 管理系統 (含智能倉儲)",
+                    "enGo 水精靈 (RO + 礦物質 + 記量)",
+                    "電動拉籃 (可選 60/70/80/90cm 寬櫥櫃)",
+                    "排差"
+                ],
+                "en": [
+                    "Smart Water Shut-off Valve",
+                    "enGo Hub + Management System (incl. Smart Storage)",
+                    "enGo Water Fairy (RO + Minerals + Meter)",
+                    "Electric Pull-out Basket (60/70/80/90cm width)",
+                    "Power Strip"
+                ],
+                "fr": [
+                    "Vanne d'arrêt d'eau intelligente",
+                    "Hub enGo + Gestion (incl. Stockage intelligent)",
+                    "enGo Water Fairy (RO + Minéraux + Compteur)",
+                    "Panier coulissant électrique (Largeur 60/70/80/90cm)",
+                    "Multiprise"
+                ],
+                "ja": [
+                    "スマート断水弁",
+                    "enGo コントロールパネル + 管理システム (スマート在庫管理含む)",
+                    "enGo 水精靈 (RO + 鉱物質 + 計量)",
+                    "電動昇降バスケット (60/70/80/90cm幅対応)",
+                    "電源タップ"
+                ]
+            }
+        }
+    ],
+    "catalog": [
+        {
+            "id": "tablet_t1",
+            "name": {
+                "zh": "AI智慧家居全能管家 中控平板 + 管理系統",
+                "en": "AI Smart Home Hub Tablet + Management System",
+                "ja": "AIスマートホームハブ + 管理システム",
+                "fr": "Tablette Hub Intelligent AI + Système de Gestion"
+            },
+            "description": {
+                "zh": "AI 管家替您輕鬆管理家中一切透過 enGo AI 智慧中控平板整合管理家中的智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升家居的舒適度、安全性和能源效率。用戶可以隨時隨地通過手機或 enGo AI智慧中控平板遠程控制和監控。智管家以人工智慧、物聯網和自動化技術為核心，致力於讓生活更便利、更健康，為您和家人打造安全、舒適、便捷的智慧生活，讓AI智慧整合系統替您創造美好生活。",
+                "en": "The AI Butler manages everything in your home effortlessly through the enGo AI Smart Hub Tablet. It integrates smart lighting, appliances, security, audio systems, door locks, and water treatment devices, enhancing comfort, safety, and energy efficiency. Users can remotely control and monitor their home anytime, anywhere via mobile phone or the enGo AI Smart Hub Tablet. Centered on AI, IoT, and automation technologies, Smart Butler is dedicated to making life more convenient and healthy, creating a safe, comfortable, and convenient smart life for you and your family.",
+                "ja": "AI執事が家のすべてを簡単に管理します。enGo AIスマートコントロールタブレットを通じて、家のスマート照明、家電、セキュリティ監視、オーディオシステム、ドアロック、水処理設備などを統合管理し、家の快適さ、安全性、エネルギー効率を向上させます。ユーザーはいつでもどこでも携帯電話やenGo AIスマートコントロールタブレットを通じて遠隔操作および監視が可能です。AI、IoT、自動化技術を核心とし、生活をより便利で健康的にし、あなたと家族のために安全で快適で便利なスマートライフを創造します。",
+                "fr": "Le majordome AI gère tout dans votre maison sans effort grâce à la tablette enGo AI Smart Hub. Il intègre l'éclairage intelligent, les appareils électroménagers, la sécurité, les systèmes audio, les serrures de porte et les dispositifs de traitement de l'eau, améliorant le confort, la sécurité et l'efficacité énergétique. Les utilisateurs peuvent contrôler et surveiller à distance leur maison à tout moment et en tout lieu via un téléphone portable ou la tablette enGo AI Smart Hub. Centré sur l'IA, l'IoT et les technologies d'automatisation, Smart Butler se consacre à rendre la vie plus pratique et plus saine, créant une vie intelligente sûre, confortable et pratique pour vous et votre famille."
+            },
+            "image": "product_tablet_t1.png",
+            "spec_image": "product_tablet_t1_specs.png",
+            "specs": {
+                "display": {
+                    "en": "1920*1200 FHD 10.1 inch touch screen",
+                    "zh": "1920*1200 FHD 10.1吋 觸控螢幕"
+                },
+                "input": {
+                    "en": "100~240V AC 50/60Hz",
+                    "zh": "100~240V AC 50/60Hz"
+                },
+                "working_temp": {
+                    "en": "0°C ~ 40°C",
+                    "zh": "0°C ~ 40°C"
+                },
+                "working_humidity": {
+                    "en": "5% to 90%RH (non-condensing)",
+                    "zh": "5% 至 90%RH (無凝結)"
+                },
+                "wireless": {
+                    "en": "Wi-Fi / Zigbee / Bluetooth",
+                    "zh": "Wi-Fi / Zigbee / 藍牙"
+                },
+                "base": {
+                    "en": "EU/US optional",
+                    "zh": "歐規 / 美規 可選"
+                },
+                "size": {
+                    "en": "159*161*13mm (without base), 259*161*37mm (including base)",
+                    "zh": "159*161*13mm (不含底座), 259*161*37mm (含底座)"
+                }
+            }
+        },
+        {
+            "id": "gateway_z1",
+            "name": {
+                "zh": "智能網關 Z1 PRO",
+                "en": "Smart Gateway Z1 PRO",
+                "ja": "スマートゲートウェイ Z1 PRO",
+                "fr": "Passerelle Intelligente Z1 PRO"
+            },
+            "description": {
+                "zh": "Smart Gateway Z1 是智慧家庭的大腦，支援 Zigbee 3.0 標準與 Matter 協議，能連接超過 100 個子設備。體積小庫，可放置於家中任何角落，確保網路覆蓋無死角。",
+                "en": "Smart Gateway Z1 is the brain of the smart home, supporting Zigbee 3.0 standard and Matter protocol, capable of connecting over 100 sub-devices. Compact in size, it can be placed anywhere in the home to ensure no dead zones in network coverage.",
+                "ja": "スマートゲートウェイZ1はスマートホームの頭脳であり、Zigbee 3.0標準とMatterプロトコルをサポートし、100以上のサブデバイスを接続できます。コンパクトなサイズで、家のどこにでも配置でき、ネットワークカバレッジの死角をなくします。",
+                "fr": "Smart Gateway Z1 est le cerveau de la maison intelligente, prenant en charge la norme Zigbee 3.0 et le protocole Matter, capable de connecter plus de 100 sous-appareils. De taille compacte, il peut être placé n'importe où dans la maison pour garantir l'absence de zones mortes dans la couverture réseau."
+            },
+            "image": "tuya_matter_gateway.png",
+            "specs": {
+                "power_input": {
+                    "en": "5V/1A Type-C",
+                    "zh": "5V/1A Type-C"
+                },
+                "working": {
+                    "en": "-10°C to +55°C / 10% to 90%RH",
+                    "zh": "-10°C 至 +55°C / 10% 至 90%RH"
+                },
+                "size": {
+                    "en": "90*90*22mm",
+                    "zh": "90*90*22mm"
+                },
+                "wireless": {
+                    "en": "Zigbee 3.0 / Wi-Fi",
+                    "zh": "Zigbee 3.0 / Wi-Fi"
+                }
+            }
+        },
+        {
+            "id": "switch_s1",
+            "name": {
+                "zh": "智能開關 S1 / 星羽系列",
+                "en": "Smart Switch S1 Series",
+                "ja": "スマートスイッチ S1 シリーズ",
+                "fr": "Interrupteur Intelligent Série S1"
+            },
+            "description": {
+                "zh": "S1 系列智能開關採用極簡觸控介面，專為壁掛設計。兼具直覺操作與高端視覺美感，支援單/雙/三位開關控制與多種情境設定。",
+                "en": "The S1 series smart switches feature a minimalist touch interface designed for wall mounting. Combining intuitive operation with high-end visual aesthetics, it supports single/dual/triple switch control and various scene settings.",
+                "ja": "S1シリーズのスマートスイッチは、壁掛け用に設計されたミニマリストのタッチインターフェースを採用しています。直感的な操作とハイエンドな視覚的美学を兼ね備え、シングル/デュアル/トリプルスイッチ制御とさまざまなシーン設定をサポートします。",
+                "fr": "Les interrupteurs intelligents de la série S1 présentent une interface tactile minimaliste conçue pour le montage mural. Alliant fonctionnement intuitif et esthétique visuelle haut de gamme, il prend en charge le contrôle d'interrupteur simple/double/triple et divers réglages de scène."
+            },
+            "image": "star_switch_4g.png",
+            "specs": {
+                "input": {
+                    "en": "100~240V AC 50/60Hz",
+                    "zh": "100~240V AC 50/60Hz"
+                },
+                "wireless": {
+                    "en": "Zigbee",
+                    "zh": "Zigbee"
+                },
+                "optional_switches": {
+                    "en": "1, 2, 3, 4 gang",
+                    "zh": "1, 2, 3, 4鍵"
+                },
+                "size": {
+                    "en": "86*86*36.2mm",
+                    "zh": "86*86*36.2mm"
+                },
+                "current": {
+                    "en": "74mA (Rated)",
+                    "zh": "74mA (額定)"
+                }
+            }
+        },
+        {
+            "id": "smart_lock_l1",
+            "name": {
+                "zh": "智能門鎖 L1",
+                "en": "Smart Lock L1",
+                "ja": "スマートロック L1",
+                "fr": "Serrure Intelligente L1"
+            },
+            "description": {
+                "zh": "L1 智能門鎖提供指紋、密碼、卡片、鑰匙與 App 遠端解鎖等多重開鎖方式。內建電子門鈴與防撬警報，守護您家的第一道防線。",
+                "en": "The L1 Smart Lock offers multiple unlocking methods including fingerprint, password, card, key, and App remote unlocking. Built-in electronic doorbell and anti-pry alarm guard the first line of defense for your home.",
+                "ja": "L1スマートロックは、指紋、パスワード、カード、キー、アプリによる遠隔解錠など、複数の解錠方法を提供します。内蔵の電子ドアベルとこじ開け防止アラームが、家の第一防衛線を守ります。",
+                "fr": "La serrure intelligente L1 offre plusieurs méthodes de déverrouillage, notamment l'empreinte digitale, le mot de passe, la carte, la clé et le déverrouillage à distance via l'application. La sonnette électronique intégrée et l'alarme anti-effraction protègent la première ligne de défense de votre maison."
+            },
+            "image": "iot-icon.svg",
+            "specs": {
+                "unlock": {
+                    "en": "Fingerprint / Password / Card / Key / App",
+                    "zh": "指紋 / 密碼 / 卡片 / 鑰匙 / App"
+                },
+                "power": {
+                    "en": "AA Battery * 4 or 8",
+                    "zh": "AA 電池 * 4 或 8"
+                },
+                "wireless": {
+                    "en": "Zigbee / Bluetooth",
+                    "zh": "Zigbee / 藍牙"
+                },
+                "features": {
+                    "en": "Anti-pry alarm, Virtual password",
+                    "zh": "防撬警報, 虛位密碼"
+                }
+            }
+        },
+        {
+            "id": "sensor_h1",
+            "name": {
+                "zh": "高精度人體存在感測器 H1",
+                "en": "Human Presence Sensor H1",
+                "ja": "人体存在センサー H1",
+                "fr": "Capteur de Présence Humaine H1"
+            },
+            "description": {
+                "zh": "H1 採用毫米波雷達技術，能偵測人體細微動作甚至呼吸，準確判斷人體存在，解決傳統紅外線感測器無法偵測靜止人體的痛點。",
+                "en": "H1 adopts millimeter-wave radar technology to detect subtle human movements and even breathing, accurately judging human presence and solving the pain point of traditional infrared sensors unable to detect stationary bodies.",
+                "ja": "H1はミリ波レーダー技術を採用し、人体の微細な動きや呼吸さえも検知し、人体の存在を正確に判断し、静止している人体を検知できない従来の赤外線センサーの問題点を解決します。",
+                "fr": "H1 adopte la technologie radar à ondes millimétriques pour détecter les mouvements humains subtils et même la respiration, jugeant avec précision la présence humaine et résolvant le problème des capteurs infrarouges traditionnels incapables de détecter les corps immobiles."
+            },
+            "image": "human_presence.png",
+            "specs": {
+                "input": {
+                    "en": "5V/1A Type-C",
+                    "zh": "5V/1A Type-C"
+                },
+                "technology": {
+                    "en": "Millimeter Wave Radar (mmWave) + Ambient Light Sensor (ALS)",
+                    "zh": "毫米波雷達 (mmWave) + 光感 (ALS:ambient light sensor)"
+                },
+                "wireless": {
+                    "en": "Zigbee 3.0",
+                    "zh": "Zigbee 3.0"
+                },
+                "range": {
+                    "en": "Up to 6m radius",
+                    "zh": "半徑 6 米內"
+                }
+            }
+        },
+        {
+            "id": "switch_d1",
+            "name": {
+                "zh": "自訂螢幕顯示開關 D1",
+                "en": "Custom Display Switch D1",
+                "ja": "カスタムディスプレイ スイッチ D1",
+                "fr": "Interrupteur à écran personnalisé D1"
+            },
+            "description": {
+                "zh": "D1 智能開關配備可自訂螢幕，提供直覺的觸控操作體驗。用戶可依需求設定多種情境模式，輕鬆切換，打造個性化智能家居。",
+                "en": "The D1 Smart Switch features a customizable screen, providing an intuitive touch operation experience. Users can set various scene modes according to their needs for easy switching.",
+                "ja": "D1スマートスイッチはカスタマイズ可能な画面を備えており、直感的なタッチ操作体験を提供します。ユーザーはニーズに応じてさまざまなシーンモードを設定し、簡単に切り替えることができます。",
+                "fr": "L'interrupteur intelligent D1 dispose d'un écran personnalisable, offrant une expérience tactile intuitive. Les utilisateurs peuvent définir divers modes de scène selon leurs besoins."
+            },
+            "image": "iot-icon.svg",
+            "specs": {
+                "input": {
+                    "en": "5V/1A Type-C",
+                    "zh": "5V/1A Type-C"
+                },
+                "wireless": {
+                    "en": "Wi-Fi / Zigbee",
+                    "zh": "Wi-Fi / Zigbee"
+                },
+                "size": {
+                    "en": "90*90*22mm",
+                    "zh": "90*90*22mm"
+                }
+            }
+        },
+        {
+            "id": "light_strip",
+            "name": {
+                "zh": "影音同步燈條 / 智能燈條",
+                "en": "Audio/Video Sync Light Strip",
+                "ja": "オーディオ/ビデオ同期ライトストリップ",
+                "fr": "Bande lumineuse de synchronisation audio/vidéo"
+            },
+            "description": {
+                "zh": "智能燈條支援影音同步功能，提供 1600 萬種色彩選擇，輕鬆營造各種氛圍。採用高顯色性 LED，讓居家空間更具層次感。",
+                "en": "The smart light strip supports audio/video sync, offering 16 million colors to easily create various atmospheres. High CRI LEDs make the home space more layered.",
+                "ja": "スマートライトストリップはオーディオ/ビデオ同期をサポートし、1600万色を提供してさまざまな雰囲気を簡単に作り出します。高演色性LEDがホームスペースをより層状にします。",
+                "fr": "La bande lumineuse intelligente prend en charge la synchronisation audio/vidéo, offrant 16 millions de couleurs pour créer facilement diverses atmosphères."
+            },
+            "image": "iot-icon.svg",
+            "specs": {
+                "power": {
+                    "en": "12W",
+                    "zh": "12W"
+                },
+                "voltage": {
+                    "en": "12V/24V",
+                    "zh": "12V/24V"
+                },
+                "wireless": {
+                    "en": "Zigbee",
+                    "zh": "Zigbee"
+                },
+                "color": {
+                    "en": "RGB/RGBCW",
+                    "zh": "RGB/RGBCW"
+                }
+            }
+        },
+        {
+            "id": "smart_bulb",
+            "name": {
+                "zh": "智能燈泡",
+                "en": "Smart Bulb",
+                "ja": "スマート電球",
+                "fr": "Ampoule Intelligente"
+            },
+            "description": {
+                "zh": "智能燈泡支援語音控制、調光調色及定時開關功能。多種燈頭規格 E27/E14/GU10 可選，色溫範圍 2700-6500K 搭配 RGB 全彩。",
+                "en": "Smart bulbs support voice control, dimming, color tuning, and timer functions. Available in E27/E14/GU10 bases with 2700-6500K + RGB color range.",
+                "ja": "スマート電球は、音声制御、調光、調色、タイマー機能をサポートしています。E27/E14/GU10ベースで利用可能で、2700-6500K + RGB色範囲を備えています。",
+                "fr": "Les ampoules intelligentes prennent en charge la commande vocale, la gradation, le réglage des couleurs et les fonctions de minuterie. Disponible en bases E27/E14/GU10."
+            },
+            "image": "iot-icon.svg",
+            "specs": {
+                "base": {
+                    "en": "E27/E14/GU10",
+                    "zh": "E27/E14/GU10"
+                },
+                "color_temp": {
+                    "en": "2700-6500K+RGB",
+                    "zh": "2700-6500K+RGB"
+                },
+                "wireless": {
+                    "en": "Zigbee",
+                    "zh": "Zigbee"
+                }
+            }
+        },
+        {
+            "id": "track_light",
+            "name": {
+                "zh": "磁吸軌道燈",
+                "en": "Magnetic Track Light",
+                "ja": "磁気トラックライト",
+                "fr": "Rail Lumineux Magnétique"
+            },
+            "description": {
+                "zh": "磁吸軌道燈設計靈活，可隨意移動調整照明位置。提供多種瓦數選擇 (6W-40W) 及光束角，高顯色性 RA≥90/98，完美適應各種空間照明需求。",
+                "en": "Magnetic track lights offer flexible design, allowing easy movement and adjustment. Available in various wattages (6W-40W) and beam angles with high CRI RA≥90/98.",
+                "ja": "磁気トラックライトは柔軟なデザインを提供し、照明位置の移動と調整が簡単です。さまざまなワット数（6W-40W）とビーム角で利用可能で、高演色性RA≥90/98を備えています。",
+                "fr": "Les rails lumineux magnétiques offrent une conception flexible, permettant un déplacement et un réglage faciles. Disponible en plusieurs puissances (6W-40W)."
+            },
+            "image": "iot-icon.svg",
+            "specs": {
+                "power": {
+                    "en": "6W-40W",
+                    "zh": "6W-40W"
+                },
+                "voltage": {
+                    "en": "48V",
+                    "zh": "DC 48V"
+                },
+                "CRI": {
+                    "en": "RA≥90/98",
+                    "zh": "RA≥90/98"
+                },
+                "beam_angle": {
+                    "en": "15°/24°/35°/55°",
+                    "zh": "15°/24°/35°/55°"
+                }
+            }
+        },
+        {
+            "id": "downlight",
+            "name": {
+                "zh": "防眩光筒燈/崁燈",
+                "en": "Anti-glare Downlight",
+                "ja": "防眩ダウンライト",
+                "fr": "Downlight Anti-éblouissement"
+            },
+            "description": {
+                "zh": "防眩光筒燈/崁燈提供舒適護眼的照明體驗，高顯色性 RA≥90。支援 Zigbee 無線控制，多種光束角可選，適用於居家及商業空間。",
+                "en": "Anti-glare downlights provide a comfortable, eye-protecting lighting experience with high CRI RA≥90. Supports Zigbee wireless control and various beam angles.",
+                "ja": "防眩ダウンライトは、高演色性RA≥90の快適で目に優しい照明体験を提供します。Zigbee無線制御とさまざまなビーム角をサポートしています。",
+                "fr": "Les downlights anti-éblouissement offrent une expérience d'éclairage confortable et protectrice pour les yeux avec un IRC élevé RA≥90."
+            },
+            "image": "iot-icon.svg",
+            "specs": {
+                "input": {
+                    "en": "AC 110-220V",
+                    "zh": "AC 110-220V"
+                },
+                "CRI": {
+                    "en": "RA≥90",
+                    "zh": "RA≥90"
+                },
+                "wireless": {
+                    "en": "Zigbee",
+                    "zh": "Zigbee"
+                },
+                "beam_angle": {
+                    "en": "8°/15°/24°/36°/55°/120°",
+                    "zh": "8°/15°/24°/36°/55°/120°"
+                },
+                "color": {
+                    "en": "White/Black",
+                    "zh": "白/黑"
+                },
+                "hole_size": {
+                    "en": "55/75/95mm",
+                    "zh": "55/75/95mm"
+                }
+            }
+        },
+        {
+            "id": "cob_downlight",
+            "name": {
+                "zh": "COB 防眩光崁燈",
+                "en": "COB Anti-glare Recessed Light",
+                "ja": "COB 防眩埋込灯",
+                "fr": "Downlight Encastré COB Anti-éblouissement"
+            },
+            "description": {
+                "zh": "COB 防眩光崁燈提供重點照明與極致的防眩光效果，營造高品質光環境。多色與多種開孔尺寸可選，滿足不同設計需求。",
+                "en": "COB Anti-glare Recessed Lights provide accent lighting with ultimate anti-glare effects, creating a high-quality light environment. Available in multiple colors and aperture sizes to meet different design needs.",
+                "ja": "COB 防眩埋込灯は、アクセント照明と究極の防眩効果を提供し、高品質な光環境を作り出します。さまざまなデザインニーズに合わせて、複数の色と開口サイズをご用意しています。",
+                "fr": "Les downlights encastrés COB anti-éblouissement offrent un éclairage d'accentuation avec des effets anti-éblouissement ultimes, créant un environnement lumineux de haute qualité."
+            },
+            "image": "iot-icon.svg",
+            "specs": {
+                "input": {
+                    "en": "AC 110-220V",
+                    "zh": "AC 110-220V"
+                },
+                "CRI": {
+                    "en": "RA≥90",
+                    "zh": "RA≥90"
+                },
+                "wireless": {
+                    "en": "Zigbee",
+                    "zh": "Zigbee"
+                },
+                "beam_angle": {
+                    "en": "120°",
+                    "zh": "120°"
+                },
+                "color": {
+                    "en": "Gun Black/Matte White/Silver",
+                    "zh": "槍黑/無光白/銀色"
+                },
+                "hole_size": {
+                    "en": "55/75/95mm",
+                    "zh": "55/75/95mm"
+                }
+            }
+        },
+        {
+            "id": "smart_diffuser",
+            "name": {
+                "zh": "智能擴散燈",
+                "en": "Smart Diffuser Light",
+                "ja": "スマートディフューザーライト",
+                "fr": "Lumière Diffuse Intelligente"
+            },
+            "description": {
+                "zh": "智能擴散燈提供均勻柔和的散光照明，適合營造舒適氛圍。支援 Zigbee 智能控制，可與全屋智能系統完美聯動。",
+                "en": "Smart Diffuser Lights provide uniform and soft diffused lighting, perfect for creating a comfortable atmosphere. Supports Zigbee smart control for perfect integration with full-house smart systems.",
+                "ja": "スマートディフューザーライトは、均一で柔らかな拡散照明を提供し、快適な雰囲気を作り出すのに最適です。Zigbeeスマートコントロールをサポートし、全屋スマートシステムと完全に連携します。",
+                "fr": "Les lumières diffuses intelligentes offrent un éclairage diffus uniforme et doux, parfait pour créer une atmosphère confortable. Prend en charge le contrôle intelligent Zigbee."
+            },
+            "image": "iot-icon.svg",
+            "specs": {
+                "input": {
+                    "en": "AC 110-220V",
+                    "zh": "AC 110-220V"
+                },
+                "CRI": {
+                    "en": "RA≥85",
+                    "zh": "RA≥85"
+                },
+                "wireless": {
+                    "en": "Zigbee",
+                    "zh": "Zigbee"
+                },
+                "beam_angle": {
+                    "en": "Diffused 120°",
+                    "zh": "散光120°"
+                },
+                "color": {
+                    "en": "White",
+                    "zh": "白"
+                },
+                "hole_size": {
+                    "en": "55/75/95/115mm",
+                    "zh": "55/75/95/115mm"
+                }
+            }
+        }
+    ]
+}

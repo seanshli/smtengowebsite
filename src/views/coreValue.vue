@@ -19,7 +19,7 @@
       <div class="core-value-section-bg-container">
         <img
           class="core-value-section-bg"
-          src="../assets/images/family.jpeg"
+          src="/images/family.jpeg"
           alt="core value background"
         />
       </div>

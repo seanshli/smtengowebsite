@@ -77,6 +77,7 @@
             display: none;
         }
     }
+
     .scroll-anchor {
         position: absolute;
         width: 0;
@@ -89,7 +90,7 @@
         border: 0;
         margin: 0;
         padding: 0;
-        }
+    }
 
     h2 {
         padding-top: 0;
@@ -170,7 +171,7 @@ body {
 
 .tablet_intro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url(@/assets/images/kitchen_1.png);
+        url(/images/kitchen_1.png);
     background-repeat: no-repeat;
     height: fit-content;
     display: flex;
@@ -194,7 +195,7 @@ body {
 }
 
 .gradient_container_i {
-    background-image: url(@/assets/images/background_2.png);
+    background-image: url(/images/background_2.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -269,6 +270,7 @@ body {
     }
 
     .count_card {
+        background-color: rgba(255, 255, 255, 0.781);
         border-radius: 30px;
         border: 8px solid #043655;
         max-width: 320px;
@@ -304,8 +306,6 @@ body {
             flex-direction: column;
             justify-content: space-between;
         }
-
-        background-color: rgba(255, 255, 255, 0.781);
     }
 
     .tablet_function {
@@ -764,7 +764,7 @@ body {
 }
 
 .gradient_container_ii {
-    background-image: url(@/assets/images/Frame172.png);
+    background-image: url(/images/Frame172.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -776,7 +776,7 @@ body {
     }
 
     .engo_products {
-        background-image: url(@/assets/images/filterwtablet.png);
+        background-image: url(/images/filterwtablet.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -816,7 +816,7 @@ body {
             }
 
             &-txt {
-                background-image: url(@/assets/drip.png);
+                background-image: url(/assets/drip.png);
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
@@ -1045,7 +1045,7 @@ body {
 }
 
 .filter_si {
-    background-image: url(@/assets/images/water_molecule.png);
+    background-image: url(/images/water_molecule.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 630px;
@@ -1080,7 +1080,7 @@ body {
     .baby_intro {
         &_img {
             flex: 1;
-            background-image: url(@/assets/images/babywwater_2.png);
+            background-image: url(/images/babywwater_2.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -1106,7 +1106,7 @@ body {
 
 .gradient_container_iii {
     color: white;
-    background-image: url(@/assets/images/water_molecule2.png);
+    background-image: url(/images/water_molecule2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1343,4 +1343,39 @@ body {
         width: 555px;
     }
 
+    .purchase-btn {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 101;
+        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.product-reviews {
+    .review-item {
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateX(10px);
+
+            @media (max-width: 1024px) {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding: 16px;
+        }
+    }
+
+    .add-review {
+        @media (max-width: 768px) {
+            padding: 24px 16px;
+
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+    }
 }

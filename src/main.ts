@@ -7,17 +7,19 @@ import router from './router'
 import { zhLocale } from './locale/zh'
 import { enLocale } from './locale/en'
 import { frLocale } from './locale/fr'
+import { jaLocale } from './locale/ja'
 
-export type LanguageType = 'zh' | 'en' | 'fr'
+export type LanguageType = 'zh' | 'en' | 'fr' | 'ja'
 
-const i18n = createI18n({
+export const i18n = createI18n({
+  legacy: false, // Use Composition API mode
   locale: 'zh',
-  allowComposition: true, // you need to specify that!
   globalInjection: true,
   messages: {
     en: enLocale,
     zh: zhLocale,
-    fr: frLocale
+    fr: frLocale,
+    ja: jaLocale
   }
 })
 const app = createApp(App)
@@ -28,7 +30,9 @@ app.use(i18n)
 app.mount('#app')
 
 export const changeLocale = (lang: LanguageType) => {
-  i18n.global.locale = lang
+  console.log('Changing locale to:', lang)
+  i18n.global.locale.value = lang
+  console.log('Locale changed to:', i18n.global.locale.value)
 }
 
 export const geti18n = () => {

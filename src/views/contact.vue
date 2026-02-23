@@ -2,7 +2,7 @@
   <div class="contact">
     <div class="contact_wrap">
       <div class="contact_title">
-        <h3 class="fz-48 lh-70 fw-500">{{ $t('contactUsTitle') }}</h3>
+        <h1 class="fz-48 lh-70 fw-500">{{ $t('contactUsTitle') }}</h1>
         <p class="fz-24 lh-34 web">{{ $t('contactUsSubtitle') }}</p>
         <div class="phone container">
           <div class="phone">{{ $t('contactUsSubtitle1') }}</div>
@@ -97,18 +97,25 @@
             v-model="message"
           ></textarea>
         </div>
-        <div id="form-error-message" class="mt-12">{{ errorMessage }}</div>
-        <button class="contact-form-submit" @click="submitForm">{{ $t('submitForm') }}</button>
+      <div class="line-btn-container mt-4">
+        <button class="contact-form-line" @click="jumpToLine">
+          <img src="/images/link_Line.png" alt="LINE" class="line-icon" />
+          {{ $t('contactOnLine') }}
+        </button>
+      </div>
+      
+      <div id="form-error-message" class="mt-12">{{ errorMessage }}</div>
+      <button class="contact-form-submit" @click="submitForm">{{ $t('submitForm') }}</button>
       </div>
     </div>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
 import { config } from '../configs/systemConfig'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { geti18n } from '../main'
+import { useAnalytics } from '@/utils/analytics'
 
 export default defineComponent({
   name: 'Contact',
@@ -122,49 +129,64 @@ export default defineComponent({
     const interest = ref('')
     const messagetype = ref('')
     const plan = ref('')
-    const planOptions = ref<any>([])
     const message = ref('')
     const errorMessage = ref('')
 
-    const { locale } = useI18n()
-    const i18nObj = geti18n() as any
+    const { locale, tm, t } = useI18n()
+    const { trackEvent } = useAnalytics()
+
+    const planOptions = computed(() => {
+      return tm('planItems') as any[]
+    })
 
     const router = useRouter()
 
+    const jumpToLine = () => {
+      trackEvent('click_contact_line')
+      window.open('https://lin.ee/THIUSjW')
+    }
+
     const handleError = () => {
       errorMessage.value = 'Something went wrong. Please try again later.'
+      trackEvent('form_submit_error', { error: errorMessage.value })
     }
 
     const validateRequired = () => {
-      const i18n = i18nObj[locale.value]
       if (name.value === '') {
-        errorMessage.value = `${i18n.enterEmpty}"${i18n.name}"`
+        errorMessage.value = `${t('enterEmpty')}"${t('name')}"`
+        trackEvent('form_validation_error', { field: 'name', error: errorMessage.value })
         return false
       }
       if (phone.value === '') {
-        errorMessage.value = `${i18n.enterEmpty}"${i18n.phone}"`
+        errorMessage.value = `${t('enterEmpty')}"${t('phone')}"`
+        trackEvent('form_validation_error', { field: 'phone', error: errorMessage.value })
         return false
       }
       if (email.value === '') {
-        errorMessage.value = `${i18n.enterEmpty}"${i18n.email}"`
+        errorMessage.value = `${t('enterEmpty')}"${t('email')}"`
+        trackEvent('form_validation_error', { field: 'email', error: errorMessage.value })
         return false
       }
       if (city.value === '') {
-        errorMessage.value = `${i18n.enterEmpty}"${i18n.city}"`
+        errorMessage.value = `${t('enterEmpty')}"${t('city')}"`
+        trackEvent('form_validation_error', { field: 'city', error: errorMessage.value })
         return false
       }
       if (interest.value === '') {
-        errorMessage.value = `${i18n.enterEmpty}"${i18n.interest}"`
+        errorMessage.value = `${t('enterEmpty')}"${t('interest')}"`
+        trackEvent('form_validation_error', { field: 'interest', error: errorMessage.value })
         return false
       }
 
       if (interest.value === 'product') {
         if (messagetype.value === '') {
-          errorMessage.value = `${i18n.enterEmpty}"${i18n.messagetype}"`
+          errorMessage.value = `${t('enterEmpty')}"${t('messagetype')}"`
+          trackEvent('form_validation_error', { field: 'messagetype', error: errorMessage.value })
           return false
         }
         if (plan.value === '') {
-          errorMessage.value = `${i18n.enterEmpty}"${i18n.plan}"`
+          errorMessage.value = `${t('enterEmpty')}"${t('plan')}"`
+          trackEvent('form_validation_error', { field: 'plan', error: errorMessage.value })
           return false
         }
       }
@@ -177,8 +199,8 @@ export default defineComponent({
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       )
       if (!isValid) {
-        const i18n = i18nObj[locale.value]
-        errorMessage.value = i18n.enterValidMail
+        errorMessage.value = t('enterValidMail')
+        trackEvent('form_validation_error', { field: 'email', error: 'Invalid format' })
         return false
       }
 
@@ -188,8 +210,8 @@ export default defineComponent({
     const validatePhone = () => {
       const isMobile = phone.value.match(/^09[0-9]{8}$/)
       if (!isMobile) {
-        const i18n = i18nObj[locale.value]
-        errorMessage.value = i18n.enterValidPhone
+        errorMessage.value = t('enterValidPhone')
+        trackEvent('form_validation_error', { field: 'phone', error: 'Invalid format' })
         return false
       }
 
@@ -197,6 +219,8 @@ export default defineComponent({
     }
 
     const submitForm = async () => {
+      trackEvent('form_submit_attempt')
+      
       if (!validateRequired()) return
       if (!validatePhone()) return
       if (!validateEmail()) return
@@ -242,6 +266,7 @@ export default defineComponent({
           return
         }
 
+        trackEvent('form_submit_success', { productType })
         router.push({ name: 'success' })
       } catch (error) {
         console.log(error)
@@ -249,94 +274,10 @@ export default defineComponent({
       }
     }
 
-    const getPlanOptions = async () => {
-      try {
-        const response: any = await fetch(`${config.hostname}/service/WATER_SERVICE`, {
-          method: 'GET',
-          headers: { 'Content-Type': 'application/json' }
-        })
 
-        if (response.status !== 200) {
-          handleError()
-          return
-        }
+    // getPlanOptions() - replaced by computed planOptions from locale
 
-        planOptions.value = response.model.content
-      } catch (error) {
-        console.log(error)
-        handleError()
-      }
-    }
 
-    // getPlanOptions()
-
-    // 測試專區
-    const res = {
-      timestamp: 1723708238670,
-      code: 0,
-      status: 200,
-      message: null,
-      model: {
-        content: [
-          {
-            id: 1,
-            name: '買斷： 濾水器',
-            num: 'AFASF001',
-            type: 'WATER_SERVICE',
-            cycle: 3
-          },
-          {
-            id: 2,
-            name: '買斷： 空氣機',
-            num: 'AFASF002',
-            type: 'WATER_SERVICE',
-            cycle: 3
-          },
-          {
-            id: 3,
-            name: '買斷： 濾水器 濾芯',
-            num: 'AFASF003',
-            type: 'WATER_SERVICE',
-            cycle: 3
-
-          },
-          {
-            id: 4,
-            name: '買斷： 空氣機 濾芯',
-            num: 'AFASF004',
-            type: 'WATER_SERVICE',
-            cycle: 3
-
-          },
-          {
-            id: 5,
-            name: '買斷： enGo 管理中控+濾水器＋空氣機',
-            num: 'AFASF005',
-            type: 'WATER_SERVICE',
-            cycle: 3
-
-          } ,
-          {
-            id: 6,
-            name: '租賃： enGo 管理中控+濾水器 (12個月）',
-            num: 'AFASF006',
-            type: 'WATER_SERVICE',
-            cycle: 3
-
-          } ,
-          {
-            id: 7,
-            name: '租賃： enGo 管理中控+濾水器＋空氣機 (12個月）',
-            num: 'AFASF007',
-            type: 'WATER_SERVICE',
-            cycle: 3
-
-          }
-        ],
-        totalCount: 1
-      }
-    }
-    planOptions.value = res.model.content
 
     return {
       name,
@@ -352,8 +293,51 @@ export default defineComponent({
       errorMessage,
       locale,
       interest,
-      planOptions
+      planOptions,
+      jumpToLine
     }
   }
 })
 </script>
+
+<style scoped lang="scss">
+@import '@/css/utils/_variables.scss';
+@import '@/css/pages/_contact.scss';
+
+.line-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #06c755;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  
+  &:hover {
+    background-color: #05a546;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+  }
+
+  .line-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+}
+</style>

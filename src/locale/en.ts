@@ -5,9 +5,97 @@ export const enLocale = {
   productTitle: 'enGo Product',
   mallTitle: 'enGo Store',
   contactTitle: 'Contact Us',
+  contactOnLine: 'Contact Us via LINE',
+  tutorialTitle: 'Tutorial',
+  tutorialSubtitle: 'Empowering your smart life with enGo',
+  faqTitle: 'Frequently Asked Questions',
+  watchTutorials: 'Watch Full Video Tutorials',
+  videoGuideDesc: 'Detailed video guides for product usage and smart scenes',
+  designExamplesTitle: 'Design Examples',
+  designExamplesDesc: 'Explore design inspirations and examples for AI smart homes',
+  ourPartners: 'Partner Products',
+  // SEO
+  seo: {
+    default: {
+      title: 'enGo Smart Home - Leading AIot Solutions',
+      description: 'enGo integrates AI with light, air, water, and food to create a healthier, smarter home life.',
+      keywords: 'enGo, Smart Home, AIot, Water Purifier, Air Purifier, Home Automation'
+    },
+    home: {
+      title: 'Home | enGo Smart Home - Leading AIot Solutions',
+      description: 'enGo uses AI technology to make your home healthier and safer. Integrated cloud storage and device management.'
+    },
+    product: {
+      title: 'Product | enGo AI Smart Hub & Water Systems',
+      description: 'Explore enGo AI Smart Hub and Water Filtration systems designed for modern smart living.'
+    },
+    cases: {
+      title: 'Cases | Smart Home Implementation Stories',
+      description: 'See real-world examples of smart home transformations helping families live better.'
+    },
+    tutorial: {
+      title: 'Tutorial | Empower Your Smart Life',
+      description: 'Detailed product guides and video tutorials for enGo smart home systems.'
+    },
+    about: {
+      title: 'About | Our Vision & Mission',
+      description: 'Learn about enGo brand story and our commitment to high-quality smart living for everyone.'
+    },
+    contact: {
+      title: 'Contact | Inquire enGo Solutions',
+      description: 'Interested in enGo? Contact us via form or LINE for personalized smart home solutions.'
+    },
+    login: {
+      title: 'Login | enGo Management System',
+      description: 'Sign in to manage your smart home devices and community services.'
+    }
+  },
+
+  planner: {
+    title: 'Smart Home Planner',
+    undo: 'Undo',
+    addRoom: 'Add Room',
+    budgetSummary: 'Budget Summary',
+    budgetEstimated: 'Estimated Budget',
+    roomSettings: 'Room Settings',
+    emptyRoom: 'No devices added yet',
+    newRoomDefault: 'New Room',
+    clear: 'Clear',
+    removeTag: 'Remove Tag',
+    deviceList: 'Device List (Auto-sync with tags)',
+    addDevice: 'Add Device'
+  },
+  casesTitle: 'Case Sharing',
+  casesSubtitle: 'Real-world smart home transformations',
+  viewDetails: 'View Details',
+  filterCategory: 'Category',
+  filterCountry: 'Country',
+  filterCity: 'City',
+  catAll: 'All',
+  catPrivateResidence: 'Private Residence',
+  catCommercialSpace: 'Commercial Space',
+  catHouse: 'House',
+  catOffice: 'Office',
+  catApartment: 'Apartment',
+  catOther: 'Other',
+  catShowroom: 'Showroom',
   english: 'English',
   chinese: 'Chinese',
   french: 'French',
+  japanese: 'Japanese',
+
+  // Case Detail Page
+  caseIntro: 'Project Introduction',
+  caseBasicInfo: 'Basic Information',
+  caseNeeds: 'Needs Analysis',
+  caseSolution: 'Solution',
+  caseScope: 'Scope of Work',
+  caseHardware: 'Hardware',
+  caseSoftware: 'Software',
+  caseFeatures: 'Features',
+  caseRecommendations: 'Optional Recommendations',
+  caseInterface: 'Interface Gallery',
+  caseRealScene: 'Real Scene Photos/Videos',
 
   // index
   pageTitle: 'AI Empowered Home',
@@ -15,20 +103,30 @@ export const enLocale = {
   paragraphEn:
     'We focus on the kitchen as the core, realizing home automation. Through advanced AIoT, big data, and cloud technology, we create a higher quality, better life for you.',
 
+  // WHY enGo section
+  whyEngoTitle: 'WHY enGo',
+  whyEngoTagline1: 'One Brain. One Home.',
+  whyEngoTagline2: 'One brain controls the entire home.',
+  whyEngoBenefit1: '✓ Cross-brand Integration',
+  whyEngoBenefit2: '✓ One-touch Scene Automation',
+  whyEngoBenefit3: '✓ Local Installation & Maintenance',
+  whyEngoBenefit4: '✓ Senior-friendly Design',
+  whyEngoBenefit5: '✓ Visible Energy Savings',
+
   // brand
   brand: {
     brandStoryTitle: 'Brand story',
     intextLogo: "AI is not just tech-it's part of your home",
     paragraph1:
-        '在這個科技飛躍經濟變動的時代，我們深信真正的進步不該屬於少數人。<font color="c46043">enGo 取自「Energy Go」</font>我們希望透過科技讓能源流動更高效，也讓每個家庭都能邁向更健康更智慧的生活。我們從智能居家節能出發，自律打造一個人人都能輕鬆享有的智慧生活環境、無論是空氣、水質、光線、還是<font color="c46043">日常習慣學習</font>以調節， enGo系統透過AI技術懂你所需，先你一步為你打造舒適安全環保的生活體驗。',
+      'In this era of rapid technological leaps and economic shifts, we believe true progress should not belong to a few. <font color="c46043">enGo is derived from "Energy Go"</font>. We hope to make energy flow more efficient through technology, allowing every family to move towards a healthier and smarter life. Starting from smart home energy saving, we create a smart living environment accessible to everyone. Whether it\'s air, water, lighting, or <font color="c46043">learning daily habits</font> to adjust, the enGo system understands your needs through AI technology, staying one step ahead to create a comfortable, safe, and environmentally friendly living experience for you.',
     paragraph2:
-        '面對高齡化的社會的來臨，我們更看見科技的溫度～<font color="c46043">enGo不只是「智慧宅」的守護者，更是「樂齡宅」的貼身心管家。</font>',
+      'Facing the arrival of an aging society, we see the warmth of technology. <font color="c46043">enGo is not just a protector of "smart homes", but also a close personal butler for "senior residences".</font>',
     paragraph3:
-        '這並非一條易行的道路。在資金有限、資源匱乏的情況下，他們選擇在一棟老舊的樓房中開始創業。儘管全球疫情帶來了無數挑戰，每一步都充滿了不確定性與艱辛，但他們的信念從未動搖。Sean 和他的創業夥伴深知，創業如同一場馬拉松，比拼的不僅是速度，更是耐力與韌性。他們彼此鼓勵：“有夢最美，先做再說！”這份熱情與信念成為了他們的堅實支柱。',
+      'This is not an easy path. Starting with limited funds and resources in an old building, they faced numerous challenges during the global pandemic. Every step was full of uncertainty and hardship, but their belief never wavered. Sean and his partners know that starting a business is a marathon; it\'s not just about speed, but also endurance and resilience. They encouraged each other: "Dreams are beautiful, just do it!" This passion and belief became their solid pillar.',
     paragraph4:
-        '運用尖端 AI 技術，enGo 將陽光、空氣、水和食物健康地融入到家庭生活的每一個角落。他們的產品不僅僅是智慧家居的創新，更是對每個家庭健康與幸福的承諾。最終，enGo 成功誕生，這一時刻見證了他們夢想的一部分實現。然而，Sean 和他的團隊深知，這僅僅是起點，未來的每一步才是真正築夢踏實的開始。',
+      'Using cutting-edge AI technology, enGo integrates sunlight, air, water, and food healthily into every corner of home life. Their products are not just smart home innovations, but a commitment to the health and happiness of every family. Finally, enGo was born, witnessing the realization of part of their dream. However, Sean and his team know this is just the beginning, and every step in the future is the real start of making dreams come true.',
     paragraph5:
-        'enGo 的創業旅程，既是一場對創新與健康的探索，也是一段充滿情感的堅韌旅程。他們相信，科技的真正價值在於改善人們的生活，讓每一個家庭都能夠安心享受健康與幸福的未來。'
+      'enGo\'s entrepreneurial journey is both an exploration of innovation and health and a resilient journey full of emotion. They believe the true value of technology lies in improving people\'s lives, allowing every family to enjoy a future of peace, health, and happiness.'
   },
   // about
   coreValueTitle: 'Our Core Values',
@@ -86,16 +184,25 @@ export const enLocale = {
   jh: 'Changhua',
   other: 'other',
   interest: 'Know more about',
-  interestType1: 'enGo智慧產品',
-  interestType2: 'enGo維修',
-  interestType3: '詢問/其他',
-  interestType4: 'smart home',
+  interestType1: 'Select a Product',
+  interestType2: 'enGo Repair',
+  interestType3: 'Inquiry / Other',
+  interestType4: 'Smart Home',
   messagetype: 'Product',
   messagetypePlaceholder: 'Select a product',
   msgType1: 'enGo intlligent system',
   msgType2: 'water filter',
   msgType3: 'enGo Air filter',
- 
+
+  planItems: [
+    { id: 1, name: 'Purchase: Water Filter' },
+    { id: 2, name: 'Purchase: Air Purifier' },
+    { id: 3, name: 'Purchase: Water Filter Cartridge' },
+    { id: 4, name: 'Purchase: Air Purifier Filter' },
+    { id: 5, name: 'Purchase: enGo Hub + Water Filter + Air Purifier' },
+    { id: 6, name: 'Lease: enGo Hub + Water Filter (12 months)' },
+    { id: 7, name: 'Lease: enGo Hub + Water Filter + Air Purifier (12 months)' }
+  ],
   plan: 'Plan',
   planPlaceholder: 'Select a plan',
   message: 'Message',
@@ -105,6 +212,17 @@ export const enLocale = {
   enterValidMail: 'Please enter a valid email address.',
   enterValidPhone: 'Please enter a valid mobile address.',
   required: 'required',
+  loginPage: {
+    userLogin: 'User Login',
+    workerLogin: 'Employee Login',
+    welcome: 'Welcome to enGo Smart Home System',
+    username: 'Username / Email',
+    password: 'Password',
+    submit: 'Login',
+    switchTo: 'Switch to',
+    backHome: 'Back to Home',
+    upcoming: 'Login feature coming soon, stay tuned!'
+  },
 
   //success
   submitSuccess: 'Message Successfully Sent',
@@ -113,31 +231,112 @@ export const enLocale = {
   backToHome: 'Return to Homepage',
 
   product: {
-      air_purifier: {
-      tag: '空氣清淨機',
-      title: '智能空氣清淨機'
+    air_purifier: {
+      tag: 'Air Purifier',
+      title: 'Smart Air Purifier Series',
+      desc: 'HEPA 13 medical grade filtration effectively removes PM2.5, formaldehyde, and bacteria.'
+    },
+    tablet_intro: {
+      title: 'AI Smart Hub Tablet',
+      info: 'Central Control of Your Smart Home'
+    },
+    purchase: {
+      btn: 'Buy Now'
+    },
+    reviews: {
+      title: 'User Reviews',
+      add: 'Write a Review',
+      sample1: {
+        name: 'Xiao Ming',
+        comment: 'The AI Hub is fantastic, voice control is very responsive!'
+      },
+      sample2: {
+        name: 'Li Hua',
+        comment: 'Water quality improved noticeably, the Sr water tastes sweet.'
+      }
+    },
+    packages: {
+      tag: 'Package Plans',
+      title: 'Choose the Best Plan for Your Smart Home',
+      functions: 'Core Functions',
+      scenarios: 'Scenario Control',
+      components: 'Package Components',
+      addOns: 'Optional Add-on Packages',
+      otherOptions: 'Other Options (Catalog)'
+    },
+    viewDetails: 'View Details',
+    description: 'Product Description',
+    specs: 'Product Specs',
+    spec_labels: {
+      display: 'Display Screen',
+      input: 'Input',
+      working_temp: 'Working Temperature',
+      working_humidity: 'Working Humidity',
+      wireless: 'Wireless Protocol',
+      base: 'Base',
+      size: 'Product Size (WxDxH)',
+      power_input: 'Power Input',
+      working: 'Working Environment',
+      power: 'Power',
+      unlock: 'Unlock Methods',
+      features: 'Features',
+      technology: 'Technology',
+      range: 'Range',
+      color_temp: 'Color Temperature',
+      voltage: 'Voltage',
+      CRI: 'CRI',
+      beam_angle: 'Beam Angle',
+      current: 'Rated Current',
+      color: 'Color',
+      hole_size: 'Hole Size',
+      optional_switches: 'Optional Switches'
     }
   },
   // footer
   footer: {
-    product: '產品',
-    firstLink: 'enGo AI智慧中控系統',
-    secondLink: '水維氧AI智慧淨水系統',
-    about: '關於enGo',
-    brand: '公司介紹',
-    contactUs: '聯絡我們',
-    copyright: 'Copyright © 2024， 智管家科技股份有限公司 著作權所有，版權所有。',
-    time: '週一至週五 9:00-18:00',
+    product: 'Product',
+    firstLink: 'enGo AI Smart Hub',
+    secondLink: 'Aiox AI Smart Water Purifier',
+    about: 'About enGo',
+    brand: 'Company Profile',
+    contactUs: 'Contact Us',
+    tutorial: 'Tutorial',
+    cases: 'Case Sharing',
+    copyright: 'Copyright © 2024, SmtenGo. All rights reserved.',
+    time: 'Mon-Fri 9:00-18:00',
     phone: '02-27510218',
-    customer: '專人客服'
+    customer: 'Customer Service'
   },
 
   cookie: {
-    title: 'Cookie 設定',
+    title: 'Cookie Settings',
     content:
-      '這些 Cookie 是我們的小助手，幫助我們了解您如何使用網站，並讓您的瀏覽體驗更加流暢。它們能夠告訴我們您是否從我們的其他網站來到這裡，或是您在瀏覽過程中是否使用或購買了我們的產品和服務。別擔心，這些信息都是匿名的，不會揭示您的個人身份。我們會儲存一些您所在的位置資訊，這樣我們就能為您提供本地化的內容，也可能記錄一些您的偏好設定，以便讓您的使用體驗更貼心。',
-    seeMore: '查看更多',
-    accpet: '接受 Cookie',
-    check: '查看設定'
+      'These cookies are our little helpers, helping us understand how you use the site and making your browsing experience smoother. They tell us if you came here from our other sites or if you used or purchased our products and services. Don\'t worry, this information is anonymous and does not reveal your identity. We store some location info to provide localized content and may record preferences to make your experience more personal.',
+    seeMore: 'See More',
+    accpet: 'Accept Cookie',
+    check: 'Check Settings'
+  },
+
+  chatbot: {
+    welcome: 'Hello! I am the enGo Assistant. How can I help you today?',
+    inputPlaceholder: 'Ask me anything...',
+    found_video: 'I found a video for you:',
+    found_info: 'I found some information for you. You can check it here:',
+    no_match: "I'm sorry, I couldn't find a specific answer for that. Would you like to contact our support?",
+    replies: {
+      product: 'Product Info',
+      tutorial: 'Tutorials',
+      water: 'Water System',
+      air: 'Air Purifier',
+      contact: 'Contact Us',
+      purchase: 'How to Buy'
+    },
+    answers: {
+      product: 'Our AI Smart Hub integrates home appliances, security, and water filtration. Visit our Product page for details.',
+      tutorial: 'We provide specialized guides for individuals, designers, and builders. Check our Tutorials page.',
+      contact: 'Call us at 02-27510218 or leave your details on the Contact page, and we will get back to you.',
+      purchase: 'Visit our enGo Mall to shop online or follow our early-bird promotions.',
+      default: 'Thank you for your inquiry. A representative will assist you shortly.'
+    }
   }
 }

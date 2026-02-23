@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "question": {
+            "zh": "如何將 enGo 中樞連接到 Wi-Fi？",
+            "en": "How do I connect the enGo Hub to Wi-Fi?",
+            "fr": "Comment connecter le concentrateur enGo au Wi-Fi ?",
+            "ja": "enGoハブをWi-Fiに接続するにはどうすればよいですか？"
+        },
+        "answer": {
+            "zh": "插上中樞，打開 enGo App，然後按照「新增設備」提示輸入您的 Wi-Fi 密碼。",
+            "en": "Plug in the hub, open the enGo App, and follow the 'Add Device' prompts to enter your Wi-Fi password.",
+            "fr": "Branchez le concentrateur, ouvrez l'application enGo et suivez les instructions 'Ajouter un appareil' pour saisir votre mot de passe Wi-Fi.",
+            "ja": "ハブを電源に接続し、enGoアプリを開いて「デバイスの追加」プロンプトに従い、Wi-Fiパスワードを入力します。"
+        }
+    },
+    {
+        "id": 2,
+        "question": {
+            "zh": "有哪些設備與 enGo 系統兼容？",
+            "en": "What devices are compatible with the enGo system?",
+            "fr": "Quels appareils sont compatibles avec le système enGo ?",
+            "ja": "enGoシステムと互換性のあるデバイスは何ですか？"
+        },
+        "answer": {
+            "zh": "enGo 支持大多數主要的智慧燈光、插座、淨水器和空氣清淨機。請查看我們的產品頁面以獲取完整列表。",
+            "en": "enGo supports most major smart lights, plugs, water purifiers, and air cleaners. Check our Products page for a full list.",
+            "fr": "enGo prend en charge la plupart des principaux luminaires, prises, purificateurs d'eau et purificateurs d'air intelligents. Consultez notre page Produits pour une liste complète.",
+            "ja": "enGoは、ほとんどの主要なスマートライト、プラグ、浄水器、空気清浄機をサポートしています。詳細なリストについては、製品ページを確認してください。"
+        }
+    },
+    {
+        "id": 3,
+        "question": {
+            "zh": "我該如何更新固件？",
+            "en": "How do I update the firmware?",
+            "fr": "Comment mettre à jour le firmware ?",
+            "ja": "ファームウェアを更新するにはどうすればよいですか？"
+        },
+        "answer": {
+            "zh": "如果有可用更新，enGo App 會自動通知您。您可以從設定選單中一鍵更新。",
+            "en": "The enGo App will notify you automatically if an update is available. You can update with one click from the Settings menu.",
+            "fr": "L'application enGo vous informera automatiquement si une mise à jour est disponible. Vous pouvez effectuer la mise à jour en un clic depuis le menu Paramètres.",
+            "ja": "更新が利用可能な場合、enGoアプリが自動的に通知します。設定メニューからワンクリックで更新できます。"
+        }
+    },
+    {
+        "id": 4,
+        "question": {
+            "zh": "我可以在哪裡找到產品設定和智慧場景的影片教學？",
+            "en": "Where can I find video tutorials for product setup and smart scenes?",
+            "fr": "Où puis-je trouver des tutoriels vidéo pour la configuration des produits et les scènes intelligentes ?",
+            "ja": "製品のセットアップやスマートシーンの動画チュートリアルはどこで見られますか？"
+        },
+        "answer": {
+            "zh": "您可以到我們的官方 YouTube 頻道查看分步指南，其中包含產品使用及居家場景自動化教學。",
+            "en": "You can find step-by-step guides on our official YouTube channel, featuring tutorials on product usage and smart home scene automation.",
+            "fr": "Vous pouvez trouver des guides étape par étape sur notre chaîne YouTube officielle, avec des tutoriels sur l'utilisation des produits et l'automatisation des scènes domestiques.",
+            "ja": "公式YouTubeチャンネルでステップバイステップのガイドをご覧いただけます。製品の使用方法やホームシーンの自動化に関するチュートリアルを多数掲載しています。"
+        }
+    }
+]

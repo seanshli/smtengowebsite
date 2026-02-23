@@ -5,11 +5,102 @@ export const zhLocale = {
   productTitle: 'enGo產品',
   mallTitle: '安購商城',
   contactTitle: '聯絡我們',
+  contactOnLine: '用 LINE 聯繫我們',
+  tutorialTitle: '使用教學',
+  tutorialSubtitle: 'enGo 智管家，啟動您的智慧生活',
+  faqTitle: '常見問題',
+  watchTutorials: '觀看完整影片教學',
+  videoGuideDesc: '關於產品使用與智慧場景的詳細影音指南',
+  designExamplesTitle: '設計範例',
+  designExamplesDesc: '探索 AI 智慧家居的設計靈感與範例',
+  ourPartners: '合作夥伴產品',
+
+  // SEO
+  seo: {
+    default: {
+      title: 'enGo智管家 - 智慧家居第一品牌',
+      description: 'enGo「安購」運用 AI 將陽光、空氣、水與食物智慧整合，打造一站式智慧生活平台。',
+      keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 淨水器, 空氣清淨機, 雲端倉儲'
+    },
+    home: {
+      title: '首頁 | enGo智管家 - 智慧家居第一品牌',
+      description: 'enGo智管家用AI技術讓家更健康、更安心。整合雲端倉儲、聯網設備管理與生活採購。'
+    },
+    product: {
+      title: '產品介紹 | enGo AI智慧中控系統 & 淨水系統',
+      description: '探索 enGo AI智慧中控平板與水維氧智慧淨水系統，提升家居舒適度與安全性。'
+    },
+    cases: {
+      title: '案例分享 | 智慧家居實作紀錄',
+      description: '查看我們在住宅、辦公室及各式建築中的智慧家居實作案例，見證生活品質的提升。'
+    },
+    tutorial: {
+      title: '使用教學 | 開啟您的智慧生活',
+      description: '詳細的 enGo 產品使用教學與影音指南，幫助您輕鬆上手智慧家庭系統。'
+    },
+    about: {
+      title: '關於 enGo | 公司理念與願景',
+      description: '了解 enGo 的 brand 故事、公司宗旨與未來願景，我們致力於讓每個人都能享有高品質的智慧生活。'
+    },
+    contact: {
+      title: '聯絡我們 | 諮詢 enGo 智慧家居解決方案',
+      description: '對我們的產品有興趣？立即填寫表單或透過 LINE 聯繫我們，專人將竭誠為您服務。'
+    },
+    login: {
+      title: '登入 | enGo 智管家管理系統',
+      description: '登入 enGo 帳戶以管理您的聯網視窗與智慧家居配備。'
+    }
+  },
+
+  planner: {
+    title: '全屋智能系統規劃圖',
+    undo: '撤銷',
+    addRoom: '新增區域',
+    budgetSummary: '預算總結',
+    budgetEstimated: '預估預算',
+    roomSettings: '區域設定',
+    emptyRoom: '尚未配置設備',
+    newRoomDefault: '新區域',
+    clear: '清空',
+    removeTag: '移除產品標籤',
+    deviceList: '配置清單 (移動標籤即時連動)',
+    addDevice: '新增設備'
+  },
+  casesTitle: '案例分享',
+  casesSubtitle: '真實世界的智慧家居轉型',
+  viewDetails: '查看詳情',
+  filterCategory: '類別',
+  filterCountry: '國家',
+  filterCity: '城市',
+  catAll: '全部',
+  catPrivateResidence: '私人住宅',
+  catCommercialSpace: '商業空間',
+  catHouse: '透天別墅',
+  catOffice: '辦公空間',
+  catApartment: '大樓公寓',
+  catOther: '其他',
+  catShowroom: '展間',
+
+  // Moved from Product (Generic strings)
   english: '英文',
   chinese: '中文',
   french: '法文',
+  japanese: '日文',
 
-  // index
+  // Case Detail Page (Top Level)
+  caseIntro: '專案簡介',
+  caseBasicInfo: '基本資料',
+  caseNeeds: '需求分析',
+  caseSolution: '解決方案',
+  caseScope: '施作項目',
+  caseHardware: '硬體項目',
+  caseSoftware: '軟體項目',
+  caseFeatures: '實際功能展示',
+  caseRecommendations: '擴充建議（選配）',
+  caseInterface: '介面展示',
+  caseRealScene: '實景照片／影片',
+
+  // index (Top Level)
   pageTitle: 'AI 賦能家',
   intextLogo: '理家！蝦咪攏嘸驚！',
   paragraph1: 'enGo「安購」運用 AI 將陽光、空氣、水與食物智慧整合，讓家更健康、更安心。',
@@ -17,23 +108,33 @@ export const zhLocale = {
   paragraph3: '從生活細節到安全防護，enGo 讓科技充滿溫度，守護每一個家。',
   paragraph4: '節能減碳，智慧永續，enGo 讓幸福生活每一刻都更美好。',
 
-  //brand
+  // WHY enGo section
+  whyEngoTitle: 'WHY enGo',
+  whyEngoTagline1: 'One Brain. One Home.',
+  whyEngoTagline2: '一個大腦，整個家都聽話。',
+  whyEngoBenefit1: '✓ 跨品牌整合',
+  whyEngoBenefit2: '✓ 一鍵情境自動化',
+  whyEngoBenefit3: '✓ 在地施工與維運',
+  whyEngoBenefit4: '✓ 長輩也會用的設計',
+  whyEngoBenefit5: '✓ 節能省電看得見',
+
+  // brand (Top Level)
   brand: {
     brandStoryTitle: 'enGo品牌故事與願景',
     intextLogo: "AI is not just tech-it's part of your home",
     paragraph1:
-        '在這個科技飛躍經濟變動的時代，我們深信真正的進步不該屬於少數人。<font color="c46043">enGo 取自「Energy Go」</font>我們希望透過科技讓能源流動更高效，也讓每個家庭都能邁向更健康更智慧的生活。我們從智能居家節能出發，自律打造一個人人都能輕鬆享有的智慧生活環境、無論是空氣、水質、光線、還是<font color="c46043">日常習慣學習</font>以調節， enGo系統透過AI技術懂你所需，先你一步為你打造舒適安全環保的生活體驗。',
+      '在這個科技飛躍經濟變動的時代，我們深信真正的進步不該屬於少數人。<font color="c46043">enGo 取自「Energy Go」</font>我們希望透過科技讓能源流動更高效，也讓每個家庭都能邁向更健康更智慧的生活。我們從智能居家節能出發，自律打造一個人人都能輕鬆享有的智慧生活環境、無論是空氣、水質、光線、還是<font color="c46043">日常習慣學習</font>以調節， enGo系統透過AI技術懂你所需，先你一步為你打造舒適安全環保的生活體驗。',
     paragraph2:
-        '面對高齡化的社會的來臨，我們更看見科技的溫度～<font color="c46043">enGo不只是「智慧宅」的守護者，更是「樂齡宅」的貼身心管家。</font>',
+      '面對高齡化的社會的來臨，我們更看見科技的溫度～<font color="c46043">enGo不只是「智慧宅」的守護者，更是「樂齡宅」的貼身心管家。</font>',
     paragraph3:
-        '這並非一條易行的道路。在資金有限、資源匱乏的情況下，他們選擇在一棟老舊的樓房中開始創業。儘管全球疫情帶來了無數挑戰，每一步都充滿了不確定性與艱辛，但他們的信念從未動搖。Sean 和他的創業夥伴深知，創業如同一場馬拉松，比拼的不僅是速度，更是耐力與韌性。他們彼此鼓勵：“有夢最美，先做再說！”這份熱情與信念成為了他們的堅實支柱。',
+      '這並非一條易行的道路。在資金有限、資源匱乏的情況下，他們選擇在一棟老舊的樓房中開始創業。儘管全球疫情帶來了無數挑戰，每一步都充滿了不確定性與艱辛，但他們的信念從未動搖。Sean 和他的創業夥伴知，創業如同一場馬拉松，比拼的不僅是速度，更是耐力與韌性。他們彼此鼓勵：“有夢最美，先做再說！”這份熱情與信念成為了他們的堅實支柱。',
     paragraph4:
-        '運用尖端 AI 技術，enGo 將陽光、空氣、水和食物健康地融入到家庭生活的每一個角落。他們的產品不僅僅是智慧家居的創新，更是對每個家庭健康與幸福的承諾。最終，enGo 成功誕生，這一時刻見證了他們夢想的一部分實現。然而，Sean 和他的團隊深知，這僅僅是起點，未來的每一步才是真正築夢踏實的開始。',
+      '運用尖端 AI 技術，enGo 將陽光、空氣、水和食物健康地融入到家庭生活的每一個角落。他們的產品不僅僅是智慧家居的創新，更是對每個家庭健康與幸福的承諾。最終，enGo 成功誕生，這一時刻見證了他們夢想的一部分實現。然而，Sean 和他的團隊深知，這僅僅是起點，未來的每一步才是真正築夢踏實的開始。',
     paragraph5:
-        'enGo 的創業旅程，既是一場對創新與健康的探索，也是一段充滿情感的堅韌旅程。他們相信，科技的真正價值在於改善人們的生活，讓每一個家庭都能夠安心享受健康與幸福的未來。'
+      'enGo 的創業旅程，既是一場對創新與健康的探索，也是一段充滿情感的堅韌旅程。他們相信，科技的真正價值在於改善人們的生活，讓每一個家庭都能夠安心享受健康與幸福的未來。'
   },
 
-  // about
+  // about (Top Level)
   coreValueTitle: '公司理念',
   coreValueSubtitle: '民以食為天，家以廚房為先，擁有管家不再是夢想。',
   coreValueDescribe: '我們希望：',
@@ -63,11 +164,135 @@ export const zhLocale = {
   vision6: 'enGo 安購幣回饋機制',
   vision7: 'B2B2C的互動架構',
 
-  // ecosystem
+  // ecosystem (Top Level)
   ecosystemTitle: 'enGo 生態系統',
 
-  // product
+  // Forms / Misc (Top Level)
+  name: '姓名',
+  email: '電子郵件',
+  phone: '電話',
+  city: '城市',
+  address: '地址',
+  tpe: '台北',
+  ntpe: '新北',
+  ht: '新竹',
+  tj: '台中',
+  tn: '台南',
+  kh: '高雄',
+  hl: '花蓮',
+  pd: '屏東',
+  td: '台東',
+  jh: '彰化',
+  other: '其他',
+  interest: '我想了解',
+  interestType1: '選擇產品',
+  interestType2: 'enGo維修',
+  interestType3: '詢問/其他',
+  interestType4: '智能家居',
+  messagetype: '產品',
+  messagetypePlaceholder: '選擇產品',
+  msgType1: 'AI 智慧管家中控平板',
+  msgType2: 'AI 水維氧智慧淨水器',
+  msgType3: 'AI 智慧空氣清淨機',
+
+  planItems: [
+    { id: 1, name: '買斷：濾水器' },
+    { id: 2, name: '買斷：空氣機' },
+    { id: 3, name: '買斷：濾水器濾芯' },
+    { id: 4, name: '買斷：空氣機濾芯' },
+    { id: 5, name: '買斷：enGo 管理中控＋濾水器＋空氣機' },
+    { id: 6, name: '租賃：enGo 管理中控＋濾水器（12個月）' },
+    { id: 7, name: '租賃：enGo 管理中控＋濾水器＋空氣機（12個月）' }
+  ],
+  plan: '方案',
+  planPlaceholder: '選擇方案',
+  message: '方便聯絡時間',
+  messagePlaceholder: '最多輸入100字',
+  submitForm: '送出',
+  enterEmpty: '請填寫',
+  enterValidMail: '請輸入有效的電子郵件地址。',
+  enterValidPhone: '請輸入有效的電話',
+  required: '必填',
+  loginPage: {
+    userLogin: '用戶登入',
+    workerLogin: '員工登入',
+    welcome: '歡迎來到 enGo 智慧管家系統',
+    username: '帳號 / Email',
+    password: '密碼',
+    submit: '登入',
+    switchTo: '切換至',
+    backHome: '回到首頁',
+    upcoming: '登入功能即將上線，敬請期待！'
+  },
+
+  // success (Top Level)
+  submitSuccess: '您的訊息已成功送出',
+  successMessage: '您的訊息已傳送至顧客中心，我們將派專人盡快與您聯絡。',
+  backToHome: '回到首頁',
+
+  // Cookie (Top Level)
+  cookie: {
+    title: 'Cookie 設定',
+    content:
+      '這些 Cookie 是我們的小助手，幫助我們了解您如何使用網站，並讓您的瀏覽體驗更加流暢。它們能夠告訴我們您是否從我們的其他網站來到這裡，或是您在瀏覽過程中是否使用或購買了我們的產品和服務。別擔心，這些信息都是匿名的，不會揭示您的個人身份。我們會儲存一些您所在的位置資訊，這樣我們就能為您提供本地化的內容，也可能記錄一些您的偏好設定，以便讓您的使用體驗更貼心。',
+    seeMore: '查看更多',
+    accpet: '接受 Cookie',
+    check: '查看設定'
+  },
+
+  // Chatbot (Top Level)
+  chatbot: {
+    welcome: '你好！我是 enGo 智管家助手。有什麼我可以幫您的嗎？',
+    inputPlaceholder: '問我任何問題...',
+    found_video: '我為您找到了一段影片：',
+    found_info: '我為您找到了一些資訊。您可以點擊這裡查看：',
+    no_match: '抱歉，我找不到該問題的具體答案。您想聯絡我們的客服嗎？',
+    replies: {
+      product: '了解產品',
+      tutorial: '使用教學',
+      water: '淨水系統',
+      air: '空氣清淨機',
+      contact: '聯絡我們',
+      purchase: '如何購買'
+    },
+    answers: {
+      product: '我們的 AI 智慧中控平板整合了家電管理、安全監控與水處理系統。您可以前往「產品介紹」頁面查看更多。',
+      tutorial: '我們有針對個人、設計師與建築商的專屬教學。您可以前往「使用教學」頁面了解詳情。',
+      contact: '您可以撥打 02-27510218，或在「聯絡我們」頁面留下您的資料，我們將盡快聯繫您。',
+      purchase: '您可以點擊選單中的「安購商城」連結前往選購，或關注我們的早鳥優惠活動。',
+      default: '感謝您的詢問，我們會盡快派真人客服為您服務。'
+    }
+  },
+
   product: {
+    viewDetails: '查看詳情',
+    description: '產品介紹',
+    specs: '產品規格',
+    spec_labels: {
+      display: '顯示螢幕 (Display Screen)',
+      input: '輸入 (Input)',
+      working_temp: '工作溫度 (Working Temperature)',
+      working_humidity: '工作濕度 (Working Humidity)',
+      wireless: '無線通訊 (Wireless Protocol)',
+      base: '底座 (Base)',
+      size: '尺寸 WxDxH (Product Size)',
+      power_input: '電源輸入 (Power Input)',
+      working: '工作環境 (Working Environment)',
+      power: '功率 (Power)',
+      unlock: '解鎖方式 (Unlock Methods)',
+      features: '特色功能 (Features)',
+      technology: '感測技術 (Technology)',
+      range: '感測範圍 (Range)',
+      color_temp: '色溫 (Color Temperature)',
+      voltage: '電壓 (Voltage)',
+      CRI: '顯色指數 (CRI)',
+      beam_angle: '光束角 (Beam Angle)',
+      current: '額定電流 (Rated Current)',
+      color: '顏色 (Color)',
+      hole_size: '開孔尺寸 (Hole Size)',
+      optional_switches: '可選開關 (Optional Switches)'
+    },
+
     tablet_intro: {
       title: 'AI智慧家居全能管家',
       info: 'AI 智慧家中控平板，可用AI語音操作，整合智慧管家、商城、食譜、物業連結及訊息管理。'
@@ -118,7 +343,7 @@ export const zhLocale = {
         },
         B: {
           title: '智慧倉儲管理',
-          info: '家庭儲物隨時監控，並與商城服 務連結，缺什麼馬上補！'
+          info: '家庭儲物隨時監控，並與商城服務連結，缺什麼馬上補！'
         },
         C: {
           title: 'AIoT 雲端智慧串連',
@@ -205,57 +430,31 @@ export const zhLocale = {
     air_purifier: {
       tag: '空氣清淨機',
       title: '智能空氣清淨機系列'
+    },
+    reviews: {
+      title: '用戶評價',
+      add: '發表評論',
+      sample1: {
+        name: '王小明',
+        comment: 'AI 中控平板真的很好用，語音控制非常靈敏！'
+      },
+      sample2: {
+        name: 'Li Hua',
+        comment: '水質明顯改善了，鍶水喝起來甜甜的。'
+      }
+    },
+    packages: {
+      tag: '套裝方案',
+      title: '挑選最適合您的智慧家庭方案',
+      functions: '核心功能',
+      scenarios: '情境控制',
+      components: '套裝組件',
+      addOns: '可增選套裝方案',
+      otherOptions: '其他選項 (目錄)'
     }
   },
 
-  // contact
-  contactUsTitle: '智管家帶您開啟智慧新生活',
-  contactUsSubtitle: '歡迎您留下聯繫資料，我們將盡快安排專人與您聯繫',
-  contactUsSubtitle1: '歡迎您留下聯繫資料',
-  contactUsSubtitle2: '我們將盡快安排專人與您聯繫',
-  name: '姓名',
-  email: 'E-mail',
-  phone: '聯絡電話',
-  city: '縣市',
-  address: '詳細地址',
-  tpe: '台北',
-  ntpe: '新北市',
-  ht: '新竹',
-  tj: '台中',
-  tn: '台南',
-  kh: '高雄',
-  hl: '花蓮',
-  pd: '屏東',
-  td: '台東',
-  jh: '彰化',
-  other: '其他',
-  interest: '我想了解的是',
-  interestType1: 'enGo智慧產品',
-  interestType2: 'enGo維修',
-  interestType3: '詢問/其他',
-  interestType4: '智能家居',
-  messagetype: '產品',
-  messagetypePlaceholder: '選擇產品',
-  msgType1: 'AI 智慧管家中控平板',
-  msgType2: 'AI 水維氧智慧淨水器',
-  msgType3: 'AI 智慧空氣清淨機',
-  
-  plan: '方案',
-  planPlaceholder: '選擇方案',
-  message: '方便聯絡時間',
-  messagePlaceholder: '最多輸入100字',
-  submitForm: '送出',
-  enterEmpty: '請填寫',
-  enterValidMail: '請輸入有效的電子郵件地址。',
-  enterValidPhone: '請輸入有效的電話',
-  required: '必填',
-
-  //success
-  submitSuccess: '您的訊息已成功送出',
-  successMessage: '您的訊息已傳送至顧客中心，我們將派專人盡快與您聯絡。',
-  backToHome: '回到首頁',
-
-  // footer
+  // footer (Top Level)
   footer: {
     product: '產品',
     firstLink: 'enGo AI智慧中控系統',
@@ -263,18 +462,17 @@ export const zhLocale = {
     about: '關於enGo',
     brand: '公司介紹',
     contactUs: '聯絡我們',
+    tutorial: '使用教學',
+    cases: '案例分享',
     copyright: 'Copyright © 2024， 智管家科技股份有限公司 著作權所有，版權所有。',
     time: '週一至週五 9:00-18:00',
     phone: '02-27510218',
     customer: '專人客服'
   },
 
-  cookie: {
-    title: 'Cookie 設定',
-    content:
-      '這些 Cookie 是我們的小助手，幫助我們了解您如何使用網站，並讓您的瀏覽體驗更加流暢。它們能夠告訴我們您是否從我們的其他網站來到這裡，或是您在瀏覽過程中是否使用或購買了我們的產品和服務。別擔心，這些信息都是匿名的，不會揭示您的個人身份。我們會儲存一些您所在的位置資訊，這樣我們就能為您提供本地化的內容，也可能記錄一些您的偏好設定，以便讓您的使用體驗更貼心。',
-    seeMore: '查看更多',
-    accpet: '接受 Cookie',
-    check: '查看設定'
-  }
+  // contact (Top Level)
+  contactUsTitle: '智管家帶您開啟智慧新生活',
+  contactUsSubtitle: '歡迎您留下聯繫資料，我們將盡快安排專人與您聯繫',
+  contactUsSubtitle1: '歡迎您留下聯繫資料',
+  contactUsSubtitle2: '我們將盡快安排專人與您聯繫'
 }
