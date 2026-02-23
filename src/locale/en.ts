@@ -323,15 +323,18 @@ export const enLocale = {
     specs: 'Specs',
     features: 'Features',
     found_video: 'I found a video for you:',
-    found_info: 'I found some information for you. You can check it here:',
-    no_match: "I'm sorry, I couldn't find a specific answer for that. Would you like to contact our support?",
+    found_info: 'I found some information for you. You can click here to view:',
+    no_match: "Sorry, I couldn't find a specific answer to that question. You can contact our live support via LINE for immediate assistance!",
+    line_handoff: 'Contact via LINE',
     replies: {
       product: 'Product Info',
       tutorial: 'Tutorials',
       water: 'Water System',
       air: 'Air Purifier',
       contact: 'Contact Us',
-      purchase: 'How to Buy'
+      purchase: 'How to Buy',
+      showroom: 'Showroom Visit',
+      pricing: 'Pricing & Plans'
     },
     answers: {
       product: 'Our AI Smart Hub integrates home appliances, security, and water filtration. Visit our Product page for details.',

@@ -27,6 +27,13 @@
             </div>
             <img v-if="msg.data.spec_image" :src="getImageUrl(msg.data.spec_image)" class="spec-img" />
           </div>
+          <div v-if="msg.type === 'handover'" class="handover-container">
+            <div class="text mb-2">{{ msg.text }}</div>
+            <button @click="jumpToLine" class="line-handoff-btn">
+              <img src="/images/link_Line.png" alt="LINE" />
+              {{ $t('chatbot.line_handoff') }}
+            </button>
+          </div>
           <div v-else class="text">{{ msg.text }}</div>
         </div>
       </div>
@@ -68,7 +75,7 @@ const { t, locale } = useI18n()
 const messages = ref<Array<{ 
   role: string, 
   text: string, 
-  type?: 'text' | 'video' | 'catalog', 
+  type?: 'text' | 'video' | 'catalog' | 'handover', 
   mediaUrl?: string, 
   data?: any 
 }>>([])
@@ -93,7 +100,36 @@ watch(locale, () => {
   }
 })
 
-const quickReplyKeys = ['chatbot.replies.product', 'chatbot.replies.water', 'chatbot.replies.air', 'chatbot.replies.tutorial', 'chatbot.replies.contact']
+const quickReplyKeys = [
+  'chatbot.replies.product', 
+  'chatbot.replies.water', 
+  'chatbot.replies.air', 
+  'chatbot.replies.tutorial', 
+  'chatbot.replies.contact',
+  'chatbot.replies.showroom',
+  'chatbot.replies.pricing'
+]
+
+const jumpToLine = () => {
+  trackEvent('chatbot_line_handoff')
+  window.open('https://lin.ee/THIUSjW')
+}
+
+const logQuery = async (keyword: string, matchFound: boolean) => {
+  try {
+    await fetch('/api/chatbot-query', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        keyword,
+        locale: locale.value,
+        matchFound
+      })
+    })
+  } catch (err) {
+    console.error('Failed to log chatbot query:', err)
+  }
+}
 
 const toggleChat = () => {
   isOpen.value = !isOpen.value
@@ -186,9 +222,14 @@ const handleSearch = () => {
       }
     } else {
       response = t('chatbot.no_match')
-      messages.value.push({ role: 'assistant', text: response })
+      messages.value.push({ 
+        role: 'assistant', 
+        text: response,
+        type: 'handover'
+      })
     }
 
+    logQuery(currentQuery, !!bestMatch)
     scrollToBottom()
   }, 800)
 }
@@ -325,6 +366,39 @@ const getImageUrl = (name: string) => {
       &.user {
         justify-content: flex-end;
         .text { background: #c46043; color: white; border-bottom-right-radius: 2px; }
+      }
+
+      .handover-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 85%;
+        
+        .line-handoff-btn {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: #06c755;
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          cursor: pointer;
+          margin-top: 8px;
+          transition: all 0.2s;
+          
+          &:hover {
+            background: #05a546;
+            transform: translateY(-1px);
+          }
+          
+          img {
+            width: 18px;
+            height: 18px;
+          }
+        }
       }
     }
   }

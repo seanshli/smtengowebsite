@@ -326,13 +326,16 @@ export const frLocale = {
     specs: 'Spécifications',
     features: 'Caractéristiques',
     found_video: 'J\'ai trouvé une vidéo pour vous :',
-    found_info: 'J\'ai trouvé des informations pour vous. Vous pouvez les consulter ici :',
-    no_match: 'Désolé, je n\'ai pas trouvé de réponse spécifique à cette question. Souhaitez-vous contacter notre support ?',
+    found_info: "J'ai trouvé des informations pour vous. Vous pouvez cliquer ici pour les consulter :",
+    no_match: "Désolé, je n'ai pas trouvé de réponse spécifique à cette question. Vous pouvez contacter notre support via LINE pour une assistance immédiate !",
+    line_handoff: 'Contacter via LINE',
     replies: {
       product: 'Infos produits',
       tutorial: 'Tutoriels',
       contact: 'Contact',
-      purchase: 'Achat'
+      purchase: 'Comment acheter',
+      showroom: 'Visiter Showroom',
+      pricing: 'Tarifs et Plans'
     },
     answers: {
       product: 'Notre hub intelligent intègre appareils, sécurité et purification d\'eau. Consultez la page produits.',

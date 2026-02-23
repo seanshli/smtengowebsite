@@ -248,14 +248,17 @@ export const zhLocale = {
     features: '特色',
     found_video: '我為您找到了一段影片：',
     found_info: '我為您找到了一些資訊。您可以點擊這裡查看：',
-    no_match: '抱歉，我找不到該問題的具體答案。您想聯絡我們的客服嗎？',
+    no_match: '抱歉，我找不到該問題的具體答案。您可以透過 LINE 聯絡我們的真人客服獲取即時協助！',
+    line_handoff: '聯絡 LINE 客服',
     replies: {
       product: '了解產品',
       tutorial: '使用教學',
       water: '淨水系統',
       air: '空氣清淨機',
       contact: '聯絡我們',
-      purchase: '如何購買'
+      purchase: '如何購買',
+      showroom: '展示間預約',
+      pricing: '方案預算'
     },
     answers: {
       product: '我們的 AI 智慧中控平板整合了家電管理、安全監控與水處理系統。您可以前往「產品介紹」頁面查看更多。',

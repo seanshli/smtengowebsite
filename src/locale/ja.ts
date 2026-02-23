@@ -451,13 +451,16 @@ export const jaLocale = {
         specs: '製品仕様',
         features: '特長',
         found_video: '動画が見つかりました：',
-        found_info: '情報が見つかりました。こちらから確認できます：',
-        no_match: '申し訳ありません。その質問に対する具体的な回答が見つかりませんでした。サポートに連絡しますか？',
+        found_info: '情報が見つかりました。こちらをクリックしてご確認ください：',
+        no_match: '申し訳ありませんが、その質問に対する具体的な回答が見つかりませんでした。LINEで有人カスタマーサポートに連絡して、即時のサポートを受けることができます！',
+        line_handoff: 'LINEで問い合わせる',
         replies: {
             product: '製品情報',
             tutorial: '使い方',
             contact: 'お問い合わせ',
-            purchase: '購入方法'
+            purchase: '購入方法',
+            showroom: '展示場予約',
+            pricing: '料金プラン'
         },
         answers: {
             product: 'AIスマートハブは家電、セキュリティ、浄水を統合管理します。詳細は製品ページをご覧ください。',
