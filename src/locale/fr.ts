@@ -323,6 +323,8 @@ export const frLocale = {
   chatbot: {
     welcome: 'Bonjour ! Je suis l\'assistant enGo. Comment puis-je vous aider ?',
     inputPlaceholder: 'Posez-moi une question...',
+    specs: 'Spécifications',
+    features: 'Caractéristiques',
     found_video: 'J\'ai trouvé une vidéo pour vous :',
     found_info: 'J\'ai trouvé des informations pour vous. Vous pouvez les consulter ici :',
     no_match: 'Désolé, je n\'ai pas trouvé de réponse spécifique à cette question. Souhaitez-vous contacter notre support ?',

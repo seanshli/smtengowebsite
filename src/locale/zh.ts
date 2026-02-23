@@ -244,6 +244,8 @@ export const zhLocale = {
   chatbot: {
     welcome: '你好！我是 enGo 智管家助手。有什麼我可以幫您的嗎？',
     inputPlaceholder: '問我任何問題...',
+    specs: '規格',
+    features: '特色',
     found_video: '我為您找到了一段影片：',
     found_info: '我為您找到了一些資訊。您可以點擊這裡查看：',
     no_match: '抱歉，我找不到該問題的具體答案。您想聯絡我們的客服嗎？',

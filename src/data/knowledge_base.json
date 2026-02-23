@@ -63,51 +63,55 @@
     ],
     "cases": [
         {
-            "id": "case01",
+            "id": "case5",
             "keywords": [
-                "villa",
-                "house",
-                "luxury",
-                "taipei",
-                "透天",
-                "別墅",
+                "xinzhuang",
+                "新莊",
+                "新北",
+                "工程師",
+                "燈光",
+                "窗簾",
+                "空調",
+                "HomeKit",
+                "離家模式"
+            ],
+            "link": "/cases/5"
+        },
+        {
+            "id": "case6",
+            "keywords": [
+                "yonghe",
+                "永和",
+                "展示間",
+                "showroom",
+                "設計師",
+                "書房",
+                "燈控",
+                "情境開關"
+            ],
+            "link": "/cases/6"
+        },
+        {
+            "id": "case7",
+            "keywords": [
+                "wenshan",
+                "文山",
                 "台北",
-                "場景",
-                "情境",
-                "大屋"
-            ],
-            "link": "/cases"
-        },
-        {
-            "id": "case02",
-            "keywords": [
-                "office",
-                "workspace",
-                "efficiency",
-                "hsinchu",
-                "辦公室",
-                "工作空間",
-                "效率",
-                "新竹",
-                "商業"
-            ],
-            "link": "/cases"
-        },
-        {
-            "id": "case03",
-            "keywords": [
-                "apartment",
-                "condo",
-                "automated",
-                "taichung",
-                "公寓",
-                "大樓",
                 "自動化",
-                "台中",
-                "居家",
-                "情境"
+                "感測器",
+                "節能"
             ],
-            "link": "/cases"
+            "link": "/cases/7"
+        },
+        {
+            "id": "case8",
+            "keywords": [
+                "nangang",
+                "南港",
+                "台北",
+                "Tain"
+            ],
+            "link": "/cases/8"
         }
     ],
     "youtube": [
@@ -138,73 +142,6 @@
                 "water purifier"
             ],
             "url": "https://www.youtube.com/watch?v=U7grakATXN4"
-        },
-        {
-            "title": "智慧家庭 智能場景介紹",
-            "keywords": [
-                "智慧家庭",
-                "場景",
-                "smart home",
-                "scene"
-            ],
-            "url": "https://www.youtube.com/watch?v=CaMHPytMtWs"
-        },
-        {
-            "title": "enGo 平板App介紹",
-            "keywords": [
-                "app",
-                "平板",
-                "application"
-            ],
-            "url": "https://www.youtube.com/watch?v=V_bsgnPbnpo"
-        },
-        {
-            "title": "enGo安購 智管家簡介",
-            "keywords": [
-                "簡介",
-                "智管家",
-                "intro"
-            ],
-            "url": "https://www.youtube.com/watch?v=sKjo04dGmfg"
-        },
-        {
-            "title": "智慧人體傳感器",
-            "keywords": [
-                "人體傳感器",
-                "sensor",
-                "shorts"
-            ],
-            "url": "https://www.youtube.com/shorts/cA49JIrnwmw"
-        },
-        {
-            "title": "漏水閥偵測器",
-            "keywords": [
-                "漏水",
-                "偵測器",
-                "leak detector",
-                "shorts"
-            ],
-            "url": "https://www.youtube.com/shorts/zUwKeWvdUqU"
-        },
-        {
-            "title": "電動升降拉藍控制",
-            "keywords": [
-                "電動升降",
-                "控制",
-                "control",
-                "shorts"
-            ],
-            "url": "https://www.youtube.com/shorts/R-VS_JGMy2A"
-        },
-        {
-            "title": "平板安裝",
-            "keywords": [
-                "安裝",
-                "平板",
-                "installation",
-                "shorts"
-            ],
-            "url": "https://www.youtube.com/shorts/xmIhcb3_1Bs"
         }
     ],
     "faqs": [
@@ -242,34 +179,29 @@
                 "別墅"
             ],
             "link": "/product?jump=packages"
-        },
-        {
-            "id": "addon_packages",
-            "keywords": [
-                "addon",
-                "kit",
-                "health",
-                "kitchen",
-                "catalog",
-                "options",
-                "可增選",
-                "健康",
-                "廚房",
-                "目錄",
-                "其他",
-                "RO",
-                "電動拉籃",
-                "斷水閥"
-            ],
-            "link": "/product?jump=packages"
         }
     ],
     "products": [
         {
             "id": "tablet-t1",
-            "name": "AI智慧家中控平板 T1",
-            "specs": "10.1吋 FHD (1920x1200) 觸控螢幕, 支援 Wi-Fi / Zigbee / 藍牙",
-            "features": "AI語音控制, 物業管理聯網, 智能商城, 食譜與訊息管理",
+            "name": {
+                "zh": "AI智慧家中控平板 T1",
+                "en": "AI Smart Home Control Tablet T1",
+                "ja": "AIスマートホーム・中控平板 T1",
+                "fr": "Tablette de Contrôle Intelligent T1"
+            },
+            "specs": {
+                "zh": "10.1吋 FHD (1920x1200) 觸控螢幕, 支援 Wi-Fi / Zigbee / 藍牙",
+                "en": "10.1\" FHD (1920x1200) Touch Screen, supports Wi-Fi / Zigbee / Bluetooth",
+                "ja": "10.1インチ FHD (1920x1200) タッチスクリーン、Wi-Fi / Zigbee / Bluetooth対応",
+                "fr": "Écran tactile 10.1\" FHD (1920x1200), supports Wi-Fi / Zigbee / Bluetooth"
+            },
+            "features": {
+                "zh": "AI語音控制, 物業管理聯網, 智能商城, 食譜與訊息管理",
+                "en": "AI Voice Control, Property Management Link, Smart Mall, Recipe & Info Management",
+                "ja": "AI音声制御、物件管理ネットワーク、スマートモール、レシピ＆メッセージ管理",
+                "fr": "Contrôle vocal AI, Liaison de gestion de propriété, Smart Mall, Gestion des recettes et infos"
+            },
             "keywords": [
                 "tablet",
                 "T1",
@@ -280,23 +212,25 @@
             ]
         },
         {
-            "id": "gateway-z1",
-            "name": "智能網關 Z1",
-            "specs": "支援 Zigbee 3.0 & Matter 協議, 小巧美觀",
-            "features": "跨平台相容, 穩定組網, 遠端管理",
-            "keywords": [
-                "gateway",
-                "Z1",
-                "網關",
-                "Matter",
-                "Zigbee"
-            ]
-        },
-        {
             "id": "purifier-t01",
-            "name": "4合1智能空氣清淨機 EAP-T01",
-            "specs": "CADR 110 m³/h, HEPA 13 濾網, PM2.5 監測",
-            "features": "藍牙喇叭, 無線充電, 負離子與香氛功能",
+            "name": {
+                "zh": "4合1智能空氣清淨機 EAP-T01",
+                "en": "4-in-1 Smart Air Purifier EAP-T01",
+                "ja": "4-in-1 スマート空気清浄機 EAP-T01",
+                "fr": "Purificateur d'air intelligent 4-en-1 EAP-T01"
+            },
+            "specs": {
+                "zh": "CADR 110 m³/h, HEPA 13 濾網, PM2.5 監測",
+                "en": "CADR 110 m³/h, HEPA 13 Filter, PM2.5 Monitoring",
+                "ja": "CADR 110 m³/h、HEPA 13 フィルター、PM2.5 モニタリング",
+                "fr": "CADR 110 m³/h, Filtre HEPA 13, Surveillance PM2.5"
+            },
+            "features": {
+                "zh": "藍牙喇叭, 無線充電, 負離子與香氛功能",
+                "en": "Bluetooth Speaker, Wireless Charging, Negative Ions & Fragrance",
+                "ja": "Bluetoothスピーカー、ワイヤレス充電、マイナスイオン＆フレグランス",
+                "fr": "Haut-parleur Bluetooth, Charge sans fil, Ions négatifs et fragrance"
+            },
             "keywords": [
                 "purifier",
                 "air",
@@ -308,9 +242,24 @@
         },
         {
             "id": "water-system",
-            "name": "水維氧AI健康智能淨水系統",
-            "specs": "RO逆滲透 (0.0001微米), 礦物質添加 (SRM), TDS即時監測",
-            "features": "防漏水偵測, 平板連動濾芯狀態",
+            "name": {
+                "zh": "水維氧AI健康智能淨水系統",
+                "en": "Water-Sr AI Healthy Smart Water System",
+                "ja": "水維氧AIスマート浄水システム",
+                "fr": "Système de purification d'eau intelligent Water-Sr AI"
+            },
+            "specs": {
+                "zh": "RO逆滲透 (0.0001微米), 礦物質添加 (SRM), TDS即時監測",
+                "en": "RO Osmosis (0.0001μm), Mineral Addition (SRM), Real-time TDS Monitoring",
+                "ja": "RO逆浸透（0.0001μm）、ミネラル添加（SRM）、リアルタイムTDS監視",
+                "fr": "Osmose RO (0.0001μm), Ajout de minéraux (SRM), Surveillance TDS en temps réel"
+            },
+            "features": {
+                "zh": "防漏水偵測, 平板連動濾芯狀態",
+                "en": "Leak Detection, Tablet Link for Filter Status",
+                "ja": "漏水検知、タブレット連携フィルターステータス",
+                "fr": "Détection de fuite, Liaison tablette pour l'état du filtre"
+            },
             "keywords": [
                 "water",
                 "RO",
@@ -319,240 +268,25 @@
                 "濾芯",
                 "TDS"
             ]
-        },
-        {
-            "id": "electric-basket",
-            "name": "智能電動拉籃",
-            "specs": "支援 600/700/800/900mm 櫃體, 載重 30kg",
-            "features": "語音控制, 一觸即開, 內建 LED 照明",
-            "keywords": [
-                "basket",
-                "kitchen",
-                "拉籃",
-                "電動",
-                "廚房",
-                "收納"
-            ]
-        },
-        {
-            "id": "switches-s1",
-            "name": "S1 系列智能開關",
-            "specs": "磨砂/星羽質感, 支援單/雙/三位, Wi-Fi/Zigbee",
-            "features": "自定義標籤, 螢幕顯示內容 (D1/D2)",
-            "keywords": [
-                "switch",
-                "S1",
-                "開關",
-                "莫蘭迪",
-                "面板",
-                "標籤"
-            ]
-        },
-        {
-            "id": "sensors-presence",
-            "name": "高精度人體存在感測器 H1",
-            "specs": "毫米波雷達技術, 靜態呼吸偵測",
-            "features": "精準判讀有無, 燈光聯動最佳化",
-            "keywords": [
-                "sensor",
-                "presence",
-                "存在感測",
-                "毫米波",
-                "H1",
-                "呼吸"
-            ]
-        },
-        {
-            "id": "curtain-m1",
-            "name": "智能窗簾電機 M1",
-            "specs": "靜音設計, 直流馬達, 支援布簾與捲簾",
-            "features": "定時開關, 語音手動並行",
-            "keywords": [
-                "curtain",
-                "motor",
-                "窗簾",
-                "電機",
-                "捲簾",
-                "馬達"
-            ]
-        },
-        {
-            "id": "switch_d1",
-            "name": "自訂螢幕顯示開關 D1",
-            "specs": "5V/1A Type-C Input, Wi-Fi/Zigbee, 90*90*22mm",
-            "features": "自定義螢幕顯示, 觸控操作, 多場景切換",
-            "keywords": [
-                "switch",
-                "D1",
-                "screen",
-                "display",
-                "螢幕",
-                "開關"
-            ]
-        },
-        {
-            "id": "light_strip",
-            "name": "影音同步燈條 / 智能燈條",
-            "specs": "12W, 12V/24V, RA≥98, COB/SMD, Zigbee, RGB/RGBCW",
-            "features": "影音同步, 1600萬色, 氣氛營造",
-            "keywords": [
-                "light",
-                "strip",
-                "led",
-                "sync",
-                "燈條",
-                "同步"
-            ]
-        },
-        {
-            "id": "smart_bulb",
-            "name": "智能燈泡",
-            "specs": "E27/E14/GU10, 2700-6500K+RGB, Zigbee",
-            "features": "語音控制, 調光調色, 定時開關",
-            "keywords": [
-                "bulb",
-                "light",
-                "燈泡",
-                "智能"
-            ]
-        },
-        {
-            "id": "track_light",
-            "name": "磁吸軌道燈",
-            "specs": "6W-40W, 48V, RA≥90/98, 15°/24°/35°/55° Beam Angle",
-            "features": "磁吸設計, 靈活移動, 多種瓦數可選",
-            "keywords": [
-                "track",
-                "light",
-                "magnetic",
-                "軌道燈",
-                "磁吸"
-            ]
-        },
-        {
-            "id": "downlight",
-            "name": "防眩光筒燈/崁燈",
-            "specs": "AC 110-220V, RA≥90, Zigbee, 8°/15°/24°/36°/55°/120°",
-            "features": "防眩光設計, 高顯色性, 護眼舒適",
-            "keywords": [
-                "downlight",
-                "cob",
-                "筒燈",
-                "崁燈",
-                "防眩"
-            ]
         }
     ],
     "catalog": [
         {
-            "id": "switch_d1",
-            "name": "自訂螢幕顯示開關 D1",
-            "description": "D1 智能開關配備可自訂螢幕，提供直覺的觸控操作體驗。用戶可依需求設定多種情境模式，輕鬆切換，打造個性化智能家居。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "input": "5V/1A Type-C",
-                "wireless": "Wi-Fi / Zigbee",
-                "size": "90*90*22mm"
-            },
-            "keywords": [
-                "switch",
-                "D1",
-                "screen",
-                "display",
-                "螢幕",
-                "開關"
-            ]
-        },
-        {
-            "id": "light_strip",
-            "name": "影音同步燈條 / 智能燈條",
-            "description": "智能燈條支援影音同步功能，提供 1600 萬種色彩選擇，輕鬆營造各種氛圍。採用高顯色性 LED，讓居家空間更具層次感。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "power": "12W",
-                "voltage": "12V/24V",
-                "CRI": "RA≥98",
-                "type": "COB/SMD",
-                "wireless": "Zigbee",
-                "color": "RGB/RGBCW"
-            },
-            "keywords": [
-                "light",
-                "strip",
-                "led",
-                "sync",
-                "燈條",
-                "同步"
-            ]
-        },
-        {
-            "id": "smart_bulb",
-            "name": "智能燈泡",
-            "description": "智能燈泡支援語音控制、調光調色及定時開關功能。多種燈頭規格 E27/E14/GU10 可選，色溫範圍 2700-6500K 搭配 RGB 全彩，滿足不同情境需求。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "base": "E27/E14/GU10",
-                "color_temp": "2700-6500K+RGB",
-                "wireless": "Zigbee"
-            },
-            "keywords": [
-                "bulb",
-                "light",
-                "燈泡",
-                "智能"
-            ]
-        },
-        {
-            "id": "track_light",
-            "name": "磁吸軌道燈",
-            "description": "磁吸軌道燈設計靈活，可隨意移動調整照明位置。提供多種瓦數選擇 (6W-40W) 及光束角 (15°/24°/35°/55°)，高顯色性 RA≥90/98，完美適應各種空間照明需求。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "power": "6W-40W",
-                "voltage": "48V",
-                "CRI": "RA≥90/98",
-                "beam_angle": "15°/24°/35°/55°"
-            },
-            "keywords": [
-                "track",
-                "light",
-                "magnetic",
-                "軌道燈",
-                "磁吸"
-            ]
-        },
-        {
-            "id": "downlight",
-            "name": "防眩光筒燈/崁燈",
-            "description": "防眩光筒燈/崁燈提供舒適護眼的照明體驗，高顯色性 RA≥90。支援 Zigbee 無線控制，多種光束角 (8°/15°/24°/36°/55°/120°) 可選，適用於居家及商業空間。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "input": "AC 110-220V",
-                "CRI": "RA≥90",
-                "wireless": "Zigbee",
-                "beam_angle": "8°/15°/24°/36°/55°/120°"
-            },
-            "keywords": [
-                "downlight",
-                "cob",
-                "筒燈",
-                "崁燈",
-                "防眩"
-            ]
-        },
-        {
             "id": "tablet_t1",
             "name": "AI智慧家居全能管家 中控平板 + 管理系統",
-            "description": "AI 管家替您輕鬆管理家中一切透過 enGo AI 智慧中控平板整合管理家中的智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升家居的舒適度、安全性和能源效率。用戶可以隨時隨地通過手機或 enGo AI智慧中控平板遠程控制和監控。智管家以人工智慧、物聯網和自動化技術為核心，致力於讓生活更便利、更健康，為您和家人打造安全、舒適、便捷的智慧生活，讓AI智慧整合系統替您創造美好生活。",
+            "description": {
+                "zh": "AI 管家替您輕鬆管理家中一切透過 enGo AI 智慧中控平板整合管理家中的智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升家居的舒適度、安全性和能源效率。",
+                "en": "AI Butler easily manages everything in your home through the enGo AI Smart Home Tablet, integrating lighting, appliances, security, audio, locks, and water systems.",
+                "ja": "AIバトラーは、enGo AIスマートホームタブレットを通じて、照明、家電、セキュリティ、オーディオ、ロック、水システムを統合管理し、生活をより便利にします。",
+                "fr": "Le majordome AI gère facilement tout dans votre maison via la tablette intelligente enGo AI, intégrant éclairage, appareils, sécurité, audio, serrures et systèmes d'eau."
+            },
             "image": "product_tablet_t1.png",
             "spec_image": "product_tablet_t1_specs.png",
             "specs": {
                 "display": "1920*1200 FHD 10.1 inch touch screen",
                 "input": "100~240V AC 50/60Hz",
-                "working": "0°C ~ 40°C / 5% to 90%RH",
                 "wireless": "Wi-Fi/Zigbee/Bluetooth",
-                "size": "259*161*37mm(including base)",
-                "base": "EU/US optional"
+                "size": "259*161*37mm"
             },
             "keywords": [
                 "tablet",
@@ -561,116 +295,7 @@
                 "中控",
                 "螢幕",
                 "10.1",
-                "管家",
-                "control",
-                "hub"
-            ]
-        },
-        {
-            "id": "gateway_z1",
-            "name": "智能網關 Z1 PRO",
-            "description": "Smart Gateway Z1 是智慧家庭的大腦，支援 Zigbee 3.0 標準與 Matter 協議，能連接超過 100 個子設備。體積小巧，可放置於家中任何角落，確保網路覆蓋無死角。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "power_input": "5V/1A Type-C",
-                "working": "-10°C to +55°C / 10% to 90%RH",
-                "size": "90*90*22mm"
-            },
-            "keywords": [
-                "gateway",
-                "Z1",
-                "網關",
-                "Zigbee"
-            ]
-        },
-        {
-            "id": "switch_s1",
-            "name": "智能開關 S1 / 星羽系列",
-            "description": "S1 系列智能開關採用極簡觸控介面，專為壁掛設計。兼具直覺操作與高端視覺美感，支援單/雙/三位開關控制與多種情境設定。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "input": "100~240V AC 50/60Hz",
-                "wireless": "Wi-Fi / Zigbee",
-                "size": "86*86*36.2mm",
-                "current": "74mA (Rated)"
-            },
-            "keywords": [
-                "switch",
-                "S1",
-                "開關",
-                "智能",
-                "面板"
-            ]
-        },
-        {
-            "id": "curtain_v1",
-            "name": "智能電動窗簾電機 V1/G1",
-            "description": "V1/G1 智能窗簾電機，靜音直流馬達設計。支援定時開關、語音控制與手動拉動啟動功能。可完美整合至回家/離家模式中。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "input": "100~240V AC 50/60Hz",
-                "wireless": "Wi-Fi / Zigbee",
-                "size": "Dimension varies by track length"
-            },
-            "keywords": [
-                "curtain",
-                "motor",
-                "窗簾",
-                "電機"
-            ]
-        },
-        {
-            "id": "smart_lock_l1",
-            "name": "智能門鎖 L1",
-            "description": "L1 智能門鎖提供指紋、密碼、卡片、鑰匙與 App 遠端解鎖等多重開鎖方式。內建電子門鈴與防撬警報，守護您家的第一道防線。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "unlock": "Fingerprint / Password / Card / Key / App",
-                "power": "AA Battery * 4 or 8",
-                "wireless": "Zigbee / Bluetooth"
-            },
-            "keywords": [
-                "lock",
-                "smart lock",
-                "門鎖",
-                "指紋"
-            ]
-        },
-        {
-            "id": "sensor_h1",
-            "name": "高精度人體存在感測器 H1",
-            "description": "H1 採用毫米波雷達技術，能偵測人體細微動作甚至呼吸，準確判斷人體存在，解決傳統紅外線感測器無法偵測靜止人體的痛點。",
-            "image": "artificial-intelligence-ai-icon.svg",
-            "specs": {
-                "input": "5V/1A Type-C",
-                "technology": "Millimeter Wave Radar",
-                "wireless": "Zigbee 3.0"
-            },
-            "keywords": [
-                "sensor",
-                "presence",
-                "毫米波",
-                "人體",
-                "感測器"
-            ]
-        },
-        {
-            "id": "sensor_gas",
-            "name": "智能瓦斯/煙霧警報器",
-            "description": "高靈敏度瓦斯與煙霧偵測，一旦偵測到異常立即發出 85dB 高分貝警報並推播至手機 App，可連動機械手自動關閉閥門。",
-            "image": "iot-icon.svg",
-            "specs": {
-                "alarm": "Sound & Light / App Push",
-                "wireless": "Zigbee 3.0",
-                "power": "AC or Battery Backup"
-            },
-            "keywords": [
-                "gas",
-                "smoke",
-                "sensor",
-                "瓦斯",
-                "煙霧",
-                "警報"
+                "管家"
             ]
         }
     ]

@@ -448,6 +448,8 @@ export const jaLocale = {
     chatbot: {
         welcome: 'こんにちは！enGoアシスタントです。何かお手伝いできることはありますか？',
         inputPlaceholder: '何でも聞いてください...',
+        specs: '製品仕様',
+        features: '特長',
         found_video: '動画が見つかりました：',
         found_info: '情報が見つかりました。こちらから確認できます：',
         no_match: '申し訳ありません。その質問に対する具体的な回答が見つかりませんでした。サポートに連絡しますか？',

@@ -320,6 +320,8 @@ export const enLocale = {
   chatbot: {
     welcome: 'Hello! I am the enGo Assistant. How can I help you today?',
     inputPlaceholder: 'Ask me anything...',
+    specs: 'Specs',
+    features: 'Features',
     found_video: 'I found a video for you:',
     found_info: 'I found some information for you. You can check it here:',
     no_match: "I'm sorry, I couldn't find a specific answer for that. Would you like to contact our support?",

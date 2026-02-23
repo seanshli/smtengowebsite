@@ -18,7 +18,7 @@
           <div v-else-if="msg.type === 'catalog'" class="catalog-card">
             <img :src="getImageUrl(msg.data.image)" class="product-img" />
             <h3>{{ msg.data.name }}</h3>
-            <p class="description">{{ msg.data.description.zh || msg.data.description }}</p>
+            <p class="description">{{ msg.data.description[locale] || msg.data.description.zh || msg.data.description }}</p>
             <div class="specs-table">
               <div v-for="(val, key) in msg.data.specs" :key="key" class="spec-row">
                 <span class="spec-key">{{ key }}</span>
@@ -71,9 +71,27 @@ const messages = ref<Array<{
   type?: 'text' | 'video' | 'catalog', 
   mediaUrl?: string, 
   data?: any 
-}>>([
-  { role: 'assistant', text: t('chatbot.welcome') }
-])
+}>>([])
+
+// Initialize welcome message
+const initWelcome = () => {
+  messages.value = [
+    { role: 'assistant', text: t('chatbot.welcome') }
+  ]
+}
+
+onMounted(() => {
+  initWelcome()
+})
+
+// Watch for language changes to update welcome message and other UI elements
+import { watch } from 'vue'
+watch(locale, () => {
+  // If we only have the welcome message, refresh it
+  if (messages.value.length === 1 && messages.value[0].role === 'assistant') {
+    messages.value[0].text = t('chatbot.welcome')
+  }
+})
 
 const quickReplyKeys = ['chatbot.replies.product', 'chatbot.replies.water', 'chatbot.replies.air', 'chatbot.replies.tutorial', 'chatbot.replies.contact']
 
@@ -124,7 +142,7 @@ const handleSearch = () => {
       if (bestMatch.type === 'youtube') {
         const videoId = bestMatch.url.split('v=')[1] || bestMatch.url.split('/').pop()
         const embedUrl = `https://www.youtube.com/embed/${videoId}`
-        response = `${t('chatbot.found_video') || 'I found a video for you:'} ${bestMatch.title}\n`
+        response = `${t('chatbot.found_video')} ${bestMatch.title}\n`
         messages.value.push({ 
           role: 'assistant', 
           text: response,
@@ -140,17 +158,21 @@ const handleSearch = () => {
           data: bestMatch
         })
       } else if (bestMatch.type === 'products') {
-        const specsLabel = locale.value === 'zh' ? '規格' : 'Specs'
-        const featuresLabel = locale.value === 'zh' ? '特色' : 'Features'
-        response = `**${bestMatch.name}**\n\n${specsLabel}: ${bestMatch.specs}\n${featuresLabel}: ${bestMatch.features}`
+        const specsLabel = t('chatbot.specs')
+        const featuresLabel = t('chatbot.features')
+        const name = bestMatch.name[locale.value] || bestMatch.name.zh || bestMatch.name
+        const specs = bestMatch.specs[locale.value] || bestMatch.specs.zh || bestMatch.specs
+        const features = bestMatch.features[locale.value] || bestMatch.features.zh || bestMatch.features
+        
+        response = `**${name}**\n\n${specsLabel}: ${specs}\n${featuresLabel}: ${features}`
         messages.value.push({ role: 'assistant', text: response })
       } else {
-        response = t('chatbot.found_info') || 'I found some information for you. You can check it here:'
+        response = t('chatbot.found_info')
         response += `\n${window.location.origin}${bestMatch.link}`
         messages.value.push({ role: 'assistant', text: response })
       }
     } else {
-      response = t('chatbot.no_match') || "I'm sorry, I couldn't find a specific answer for that. Would you like to contact our support?"
+      response = t('chatbot.no_match')
       messages.value.push({ role: 'assistant', text: response })
     }
 
@@ -165,7 +187,9 @@ const sendQuickReply = (key: string) => {
 }
 
 const getImageUrl = (name: string) => {
-  return new URL(`/images/${name}`, import.meta.url).href
+  if (!name) return ''
+  // Images are in public/images, so they are served from /images/
+  return `/images/${name}`
 }
 </script>
 
