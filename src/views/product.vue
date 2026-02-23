@@ -1321,7 +1321,7 @@ export default defineComponent({
     )
 
     const buyNow = () => {
-      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=326&dtid=0')
+      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=435&dtid=0')
     }
 
     const targetExpand = ref(false)

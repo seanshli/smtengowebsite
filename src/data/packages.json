@@ -275,7 +275,7 @@
         {
             "id": "health",
             "name": {
-                "zh": "enGo 健康套裝",
+                "zh": "enGo 健康套裝 陽光空氣水",
                 "en": "enGo Health Package",
                 "ja": "enGo 健康セット",
                 "fr": "Pack Santé enGo"
@@ -283,8 +283,8 @@
             "components": {
                 "zh": [
                     "enGo 中控平板 + 管理系統",
-                    "enGo 水精靈 (RO + 礦物質 + 記量)",
-                    "enGo 智慧 3合1 空氣清淨機 (清淨機 + 藍牙喇叭 + 無線充)"
+                    "enGo 水精靈 (RO + 礦物質 + 記量) ＋智能漏水偵測斷水閥",
+                    "enGo 智慧 3合1 空氣清淨機 (清淨機 + 藍牙喇叭 + 無線充) ＋ 智能 6合一空氣盒"
                 ],
                 "en": [
                     "enGo Hub + Management System",
