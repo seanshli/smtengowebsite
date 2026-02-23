@@ -172,7 +172,10 @@ const handleSearch = () => {
         messages.value.push({ role: 'assistant', text: response })
       } else if (bestMatch.link) {
         response = t('chatbot.found_info')
-        response += `\n${window.location.origin}${bestMatch.link}`
+        const fullLink = bestMatch.link.startsWith('http') 
+          ? bestMatch.link 
+          : `${window.location.origin}${bestMatch.link}`
+        response += `\n${fullLink}`
         messages.value.push({ role: 'assistant', text: response })
       }
     } else {

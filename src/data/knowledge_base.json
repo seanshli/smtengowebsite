@@ -146,6 +146,40 @@
     ],
     "faqs": [
         {
+            "id": "showroom",
+            "keywords": [
+                "showroom",
+                "exhibition",
+                "display",
+                "visit",
+                "展示間",
+                "展間",
+                "體驗",
+                "哪裡看"
+            ],
+            "answer": {
+                "zh": "我們目前有兩個展示間供預約體驗：\n📍 北部展示間：[點我查看](/cases/23)\n📍 中部展示間：[點我查看](/cases/24)",
+                "en": "We have two showrooms available for experience:\n📍 North Showroom: [View Details](/cases/23)\n📍 Central Showroom: [View Details](/cases/24)",
+                "ja": "現在、2つのショールームで体験予約を受け付けています：\n📍 北部ショールーム：[詳細を見る](/cases/23)\n📍 中部ショールーム：[詳細を見る](/cases/24)",
+                "fr": "Nous avons deux showrooms disponibles pour expérience :\n📍 Showroom Nord : [Voir Détails](/cases/23)\n📍 Showroom Centre : [Voir Détails](/cases/24)"
+            }
+        },
+        {
+            "id": "air-large",
+            "keywords": [
+                "large",
+                "air duct",
+                "dehumidifier",
+                "fresh air",
+                "大型",
+                "清風幾",
+                "除濕機",
+                "冷熱交換機",
+                "新風機"
+            ],
+            "link": "https://www.medole.com.tw/list/hanging-hidden-air-duct-dehumidifier.htm"
+        },
+        {
             "id": "address",
             "keywords": [
                 "address",
@@ -306,7 +340,9 @@
                 "清淨機",
                 "喇叭",
                 "無線充電",
-                "CADR"
+                "CADR",
+                "空氣",
+                "小型"
             ]
         },
         {
@@ -335,8 +371,12 @@
                 "淨水",
                 "水維氧",
                 "濾芯",
-                "TDS"
-            ]
+                "TDS",
+                "濾水器",
+                "enGo 水精靈",
+                "水精靈"
+            ],
+            "link": "/product?jump=oxygen"
         }
     ],
     "catalog": [
