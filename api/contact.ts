@@ -96,17 +96,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       `
         }
 
-        let mailStatus = { sent: false, error: null };
         try {
             await transporter.sendMail(mailOptions)
-            mailStatus.sent = true;
         } catch (mailError: any) {
             console.error('Email error:', mailError)
-            mailStatus.error = mailError.message || mailError;
             // We don't return 500 here because the data was saved to Supabase successfully
         }
 
-        return res.status(200).json({ success: true, data, mailStatus })
+        return res.status(200).json({ success: true, data })
     } catch (err: any) {
         console.error('Server error:', err)
         return res.status(500).json({ error: err.message })
