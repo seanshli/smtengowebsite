@@ -146,6 +146,75 @@
     ],
     "faqs": [
         {
+            "id": "address",
+            "keywords": [
+                "address",
+                "location",
+                "office",
+                "where",
+                "地址",
+                "公司",
+                "在哪",
+                "中山區",
+                "八德路"
+            ],
+            "answer": {
+                "zh": "公司地址：台北市中山區八德路二段 325號 3樓",
+                "en": "Address: 3F., No. 325, Sec. 2, Bade Rd., Zhongshan Dist., Taipei City",
+                "ja": "住所：台北市中山区八徳路二段325号3階",
+                "fr": "Adresse : 3F., No. 325, Sec. 2, Bade Rd., Zhongshan Dist., Taipei City"
+            }
+        },
+        {
+            "id": "phone",
+            "keywords": [
+                "phone",
+                "call",
+                "contact",
+                "number",
+                "電話",
+                "聯絡方式",
+                "撥打"
+            ],
+            "answer": {
+                "zh": "聯絡電話：02-27510218",
+                "en": "Phone: +886 2-27510218",
+                "ja": "電話番号：02-27510218",
+                "fr": "Téléphone : +886 2-27510218"
+            }
+        },
+        {
+            "id": "email",
+            "keywords": [
+                "email",
+                "mail",
+                "contacts",
+                "電子郵件",
+                "信箱"
+            ],
+            "answer": {
+                "zh": "聯絡 email：contacts@smtengo.com",
+                "en": "Email: contacts@smtengo.com",
+                "ja": "メールアドレス：contacts@smtengo.com",
+                "fr": "E-mail : contacts@smtengo.com"
+            }
+        },
+        {
+            "id": "line",
+            "keywords": [
+                "line",
+                "id",
+                "social",
+                "官方 line"
+            ],
+            "answer": {
+                "zh": "官方 Line ID：@engo",
+                "en": "Official Line ID: @engo",
+                "ja": "公式LINE ID：@engo",
+                "fr": "ID Line officiel : @engo"
+            }
+        },
+        {
             "id": "wifi-connect",
             "keywords": [
                 "wifi",
