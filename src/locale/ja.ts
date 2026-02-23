@@ -378,6 +378,7 @@ export const jaLocale = {
     interestType2: 'enGo修理',
     interestType3: 'お問い合わせ / その他',
     interestType4: 'スマートホーム全般',
+    interestType5: '展示場予約',
     messagetype: '製品',
     messagetypePlaceholder: '製品を選択',
     msgType1: 'AIスマートコントロールパネル',

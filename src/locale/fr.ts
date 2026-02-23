@@ -154,6 +154,7 @@ export const frLocale = {
   interestType2: 'Réparation enGo',
   interestType3: 'Demande / Autre',
   interestType4: 'Maison intelligente',
+  interestType5: 'Réservation de showroom',
   messagetype: 'produit',
   messagetypePlaceholder: 'Sélectionner un produit',
   msgType1: 'enGo système intelligent',

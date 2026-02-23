@@ -61,6 +61,7 @@
             </option>
             <option value="product">{{ $t('interestType1') }}</option>
             <option value="fix">{{ $t('interestType2') }}</option>
+            <option value="showroom">{{ $t('interestType5') }}</option>
             <option value="smarthome">{{ $t('interestType4') }}</option>
             <option value="other">{{ $t('interestType3') }}</option>
           </select>

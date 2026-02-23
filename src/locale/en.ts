@@ -188,6 +188,7 @@ export const enLocale = {
   interestType2: 'enGo Repair',
   interestType3: 'Inquiry / Other',
   interestType4: 'Smart Home',
+  interestType5: 'Showroom Reservation',
   messagetype: 'Product',
   messagetypePlaceholder: 'Select a product',
   msgType1: 'enGo intlligent system',

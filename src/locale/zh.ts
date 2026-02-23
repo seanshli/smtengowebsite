@@ -189,6 +189,7 @@ export const zhLocale = {
   interestType2: 'enGo維修',
   interestType3: '詢問/其他',
   interestType4: '智能家居',
+  interestType5: '展廳預約',
   messagetype: '產品',
   messagetypePlaceholder: '選擇產品',
   msgType1: 'AI 智慧管家中控平板',
