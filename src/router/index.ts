@@ -7,11 +7,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/:pathMatch(.*)*',
-      name: 'Not Found',
-      component: HomeView
-    },
-    {
       path: '/',
       name: 'home',
       component: () => import('@/views/index.vue'),
@@ -129,6 +124,24 @@ const router = createRouter({
       name: 'display',
       component: () => import('@/views/product.vue'),
       meta: { titleKey: 'seo.product.title' }
+    },
+    {
+      path: '/admin',
+      component: () => import('@/layout/AdminLayout.vue'),
+      meta: { requiresAuth: true },
+      children: [
+        {
+          path: '',
+          name: 'admin-dashboard',
+          component: () => import('@/views/admin/Dashboard.vue'),
+          meta: { title: 'Admin Dashboard' }
+        }
+      ]
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'Not Found',
+      component: HomeView
     }
   ],
   scrollBehavior(to, from, savedPosition) {
@@ -142,7 +155,17 @@ const { trackPageView } = useAnalytics()
 router.beforeEach((to, from, next) => {
   updateMeta(to)
   trackPageView(to.fullPath)
-  next()
+
+  if (to.meta.requiresAuth) {
+    const token = localStorage.getItem('admin_token')
+    if (!token) {
+      next({ name: 'login' })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
 })
 
 export default router

@@ -480,5 +480,25 @@ export const zhLocale = {
   contactUsTitle: '智管家帶您開啟智慧新生活',
   contactUsSubtitle: '歡迎您留下聯繫資料，我們將盡快安排專人與您聯繫',
   contactUsSubtitle1: '歡迎您留下聯繫資料',
-  contactUsSubtitle2: '我們將盡快安排專人與您聯繫'
+  contactUsSubtitle2: '我們將盡快安排專人與您聯繫',
+
+  // Admin
+  admin: {
+    dashboard: '管理後台',
+    submissions: '聯絡表單管理',
+    logout: '登出',
+    status: '狀態',
+    notes: '備註',
+    actions: '操作',
+    edit: '編輯',
+    save: '儲存',
+    cancel: '取消',
+    delete: '刪除',
+    confirmDelete: '確定要刪除嗎？',
+    pending: '待處理',
+    processing: '處理中',
+    completed: '已完成',
+    loginTitle: '管理員登入',
+    loginError: '登入失敗，請檢查帳號密碼'
+  }
 }

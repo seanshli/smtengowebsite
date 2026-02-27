@@ -8,7 +8,8 @@ import { useRouter } from 'vue-router'
 import { computed } from 'vue'
 
 const isShowHeaderFooter = computed(() => {
-  return window.location.pathname !== '/display'
+  const path = window.location.pathname
+  return path !== '/display' && !path.startsWith('/admin')
 })
 </script>
 
