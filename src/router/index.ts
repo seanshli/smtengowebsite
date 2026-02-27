@@ -135,6 +135,18 @@ const router = createRouter({
           name: 'admin-dashboard',
           component: () => import('@/views/admin/Dashboard.vue'),
           meta: { title: 'Admin Dashboard' }
+        },
+        {
+          path: 'members',
+          name: 'admin-members',
+          component: () => import('@/views/admin/Members.vue'),
+          meta: { title: 'Member Management', requiresAuth: true, role: 'superuser' }
+        },
+        {
+          path: 'profile',
+          name: 'admin-profile',
+          component: () => import('@/views/admin/Profile.vue'),
+          meta: { title: 'My Profile', requiresAuth: true }
         }
       ]
     },
@@ -158,8 +170,12 @@ router.beforeEach((to, from, next) => {
 
   if (to.meta.requiresAuth) {
     const token = localStorage.getItem('admin_token')
+    const user = JSON.parse(localStorage.getItem('admin_user') || '{}')
+
     if (!token) {
       next({ name: 'login' })
+    } else if (to.meta.role && to.meta.role !== user.role) {
+      next({ name: 'admin-dashboard' })
     } else {
       next()
     }

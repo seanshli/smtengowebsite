@@ -499,6 +499,22 @@ export const zhLocale = {
     processing: '處理中',
     completed: '已完成',
     loginTitle: '管理員登入',
-    loginError: '登入失敗，請檢查帳號密碼'
+    loginError: '登入失敗，請檢查帳號密碼',
+    members: '成員管理',
+    profile: '個人資料',
+    username: '帳號',
+    password: '密碼',
+    name: '姓名',
+    role: '角色',
+    superuser: '超級管理員',
+    operator: '一般操作員',
+    addMember: '新增成員',
+    changePassword: '修改密碼',
+    currentPassword: '目前密碼',
+    newPassword: '新密碼',
+    confirmPassword: '確認新密碼',
+    passwordMismatch: '兩次輸入的密碼不一致',
+    updateSuccess: '更新成功',
+    updateError: '更新失敗'
   }
 }

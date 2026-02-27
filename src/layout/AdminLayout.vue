@@ -7,7 +7,19 @@
         </router-link>
         <span class="admin-title">{{ $t('admin.dashboard') }}</span>
       </div>
+      <nav class="admin-nav">
+        <router-link :to="{ name: 'admin-dashboard' }" class="nav-item">
+          {{ $t('admin.submissions') }}
+        </router-link>
+        <router-link v-if="user.role === 'superuser'" :to="{ name: 'admin-members' }" class="nav-item">
+          {{ $t('admin.members') }}
+        </router-link>
+        <router-link :to="{ name: 'admin-profile' }" class="nav-item">
+          {{ $t('admin.profile') }}
+        </router-link>
+      </nav>
       <div class="header-right">
+        <span class="user-name">{{ user.name || user.username }} ({{ $t(`admin.${user.role}`) }})</span>
         <button @click="handleLogout" class="logout-btn">{{ $t('admin.logout') }}</button>
       </div>
     </header>
@@ -18,12 +30,15 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+const user = ref(JSON.parse(localStorage.getItem('admin_user') || '{}'))
 
 const handleLogout = () => {
   localStorage.removeItem('admin_token')
+  localStorage.removeItem('admin_user')
   router.push({ name: 'login' })
 }
 </script>
@@ -51,16 +66,30 @@ const handleLogout = () => {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    .logo-engo { height: 32px; }
+    .admin-title { font-size: 1.25rem; font-weight: 600; color: #343a40; }
+  }
 
-    .logo-engo {
-      height: 32px;
+  .admin-nav {
+    display: flex;
+    gap: 1.5rem;
+    .nav-item {
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+      &.router-link-active { color: #c46043; border-bottom-color: #c46043; }
+      &:hover { color: #c46043; }
     }
+  }
 
-    .admin-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #343a40;
-    }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .user-name { font-weight: 500; font-size: 0.9rem; color: #666; }
   }
 }
 

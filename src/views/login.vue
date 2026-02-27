@@ -42,12 +42,31 @@ const { trackEvent } = useAnalytics()
 const { t } = useI18n()
 const router = useRouter()
 
-const handleLogin = () => {
+const handleLogin = async () => {
   trackEvent('login_attempt', { role: isWorker.value ? 'worker' : 'user' })
   
-  if (isWorker.value && form.value.username === 'admin' && form.value.password === 'admin123') {
-    localStorage.setItem('admin_token', 'admin-secret-token') // Matches API default
-    router.push({ name: 'admin-dashboard' })
+  if (isWorker.value) {
+    try {
+      const response = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: form.value.username,
+          password: form.value.password
+        })
+      })
+
+      const data = await response.json()
+      if (!response.ok) {
+        throw new Error(data.error || t('admin.loginError'))
+      }
+
+      localStorage.setItem('admin_token', data.token)
+      localStorage.setItem('admin_user', JSON.stringify(data.user))
+      router.push({ name: 'admin-dashboard' })
+    } catch (err: any) {
+      alert(err.message)
+    }
   } else {
     alert(t('loginPage.upcoming'))
   }
