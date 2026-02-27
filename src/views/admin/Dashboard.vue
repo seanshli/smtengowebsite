@@ -4,6 +4,18 @@
       <h1>{{ $t('admin.submissions') }}</h1>
     </div>
 
+    <div class="tabs-container">
+      <button 
+        v-for="tab in ['all', 'pending', 'processing', 'completed']" 
+        :key="tab"
+        :class="['tab-item', { active: activeTab === tab }]"
+        @click="activeTab = tab"
+      >
+        {{ tab === 'all' ? 'All' : $t(`admin.${tab}`) }}
+        <span class="count" v-if="getCount(tab) > 0">{{ getCount(tab) }}</span>
+      </button>
+    </div>
+
     <div v-if="loading" class="loading">Loading...</div>
     <div v-else-if="error" class="error">{{ error }}</div>
     
@@ -14,17 +26,17 @@
             <th>{{ $t('name') }}</th>
             <th>{{ $t('phone') }}</th>
             <th>{{ $t('city') }}</th>
-            <th>{{ $t('admin.status') }}</th>
+            <th v-if="activeTab === 'all'">{{ $t('admin.status') }}</th>
             <th>Time</th>
             <th>{{ $t('admin.actions') }}</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="submission in submissions" :key="submission.id">
+          <tr v-for="submission in filteredSubmissions" :key="submission.id">
             <td>{{ submission.name }}</td>
             <td>{{ submission.phone }}</td>
             <td>{{ submission.city }}</td>
-            <td>
+            <td v-if="activeTab === 'all'">
               <span :class="['status-badge', submission.status || 'pending']">
                 {{ $t(`admin.${submission.status || 'pending'}`) }}
               </span>
@@ -36,6 +48,9 @@
           </tr>
         </tbody>
       </table>
+      <div v-if="filteredSubmissions.length === 0" class="no-data">
+        No submissions found in this category.
+      </div>
     </div>
 
     <!-- Details Modal -->
@@ -96,6 +111,19 @@ const error = ref('')
 const selectedSubmission = ref<any>(null)
 const editData = ref({ status: 'pending', notes: '' })
 const saving = ref(false)
+const activeTab = ref('all')
+
+import { computed } from 'vue'
+
+const filteredSubmissions = computed(() => {
+  if (activeTab.value === 'all') return submissions.value
+  return submissions.value.filter(s => (s.status || 'pending') === activeTab.value)
+})
+
+const getCount = (tab: string) => {
+  if (tab === 'all') return submissions.value.length
+  return submissions.value.filter(s => (s.status || 'pending') === tab).length
+}
 
 const fetchData = async () => {
   loading.value = true
@@ -168,6 +196,51 @@ onMounted(fetchData)
 <style scoped lang="scss">
 .admin-dashboard {
   h1 { margin-bottom: 2rem; }
+}
+
+.tabs-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #eee;
+  padding: 0.25rem;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.tab-item {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+
+  &.active {
+    background: white;
+    color: #c46043;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .count {
+    background: #e5e7eb;
+    color: #4b5563;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+  }
+}
+
+.no-data {
+  padding: 3rem;
+  text-align: center;
+  color: #888;
+  font-style: italic;
 }
 
 .submissions-table-container {
