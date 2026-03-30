@@ -12,3 +12,13 @@
 # Built Visual Studio Code Extensions
 *.vsix
 
+# Dependencies
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment Variables
+.env
+.env.*
+!.env.example
