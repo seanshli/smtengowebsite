@@ -1059,12 +1059,14 @@
                     "One-touch Scene Execution"
                 ]
             },
-            "interface_gallery": [
-                "/images/cases/5/interface1.png",
-                "/images/cases/5/interface2.png"
-            ],
             "real_scene_gallery": [
-                "/images/kitchen.jpg"
+                "/images/cases/9/平面圖.jpg",
+                "/images/cases/9/感應器(1).jpg",
+                "/images/cases/9/感應器.jpg",
+                "/images/cases/9/手機介面.png",
+                "/images/cases/9/裝潢客廳.jpg",
+                "/images/cases/9/走道(1).jpg",
+                "/images/cases/9/走道.jpg"
             ]
         }
     },
