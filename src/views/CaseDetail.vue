@@ -154,7 +154,7 @@ const getLocaleList = (obj: Record<string, string[]> | any) => {
 const isVideo = (url: string) => {
   if (!url) return false
   const ext = url.split('.').pop()?.toLowerCase()
-  return ['mp4', 'webm', 'ogg'].includes(ext || '')
+  return ['mp4', 'webm', 'ogg', 'mov'].includes(ext || '')
 }
 
 const isGoogleDrive = (url: string) => {
