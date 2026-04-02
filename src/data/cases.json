@@ -466,7 +466,7 @@
             "zh": "三房兩廳兩衛",
             "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms"
         },
-        "image": "/images/kitchen.jpg",
+        "image": "/images/cases/7/文山陳小姐客戶介面1.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於台北的三房兩廳兩衛及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
@@ -635,7 +635,11 @@
                     "省エネ効率の監視",
                     "漏水とセキュリティのアラート"
                 ]
-            }
+            },
+            "interface_gallery": [
+                "/images/cases/7/文山陳小姐客戶介面1.jpg",
+                "/images/cases/7/文山陳小姐客戶介面2.jpg"
+            ]
         }
     },
     {
