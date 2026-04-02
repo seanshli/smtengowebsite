@@ -82,6 +82,7 @@
                 <source :src="img" type="video/mp4" />
              </video>
              <iframe v-else-if="isGoogleDrive(img)" :src="getGoogleDriveEmbedUrl(img)" class="gallery-iframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+             <iframe v-else-if="isYouTube(img)" :src="getYouTubeEmbedUrl(img)" class="gallery-iframe" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
              <img v-else :src="img" alt="Gallery Image" />
           </div>
         </div>
@@ -97,6 +98,7 @@
                 <source :src="img" type="video/mp4" />
              </video>
              <iframe v-else-if="isGoogleDrive(img)" :src="getGoogleDriveEmbedUrl(img)" class="gallery-iframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+             <iframe v-else-if="isYouTube(img)" :src="getYouTubeEmbedUrl(img)" class="gallery-iframe" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
              <img v-else :src="img" alt="Real Scene" />
           </div>
         </div>
@@ -165,6 +167,24 @@ const isGoogleDrive = (url: string) => {
 const getGoogleDriveEmbedUrl = (url: string) => {
   if (!url) return ''
   return url.replace(/\/view.*$/, '/preview')
+}
+
+const isYouTube = (url: string) => {
+  if (!url) return false
+  return url.includes('youtube.com') || url.includes('youtu.be')
+}
+
+const getYouTubeEmbedUrl = (url: string) => {
+  if (!url) return ''
+  let videoId = ''
+  if (url.includes('youtube.com/shorts/')) {
+    videoId = url.split('youtube.com/shorts/')[1].split('?')[0]
+  } else if (url.includes('youtube.com/watch?v=')) {
+    videoId = url.split('v=')[1].split('&')[0]
+  } else if (url.includes('youtu.be/')) {
+    videoId = url.split('youtu.be/')[1].split('?')[0]
+  }
+  return `https://www.youtube.com/embed/${videoId}`
 }
 
 onMounted(() => {
