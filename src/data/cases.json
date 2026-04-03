@@ -3055,10 +3055,15 @@
                 ]
             },
             "interface_gallery": [
-                "/images/cases/19/interface1.png"
+                "/images/cases/19/手機介面.png"
             ],
             "real_scene_gallery": [
-                "/images/cases/19/real1.png"
+                "/images/cases/19/平面圖.jpg",
+                "/images/cases/19/裝潢客廳.jpg",
+                "/images/cases/19/走道.jpg",
+                "/images/cases/19/走道1.jpg",
+                "/images/cases/19/感應器.jpg",
+                "/images/cases/19/感應器1.jpg"
             ]
         }
     },
