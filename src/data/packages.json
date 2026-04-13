@@ -114,7 +114,7 @@
                 "ja": "全自動スマート進階版",
                 "fr": "Édition Avancée Maison Connectée"
             },
-            "price": "NT$ 52,800",
+            "price": "NT$ 80,000",
             "suggested_usage": {
                 "zh": "兩房兩廳 / 小家庭智慧首選",
                 "en": "2BR Apartment / Smart Family Choice",
@@ -123,76 +123,100 @@
             },
             "functions": {
                 "zh": [
-                    "全域語音聲控整合",
                     "智慧冷氣自動調節",
                     "多迴路燈光聯動",
-                    "家電遠端控制"
+                    "安控 (漏水 , 煙霧安控)",
+                    "App 遠端管理"
                 ],
                 "en": [
-                    "Universal Voice Integration",
                     "Smart AC Automation",
                     "Multi-loop Light Linkage",
-                    "Device Remote Control"
+                    "Security (Water Leak, Smoke)",
+                    "App Remote Management"
                 ],
                 "fr": [
-                    "Intégration vocale universelle",
                     "Automatisation intelligente AC",
                     "Liaison d'éclairage multi-boucles",
-                    "Contrôle d'appareils à distance"
+                    "Sécurité (fuite d'eau, fumée)",
+                    "Gestion à distance via App"
                 ],
                 "ja": [
-                    "ユニバーサル音声統合",
                     "スマートエアコン自動化",
                     "マルチループ照明連動",
-                    "家電遠隔操作"
+                    "セキュリティ (漏水, 発煙)",
+                    "アプリ遠隔管理"
                 ]
             },
             "scenarios": {
                 "zh": [
-                    "影音劇院情境",
+                    "回家模式 (自動亮燈)",
+                    "離家模式 (一鍵關燈)",
+                    "睡眠情境設定",
                     "動態感應自動走廊燈",
                     "冷氣恆溫自動化"
                 ],
                 "en": [
-                    "Home Theater Scene",
+                    "Welcome Home (Auto Light)",
+                    "Leave Home (One-tap Off)",
+                    "Sleep Mode Configuration",
                     "Motion-activated Hallway",
                     "AC Temperature Auto-Logic"
                 ],
                 "fr": [
-                    "Scène Cinéma Maison",
+                    "Bienvenue à la maison (Lumière auto)",
+                    "Départ (Extinction d'un geste)",
+                    "Configuration du mode Sommeil",
                     "Couloir activé par mouvement",
                     "Logique auto température AC"
                 ],
                 "ja": [
-                    "ホームシアターシーン",
+                    "帰宅モード (自動点灯)",
+                    "外出モード (一括消灯)",
+                    "睡眠モード設定",
                     "動体検知廊下照明",
                     "エアコン温度自動制御"
                 ]
             },
             "components": {
                 "zh": [
-                    "enGo 智慧中控平板 x1",
-                    "智慧開關 x5",
-                    "紅外線控制模組 x1",
-                    "高精度感測器 x2"
+                    "智慧網關 x1",
+                    "智能燈控開關 x4",
+                    "智能紅外線遙控系統 x2",
+                    "中控系統平板+ 管理系統 x1",
+                    "智能漏水球閥 x1",
+                    "智能煙霧偵測 x1",
+                    "智能斷電器/瓦斯閥 x1",
+                    "人體感應器 x2"
                 ],
                 "en": [
-                    "enGo Smart Tablet x1",
-                    "Smart Switch x5",
-                    "IR Control Module x1",
-                    "Precision Sensors x2"
+                    "Smart Gateway x1",
+                    "Smart Light Control Switch x4",
+                    "Smart IR Remote System x2",
+                    "Central Control Tablet + Management System x1",
+                    "Smart Water Leak Valve x1",
+                    "Smart Smoke Detector x1",
+                    "Smart Breaker / Gas Valve x1",
+                    "Motion Sensor x2"
                 ],
                 "fr": [
-                    "Tablette intelligente enGo x1",
-                    "Interrupteur intelligent x5",
-                    "Module de contrôle IR x1",
-                    "Capteurs de précision x2"
+                    "Passerelle intelligente x1",
+                    "Interrupteur d'éclairage intelligent x4",
+                    "Système de télécommande IR intelligent x2",
+                    "Tablette de contrôle central + Système de gestion x1",
+                    "Vanne de fuite d'eau intelligente x1",
+                    "Détecteur de fumée intelligent x1",
+                    "Disjoncteur / Vanne de gaz intelligent x1",
+                    "Capteur de mouvement x2"
                 ],
                 "ja": [
-                    "enGoスマートタブレット x1",
-                    "スマートスイッチ x5",
-                    "赤外線制御モジュール x1",
-                    "高精度センサー x2"
+                    "スマートゲートウェイ x1",
+                    "スマート照明制御スイッチ x4",
+                    "スマート赤外線リモコンシステム x2",
+                    "中央制御タブレット + 管理システム x1",
+                    "スマート漏水バルブ x1",
+                    "スマート煙感知器 x1",
+                    "スマートブレーカー/ガスバルブ x1",
+                    "人感センサー x2"
                 ]
             }
         },
