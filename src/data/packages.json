@@ -8,7 +8,7 @@
                 "ja": "スマートハブ基礎版",
                 "fr": "Édition Hub Intelligent de Base"
             },
-            "price": "NT$ 80,000",
+            "price": "NT$ 50,000",
             "suggested_usage": {
                 "zh": "小資族 / 一房一廳 / 套房推薦",
                 "en": "Studio / 1BR / Budget Friendly",
@@ -19,28 +19,24 @@
                 "zh": [
                     "智慧中控平台",
                     "安控 (漏水 , 煙霧安控)",
-                    "環境溫濕度監控",
                     "燈光單迴路控制",
                     "App 遠端管理"
                 ],
                 "en": [
                     "Smart Control Hub",
                     "Security (Water Leak, Smoke)",
-                    "Climate Monitoring",
                     "Single-loop Lighting Control",
                     "App Remote Management"
                 ],
                 "fr": [
                     "Centre de contrôle intelligent",
                     "Sécurité (fuite d'eau, fumée)",
-                    "Surveillance du climat",
                     "Contrôle d'éclairage à boucle unique",
                     "Gestion à distance via App"
                 ],
                 "ja": [
                     "スマートコントロールハブ",
                     "セキュリティ (漏水, 発煙)",
-                    "環境温湿度モニタリング",
                     "シングルループ照明制御",
                     "アプリ遠隔管理"
                 ]
@@ -69,7 +65,6 @@
             },
             "components": {
                 "zh": [
-                    "HomePod mini(聲控) x1",
                     "網關 x1",
                     "燈控開關 x1",
                     "遙控系統 x1",
@@ -77,11 +72,9 @@
                     "智能漏水球閥 x1",
                     "智能煙霧偵測 x1",
                     "智能斷電器/瓦斯閥 x1",
-                    "設定費用 x1",
-                    "智能空氣清淨機 x1"
+                    "人體感應器 x1"
                 ],
                 "en": [
-                    "HomePod mini (Voice Control) x1",
                     "Gateway x1",
                     "Light Control Switch x1",
                     "Remote Control System x1",
@@ -89,11 +82,9 @@
                     "Smart Water Leak Valve x1",
                     "Smart Smoke Detector x1",
                     "Smart Breaker / Gas Valve x1",
-                    "Setup Fee x1",
-                    "Smart Air Purifier x1"
+                    "Motion Sensor x1"
                 ],
                 "fr": [
-                    "HomePod mini (Contrôle vocal) x1",
                     "Passerelle x1",
                     "Interrupteur d'éclairage x1",
                     "Système de contrôle à distance x1",
@@ -101,11 +92,9 @@
                     "Vanne de fuite d'eau intelligente x1",
                     "Détecteur de fumée intelligent x1",
                     "Disjoncteur / Vanne de gaz intelligent x1",
-                    "Frais d'installation x1",
-                    "Purificateur d'air intelligent x1"
+                    "Capteur de mouvement x1"
                 ],
                 "ja": [
-                    "HomePod mini (音声制御) x1",
                     "ゲートウェイ x1",
                     "照明制御スイッチ x1",
                     "リモコンシステム x1",
@@ -113,8 +102,7 @@
                     "スマート漏水バルブ x1",
                     "スマート煙感知器 x1",
                     "スマートブレーカー/ガスバルブ x1",
-                    "設定費用 x1",
-                    "スマート空気清浄機 x1"
+                    "人感センサー x1"
                 ]
             }
         },
