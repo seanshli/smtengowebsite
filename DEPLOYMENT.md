@@ -26,7 +26,7 @@ Total Build Size: ~23 MB
 - CSS modules configured correctly
 
 ### ✅ SEO & Analytics
-- Google Tag Manager integrated (GTM-T7MPRPNH)
+- Google Tag Manager integrated (GTM-PBH3CKR5)
 - Structured data (JSON-LD) implemented
 - Meta tags configured for all pages
 - Open Graph tags present
