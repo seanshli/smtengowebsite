@@ -109,7 +109,7 @@ export const zhLocale = {
   paragraph4: '節能減碳，智慧永續，enGo 讓幸福生活每一刻都更美好。',
 
   // WHY enGo section
-  whyEngoTitle: 'WHY enGo',
+  whyEngoTitle: 'Why  enGo',
   whyEngoTagline1: 'One Brain. One Home.',
   whyEngoTagline2: '一個大腦，整個家都聽話。',
   whyEngoBenefit1: '✓ 跨品牌整合',

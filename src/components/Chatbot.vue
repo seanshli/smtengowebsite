@@ -12,7 +12,7 @@
       <div class="chat-body" ref="chatBody">
         <div v-for="(msg, index) in messages" :key="index" :class="['message', msg.role]">
           <div v-if="msg.type === 'video'" class="video-container">
-            <div class="text mb-2">{{ msg.text }}</div>
+            <div class="text mb-2" v-html="formatMessage(msg.text)"></div>
             <iframe :src="msg.mediaUrl" frameborder="0" allowfullscreen></iframe>
           </div>
           <div v-else-if="msg.type === 'catalog'" class="catalog-card">
@@ -28,13 +28,13 @@
             <img v-if="msg.data.spec_image" :src="getImageUrl(msg.data.spec_image)" class="spec-img" />
           </div>
           <div v-if="msg.type === 'handover'" class="handover-container">
-            <div class="text mb-2">{{ msg.text }}</div>
+            <div class="text mb-2" v-html="formatMessage(msg.text)"></div>
             <button @click="jumpToLine" class="line-handoff-btn">
               <img src="/images/link_Line.png" alt="LINE" />
               {{ $t('chatbot.line_handoff') }}
             </button>
           </div>
-          <div v-else class="text">{{ msg.text }}</div>
+          <div v-else class="text" v-html="formatMessage(msg.text)"></div>
         </div>
       </div>
       <div class="chat-footer">
@@ -113,6 +113,14 @@ const quickReplyKeys = [
 const jumpToLine = () => {
   trackEvent('chatbot_line_handoff')
   window.open('https://lin.ee/THIUSjW')
+}
+
+const formatMessage = (text: string) => {
+  if (!text) return ''
+  return text
+    .replace(/\n/g, '<br/>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color: #c46043; font-weight: bold; text-decoration: underline;">$1</a>')
 }
 
 const logQuery = async (keyword: string, matchFound: boolean) => {

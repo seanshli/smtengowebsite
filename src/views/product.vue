@@ -1454,7 +1454,9 @@ export default defineComponent({
         .pkg-name { color: #c46043; }
         .pkg-usage { color: #fff; }
       }
-      .spec-group ul li { color: #fff; }
+      .p-card-body {
+        .spec-group ul li { color: #fff; }
+      }
       .buy-pkg-btn { background: #c46043; color: #fff; }
     }
 

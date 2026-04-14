@@ -104,7 +104,7 @@ export const enLocale = {
     'We focus on the kitchen as the core, realizing home automation. Through advanced AIoT, big data, and cloud technology, we create a higher quality, better life for you.',
 
   // WHY enGo section
-  whyEngoTitle: 'WHY enGo',
+  whyEngoTitle: 'Why  enGo',
   whyEngoTagline1: 'One Brain. One Home.',
   whyEngoTagline2: 'One brain controls the entire home.',
   whyEngoBenefit1: '✓ Cross-brand Integration',
