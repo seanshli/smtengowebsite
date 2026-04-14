@@ -46,6 +46,10 @@ export const zhLocale = {
       title: '聯絡我們 | 諮詢 enGo 智慧家居解決方案',
       description: '對我們的產品有興趣？立即填寫表單或透過 LINE 聯繫我們，專人將竭誠為您服務。'
     },
+    packages: {
+      title: '套裝方案 | enGo智管家 - 智慧家居第一品牌',
+      description: '挑選最適合您的智慧家庭套裝方案，提升家居舒適度與安全性。'
+    },
     login: {
       title: '登入 | enGo 智管家管理系統',
       description: '登入 enGo 帳戶以管理您的聯網視窗與智慧家居配備。'

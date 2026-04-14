@@ -45,6 +45,10 @@ export const enLocale = {
       title: 'Contact | Inquire enGo Solutions',
       description: 'Interested in enGo? Contact us via form or LINE for personalized smart home solutions.'
     },
+    packages: {
+      title: 'Packages | enGo Smart Home',
+      description: 'Choose the best smart home package to improve comfort and security.'
+    },
     login: {
       title: 'Login | enGo Management System',
       description: 'Sign in to manage your smart home devices and community services.'

@@ -428,5 +428,13 @@ export default defineComponent({
       transform: translateY(-2px);
     }
   }
+
+  .add-review form {
+    input, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+  }
 }
 </style>

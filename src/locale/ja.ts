@@ -45,6 +45,10 @@ export const jaLocale = {
             title: 'お問い合わせ | enGoソリューション相談',
             description: 'enGoにご興味をお持ちですか？フォームまたはLINEにてお気軽にお問い合わせください。'
         },
+        packages: {
+            title: 'パッケージ | enGo スマートホーム',
+            description: 'あなたに最適なスマートホームパッケージを選び、快適さと安全性を向上させましょう。'
+        },
         login: {
             title: 'ログイン | enGo管理システム',
             description: 'スマートホームデバイスやコミュニティサービスを管理するためにサインインしてください。'
