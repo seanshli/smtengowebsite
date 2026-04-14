@@ -1450,14 +1450,10 @@ export default defineComponent({
       border-color: #043655;
       background: #043655;
       color: white;
-      .pkg-name { color: #d4a753; }
-      .pkg-usage, .pkg-price { color: #eee; }
-      .spec-group h4 { color: #d4a753; border-bottom-color: rgba(212, 167, 83, 0.3); }
-      .spec-group ul li {
-        color: #ccc;
-        &::before { color: #d4a753; }
-      }
-      .buy-pkg-btn { background: #d4a753; color: #043655; }
+      .pkg-name { color: #c46043; }
+      .pkg-usage { color: #fff; }
+      .spec-group ul li { color: #fff; }
+      .buy-pkg-btn { background: #c46043; color: #fff; }
     }
 
     .p-card-header {
