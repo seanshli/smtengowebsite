@@ -1450,8 +1450,10 @@ export default defineComponent({
       border-color: #043655;
       background: #043655;
       color: white;
-      .pkg-name { color: #c46043; }
-      .pkg-usage { color: #fff; }
+      .p-card-header {
+        .pkg-name { color: #c46043; }
+        .pkg-usage { color: #fff; }
+      }
       .spec-group ul li { color: #fff; }
       .buy-pkg-btn { background: #c46043; color: #fff; }
     }

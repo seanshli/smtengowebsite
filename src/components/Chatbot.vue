@@ -7,7 +7,7 @@
     
     <div class="chat-window" v-if="isOpen">
       <div class="chat-header">
-        <h3>enGo Assistant</h3>
+        <h3>enGo 小精靈</h3>
       </div>
       <div class="chat-body" ref="chatBody">
         <div v-for="(msg, index) in messages" :key="index" :class="['message', msg.role]">

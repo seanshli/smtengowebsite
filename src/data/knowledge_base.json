@@ -329,24 +329,68 @@
     ],
     "packages": [
         {
+            "id": "package-basic",
+            "keywords": [
+                "basic",
+                "基礎版",
+                "小資族",
+                "套房",
+                "一房",
+                "入門"
+            ],
+            "answer": {
+                "zh": "【旗艦中控 基礎版】定價 NT$ 50,000\n適合小資族、套房與一房一廳使用。\n🔸核心功能：包含智慧中控平台、安控(漏水, 煙霧)、燈光單迴路控制以及 App 遠端管理。\n🔸主要包含組件有：網關、燈控開關、遙控系統、中控平板、以及各類感測器。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
+                "en": "【Flagship Hub Basic Edition】NT$ 50,000\nSuitable for singles, studios, and 1BR. Includes smart hub, safety sensors, lighting control. \n🔗 [View Details](/product?jump=packages)"
+            }
+        },
+        {
+            "id": "package-advanced",
+            "keywords": [
+                "advanced",
+                "進階版",
+                "兩房",
+                "小家庭",
+                "進階"
+            ],
+            "answer": {
+                "zh": "【全屋智慧 進階版】定價 NT$ 80,000\n適合兩房兩廳，是小家庭的智慧首選。\n🔸核心功能升級：支援智慧冷氣自動調節、多迴路燈光聯動。\n🔸情境控制：提供回家亮燈、一鍵關燈、動態感應走廊燈、冷氣恆溫等智慧情境。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
+                "en": "【Smart Home Advanced Edition】NT$ 80,000\nFor 2BR & small families. Adds smart AC, multi-loop lighting, and hallway motion lights.\n🔗 [View Details](/product?jump=packages)"
+            }
+        },
+        {
+            "id": "package-luxury",
+            "keywords": [
+                "luxury",
+                "豪華版",
+                "三房",
+                "透天",
+                "別墅",
+                "頂級玩家",
+                "豪華"
+            ],
+            "answer": {
+                "zh": "【奢華宅邸 豪華版】定價 NT$ 99,999+\n為三房以上、透天別墅及頂級玩家設計的極致體驗方案。\n🔸獨有特色：包含智慧窗簾與環境聯動、空氣清淨連動器。\n🔸情境控制：全方位離家警戒、晨曦喚醒(自動開簾)、環境自動淨化模式。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
+                "en": "【Luxury Villa Edition】NT$ 99,999+\nFor 3BR+, villas & premium experience. Features full smart curtains, air quality linkage, and comprehensive security mesh.\n🔗 [View Details](/product?jump=packages)"
+            }
+        },
+        {
             "id": "main_packages",
             "keywords": [
                 "tier",
-                "basic",
-                "advanced",
-                "luxury",
                 "pricing",
                 "specs",
                 "方案",
-                "基礎",
-                "進階",
-                "豪華",
                 "預算",
-                "三房",
-                "兩房",
-                "別墅"
+                "價格",
+                "費用",
+                "套裝",
+                "多少錢",
+                "方案比較"
             ],
-            "link": "/product?jump=packages"
+            "answer": {
+                "zh": "我們目前有提供3種智慧家庭套裝方案：\n1️⃣ **旗艦中控 基礎版**: NT$ 50,000 (適合套房/一房一廳)\n2️⃣ **全屋智慧 進階版**: NT$ 80,000 (適合兩房兩廳)\n3️⃣ **奢華宅邸 豪華版**: NT$ 99,999+ (適合三房以上/別墅)\n🔗 [點我查看完整方案比較表](/product?jump=packages)",
+                "en": "We offer 3 smart home packages:\n1️⃣ **Basic** (NT$ 50,000)\n2️⃣ **Advanced** (NT$ 80,000)\n3️⃣ **Luxury** (NT$ 99,999+)\n🔗 [View Comparison Table](/product?jump=packages)"
+            }
         }
     ],
     "products": [
