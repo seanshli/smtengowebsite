@@ -1110,6 +1110,10 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- 獨立的「套裝方案」區塊，包含「可增選套裝方案」與「用戶評價」 -->
+    <section id="packages-wrapper" style="background-color: #f8fafd; width: 100%; border-top: 1px solid #e1e8ef;">
       <!-- 套裝方案 -->
       <div id="packages" class="package-section container py-100 py-mob-60">
         <div class="tag as-fs mb-32">
@@ -1217,6 +1221,7 @@
         </div>
       </div>
     </div>
+    </section>
     
     <CatalogMenu
       v-if="isCatalogMenuOpen"
