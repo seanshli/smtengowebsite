@@ -228,7 +228,7 @@
                 "ja": "プレミアム豪華版",
                 "fr": "Édition Villa de Luxe"
             },
-            "price": "NT$ 88,800+",
+            "price": "NT$ 99,999+",
             "suggested_usage": {
                 "zh": "三房以上 / 透天別墅 / 頂級玩家",
                 "en": "3BR+ / Villa / Premium Experience",
@@ -237,47 +237,71 @@
             },
             "functions": {
                 "zh": [
-                    "全屋智能安防覆蓋",
+                    "智慧冷氣自動調節",
+                    "多迴路燈光聯動",
                     "智慧窗簾與環境聯動",
-                    "空氣水質實時監控",
-                    "瓦斯水管安全防護"
+                    "安控 (漏水 , 煙霧安控)",
+                    "App 遠端管理"
                 ],
                 "en": [
-                    "Full House Security Mesh",
-                    "Smart Curtain Automation",
-                    "Air/Water Quality Watch",
-                    "Water/Gas Leak Prevention"
+                    "Smart AC Automation",
+                    "Multi-loop Light Linkage",
+                    "Smart Curtain & Environment Sync",
+                    "Security (Water Leak, Smoke)",
+                    "App Remote Management"
                 ],
                 "fr": [
-                    "Maillage de sécurité complet",
-                    "Automatisation des rideaux",
-                    "Surveillance air et eau",
-                    "Prévention fuite eau et gaz"
+                    "Automatisation intelligente AC",
+                    "Liaison d'éclairage multi-boucles",
+                    "Rideau intelligent et Synchronisation environnement",
+                    "Sécurité (fuite d'eau, fumée)",
+                    "Gestion à distance via App"
                 ],
                 "ja": [
-                    "全家セキュリティメッシュ",
-                    "スマートカーテン自動化",
-                    "空気・水質モニタリング",
-                    "漏水・ガス漏れ防止"
+                    "スマートエアコン自動化",
+                    "マルチループ照明連動",
+                    "スマートカーテンと環境連携",
+                    "セキュリティ (漏水, 発煙)",
+                    "アプリ遠隔管理"
                 ]
             },
             "scenarios": {
                 "zh": [
+                    "回家模式 (自動亮燈)",
+                    "離家模式 (一鍵關燈)",
+                    "睡眠情境設定",
+                    "動態感應自動走廊燈",
+                    "冷氣恆溫自動化",
                     "全方位離家警戒",
                     "晨曦喚醒 (自動開簾)",
                     "環境自動淨化模式"
                 ],
                 "en": [
+                    "Welcome Home (Auto Light)",
+                    "Leave Home (One-tap Off)",
+                    "Sleep Mode Configuration",
+                    "Motion-activated Hallway",
+                    "AC Temperature Auto-Logic",
                     "Full House Arm Mode",
                     "Morning Wake-up (Curtains)",
                     "Auto Air Purification"
                 ],
                 "fr": [
+                    "Bienvenue à la maison (Lumière auto)",
+                    "Départ (Extinction d'un geste)",
+                    "Configuration du mode Sommeil",
+                    "Couloir activé par mouvement",
+                    "Logique auto température AC",
                     "Mode Armé Maison Complète",
                     "Réveil Matinal (Rideaux)",
                     "Purification d'Air Automatique"
                 ],
                 "ja": [
+                    "帰宅モード (自動点灯)",
+                    "外出モード (一括消灯)",
+                    "睡眠モード設定",
+                    "動体検知廊下照明",
+                    "エアコン温度自動制御",
                     "フルハウス警戒モード",
                     "モーニングウェイクアップ",
                     "自動空気清浄モード"
@@ -285,32 +309,56 @@
             },
             "components": {
                 "zh": [
+                    "智慧網關 x2",
+                    "智能燈控開關 x7",
+                    "智能紅外線遙控系統 x4",
                     "enGo 旗艦中控平板 x2",
-                    "智慧開關 x10",
+                    "管理系統 x1",
+                    "智能漏水球閥 x1",
+                    "智能煙霧偵測 x1",
+                    "智能斷電器/瓦斯閥 x1",
                     "窗簾馬達 x2",
-                    "漏水閥控制 x1",
-                    "空氣清淨連動器 x1"
+                    "空氣清淨連動器 x1",
+                    "人體感應器 x2"
                 ],
                 "en": [
+                    "Smart Gateway x2",
+                    "Smart Light Control Switch x7",
+                    "Smart IR Remote System x4",
                     "enGo Flagship Tablet x2",
-                    "Smart Switch x10",
+                    "Management System x1",
+                    "Smart Water Leak Valve x1",
+                    "Smart Smoke Detector x1",
+                    "Smart Breaker / Gas Valve x1",
                     "Curtain Motor x2",
-                    "Leak Control Valve x1",
-                    "Air Purifier Link x1"
+                    "Air Purifier Link x1",
+                    "Motion Sensor x2"
                 ],
                 "fr": [
+                    "Passerelle intelligente x2",
+                    "Interrupteur d'éclairage intelligent x7",
+                    "Système de télécommande IR intelligent x4",
                     "Tablette amirale enGo x2",
-                    "Interrupteur intelligent x10",
+                    "Système de gestion x1",
+                    "Vanne de fuite d'eau intelligente x1",
+                    "Détecteur de fumée intelligent x1",
+                    "Disjoncteur / Vanne de gaz intelligent x1",
                     "Moteur de rideau x2",
-                    "Vanne de contrôle de fuite x1",
-                    "Séquenceur purificateur d'air x1"
+                    "Séquenceur purificateur d'air x1",
+                    "Capteur de mouvement x2"
                 ],
                 "ja": [
+                    "スマートゲートウェイ x2",
+                    "スマート照明制御スイッチ x7",
+                    "スマート赤外線リモコンシステム x4",
                     "enGoフラッグシップタブレット x2",
-                    "スマートスイッチ x10",
+                    "管理システム x1",
+                    "スマート漏水バルブ x1",
+                    "スマート煙感知器 x1",
+                    "スマートブレーカー/ガスバルブ x1",
                     "カーテンモーター x2",
-                    "漏水制御バルブ x1",
-                    "空気清浄機連携器 x1"
+                    "空気清浄機連携器 x1",
+                    "人感センサー x2"
                 ]
             }
         }
