@@ -1119,10 +1119,10 @@
         <h2 class="fz-48 fw-700 text-grey-blue mb-56 tac">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</h2>
         
         <div class="package-grid">
-          <div v-for="pkg in packages.main_packages" :key="pkg.id" class="package-card" :class="{ 'luxury': pkg.id === 'luxury' }">
+          <div v-for="pkg in packages.main_packages" :key="pkg.id" class="package-card">
             <div class="p-card-header">
               <h3 class="pkg-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h3>
-              <p class="pkg-usage text-grey-666">{{ (pkg.suggested_usage as any)[locale] || pkg.suggested_usage['zh'] }}</p>
+              <p class="pkg-usage">{{ (pkg.suggested_usage as any)[locale] || pkg.suggested_usage['zh'] }}</p>
               <div class="pkg-price">{{ pkg.price }}</div>
             </div>
             
@@ -1438,6 +1438,7 @@ export default defineComponent({
     border: 1px solid #f0f0f0;
     border-radius: 24px;
     padding: 40px;
+    height: 100%;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -1446,16 +1447,16 @@ export default defineComponent({
     &:hover {
       transform: translateY(-10px);
       box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-      border-color: #c46043;
-    }
-
-    &.luxury {
+      border-color: #043655;
       background: #043655;
       color: white;
       .pkg-name { color: #d4a753; }
       .pkg-usage, .pkg-price { color: #eee; }
       .spec-group h4 { color: #d4a753; border-bottom-color: rgba(212, 167, 83, 0.3); }
-      .spec-group ul li { color: #ccc; }
+      .spec-group ul li {
+        color: #ccc;
+        &::before { color: #d4a753; }
+      }
       .buy-pkg-btn { background: #d4a753; color: #043655; }
     }
 
@@ -1463,7 +1464,7 @@ export default defineComponent({
       margin-bottom: 30px;
       text-align: center;
       .pkg-name { font-size: 1.8rem; font-weight: 700; color: #043655; margin-bottom: 8px; }
-      .pkg-usage { font-size: 1rem; margin-bottom: 16px; font-weight: 500; }
+      .pkg-usage { font-size: 1rem; margin-bottom: 16px; font-weight: 500; color: #666; }
       .pkg-price { font-size: 2rem; font-weight: 800; color: #c46043; }
     }
 
