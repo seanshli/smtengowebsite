@@ -10,8 +10,8 @@
         <span class="subtitle link" @click="jumpToProduct">{{ $t('footer.secondLink') }}</span>
         <!-- 水維氧AI智慧淨水系 -->
         <span class="subtitle link" @click="jumpToProduct1">{{ $t('product.air_purifier.title') }}</span>
-        <!-- 套裝方案 -->
-        <span class="subtitle link" @click="jumpToPackages">{{ $t('product.packages.tag') || '套裝方案' }}</span>
+        <!-- 智慧管家方案 -->
+        <router-link to="/packages" class="subtitle link">{{ $t('packagesTitle') || '智慧管家方案' }}</router-link>
         <!-- 使用教學 -->
         <router-link to="/tutorial" class="subtitle link">{{ $t('footer.tutorial') }}</router-link>
         <!-- 案例分享 -->
@@ -133,12 +133,7 @@ export default defineComponent({
       })
     }
 
-    const jumpToPackages = () => {
-      router.push({
-        name: 'product',
-        query: { jump: 'packages' }
-      })
-    }
+
 
     return {
       selectedLanguage,
@@ -149,8 +144,7 @@ export default defineComponent({
       jumpToIg,
       jumpToYt,
       jumpToProduct,
-      jumpToProduct1,
-      jumpToPackages
+      jumpToProduct1
     }
   }
 })

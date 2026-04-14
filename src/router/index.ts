@@ -79,6 +79,15 @@ const router = createRouter({
       }
     },
     {
+      path: '/packages',
+      name: 'packages',
+      component: () => import('@/views/packages.vue'),
+      meta: {
+        title: '智慧管家方案 | enGo',
+        descKey: 'seo.product.description'
+      }
+    },
+    {
       path: '/login',
       name: 'login',
       component: () => import('@/views/login.vue'),
