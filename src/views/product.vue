@@ -1140,6 +1140,8 @@ import CountUp from 'vue-countup-v3'
 import { useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
+
+export default defineComponent({
   name: 'Product',
   components: {
     CountUp,
@@ -1256,6 +1258,20 @@ import { useI18n } from 'vue-i18n'
 
     return {
       buyNow,
+      targetIsVisible,
+      observeTarget,
+      hasHeader,
+      endValueRef,
+      options,
+      onInit,
+      modules,
+      navigation,
+      targetExpand,
+      expandImg,
+      closeImg,
+      isExpandWrReadMore,
+      expandReadMore,
+      scrollToTop,
       locale,
       toMall,
       isCatalogOpen,
