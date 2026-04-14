@@ -64,10 +64,10 @@
                     "ja": "セットプランの提案"
                 },
                 "content": {
-                    "zh": "挑選適合您預算與需求的 [套裝方案](/product?jump=packages)。",
-                    "en": "Choose the [Package Plans](/product?jump=packages) that best fits your budget and needs.",
-                    "fr": "Choisissez les [Forfaits](/product?jump=packages) qui correspondent le mieux à votre budget et à vos besoins.",
-                    "ja": "ご予算やニーズに合わせた [セットプラン](/product?jump=packages) をお選びください。"
+                    "zh": "挑選適合您預算與需求的 [套裝方案](/packages)。",
+                    "en": "Choose the [Package Plans](/packages) that best fits your budget and needs.",
+                    "fr": "Choisissez les [Forfaits](/packages) qui correspondent le mieux à votre budget et à vos besoins.",
+                    "ja": "ご予算やニーズに合わせた [セットプラン](/packages) をお選びください。"
                 }
             }
         ]
@@ -123,10 +123,10 @@
                     "ja": "セットプランの提案"
                 },
                 "content": {
-                    "zh": "為您的建案選擇最合算的 [套裝方案](/product?jump=packages)。",
-                    "en": "Choose the best value [Package Plans](/product?jump=packages) for your projects.",
-                    "fr": "Choisissez les meilleurs [Forfaits](/product?jump=packages) pour vos projets.",
-                    "ja": "プロジェクトに最適な [セットプラン](/product?jump=packages) を選択してください。"
+                    "zh": "為您的建案選擇最合算的 [套裝方案](/packages)。",
+                    "en": "Choose the best value [Package Plans](/packages) for your projects.",
+                    "fr": "Choisissez les meilleurs [Forfaits](/packages) pour vos projets.",
+                    "ja": "プロジェクトに最適な [セットプラン](/packages) を選択してください。"
                 }
             }
         ]
