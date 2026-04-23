@@ -12,16 +12,19 @@ h2 {
 }
 
 .video-container {
+    width: 100%;
     padding: 0 12vw;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 
-    @media (max-width: 1024px) and (min-width: 769px) { padding: 0; }
-    @media (max-width: 768px) { padding: 0; }
+    @media (max-width: 1024px) and (min-width: 769px) { padding: 0 4vw; }
+    @media (max-width: 768px) { padding: 0 16px; }
 }
 
 .video-wrap {
-    width: 70%;
+    width: 100%;
+    max-width: 960px;
     margin-top: 24px;
     aspect-ratio: 16 / 9;
     border-radius: 12px;
@@ -40,8 +43,7 @@ h2 {
         transform: scale(1.02);
     }
 
-    @media (max-width: 1024px) and (min-width: 769px) { width: 80%; }
-    @media (max-width: 768px) { width: 100%; border-radius: 8px; }
+    @media (max-width: 768px) { border-radius: 8px; }
 }
 
 .horizontal-strip {
