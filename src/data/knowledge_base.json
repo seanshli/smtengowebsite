@@ -1,4 +1,468 @@
 {
+    "general": [
+        {
+            "id": "what-is-engo",
+            "keywords": [
+                "engo",
+                "安購",
+                "what is",
+                "什麼是",
+                "你們是誰",
+                "who are you",
+                "company",
+                "公司介紹",
+                "關於",
+                "about",
+                "about us",
+                "smart home",
+                "智慧家庭"
+            ],
+            "answer": {
+                "zh": "**enGo 安購智管家** 是專注於 AI 智慧家庭的創新科技公司。\n\n我們以廚房為核心出發，整合 **陽光、空氣、水、食物** 四大元素，透過 AI 中控平板與 IoT 設備，為每個家庭打造安全、節能、舒適的智慧生活。\n\nenGo 的意思是 **e**mbrace **n**ew **G**oals, **o**vercome — 擁抱新目標、克服挑戰！\n\n🔗 [了解更多品牌故事](/brandStory)\n🔗 [探索我們的產品](/product)",
+                "en": "**enGo Smart Home** is an innovative AI smart home technology company.\n\nWe integrate **sunlight, air, water, and food** — the four essential elements of home life — through our AI control tablet and IoT ecosystem to create safe, energy-efficient, and comfortable living.\n\nenGo stands for **e**mbrace **n**ew **G**oals, **o**vercome — embrace new goals and overcome challenges!\n\n🔗 [Learn Our Brand Story](/brandStory)\n🔗 [Explore Products](/product)",
+                "ja": "**enGo スマートホーム** は、AIスマートホームに特化した革新的テクノロジー企業です。\n\n**日光、空気、水、食**の4大要素をAI中控タブレットとIoTエコシステムで統合し、安全で省エネ、快適な暮らしを実現します。\n\n🔗 [ブランドストーリー](/brandStory)\n🔗 [製品を見る](/product)",
+                "fr": "**enGo Smart Home** est une entreprise technologique innovante spécialisée dans la maison intelligente AI.\n\nNous intégrons **lumière, air, eau et alimentation** via notre tablette de contrôle AI et notre écosystème IoT pour créer un habitat sûr, économe et confortable.\n\n🔗 [Notre histoire](/brandStory)\n🔗 [Nos produits](/product)",
+                "es": "**enGo Smart Home** es una empresa tecnológica innovadora especializada en hogares inteligentes con IA.\n\nIntegramos **luz solar, aire, agua y alimentos** — los cuatro elementos esenciales de la vida en el hogar — a través de nuestra tableta de control IA y nuestro ecosistema IoT para crear una vida segura, eficiente en energía y cómoda.\n\n¡enGo significa **e**mbrace **n**ew **G**oals, **o**vercome — ¡abraza nuevos objetivos y supera desafíos!\n\n🔗 [Conoce nuestra historia de marca](/brandStory)\n🔗 [Explora productos](/product)",
+                "zhCN": "**enGo 安购智管家** 是专注于 AI 智慧家庭的创新科技公司。\n\n我们以厨房为核心出发，整合 **阳光、空气、水、食物** 四大元素，通过 AI 中控平板与 IoT 设备，为每个家庭打造安全、节能、舒适的智慧生活。\n\nenGo 的意思是 **e**mbrace **n**ew **G**oals, **o**vercome — 拥抱新目标、克服挑战！\n\n🔗 [了解更多品牌故事](/brandStory)\n🔗 [探索我们的产品](/product)"
+            }
+        },
+        {
+            "id": "brand-story",
+            "keywords": [
+                "brand",
+                "story",
+                "品牌故事",
+                "品牌",
+                "故事",
+                "founder",
+                "創辦人",
+                "history",
+                "歷史",
+                "起源",
+                "origin"
+            ],
+            "answer": {
+                "zh": "**enGo 品牌故事**\n\n安購智管家由創辦人 Sean 與團隊共同創立，以 AI 驅動的智慧家庭系統為核心，致力於讓每個家庭都能享受科技帶來的便利與安心。\n\n我們不只是智慧居家的守護者，更是銀髮住宅的貼心管家。透過整合陽光、空氣、水、食物這四大生活元素，我們持續推動居家生活的智能進化。\n\n🔗 [閱讀完整品牌故事](/brandStory)",
+                "en": "**The enGo Story**\n\nFounded by Sean and his team, enGo is dedicated to AI-powered smart home technology that makes every household safer, more efficient, and more comfortable.\n\nWe're not just protectors of smart homes — we're personal butlers for modern and senior living. By integrating sunlight, air, water, and food into a unified smart ecosystem, we're transforming the way people live.\n\n🔗 [Read Our Full Story](/brandStory)",
+                "ja": "**enGo ブランドストーリー**\n\nSeanとチームが設立したenGoは、AIスマートホーム技術で家庭をより安全で快適にすることに注力しています。\n\n🔗 [ストーリーを読む](/brandStory)",
+                "fr": "**L'histoire enGo**\n\nFondée par Sean et son équipe, enGo se consacre à la technologie de maison intelligente alimentée par l'IA.\n\n🔗 [Lire notre histoire](/brandStory)",
+                "es": "**La historia de enGo**\n\nFundada por Sean y su equipo, enGo se dedica a la tecnología de hogar inteligente impulsada por IA que hace que cada hogar sea más seguro, eficiente y cómodo.\n\nNo solo somos protectores de hogares inteligentes, somos mayordomos personales para la vida moderna y de jubilación. Al integrar luz solar, aire, agua y alimentos en un ecosistema inteligente unificado, estamos transformando la forma en que las personas viven.\n\n🔗 [Lee nuestra historia completa](/brandStory)",
+                "zhCN": "**enGo 品牌故事**\n\n安购智管家由创办人 Sean 与团队共同创立，以 AI 驱动的智慧家庭系统为核心，致力于让每个家庭都能享受科技带来的便利与安心。\n\n我们不只是智慧居家的守护者，更是银发住宅的贴心管家。通过整合阳光、空气、水、食物这四大生活元素，我们持续推动居家生活的智能进化。\n\n🔗 [阅读完整品牌故事](/brandStory)"
+            }
+        },
+        {
+            "id": "mission-vision",
+            "keywords": [
+                "mission",
+                "vision",
+                "使命",
+                "願景",
+                "ABCDE",
+                "核心價值",
+                "core value",
+                "values",
+                "價值觀"
+            ],
+            "answer": {
+                "zh": "**enGo 使命與願景**\n\n我們的核心價值：**創造時間、創造空間、創造未來**\n\n我們以 ABCDE 五大策略方向推動智慧家庭：\n🔸 **A**IoT — 智慧物聯網\n🔸 **B**ig Data — 大數據分析\n🔸 **C**loud — 雲端服務平台\n🔸 **D**evice enGo — 智慧設備生態系\n🔸 **E**SG — 永續經營與社會責任\n\n🔗 [了解更多](/about)",
+                "en": "**enGo Mission & Vision**\n\nCore values: **Create Time, Create Space, Create the Future**\n\nOur ABCDE strategy drives smart home innovation:\n🔸 **A**IoT — Smart Internet of Things\n🔸 **B**ig Data — Data-driven intelligence\n🔸 **C**loud — Cloud platform services\n🔸 **D**evice enGo — Smart device ecosystem\n🔸 **E**SG — Sustainability & social responsibility\n\n🔗 [Learn More](/about)",
+                "ja": "**enGo ミッション＆ビジョン**\n\nコアバリュー：**時間を創る、空間を創る、未来を創る**\n\nABCDE戦略：AIoT、Big Data、Cloud、Device enGo、ESG\n\n🔗 [詳しく見る](/about)",
+                "fr": "**Mission & Vision enGo**\n\nValeurs fondamentales : **Créer du Temps, de l'Espace, l'Avenir**\n\nStratégie ABCDE : AIoT, Big Data, Cloud, Device enGo, ESG\n\n🔗 [En savoir plus](/about)",
+                "es": "**Misión y Visión de enGo**\n\nValores fundamentales: **Crear Tiempo, Crear Espacio, Crear el Futuro**\n\nNuestra estrategia ABCDE impulsa la innovación en el hogar inteligente:\n🔸 **A**IoT — Internet inteligente de las cosas\n🔸 **B**ig Data — Inteligencia basada en datos\n🔸 **C**loud — Servicios de plataforma en la nube\n🔸 **D**evice enGo — Ecosistema de dispositivos inteligentes\n🔸 **E**SG — Sostenibilidad y responsabilidad social\n\n🔗 [Más información](/about)",
+                "zhCN": "**enGo 使命与愿景**\n\n我们的核心价值：**创造时间、创造空间、创造未来**\n\n我们以 ABCDE 五大策略方向推动智慧家庭：\n🔸 **A**IoT — 智慧物联网\n🔸 **B**ig Data — 大数据分析\n🔸 **C**loud — 云端服务平台\n🔸 **D**evice enGo — 智慧设备生态系\n🔸 **E**SG — 永续经营与社会责任\n\n🔗 [了解更多](/about)"
+            }
+        },
+        {
+            "id": "why-engo",
+            "keywords": [
+                "why",
+                "為什麼",
+                "advantage",
+                "優勢",
+                "benefit",
+                "好處",
+                "特色",
+                "difference",
+                "不同",
+                "choose",
+                "選擇"
+            ],
+            "answer": {
+                "zh": "**為什麼選擇 enGo？**\n\n✅ **AI 智能中控** — 10.1吋觸控平板一站管理全屋設備\n✅ **四大生活元素** — 整合陽光、空氣、水、食物\n✅ **全方位安控** — 煙霧、漏水、門窗即時偵測\n✅ **節能省電** — 智慧排程與自動化場景\n✅ **多協議支援** — Wi-Fi / Zigbee / 藍牙\n✅ **專業安裝** — 到府規劃與施工服務\n✅ **完善售後** — 專屬客服與定期維護\n\n🔗 [查看方案](/product?jump=packages)",
+                "en": "**Why Choose enGo?**\n\n✅ **AI Smart Hub** — 10.1\" touch tablet manages your entire home\n✅ **4 Life Elements** — Integrates sunlight, air, water, food\n✅ **Full Security** — Smoke, leak, door/window detection\n✅ **Energy Saving** — Smart scheduling & automation\n✅ **Multi-Protocol** — Wi-Fi / Zigbee / Bluetooth\n✅ **Pro Installation** — On-site planning & setup\n✅ **After-Sales Care** — Dedicated support & maintenance\n\n🔗 [View Packages](/product?jump=packages)",
+                "ja": "**なぜenGoを選ぶ？**\n\n✅ AI中控タブレット\n✅ 4大生活要素の統合\n✅ 総合セキュリティ\n✅ 省エネ自動化\n✅ Wi-Fi / Zigbee / Bluetooth対応\n\n🔗 [プランを見る](/product?jump=packages)",
+                "fr": "**Pourquoi choisir enGo ?**\n\n✅ Hub AI tactile 10.1\"\n✅ 4 éléments de vie intégrés\n✅ Sécurité complète\n✅ Économie d'énergie\n✅ Wi-Fi / Zigbee / Bluetooth\n\n🔗 [Voir les forfaits](/product?jump=packages)",
+                "es": "**¿Por qué elegir enGo?**\n\n✅ **Centro Inteligente de IA** — Tableta táctil de 10.1\" gestiona toda tu casa\n✅ **4 Elementos de Vida** — Integra luz solar, aire, agua, alimentos\n✅ **Seguridad Completa** — Detección de humo, fugas, puertas/ventanas\n✅ **Ahorro de Energía** — Programación inteligente y automatización\n✅ **Multi-Protocolo** — Wi-Fi / Zigbee / Bluetooth\n✅ **Instalación Profesional** — Planificación y configuración en sitio\n✅ **Atención Post-Venta** — Soporte dedicado y mantenimiento\n\n🔗 [Ver planes](/product?jump=packages)",
+                "zhCN": "**为什么选择 enGo？**\n\n✅ **AI 智能中控** — 10.1吋触控平板一站管理全屋设备\n✅ **四大生活元素** — 整合阳光、空气、水、食物\n✅ **全方位安控** — 烟雾、漏水、门窗即时侦测\n✅ **节能省电** — 智慧排程与自动化场景\n✅ **多协议支持** — Wi-Fi / Zigbee / 蓝牙\n✅ **专业安装** — 到府规划与施工服务\n✅ **完善售后** — 专属客服与定期维护\n\n🔗 [查看方案](/product?jump=packages)"
+            }
+        },
+        {
+            "id": "smart-home-features",
+            "keywords": [
+                "feature",
+                "功能",
+                "能做什麼",
+                "what can",
+                "control",
+                "控制",
+                "燈光",
+                "light",
+                "lighting",
+                "冷氣",
+                "AC",
+                "air conditioner",
+                "窗簾",
+                "curtain",
+                "sensor",
+                "感測器",
+                "場景",
+                "scene",
+                "scenario",
+                "automation",
+                "自動化"
+            ],
+            "answer": {
+                "zh": "**enGo 智慧家庭功能**\n\n🔹 **智慧燈光** — 單/多迴路控制、情境聯動、動態感應\n🔹 **冷氣控制** — AI 恆溫調節、遠端開關、排程管理\n🔹 **智慧窗簾** — 自動開合、日出喚醒、離家連動\n🔹 **安全監控** — 煙霧偵測、漏水感應、門窗感測器\n🔹 **空氣品質** — PM2.5 監測、空氣清淨機連動\n🔹 **淨水系統** — RO 濾水、TDS 即時監控、濾芯提醒\n🔹 **情境模式** — 回家/離家/睡眠/起床 一鍵切換\n🔹 **語音控制** — 支援 AI 語音指令操作\n\n🔗 [觀看功能影片](/about)",
+                "en": "**enGo Smart Home Features**\n\n🔹 **Smart Lighting** — Single/multi-loop, scene linking, motion sensing\n🔹 **AC Control** — AI thermostat, remote on/off, scheduling\n🔹 **Smart Curtains** — Auto open/close, sunrise wake, away-mode linking\n🔹 **Security** — Smoke, leak detection, door/window sensors\n🔹 **Air Quality** — PM2.5 monitoring, purifier linkage\n🔹 **Water System** — RO filtration, TDS monitoring, filter alerts\n🔹 **Scene Modes** — Home/Away/Sleep/Wake one-touch switch\n🔹 **Voice Control** — AI voice command support\n\n🔗 [Watch Feature Video](/about)",
+                "ja": "**enGoスマートホーム機能**\n\n🔹 スマート照明\n🔹 エアコン制御\n🔹 スマートカーテン\n🔹 セキュリティ監視\n🔹 空気品質管理\n🔹 浄水システム\n🔹 シーンモード\n🔹 音声コントロール\n\n🔗 [機能動画を見る](/about)",
+                "fr": "**Fonctionnalités enGo**\n\n🔹 Éclairage intelligent\n🔹 Contrôle climatisation\n🔹 Rideaux intelligents\n🔹 Sécurité\n🔹 Qualité de l'air\n🔹 Système d'eau\n🔹 Modes scénarios\n🔹 Commande vocale\n\n🔗 [Voir la vidéo](/about)",
+                "es": "**Características del hogar inteligente de enGo**\n\n🔹 **Iluminación Inteligente** — Control de circuito único/múltiple, vinculación de escenas, detección de movimiento\n🔹 **Control de AC** — Termostato IA, encendido/apagado remoto, programación\n🔹 **Cortinas Inteligentes** — Apertura/cierre automático, despertar al amanecer, vinculación de modo ausencia\n🔹 **Seguridad** — Detección de humo, fugas, sensores de puertas/ventanas\n🔹 **Calidad del Aire** — Monitoreo PM2.5, vinculación de purificador\n🔹 **Sistema de Agua** — Filtración RO, monitoreo TDS, alertas de filtro\n🔹 **Modos de Escena** — Cambio de un toque Hogar/Ausencia/Sueño/Despertar\n🔹 **Control de Voz** — Soporte de comando de voz IA\n\n🔗 [Ver video de características](/about)",
+                "zhCN": "**enGo 智慧家庭功能**\n\n🔹 **智慧灯光** — 单/多回路控制、情境联动、动态感应\n🔹 **冷气控制** — AI 恒温调节、远端开关、排程管理\n🔹 **智慧窗帘** — 自动开合、日出唤醒、离家连动\n🔹 **安全监控** — 烟雾侦测、漏水感应、门窗感测器\n🔹 **空气品质** — PM2.5 监测、空气清净机连动\n🔹 **净水系统** — RO 滤水、TDS 即时监控、滤芯提醒\n🔹 **情境模式** — 回家/离家/睡眠/起床 一键切换\n🔹 **语音控制** — 支持 AI 语音指令操作\n\n🔗 [观看功能影片](/about)"
+            }
+        },
+        {
+            "id": "installation",
+            "keywords": [
+                "install",
+                "安裝",
+                "施工",
+                "裝修",
+                "renovation",
+                "setup",
+                "how to install",
+                "怎麼安裝",
+                "佈線",
+                "wiring",
+                "new house",
+                "新屋",
+                "舊屋",
+                "old house",
+                "裝潢"
+            ],
+            "answer": {
+                "zh": "**enGo 安裝流程**\n\n1️⃣ **免費諮詢** — 線上或到店了解需求\n2️⃣ **現場丈量** — 專人到府規劃配置\n3️⃣ **方案設計** — 依據需求制定客製化方案\n4️⃣ **專業施工** — 配合裝潢進度佈線安裝\n5️⃣ **系統設定** — 平板設定、設備聯網\n6️⃣ **教學驗收** — 使用教學與功能驗收\n\n💡 新屋裝潢或舊屋翻新都適用！建議在裝潢初期即諮詢，可以最佳化佈線方案。\n\n🔗 [預約諮詢](/contact)\n🔗 [查看安裝教學](/tutorial)",
+                "en": "**enGo Installation Process**\n\n1️⃣ **Free Consultation** — Online or in-store\n2️⃣ **On-site Survey** — Professional home assessment\n3️⃣ **Custom Design** — Tailored to your needs\n4️⃣ **Professional Installation** — Coordinated with renovation\n5️⃣ **System Setup** — Tablet config & device pairing\n6️⃣ **Training & Handover** — Usage training & acceptance\n\n💡 Works for new builds and renovations! Best to consult early during renovation.\n\n🔗 [Book Consultation](/contact)\n🔗 [Installation Guide](/tutorial)",
+                "ja": "**enGo 設置プロセス**\n\n1️⃣ 無料相談\n2️⃣ 現地調査\n3️⃣ カスタム設計\n4️⃣ プロによる設置\n5️⃣ システム設定\n6️⃣ 使い方レクチャー\n\n🔗 [相談予約](/contact)",
+                "fr": "**Processus d'installation enGo**\n\n1️⃣ Consultation gratuite\n2️⃣ Visite sur site\n3️⃣ Design personnalisé\n4️⃣ Installation professionnelle\n5️⃣ Configuration système\n6️⃣ Formation et remise\n\n🔗 [Prendre rendez-vous](/contact)",
+                "es": "**Proceso de instalación enGo**\n\n1️⃣ **Consulta Gratuita** — En línea o en tienda\n2️⃣ **Encuesta en Sitio** — Evaluación profesional del hogar\n3️⃣ **Diseño Personalizado** — Adaptado a tus necesidades\n4️⃣ **Instalación Profesional** — Coordinada con la renovación\n5️⃣ **Configuración del Sistema** — Configuración de tableta y emparejamiento de dispositivos\n6️⃣ **Capacitación y Entrega** — Capacitación de uso y aceptación\n\n💡 ¡Funciona para construcciones nuevas y renovaciones! Lo mejor es consultar temprano durante la renovación.\n\n🔗 [Reservar consulta](/contact)\n🔗 [Guía de instalación](/tutorial)",
+                "zhCN": "**enGo 安装流程**\n\n1️⃣ **免费咨询** — 在线或到店了解需求\n2️⃣ **现场丈量** — 专人到府规划配置\n3️⃣ **方案设计** — 依据需求制定客制化方案\n4️⃣ **专业施工** — 配合装潢进度布线安装\n5️⃣ **系统设定** — 平板设定、设备联网\n6️⃣ **教学验收** — 使用教学与功能验收\n\n💡 新屋装潢或旧屋翻新都适用！建议在装潢初期即咨询，可以最佳化布线方案。\n\n🔗 [预约咨询](/contact)\n🔗 [查看安装教学](/tutorial)"
+            }
+        },
+        {
+            "id": "compatibility",
+            "keywords": [
+                "compatible",
+                "相容",
+                "支援",
+                "support",
+                "protocol",
+                "協議",
+                "zigbee",
+                "bluetooth",
+                "wifi",
+                "homekit",
+                "google home",
+                "alexa",
+                "品牌",
+                "brand",
+                "third party",
+                "第三方",
+                "設備"
+            ],
+            "answer": {
+                "zh": "**enGo 設備相容性**\n\nenGo 智慧中控平板支援多種通訊協議：\n🔸 **Wi-Fi** — 連接雲端與區網設備\n🔸 **Zigbee** — 低功耗智慧感測器與開關\n🔸 **藍牙** — 近距離設備配對\n🔸 **Apple HomeKit** — 支援 Siri 語音控制與 HomeKit 客製化整合\n\n支援整合的設備類型：\n✅ 智慧燈光開關\n✅ 空調遙控器\n✅ 電動窗簾\n✅ 門窗感測器\n✅ 煙霧/漏水偵測器\n✅ 空氣清淨機\n✅ 淨水系統\n✅ 電動升降拉籃\n✅ MEDOLE 新風除濕系統\n✅ 電子水閥 / 瓦斯斷電系統\n\n💡 擁有 AIoT 串聯技術，針對尚未合作的廠商產品也能提供情境上的整合與技術支援！\n\n🔗 [聯絡我們](/contact)",
+                "en": "**enGo Compatibility**\n\nSupported protocols:\n🔸 **Wi-Fi** — Cloud & LAN devices\n🔸 **Zigbee** — Low-power sensors & switches\n🔸 **Bluetooth** — Short-range pairing\n🔸 **Apple HomeKit** — Siri voice control & custom HomeKit integration\n\nCompatible device types:\n✅ Smart light switches\n✅ AC remote controllers\n✅ Motorized curtains\n✅ Door/window sensors\n✅ Smoke/leak detectors\n✅ Air purifiers\n✅ Water systems\n✅ Motorized storage baskets\n✅ MEDOLE fresh air dehumidification system\n✅ Electronic water valve / gas shutoff system\n\n💡 With AIoT technology, we can integrate even non-partner devices!\n\n🔗 [Contact Us](/contact)",
+                "ja": "**enGo 互換性**\n\nWi-Fi / Zigbee / Bluetooth / Apple HomeKit対応\n照明、エアコン、カーテン、センサー、浄水器、MEDOLE新鮮空気除湿システム、電子水弁/ガス遮断システムなどと連携可能。AIoT技術により、未提携メーカーの製品も統合サポート可能！\n\n🔗 [お問い合わせ](/contact)",
+                "fr": "**Compatibilité enGo**\n\nProtocoles : Wi-Fi / Zigbee / Bluetooth / Apple HomeKit\nAppareils : éclairage, climatisation, rideaux, capteurs, purificateurs d'air, systèmes d'eau, système MEDOLE, vannes électroniques eau/gaz\n\n💡 Avec la technologie AIoT, intégration possible même avec des appareils de fabricants non partenaires !\n\n🔗 [Contactez-nous](/contact)",
+                "es": "**Compatibilidad de enGo**\n\nProtocolos soportados:\n🔸 **Wi-Fi** — Dispositivos en la nube y LAN\n🔸 **Zigbee** — Sensores y switches de bajo consumo\n🔸 **Bluetooth** — Emparejamiento de corto alcance\n\nTipos de dispositivos compatibles:\n✅ Interruptores de luz inteligentes\n✅ Controladores remotos de AC\n✅ Cortinas motorizadas\n✅ Sensores de puertas/ventanas\n✅ Detectores de humo/fugas\n✅ Purificadores de aire\n✅ Sistemas de agua\n✅ Canastas de almacenamiento motorizadas\n\n💡 ¡Con tecnología AIoT integrada, podemos proporcionar integración y soporte técnico incluso para productos de fabricantes no colaboradores!\n\n🔗 [Contáctanos](/contact)",
+                "zhCN": "**enGo 设备相容性**\n\nenGo 智慧中控平板支持多种通讯协议：\n🔸 **Wi-Fi** — 连接云端与区网设备\n🔸 **Zigbee** — 低功耗智慧感测器与开关\n🔸 **蓝牙** — 近距离设备配对\n🔸 **Apple HomeKit** — 支持 Siri 语音控制与 HomeKit 客制化整合\n\n支持整合的设备类型：\n✅ 智慧灯光开关\n✅ 空调遥控器\n✅ 电动窗帘\n✅ 门窗感测器\n✅ 烟雾/漏水侦测器\n✅ 空气清净机\n✅ 净水系统\n✅ 电动升降拉篮\n✅ MEDOLE 新风除湿系统\n✅ 电子水阀 / 瓦斯断电系统\n\n💡 拥有 AIoT 串联技术，针对尚未合作的厂商产品也能提供情境上的整合与技术支持！\n\n🔗 [联络我们](/contact)"
+            }
+        },
+        {
+            "id": "warranty-service",
+            "keywords": [
+                "warranty",
+                "保固",
+                "維修",
+                "repair",
+                "service",
+                "售後",
+                "after-sales",
+                "maintenance",
+                "維護",
+                "保養",
+                "故障",
+                "broken",
+                "problem",
+                "issue",
+                "客服"
+            ],
+            "answer": {
+                "zh": "**enGo 售後服務**\n\n🔧 **產品保固** — 主要設備提供保固服務\n🔧 **到府維護** — 專業技師到府檢測維修\n🔧 **遠端診斷** — 透過雲端系統即時監控排障\n🔧 **濾芯更換** — 淨水系統定期濾芯更換服務\n🔧 **專屬客服** — LINE @engo 即時線上客服\n\n📞 服務專線：02-27510218\n📧 Email: contacts@smtengo.com\n💬 LINE: @engo\n\n🔗 [聯絡客服](/contact)",
+                "en": "**enGo After-Sales Service**\n\n🔧 **Warranty** — Coverage on major devices\n🔧 **On-site Service** — Professional technician visits\n🔧 **Remote Diagnosis** — Cloud-based monitoring & troubleshooting\n🔧 **Filter Replacement** — Scheduled water filter service\n🔧 **Dedicated Support** — LINE @engo instant support\n\n📞 Phone: +886 2-27510218\n📧 Email: contacts@smtengo.com\n💬 LINE: @engo\n\n🔗 [Contact Support](/contact)",
+                "ja": "**enGo アフターサービス**\n\n🔧 保証サービス\n🔧 訪問メンテナンス\n🔧 リモート診断\n🔧 フィルター交換\n🔧 LINE @engo サポート\n\n📞 02-27510218\n📧 contacts@smtengo.com\n\n🔗 [お問い合わせ](/contact)",
+                "fr": "**Service après-vente enGo**\n\n🔧 Garantie\n🔧 Service à domicile\n🔧 Diagnostic à distance\n🔧 Remplacement de filtres\n🔧 Support LINE @engo\n\n📞 +886 2-27510218\n📧 contacts@smtengo.com\n\n🔗 [Contact](/contact)",
+                "es": "**Servicio post-venta de enGo**\n\n🔧 **Garantía** — Cobertura en dispositivos principales\n🔧 **Servicio en el Sitio** — Visitas de técnicos profesionales\n🔧 **Diagnóstico Remoto** — Monitoreo y solución de problemas basados en la nube\n🔧 **Reemplazo de Filtros** — Servicio de filtro de agua programado\n🔧 **Soporte Dedicado** — Soporte instantáneo LINE @engo\n\n📞 Teléfono: +886 2-27510218\n📧 Email: contacts@smtengo.com\n💬 LINE: @engo\n\n🔗 [Contactar soporte](/contact)",
+                "zhCN": "**enGo 售后服务**\n\n🔧 **产品保固** — 主要设备提供保固服务\n🔧 **到府维护** — 专业技师到府检测维修\n🔧 **远端诊断** — 通过云端系统即时监控排障\n🔧 **滤芯更换** — 净水系统定期滤芯更换服务\n🔧 **专属客服** — LINE @engo 即时在线客服\n\n📞 服务专线：02-27510218\n📧 Email: contacts@smtengo.com\n💬 LINE: @engo\n\n🔗 [联络客服](/contact)"
+            }
+        },
+        {
+            "id": "ecosystem-info",
+            "keywords": [
+                "ecosystem",
+                "生態系",
+                "生態",
+                "系統",
+                "system",
+                "platform",
+                "平台",
+                "整合",
+                "integration",
+                "全屋",
+                "whole home"
+            ],
+            "answer": {
+                "zh": "**enGo 智慧生態系**\n\nenGo 生態系以 AI 智慧中控平板為核心，串聯全屋智慧設備：\n\n🏠 **中控平板** — 10.1吋 FHD 觸控，家庭指揮中心\n💨 **空氣精靈** — 4合1空氣清淨機，PM2.5 即時監控\n💧 **水精靈** — RO 智能淨水系統，TDS 監測\n🔒 **安控系統** — 煙霧/漏水/門窗全方位偵測\n💡 **智慧照明** — 情境控制、排程管理\n❄️ **智慧空調** — AI 恆溫、遠端控制\n🪟 **智慧窗簾** — 自動開合、場景聯動\n\n所有設備透過 App 遠端管理，隨時隨地掌控家中狀態！\n\n🔗 [觀看生態系影片](/about)",
+                "en": "**enGo Smart Ecosystem**\n\nCentered around our AI Smart Tablet, connecting all home devices:\n\n🏠 **Control Tablet** — 10.1\" FHD touch command center\n💨 **Air Purifier** — 4-in-1 with PM2.5 monitoring\n💧 **Water System** — RO smart filtration with TDS tracking\n🔒 **Security** — Smoke/leak/door sensor mesh\n💡 **Smart Lighting** — Scene control & scheduling\n❄️ **Smart AC** — AI thermostat & remote\n🪟 **Smart Curtains** — Auto & scene-linked\n\nAll managed via the enGo App — control your home from anywhere!\n\n🔗 [Watch Ecosystem Video](/about)",
+                "ja": "**enGoスマートエコシステム**\n\nAI中控タブレットを中心に、全家電を接続。空気清浄機、浄水器、照明、エアコン、カーテン、セキュリティを統合管理。\n\n🔗 [エコシステム動画](/about)",
+                "fr": "**Écosystème enGo**\n\nCentré sur notre tablette AI, connectant tous les appareils domestiques : purificateur d'air, eau, éclairage, climatisation, rideaux, sécurité.\n\n🔗 [Voir la vidéo](/about)",
+                "es": "**Ecosistema inteligente de enGo**\n\nCentrado en nuestra tableta inteligente de IA, conectando todos los dispositivos del hogar:\n\n🏠 **Tableta de Control** — Centro de comando táctil FHD de 10.1\"\n💨 **Purificador de Aire** — 4 en 1 con monitoreo PM2.5\n💧 **Sistema de Agua** — Filtración RO inteligente con seguimiento TDS\n🔒 **Seguridad** — Malla de sensores de humo/fuga/puerta\n💡 **Iluminación Inteligente** — Control de escena y programación\n❄️ **AC Inteligente** — Termostato IA y control remoto\n🪟 **Cortinas Inteligentes** — Automáticas y vinculadas a escenas\n\n¡Todo gestionado a través de la aplicación enGo — ¡controla tu hogar desde cualquier lugar!\n\n🔗 [Ver video del ecosistema](/about)",
+                "zhCN": "**enGo 智慧生态系**\n\nenGo 生态系以 AI 智慧中控平板为核心，串联全屋智慧设备：\n\n🏠 **中控平板** — 10.1吋 FHD 触控，家庭指挥中心\n💨 **空气精灵** — 4合1空气清净机，PM2.5 即时监控\n💧 **水精灵** — RO 智能净水系统，TDS 监测\n🔒 **安控系统** — 烟雾/漏水/门窗全方位侦测\n💡 **智慧照明** — 情境控制、排程管理\n❄️ **智慧空调** — AI 恒温、远端控制\n🪟 **智慧窗帘** — 自动开合、场景联动\n\n所有设备通过 App 远端管理，随时随地掌控家中状态！\n\n🔗 [观看生态系影片](/about)"
+            }
+        },
+        {
+            "id": "senior-living",
+            "keywords": [
+                "senior",
+                "elderly",
+                "老人",
+                "銀髮",
+                "長輩",
+                "年長者",
+                "aging",
+                "老齡",
+                "安全",
+                "safety",
+                "fall",
+                "跌倒"
+            ],
+            "answer": {
+                "zh": "**enGo 銀髮智慧宅**\n\nenGo 不只是智慧家庭系統，更是長輩的貼心管家：\n\n🔹 **安全偵測** — 煙霧、漏水、門窗感測即時通知\n🔹 **語音控制** — 免動手就能控制燈光、冷氣\n🔹 **自動場景** — 起床自動開燈、入睡自動關燈\n🔹 **遠端關懷** — 家人透過 App 隨時查看家中狀態\n🔹 **操作簡單** — 觸控平板大字清晰，一鍵操作\n\n讓科技成為照顧長輩的最佳幫手！\n\n🔗 [了解更多](/brandStory)\n🔗 [預約諮詢](/contact)",
+                "en": "**enGo for Senior Living**\n\nenGo is not just a smart home — it's a personal butler for elderly care:\n\n🔹 **Safety Detection** — Smoke, leak, door alerts\n🔹 **Voice Control** — Hands-free light & AC control\n🔹 **Auto Scenes** — Lights on at wake, off at sleep\n🔹 **Remote Care** — Family checks home status via App\n🔹 **Easy Interface** — Large-text touch tablet\n\n🔗 [Learn More](/brandStory)\n🔗 [Book Consultation](/contact)",
+                "ja": "**enGo シニアリビング**\n\n安全検知、音声操作、自動シーン、リモートケア、簡単操作で高齢者の暮らしをサポート。\n\n🔗 [お問い合わせ](/contact)",
+                "fr": "**enGo pour seniors**\n\nDétection de sécurité, commande vocale, scènes automatiques, surveillance à distance, interface simple.\n\n🔗 [Contact](/contact)",
+                "es": "**enGo para vida para jubilados**\n\nenGo no es solo un hogar inteligente — es un mayordomo personal para el cuidado de ancianos:\n\n🔹 **Detección de Seguridad** — Alertas de humo, fuga, puerta\n🔹 **Control de Voz** — Control de luz y AC sin usar las manos\n🔹 **Escenas Automáticas** — Luces encendidas al despertar, apagadas al dormir\n🔹 **Cuidado Remoto** — La familia verifica el estado del hogar a través de la aplicación\n🔹 **Interfaz Fácil** — Tableta táctil con texto grande\n\n🔗 [Más información](/brandStory)\n🔗 [Reservar consulta](/contact)",
+                "zhCN": "**enGo 银发智慧宅**\n\nenGo 不只是智慧家庭系统，更是长辈的贴心管家：\n\n🔹 **安全侦测** — 烟雾、漏水、门窗感测即时通知\n🔹 **语音控制** — 免动手就能控制灯光、冷气\n🔹 **自动场景** — 起床自动开灯、入睡自动关灯\n🔹 **远端关怀** — 家人通过 App 随时查看家中状态\n🔹 **操作简单** — 触控平板大字清晰，一键操作\n\n让科技成为照顾长辈的最佳帮手！\n\n🔗 [了解更多](/brandStory)\n🔗 [预约咨询](/contact)"
+            }
+        },
+        {
+            "id": "one-touch-scenes",
+            "keywords": [
+                "one touch",
+                "一鍵",
+                "離家",
+                "回家",
+                "away",
+                "home mode",
+                "離家模式",
+                "回家模式",
+                "睡眠",
+                "sleep",
+                "情境",
+                "scene",
+                "模式",
+                "mode"
+            ],
+            "answer": {
+                "zh": "**enGo ONE TOUCH 智慧情境**\n\n突破傳統一鍵開關，enGo 帶來真正的全屋聯動：\n\n🏠 **回家模式** — 自動開啟公共空間燈光，窗簾自動關閉，電器(電視、空調等)自動調節\n\n🚪 **離家模式** — 窗簾自動開啟讓空間沐浴陽光，關閉所有燈光並啟動安全監測設備\n\n🌅 **晨曦喚醒** — 窗簾自動開啟，燈光漸亮\n\n😴 **睡眠模式** — 一鍵關閉全屋燈光與設備\n\n💡 從「買一間房」到「買一種生活」— 外出不必再擔心家中事務，一切自動化！\n\n🔗 [了解更多](/product)",
+                "en": "**enGo ONE TOUCH Smart Scenes**\n\nBeyond traditional switches — true whole-home automation:\n\n🏠 **Home Mode** — Lights on, curtains close, AC/TV auto-adjust\n🚪 **Away Mode** — Curtains open for sunlight, lights off, security armed\n🌅 **Sunrise Wake** — Curtains open, lights gradually brighten\n😴 **Sleep Mode** — One touch to shut everything down\n\nFrom 'buying a house' to 'buying a lifestyle'!\n\n🔗 [Learn More](/product)",
+                "ja": "**enGo ONE TOUCH スマートシーン**\n\n帰宅・外出・起床・就寝モードをワンタッチで切替。全自動の快適生活。\n\n🔗 [詳しく見る](/product)",
+                "fr": "**enGo ONE TOUCH Scènes**\n\nModes Maison/Absent/Réveil/Nuit en un toucher.\n\n🔗 [En savoir plus](/product)",
+                "es": "**Escenas inteligentes de un toque de enGo**\n\nMás allá de los interruptores tradicionales — verdadera automatización de toda la casa:\n\n🏠 **Modo Casa** — Luces encendidas, cortinas cerradas, AC/TV se ajustan automáticamente\n🚪 **Modo Ausencia** — Cortinas abiertas para la luz solar, luces apagadas, seguridad armada\n🌅 **Despertar al Amanecer** — Cortinas abiertas, luces se iluminan gradualmente\n😴 **Modo Sueño** — Un toque para apagar todo\n\n¡De 'comprar una casa' a 'comprar un estilo de vida'!\n\n🔗 [Más información](/product)",
+                "zhCN": "**enGo ONE TOUCH 智慧情境**\n\n突破传统一键开关，enGo 带来真正的全屋联动：\n\n🏠 **回家模式** — 自动开启公共空间灯光，窗帘自动关闭，电器(电视、空调等)自动调节\n\n🚪 **离家模式** — 窗帘自动开启让空间沐浴阳光，关闭所有灯光并启动安全监测设备\n\n🌅 **晨曦唤醒** — 窗帘自动开启，灯光渐亮\n\n😴 **睡眠模式** — 一键关闭全屋灯光与设备\n\n💡 从「买一间房」到「买一种生活」— 外出不必再担心家中事务，一切自动化！\n\n🔗 [了解更多](/product)"
+            }
+        },
+        {
+            "id": "active-protection",
+            "keywords": [
+                "protection",
+                "防護",
+                "安全",
+                "safety",
+                "漏水",
+                "leak",
+                "煙霧",
+                "smoke",
+                "瓦斯",
+                "gas",
+                "fire",
+                "火災",
+                "水患",
+                "flood",
+                "斷電",
+                "斷水",
+                "alarm",
+                "警報",
+                "24小時",
+                "24hr"
+            ],
+            "answer": {
+                "zh": "**24小時主動式防護系統**\n\n安全防護 — 當危險發生時，空間已先行介入！\n\n💧 **水患即時阻斷** — 櫥櫃底部感測器一旦偵測到滲水，自動關閉電子水閥，避免更大損失\n\n🔥 **氣火災與斷電** — 偵測到瓦斯或煙霧時，系統主動切斷閥門或觸發 IH 爐斷電，將災害風險降至最低\n\n🔔 **即時通知** — 偵測到異常（漏水、瓦斯外洩、濃煙）會自動關閉相應設備，從源頭阻斷，第一時間通知屋主\n\n🛡️ 我們讓空間擁有了「自主防護系統」，買的不只是會有響聲的產品，而是一份全家人 24 小時的安心。\n\n🔗 [了解更多](/product)",
+                "en": "**24-Hour Active Protection System**\n\nSafety that intervenes before disaster strikes:\n\n💧 **Instant Flood Prevention** — Cabinet sensors detect leaks and auto-close electronic water valves\n🔥 **Gas & Fire Response** — Smoke/gas detection triggers auto gas shutoff and IH stove power cut\n🔔 **Real-time Alerts** — Instant notification to homeowner when anomalies detected\n\n🛡️ Not just alarms — a self-protecting home that acts autonomously 24/7.\n\n🔗 [Learn More](/product)",
+                "ja": "**24時間アクティブ防護システム**\n\n漏水自動遮断、ガス・煙検知で自動シャットオフ、リアルタイム通知。\n\n🔗 [詳しく見る](/product)",
+                "fr": "**Système de protection actif 24h/24**\n\nCoupure automatique eau/gaz, détection fumée, alertes en temps réel.\n\n🔗 [En savoir plus](/product)",
+                "es": "**Sistema de protección activa 24 horas**\n\nSeguridad que interviene antes de que ocurra el desastre:\n\n💧 **Prevención instantánea de inundaciones** — Los sensores del armario detectan fugas y cierran automáticamente las válvulas de agua electrónicas\n🔥 **Respuesta a gas e incendio** — La detección de humo/gas activa el cierre automático de gas y el corte de energía de la estufa IH\n🔔 **Alertas en tiempo real** — Notificación instantánea al propietario cuando se detectan anomalías\n\n🛡️ No solo alarmas — un hogar que se protege a sí mismo y actúa de forma autónoma 24/7.\n\n🔗 [Más información](/product)",
+                "zhCN": "**24小时主动式防护系统**\n\n安全防护 — 当危险发生时，空间已先行介入！\n\n💧 **水患即时阻断** — 橱柜底部感测器一旦侦测到渗水，自动关闭电子水阀，避免更大损失\n\n🔥 **气火灾与断电** — 侦测到瓦斯或烟雾时，系统主动切断阀门或触发 IH 炉断电，将灾害风险降至最低\n\n🔔 **即时通知** — 侦测到异常（漏水、瓦斯外泄、浓烟）会自动关闭相应设备，从源头阻断，第一时间通知屋主\n\n🛡️ 我们让空间拥有了「自主防护系统」，买的不只是会有响声的产品，而是一份全家人 24 小时的安心。\n\n🔗 [了解更多](/product)"
+            }
+        },
+        {
+            "id": "homekit-siri",
+            "keywords": [
+                "siri",
+                "homekit",
+                "apple",
+                "voice",
+                "語音",
+                "聲控",
+                "hey siri",
+                "嘿siri",
+                "homepod",
+                "apple home"
+            ],
+            "answer": {
+                "zh": "**Apple HomeKit / Siri 聲控整合**\n\n🍎 enGo 系統已整合 **Apple HomeKit**，支援 Siri 語音控制！\n\n🗣️ 只要說「嘿！Siri 我回家了！」即可啟動回家模式\n\n✅ 搭配合作供應商產品，透過工程師設定自動化場景\n✅ 擁有 AIoT 串聯技術，針對尚未合作的廠商產品也能提供整合與技術支援\n✅ Apple HomeKit 客製化整合\n\n不動手，用聲音就能掌控全家！\n\n🔗 [了解更多](/product)",
+                "en": "**Apple HomeKit / Siri Integration**\n\n🍎 enGo integrates with **Apple HomeKit** for Siri voice control!\n\n🗣️ Just say \"Hey Siri, I'm home!\" to activate Home Mode\n\n✅ Works with partner products via engineer-configured automation\n✅ AIoT technology enables integration even with non-partner devices\n✅ Custom Apple HomeKit integration available\n\n🔗 [Learn More](/product)",
+                "ja": "**Apple HomeKit / Siri連携**\n\n「Hey Siri」で帰宅モード起動。Apple HomeKitカスタム統合対応。\n\n🔗 [詳しく見る](/product)",
+                "fr": "**Intégration Apple HomeKit / Siri**\n\nContrôle vocal Siri, intégration HomeKit personnalisée.\n\n🔗 [En savoir plus](/product)",
+                "es": "**Integración de Apple HomeKit / Siri**\n\n🍎 ¡enGo se integra con **Apple HomeKit** para control de voz Siri!\n\n🗣️ Solo di \"Hey Siri, ¡estoy en casa!\" para activar el modo Casa\n\n✅ Funciona con productos asociados a través de automatización configurada por ingenieros\n✅ La tecnología AIoT permite la integración incluso con dispositivos que no son de socios\n✅ Integración personalizada de Apple HomeKit disponible\n\n¡Sin levantar un dedo, controla toda tu casa con tu voz!\n\n🔗 [Más información](/product)",
+                "zhCN": "**Apple HomeKit / Siri 声控整合**\n\n🍎 enGo 系统已整合 **Apple HomeKit**，支持 Siri 语音控制！\n\n🗣️ 只要说「嘿！Siri 我回家了！」即可启动回家模式\n\n✅ 搭配合作供应商产品，通过工程师设定自动化场景\n✅ 拥有 AIoT 串联技术，针对尚未合作的厂商产品也能提供整合与技术支持\n✅ Apple HomeKit 客制化整合\n\n不动手，用声音就能掌控全家！\n\n🔗 [了解更多](/product)"
+            }
+        },
+        {
+            "id": "property-management",
+            "keywords": [
+                "物業",
+                "管理",
+                "property",
+                "management",
+                "大樓",
+                "building",
+                "報修",
+                "repair",
+                "公告",
+                "bulletin",
+                "門禁",
+                "access",
+                "商城",
+                "mall",
+                "食材",
+                "grocery",
+                "存貨",
+                "inventory"
+            ],
+            "answer": {
+                "zh": "**系統整合物業門禁串聯**\n\n家中系統與大樓物業即時連線，一個系統搞定：\n\n🔧 **報修系統** — 直接從平板提交維修需求\n📋 **佈告欄** — 大樓公告即時推送到中控平板\n🛒 **耗材及食材購買** — 智能商城一鍵訂購\n📦 **家庭存貨管理** — AI 辨識管理家中物品、食材，耗材提醒一次搞定\n\n💡 現代人工作生活忙碌，很多事物線上完成後，不用每天追蹤，包含大樓物業通知。系統給足家庭所需，為智慧家庭帶來靈魂。\n\n🔗 [了解更多](/product)",
+                "en": "**Property Management Integration**\n\nYour home system connects directly with building management:\n\n🔧 **Repair Requests** — Submit maintenance from your tablet\n📋 **Bulletin Board** — Building announcements pushed to tablet\n🛒 **Smart Mall** — Order supplies & groceries with one touch\n📦 **Home Inventory** — AI manages household items, food, and consumables\n\n🔗 [Learn More](/product)",
+                "ja": "**物件管理連携**\n\n修理依頼、掲示板、スマートモール、在庫管理をタブレットから一括管理。\n\n🔗 [詳しく見る](/product)",
+                "fr": "**Intégration gestion immobilière**\n\nDemandes de réparation, annonces, achats et inventaire depuis la tablette.\n\n🔗 [En savoir plus](/product)",
+                "es": "**Integración de gestión de propiedades**\n\nTu sistema de hogar se conecta directamente con la administración del edificio:\n\n🔧 **Solicitudes de Reparación** — Envía mantenimiento desde tu tableta\n📋 **Tablón de Anuncios** — Los anuncios del edificio se envían a la tableta\n🛒 **Smart Mall** — Ordena suministros y comestibles con un toque\n📦 **Inventario del Hogar** — IA gestiona artículos del hogar, alimentos y consumibles\n\n🔗 [Más información](/product)",
+                "zhCN": "**系统整合物业门禁串联**\n\n家中系统与大楼物业即时连线，一个系统搞定：\n\n🔧 **报修系统** — 直接从平板提交维修需求\n📋 **布告栏** — 大楼公告即时推送到中控平板\n🛒 **耗材及食材购买** — 智能商城一键订购\n📦 **家庭存货管理** — AI 辨识管理家中物品、食材，耗材提醒一次搞定\n\n💡 现代人工作生活忙碌，很多事物在线完成后，不用每天追踪，包含大楼物业通知。系统给足家庭所需，为智慧家庭带来灵魂。\n\n🔗 [了解更多](/product)"
+            }
+        },
+        {
+            "id": "air-balance-system",
+            "keywords": [
+                "新風",
+                "除濕",
+                "dehumidifier",
+                "fresh air",
+                "空氣平衡",
+                "air balance",
+                "MEDOLE",
+                "米多力",
+                "吊隱式",
+                "hidden",
+                "甲醛",
+                "formaldehyde",
+                "霉味",
+                "mold",
+                "潮濕",
+                "humidity",
+                "濕度"
+            ],
+            "answer": {
+                "zh": "**3合1 智慧空氣平衡系統（MEDOLE 米多力）**\n\n專為台灣氣候打造！新鮮空氣進的來，悶濕空氣消失不見：\n\n🌬️ **新風** — 引入新鮮空氣\n🧹 **清淨** — 除臭去甲醛\n💧 **除濕** — 自然排水，免倒水\n\n📊 **6合1空氣品質偵測器**：\n即時監測 CO2、濕度、PM2.5、甲醛、一氧化碳、溫度\n\n🔸 MEDOLE 吊隱式新風除濕機 (MD-70LBDN)\n🔸 除濕能力：35-70L/天\n🔸 HEPA 濾網 + 奈米銀過濾 + 去甲醛除臭\n🔸 CO2 自動/手動換氣控制\n🔸 支援 Apple HomeKit\n🔸 隱藏於天花板，零佔用空間\n\n💡 吊隱式除濕機非奢侈品，而是現代化高端裝修的基礎必需品。\n\n🔗 [了解更多](/product)",
+                "en": "**3-in-1 Smart Air Balance System (MEDOLE)**\n\nDesigned for Taiwan's climate — fresh air in, humid air out:\n\n🌬️ **Fresh Air** — Brings in clean outdoor air\n🧹 **Purification** — Removes odors & formaldehyde\n💧 **Dehumidification** — Auto drainage, no water tank\n\n📊 **6-in-1 Air Quality Sensor**: CO2, humidity, PM2.5, formaldehyde, CO, temperature\n\n🔸 MEDOLE concealed dehumidifier (MD-70LBDN)\n🔸 35-70L/day capacity\n🔸 HEPA + nano silver + formaldehyde filter\n🔸 Apple HomeKit compatible\n🔸 Hidden in ceiling — zero floor space\n\n🔗 [Learn More](/product)",
+                "ja": "**3-in-1 スマート空気バランスシステム（MEDOLE）**\n\n新風・清浄・除湿を一台で。天井隠蔽型、Apple HomeKit対応。\n\n🔗 [詳しく見る](/product)",
+                "fr": "**Système d'air 3-en-1 (MEDOLE)**\n\nAir frais, purification, déshumidification. Caché au plafond, compatible HomeKit.\n\n🔗 [En savoir plus](/product)",
+                "es": "**Sistema de equilibrio de aire inteligente 3 en 1 (MEDOLE)**\n\nDiseñado para el clima de Taiwán - aire fresco adentro, aire húmedo afuera:\n\n🌬️ **Aire fresco** — Trae aire exterior limpio\n🧹 **Purificación** — Elimina olores y formaldehído\n💧 **Deshumidificación** — Drenaje automático, sin tanque de agua\n\n📊 **Sensor de calidad de aire 6 en 1**: CO2, humedad, PM2.5, formaldehído, CO, temperatura\n\n🔸 Deshumidificador oculto MEDOLE (MD-70LBDN)\n🔸 Capacidad de 35-70L/día\n🔸 HEPA + plata nano + filtro de formaldehído\n🔸 Compatible con Apple HomeKit\n🔸 Oculto en el techo — cero espacio de piso\n\n🔗 [Más información](/product)",
+                "zhCN": "**3合1 智慧空气平衡系统（MEDOLE 米多力）**\n\n专为台湾气候打造！新鲜空气进的来，闷湿空气消失不见：\n\n🌬️ **新风** — 引入新鲜空气\n🧹 **清净** — 除臭去甲醛\n💧 **除湿** — 自然排水，免倒水\n\n📊 **6合1空气品质侦测器**：\n即时监测 CO2、湿度、PM2.5、甲醛、一氧化碳、温度\n\n🔸 MEDOLE 吊隐式新风除湿机 (MD-70LBDN)\n🔸 除湿能力：35-70L/天\n🔸 HEPA 滤网 + 纳米银过滤 + 去甲醛除臭\n🔸 CO2 自动/手动换气控制\n🔸 支持 Apple HomeKit\n🔸 隐藏于天花板，零占用空间\n\n💡 吊隐式除湿机非奢侈品，而是现代化高端装修的基础必需品。\n\n🔗 [了解更多](/product)"
+            }
+        },
+        {
+            "id": "builder-proposal",
+            "keywords": [
+                "建商",
+                "建案",
+                "developer",
+                "builder",
+                "合作",
+                "cooperation",
+                "提案",
+                "proposal",
+                "交屋",
+                "housewarming",
+                "提貨券",
+                "voucher",
+                "B2B"
+            ],
+            "answer": {
+                "zh": "**建案合作方案**\n\n從「買一間房」到「買一種生活」— enGo 為建商提供 AI 智慧住宅解決方案：\n\n📋 **兩大質感生活提案**：\n\n1️⃣ **自動新「聲」活** NT$ 50,000/戶\n含：多功能中控平板、智能安全防護、家電控制、空氣清淨機、Apple HomeKit 聲控\n\n2️⃣ **智慧空氣平衡系統** NT$ 60,000/戶\n含：中控平板、新風除濕主機、空氣品質偵測器、控制面板、智能連動控制板\n\n🎁 **合作模式：提貨券/交屋禮**\n✅ 建商端：無須配合施工，無保固責任，創新且價值感十足的「交屋禮」\n✅ 住戶端：裝潢期間由 enGo 專人對接，高品質生活模式\n\n🔗 [聯絡洽談合作](/contact)",
+                "en": "**Builder Partnership Program**\n\nFrom 'buying a house' to 'buying a lifestyle' — AI smart home solutions for developers:\n\n📋 **Two Premium Living Proposals**:\n\n1️⃣ **Smart Voice Living** NT$ 50,000/unit\nIncludes: Control tablet, security, appliance control, air purifier, Apple HomeKit/Siri\n\n2️⃣ **Smart Air Balance** NT$ 60,000/unit\nIncludes: Control tablet, fresh air dehumidifier, air quality sensor, control panel\n\n🎁 **Voucher/Housewarming Gift Model**:\n✅ Builders: No installation coordination needed, no warranty liability\n✅ Residents: enGo handles everything during renovation\n\n🔗 [Contact for Partnership](/contact)",
+                "ja": "**建設パートナーシップ**\n\n2つのプラン：NT$50,000（スマート音声生活）、NT$60,000（空気バランスシステム）。バウチャー方式で建設会社の負担ゼロ。\n\n🔗 [お問い合わせ](/contact)",
+                "fr": "**Programme partenaires constructeurs**\n\nDeux propositions premium : NT$50,000 et NT$60,000/unité. Modèle bon cadeau sans charge pour le constructeur.\n\n🔗 [Contact](/contact)",
+                "es": "**Programa de asociación de constructores**\n\nDe \"comprar una casa\" a \"comprar un estilo de vida\" — Soluciones de hogar inteligente con IA para desarrolladores:\n\n📋 **Dos propuestas premium**:\n\n1️⃣ **Vida de voz inteligente** NT$ 50,000/unidad\nIncluye: Tableta de control, seguridad, control de electrodomésticos, purificador de aire, Apple HomeKit/Siri\n\n2️⃣ **Balance de aire inteligente** NT$ 60,000/unidad\nIncluye: Tableta de control, deshumidificador de aire fresco, sensor de calidad de aire, panel de control\n\n🎁 **Modelo de vale/regalo de bienvenida**:\n✅ Constructores: No se necesita coordinación de instalación, sin responsabilidad de garantía\n✅ Residentes: enGo se encarga de todo durante la renovación\n\n🔗 [Contacto para asociación](/contact)",
+                "zhCN": "**建案合作方案**\n\n从「买一间房」到「买一种生活」— enGo 为建商提供 AI 智慧住宅解决方案：\n\n📋 **两大质感生活提案**：\n\n1️⃣ **自动新「声」活** NT$ 50,000/户\n含：多功能中控平板、智能安全防护、家电控制、空气清净机、Apple HomeKit 声控\n\n2️⃣ **智慧空气平衡系统** NT$ 60,000/户\n含：中控平板、新风除湿主机、空气品质侦测器、控制面板、智能连动控制板\n\n🎁 **合作模式：提货券/交屋礼**\n✅ 建商端：无须配合施工，无保固责任，创新且价值感十足的「交屋礼」\n✅ 住户端：装潢期间由 enGo 专人对接，高品质生活模式\n\n🔗 [联络洽谈合作](/contact)"
+            }
+        },
+        {
+            "id": "water-tech-detail",
+            "keywords": [
+                "水質",
+                "water quality",
+                "濾芯",
+                "filter",
+                "三道",
+                "3-stage",
+                "礦物質",
+                "mineral",
+                "純水",
+                "pure water",
+                "飲水",
+                "drinking",
+                "水閥",
+                "valve"
+            ],
+            "answer": {
+                "zh": "**關鍵水質檢測技術**\n\n從淨水設備到智慧水質管家：\n\n🔍 **雙向偵測** — 入水、出水精準採樣，掌握過濾動效\n📊 **濾心狀態** — 一目瞭然，良好的濾材管理\n💧 **漏水即時處理** — 搭配電子水閥，可即時斷水\n📈 **數據賦能** — 濾芯使用壽命即時監控提醒更換\n🔒 **信任升級** — 飲水安心、用水放心，水質數字透明化\n\n🔸 **三道濾心系統**：前兩道去除 99% 雜質達到純水品質，最後一道加入微量礦物質鍶，讓骨骼牙齒更健康，也能提升水的口感。\n\n🔗 [了解更多](/product?jump=oxygen)",
+                "en": "**Smart Water Quality Technology**\n\nFrom water equipment to intelligent water butler:\n\n🔍 **Dual Detection** — Input/output water sampling for filtration monitoring\n📊 **Filter Status** — Real-time filter life tracking\n💧 **Instant Leak Response** — Electronic valve auto-shuts water\n📈 **Data-Driven** — Smart reminders for filter replacement\n\n🔸 **3-Stage Filtration**: First two stages remove 99% impurities, third adds trace minerals (strontium) for bone/dental health and better taste.\n\n🔗 [Learn More](/product?jump=oxygen)",
+                "ja": "**スマート水質管理技術**\n\n双方向検出、フィルター状態監視、漏水即時遮断、3段階ろ過（99%不純物除去＋ミネラル添加）。\n\n🔗 [詳しく見る](/product?jump=oxygen)",
+                "fr": "**Technologie de qualité d'eau**\n\nDétection bidirectionnelle, suivi des filtres, coupure automatique, filtration 3 étapes.\n\n🔗 [En savoir plus](/product?jump=oxygen)",
+                "es": "**Tecnología inteligente de calidad de agua**\n\nDe equipos de agua a mayordomo de agua inteligente:\n\n🔍 **Detección dual** — Muestreo de agua de entrada/salida para monitoreo de filtración\n📊 **Estado del filtro** — Seguimiento del tiempo de vida del filtro en tiempo real\n💧 **Respuesta instantánea a fugas** — Válvula electrónica cierra automáticamente el agua\n📈 **Impulsado por datos** — Recordatorios inteligentes para reemplazo de filtros\n\n🔸 **Filtración de 3 etapas**: Las primeras dos etapas eliminan el 99% de impurezas, la tercera agrega minerales traza (estroncio) para la salud ósea/dental y mejor sabor.\n\n🔗 [Más información](/product?jump=oxygen)",
+                "zhCN": "**关键水质检测技术**\n\n从净水设备到智慧水质管家：\n\n🔍 **双向侦测** — 入水、出水精准采样，掌握过滤动效\n📊 **滤心状态** — 一目了然，良好的滤材管理\n💧 **漏水即时处理** — 搭配电子水阀，可即时断水\n📈 **数据赋能** — 滤芯使用寿命即时监控提醒更换\n🔒 **信任升级** — 饮水安心、用水放心，水质数字透明化\n\n🔸 **三道滤心系统**：前两道去除 99% 杂质达到纯水品质，最后一道加入微量矿物质锶，让骨骼牙齿更健康，也能提升水的口感。\n\n🔗 [了解更多](/product?jump=oxygen)"
+            }
+        }
+    ],
     "tutorials": [
         {
             "id": "individual",
@@ -112,6 +576,25 @@
                 "Tain"
             ],
             "link": "/cases/8"
+        },
+        {
+            "id": "case-studies",
+            "keywords": [
+                "case",
+                "案例",
+                "實例",
+                "example",
+                "真實案例",
+                "客戶",
+                "customer",
+                "success story"
+            ],
+            "answer": {
+                "zh": "**enGo 智慧宅案例**\n\n我們有多個實際案例供參考：\n🏠 [新莊案例 — 工程師之家](/cases/5)\n🏠 [永和案例 — 設計師展間](/cases/6)\n🏠 [文山案例 — 節能自動化](/cases/7)\n🏠 [南港案例](/cases/8)\n📍 [北部展示間](/cases/23)\n📍 [中部展示間](/cases/24)\n\n歡迎預約展示間體驗！",
+                "en": "**enGo Smart Home Cases**\n\nExplore our real installations:\n🏠 [Xinzhuang — Engineer's Home](/cases/5)\n🏠 [Yonghe — Designer Showroom](/cases/6)\n🏠 [Wenshan — Energy-Saving Auto](/cases/7)\n🏠 [Nangang Case](/cases/8)\n📍 [North Showroom](/cases/23)\n📍 [Central Showroom](/cases/24)\n\nBook a showroom visit!",
+                "ja": "実際の施工事例をご覧いただけます。ショールーム見学もお気軽にどうぞ！",
+                "fr": "Découvrez nos installations réelles et visitez nos showrooms !"
+            }
         }
     ],
     "youtube": [
@@ -226,7 +709,9 @@
                 "zh": "我們目前有兩個展示間供預約體驗：\n📍 北部展示間：[點我查看](/cases/23)\n📍 中部展示間：[點我查看](/cases/24)",
                 "en": "We have two showrooms available for experience:\n📍 North Showroom: [View Details](/cases/23)\n📍 Central Showroom: [View Details](/cases/24)",
                 "ja": "現在、2つのショールームで体験予約を受け付けています：\n📍 北部ショールーム：[詳細を見る](/cases/23)\n📍 中部ショールーム：[詳細を見る](/cases/24)",
-                "fr": "Nous avons deux showrooms disponibles pour expérience :\n📍 Showroom Nord : [Voir Détails](/cases/23)\n📍 Showroom Centre : [Voir Détails](/cases/24)"
+                "fr": "Nous avons deux showrooms disponibles pour expérience :\n📍 Showroom Nord : [Voir Détails](/cases/23)\n📍 Showroom Centre : [Voir Détails](/cases/24)",
+                "es": "Tenemos dos salas de exposición disponibles para experiencia:\n📍 Showroom Norte: [Ver detalles](/cases/23)\n📍 Showroom Central: [Ver detalles](/cases/24)",
+                "zhCN": "我们目前有两个展示间供预约体验：\n📍 北部展示间：[点我查看](/cases/23)\n📍 中部展示间：[点我查看](/cases/24)"
             }
         },
         {
@@ -251,17 +736,22 @@
                 "location",
                 "office",
                 "where",
+                "visit",
                 "地址",
                 "公司",
                 "在哪",
                 "中山區",
-                "八德路"
+                "八德路",
+                "來訪",
+                "拜訪"
             ],
             "answer": {
-                "zh": "公司地址：台北市中山區八德路二段 325號 3樓",
-                "en": "Address: 3F., No. 325, Sec. 2, Bade Rd., Zhongshan Dist., Taipei City",
-                "ja": "住所：台北市中山区八徳路二段325号3階",
-                "fr": "Adresse : 3F., No. 325, Sec. 2, Bade Rd., Zhongshan Dist., Taipei City"
+                "zh": "**enGo 安購智管家**\n📍 台北市中山區八德路二段 325號 3樓\n🕘 週一至週五 09:00 - 18:00（週末及國定假日公休）\n📞 02-27510218\n💬 LINE：[加入好友 @engo](https://lin.ee/THIUSjW)\n\n歡迎預約來訪體驗！\n🔗 [聯絡我們](/contact)",
+                "en": "**enGo Smart Home**\n📍 3F., No. 325, Sec. 2, Bade Rd., Zhongshan Dist., Taipei City\n🕘 Mon - Fri 09:00 - 18:00 (closed weekends & holidays)\n📞 +886 2-27510218\n💬 LINE: [Add @engo](https://lin.ee/THIUSjW)\n\nBook a visit to experience it in person!\n🔗 [Contact Us](/contact)",
+                "ja": "**enGo スマートホーム**\n📍 台北市中山区八徳路二段325号3階\n🕘 月〜金 09:00 - 18:00（土日祝休み）\n📞 02-27510218\n💬 LINE：[@engo を追加](https://lin.ee/THIUSjW)\n\n体験予約承ります！\n🔗 [お問い合わせ](/contact)",
+                "fr": "**enGo Smart Home**\n📍 3F., No. 325, Sec. 2, Bade Rd., Zhongshan Dist., Taipei\n🕘 Lun - Ven 09:00 - 18:00 (fermé week-end et jours fériés)\n📞 +886 2-27510218\n💬 LINE : [Ajouter @engo](https://lin.ee/THIUSjW)\n\nRéservez une visite !\n🔗 [Contact](/contact)",
+                "es": "**enGo Smart Home**\n📍 3F., No. 325, Sec. 2, Bade Rd., Zhongshan Dist., Taipei\n🕘 Lun - Vie 09:00 - 18:00 (cerrado fines de semana y festivos)\n📞 +886 2-27510218\n💬 LINE: [Agregar @engo](https://lin.ee/THIUSjW)\n\n¡Reserva una visita!\n🔗 [Contáctanos](/contact)",
+                "zhCN": "**enGo 安购智管家**\n📍 台北市中山区八德路二段 325号 3楼\n🕘 周一至周五 09:00 - 18:00（周末及国定假日公休）\n📞 02-27510218\n💬 LINE：[加入好友 @engo](https://lin.ee/THIUSjW)\n\n欢迎预约来访体验！\n🔗 [联络我们](/contact)"
             }
         },
         {
@@ -269,17 +759,18 @@
             "keywords": [
                 "phone",
                 "call",
-                "contact",
                 "number",
                 "電話",
                 "聯絡方式",
                 "撥打"
             ],
             "answer": {
-                "zh": "聯絡電話：02-27510218",
-                "en": "Phone: +886 2-27510218",
-                "ja": "電話番号：02-27510218",
-                "fr": "Téléphone : +886 2-27510218"
+                "zh": "**聯絡方式**\n📞 02-27510218（週一至週五 09:00-18:00）\n💬 LINE：[加入好友 @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "en": "**Contact**\n📞 +886 2-27510218 (Mon-Fri 09:00-18:00)\n💬 LINE: [Add @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "ja": "**連絡先**\n📞 02-27510218（月〜金 09:00-18:00）\n💬 LINE：[@engo を追加](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "fr": "**Contact**\n📞 +886 2-27510218 (Lun-Ven 09:00-18:00)\n💬 LINE : [Ajouter @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "es": "**Contacto**\n📞 +886 2-27510218 (Lun-Vie 09:00-18:00)\n💬 LINE: [Agregar @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "zhCN": "**联络方式**\n📞 02-27510218（周一至周五 09:00-18:00）\n💬 LINE：[加入好友 @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com"
             }
         },
         {
@@ -292,10 +783,12 @@
                 "信箱"
             ],
             "answer": {
-                "zh": "聯絡 email：contacts@smtengo.com",
-                "en": "Email: contacts@smtengo.com",
-                "ja": "メールアドレス：contacts@smtengo.com",
-                "fr": "E-mail : contacts@smtengo.com"
+                "zh": "📧 Email：contacts@smtengo.com\n📞 電話：02-27510218（週一至週五 09:00-18:00）\n💬 LINE：[加入好友 @engo](https://lin.ee/THIUSjW)",
+                "en": "📧 Email: contacts@smtengo.com\n📞 Phone: +886 2-27510218 (Mon-Fri 09:00-18:00)\n💬 LINE: [Add @engo](https://lin.ee/THIUSjW)",
+                "ja": "📧 Email：contacts@smtengo.com\n📞 02-27510218（月〜金 09:00-18:00）\n💬 LINE：[@engo を追加](https://lin.ee/THIUSjW)",
+                "fr": "📧 Email : contacts@smtengo.com\n📞 +886 2-27510218 (Lun-Ven 09:00-18:00)\n💬 LINE : [Ajouter @engo](https://lin.ee/THIUSjW)",
+                "es": "📧 Email: contacts@smtengo.com\n📞 Teléfono: +886 2-27510218 (Lun-Vie 09:00-18:00)\n💬 LINE: [Agregar @engo](https://lin.ee/THIUSjW)",
+                "zhCN": "📧 Email：contacts@smtengo.com\n📞 电话：02-27510218（周一至周五 09:00-18:00）\n💬 LINE：[加入好友 @engo](https://lin.ee/THIUSjW)"
             }
         },
         {
@@ -304,13 +797,56 @@
                 "line",
                 "id",
                 "social",
-                "官方 line"
+                "官方 line",
+                "line oa",
+                "加 line",
+                "加入 line",
+                "add line",
+                "line friend",
+                "加好友",
+                "line call",
+                "line 通話",
+                "enGo智慧家庭",
+                "智慧家庭",
+                "smart family",
+                "智管家"
             ],
             "answer": {
-                "zh": "官方 Line ID：@engo",
-                "en": "Official Line ID: @engo",
-                "ja": "公式LINE ID：@engo",
-                "fr": "ID Line officiel : @engo"
+                "zh": "**enGo 官方 LINE**\n\n🏷️ 名稱：enGo智慧家庭｜台北\n🆔 Line ID：@engo\n➕ [點此加入好友](https://lin.ee/THIUSjW)\n📞 LINE Call (免付費) — 營業時間內可直接撥打\n\n📞 電話：02-27510218\n📧 Email: contacts@smtengo.com",
+                "en": "**enGo Official LINE**\n\n🏷️ Name: enGo Smart Family｜Taipei\n🆔 LINE ID: @engo\n➕ [Add as Friend](https://lin.ee/THIUSjW)\n📞 LINE Call (free) — available during business hours\n\n📞 Phone: +886 2-27510218\n📧 Email: contacts@smtengo.com",
+                "ja": "**enGo 公式LINE**\n\n🏷️ 名称：enGo智慧家庭｜台北\n🆔 LINE ID：@engo\n➕ [友だち追加](https://lin.ee/THIUSjW)\n📞 LINE通話 (無料) — 営業時間内\n\n📞 +886 2-27510218\n📧 contacts@smtengo.com",
+                "fr": "**LINE officiel enGo**\n\n🏷️ Nom : enGo Smart Family｜Taipei\n🆔 LINE ID : @engo\n➕ [Ajouter en ami](https://lin.ee/THIUSjW)\n📞 Appel LINE (gratuit) — aux heures d'ouverture\n\n📞 +886 2-27510218\n📧 contacts@smtengo.com",
+                "es": "**LINE oficial de enGo**\n\n🏷️ Nombre: enGo Smart Family｜Taipei\n🆔 LINE ID: @engo\n➕ [Añadir como amigo](https://lin.ee/THIUSjW)\n📞 Llamada LINE (gratis) — en horario laboral\n\n📞 Teléfono: +886 2-27510218\n📧 Email: contacts@smtengo.com",
+                "zhCN": "**enGo 官方 LINE**\n\n🏷️ 名称：enGo智慧家庭｜台北\n🆔 Line ID：@engo\n➕ [点此加入好友](https://lin.ee/THIUSjW)\n📞 LINE Call (免付费) — 营业时间内可直接拨打\n\n📞 电话：02-27510218\n📧 Email: contacts@smtengo.com"
+            }
+        },
+        {
+            "id": "hours",
+            "keywords": [
+                "hours",
+                "business hours",
+                "opening hours",
+                "open",
+                "closed",
+                "schedule",
+                "營業時間",
+                "上班時間",
+                "服務時間",
+                "開放時間",
+                "幾點",
+                "什麼時候",
+                "when",
+                "營業",
+                "horario",
+                "heures"
+            ],
+            "answer": {
+                "zh": "**營業時間**\n🕘 週一至週五：09:00 - 18:00\n🚫 週六、週日及國定假日公休\n\n非營業時間歡迎透過 LINE 或 Email 留言，我們會於上班日儘速回覆：\n💬 [加入 LINE @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "en": "**Business Hours**\n🕘 Mon - Fri: 09:00 - 18:00\n🚫 Closed on weekends & public holidays\n\nOutside business hours, leave a message via LINE or email — we'll reply on the next business day:\n💬 [Add LINE @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "ja": "**営業時間**\n🕘 月〜金：09:00 - 18:00\n🚫 土日祝休み\n\n営業時間外はLINE・メールでお問い合わせください：\n💬 [LINE @engo を追加](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "fr": "**Horaires d'ouverture**\n🕘 Lundi - Vendredi : 09:00 - 18:00\n🚫 Fermé le week-end et jours fériés\n\nHors horaires, écrivez-nous via LINE ou e-mail :\n💬 [Ajouter LINE @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "es": "**Horario de atención**\n🕘 Lun - Vie: 09:00 - 18:00\n🚫 Cerrado fines de semana y festivos\n\nFuera del horario, escríbenos por LINE o email:\n💬 [Agregar LINE @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com",
+                "zhCN": "**营业时间**\n🕘 周一至周五：09:00 - 18:00\n🚫 周六、周日及国定假日公休\n\n非营业时间欢迎通过 LINE 或 Email 留言，我们会于上班日尽速回复：\n💬 [加入 LINE @engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com"
             }
         },
         {
@@ -336,11 +872,15 @@
                 "小資族",
                 "套房",
                 "一房",
-                "入門"
+                "入門",
+                "50000",
+                "五萬"
             ],
             "answer": {
                 "zh": "【旗艦中控 基礎版】定價 NT$ 50,000\n適合小資族、套房與一房一廳使用。\n🔸核心功能：包含智慧中控平台、安控(漏水, 煙霧)、燈光單迴路控制以及 App 遠端管理。\n🔸主要包含組件有：網關、燈控開關、遙控系統、中控平板、以及各類感測器。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
-                "en": "【Flagship Hub Basic Edition】NT$ 50,000\nSuitable for singles, studios, and 1BR. Includes smart hub, safety sensors, lighting control. \n🔗 [View Details](/product?jump=packages)"
+                "en": "【Flagship Hub Basic Edition】NT$ 50,000\nSuitable for singles, studios, and 1BR. Includes smart hub, safety sensors, lighting control. \n🔗 [View Details](/product?jump=packages)",
+                "es": "【Hub central insignia - Edición básica】NT$ 50,000\nAdecuado para solteros, estudios y 1BR. Incluye centro inteligente, sensores de seguridad, control de iluminación.\n🔗 [Ver detalles](/product?jump=packages)",
+                "zhCN": "【旗舰中控 基础版】定价 NT$ 50,000\n适合小资族、套房与一房一厅使用。\n🔸核心功能：包含智慧中控平台、安控(漏水, 烟雾)、灯光单回路控制以及 App 远端管理。\n🔸主要包含组件有：网关、灯控开关、遥控系统、中控平板、以及各类感测器。\n🔗 [点此查看完整方案内容](/product?jump=packages)"
             }
         },
         {
@@ -350,11 +890,15 @@
                 "進階版",
                 "兩房",
                 "小家庭",
-                "進階"
+                "進階",
+                "80000",
+                "八萬"
             ],
             "answer": {
                 "zh": "【全屋智慧 進階版】定價 NT$ 80,000\n適合兩房兩廳，是小家庭的智慧首選。\n🔸核心功能升級：支援智慧冷氣自動調節、多迴路燈光聯動。\n🔸情境控制：提供回家亮燈、一鍵關燈、動態感應走廊燈、冷氣恆溫等智慧情境。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
-                "en": "【Smart Home Advanced Edition】NT$ 80,000\nFor 2BR & small families. Adds smart AC, multi-loop lighting, and hallway motion lights.\n🔗 [View Details](/product?jump=packages)"
+                "en": "【Smart Home Advanced Edition】NT$ 80,000\nFor 2BR & small families. Adds smart AC, multi-loop lighting, and hallway motion lights.\n🔗 [View Details](/product?jump=packages)",
+                "es": "【Edición avanzada de hogar inteligente】NT$ 80,000\nPara 2BR y familias pequeñas. Agrega AC inteligente, iluminación de múltiples bucles y luces de movimiento del pasillo.\n🔗 [Ver detalles](/product?jump=packages)",
+                "zhCN": "【全屋智慧 进阶版】定价 NT$ 80,000\n适合两房两厅，是小家庭的智慧首选。\n🔸核心功能升级：支持智慧冷气自动调节、多回路灯光联动。\n🔸情境控制：提供回家亮灯、一键关灯、动态感应走廊灯、冷气恒温等智慧情境。\n🔗 [点此查看完整方案内容](/product?jump=packages)"
             }
         },
         {
@@ -366,11 +910,15 @@
                 "透天",
                 "別墅",
                 "頂級玩家",
-                "豪華"
+                "豪華",
+                "99999",
+                "十萬"
             ],
             "answer": {
                 "zh": "【奢華宅邸 豪華版】定價 NT$ 99,999+\n為三房以上、透天別墅及頂級玩家設計的極致體驗方案。\n🔸獨有特色：包含智慧窗簾與環境聯動、空氣清淨連動器。\n🔸情境控制：全方位離家警戒、晨曦喚醒(自動開簾)、環境自動淨化模式。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
-                "en": "【Luxury Villa Edition】NT$ 99,999+\nFor 3BR+, villas & premium experience. Features full smart curtains, air quality linkage, and comprehensive security mesh.\n🔗 [View Details](/product?jump=packages)"
+                "en": "【Luxury Villa Edition】NT$ 99,999+\nFor 3BR+, villas & premium experience. Features full smart curtains, air quality linkage, and comprehensive security mesh.\n🔗 [View Details](/product?jump=packages)",
+                "es": "【Edición de villa de lujo】NT$ 99,999+\nPara 3BR+, villas y experiencia premium. Presenta cortinas inteligentes completas, vinculación de calidad de aire y malla de seguridad integral.\n🔗 [Ver detalles](/product?jump=packages)",
+                "zhCN": "【奢华宅邸 豪华版】定价 NT$ 99,999+\n为三房以上、透天别墅及顶级玩家设计的极致体验方案。\n🔸独有特色：包含智慧窗帘与环境联动、空气清净连动器。\n🔸情境控制：全方位离家警戒、晨曦唤醒(自动开帘)、环境自动净化模式。\n🔗 [点此查看完整方案内容](/product?jump=packages)"
             }
         },
         {
@@ -385,11 +933,17 @@
                 "費用",
                 "套裝",
                 "多少錢",
-                "方案比較"
+                "方案比較",
+                "package",
+                "plan",
+                "how much",
+                "cost"
             ],
             "answer": {
-                "zh": "我們目前有提供3種智慧家庭套裝方案：\n1️⃣ **旗艦中控 基礎版**: NT$ 50,000 (適合套房/一房一廳)\n2️⃣ **全屋智慧 進階版**: NT$ 80,000 (適合兩房兩廳)\n3️⃣ **奢華宅邸 豪華版**: NT$ 99,999+ (適合三房以上/別墅)\n🔗 [點我查看完整方案比較表](/packages)",
-                "en": "We offer 3 smart home packages:\n1️⃣ **Basic** (NT$ 50,000)\n2️⃣ **Advanced** (NT$ 80,000)\n3️⃣ **Luxury** (NT$ 99,999+)\n🔗 [View Comparison Table](/packages)"
+                "zh": "我們目前有提供3種智慧家庭套裝方案：\n1️⃣ **旗艦中控 基礎版**: NT$ 50,000 (適合套房/一房一廳)\n2️⃣ **全屋智慧 進階版**: NT$ 80,000 (適合兩房兩廳)\n3️⃣ **奢華宅邸 豪華版**: NT$ 99,999+ (適合三房以上/別墅)\n\n所有方案皆含專業安裝與售後服務！\n🔗 [點我查看完整方案比較表](/product?jump=packages)\n🔗 [預約免費諮詢](/contact)",
+                "en": "We offer 3 smart home packages:\n1️⃣ **Basic** (NT$ 50,000) — Studios & 1BR\n2️⃣ **Advanced** (NT$ 80,000) — 2BR families\n3️⃣ **Luxury** (NT$ 99,999+) — 3BR+ & villas\n\nAll include professional installation & after-sales!\n🔗 [View Comparison](/product?jump=packages)\n🔗 [Book Free Consultation](/contact)",
+                "es": "Ofrecemos 3 paquetes de hogar inteligente:\n1️⃣ **Básico** (NT$ 50,000) — Estudios y 1BR\n2️⃣ **Avanzado** (NT$ 80,000) — Familias de 2BR\n3️⃣ **Lujo** (NT$ 99,999+) — 3BR+ y villas\n\n¡Todos incluyen instalación profesional y servicio post-venta!\n🔗 [Ver comparación](/product?jump=packages)\n🔗 [Reservar consulta gratuita](/contact)",
+                "zhCN": "我们目前有提供3种智慧家庭套装方案：\n1️⃣ **旗舰中控 基础版**: NT$ 50,000 (适合套房/一房一厅)\n2️⃣ **全屋智慧 进阶版**: NT$ 80,000 (适合两房两厅)\n3️⃣ **奢华宅邸 豪华版**: NT$ 99,999+ (适合三房以上/别墅)\n\n所有方案皆含专业安装与售后服务！\n🔗 [点我查看完整方案比较表](/product?jump=packages)\n🔗 [预约免费咨询](/contact)"
             }
         }
     ],
@@ -400,19 +954,25 @@
                 "zh": "AI智慧家中控平板 T1",
                 "en": "AI Smart Home Control Tablet T1",
                 "ja": "AIスマートホーム・中控平板 T1",
-                "fr": "Tablette de Contrôle Intelligent T1"
+                "fr": "Tablette de Contrôle Intelligent T1",
+                "es": "Tableta de control del hogar inteligente con IA T1",
+                "zhCN": "AI智慧家中控平板 T1"
             },
             "specs": {
                 "zh": "10.1吋 FHD (1920x1200) 觸控螢幕, 支援 Wi-Fi / Zigbee / 藍牙",
                 "en": "10.1\" FHD (1920x1200) Touch Screen, supports Wi-Fi / Zigbee / Bluetooth",
                 "ja": "10.1インチ FHD (1920x1200) タッチスクリーン、Wi-Fi / Zigbee / Bluetooth対応",
-                "fr": "Écran tactile 10.1\" FHD (1920x1200), supports Wi-Fi / Zigbee / Bluetooth"
+                "fr": "Écran tactile 10.1\" FHD (1920x1200), supports Wi-Fi / Zigbee / Bluetooth",
+                "es": "Pantalla táctil FHD de 10.1\" (1920x1200), compatible con Wi-Fi / Zigbee / Bluetooth",
+                "zhCN": "10.1吋 FHD (1920x1200) 触控屏幕, 支持 Wi-Fi / Zigbee / 蓝牙"
             },
             "features": {
                 "zh": "AI語音控制, 物業管理聯網, 智能商城, 食譜與訊息管理",
                 "en": "AI Voice Control, Property Management Link, Smart Mall, Recipe & Info Management",
                 "ja": "AI音声制御、物件管理ネットワーク、スマートモール、レシピ＆メッセージ管理",
-                "fr": "Contrôle vocal AI, Liaison de gestion de propriété, Smart Mall, Gestion des recettes et infos"
+                "fr": "Contrôle vocal AI, Liaison de gestion de propriété, Smart Mall, Gestion des recettes et infos",
+                "es": "Control de voz con IA, Vinculación de gestión de propiedades, Smart Mall, Gestión de recetas e información",
+                "zhCN": "AI语音控制, 物业管理联网, 智能商城, 食谱与讯息管理"
             },
             "keywords": [
                 "tablet",
@@ -420,7 +980,8 @@
                 "平板",
                 "中控",
                 "螢幕",
-                "10.1"
+                "10.1",
+                "product"
             ]
         },
         {
@@ -429,19 +990,25 @@
                 "zh": "4合1智能空氣清淨機 EAP-T01",
                 "en": "4-in-1 Smart Air Purifier EAP-T01",
                 "ja": "4-in-1 スマート空気清浄機 EAP-T01",
-                "fr": "Purificateur d'air intelligent 4-en-1 EAP-T01"
+                "fr": "Purificateur d'air intelligent 4-en-1 EAP-T01",
+                "es": "Purificador de aire inteligente 4 en 1 EAP-T01",
+                "zhCN": "4合1智能空气清净机 EAP-T01"
             },
             "specs": {
-                "zh": "CADR 110 m³/h, HEPA 13 濾網, PM2.5 監測",
-                "en": "CADR 110 m³/h, HEPA 13 Filter, PM2.5 Monitoring",
-                "ja": "CADR 110 m³/h、HEPA 13 フィルター、PM2.5 モニタリング",
-                "fr": "CADR 110 m³/h, Filtre HEPA 13, Surveillance PM2.5"
+                "zh": "CADR 110 m³/h, HEPA12 醫療級濾網, PM2.5 監測, Ag+ 銀離子抗菌",
+                "en": "CADR 110 m³/h, HEPA12 Medical-Grade Filter, PM2.5 Monitoring, Ag+ Silver Ion Antibacterial",
+                "ja": "CADR 110 m³/h、HEPA12 医療グレードフィルター、PM2.5モニタリング、Ag+銀イオン抗菌",
+                "fr": "CADR 110 m³/h, Filtre HEPA12 médical, Surveillance PM2.5, Antibactérien Ag+",
+                "es": "CADR 110 m³/h, Filtro HEPA12 de grado médico, Monitoreo PM2.5, Antibacteriano con iones de plata Ag+",
+                "zhCN": "CADR 110 m³/h, HEPA12 医疗级滤网, PM2.5 监测, Ag+ 银离子抗菌"
             },
             "features": {
-                "zh": "藍牙喇叭, 無線充電, 負離子與香氛功能",
-                "en": "Bluetooth Speaker, Wireless Charging, Negative Ions & Fragrance",
-                "ja": "Bluetoothスピーカー、ワイヤレス充電、マイナスイオン＆フレグランス",
-                "fr": "Haut-parleur Bluetooth, Charge sans fil, Ions négatifs et fragrance"
+                "zh": "4合1極致空間整合：空氣清淨、藍牙音響、無線充電、香氛擴香。醫療級 HEPA12 濾網 + Ag+ 銀離子抗菌，可抗 H1N1 流感病毒。支援智慧中控平板與 App 遠端操控。",
+                "en": "4-in-1 All-in-One: Air Purification, Bluetooth Speaker, Wireless Charging, Fragrance Diffuser. Medical-grade HEPA12 + Ag+ silver ion antibacterial, anti-H1N1. Supports smart tablet & App remote control.",
+                "ja": "4-in-1：空気清浄、Bluetoothスピーカー、ワイヤレス充電、フレグランス。HEPA12医療グレード＋Ag+銀イオン抗菌。スマートタブレット＆アプリ連携。",
+                "fr": "4-en-1 : Purification, Bluetooth, Charge sans fil, Fragrance. HEPA12 médical + Ag+ antibactérien anti-H1N1. Compatible tablette & App.",
+                "es": "4 en 1 todo en uno: purificación de aire, altavoz Bluetooth, carga inalámbrica, difusor de fragancia. HEPA12 de grado médico + antibacteriano con iones de plata Ag+, anti-H1N1. Compatible con tableta inteligente y control remoto de aplicación.",
+                "zhCN": "4合1极致空间整合：空气清净、蓝牙音响、无线充电、香氛扩香。医疗级 HEPA12 滤网 + Ag+ 银离子抗菌，可抗 H1N1 流感病毒。支持智慧中控平板与 App 远端操控。"
             },
             "keywords": [
                 "purifier",
@@ -451,7 +1018,8 @@
                 "無線充電",
                 "CADR",
                 "空氣",
-                "小型"
+                "小型",
+                "air purifier"
             ]
         },
         {
@@ -460,19 +1028,25 @@
                 "zh": "水維氧AI健康智能淨水系統",
                 "en": "Water-Sr AI Healthy Smart Water System",
                 "ja": "水維氧AIスマート浄水システム",
-                "fr": "Système de purification d'eau intelligent Water-Sr AI"
+                "fr": "Système de purification d'eau intelligent Water-Sr AI",
+                "es": "Sistema inteligente de purificación de agua saludable Water-Sr AI",
+                "zhCN": "水维氧AI健康智能净水系统"
             },
             "specs": {
                 "zh": "RO逆滲透 (0.0001微米), 礦物質添加 (SRM), TDS即時監測",
                 "en": "RO Osmosis (0.0001μm), Mineral Addition (SRM), Real-time TDS Monitoring",
                 "ja": "RO逆浸透（0.0001μm）、ミネラル添加（SRM）、リアルタイムTDS監視",
-                "fr": "Osmose RO (0.0001μm), Ajout de minéraux (SRM), Surveillance TDS en temps réel"
+                "fr": "Osmose RO (0.0001μm), Ajout de minéraux (SRM), Surveillance TDS en temps réel",
+                "es": "Ósmosis inversa RO (0.0001μm), Adición de minerales (SRM), Monitoreo TDS en tiempo real",
+                "zhCN": "RO逆渗透 (0.0001微米), 矿物质添加 (SRM), TDS即时监测"
             },
             "features": {
                 "zh": "防漏水偵測, 平板連動濾芯狀態",
                 "en": "Leak Detection, Tablet Link for Filter Status",
                 "ja": "漏水検知、タブレット連携フィルターステータス",
-                "fr": "Détection de fuite, Liaison tablette pour l'état du filtre"
+                "fr": "Détection de fuite, Liaison tablette pour l'état du filtre",
+                "es": "Detección de fugas, Enlace de tableta para estado del filtro",
+                "zhCN": "防漏水侦测, 平板连动滤芯状态"
             },
             "keywords": [
                 "water",
@@ -496,7 +1070,9 @@
                 "zh": "AI 管家替您輕鬆管理家中一切透過 enGo AI 智慧中控平板整合管理家中的智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升家居的舒適度、安全性和能源效率。",
                 "en": "AI Butler easily manages everything in your home through the enGo AI Smart Home Tablet, integrating lighting, appliances, security, audio, locks, and water systems.",
                 "ja": "AIバトラーは、enGo AIスマートホームタブレットを通じて、照明、家電、セキュリティ、オーディオ、ロック、水システムを統合管理し、生活をより便利にします。",
-                "fr": "Le majordome AI gère facilement tout dans votre maison via la tablette intelligente enGo AI, intégrant éclairage, appareils, sécurité, audio, serrures et systèmes d'eau."
+                "fr": "Le majordome AI gère facilement tout dans votre maison via la tablette intelligente enGo AI, intégrant éclairage, appareils, sécurité, audio, serrures et systèmes d'eau.",
+                "es": "El mayordomo de IA gestiona fácilmente todo en tu hogar a través de la tableta inteligente enGo AI, integrando iluminación, electrodomésticos, seguridad, audio, cerraduras y sistemas de agua.",
+                "zhCN": "AI 管家替您轻松管理家中一切通过 enGo AI 智慧中控平板整合管理家中的智能照明、智能家电、安全监控、音响系统、门锁及水处理等设备，提升家居的舒适度、安全性和能源效率。"
             },
             "image": "product_tablet_t1.png",
             "spec_image": "product_tablet_t1_specs.png",

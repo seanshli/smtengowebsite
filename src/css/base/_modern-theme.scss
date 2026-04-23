@@ -1,0 +1,467 @@
+// ─── Global Vivid Warm Theme with Animations ───
+@import '../utils/variables';
+
+// ─── Smooth scrolling ───
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $warm-bg-light;
+  color: #2c2c2c;
+  font-family: 'Noto Sans TC', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+// ─── Scroll Progress Bar ───
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: $warm-gradient;
+  z-index: 10000;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px rgba(224, 90, 53, 0.5);
+}
+
+// ─── Page Transition ───
+.page-enter-active {
+  animation: pageSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-leave-active {
+  animation: pageSlideOut 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes pageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+// ─── Auto-play CSS Animations (no JS needed) ───
+.anim-fade-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-fade-left {
+  animation: fadeInLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-fade-right {
+  animation: fadeInRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+// Stagger delays
+.anim-delay-1 { animation-delay: 0.1s; }
+.anim-delay-2 { animation-delay: 0.2s; }
+.anim-delay-3 { animation-delay: 0.3s; }
+.anim-delay-4 { animation-delay: 0.4s; }
+.anim-delay-5 { animation-delay: 0.5s; }
+.anim-delay-6 { animation-delay: 0.6s; }
+.anim-delay-7 { animation-delay: 0.7s; }
+.anim-delay-8 { animation-delay: 0.8s; }
+
+// ─── Warm Accent Line with shimmer ───
+.accent-line {
+  width: 60px;
+  height: 4px;
+  background: $warm-gradient;
+  border-radius: 4px;
+  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    animation: shimmer 2.5s ease-in-out infinite;
+  }
+}
+
+.accent-line-center {
+  @extend .accent-line;
+  margin: 1rem auto;
+}
+
+// ─── Vivid Card Style ───
+.vivid-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: $warm-shadow;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: $warm-gradient;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $warm-shadow-hover;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+// ─── Warm Button Styles ───
+.btn-vivid {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  &:hover::after {
+    left: 100%;
+  }
+
+  &--orange {
+    background: $warm-gradient;
+    color: white;
+    box-shadow: 0 4px 20px $warm-glow;
+
+    &:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 35px $warm-glow;
+    }
+  }
+
+  &--blue {
+    background: $blue-gradient;
+    color: white;
+    box-shadow: 0 4px 20px $blue-glow;
+
+    &:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 35px $blue-glow;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $brand-orange;
+    border: 2px solid $brand-orange;
+
+    &:hover {
+      background: $brand-orange;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px $warm-glow;
+    }
+  }
+}
+
+// ─── Gradient Text ───
+.gradient-text-warm {
+  background: $warm-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: $blue-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ─── Floating decorative orbs ───
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+
+  &--orange {
+    background: radial-gradient(circle, rgba(224, 90, 53, 0.2), transparent 65%);
+    animation: floatOrb 12s ease-in-out infinite;
+  }
+
+  &--blue {
+    background: radial-gradient(circle, rgba(34, 66, 116, 0.12), transparent 65%);
+    animation: floatOrb 15s ease-in-out infinite reverse;
+  }
+
+  &--gold {
+    background: radial-gradient(circle, rgba(199, 183, 99, 0.15), transparent 65%);
+    animation: floatOrb 18s ease-in-out infinite;
+  }
+}
+
+// ─── Parallax container ───
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+// ─── Pulse dot indicator ───
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $brand-orange;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid $brand-orange;
+    animation: pulseRing 2s ease-out infinite;
+  }
+}
+
+// ─── Keyframes ───
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(40px, -50px) scale(1.08); }
+  50% { transform: translate(-30px, 30px) scale(0.92); }
+  75% { transform: translate(20px, -20px) scale(1.04); }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceSubtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+// ─── Hover lift utility ───
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $warm-shadow-hover;
+  }
+}
+
+// ─── Image zoom on hover ───
+.img-zoom-container {
+  overflow: hidden;
+  border-radius: 12px;
+
+  img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover img {
+    transform: scale(1.08);
+  }
+}
+
+// ─── Underline animation for links ───
+.animated-underline {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $warm-gradient;
+    transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+// ─── Section divider wave ───
+.wave-divider {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+
+  svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// ─── Universal card hover effect ───
+.card-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(34, 66, 116, 0.15),
+                0 8px 20px rgba(224, 90, 53, 0.1);
+  }
+}
+
+// ─── Scroll reveal animations ───
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  // Stagger delays for lists
+  &[data-delay="1"] { transition-delay: 0.1s; }
+  &[data-delay="2"] { transition-delay: 0.2s; }
+  &[data-delay="3"] { transition-delay: 0.3s; }
+  &[data-delay="4"] { transition-delay: 0.4s; }
+}
+
+// ─── Responsive image defaults ───
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Lazy loading hint
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.loaded, &[complete] {
+    opacity: 1;
+  }
+}

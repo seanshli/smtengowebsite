@@ -10,7 +10,7 @@
       <!-- 【平板】立即購買 -->
       <!-- 
       <div class="buy-now-tab-btn" @click="buyNow">
-        <img src="/images/shopping-cart.png" />
+        <img src="/images/shopping-cart.png" alt="Shopping cart" />
       </div>
       -->
       <!-- 【桌機】滑到最上icon -->
@@ -25,11 +25,11 @@
           </h1>
           <div class="subtitle fz-24 lh-36 fz-mob-14 lh-mob-18 fw-500 fw-mob-700">
             <!-- enGo智慧中控平板，可用AI語音操作，整合智慧管家、商城、食譜、物業連結及訊息管理。 -->
-            <img class="engo-white" src="/images/footer_logo_white.png" />
+            <img class="engo-white" src="/images/footer_logo_white.png" alt="enGo logo" />
             {{ $t('product.tablet_intro.info') }}
           </div>
         </div>
-        <img src="/images/tablet_1.png" alt="tablet photo" />
+        <img src="/images/tablet_1.png" alt="tablet photo" loading="eager" />
       </div>
       <div class="gradient_container_i">
         <div class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
@@ -45,7 +45,7 @@
               class="product-describe fz-72 fw-700 text-grey-blue tac mt-36 mb-56 d-tab-none d-mob-none"
             >
               <!-- 【桌機】AI智慧管家中控平板 -->
-              <img src="/images/logo_darkblue.svg" />
+              <img src="/images/logo_darkblue.svg" alt="enGo logo" />
               {{ $t('product.brand_intro.title') }}
             </h2>
             <!-- 【手機】家中的大小事，都是智管家的事... -->
@@ -70,7 +70,7 @@
           </div>
           <div class="brand_desc d-flex">
             <div class="brand_desc_img d-mob-none">
-              <img src="/images/Frame74.png" alt="廚房平板位置" />
+              <img src="/images/Frame74.png" alt="廚房平板位置" loading="lazy" />
             </div>
             <div class="brand_desc_info pl-72 pr-100 pr-tab-74 px-mob-24 text-grey-blue fw-500">
               <h3 class="fw-500 fz-36 lh-50 text-grey-blue tac pt-30 mb-32 d-tab-none d-mob-none">
@@ -444,7 +444,7 @@
           <div class="mob_img_wrap d-none d-mob-block">
             <div class="d-flex jc-c ai-fe fz-24 fw-700 text-white">
               <!-- 【桌機】AI智慧管家中控平板 -->
-              <img class="engo-white mr-8" src="/images/footer_logo_white.png" />
+              <img class="engo-white mr-8" src="/images/footer_logo_white.png" alt="enGo logo" />
               <h3 class="fz-24 fw-700 text-white">
                 {{ $t('product.brand_intro.title') }}
               </h3>
@@ -596,11 +596,11 @@
           </div>
           <div class="filter-core container px-mob-24">
             <div class="qr-code-container">
-              <img src="/images/qr-code.png" />
+              <img src="/images/qr-code.png" alt="Insurance certificate QR code" />
               <div class="">投保證書</div>
             </div>
-            <img class="d-mob-none" src="/images/filter_side.png" alt="濾芯" />
-            <img class="d-none d-mob-block" src="/images/filter_core.png" alt="濾芯" />
+            <img class="d-mob-none" src="/images/filter_side.png" alt="濾芯" loading="lazy" />
+            <img class="d-none d-mob-block" src="/images/filter_core.png" alt="濾芯" loading="lazy" />
             <div class="d-none d-mob-flex fd-column ai-fe fz-16 lh-20 fw-700">
               <!-- 1. 一體式水路板 -->
               1. {{ $t('product.water_filter.filterCore01') }}<br />
@@ -637,11 +637,12 @@
             </div>
           </div>
           <div class="water-loop container px-mob-24">
-            <img class="d-mob-none" src="/images/water_loop.png" alt="強效過濾濾芯" />
+            <img class="d-mob-none" src="/images/water_loop.png" alt="強效過濾濾芯" loading="lazy" />
             <img
               class="d-none d-mob-block"
               src="/images/water_loop_mob.png"
               alt="強效過濾濾芯"
+              loading="lazy"
             />
           </div>
         </div>
@@ -652,7 +653,7 @@
             {{ $t('product.filter_types.title') }}
           </h3>
           <div class="img_wrap d-mob-none">
-            <img src="/images/filter_types.png" alt="強效過濾濾心" />
+            <img src="/images/filter_types.png" alt="強效過濾濾心" loading="lazy" />
           </div>
           <div class="img_wrap d-none d-mob-block">
             <swiper
@@ -672,13 +673,13 @@
               :lazy="true"
             >
               <swiper-slide>
-                <img src="/images/SRM.png" alt="SRM 富鍶礦化濾心" />
+                <img src="/images/SRM.png" alt="SRM 富鍶礦化濾心" loading="lazy" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/RO.png" alt="RO逆滲透膜" />
+                <img src="/images/RO.png" alt="RO逆滲透膜" loading="lazy" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/PPC.png" alt="PPC複合濾芯" />
+                <img src="/images/PPC.png" alt="PPC複合濾芯" loading="lazy" />
               </swiper-slide>
             </swiper>
           </div>
@@ -711,10 +712,10 @@
         :class="{ expand: targetExpand, close: !targetExpand }"
         class="filter_levels_mob d-none d-mob-block bg-grey-blue2"
       >
-        <img src="/images/filter_level_mob.png" />
+        <img src="/images/filter_level_mob.png" alt="Water filtration levels diagram" loading="lazy" />
       </div>
       <div class="filter_levels d-flex fd-column ai-c d-mob-none">
-        <img src="/images/filter_level.png" />
+        <img src="/images/filter_level.png" alt="Water filtration levels diagram" loading="lazy" />
         <div class="container filter-text-container">
           <h2 class="title text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fw-700 mb-46 mb-tab-24">
             <!-- 進口RO，AI智慧淨濾，只為安心 -->
@@ -1031,7 +1032,7 @@
               <span class="subtitle fz-20 lh-28 fw-400">
                 {{ $t('product.purchase.desc') }}
               </span>
-              <div class="price tar fz-48 fw-500">＄39,800</div>
+              <div class="price tar fz-48 fw-500">＄18,000</div>
             </div>
           </div>
         </div>-->
@@ -1044,16 +1045,88 @@
         <div class="background_B">
         <div class="competitor container d-flex fd-column ai-c py-80 py-mob-0">
           <div class="tag as-fs mb-12">
-            <img src="/assets/radar.svg" alt="{{ $t('product.air_purifier.tag') }} icon" />
+            <img src="/assets/radar.svg" :alt="$t('product.air_purifier.tag') + ' icon'" />
             <span>
-              <!-- 產品比較 -->
               {{ $t('product.air_purifier.tag') }}
             </span>
           </div>
-          <h2 class="text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fw-700 d-mob-none">
-            <!-- 水維氧AI智慧淨水系統 -->
+
+          <!-- Title + headline block -->
+          <h2 class="text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fz-mob-30 lh-mob-40 fw-700 tac">
             {{ $t('product.air_purifier.title') }}
           </h2>
+          <h3 class="text-gold fz-28 lh-38 fz-mob-18 lh-mob-24 fw-500 tac mt-12 mb-8">
+            {{ $t('product.air_purifier.headline') }}
+          </h3>
+          <p class="text-white fz-18 lh-26 fz-mob-14 lh-mob-20 tac op-80 mb-24">
+            {{ $t('product.air_purifier.subHeadline') }}
+          </p>
+          <div class="ap-model-row text-white fz-14 fw-500 mb-40">
+            <span class="ap-model-label">{{ $t('product.air_purifier.modelLabel') }}：</span>
+            <span class="ap-model-pill">{{ $t('product.air_purifier.modelBlack') }}</span>
+            <span class="ap-model-pill">{{ $t('product.air_purifier.modelWhite') }}</span>
+          </div>
+
+          <!-- 4-feature grid -->
+          <div class="ap-features-grid">
+            <div class="ap-feature-card">
+              <div class="ap-feature-num">01</div>
+              <h4>{{ $t('product.air_purifier.features.filter.title') }}</h4>
+              <p>{{ $t('product.air_purifier.features.filter.desc') }}</p>
+            </div>
+            <div class="ap-feature-card">
+              <div class="ap-feature-num">02</div>
+              <h4>{{ $t('product.air_purifier.features.sound.title') }}</h4>
+              <p>{{ $t('product.air_purifier.features.sound.desc') }}</p>
+            </div>
+            <div class="ap-feature-card">
+              <div class="ap-feature-num">03</div>
+              <h4>{{ $t('product.air_purifier.features.charge.title') }}</h4>
+              <p>{{ $t('product.air_purifier.features.charge.desc') }}</p>
+            </div>
+            <div class="ap-feature-card">
+              <div class="ap-feature-num">04</div>
+              <h4>{{ $t('product.air_purifier.features.aroma.title') }}</h4>
+              <p>{{ $t('product.air_purifier.features.aroma.desc') }}</p>
+            </div>
+          </div>
+
+          <!-- Specs strip -->
+          <div class="ap-specs-strip">
+            <div class="ap-spec-cell">
+              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.filterLifeLabel') }}</div>
+              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.filterLifeValue') }}</div>
+            </div>
+            <div class="ap-spec-cell">
+              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.certLabel') }}</div>
+              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.certValue') }}</div>
+            </div>
+            <div class="ap-spec-cell">
+              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.coverageLabel') }}</div>
+              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.coverageValue') }}</div>
+            </div>
+            <div class="ap-spec-cell">
+              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.noiseLabel') }}</div>
+              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.noiseValue') }}</div>
+            </div>
+          </div>
+
+          <!-- Price + CTA block -->
+          <div class="ap-price-card">
+            <div class="ap-price-flag">{{ $t('product.air_purifier.price.tag') }}</div>
+            <div class="ap-price-amounts">
+              <span class="ap-price-msrp">
+                <span class="ap-price-msrp-label">{{ $t('product.air_purifier.price.msrpLabel') }}</span>
+                <s>{{ $t('product.air_purifier.price.msrp') }}</s>
+              </span>
+              <span class="ap-price-promo">{{ $t('product.air_purifier.price.promo') }}</span>
+            </div>
+            <div class="ap-price-bonus">★ {{ $t('product.air_purifier.price.bonus') }}</div>
+            <button class="ap-buy-btn" @click="buyAirPurifier">
+              {{ $t('product.air_purifier.price.btn') }}
+            </button>
+          </div>
+
           <div class="competitor_img d-mob-none">
             <img src="/images/AirPurifier001.png" alt="" />
             <img src="/images/AirPurifier002.png" alt="" />
@@ -1134,11 +1207,12 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { defineComponent, ref, watchEffect, defineAsyncComponent } from 'vue'
+import { defineComponent, ref, watch, watchEffect, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
 import type { CountUpOptions, ICountUp } from 'vue-countup-v3'
 import CountUp from 'vue-countup-v3'
 import { useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
+import { injectProductSchemas, cleanupProductSchemas } from '@/utils/productSchema'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
@@ -1156,6 +1230,19 @@ export default defineComponent({
     const targetIsVisible = ref(false)
     const router = useRouter()
     const hasHeader = ref(true)
+    const { trackEvent } = useAnalytics()
+
+    // Product JSON-LD schema injection for SEO rich results — re-inject on locale change
+    onMounted(() => {
+      injectProductSchemas(locale.value)
+    })
+    watch(locale, (newLocale) => {
+      injectProductSchemas(newLocale)
+    })
+    onUnmounted(() => {
+      cleanupProductSchemas()
+    })
+
     // coutup.js options
     const endValueRef = ref(2000)
     const options: CountUpOptions = {
@@ -1205,7 +1292,27 @@ export default defineComponent({
     )
 
     const buyNow = () => {
-      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=435&dtid=0')
+      trackEvent('buy_now_click', {
+        product_id: '428',
+        product_name: 'engo_water_purifier',
+        product_category: 'water_purifier',
+        product_sku: 'ENGO-WATER',
+        price_twd: 18000,
+        locale: locale.value
+      })
+      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=428&dtid=0')
+    }
+
+    const buyAirPurifier = () => {
+      trackEvent('buy_now_click', {
+        product_id: '352',
+        product_name: 'engo_air_purifier',
+        product_category: 'air_purifier',
+        product_sku: 'EAP-01',
+        price_twd: 8000,
+        locale: locale.value
+      })
+      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=352&dtid=0')
     }
 
     const targetExpand = ref(false)
@@ -1280,8 +1387,218 @@ export default defineComponent({
       openCatalogMenu,
       closeCatalogMenu,
       selectCatalogProduct,
-      closeCatalog
+      closeCatalog,
+      buyAirPurifier
     }
   }
 })
 </script>
+
+<style scoped lang="scss">
+// --- Air Purifier (#oxygen1) section styles ---
+.op-80 { opacity: 0.8; }
+
+.ap-model-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
+}
+.ap-model-label {
+  opacity: 0.7;
+}
+.ap-model-pill {
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  font-size: 0.85rem;
+  backdrop-filter: blur(2px);
+}
+
+.ap-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 60px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 28px auto 40px;
+  }
+}
+.ap-feature-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 24px 20px;
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .ap-feature-num {
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    color: #FE8B05;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.82;
+    margin: 0;
+  }
+}
+
+.ap-specs-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.ap-spec-cell {
+  padding: 18px 16px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 768px) {
+    &:nth-child(2n) { border-right: none; }
+    &:nth-child(-n+2) { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+  }
+
+  .ap-spec-label {
+    font-size: 0.78rem;
+    opacity: 0.65;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .ap-spec-value {
+    font-size: 0.98rem;
+    font-weight: 600;
+  }
+}
+
+.ap-price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, rgba(224, 90, 53, 0.18), rgba(254, 139, 5, 0.12));
+  border: 1px solid rgba(254, 139, 5, 0.35);
+  border-radius: 18px;
+  margin: 0 auto 56px;
+  max-width: 520px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 6px 28px rgba(224, 90, 53, 0.15);
+
+  @media (max-width: 560px) {
+    padding: 24px 20px;
+    margin-bottom: 36px;
+  }
+}
+.ap-price-flag {
+  display: inline-block;
+  background: #e05a35;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.ap-price-amounts {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ap-price-msrp {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0.6;
+
+  .ap-price-msrp-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+  }
+  s { font-size: 1.05rem; }
+}
+.ap-price-promo {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #FE8B05;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 560px) {
+    font-size: 2rem;
+  }
+}
+.ap-price-bonus {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffd9a8;
+  letter-spacing: 0.02em;
+}
+.ap-buy-btn {
+  margin-top: 6px;
+  padding: 12px 48px;
+  background: linear-gradient(90deg, #e05a35, #FE8B05);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 18px rgba(224, 90, 53, 0.35);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(224, 90, 53, 0.5);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+</style>

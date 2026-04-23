@@ -1,5 +1,6 @@
+// ─── Vivid Warm Color Palette ───
 $brand-blue: #224274;
-$brand-orange: #c46043;
+$brand-orange: #e05a35;
 $grey-blue: #1A3A5B;
 $grey-blue2: #043655;
 $grey-blue3: #152939;
@@ -10,6 +11,20 @@ $green: #179c8d;
 $yellow: #eb9f0c;
 $gold: #C7B763;
 $orange2: #FE8B05;
+
+// ─── Vivid Warm Accents ───
+$warm-gradient: linear-gradient(135deg, #e05a35, #FE8B05);
+$warm-gradient-soft: linear-gradient(135deg, #f8a068, #f06543);
+$blue-gradient: linear-gradient(135deg, #224274, #3bbeff);
+$sunset-gradient: linear-gradient(135deg, #e05a35, #eb9f0c, #C7B763);
+$warm-glow: rgba(224, 90, 53, 0.35);
+$gold-glow: rgba(199, 183, 99, 0.3);
+$blue-glow: rgba(59, 190, 255, 0.25);
+$warm-bg-light: #fefbf6;
+$warm-bg-cream: #fdf5ec;
+$warm-bg-section: #f9f3eb;
+$warm-shadow: 0 8px 30px rgba(34, 66, 116, 0.1);
+$warm-shadow-hover: 0 16px 50px rgba(34, 66, 116, 0.18);
 
 // fonts 文字管理
 $fz-root: 1px;
@@ -51,13 +66,17 @@ $text-color: (
 
 // spacing 管理
 $spacer: 2px;
-$rwd-breakpoints:"tab","mob";
+$rwd-breakpoints:"laptop","tab","mob-landscape","mob";
 $rwd-breakpoint-base:(
+  "laptop": 1400px,
   "tab": 1024px,
+  "mob-landscape": 768px,
   "mob": 768px
 );
 $rwd-breakpoint-min:(
+  "laptop": 1025px,
   "tab": 769px,
+  "mob-landscape": 568px,
   "mob": 0
 );
 $margin-direction:"t","r","b","l";

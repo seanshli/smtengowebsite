@@ -85,8 +85,10 @@ export const enLocale = {
   catShowroom: 'Showroom',
   english: 'English',
   chinese: 'Chinese',
+  simplifiedChinese: 'Simplified Chinese',
   french: 'French',
   japanese: 'Japanese',
+  spanish: 'Spanish',
 
   // Case Detail Page
   caseIntro: 'Project Introduction',
@@ -117,20 +119,24 @@ export const enLocale = {
   whyEngoBenefit4: '✓ Senior-friendly Design',
   whyEngoBenefit5: '✓ Visible Energy Savings',
 
+  // News section
+  newsTitle: 'Latest News',
+  newsReadMore: 'Read More',
+
   // brand
   brand: {
-    brandStoryTitle: 'Brand story',
-    intextLogo: "AI is not just tech-it's part of your home",
+    brandStoryTitle: 'The enGo Story',
+    intextLogo: 'Technology should belong to every home',
     paragraph1:
-      'In this era of rapid technological leaps and economic shifts, we believe true progress should not belong to a few. <font color="c46043">enGo is derived from "Energy Go"</font>. We hope to make energy flow more efficient through technology, allowing every family to move towards a healthier and smarter life. Starting from smart home energy saving, we create a smart living environment accessible to everyone. Whether it\'s air, water, lighting, or <font color="c46043">learning daily habits</font> to adjust, the enGo system understands your needs through AI technology, staying one step ahead to create a comfortable, safe, and environmentally friendly living experience for you.',
+      'Every morning, before you even get out of bed, <font color="e05a35">enGo has already opened your curtains, adjusted the lights, and started the air purifier.</font> Not because you set an alarm — but because it learned your rhythm. That\'s enGo — short for "<font color="e05a35">Energy Go</font>" — making energy flow smarter so technology truly becomes part of your home. We started with a simple belief: a better quality of life shouldn\'t be a luxury. Whether it\'s air, water, lighting, or your daily energy habits, enGo uses AI to understand what you need — and stays one step ahead to create a comfortable, safe, and energy-efficient home.',
     paragraph2:
-      'Facing the arrival of an aging society, we see the warmth of technology. <font color="c46043">enGo is not just a protector of "smart homes", but also a close personal butler for "senior residences".</font>',
+      'As our society ages, we see technology\'s most human side. <font color="e05a35">enGo isn\'t just a smart home guardian — it\'s a caring companion for senior living.</font> Large-font interfaces, voice control, and automated scenes make daily life effortless for elderly users, while remote monitoring and real-time alerts give their families peace of mind from anywhere.',
     paragraph3:
-      'This is not an easy path. Starting with limited funds and resources in an old building, they faced numerous challenges during the global pandemic. Every step was full of uncertainty and hardship, but their belief never wavered. Sean and his partners know that starting a business is a marathon; it\'s not just about speed, but also endurance and resilience. They encouraged each other: "Dreams are beautiful, just do it!" This passion and belief became their solid pillar.',
+      'The road here wasn\'t easy. Founder Sean and his team started in a cramped old office with limited funds, building through a global pandemic. Their motto? "Dreams are beautiful — just start!" That persistence took enGo from zero to a growing smart home brand, from Taiwan to the world.',
     paragraph4:
-      'Using cutting-edge AI technology, enGo integrates sunlight, air, water, and food healthily into every corner of home life. Their products are not just smart home innovations, but a commitment to the health and happiness of every family. Finally, enGo was born, witnessing the realization of part of their dream. However, Sean and his team know this is just the beginning, and every step in the future is the real start of making dreams come true.',
+      'Today, enGo integrates the four essentials of home life — sunlight, air, water, and food — through a single AI control tablet that connects your entire home. Our products aren\'t just technology — <font color="e05a35">they\'re a promise to every family\'s health and happiness.</font>',
     paragraph5:
-      'enGo\'s entrepreneurial journey is both an exploration of innovation and health and a resilient journey full of emotion. They believe the true value of technology lies in improving people\'s lives, allowing every family to enjoy a future of peace, health, and happiness.'
+      'We believe the true value of technology is turning ordinary days into extraordinary ones. So that every time you walk through your door, you feel taken care of. <font color="e05a35">That\'s enGo — your smart home butler.</font>'
   },
   // about
   coreValueTitle: 'Our Core Values',
@@ -144,15 +150,15 @@ export const enLocale = {
     'Empower those burdened by the economy to elevate their quality of life. While technology can benefit a few, our goal is to make it accessible and realistic for all. We all desire a comfortable and stable home. With enGo, we prioritize a quality home over luxury. We aim to bring back cherished memories and enhance family time, ensuring a better life for everyone.',
   missionTitle: 'Our Mission',
   missionSubtitle:
-    'Using the opportunity of the Internet+, with the kitchen as the heart and lifeline of the entire family, we start with traditional cabinets, elevating products, combining upstream and downstream industries for iterative upgrades, and creating an Internet with international industrial strength. We aim to build an innovative company from A to E.',
-  fiveValues: '',
-  fiveValues1: 'Artificial Intelligence Internet of Things',
-  fiveValues2: 'des applications de données',
-  fiveValues3: 'Storage System',
-  fiveValues4: 'Carrier',
+    'To bring the comfort and security of AI-powered living to every family — regardless of age or budget. Technology should serve people, not create barriers.',
+  fiveValues: 'We believe great technology needs no instruction manual. enGo turns AI into the most thoughtful member of your household — one that knows your routine, cares for your health, and keeps your family safe.',
+  fiveValues1: '<font color="e05a35">Smart Protection</font> — Water quality monitoring, leak detection, automatic gas shutoff — 24/7 peace of mind for the whole family.',
+  fiveValues2: '<font color="e05a35">Healthy Breathing</font> — Our 4-in-1 air purification system with medical-grade HEPA12 filters ensures every breath you take is clean and safe.',
+  fiveValues3: '<font color="e05a35">Warm Companionship</font> — One-touch scenes, voice control, large-font interfaces — making smart living effortless for seniors and everyone at home.',
+  fiveValues4: 'Universal Smart Devices',
   fiveValues5: 'Energy Saving, Carbon Reduction, and Social Responsibility',
   missionConclusion:
-    'Using smart kitchen cabinets to control household appliances, saving energy, and managing home food inventory to avoid unnecessary waste. By analyzing consumer application data, we form a specialized platform to address B to B to C needs, reducing costs for both producers and consumers! <br>Using data to create another future health and wellness platform as a two-way startup company',
+    'Born in Taiwan, enGo is redefining what "home" means. We don\'t just sell products — <font color="e05a35">we create a lifestyle that makes the whole family smile.</font>',
   visionTitle: 'Our Vision',
   vision1: 'Expand Application Scenarios',
   vision2: 'Technological Intelligence',
@@ -239,7 +245,49 @@ export const enLocale = {
     air_purifier: {
       tag: 'Air Purifier',
       title: 'Smart Air Purifier Series',
-      desc: 'HEPA 13 medical grade filtration effectively removes PM2.5, formaldehyde, and bacteria.'
+      desc: 'HEPA 13 medical grade filtration effectively removes PM2.5, formaldehyde, and bacteria.',
+      headline: 'One device, four essentials — for every breath at home',
+      subHeadline: 'Air purification × SoundBox × Wireless charging × Aroma diffuser',
+      modelLabel: 'Model',
+      modelBlack: 'EAP-01B Obsidian Black',
+      modelWhite: 'EAP-01W Moonlight White',
+      features: {
+        filter: {
+          title: 'Triple-layer filtration',
+          desc: 'HEPA12 + NIH1 + Silver Ionizer — captures PM2.5, bacteria, and odors in one pass'
+        },
+        sound: {
+          title: 'SoundBox Bluetooth speaker',
+          desc: 'Built-in premium Bluetooth speaker — purify the air while you enjoy music'
+        },
+        charge: {
+          title: 'Qi wireless charging',
+          desc: 'Top-panel wireless charger — drop your phone, it starts charging'
+        },
+        aroma: {
+          title: 'Aroma diffuser',
+          desc: 'Use proprietary essential oils to release calming scent as air is purified'
+        }
+      },
+      specs: {
+        title: 'Specs',
+        filterLifeLabel: 'Filter life',
+        filterLifeValue: '3–6 months (depending on air quality)',
+        certLabel: 'Certification',
+        certValue: 'NCC · BSMI',
+        coverageLabel: 'Coverage',
+        coverageValue: '8–10 ping (≈26–33 m²)',
+        noiseLabel: 'Max noise',
+        noiseValue: '< 61 dB'
+      },
+      price: {
+        tag: 'Early-bird offer',
+        msrpLabel: 'MSRP',
+        msrp: 'NT$12,000',
+        promo: 'NT$8,000',
+        bonus: 'Includes one bonus filter set',
+        btn: 'Buy now'
+      }
     },
     tablet_intro: {
       title: 'AI Smart Hub Tablet',

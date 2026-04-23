@@ -24,3 +24,11 @@ dist-ssr
 !.env.example
 .vercel
 .env*.local
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Vite build artifacts
+vite.config.ts.timestamp-*.mjs
+vite.config.js.timestamp-*.mjs

@@ -1,0 +1,23 @@
+// Phone landscape adjustments (568-768px, landscape orientation)
+@media (min-width: 568px) and (max-width: 768px) and (orientation: landscape) {
+  .home-section {
+    min-height: 100vh;
+
+    .home-section-text {
+      margin-bottom: 60px;
+
+      .page-title {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .why-engo-section {
+    max-width: 500px;
+    padding: 20px;
+  }
+
+  .product-container .tablet_intro {
+    padding-top: 60px;
+  }
+}

@@ -1,17 +1,42 @@
+@import '../utils/variables';
+
 .brand-story-section {
     width: 100%;
-    background-color: $light-grey;
+    background: $warm-bg-section;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10% 0;
+    position: relative;
+    overflow: hidden;
 
+    // Decorative orb
+    &::before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        right: -8%;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(224, 90, 53, 0.06), transparent 70%);
+        animation: floatOrb 16s ease-in-out infinite;
+        pointer-events: none;
+    }
 
     .brand-story-content-container {
         width: 60%;
+        position: relative;
+        z-index: 1;
 
-        p {}
+        p {
+            color: #555;
+            line-height: 1.9;
+            transition: color 0.3s;
+        }
+
+        h2, h3 {
+            color: #2c2c2c;
+        }
     }
-
-
 }

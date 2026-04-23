@@ -10,7 +10,7 @@
         <h2 class="fz-48 fw-700 text-grey-blue mb-56 tac">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</h2>
         
         <div class="package-grid">
-          <div v-for="pkg in packages.main_packages" :key="pkg.id" class="package-card">
+          <div v-for="pkg in packages.main_packages" :key="pkg.id" class="package-card card-hover scroll-reveal">
             <div class="p-card-header">
               <h3 class="pkg-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h3>
               <p class="pkg-usage">{{ (pkg.suggested_usage as any)[locale] || pkg.suggested_usage['zh'] }}</p>
@@ -49,7 +49,7 @@
         <!-- 可增選套裝方案 -->
         <h3 class="fz-32 fw-700 text-grey-blue mt-100 mb-48 tac">{{ $t('product.packages.addOns') }}</h3>
         <div class="addon-grid">
-           <div v-for="pkg in packages.add_on_packages" :key="pkg.id" class="addon-card">
+           <div v-for="pkg in packages.add_on_packages" :key="pkg.id" class="addon-card scroll-reveal">
             <h4 class="addon-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h4>
             <ul class="addon-specs">
               <li v-for="item in ((pkg.components as any)[locale] || pkg.components['zh'])" :key="item">{{ item }}</li>
@@ -78,7 +78,7 @@
           <!-- 評論列表區塊 -->
           <div class="reviews-list-wrapper">
             <div class="reviews-list mb-60">
-              <div v-for="(review, index) in reviews" :key="index" class="review-item p-24 mb-20 bg-white shadow-sm border-radius-15">
+              <div v-for="(review, index) in reviews" :key="index" class="review-item p-24 mb-20 bg-white shadow-sm border-radius-15 scroll-reveal">
                 <div class="d-flex jc-sb ai-c mb-12">
                   <span class="user-name fw-700">{{ review.name }}</span>
                   <span class="review-date fz-14 text-grey">{{ review.date }}</span>
@@ -130,6 +130,7 @@ import { defineComponent, ref, defineAsyncComponent } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
+import { useScrollReveal } from '@/composables/useScrollReveal'
 import packagesData from '@/data/packages.json'
 
 export default defineComponent({
@@ -143,6 +144,9 @@ export default defineComponent({
     const packages = ref(packagesData)
     const router = useRouter()
     const { trackEvent } = useAnalytics()
+
+    // Initialize scroll reveal animations
+    useScrollReveal()
 
     const buyNow = () => {
       window.open('https://h5.smtengo.com/pages/item/espier-detail?id=435&dtid=0')

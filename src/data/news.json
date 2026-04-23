@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "date": "2026-04-10",
+    "image": "/images/technology.jpeg",
+    "title": {
+      "zh": "enGo 智管家 2.0 全新升級：支援 Apple HomeKit 與語音助理",
+      "zhCN": "enGo 智管家 2.0 全新升级：支持 Apple HomeKit 与语音助手",
+      "en": "enGo Smart Butler 2.0 Upgrade: Now Supporting Apple HomeKit & Voice Assistants",
+      "fr": "enGo Smart Butler 2.0 : Désormais compatible Apple HomeKit et assistants vocaux",
+      "ja": "enGo スマートバトラー 2.0 アップグレード：Apple HomeKit・音声アシスタント対応開始",
+      "es": "enGo Smart Butler 2.0: Ahora compatible con Apple HomeKit y asistentes de voz"
+    },
+    "summary": {
+      "zh": "全新 MEDOLE 系統整合 Apple HomeKit、Google Home 與 Alexa，一句話就能控制全家電器，讓智慧生活更直覺。",
+      "zhCN": "全新 MEDOLE 系统整合 Apple HomeKit、Google Home 与 Alexa，一句话就能控制全家电器，让智慧生活更直觉。",
+      "en": "The new MEDOLE system integrates Apple HomeKit, Google Home, and Alexa — control your entire home with just your voice.",
+      "fr": "Le nouveau système MEDOLE intègre Apple HomeKit, Google Home et Alexa — contrôlez toute votre maison à la voix.",
+      "ja": "新しいMEDOLEシステムはApple HomeKit、Google Home、Alexaを統合。声だけで家中の機器を操作できます。",
+      "es": "El nuevo sistema MEDOLE integra Apple HomeKit, Google Home y Alexa — controla toda tu casa con solo tu voz."
+    }
+  },
+  {
+    "id": 2,
+    "date": "2026-03-22",
+    "image": "/images/kitchen.jpg",
+    "title": {
+      "zh": "enGo 四合一空氣清淨機榮獲 2026 台灣精品獎",
+      "zhCN": "enGo 四合一空气净化器荣获 2026 台湾精品奖",
+      "en": "enGo 4-in-1 Air Purifier Wins 2026 Taiwan Excellence Award",
+      "fr": "Le purificateur d'air 4-en-1 enGo remporte le Taiwan Excellence Award 2026",
+      "ja": "enGo 4-in-1 空気清浄機が2026年台湾エクセレンス賞を受賞",
+      "es": "El purificador de aire 4 en 1 de enGo gana el Premio de Excelencia de Taiwán 2026"
+    },
+    "summary": {
+      "zh": "搭載 HEPA12 醫療級濾網，結合 UV 殺菌、負離子與活性碳技術，enGo 四合一空氣清淨機以卓越品質獲得評審一致肯定。",
+      "zhCN": "搭载 HEPA12 医疗级滤网，结合 UV 杀菌、负离子与活性碳技术，enGo 四合一空气净化器以卓越品质获得评审一致肯定。",
+      "en": "Featuring medical-grade HEPA12 filters with UV sterilization, anion, and activated carbon technology — recognized for outstanding quality by the jury.",
+      "fr": "Équipé de filtres HEPA12 de qualité médicale avec stérilisation UV, anions et charbon actif — reconnu pour sa qualité exceptionnelle.",
+      "ja": "医療グレードHEPA12フィルターにUV除菌、マイナスイオン、活性炭技術を搭載。審査員から卓越した品質と高い評価を獲得。",
+      "es": "Con filtros HEPA12 de grado médico, esterilización UV, iones negativos y tecnología de carbón activado — reconocido por su calidad excepcional."
+    }
+  },
+  {
+    "id": 3,
+    "date": "2026-03-05",
+    "image": "/images/smart-home-hero.svg",
+    "title": {
+      "zh": "銀髮族也能輕鬆上手：enGo 推出長輩友善介面",
+      "zhCN": "银发族也能轻松上手：enGo 推出长辈友善界面",
+      "en": "Smart Living for Seniors: enGo Launches Elder-Friendly Interface",
+      "fr": "La vie connectée pour les seniors : enGo lance une interface adaptée aux aînés",
+      "ja": "シニアにもやさしいスマートライフ：enGo、高齢者向けインターフェースを発表",
+      "es": "Vida inteligente para mayores: enGo lanza interfaz amigable para adultos mayores"
+    },
+    "summary": {
+      "zh": "大字體顯示、一鍵場景模式、語音控制——enGo 新介面讓年長家人不再害怕科技，輕鬆享受智慧生活。",
+      "zhCN": "大字体显示、一键场景模式、语音控制——enGo 新界面让年长家人不再害怕科技，轻松享受智慧生活。",
+      "en": "Large fonts, one-touch scenes, and voice control — enGo's new interface helps seniors embrace smart living without the learning curve.",
+      "fr": "Grands caractères, scènes en un clic et contrôle vocal — la nouvelle interface enGo aide les seniors à adopter la maison connectée en toute simplicité.",
+      "ja": "大きな文字、ワンタッチシーン、音声操作——enGoの新インターフェースで、ご高齢の方も気軽にスマートライフを。",
+      "es": "Letra grande, escenas con un toque y control por voz — la nueva interfaz de enGo ayuda a los adultos mayores a disfrutar la vida inteligente sin complicaciones."
+    }
+  },
+  {
+    "id": 4,
+    "date": "2026-02-18",
+    "title": {
+      "zh": "enGo 體驗中心盛大開幕：歡迎預約參觀",
+      "zhCN": "enGo 体验中心盛大开幕：欢迎预约参观",
+      "en": "enGo Experience Center Grand Opening: Book Your Visit Today",
+      "fr": "Inauguration du Centre d'Expérience enGo : Réservez votre visite",
+      "ja": "enGo 体験センターグランドオープン：ご予約受付中",
+      "es": "Gran inauguración del Centro de Experiencia enGo: Reserve su visita hoy"
+    },
+    "summary": {
+      "zh": "位於台北的 enGo 全新體驗中心開放預約，親身感受 AI 智慧居家的魅力，現場由專人提供一對一導覽。",
+      "zhCN": "位于台北的 enGo 全新体验中心开放预约，亲身感受 AI 智慧居家的魅力，现场由专人提供一对一导览。",
+      "en": "Visit our new Taipei experience center to see enGo's AI-powered smart home in action. One-on-one guided tours available by appointment.",
+      "fr": "Visitez notre nouveau centre d'expérience à Taipei pour découvrir la maison intelligente enGo en action. Visites guidées sur rendez-vous.",
+      "ja": "台北の新体験センターで、enGoのAIスマートホームを実際にご体験ください。予約制の個別ガイドツアーをご用意しています。",
+      "es": "Visite nuestro nuevo centro de experiencia en Taipéi para ver el hogar inteligente enGo en acción. Visitas guiadas personalizadas con cita previa."
+    }
+  }
+]
