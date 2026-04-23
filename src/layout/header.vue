@@ -8,7 +8,7 @@
     <nav class="menu-container">
       <router-link to="/">{{ $t('homeTitle') }}</router-link>
       <div class="dropdown dropdown-spacing-right">
-        {{ $t('aboutTitle') }}
+        <router-link to="/brand" class="dropdown-trigger">{{ $t('aboutTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link to="/brand">{{ $t('brand.brandStoryTitle') }}</router-link>
           <router-link to="/mission">{{ $t('missionTitle') }}</router-link>
@@ -16,9 +16,9 @@
           <router-link to="/ecosystem">{{ $t('ecosystemTitle') }}</router-link>
         </div>
       </div>
-      
+
       <div class="dropdown">
-        <router-link to="/product">{{ $t('productTitle') }}</router-link>
+        <router-link to="/product" class="dropdown-trigger">{{ $t('productTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
           <router-link to="product?jump=oxygen">{{ $t('footer.secondLink') }}</router-link>
@@ -39,8 +39,10 @@
       >
         <option value="en">{{ $t('english') }}</option>
         <option value="zh">{{ $t('chinese') }}</option>
+        <option value="zhCN">{{ $t('simplifiedChinese') }}</option>
         <option value="fr">{{ $t('french') }}</option>
         <option value="ja">{{ $t('japanese') }}</option>
+        <option value="es">{{ $t('spanish') }}</option>
       </select>
     </nav>
     <button class="menu-icon" @click="toggleMenu()">
@@ -63,8 +65,10 @@
         >
           <option value="en">{{ $t('english') }}</option>
           <option value="zh">{{ $t('chinese') }}</option>
+          <option value="zhCN">{{ $t('simplifiedChinese') }}</option>
           <option value="fr">{{ $t('french') }}</option>
           <option value="ja">{{ $t('japanese') }}</option>
+          <option value="es">{{ $t('spanish') }}</option>
         </select>
 
         <router-link to="/">{{ $t('homeTitle') }}</router-link>

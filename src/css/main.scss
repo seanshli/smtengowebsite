@@ -1,11 +1,14 @@
 // 1. Configuration and helpers
-@import 'utils/variables', 'utils/mixins';
+@import 'utils/variables', 'utils/mixins', 'utils/phone-landscape';
 
 // 2. Vendors(third party related)
 // @import 'vendors/normalize';
 
 // 3. Base stuff
 @import 'base/reset', 'base/typography';
+
+// 3.5 Modern theme (vivid warm animations & utilities)
+@import 'base/modern-theme';
 
 // 4. Layout-related sections
 @import 'layout/header';

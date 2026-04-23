@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Google Merchant Center Product Feed
+  ===================================
+  Submit this URL at https://merchants.google.com → Products → Feeds → Add feed
+    Scheduled fetch: https://www.smtengo.com/product-feed.xml
+    Frequency: weekly
+    Target country: Taiwan
+    Content language: zh-TW (Traditional Chinese)
+
+  Spec reference: https://support.google.com/merchants/answer/7052112
+  Format: RSS 2.0 with Google namespace (g:)
+
+  Note: Products without GTIN require <g:identifier_exists>no</g:identifier_exists>
+  to be accepted without error. Price format: "<amount> <currency>" e.g. "8000.00 TWD".
+-->
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>enGo智管家 產品目錄</title>
+    <link>https://www.smtengo.com</link>
+    <description>enGo智管家 AI 智慧家居產品 — 中控平板、淨水系統、空氣清淨機</description>
+
+    <!-- enGo AI 智慧中控平板 -->
+    <item>
+      <g:id>ENGO-HUB</g:id>
+      <g:title>enGo AI 智慧中控平板</g:title>
+      <g:description>整合 MEDOLE 架構，支援 Apple HomeKit、Google Home、Amazon Alexa，一鍵控制全家智慧家電與情境模式。早鳥優惠 NT$8,000（原價 NT$12,000）。</g:description>
+      <g:link>https://www.smtengo.com/product?jump=tablet</g:link>
+      <g:image_link>https://www.smtengo.com/images/tablet_1.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>12000.00 TWD</g:price>
+      <g:sale_price>8000.00 TWD</g:sale_price>
+      <g:brand>enGo智管家</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Home &amp; Garden &gt; Household Appliances</g:google_product_category>
+      <g:product_type>智慧家居 &gt; 智慧中控</g:product_type>
+      <g:mpn>ENGO-HUB</g:mpn>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>TW</g:country>
+        <g:service>Standard</g:service>
+        <g:price>0 TWD</g:price>
+      </g:shipping>
+    </item>
+
+    <!-- 水維氧 AI 智慧淨水系統 -->
+    <item>
+      <g:id>ENGO-WATER</g:id>
+      <g:title>水維氧 AI 智慧淨水系統</g:title>
+      <g:description>電子水閥、無儲水桶設計，三重濾心過濾，通過 BSMI 商品檢驗與 SGS 水質檢測。早鳥優惠 NT$18,000（原價 NT$21,000）。</g:description>
+      <g:link>https://www.smtengo.com/product?jump=oxygen</g:link>
+      <g:image_link>https://www.smtengo.com/images/filter_side.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>21000.00 TWD</g:price>
+      <g:sale_price>18000.00 TWD</g:sale_price>
+      <g:brand>enGo智管家</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Kitchen Appliances &gt; Water Filters</g:google_product_category>
+      <g:product_type>智慧家居 &gt; 淨水系統</g:product_type>
+      <g:mpn>ENGO-WATER</g:mpn>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>TW</g:country>
+        <g:service>Standard</g:service>
+        <g:price>0 TWD</g:price>
+      </g:shipping>
+    </item>
+
+    <!-- enGo 智能空氣清淨機 EAP-01 -->
+    <item>
+      <g:id>EAP-01</g:id>
+      <g:title>enGo 智能空氣清淨機 EAP-01</g:title>
+      <g:description>一機四用：HEPA12 + NIH1 + 銀離子三重濾網、SoundBox 藍牙音響、Qi 無線充電、香氛擴香。適用 8–10 坪，最大噪音 &lt; 61dB，NCC / BSMI 認證。早鳥優惠 NT$8,000（原價 NT$12,000），贈一組濾網。</g:description>
+      <g:link>https://www.smtengo.com/product?jump=oxygen1</g:link>
+      <g:image_link>https://www.smtengo.com/images/AirPurifier001.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>12000.00 TWD</g:price>
+      <g:sale_price>8000.00 TWD</g:sale_price>
+      <g:brand>enGo智管家</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Home &amp; Garden &gt; Household Appliances &gt; Climate Control Appliances &gt; Air Purifiers</g:google_product_category>
+      <g:product_type>智慧家居 &gt; 空氣清淨機</g:product_type>
+      <g:mpn>EAP-01</g:mpn>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>TW</g:country>
+        <g:service>Standard</g:service>
+        <g:price>0 TWD</g:price>
+      </g:shipping>
+    </item>
+
+  </channel>
+</rss>

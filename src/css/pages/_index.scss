@@ -1,3 +1,5 @@
+@import '../utils/variables';
+
 * {
     margin: 0px;
     padding: 0px;
@@ -20,13 +22,47 @@
 
 .home-section {
     position: relative;
-    height: 800px;
+    height: 100vh;
+    min-height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     @media (max-width: 768px) {
         margin-bottom: 1em;
+        height: auto;
+        min-height: 600px;
+    }
+
+    // Large vivid floating orb — top-left
+    &::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(254, 139, 5, 0.25), transparent 65%);
+        animation: floatOrb 10s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    // Second orb — bottom-right
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -5%;
+        right: -5%;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(224, 90, 53, 0.2), transparent 65%);
+        animation: floatOrb 14s ease-in-out infinite reverse;
+        pointer-events: none;
+        z-index: 3;
     }
 }
 
@@ -36,6 +72,23 @@
     height: 100%;
     overflow: hidden;
     clip-path: polygon(100% 0, 100% 94%, 86% 100%, 0 86%, 0 0);
+
+    // Dramatic warm gradient overlay
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            135deg,
+            rgba(34, 66, 116, 0.55) 0%,
+            rgba(224, 90, 53, 0.35) 50%,
+            rgba(254, 139, 5, 0.25) 100%
+        );
+        z-index: 1;
+    }
 }
 
 .home-section-bg {
@@ -43,6 +96,13 @@
     height: 100%;
     object-fit: cover;
     object-position: left;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+    filter: saturate(1.4) brightness(1.1) contrast(1.05);
+}
+
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.12); }
 }
 
 .decorate-color-block {
@@ -51,6 +111,24 @@
     height: 100%;
     background: $brand-orange;
     clip-path: polygon(100% 0, 100% 94%, 76% 100%, 0 86%, 0 0);
+    opacity: 0.9;
+
+    // Animated shifting warm gradient
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #e05a35 0%, #FE8B05 30%, #eb9f0c 60%, #e05a35 100%);
+        background-size: 300% 300%;
+        animation: gradientShift 6s ease-in-out infinite;
+    }
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    33% { background-position: 100% 0%; }
+    66% { background-position: 50% 100%; }
 }
 
 
@@ -61,32 +139,48 @@
     flex-direction: column;
     gap: 10px;
     position: relative;
+    z-index: 2;
     margin-bottom: 150px;
-    margin-left: 200px;
+    margin-left: clamp(40px, 10vw, 200px);
 
     .page-title {
         padding-bottom: 10px;
-        font-size: clamp(2.2rem, 5vw, 4rem);
+        font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        text-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+
+        img {
+            filter: drop-shadow(0 4px 20px rgba(224, 90, 53, 0.4));
+            animation: bounceSubtle 3s ease-in-out infinite;
+        }
     }
 
     .section-second-title {
         font-size: clamp(1.2rem, 2.5vw, 2rem);
+        animation: fadeInLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
     }
 
     .pragraph-container {
         width: 100%;
         display: flex;
         flex-direction: column;
+        animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
 
         p {
-            line-height: 1.5;
+            line-height: 1.7;
             margin: 6px 0;
             font-size: clamp(1rem, 1.3vw, 1.15rem);
         }
     }
 
+    .section-text-en {
+        animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+    }
+
     @media (max-width: 1024px) and (min-width: 769px) {
-        // paddingk-top: 10px;
+        margin-left: 80px;
     }
 
     @media (max-width: 768px) {
@@ -119,22 +213,56 @@
     }
 }
 
-// WHY enGo Section
+// heroTextReveal replaced by fadeInUp/fadeInLeft from modern-theme
+
+// WHY enGo Section — Vivid glassmorphism card
 .why-engo-section {
     position: relative;
     width: 100%;
     max-width: 600px;
-    margin-left: 200px;
+    margin-left: clamp(40px, 10vw, 200px);
     margin-top: 40px;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 36px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(224, 90, 53, 0.15);
+    box-shadow:
+        0 8px 40px rgba(34, 66, 116, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    z-index: 2;
+    overflow: hidden;
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s both;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow:
+            0 20px 60px rgba(224, 90, 53, 0.2),
+            0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    }
+
+    // Animated gradient top bar
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #e05a35, #FE8B05, #eb9f0c, #C7B763, #e05a35);
+        background-size: 200% 100%;
+        animation: shimmer 3s linear infinite;
+    }
 
     .why-engo-title {
-        font-size: 2rem;
-        font-weight: bold;
-        color: $brand-orange;
+        font-size: 2.2rem;
+        font-weight: 800;
+        background: $warm-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         margin-bottom: 15px;
         text-align: center;
     }
@@ -149,7 +277,7 @@
 
     .why-engo-tagline-zh {
         font-size: 1.1rem;
-        color: #555;
+        color: #666;
         text-align: center;
         margin-bottom: 20px;
     }
@@ -160,11 +288,39 @@
         margin: 0;
 
         li {
-            font-size: 1.1rem;
-            color: #333;
-            padding: 10px 0;
-            line-height: 1.5;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 1.05rem;
+            color: #444;
+            padding: 14px 16px;
+            padding-left: 20px;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(224, 90, 53, 0.08);
+            border-radius: 8px;
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            cursor: default;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 0;
+                background: $warm-gradient;
+                border-radius: 2px;
+                transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+
+            &:hover {
+                padding-left: 28px;
+                background: rgba(224, 90, 53, 0.06);
+                color: #e05a35;
+
+                &::before {
+                    height: 60%;
+                }
+            }
 
             &:last-child {
                 border-bottom: none;
@@ -175,7 +331,7 @@
     @media (max-width: 768px) {
         margin-left: 0;
         margin: 20px 5%;
-        padding: 20px;
+        padding: 24px;
         max-width: 90%;
 
         .why-engo-title {
@@ -192,7 +348,7 @@
 
         .why-engo-benefits li {
             font-size: 1rem;
-            padding: 8px 0;
+            padding: 10px 12px;
         }
     }
 }
@@ -202,10 +358,17 @@
     position: absolute;
     bottom: 0px;
     left: 20px;
+    z-index: 2;
+
+    .logo-engo {
+        filter: drop-shadow(0 4px 15px rgba(0,0,0,0.15));
+        animation: bounceSubtle 4s ease-in-out infinite;
+    }
 }
 
 .logo-tagline {
     font-size: 0.8rem;
+    letter-spacing: 0.05em;
 }
 
 .logo-first-letter {

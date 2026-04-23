@@ -37,55 +37,55 @@
       <h2></h2>
       <p class="text-color-dark-grey">enGo「安購」，用科技溫暖您的心靈，讓 AI 幫您節能減碳，打造完美的家居生活。智慧管家不再是夢想。智慧家居 enGo「安購」將永遠守護您。</p>
       <h2></h2>
-<!--      <div class="vision-blocks-container">-->
-<!--        <div class="vision-block">-->
-<!--          <div class="vision-number vision-number-red">01</div>-->
-<!--          <img-->
-<!--            class="vision-image"-->
-<!--            src="/images/business-model-icon.svg"-->
-<!--            alt="business model icon"-->
-<!--          />-->
-<!--          <div class="vision-text">{{ $t('vision1') }}</div>-->
-<!--        </div>-->
-<!--        <div class="vision-block">-->
-<!--          <div class="vision-number vision-number-light-blue">02</div>-->
-<!--          <img-->
-<!--            class="vision-image"-->
-<!--            src="/images/artificial-intelligence-ai-icon.svg"-->
-<!--            alt="artificial intelligence ai icon"-->
-<!--          />-->
-<!--          <div class="vision-text">{{ $t('vision2') }}</div>-->
-<!--        </div>-->
-<!--        <div class="vision-block">-->
-<!--          <div class="vision-number vision-number-blue">03</div>-->
-<!--          <img class="vision-image" src="/images/sharing-icon.svg" alt="branding icon" />-->
-<!--          <div class="vision-text">{{ $t('vision3') }}</div>-->
-<!--        </div>-->
-<!--        <div class="vision-block">-->
-<!--          <div class="vision-number vision-number-green">04</div>-->
-<!--          <img-->
-<!--            class="vision-image"-->
-<!--            src="/images/shelf-shelves-icon.svg"-->
-<!--            alt="shelves icon"-->
-<!--          />-->
-<!--          <div class="vision-text">{{ $t('vision4') }}</div>-->
-<!--        </div>-->
-<!--        <div class="vision-block">-->
-<!--          <div class="vision-number vision-number-yellow">05</div>-->
-<!--          <img class="vision-image" src="/images/iot-icon.svg" alt="iot icon" />-->
-<!--          <div class="vision-text">{{ $t('vision5') }}</div>-->
-<!--        </div>-->
-<!--        <div class="vision-block">-->
-<!--          <div class="vision-number vision-number-red">06</div>-->
-<!--          <img class="vision-image" src="/images/engo-coin.svg" alt="enGo icon" />-->
-<!--          <div class="vision-text">{{ $t('vision6') }}</div>-->
-<!--        </div>-->
-<!--        <div class="vision-block">-->
-<!--          <div class="vision-number vision-number-light-blue">07</div>-->
-<!--          <img class="vision-image" src="/images/b2b2c.svg" alt="b2c framework icon" />-->
-<!--          <div class="vision-text">{{ $t('vision7') }}</div>-->
-<!--        </div>-->
-<!--      </div>-->
+      <div class="vision-blocks-container">
+        <div class="vision-block">
+          <div class="vision-number vision-number-red">01</div>
+          <img
+            class="vision-image"
+            src="/images/business-model-icon.svg"
+            alt="business model icon"
+          />
+          <div class="vision-text">{{ $t('vision1') }}</div>
+        </div>
+        <div class="vision-block">
+          <div class="vision-number vision-number-light-blue">02</div>
+          <img
+            class="vision-image"
+            src="/images/artificial-intelligence-ai-icon.svg"
+            alt="artificial intelligence ai icon"
+          />
+          <div class="vision-text">{{ $t('vision2') }}</div>
+        </div>
+        <div class="vision-block">
+          <div class="vision-number vision-number-blue">03</div>
+          <img class="vision-image" src="/images/sharing-icon.svg" alt="branding icon" />
+          <div class="vision-text">{{ $t('vision3') }}</div>
+        </div>
+        <div class="vision-block">
+          <div class="vision-number vision-number-green">04</div>
+          <img
+            class="vision-image"
+            src="/images/shelf-shelves-icon.svg"
+            alt="shelves icon"
+          />
+          <div class="vision-text">{{ $t('vision4') }}</div>
+        </div>
+        <div class="vision-block">
+          <div class="vision-number vision-number-yellow">05</div>
+          <img class="vision-image" src="/images/iot-icon.svg" alt="iot icon" />
+          <div class="vision-text">{{ $t('vision5') }}</div>
+        </div>
+        <div class="vision-block">
+          <div class="vision-number vision-number-red">06</div>
+          <img class="vision-image" src="/images/engo-coin.svg" alt="enGo icon" />
+          <div class="vision-text">{{ $t('vision6') }}</div>
+        </div>
+        <div class="vision-block">
+          <div class="vision-number vision-number-light-blue">07</div>
+          <img class="vision-image" src="/images/b2b2c.svg" alt="b2c framework icon" />
+          <div class="vision-text">{{ $t('vision7') }}</div>
+        </div>
+      </div>
     </div>
   </section>
 </template>

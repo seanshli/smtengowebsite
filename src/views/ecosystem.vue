@@ -5,12 +5,16 @@
       <div class="horizontal-strip"></div>
 
       <div class="video-container">
-        <video controls>
-          <source
-            src="https://oss.smtengo.com/engo-bucket-prod/enGo_marketing/video/Engo_ch_6.13.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/sKjo04dGmfg"
+            :title="$t('ecosystemTitle')"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
     </div>
   </section>

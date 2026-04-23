@@ -8,8 +8,10 @@ export const frLocale = {
   contactOnLine: 'Contactez-nous via LINE',
   english: 'Anglais',
   chinese: 'Chinois',
+  simplifiedChinese: 'Chinois simplifié',
   french: 'Français',
   japanese: 'Japonais',
+  spanish: 'Espagnol',
 
   // Case Detail Page
   caseIntro: 'Introduction du projet',
@@ -77,20 +79,24 @@ export const frLocale = {
   whyEngoBenefit4: '✓ Design accessible aux seniors',
   whyEngoBenefit5: '✓ Économies d\'énergie visibles',
 
+  // News section
+  newsTitle: 'Actualités',
+  newsReadMore: 'En savoir plus',
+
   // brand
   brand: {
-    brandStoryTitle: 'Histoire de marque',
-    intextLogo: "AI is not just tech-it's part of your home",
+    brandStoryTitle: 'L\'histoire d\'enGo',
+    intextLogo: 'La technologie devrait appartenir à chaque foyer',
     paragraph1:
-      'En cette ère de bonds technologiques rapides et de changements économiques, nous sommes convaincus que le véritable progrès ne doit pas appartenir à une élite. <font color="c46043">enGo vient de « Energy Go »</font>. Nous souhaitons rendre les flux d\'énergie plus efficaces grâce à la technologie, permettant à chaque famille d\'évoluer vers une vie plus saine et plus intelligente. En commençant par les économies d\'énergie dans la maison intelligente, nous créons un environnement de vie intelligent accessible à tous. Qu\'il s\'agisse de l\'air, de l\'eau, de l\'éclairage ou de <font color="c46043">l\'apprentissage des habitudes quotidiennes</font> pour s\'adapter, le système enGo comprend vos besoins grâce à la technologie IA, avec une longueur d\'avance pour créer pour vous une expérience de vie confortable, sûre et respectueuse de l\'environnement.',
+      'Chaque matin, avant même que vous ne sortiez du lit, <font color="e05a35">enGo a déjà ouvert vos rideaux, ajusté la lumière et activé le purificateur d\'air.</font> Pas parce que vous avez programmé une alarme — mais parce qu\'il a appris votre rythme. C\'est enGo — de « <font color="e05a35">Energy Go</font> » — rendre l\'énergie plus intelligente pour que la technologie fasse vraiment partie de votre maison. Nous avons commencé avec une conviction simple : une meilleure qualité de vie ne devrait pas être un luxe. Qu\'il s\'agisse de l\'air, de l\'eau, de l\'éclairage ou de vos habitudes énergétiques, enGo utilise l\'IA pour anticiper vos besoins et créer un foyer confortable, sûr et économe en énergie.',
     paragraph2:
-      'Face à l\'arrivée d\'une société vieillissante, nous voyons la chaleur de la technologie. <font color="c46043">enGo n\'est pas seulement le protecteur des « maisons intelligentes », mais aussi un majordome personnel proche pour les « résidences seniors ».</font>',
+      'Face au vieillissement de la société, nous voyons le côté le plus humain de la technologie. <font color="e05a35">enGo n\'est pas qu\'un gardien de maison intelligente — c\'est un compagnon attentionné pour les seniors.</font> Interface en gros caractères, commande vocale et scènes automatisées rendent le quotidien facile pour les aînés, tandis que la surveillance à distance et les alertes en temps réel offrent la tranquillité d\'esprit à leurs familles.',
     paragraph3:
-      'Ce n\'est pas un chemin facile. Commençant avec des fonds et des ressources limités dans un vieil immeuble, ils ont été confrontés à de nombreux défis pendant la pandémie mondiale. Chaque étape était pleine d\'incertitudes et de difficultés, mais leur conviction n\'a jamais faibli. Sean et ses partenaires savent que créer une entreprise est un marathon ; ce n\'est pas seulement une question de vitesse, mais aussi d\'endurance et de résilience. Ils s\'encourageaient mutuellement : « Les rêves sont beaux, agissons d\'abord ! » Cette passion et cette conviction sont devenues leur pilier solide.',
+      'Le chemin n\'a pas été facile. Le fondateur Sean et son équipe ont démarré dans un vieux bureau avec des moyens limités, construisant leur vision en pleine pandémie mondiale. Leur devise ? « Les rêves sont beaux — il suffit de commencer ! » Cette persévérance a fait d\'enGo une marque de maison intelligente en pleine croissance, de Taïwan vers le monde.',
     paragraph4:
-      'Utilisant une technologie d\'IA de pointe, enGo intègre le soleil, l\'air, l\'eau et la nourriture de manière saine dans chaque recoin de la vie domestique. Leurs produits ne sont pas seulement des innovations pour la maison intelligente, mais un engagement envers la santé et le bonheur de chaque famille. Enfin, enGo est né, témoignant de la réalisation d\'une partie de leur rêve. Cependant, Sean et son équipe savent que ce n\'est qu\'un début, et chaque étape future est le véritable commencement de la concrétisation des rêves.',
+      'Aujourd\'hui, enGo intègre les quatre essentiels du foyer — lumière, air, eau et alimentation — à travers une seule tablette de contrôle IA qui connecte toute votre maison. Nos produits ne sont pas que de la technologie — <font color="e05a35">c\'est une promesse pour la santé et le bonheur de chaque famille.</font>',
     paragraph5:
-      'Le parcours entrepreneurial d\'enGo est à la fois une exploration de l\'innovation et de la santé et un voyage résilient plein d\'émotion. Ils croient que la véritable valeur de la technologie réside dans l\'amélioration de la vie des gens, permettant à chaque famille de profiter d\'un avenir de paix, de santé et de bonheur.'
+      'Nous croyons que la vraie valeur de la technologie est de transformer les jours ordinaires en moments extraordinaires. Pour que chaque fois que vous franchissez votre porte, vous vous sentiez pris en charge. <font color="e05a35">C\'est enGo — votre majordome intelligent.</font>'
   },
 
   // about
@@ -103,18 +109,18 @@ export const frLocale = {
   coreValue2: "créer de l'espace pour que les familles soient heureuses de vivre ensemble",
   coreValue3: "créer l'avenir pour que la prochaine génération ait une meilleure qualité de vie",
   coreValueConclusion:
-    "Face à l'adversité économique, enGo offre une qualité de vie. La technologie ne doit pas être réservée qu’à une élite, elle doit être partagée pour le bien de tous. <br />enGo valorise une cuisine accessible et pratique en stimulant nos souvenirs conviviaux.",
+    "Face à l'adversité économique, enGo offre une qualité de vie. La technologie ne doit pas être réservée qu'à une élite, elle doit être partagée pour le bien de tous. <br />enGo valorise une cuisine accessible et pratique en stimulant nos souvenirs conviviaux.",
   missionTitle: 'Notre mission',
   missionSubtitle:
-    "Avec enGo l'Intelligence Artificielle au service de la cuisine n'est plus un mythe, nous modernisons les placards traditionnels, combinons les industries connexes pour des meilleurs rendements, nous développons une collaboration mondiale des compétences industrielles, de services et d'innovation. enGo développe avec son service R&D :",
-  fiveValues: '',
-  fiveValues1: 'Artificielle des objets par internet',
-  fiveValues2: 'applications de données',
-  fiveValues3: 'système de stockage',
-  fiveValues4: 'support enGo',
-  fiveValues5: "en économie d'énergie avec réduction carbone et responsabilité sociale",
+    "Offrir à chaque famille le confort et la sérénité d'un foyer intelligent — quel que soit l'âge ou le budget. La technologie doit servir les gens, pas créer des obstacles.",
+  fiveValues: "Nous croyons qu'une bonne technologie n'a pas besoin de mode d'emploi. enGo transforme l'IA en le membre le plus attentionné de votre foyer — il connaît vos habitudes, veille sur votre santé et protège votre famille.",
+  fiveValues1: "<font color=\"e05a35\">Protection intelligente</font> — Surveillance de la qualité de l'eau, détection de fuites, coupure automatique du gaz — une tranquillité d'esprit 24h/24.",
+  fiveValues2: "<font color=\"e05a35\">Air pur</font> — Notre système de purification 4-en-1 avec filtres HEPA12 de qualité médicale garantit un air sain à chaque respiration.",
+  fiveValues3: "<font color=\"e05a35\">Accompagnement chaleureux</font> — Scènes en un clic, contrôle vocal, interface en grands caractères — rendre la vie connectée accessible à tous, y compris aux seniors.",
+  fiveValues4: "Démocratisation des appareils intelligents",
+  fiveValues5: "Économie d'énergie, réduction carbone et responsabilité sociale",
   missionConclusion:
-    "Avec l'Intelligence Artificielle, la solution enGo contrôle les appareils et gère l’inventaire alimentaire pour économiser l’énergie et éviter le gaspillage. Grâce à l’analyse des données de consommateur, enGo propose une plateforme réduisant les coûts. <br>Le service R&D étudie actuellement une plateforme dédiée à la santé et au bien-être.",
+    "Née à Taïwan, enGo redéfinit le sens du mot « foyer ». Nous ne vendons pas que des produits — <font color=\"e05a35\">nous créons un art de vivre qui fait sourire toute la famille.</font>",
   visionTitle: 'Notre vision',
   vision1: "Élargir les Scénarios d'Application",
   vision2: 'Intelligence Technologique',
@@ -237,7 +243,49 @@ export const frLocale = {
   product: {
     air_purifier: {
       tag: 'Purificateur d\'air',
-      title: 'Série de purificateurs d\'air intelligents'
+      title: 'Série de purificateurs d\'air intelligents',
+      headline: 'Un appareil, quatre essentiels — pour chaque respiration à la maison',
+      subHeadline: 'Purification × SoundBox × Recharge sans fil × Diffuseur d\'arôme',
+      modelLabel: 'Modèle',
+      modelBlack: 'EAP-01B Noir Obsidienne',
+      modelWhite: 'EAP-01W Blanc Lunaire',
+      features: {
+        filter: {
+          title: 'Filtration triple couche',
+          desc: 'HEPA12 + NIH1 + Ioniseur d\'argent — capture PM2.5, bactéries et odeurs en un passage'
+        },
+        sound: {
+          title: 'Enceinte Bluetooth SoundBox',
+          desc: 'Haut-parleur Bluetooth intégré — purifiez l\'air tout en écoutant de la musique'
+        },
+        charge: {
+          title: 'Recharge sans fil Qi',
+          desc: 'Chargeur sans fil sur le dessus — posez votre téléphone, il se charge'
+        },
+        aroma: {
+          title: 'Diffuseur d\'arôme',
+          desc: 'Huiles essentielles dédiées pour diffuser un parfum apaisant pendant la purification'
+        }
+      },
+      specs: {
+        title: 'Spécifications',
+        filterLifeLabel: 'Durée du filtre',
+        filterLifeValue: '3–6 mois (selon la qualité de l\'air)',
+        certLabel: 'Certification',
+        certValue: 'NCC · BSMI',
+        coverageLabel: 'Couverture',
+        coverageValue: '8–10 ping (≈26–33 m²)',
+        noiseLabel: 'Bruit max.',
+        noiseValue: '< 61 dB'
+      },
+      price: {
+        tag: 'Offre lève-tôt',
+        msrpLabel: 'Prix conseillé',
+        msrp: 'NT$12 000',
+        promo: 'NT$8 000',
+        bonus: 'Un jeu de filtres offert',
+        btn: 'Acheter'
+      }
     },
     reviews: {
       title: 'Avis des utilisateurs',

@@ -36,11 +36,43 @@
     </div>
     <div class="faq-section py-80 py-mob-40">
       <h2 class="faq-title tac mb-50">{{ $t('faqTitle') }}</h2>
-      <div class="faq-container">
-        <div v-for="faq in faqs" :key="faq.id" class="faq-item mb-30 p-32 bg-white shadow-sm border-radius-20 border-1">
-          <h3 class="question text-brand-orange mb-12 fw-700 fz-20">Q: {{ (faq.question as any)[locale] || (faq.question as any)['zh'] }}</h3>
-          <p class="answer text-grey-333 fz-16 lh-24">A: {{ (faq.answer as any)[locale] || (faq.answer as any)['zh'] }}</p>
 
+      <!-- Category filter pills -->
+      <div class="faq-filters tac mb-30">
+        <button
+          v-for="cat in faqCategories"
+          :key="cat.key"
+          class="filter-pill"
+          :class="{ active: activeFaqFilter === cat.key }"
+          @click="activeFaqFilter = cat.key"
+        >
+          {{ cat.label }}
+        </button>
+      </div>
+
+      <!-- Popularity badge -->
+      <p class="faq-sort-hint tac mb-20" v-if="activeFaqFilter === 'all'">
+        <span class="sort-icon">&#x1F525;</span> {{ faqSortLabel }}
+      </p>
+
+      <div class="faq-container">
+        <div
+          v-for="faq in sortedFaqs"
+          :key="faq.id"
+          class="faq-item"
+          :class="{ open: openFaqId === faq.id }"
+          @click="toggleFaq(faq)"
+        >
+          <div class="faq-header">
+            <h3 class="question">Q: {{ (faq.question as any)[locale] || (faq.question as any)['zh'] }}</h3>
+            <span class="faq-toggle" :class="{ rotated: openFaqId === faq.id }">&#x25BC;</span>
+          </div>
+          <transition name="faq-expand">
+            <div v-if="openFaqId === faq.id" class="faq-body">
+              <p class="answer">A: {{ (faq.answer as any)[locale] || (faq.answer as any)['zh'] }}</p>
+              <span class="faq-helpful" v-if="faqClicks[faq.id]">{{ faqClicks[faq.id] }} {{ locale === 'zh' || locale === 'zhCN' ? '人瀏覽' : locale === 'ja' ? '回閲覧' : locale === 'fr' ? 'vues' : locale === 'es' ? 'vistas' : 'views' }}</span>
+            </div>
+          </transition>
         </div>
       </div>
     </div>
@@ -78,17 +110,94 @@
 import tutorialsData from '@/data/tutorials.json'
 import faqsData from '@/data/faqs.json'
 import knowledgeBaseData from '@/data/knowledge_base.json'
-import { ref } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 
 const tutorials = ref(tutorialsData)
-const faqs = ref(faqsData)
+const faqs = ref(faqsData as any[])
 const youtubeVideos = ref(knowledgeBaseData.youtube)
 const { trackEvent } = useAnalytics()
 const { locale } = useI18n()
 const router = useRouter()
+
+// --- Dynamic FAQ ---
+const openFaqId = ref<number | null>(null)
+const activeFaqFilter = ref('all')
+
+// Load click counts from localStorage (persists across sessions)
+const STORAGE_KEY = 'engo_faq_clicks'
+const faqClicks = ref<Record<number, number>>((() => {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY)
+    return stored ? JSON.parse(stored) : {}
+  } catch { return {} }
+})())
+
+const saveClicks = () => {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(faqClicks.value)) } catch {}
+}
+
+const toggleFaq = (faq: any) => {
+  if (openFaqId.value === faq.id) {
+    openFaqId.value = null
+  } else {
+    openFaqId.value = faq.id
+    // Track the click
+    faqClicks.value[faq.id] = (faqClicks.value[faq.id] || 0) + 1
+    saveClicks()
+    trackEvent('faq_click', { faq_id: faq.id, question: (faq.question as any)['en'] || '' })
+  }
+}
+
+// Category filter
+const faqCategoryMap: Record<string, Record<string, string>> = {
+  all: { zh: '全部', zhCN: '全部', en: 'All', fr: 'Tous', ja: 'すべて', es: 'Todos' },
+  setup: { zh: '安裝設定', zhCN: '安装设定', en: 'Setup', fr: 'Installation', ja: 'セットアップ', es: 'Instalación' },
+  features: { zh: '功能', zhCN: '功能', en: 'Features', fr: 'Fonctionnalités', ja: '機能', es: 'Funciones' },
+  products: { zh: '產品', zhCN: '产品', en: 'Products', fr: 'Produits', ja: '製品', es: 'Productos' },
+  services: { zh: '服務', zhCN: '服务', en: 'Services', fr: 'Services', ja: 'サービス', es: 'Servicios' },
+  safety: { zh: '安全', zhCN: '安全', en: 'Safety', fr: 'Sécurité', ja: '安全', es: 'Seguridad' },
+  energy: { zh: '節能', zhCN: '节能', en: 'Energy', fr: 'Énergie', ja: '省エネ', es: 'Energía' },
+  maintenance: { zh: '維護', zhCN: '维护', en: 'Maintenance', fr: 'Entretien', ja: 'メンテナンス', es: 'Mantenimiento' },
+  warranty: { zh: '保固', zhCN: '保固', en: 'Warranty', fr: 'Garantie', ja: '保証', es: 'Garantía' },
+}
+
+const faqCategories = computed(() => {
+  const usedCats = new Set(faqs.value.map((f: any) => f.category).filter(Boolean))
+  const cats = [{ key: 'all', label: faqCategoryMap['all'][locale.value] || 'All' }]
+  for (const key of Object.keys(faqCategoryMap)) {
+    if (key !== 'all' && usedCats.has(key)) {
+      cats.push({ key, label: faqCategoryMap[key][locale.value] || key })
+    }
+  }
+  return cats
+})
+
+// Sorted by popularity (click count) when showing "all"
+const sortedFaqs = computed(() => {
+  let filtered = faqs.value
+  if (activeFaqFilter.value !== 'all') {
+    filtered = filtered.filter((f: any) => f.category === activeFaqFilter.value)
+  }
+  // Sort by clicks desc (most popular first)
+  return [...filtered].sort((a: any, b: any) => {
+    return (faqClicks.value[b.id] || 0) - (faqClicks.value[a.id] || 0)
+  })
+})
+
+const faqSortLabel = computed(() => {
+  const labels: Record<string, string> = {
+    zh: '依熱門程度排序',
+    zhCN: '按热门程度排序',
+    en: 'Sorted by popularity',
+    fr: 'Trié par popularité',
+    ja: '人気順',
+    es: 'Ordenado por popularidad'
+  }
+  return labels[locale.value] || labels.en
+})
 
 const handleCardClick = (item: any) => {
   trackEvent('tutorial_card_click', { tutorial_id: item.id, title: item.title['en'] })
@@ -126,6 +235,48 @@ const handleLinkClick = (e: MouseEvent) => {
     router.push({ path, query: queryObj })
   }
 }
+
+// --- FAQPage JSON-LD Structured Data ---
+let jsonLdScript: HTMLScriptElement | null = null
+
+const injectFaqJsonLd = () => {
+  // Use English FAQ data for search engines (default language)
+  const faqItems = (faqsData as any[]).map(faq => ({
+    '@type': 'Question',
+    'name': faq.question['en'] || faq.question['zh'],
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': faq.answer['en'] || faq.answer['zh']
+    }
+  }))
+
+  const jsonLdData = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqItems
+  }
+
+  // Create and inject script element
+  jsonLdScript = document.createElement('script')
+  jsonLdScript.type = 'application/ld+json'
+  jsonLdScript.textContent = JSON.stringify(jsonLdData)
+  document.head.appendChild(jsonLdScript)
+}
+
+const removeFaqJsonLd = () => {
+  if (jsonLdScript && jsonLdScript.parentNode) {
+    jsonLdScript.parentNode.removeChild(jsonLdScript)
+    jsonLdScript = null
+  }
+}
+
+onMounted(() => {
+  injectFaqJsonLd()
+})
+
+onUnmounted(() => {
+  removeFaqJsonLd()
+})
 </script>
 
 <style scoped lang="scss">
@@ -246,6 +397,142 @@ const handleLinkClick = (e: MouseEvent) => {
         }
       }
     }
+  }
+
+  // --- FAQ Section ---
+  .faq-section {
+    .faq-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+
+      .filter-pill {
+        background: #f5f5f5;
+        border: 1.5px solid #e0e0e0;
+        border-radius: 24px;
+        padding: 8px 20px;
+        font-size: 0.88rem;
+        color: #555;
+        cursor: pointer;
+        transition: all 0.25s;
+        font-weight: 500;
+
+        &:hover {
+          border-color: #e05a35;
+          color: #e05a35;
+          background: #fff5f2;
+        }
+
+        &.active {
+          background: linear-gradient(135deg, #e05a35, #FE8B05);
+          color: white;
+          border-color: transparent;
+          box-shadow: 0 4px 12px rgba(224, 90, 53, 0.3);
+        }
+      }
+    }
+
+    .faq-sort-hint {
+      font-size: 0.85rem;
+      color: #999;
+      .sort-icon { margin-right: 4px; }
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1.5px solid #f0f0f0;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      overflow: hidden;
+
+      &:hover {
+        border-color: #e05a35;
+        box-shadow: 0 6px 20px rgba(224, 90, 53, 0.08);
+      }
+
+      &.open {
+        border-color: #e05a35;
+        box-shadow: 0 8px 30px rgba(224, 90, 53, 0.12);
+      }
+
+      .faq-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 28px;
+        gap: 16px;
+
+        .question {
+          color: #333;
+          font-size: 1.05rem;
+          font-weight: 600;
+          margin: 0;
+          flex: 1;
+          transition: color 0.25s;
+        }
+
+        .faq-toggle {
+          color: #ccc;
+          font-size: 0.75rem;
+          transition: transform 0.3s, color 0.3s;
+          flex-shrink: 0;
+
+          &.rotated {
+            transform: rotate(180deg);
+            color: #e05a35;
+          }
+        }
+      }
+
+      &:hover .question,
+      &.open .question {
+        color: #e05a35;
+      }
+
+      .faq-body {
+        padding: 0 28px 24px;
+
+        .answer {
+          color: #555;
+          font-size: 0.95rem;
+          line-height: 1.7;
+          margin: 0 0 8px;
+        }
+
+        .faq-helpful {
+          display: inline-block;
+          background: #f8f4f2;
+          color: #e05a35;
+          font-size: 0.78rem;
+          font-weight: 600;
+          padding: 3px 10px;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+
+  // FAQ expand transition
+  .faq-expand-enter-active,
+  .faq-expand-leave-active {
+    transition: all 0.3s ease;
+    max-height: 300px;
+    overflow: hidden;
+  }
+  .faq-expand-enter-from,
+  .faq-expand-leave-to {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .video-cta-section {

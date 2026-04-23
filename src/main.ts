@@ -5,11 +5,13 @@ import { createI18n } from 'vue-i18n'
 import App from './App.vue'
 import router from './router'
 import { zhLocale } from './locale/zh'
+import { zhCNLocale } from './locale/zhCN'
 import { enLocale } from './locale/en'
 import { frLocale } from './locale/fr'
 import { jaLocale } from './locale/ja'
+import { esLocale } from './locale/es'
 
-export type LanguageType = 'zh' | 'en' | 'fr' | 'ja'
+export type LanguageType = 'zh' | 'zhCN' | 'en' | 'fr' | 'ja' | 'es'
 
 export const i18n = createI18n({
   legacy: false, // Use Composition API mode
@@ -18,8 +20,10 @@ export const i18n = createI18n({
   messages: {
     en: enLocale,
     zh: zhLocale,
+    zhCN: zhCNLocale,
     fr: frLocale,
-    ja: jaLocale
+    ja: jaLocale,
+    es: esLocale
   }
 })
 const app = createApp(App)

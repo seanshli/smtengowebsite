@@ -32,7 +32,7 @@
     </div>
     <div class="bottom">
       <div class="img-container">
-        <img class="logo_footer" src="/images/footer_logo_white.png" />
+        <img class="logo_footer" src="/images/footer_logo_white.png" alt="enGo logo" />
       </div>
       <div class="info-container">
         <div class="left">
@@ -51,30 +51,42 @@
         </div>
         <div class="right">
           <router-link to="/login" class="login-footer-link">{{ $t('login') || '登入' }}</router-link>
-          <img
-            class="link_icon hover-scale"
-            src="/images/link_FB.png"
-            alt="facebook link"
-            @click="jumpToFB"
-          />
-          <img
-            class="link_icon hover-scale"
-            src="/images/link_Line.png"
-            alt="line link"
-            @click="jumpToLine"
-          />
-          <img
-            class="link_icon hover-scale"
-            src="/images/ig_icon.png"
-            alt="ig link"
-            @click="jumpToIg"
-          />
-          <img
-            class="link_icon hover-scale"
-            src="/images/yt_icon.png"
-            alt="yt link"
-            @click="jumpToYt"
-          />
+          <a
+            class="social-link"
+            href="https://www.facebook.com/smtengo"
+            target="_blank"
+            rel="me noopener noreferrer"
+            aria-label="enGo on Facebook"
+          >
+            <img class="link_icon hover-scale" src="/images/link_FB.png" alt="Facebook" />
+          </a>
+          <a
+            class="social-link"
+            href="https://lin.ee/THIUSjW"
+            target="_blank"
+            rel="me noopener noreferrer"
+            aria-label="enGo on LINE"
+          >
+            <img class="link_icon hover-scale" src="/images/link_Line.png" alt="LINE" />
+          </a>
+          <a
+            class="social-link"
+            href="https://www.instagram.com/engo_smtengo"
+            target="_blank"
+            rel="me noopener noreferrer"
+            aria-label="enGo on Instagram"
+          >
+            <img class="link_icon hover-scale" src="/images/ig_icon.png" alt="Instagram" />
+          </a>
+          <a
+            class="social-link"
+            href="https://www.youtube.com/@enGo%E6%99%BA%E6%85%A7%E7%AE%A1%E5%AE%B6"
+            target="_blank"
+            rel="me noopener noreferrer"
+            aria-label="enGo on YouTube"
+          >
+            <img class="link_icon hover-scale" src="/images/yt_icon.png" alt="YouTube" />
+          </a>
         </div>
       </div>
     </div>
@@ -104,22 +116,6 @@ export default defineComponent({
       changeLocale(selectedLanguage.value)
     }
 
-    const jumpToFB = () => {
-      window.open('https://www.facebook.com/smtengo')
-    }
-
-    const jumpToLine = () => {
-      window.open('https://lin.ee/THIUSjW')
-    }
-
-    const jumpToIg = () => {
-      window.open('https://www.instagram.com/engo_smtengo')
-    }
-    const jumpToYt = () => {
-      window.open('https://www.youtube.com/@enGo%E6%99%BA%E6%85%A7%E7%AE%A1%E5%AE%B6')
-    }
-    
-
     const jumpToProduct = () => {
       router.push({
         name: 'product',
@@ -139,10 +135,6 @@ export default defineComponent({
       selectedLanguage,
       toggleMenu,
       changeLanguage,
-      jumpToFB,
-      jumpToLine,
-      jumpToIg,
-      jumpToYt,
       jumpToProduct,
       jumpToProduct1
     }
@@ -156,6 +148,19 @@ export default defineComponent({
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
+  }
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: outline 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid #FE8B05;
+    outline-offset: 3px;
   }
 }
 

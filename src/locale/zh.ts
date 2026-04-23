@@ -88,8 +88,10 @@ export const zhLocale = {
   // Moved from Product (Generic strings)
   english: '英文',
   chinese: '中文',
+  simplifiedChinese: '简体中文',
   french: '法文',
   japanese: '日文',
+  spanish: '西班牙文',
 
   // Case Detail Page (Top Level)
   caseIntro: '專案簡介',
@@ -122,20 +124,24 @@ export const zhLocale = {
   whyEngoBenefit4: '✓ 長輩也會用的設計',
   whyEngoBenefit5: '✓ 節能省電看得見',
 
+  // News section
+  newsTitle: '最新消息',
+  newsReadMore: '了解更多',
+
   // brand (Top Level)
   brand: {
-    brandStoryTitle: 'enGo品牌故事與願景',
-    intextLogo: "AI is not just tech-it's part of your home",
+    brandStoryTitle: 'enGo 的故事',
+    intextLogo: '科技，不該只屬於少數人',
     paragraph1:
-      '在這個科技飛躍經濟變動的時代，我們深信真正的進步不該屬於少數人。<font color="c46043">enGo 取自「Energy Go」</font>我們希望透過科技讓能源流動更高效，也讓每個家庭都能邁向更健康更智慧的生活。我們從智能居家節能出發，自律打造一個人人都能輕鬆享有的智慧生活環境、無論是空氣、水質、光線、還是<font color="c46043">日常習慣學習</font>以調節， enGo系統透過AI技術懂你所需，先你一步為你打造舒適安全環保的生活體驗。',
+      '每天早晨，當你還在賴床，<font color="e05a35">enGo 已經為你拉開窗簾、調好燈光、啟動空氣清淨機。</font>不是因為你設了鬧鐘，而是因為它學會了你的生活節奏。這就是 enGo — 取自「<font color="e05a35">Energy Go</font>」— 讓能源聰明流動，讓科技真正融入你的家。我們從一個簡單的信念出發：好的生活品質，不該是豪宅的專利。無論是空氣、水質、光線，還是每天的用電習慣，enGo 透過 AI 懂你所需，先你一步打造舒適、安全、節能的居家體驗。',
     paragraph2:
-      '面對高齡化的社會的來臨，我們更看見科技的溫度～<font color="c46043">enGo不只是「智慧宅」的守護者，更是「樂齡宅」的貼身心管家。</font>',
+      '面對高齡化社會的來臨，我們看見了科技最溫暖的一面。<font color="e05a35">enGo 不只守護「智慧宅」，更是「樂齡宅」的貼心管家。</font>大字體介面、語音控制、自動場景，讓長輩輕鬆操作；遠端監控與即時通知，讓遠方的子女隨時安心。',
     paragraph3:
-      '這並非一條易行的道路。在資金有限、資源匱乏的情況下，他們選擇在一棟老舊的樓房中開始創業。儘管全球疫情帶來了無數挑戰，每一步都充滿了不確定性與艱辛，但他們的信念從未動搖。Sean 和他的創業夥伴知，創業如同一場馬拉松，比拼的不僅是速度，更是耐力與韌性。他們彼此鼓勵：“有夢最美，先做再說！”這份熱情與信念成為了他們的堅實支柱。',
+      '這條路，走得並不輕鬆。創辦人 Sean 和夥伴們從一棟老舊的辦公室起步，在資金有限、疫情肆虐的年代裡，一步一步把夢想變成現實。他們常說：「有夢最美，先做再說！」正是這份堅持，讓 enGo 從零到一，從台灣走向世界。',
     paragraph4:
-      '運用尖端 AI 技術，enGo 將陽光、空氣、水和食物健康地融入到家庭生活的每一個角落。他們的產品不僅僅是智慧家居的創新，更是對每個家庭健康與幸福的承諾。最終，enGo 成功誕生，這一時刻見證了他們夢想的一部分實現。然而，Sean 和他的團隊深知，這僅僅是起點，未來的每一步才是真正築夢踏實的開始。',
+      '今天，enGo 整合了陽光、空氣、水和食物四大生活元素，用一台 AI 中控平板串連全屋智慧設備。我們的產品不只是科技創新 — <font color="e05a35">更是對每個家庭健康與幸福的承諾。</font>',
     paragraph5:
-      'enGo 的創業旅程，既是一場對創新與健康的探索，也是一段充滿情感的堅韌旅程。他們相信，科技的真正價值在於改善人們的生活，讓每一個家庭都能夠安心享受健康與幸福的未來。'
+      '我們相信：科技的真正價值，在於讓平凡的日子變得不平凡。讓每個人回到家，都能感受到被照顧的溫暖。<font color="e05a35">這就是 enGo，你的智慧家庭管家。</font>'
   },
 
   // about (Top Level)
@@ -146,18 +152,18 @@ export const zhLocale = {
   coreValue2: '創造空間 - 給家人更多的相處空間',
   coreValue3: '創造未來 - 給下一代擁有有更的生品質',
   coreValueConclusion: '好宅不再是夢想、願平凡的我們及曾經被忽略的弱勢群體，都能透過科技能讓生活遇見更好的未來。enGo的誕生，把我們的家都變大了，生活品質都變好了⋯⋯',
-  missionTitle: '公司宗旨',
-  missionSubtitle: 'enGo 智管家致力於成為智慧家居的第一品牌，將 AI 技術深度融入家庭生活，實現更智能、更健康的居家體驗。',
-  threeCoreValue1: '技術領導：整合 AIot 應用場景並擴展其應用範圍，成為市場的絕對領導者。',
+  missionTitle: '我們的使命',
+  missionSubtitle: '讓每個家庭都能享受 AI 帶來的舒適與安心——不分年齡、不論預算，科技應該為人服務，而非成為門檻。',
+  threeCoreValue1: '技術領導：整合 AIoT 應用場景並擴展其應用範圍，成為市場的絕對領導者。',
   threeCoreValue2: '服務領導：以服務和用戶需求為核心，提供頂級的安心、健康、智能生活服務。',
   threeCoreValue3: '應用領導：透過 AI 技術與大數據的整合，成為 B2B2C 應用的領導品牌。',
-  fiveValues: '我們以三大核心領導力推動產業革新：',
-  fiveValues1: '技術領導：整合 AIoT 技術，拓展應用場景，打造市場先驅地位。',
-  fiveValues2: '服務領導：以用戶為中心，提供安心、健康的智慧生活服務。',
-  fiveValues3: '應用領導：結合 AI 與大數據，建立 B2B2C 的創新應用模式。同時，我們堅守五大創新理念：智慧應用拓展、大數據服務、雲端管理、智能載具普及與 ESG 永續發展。',
+  fiveValues: '我們相信好的科技不需要複雜的操作手冊。enGo 把 AI 變成你家裡最貼心的成員——它懂你的作息、關心你的健康、守護你的安全。',
+  fiveValues1: '<font color="e05a35">智慧守護</font>｜水質監測、漏水偵測、瓦斯自動關閉——24 小時不間斷守護全家安全。',
+  fiveValues2: '<font color="e05a35">健康呼吸</font>｜四合一空氣淨化系統搭配 HEPA12 醫療級濾網，讓每一口呼吸都安心。',
+  fiveValues3: '<font color="e05a35">溫暖陪伴</font>｜一鍵場景、語音控制、大字體介面——讓長輩也能輕鬆享受科技的美好。',
   fiveValues4: '智能載具普及化',
   fiveValues5: '節能減碳與企業永續責任',
-  missionConclusion: 'enGo 將持續引領智慧家居的未來，為全球家庭創造更美好的生活方式。',
+  missionConclusion: '從台灣出發，enGo 正在重新定義「家」的意義。我們不只是賣產品，<font color="e05a35">我們打造讓全家人都能微笑的生活方式。</font>',
   visionTitle: '公司願景',
   visionIntextLogo: '「安購」運用尖端AI技術，將陽光、空氣、水和食物智能化地整合進家庭生活。打造節能、健康、減少浪費的愛地球智慧宅。',
   vision1: '拓展運用場景',
@@ -439,7 +445,49 @@ export const zhLocale = {
     },
     air_purifier: {
       tag: '空氣清淨機',
-      title: '智能空氣清淨機系列'
+      title: '智能空氣清淨機系列',
+      headline: '一機四用，守護全家每一口呼吸',
+      subHeadline: '空氣清淨 × SoundBox × 無線充電 × 香氛擴香',
+      modelLabel: '型號',
+      modelBlack: 'EAP-01B 曜石黑',
+      modelWhite: 'EAP-01W 月光白',
+      features: {
+        filter: {
+          title: '三重過濾淨化',
+          desc: 'HEPA12 + NIH1 + 銀離子 Silver Ionizer，PM2.5、細菌、異味一次淨化'
+        },
+        sound: {
+          title: 'SoundBox 藍牙音響',
+          desc: '內建高音質藍牙喇叭，淨化同時享受音樂'
+        },
+        charge: {
+          title: 'Qi 無線充電',
+          desc: '頂蓋即放即充，手機放上就開始充電'
+        },
+        aroma: {
+          title: '香氛擴香',
+          desc: '搭配專屬精油，淨化空氣同時釋放療癒香氛'
+        }
+      },
+      specs: {
+        title: '規格總覽',
+        filterLifeLabel: '濾網壽命',
+        filterLifeValue: '3–6 個月（依空氣品質而定）',
+        certLabel: '認證',
+        certValue: 'NCC · BSMI',
+        coverageLabel: '適用坪數',
+        coverageValue: '8–10 坪',
+        noiseLabel: '最大噪音',
+        noiseValue: '< 61 dB'
+      },
+      price: {
+        tag: '早鳥優惠',
+        msrpLabel: '建議售價',
+        msrp: 'NT$12,000',
+        promo: 'NT$8,000',
+        bonus: '加贈一組原廠濾網',
+        btn: '立即購買'
+      }
     },
     reviews: {
       title: '用戶評價',

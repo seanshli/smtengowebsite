@@ -45,7 +45,7 @@
 
     <div class="cases-grid">
       <transition-group name="fade">
-        <div v-for="item in filteredCases" :key="item.id" class="case-card" @click="handleCaseClick(item)">
+        <div v-for="item in filteredCases" :key="item.id" class="case-card card-hover scroll-reveal" @click="handleCaseClick(item)">
           <div class="image-wrapper">
             <img :src="item.image" :alt="getLocaleText(item.title)" />
             <div class="overlay">
@@ -69,11 +69,15 @@ import { ref, computed } from 'vue'
 import casesData from '@/data/cases.json'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
+import { useScrollReveal } from '@/composables/useScrollReveal'
 
 import { useRouter } from 'vue-router'
 
 const { locale } = useI18n()
 const router = useRouter()
+
+// Initialize scroll reveal animations
+useScrollReveal()
 
 const types = [
   { key: 'All', labelKey: 'catAll' },

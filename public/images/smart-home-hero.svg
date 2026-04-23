@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fef0e8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="warmGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e05a35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FE8B05;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="houseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f4f2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#e05a35" flood-opacity="0.12"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)" rx="24"/>
+
+  <!-- Decorative circles -->
+  <circle cx="650" cy="100" r="80" fill="#e05a35" opacity="0.04"/>
+  <circle cx="700" cy="150" r="120" fill="#FE8B05" opacity="0.03"/>
+  <circle cx="150" cy="500" r="100" fill="#e05a35" opacity="0.04"/>
+
+  <!-- House Shape -->
+  <g filter="url(#softShadow)">
+    <!-- House body -->
+    <rect x="200" y="220" width="400" height="280" rx="16" fill="url(#houseGrad)" stroke="#f0e8e4" stroke-width="1.5"/>
+    <!-- Roof -->
+    <path d="M180 230 L400 100 L620 230" fill="none" stroke="url(#warmGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Roof fill -->
+    <path d="M200 230 L400 108 L600 230 Z" fill="white" opacity="0.7"/>
+  </g>
+
+  <!-- Door -->
+  <rect x="360" y="360" width="80" height="140" rx="8" fill="#f5ebe7" stroke="#e05a35" stroke-width="1.5"/>
+  <circle cx="425" cy="430" r="4" fill="#e05a35"/>
+
+  <!-- Windows -->
+  <!-- Left window -->
+  <rect x="240" y="270" width="90" height="70" rx="8" fill="#e8f4fd" stroke="#d0e8f5" stroke-width="1.5"/>
+  <line x1="285" y1="270" x2="285" y2="340" stroke="#d0e8f5" stroke-width="1"/>
+  <line x1="240" y1="305" x2="330" y2="305" stroke="#d0e8f5" stroke-width="1"/>
+  <!-- Warm light glow in left window -->
+  <rect x="244" y="274" width="82" height="62" rx="6" fill="#FE8B05" opacity="0.12"/>
+
+  <!-- Right window -->
+  <rect x="470" y="270" width="90" height="70" rx="8" fill="#e8f4fd" stroke="#d0e8f5" stroke-width="1.5"/>
+  <line x1="515" y1="270" x2="515" y2="340" stroke="#d0e8f5" stroke-width="1"/>
+  <line x1="470" y1="305" x2="560" y2="305" stroke="#d0e8f5" stroke-width="1"/>
+  <rect x="474" y="274" width="82" height="62" rx="6" fill="#FE8B05" opacity="0.12"/>
+
+  <!-- AI Brain / Hub icon in center of house -->
+  <g transform="translate(400, 200)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="28" fill="url(#warmGrad)" opacity="0.9"/>
+    <circle cx="0" cy="0" r="22" fill="white" opacity="0.95"/>
+    <!-- AI symbol -->
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#e05a35">AI</text>
+  </g>
+
+  <!-- Connection lines from hub to features -->
+  <g stroke="#e05a35" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4">
+    <!-- To left: water drop -->
+    <line x1="372" y1="200" x2="160" y2="180"/>
+    <!-- To right: air -->
+    <line x1="428" y1="200" x2="640" y2="180"/>
+    <!-- To bottom-left: light -->
+    <line x1="380" y1="220" x2="130" y2="380"/>
+    <!-- To bottom-right: security -->
+    <line x1="420" y1="220" x2="670" y2="380"/>
+  </g>
+
+  <!-- Feature Icons -->
+
+  <!-- Water Drop (top left) -->
+  <g transform="translate(140, 160)">
+    <circle cx="0" cy="0" r="30" fill="white" stroke="#e05a35" stroke-width="1.5" opacity="0.95"/>
+    <path d="M0 -14 C-8 -2 -12 6 -12 10 C-12 17 -7 22 0 22 C7 22 12 17 12 10 C12 6 8 -2 0 -14Z" fill="#4FC3F7" opacity="0.8"/>
+    <text x="0" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666" font-weight="500">Water</text>
+  </g>
+
+  <!-- Air / Wind (top right) -->
+  <g transform="translate(660, 160)">
+    <circle cx="0" cy="0" r="30" fill="white" stroke="#e05a35" stroke-width="1.5" opacity="0.95"/>
+    <path d="M-12 -4 Q-4 -12 4 -4 Q12 4 4 -4" fill="none" stroke="#81C784" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M-10 2 Q-2 -6 6 2 Q14 10 6 2" fill="none" stroke="#66BB6A" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M-8 8 Q0 0 8 8" fill="none" stroke="#A5D6A7" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="0" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666" font-weight="500">Air</text>
+  </g>
+
+  <!-- Light bulb (bottom left) -->
+  <g transform="translate(110, 380)">
+    <circle cx="0" cy="0" r="30" fill="white" stroke="#e05a35" stroke-width="1.5" opacity="0.95"/>
+    <circle cx="0" cy="-4" r="10" fill="#FE8B05" opacity="0.3"/>
+    <path d="M-7 -10 Q-7 -18 0 -18 Q7 -18 7 -10 Q7 -4 4 0 L-4 0 Q-7 -4 -7 -10Z" fill="none" stroke="#FE8B05" stroke-width="2"/>
+    <line x1="-3" y1="2" x2="3" y2="2" stroke="#FE8B05" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-3" y1="5" x2="3" y2="5" stroke="#FE8B05" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="0" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666" font-weight="500">Light</text>
+  </g>
+
+  <!-- Shield / Security (bottom right) -->
+  <g transform="translate(690, 380)">
+    <circle cx="0" cy="0" r="30" fill="white" stroke="#e05a35" stroke-width="1.5" opacity="0.95"/>
+    <path d="M0 -14 L-10 -8 L-10 2 Q-10 12 0 16 Q10 12 10 2 L10 -8 Z" fill="none" stroke="#e05a35" stroke-width="2"/>
+    <polyline points="-4,2 -1,6 5,-2" fill="none" stroke="#e05a35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="0" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666" font-weight="500">Security</text>
+  </g>
+
+  <!-- Family silhouettes at door -->
+  <g transform="translate(400, 480)" opacity="0.6">
+    <!-- Adult -->
+    <circle cx="-15" cy="-20" r="7" fill="#555"/>
+    <path d="M-15 -13 L-15 5 M-15 -5 L-22 -12 M-15 -5 L-8 -12 M-15 5 L-22 18 M-15 5 L-8 18" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+    <!-- Child -->
+    <circle cx="10" cy="-12" r="5.5" fill="#555"/>
+    <path d="M10 -7 L10 5 M10 -2 L4 -8 M10 -2 L16 -8 M10 5 L4 15 M10 5 L16 15" stroke="#555" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tagline -->
+  <text x="400" y="560" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#888" letter-spacing="2">
+    ONE BRAIN · ONE HOME
+  </text>
+
+  <!-- Subtle pulse rings around AI hub -->
+  <circle cx="400" cy="200" r="36" fill="none" stroke="#e05a35" stroke-width="1" opacity="0.15">
+    <animate attributeName="r" values="36;52;36" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.15;0;0.15" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="200" r="44" fill="none" stroke="#FE8B05" stroke-width="0.8" opacity="0.1">
+    <animate attributeName="r" values="44;64;44" dur="3s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0;0.1" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+</svg>
