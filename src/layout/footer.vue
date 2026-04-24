@@ -48,6 +48,13 @@
               <span class="customer-service">| {{ $t('footer.customer') }}</span>
             </div>
           </div>
+          <div class="legal-links">
+            <a href="/return-policy.html" class="legal-link">退貨政策</a>
+            <span class="sep">·</span>
+            <a href="/privacy.html" class="legal-link">隱私權政策</a>
+            <span class="sep">·</span>
+            <a href="/terms.html" class="legal-link">服務條款</a>
+          </div>
         </div>
         <div class="right">
           <router-link to="/login" class="login-footer-link">{{ $t('login') || '登入' }}</router-link>
@@ -181,5 +188,28 @@ export default defineComponent({
 
 .footer {
   /* Existing styles are handled by main.scss or scoped here if any */
+}
+
+.legal-links {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+
+  .legal-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.15s ease;
+    &:hover {
+      color: #fe8b05;
+      text-decoration: underline;
+    }
+  }
+  .sep {
+    color: rgba(255, 255, 255, 0.35);
+  }
 }
 </style>

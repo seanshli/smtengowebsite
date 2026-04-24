@@ -126,4 +126,22 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.smtengo.com/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/contact"/>
   </url>
+  <url>
+    <loc>https://www.smtengo.com/return-policy.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/privacy.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/terms.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
