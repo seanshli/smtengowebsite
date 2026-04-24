@@ -281,12 +281,13 @@ export const esLocale = {
         noiseValue: '< 61 dB'
       },
       price: {
-        tag: 'Oferta madrugadora',
+        tag: 'Oferta de preventa',
         msrpLabel: 'PVP',
-        msrp: 'NT$12.000',
-        promo: 'NT$8.000',
+        msrp: 'NT$12.800',
+        promo: 'NT$8.960',
         bonus: 'Incluye un juego de filtros adicional',
-        btn: 'Comprar ahora'
+        btn: 'Comprar ahora',
+        presaleNote: 'Artículo en preventa. Si no se alcanza el umbral mínimo de producción, enGo se reserva el derecho de cancelar la preventa y emitir un reembolso íntegro en un plazo de 30 días tras la cancelación.'
       }
     },
     tablet_intro: {

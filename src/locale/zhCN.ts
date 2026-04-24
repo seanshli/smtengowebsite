@@ -481,12 +481,13 @@ export const zhCNLocale = {
         noiseValue: '< 61 dB'
       },
       price: {
-        tag: '早鸟优惠',
-        msrpLabel: '建议售价',
-        msrp: 'NT$12,000',
-        promo: 'NT$8,000',
+        tag: '预售优惠',
+        msrpLabel: 'MSRP',
+        msrp: 'NT$12,800',
+        promo: 'NT$8,960',
         bonus: '加赠一组原厂滤网',
-        btn: '立即购买'
+        btn: '立即购买',
+        presaleNote: '预售期间商品，若预购量未达最低生产门槛，本公司保留取消预售之权利，并于取消后 30 日内全额退款。'
       }
     },
     reviews: {

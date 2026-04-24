@@ -90,7 +90,7 @@ const PRODUCTS: ProductDef[] = [
     sku: 'EAP-01',
     anchor: 'oxygen1',
     image: `${BASE_URL}/images/AirPurifier001.png`,
-    priceTWD: 8000,
+    priceTWD: 8960, // presale; MSRP 12,800 TWD
     name: {
       zh: 'enGo 智能空氣清淨機 EAP-01',
       zhCN: 'enGo 智能空气清净机 EAP-01',

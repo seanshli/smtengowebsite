@@ -346,12 +346,13 @@ export const jaLocale = {
                 noiseValue: '< 61 dB'
             },
             price: {
-                tag: '早期割引',
+                tag: '予約販売',
                 msrpLabel: '希望小売価格',
-                msrp: 'NT$12,000',
-                promo: 'NT$8,000',
+                msrp: 'NT$12,800',
+                promo: 'NT$8,960',
                 bonus: '純正フィルター1セットプレゼント',
-                btn: '今すぐ購入'
+                btn: '今すぐ購入',
+                presaleNote: '予約販売商品。最低生産数に達しない場合、当社は予約販売をキャンセルし、キャンセル後30日以内に全額返金する権利を留保します。'
             }
         },
         reviews: {

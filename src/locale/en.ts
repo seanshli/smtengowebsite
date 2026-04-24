@@ -281,12 +281,13 @@ export const enLocale = {
         noiseValue: '< 61 dB'
       },
       price: {
-        tag: 'Early-bird offer',
+        tag: 'Presale offer',
         msrpLabel: 'MSRP',
-        msrp: 'NT$12,000',
-        promo: 'NT$8,000',
+        msrp: 'NT$12,800',
+        promo: 'NT$8,960',
         bonus: 'Includes one bonus filter set',
-        btn: 'Buy now'
+        btn: 'Buy now',
+        presaleNote: 'Presale item. If the minimum production threshold is not reached, enGo reserves the right to cancel the presale and issue a full refund within 30 days of cancellation.'
       }
     },
     tablet_intro: {

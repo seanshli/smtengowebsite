@@ -1125,6 +1125,9 @@
             <button class="ap-buy-btn" @click="buyAirPurifier">
               {{ $t('product.air_purifier.price.btn') }}
             </button>
+            <div class="ap-price-presale-note">
+              {{ $t('product.air_purifier.price.presaleNote') }}
+            </div>
           </div>
 
           <div class="competitor_img d-mob-none">
@@ -1600,5 +1603,14 @@ export default defineComponent({
   &:active {
     transform: translateY(0);
   }
+}
+.ap-price-presale-note {
+  margin-top: 14px;
+  max-width: 520px;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+  letter-spacing: 0.01em;
 }
 </style>

@@ -481,12 +481,13 @@ export const zhLocale = {
         noiseValue: '< 61 dB'
       },
       price: {
-        tag: '早鳥優惠',
-        msrpLabel: '建議售價',
-        msrp: 'NT$12,000',
-        promo: 'NT$8,000',
+        tag: '預售優惠',
+        msrpLabel: 'MSRP',
+        msrp: 'NT$12,800',
+        promo: 'NT$8,960',
         bonus: '加贈一組原廠濾網',
-        btn: '立即購買'
+        btn: '立即購買',
+        presaleNote: '預售期間商品，若預購量未達最低生產門檻，本公司保留取消預售之權利，並於取消後 30 日內全額退款。'
       }
     },
     reviews: {

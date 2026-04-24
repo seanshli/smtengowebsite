@@ -279,12 +279,13 @@ export const frLocale = {
         noiseValue: '< 61 dB'
       },
       price: {
-        tag: 'Offre lève-tôt',
-        msrpLabel: 'Prix conseillé',
-        msrp: 'NT$12 000',
-        promo: 'NT$8 000',
+        tag: 'Offre de prévente',
+        msrpLabel: 'PDSF',
+        msrp: 'NT$12 800',
+        promo: 'NT$8 960',
         bonus: 'Un jeu de filtres offert',
-        btn: 'Acheter'
+        btn: 'Acheter',
+        presaleNote: 'Article en prévente. Si le seuil minimal de production n\'est pas atteint, enGo se réserve le droit d\'annuler la prévente et de procéder à un remboursement intégral sous 30 jours après l\'annulation.'
       }
     },
     reviews: {
