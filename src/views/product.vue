@@ -1299,7 +1299,7 @@ export default defineComponent({
         product_id: '428',
         product_name: 'engo_water_purifier',
         product_category: 'water_purifier',
-        product_sku: 'ENGO-WATER',
+        product_sku: 'enGoW-601',
         price_twd: 18000,
         locale: locale.value
       })

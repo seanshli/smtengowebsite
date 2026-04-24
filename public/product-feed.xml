@@ -22,8 +22,8 @@
 
     <!-- enGo AI 智慧中控平板 -->
     <item>
-      <g:id>ENGO-HUB</g:id>
-      <g:title>enGo AI 智慧中控平板</g:title>
+      <g:id>SmartPad_01</g:id>
+      <g:title>enGo AI 智慧中控平板 SmartPad_01</g:title>
       <g:description>整合 MEDOLE 架構，支援 Apple HomeKit、Google Home、Amazon Alexa，一鍵控制全家智慧家電與情境模式。早鳥優惠 NT$8,000（原價 NT$12,000）。</g:description>
       <g:link>https://www.smtengo.com/product?jump=tablet</g:link>
       <g:image_link>https://www.smtengo.com/images/tablet_1.png</g:image_link>
@@ -34,7 +34,7 @@
       <g:condition>new</g:condition>
       <g:google_product_category>Home &amp; Garden &gt; Household Appliances</g:google_product_category>
       <g:product_type>智慧家居 &gt; 智慧中控</g:product_type>
-      <g:mpn>ENGO-HUB</g:mpn>
+      <g:mpn>SmartPad_01</g:mpn>
       <g:identifier_exists>no</g:identifier_exists>
       <g:shipping>
         <g:country>TW</g:country>
@@ -45,8 +45,8 @@
 
     <!-- 水維氧 AI 智慧淨水系統 -->
     <item>
-      <g:id>ENGO-WATER</g:id>
-      <g:title>水維氧 AI 智慧淨水系統</g:title>
+      <g:id>enGoW-601</g:id>
+      <g:title>水維氧 AI 智慧淨水系統 enGoW-601</g:title>
       <g:description>電子水閥、無儲水桶設計，三重濾心過濾，通過 BSMI 商品檢驗與 SGS 水質檢測。早鳥優惠 NT$18,000（原價 NT$21,000）。</g:description>
       <g:link>https://www.smtengo.com/product?jump=oxygen</g:link>
       <g:image_link>https://www.smtengo.com/images/filter_side.png</g:image_link>
@@ -57,7 +57,7 @@
       <g:condition>new</g:condition>
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Kitchen Appliances &gt; Water Filters</g:google_product_category>
       <g:product_type>智慧家居 &gt; 淨水系統</g:product_type>
-      <g:mpn>ENGO-WATER</g:mpn>
+      <g:mpn>enGoW-601</g:mpn>
       <g:identifier_exists>no</g:identifier_exists>
       <g:shipping>
         <g:country>TW</g:country>

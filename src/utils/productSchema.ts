@@ -40,8 +40,8 @@ interface ProductDef {
 
 const PRODUCTS: ProductDef[] = [
   {
-    id: 'engo-hub',
-    sku: 'ENGO-HUB',
+    id: 'smartpad-01',
+    sku: 'SmartPad_01',
     anchor: 'tablet',
     image: `${BASE_URL}/images/product/engo-hub.jpg`,
     priceTWD: 8000, // early-bird promo; MSRP 12,000 TWD
@@ -64,7 +64,7 @@ const PRODUCTS: ProductDef[] = [
   },
   {
     id: 'water-purifier',
-    sku: 'ENGO-WATER',
+    sku: 'enGoW-601',
     anchor: 'oxygen',
     image: `${BASE_URL}/images/product/water-purifier.jpg`,
     priceTWD: 18000, // early-bird promo; MSRP 21,000 TWD
