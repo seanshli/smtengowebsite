@@ -304,10 +304,12 @@ body {
             border: 2px solid $brand-blue;
             border-radius: 16px;
             max-width: 300px;
-            height: 300px;
+            min-height: 300px;
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding-bottom: 24px;
         }
     }
 
@@ -939,6 +941,14 @@ body {
             img {
                 width: 100%;
             }
+
+            // Boost contrast on the mobile water-loop image so the dark-blue
+            // numbered markers pop against the dark-navy section background.
+            @media (max-width: 768px) {
+                img {
+                    filter: brightness(1.1) contrast(1.18) saturate(1.05);
+                }
+            }
         }
     }
 
@@ -1013,9 +1023,10 @@ body {
         max-width: 100%;
         max-height: 0;
         overflow: hidden;
+        transition: max-height 0.4s ease;
 
         &.expand {
-            max-height: 100%;
+            max-height: 9999px;
         }
 
         &.close {
