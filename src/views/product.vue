@@ -787,16 +787,16 @@
           </h6>
         </div>
       </div>
-      <div class="baby_intro d-flex d-mob-none">
+      <div class="baby_intro d-flex">
         <div class="baby_intro_img"></div>
         <div class="baby_intro_info">
-          <div class="intro_wrap py-200 px-160 py-tab-100 px-tab-60">
+          <div class="intro_wrap py-200 px-160 py-tab-100 px-tab-60 py-mob-60 px-mob-24">
             <img class="mb-8" src="/assets/water_drop.svg" alt="水滴 icon" />
-            <h6 class="text-white fz-40 lh-58 fz-tab-28 lh-tab-36 fw-700 mb-8">
+            <h6 class="text-white fz-40 lh-58 fz-tab-28 lh-tab-36 fz-mob-22 lh-mob-30 fw-700 mb-8">
               <!-- 口感清甜，淨飲更有味 -->
               {{ $t('product.baby_intro.title') }}
             </h6>
-            <h6 class="text-white fz-32 lh-46 fz-tab-20 lh-tab-32 fw-400">
+            <h6 class="text-white fz-32 lh-46 fz-tab-20 lh-tab-32 fz-mob-15 lh-mob-22 fw-400">
               <!-- 口感微甘，寶寶愛喝水，泡茶、泡咖啡更顯清甜風味 -->
               {{ $t('product.baby_intro.desc') }}
             </h6>

@@ -494,26 +494,23 @@ body {
                 }
 
                 &_B {
-                    flex: 1;
-                    min-width: 0;
+                    width: 220px;
                     height: 2px;
                     border: 2px solid $gold;
                     top: 60px;
                     left: 256px;
 
                     @media (max-width: 1024px) and (min-width: 900px) {
+                        width: 140px;
                         height: 2px;
-                        flex: 1;
-                        min-width: 0;
                         top: 47px;
                         left: 175px;
                         border: 1px solid $gold;
                     }
 
                     @media (max-width: 900px) and (min-width: 769px) {
+                        width: 110px;
                         height: 2px;
-                        flex: 1;
-                        min-width: 0;
                         top: 47px;
                         left: 175px;
                         border: 1px solid $gold;
@@ -533,28 +530,23 @@ body {
                 }
 
                 &_C {
-                    flex: 1;
-                    min-width: 0;
+                    width: 290px;
                     height: 2px;
                     border: 2px solid $gold;
-                    // top: 482px;
-                    // left: 246px;
                     top: 60px;
                     left: 325px;
 
                     @media (max-width: 1024px) and (min-width: 900px) {
+                        width: 180px;
                         height: 2px;
-                        flex: 1;
-                        min-width: 0;
                         top: 22px;
                         left: 172px;
                         border: 1px solid $gold;
                     }
 
                     @media (max-width: 900px) and (min-width: 769px) {
+                        width: 150px;
                         height: 2px;
-                        flex: 1;
-                        min-width: 0;
                         top: 22px;
                         left: 172px;
                         border: 1px solid $gold;
@@ -1058,7 +1050,8 @@ body {
     background-image: url(/images/water_molecule.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 630px;
+    min-height: 630px;
+    padding-bottom: 60px;
 
 
     .close_img_btn {
@@ -1086,6 +1079,10 @@ body {
 .baby_intro {
     height: fit-content;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
     .baby_intro {
         &_img {
             flex: 1;
@@ -1094,6 +1091,11 @@ body {
             background-size: cover;
             background-position: center;
             filter: brightness(0.8);
+
+            @media (max-width: 768px) {
+                min-height: 220px;
+                width: 100%;
+            }
         }
 
         &_info {
