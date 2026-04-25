@@ -28,6 +28,25 @@ h6 {
   margin-bottom: 0.5em;
 }
 
+// Allow headings to inherit color when inside an explicit color-utility container.
+// Without this, the global `color: #1a1a1a` above wins over a parent `.text-white`
+// (because the heading's own rule beats the parent's inherited color), making h2/h3
+// disappear on dark-bg sections like .gradient_container_ii, .filter_strength, etc.
+.text-white,
+.text-mob-white {
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-mob-white {
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
+  }
+}
+
 h1 {
   font-size: clamp(2.2rem, 4.5vw, 3.5rem);
   letter-spacing: -0.02em;
