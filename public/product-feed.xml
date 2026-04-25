@@ -28,6 +28,7 @@
       <g:link>https://www.smtengo.com/product?jump=tablet</g:link>
       <g:image_link>https://www.smtengo.com/images/tablet_1.png</g:image_link>
       <g:availability>in_stock</g:availability>
+      <g:quantity_to_sell_on_facebook>100</g:quantity_to_sell_on_facebook>
       <g:price>12000.00 TWD</g:price>
       <g:sale_price>8000.00 TWD</g:sale_price>
       <g:brand>enGo智管家</g:brand>
@@ -51,6 +52,7 @@
       <g:link>https://www.smtengo.com/product?jump=oxygen</g:link>
       <g:image_link>https://www.smtengo.com/images/filter_side.png</g:image_link>
       <g:availability>in_stock</g:availability>
+      <g:quantity_to_sell_on_facebook>100</g:quantity_to_sell_on_facebook>
       <g:price>21000.00 TWD</g:price>
       <g:sale_price>18000.00 TWD</g:sale_price>
       <g:brand>enGo智管家</g:brand>
@@ -74,6 +76,7 @@
       <g:link>https://www.smtengo.com/product?jump=oxygen1</g:link>
       <g:image_link>https://www.smtengo.com/images/AirPurifier001.png</g:image_link>
       <g:availability>in_stock</g:availability>
+      <g:quantity_to_sell_on_facebook>100</g:quantity_to_sell_on_facebook>
       <g:price>12800.00 TWD</g:price>
       <g:sale_price>8960.00 TWD</g:sale_price>
       <g:brand>enGo智管家</g:brand>

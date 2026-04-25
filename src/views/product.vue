@@ -512,7 +512,7 @@
           </div>
         </div>
       </div>
-      <div class="gradient_container_ii text-white text-mob-grey-blue2">
+      <div class="gradient_container_ii text-white">
         <div
           id="oxygen"
           class="engo_products px-142 px-tab-80 px-mob-36 pt-106 pb-124 pb-tab-0 pt-mob-140 pb-mob-20 pos-r"
@@ -574,7 +574,7 @@
             >
               <template v-slot:quality>
                 <a
-                  class="text-gold text-mob-grey-blue2"
+                  class="text-gold"
                   href="https://oss.smtengo.com/engo-bucket-prod/device/WechatIMG87.pdf"
                   target="_blank"
                 >
@@ -584,7 +584,7 @@
               </template>
               <template v-slot:valid>
                 <a
-                  class="text-gold text-mob-grey-blue2"
+                  class="text-gold"
                   href="https://oss.smtengo.com/engo-bucket-prod/device/20240719132511.pdf"
                   target="_blank"
                 >
