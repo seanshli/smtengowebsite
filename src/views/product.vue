@@ -637,12 +637,11 @@
             </div>
           </div>
           <div class="water-loop container px-mob-24">
-            <img class="d-mob-none" src="/images/water_loop.png" alt="強效過濾濾芯" loading="lazy" />
+            <img class="d-mob-none" src="/images/water_loop.png" alt="強效過濾濾芯" />
             <img
               class="d-none d-mob-block"
               src="/images/water_loop_mob.png"
               alt="強效過濾濾芯"
-              loading="lazy"
             />
           </div>
         </div>
@@ -653,7 +652,7 @@
             {{ $t('product.filter_types.title') }}
           </h3>
           <div class="img_wrap d-mob-none">
-            <img src="/images/filter_types.png" alt="強效過濾濾心" loading="lazy" />
+            <img src="/images/filter_types.png" alt="強效過濾濾心" />
           </div>
           <div class="img_wrap d-none d-mob-block">
             <swiper
@@ -670,16 +669,15 @@
                 '--swiper-pagination-color': '#fff',
                 '--swiper-navigation-size': '15px'
               }"
-              :lazy="true"
             >
               <swiper-slide>
-                <img src="/images/SRM.png" alt="SRM 富鍶礦化濾心" loading="lazy" />
+                <img src="/images/SRM.png" alt="SRM 富鍶礦化濾心" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/RO.png" alt="RO逆滲透膜" loading="lazy" />
+                <img src="/images/RO.png" alt="RO逆滲透膜" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/PPC.png" alt="PPC複合濾芯" loading="lazy" />
+                <img src="/images/PPC.png" alt="PPC複合濾芯" />
               </swiper-slide>
             </swiper>
           </div>
