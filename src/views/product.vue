@@ -695,6 +695,9 @@
               {{ $t('product.filter_levels.subTitle') }}
             </h5>
           </div>
+          <button class="wf-buy-btn" @click="buyNow">
+            {{ $t('product.purchase.btn') }} →
+          </button>
           <div
             @click="expandImg()"
             class="filter_detail_btn ai-c mt-32 py-10 px-24 text-grey-blue2 bg-white"
@@ -726,6 +729,9 @@
               {{ $t('product.filter_levels.subTitle') }}
             </h5>
           </div>
+          <button class="wf-buy-btn wf-buy-btn--desktop" @click="buyNow">
+            {{ $t('product.purchase.btn') }} →
+          </button>
         </div>
       </div>
       <div
@@ -1600,6 +1606,38 @@ export default defineComponent({
   }
   &:active {
     transform: translateY(0);
+  }
+}
+
+// Water filter buy CTA — mirrors .ap-buy-btn styling.
+// Mobile version sits inside the .filter_levels mobile container above 查看更多.
+// Desktop version (.wf-buy-btn--desktop) sits below the filter_levels subtitle.
+.wf-buy-btn {
+  margin-top: 24px;
+  padding: 12px 44px;
+  background: linear-gradient(90deg, #e05a35, #FE8B05);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 18px rgba(224, 90, 53, 0.35);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(224, 90, 53, 0.5);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+
+  &--desktop {
+    margin-top: 32px;
+    padding: 14px 56px;
+    font-size: 1.15rem;
   }
 }
 .ap-price-presale-note {
