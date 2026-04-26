@@ -82,7 +82,7 @@
           <div class="news-card-body">
             <span class="news-date">{{ formatDate(item.date) }}</span>
             <h4 class="news-title">{{ tr(item.title) }}</h4>
-            <p class="news-summary">{{ tr(item.summary) }}</p>
+            <p class="news-summary" v-html="tr(item.summary)"></p>
           </div>
         </div>
       </div>
@@ -338,8 +338,22 @@ export default defineComponent({
   color: #666;
   line-height: 1.7;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+
+  // Inline links inside news summaries (added via v-html in news.json).
+  // Coral underline + hover deepens — keeps brand consistency with CTAs.
+  a {
+    color: #e05a35;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #FE8B05;
+    }
+  }
 }
 </style>

@@ -187,9 +187,26 @@
             flex-wrap: wrap;
         }
 
+        // Social icons row — stretch across full footer width on mobile,
+        // bigger tappable icons (was 15% wide / 34px icons, way too cramped on phone).
         .right {
-            width: 15%;
-            margin-top: 24px;
+            width: 100%;
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 12px;
+        }
+
+        .link_icon {
+            height: 56px;
+            width: 56px;
+            margin: 0;
+            opacity: 1;
+        }
+
+        .login-footer-link {
+            margin-right: 0;
         }
     }
 
