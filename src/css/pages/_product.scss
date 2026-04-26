@@ -1049,6 +1049,26 @@ body {
         align-items: center;
         margin-top: 8rem;
 
+        // Dark scrim behind the text so white headline + body don't get lost on
+        // the cream/light areas of /images/filter_level.png. Radial gradient keeps
+        // the image visible at edges while darkening the text-overlap zone.
+        &::before {
+            content: '';
+            position: absolute;
+            inset: -8% -10%;
+            background: radial-gradient(ellipse at center,
+                rgba(8, 18, 36, 0.58) 0%,
+                rgba(8, 18, 36, 0.42) 40%,
+                rgba(8, 18, 36, 0) 75%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+
         .subtitle {
             max-width: 893px;
         }

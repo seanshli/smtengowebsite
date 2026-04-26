@@ -695,9 +695,6 @@
               {{ $t('product.filter_levels.subTitle') }}
             </h5>
           </div>
-          <button class="wf-buy-btn" @click="buyNow">
-            {{ $t('product.purchase.btn') }} →
-          </button>
           <div
             @click="expandImg()"
             class="filter_detail_btn ai-c mt-32 py-10 px-24 text-grey-blue2 bg-white"
@@ -729,9 +726,6 @@
               {{ $t('product.filter_levels.subTitle') }}
             </h5>
           </div>
-          <button class="wf-buy-btn wf-buy-btn--desktop" @click="buyNow">
-            {{ $t('product.purchase.btn') }} →
-          </button>
         </div>
       </div>
       <div
@@ -1040,6 +1034,23 @@
             </div>
           </div>
         </div>-->
+      </div>
+      <!-- 水維氧 enGoW-601 pricing card — mirrors EAP-01 .ap-price-card pattern -->
+      <div class="wf-price-section">
+        <div class="wf-price-card">
+          <div class="wf-price-flag">早鳥優惠</div>
+          <div class="wf-price-amounts">
+            <span class="wf-price-msrp">
+              <span class="wf-price-msrp-label">MSRP</span>
+              <s>NT$21,000</s>
+            </span>
+            <span class="wf-price-promo">NT$18,000</span>
+          </div>
+          <div class="wf-price-bonus">★ 通過 SGS 水質檢測 · BSMI 商品檢驗 雙重認證</div>
+          <button class="wf-buy-btn-card" @click="buyNow">
+            {{ $t('product.purchase.btn') }} →
+          </button>
+        </div>
       </div>
       <div
   id="oxygen1"
@@ -1609,17 +1620,93 @@ export default defineComponent({
   }
 }
 
-// Water filter buy CTA — mirrors .ap-buy-btn styling.
-// Mobile version sits inside the .filter_levels mobile container above 查看更多.
-// Desktop version (.wf-buy-btn--desktop) sits below the filter_levels subtitle.
-.wf-buy-btn {
-  margin-top: 24px;
-  padding: 12px 44px;
+// Water filter pricing card — mirrors .ap-price-card pattern.
+// Sits at the very end of the water filter section (after gradient_container_iii feature list,
+// before EAP-01 #oxygen1 starts). Provides MSRP/sale + buy CTA for enGoW-601.
+.wf-price-section {
+  background: linear-gradient(to bottom, #1B2944, #152939);
+  padding: 64px 24px 80px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px 56px;
+  }
+}
+.wf-price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, rgba(59, 190, 255, 0.18), rgba(199, 183, 99, 0.12));
+  border: 1px solid rgba(199, 183, 99, 0.35);
+  border-radius: 18px;
+  max-width: 520px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 6px 28px rgba(59, 190, 255, 0.15);
+
+  @media (max-width: 560px) {
+    padding: 24px 20px;
+  }
+}
+.wf-price-flag {
+  display: inline-block;
+  background: #C7B763;
+  color: #152939;
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.wf-price-amounts {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wf-price-msrp {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0.6;
+
+  .wf-price-msrp-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+  }
+  s { font-size: 1.05rem; }
+}
+.wf-price-promo {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #3bbeff;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 560px) {
+    font-size: 2rem;
+  }
+}
+.wf-price-bonus {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+}
+.wf-buy-btn-card {
+  margin-top: 6px;
+  padding: 12px 48px;
   background: linear-gradient(90deg, #e05a35, #FE8B05);
   color: #fff;
   border: none;
   border-radius: 999px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   cursor: pointer;
@@ -1632,12 +1719,6 @@ export default defineComponent({
   }
   &:active {
     transform: translateY(0);
-  }
-
-  &--desktop {
-    margin-top: 32px;
-    padding: 14px 56px;
-    font-size: 1.15rem;
   }
 }
 .ap-price-presale-note {
