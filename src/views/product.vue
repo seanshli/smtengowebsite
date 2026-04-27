@@ -1137,9 +1137,17 @@
               <span class="ap-price-promo">{{ $t('product.air_purifier.price.promo') }}</span>
             </div>
             <div class="ap-price-bonus">★ {{ $t('product.air_purifier.price.bonus') }}</div>
-            <button class="ap-buy-btn" @click="buyAirPurifier">
-              {{ $t('product.air_purifier.price.btn') }}
-            </button>
+            <!--
+              EAP-01 buy CTA temporarily disabled — presale will launch on 嘖嘖 (zeczec) crowdfunding platform
+              per partner request. Re-enable + swap href to the 嘖嘖 project URL once it's live. Keep button
+              markup intact so we just flip back the comment when ready.
+              <button class="ap-buy-btn" @click="buyAirPurifier">
+                {{ $t('product.air_purifier.price.btn') }}
+              </button>
+            -->
+            <div class="ap-buy-btn ap-buy-btn--placeholder" aria-disabled="true">
+              即將於嘖嘖開放預售 · 敬請期待
+            </div>
             <div class="ap-price-presale-note">
               {{ $t('product.air_purifier.price.presaleNote') }}
             </div>
@@ -1617,6 +1625,26 @@ export default defineComponent({
   }
   &:active {
     transform: translateY(0);
+  }
+
+  // "Coming soon" placeholder while EAP-01 buy is disabled awaiting the 嘖嘖
+  // crowdfunding URL. Same overall shape/sizing as the active button so the
+  // price card layout stays steady; muted palette + no hover lift to make it
+  // unmistakably non-interactive.
+  &--placeholder {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    border: 1px dashed rgba(255, 217, 168, 0.55);
+    box-shadow: none;
+    cursor: default;
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+
+    &:hover, &:active {
+      transform: none;
+      box-shadow: none;
+    }
   }
 }
 
