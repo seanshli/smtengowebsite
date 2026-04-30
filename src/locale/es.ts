@@ -249,8 +249,8 @@ export const esLocale = {
       headline: 'Un dispositivo, cuatro esenciales — para cada respiración en casa',
       subHeadline: 'Purificación × SoundBox × Carga inalámbrica × Difusor de aroma',
       modelLabel: 'Modelo',
-      modelBlack: 'EAP-01B Negro Obsidiana',
-      modelWhite: 'EAP-01W Blanco Lunar',
+      modelBlack: 'EAP-01B Negro Elegante',
+      modelWhite: 'EAP-01W Blanco Minimalista',
       features: {
         filter: {
           title: 'Filtración de triple capa',

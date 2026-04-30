@@ -247,8 +247,8 @@ export const frLocale = {
       headline: 'Un appareil, quatre essentiels — pour chaque respiration à la maison',
       subHeadline: 'Purification × SoundBox × Recharge sans fil × Diffuseur d\'arôme',
       modelLabel: 'Modèle',
-      modelBlack: 'EAP-01B Noir Obsidienne',
-      modelWhite: 'EAP-01W Blanc Lunaire',
+      modelBlack: "EAP-01B Noir Élégant",
+      modelWhite: "EAP-01W Blanc Minimaliste",
       features: {
         filter: {
           title: 'Filtration triple couche',

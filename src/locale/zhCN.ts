@@ -449,8 +449,8 @@ export const zhCNLocale = {
       headline: '一机四用，守护全家每一口呼吸',
       subHeadline: '空气净化 × SoundBox × 无线充电 × 香氛扩香',
       modelLabel: '型号',
-      modelBlack: 'EAP-01B 曜石黑',
-      modelWhite: 'EAP-01W 月光白',
+      modelBlack: 'EAP-01B 时尚黑',
+      modelWhite: 'EAP-01W 简约白',
       features: {
         filter: {
           title: '三重过滤净化',

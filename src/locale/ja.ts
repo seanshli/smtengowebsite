@@ -314,8 +314,8 @@ export const jaLocale = {
             headline: '一台四役、家族の一呼吸を守る',
             subHeadline: '空気清浄 × SoundBox × ワイヤレス充電 × アロマディフューザー',
             modelLabel: 'モデル',
-            modelBlack: 'EAP-01B オブシディアンブラック',
-            modelWhite: 'EAP-01W ムーンライトホワイト',
+            modelBlack: 'EAP-01B スタイリッシュブラック',
+            modelWhite: 'EAP-01W ミニマルホワイト',
             features: {
                 filter: {
                     title: '三層フィルター浄化',

@@ -249,8 +249,8 @@ export const enLocale = {
       headline: 'One device, four essentials — for every breath at home',
       subHeadline: 'Air purification × SoundBox × Wireless charging × Aroma diffuser',
       modelLabel: 'Model',
-      modelBlack: 'EAP-01B Obsidian Black',
-      modelWhite: 'EAP-01W Moonlight White',
+      modelBlack: 'EAP-01B Stylish Black',
+      modelWhite: 'EAP-01W Minimalist White',
       features: {
         filter: {
           title: 'Triple-layer filtration',
