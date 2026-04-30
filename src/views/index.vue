@@ -342,9 +342,12 @@ export default defineComponent({
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  // Inline links inside news summaries (added via v-html in news.json).
+  // Inline links inside news summaries (rendered via v-html from news.json).
+  // Use :deep() so Vue's <style scoped> data-attribute selectors penetrate
+  // into v-html content — without :deep() the rule doesn't match because
+  // v-html-rendered <a> tags don't get the scoped data-v-xxxx attr.
   // Coral underline + hover deepens — keeps brand consistency with CTAs.
-  a {
+  :deep(a) {
     color: #e05a35;
     font-weight: 600;
     text-decoration: underline;
