@@ -1137,16 +1137,12 @@
               <span class="ap-price-promo">{{ $t('product.air_purifier.price.promo') }}</span>
             </div>
             <div class="ap-price-bonus">★ {{ $t('product.air_purifier.price.bonus') }}</div>
-            <!--
-              EAP-01 buy CTA temporarily disabled — presale will launch on 嘖嘖 (zeczec) crowdfunding platform
-              per partner request. Re-enable + swap href to the 嘖嘖 project URL once it's live. Keep button
-              markup intact so we just flip back the comment when ready.
-              <button class="ap-buy-btn" @click="buyAirPurifier">
-                {{ $t('product.air_purifier.price.btn') }}
-              </button>
-            -->
-            <div class="ap-buy-btn ap-buy-btn--placeholder" aria-disabled="true">
-              即將於嘖嘖開放預售 · 敬請期待
+            <button class="ap-buy-btn" @click="buyAirPurifier">
+              立即至嘖嘖預訂 →
+            </button>
+            <div class="ap-voucher-offer">
+              💌 提供聯絡資料即可獲得獨家折扣碼
+              <a href="/contact?topic=eap01_voucher" class="ap-voucher-link">立即索取 →</a>
             </div>
             <div class="ap-price-presale-note">
               {{ $t('product.air_purifier.price.presaleNote') }}
@@ -1333,12 +1329,16 @@ export default defineComponent({
       trackEvent('buy_now_click', {
         product_id: '352',
         product_name: 'engo_air_purifier',
-        product_category: 'air_purifier',
+        product_category: 'air_purifier_zeczec',
         product_sku: 'EAP-01',
-        price_twd: 8000,
-        locale: locale.value
+        price_twd: 8960,
+        locale: locale.value,
+        platform: 'zeczec'
       })
-      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=352&dtid=0')
+      // EAP-01 presale runs on 嘖嘖 (zeczec) crowdfunding platform.
+      // Smtengo direct buy via h5.smtengo.com/?id=352 is intentionally bypassed —
+      // all traffic should funnel through 嘖嘖 during the presale window.
+      window.open('https://www.zeczec.com/projects/enGo-Smart-Manager-AI-AirPurifier', '_blank', 'noopener')
     }
 
     const targetExpand = ref(false)
@@ -1627,10 +1627,8 @@ export default defineComponent({
     transform: translateY(0);
   }
 
-  // "Coming soon" placeholder while EAP-01 buy is disabled awaiting the 嘖嘖
-  // crowdfunding URL. Same overall shape/sizing as the active button so the
-  // price card layout stays steady; muted palette + no hover lift to make it
-  // unmistakably non-interactive.
+  // "Coming soon" placeholder retained for future use (e.g., between presale
+  // windows or for other product launches). Currently unused while 嘖嘖 is live.
   &--placeholder {
     background: rgba(255, 255, 255, 0.08);
     color: rgba(255, 255, 255, 0.85);
@@ -1645,6 +1643,35 @@ export default defineComponent({
       transform: none;
       box-shadow: none;
     }
+  }
+}
+
+// Voucher offer line inside the EAP-01 price card — sits between the buy
+// button and the presale note. Light divider + soft accent so it reads as a
+// secondary path (lead capture for a discount code), not competing with the
+// primary buy CTA.
+.ap-voucher-offer {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.18);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.78);
+  text-align: center;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+.ap-voucher-link {
+  display: inline-block;
+  margin-left: 4px;
+  color: #FE8B05;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(254, 139, 5, 0.5);
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: #ffd9a8;
+    border-bottom-color: #ffd9a8;
   }
 }
 
