@@ -9,6 +9,14 @@
           <div class="phone">{{ $t('contactUsSubtitle2') }}</div>
         </div>
       </div>
+      <!-- Voucher banner: shown only when /contact?topic=eap01_voucher -->
+      <div v-if="isVoucherRequest" class="voucher-banner">
+        <span class="voucher-banner-icon">💌</span>
+        <div class="voucher-banner-text">
+          <strong>EAP-01 獨家折扣碼申請</strong>
+          <p>填寫以下聯絡資料，我們將於 1–2 個工作日內將獨家折扣碼寄至您的 Email。</p>
+        </div>
+      </div>
       <div class="contact_inputs flex_vertical">
         <div class="input_label">
           <input
@@ -112,10 +120,10 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref, computed } from 'vue'
+import { defineComponent, ref, computed, onMounted } from 'vue'
 import { config } from '../configs/systemConfig'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 
 export default defineComponent({
@@ -133,6 +141,13 @@ export default defineComponent({
     const message = ref('')
     const errorMessage = ref('')
 
+    // Voucher lead-capture flow: when /contact?topic=eap01_voucher is opened
+    // (e.g. from the EAP-01 product page voucher link), prefill the form with
+    // air-purifier interest + a templated message so the user just adds their
+    // contact details. submitForm() also tags the productType with a voucher
+    // flag so admins can filter these in Supabase.
+    const isVoucherRequest = ref(false)
+
     const { locale, tm, t } = useI18n()
     const { trackEvent } = useAnalytics()
 
@@ -140,7 +155,20 @@ export default defineComponent({
       return tm('planItems') as any[]
     })
 
+    const route = useRoute()
     const router = useRouter()
+
+    onMounted(() => {
+      const topic = (route.query.topic || '').toString()
+      if (topic === 'eap01_voucher') {
+        isVoucherRequest.value = true
+        interest.value = 'product'
+        messagetype.value = 'airfilter'
+        // Pre-fill the message; user can edit before submitting.
+        message.value = '我想申請 EAP-01 空氣清淨機的獨家折扣碼，請寄送至上方留下的 Email。謝謝！'
+        trackEvent('voucher_form_opened', { product: 'EAP-01', source: route.query.from || 'direct' })
+      }
+    })
 
     const jumpToLine = () => {
       trackEvent('click_contact_line')
@@ -242,6 +270,12 @@ export default defineComponent({
         }
         console.log('Product/Plan section is visible');
       }
+
+      // Voucher flow: tag productType so it's easy to filter these submissions
+      // in Supabase + the email subject will read "voucher_eap01,..." for fast triage.
+      if (isVoucherRequest.value) {
+        productType = `voucher_eap01,${productType}`;
+      }
       const data = {
         name: name.value,
         email: email.value,
@@ -295,7 +329,8 @@ export default defineComponent({
       locale,
       interest,
       planOptions,
-      jumpToLine
+      jumpToLine,
+      isVoucherRequest
     }
   }
 })
@@ -304,6 +339,61 @@ export default defineComponent({
 <style scoped lang="scss">
 @import '@/css/utils/_variables.scss';
 @import '@/css/pages/_contact.scss';
+
+.voucher-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #fff5f0 0%, #ffe7d9 100%);
+  border: 1px solid #f5c4ad;
+  border-left: 4px solid #e05a35;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 0 0 24px;
+  box-shadow: 0 2px 12px rgba(224, 90, 53, 0.08);
+
+  .voucher-banner-icon {
+    font-size: 2.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .voucher-banner-text {
+    flex: 1;
+
+    strong {
+      display: block;
+      color: #224274;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin: 0;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 14px 16px;
+    gap: 12px;
+
+    .voucher-banner-icon {
+      font-size: 1.8rem;
+    }
+
+    .voucher-banner-text strong {
+      font-size: 1rem;
+    }
+
+    .voucher-banner-text p {
+      font-size: 0.875rem;
+    }
+  }
+}
 
 .line-btn-container {
   width: 100%;
