@@ -861,6 +861,277 @@
                 "QA"
             ],
             "link": "/tutorial"
+        },
+        {
+            "id": "purifier-controls",
+            "keywords": [
+                "buttons",
+                "control panel",
+                "operation",
+                "操作",
+                "按鍵",
+                "按键",
+                "面板",
+                "怎麼用",
+                "怎么用",
+                "風量",
+                "风量",
+                "fan speed",
+                "睡眠鍵",
+                "定時",
+                "ambient light",
+                "氛圍燈",
+                "氛围灯"
+            ],
+            "answer": {
+                "zh": "**EAP-01 觸控面板（7 鍵）**\n\n🔌 **電源鍵** — 開/關機（首次上電會發出叮咚提示音 + 燈號自檢）\n🎵 **無線音樂鍵** — 開啟藍牙，手機搜尋「enGo EAP-T01」配對\n💡 **氛圍燈鍵** — L1 自動 → L2 → L3 → L4 → 關 → L1 循環\n🌬️ **風量鍵** — 2 → 3 → 4 → A（自動）→ 1 循環，A 檔依空氣品質自動調節\n⏱️ **定時鍵** — 1～12 小時定時開機/關機\n🌙 **睡眠鍵** — 風速降至最低、指示燈微亮、其他燈關閉\n🔄 **重置濾網鍵** — 換濾網後長按 3 秒，發出叮一聲即重置成功\n\n🔗 [產品頁 →](/product?jump=oxygen1)",
+                "en": "**EAP-01 control panel (7 buttons)**\n\n🔌 **Power** — On/off (boots with chime + LED self-test)\n🎵 **Bluetooth** — Pair from phone, search 'enGo EAP-T01'\n💡 **Ambient light** — L1 auto → L2 → L3 → L4 → off (cycle)\n🌬️ **Fan speed** — 2 → 3 → 4 → A (auto) → 1 (A adjusts by air quality)\n⏱️ **Timer** — 1-12hr on/off scheduling\n🌙 **Sleep** — minimum fan, dimmed indicator, other lights off\n🔄 **Filter reset** — hold 3s after replacing filter (chime confirms)",
+                "ja": "**EAP-01 操作パネル（7ボタン）**\n\n🔌 電源｜🎵 Bluetooth（「enGo EAP-T01」で検索）｜💡 アンビエントライト L1-L4｜🌬️ 風量 1-4＋自動｜⏱️ 1-12時間タイマー｜🌙 睡眠モード｜🔄 フィルターリセット（3秒長押し）",
+                "fr": "**Panneau EAP-01 (7 boutons)** : Marche, Bluetooth (chercher 'enGo EAP-T01'), Lumière d'ambiance L1-L4, Vitesse 1-4 + Auto, Minuterie 1-12h, Sommeil, Reset filtre (3s).",
+                "es": "**Panel EAP-01 (7 botones)**: Encendido, Bluetooth (busca 'enGo EAP-T01'), Luz ambiental L1-L4, Velocidad 1-4 + Auto, Temporizador 1-12h, Sueño, Reinicio de filtro (3s).",
+                "zhCN": "**EAP-01 触控面板（7 键）**\n\n🔌 **电源键** — 开/关机\n🎵 **无线音乐键** — 蓝牙配对（手机搜「enGo EAP-T01」）\n💡 **氛围灯键** — L1 自动 → L2 → L3 → L4 → 关\n🌬️ **风量键** — 2 → 3 → 4 → A（自动）→ 1\n⏱️ **定时键** — 1-12 小时\n🌙 **睡眠键** — 微亮静音\n🔄 **重置滤网键** — 长按 3 秒"
+            }
+        },
+        {
+            "id": "purifier-bluetooth",
+            "keywords": [
+                "bluetooth",
+                "藍牙",
+                "蓝牙",
+                "BT",
+                "speaker",
+                "音響",
+                "音响",
+                "音樂",
+                "音乐",
+                "配對",
+                "配对",
+                "pair",
+                "pairing",
+                "play music",
+                "enGo EAP-T01"
+            ],
+            "answer": {
+                "zh": "**藍牙音響使用方式**\n\n1. 機器開機後，輕按面板上的 **🎵 無線音樂鍵**，左側指示燈開始閃爍\n2. 在手機/平板的藍牙設定中搜尋 **「enGo EAP-T01」**\n3. 點選配對；連接成功後，指示燈長亮\n4. 即可從手機播放音樂並調整音量\n\n📢 內建雙 3W 喇叭。連接音樂時若氛圍燈為 L1 自動模式，會自動切換為 L3 模式。",
+                "en": "**Bluetooth pairing**\n\n1. Turn on the unit, then tap the 🎵 Bluetooth button — the indicator LED will blink\n2. On your phone/tablet, search for **'enGo EAP-T01'** in Bluetooth settings\n3. Tap to pair; when connected, the LED stays solid\n4. Play music from your device; volume controls from your device\n\n📢 Dual 3W internal speakers. When music starts in ambient L1 (auto), the lighting switches to L3 automatically.",
+                "ja": "**Bluetooth接続**：🎵ボタン → LED点滅 → スマホのBluetoothから「enGo EAP-T01」検索 → ペアリング。3W×2スピーカー内蔵。",
+                "fr": "**Bluetooth** : appuyer sur 🎵 → LED clignote → chercher 'enGo EAP-T01' sur le téléphone → coupler. Haut-parleurs 2×3W intégrés.",
+                "es": "**Bluetooth**: pulse 🎵 → LED parpadea → busca 'enGo EAP-T01' en el teléfono → empareja. Altavoces internos 2×3W.",
+                "zhCN": "**蓝牙音响使用方式**\n\n1. 开机后轻按 🎵 **无线音乐键**，指示灯闪烁\n2. 在手机蓝牙设定中搜寻 **「enGo EAP-T01」**\n3. 配对成功后指示灯长亮\n4. 即可播放音乐\n\n📢 内建双 3W 喇叭。"
+            }
+        },
+        {
+            "id": "purifier-wireless-charging",
+            "keywords": [
+                "wireless charging",
+                "無線充電",
+                "无线充电",
+                "qi",
+                "充電",
+                "充电",
+                "charge phone",
+                "手機充電"
+            ],
+            "answer": {
+                "zh": "**無線充電功能**\n\nEAP-01 上方有 Qi 無線充電區，將支援 Qi 標準的手機平放上去即可充電。\n\n⚡ **支援功率**\n• 5V / 5W\n• 9V / 7.5W\n• 9V / 10W（最高）\n\n📱 大多數 iPhone（8 以上）、Android 旗艦機種皆相容。請取下手機保護殼或避免厚殼以確保穩定充電。",
+                "en": "**Qi wireless charging**\n\nThe top surface is a Qi charging pad — place your Qi-enabled phone face-up to charge.\n\n⚡ **Supported output**: 5V/5W, 9V/7.5W, 9V/10W (max)\n\nWorks with iPhone 8+ and most Android flagships. Remove thick cases for reliable charging.",
+                "ja": "**Qiワイヤレス充電**：本体上部のパッドにスマホを置く。出力 5V/5W、9V/7.5W、9V/10W対応。",
+                "fr": "**Charge sans fil Qi** : posez le téléphone sur le dessus. 5V/5W, 9V/7,5W, 9V/10W.",
+                "es": "**Carga inalámbrica Qi**: coloca el teléfono encima. Soporta 5V/5W, 9V/7,5W, 9V/10W.",
+                "zhCN": "**无线充电功能**\n\nEAP-01 顶部为 Qi 无线充电区，将支援 Qi 标准的手机平放即可充电。\n\n⚡ **支持功率**：5V/5W、9V/7.5W、9V/10W（最高）"
+            }
+        },
+        {
+            "id": "purifier-aroma",
+            "keywords": [
+                "aroma",
+                "fragrance",
+                "diffuser",
+                "essential oil",
+                "精油",
+                "擴香",
+                "扩香",
+                "香氛",
+                "spongesponge",
+                "香味",
+                "scent"
+            ],
+            "answer": {
+                "zh": "**精油擴香使用方式**\n\n1. 打開機器**後濾網蓋**\n2. 取出**擴香盒**，將精油**滴在盒內的吸水海綿上**（不要直接倒入機器）\n3. 將擴香盒推回原位，蓋好後蓋\n4. 開啟機器即可隨風扇散發香氛\n\n🧽 **海綿更換**：使用一段時間後可抽出更換新海綿。清理擴香盒前**請先關閉機器電源**。",
+                "en": "**Aroma diffuser**\n\n1. Open the **rear filter cover**\n2. Take out the **aroma cassette** — drop essential oil onto the **sponge** (never pour into the unit directly)\n3. Slide the cassette back and close the cover\n4. Power on; the airflow disperses the scent\n\n🧽 **Sponge replacement**: pull out and swap as needed. **Power off before cleaning the cassette.**",
+                "ja": "**アロマディフューザー**：後部カバー → カセット取り出し → スポンジに精油を数滴 → 戻して蓋。清掃時は電源オフ。",
+                "fr": "**Diffuseur d'arômes** : capot arrière → cassette → quelques gouttes sur l'éponge → remettre en place. Éteindre avant nettoyage.",
+                "es": "**Difusor de aromas**: cubierta trasera → casete → unas gotas en la esponja → volver a colocar. Apaga antes de limpiar.",
+                "zhCN": "**精油扩香使用方式**\n\n1. 打开机器**后滤网盖**\n2. 取出**扩香盒**，将精油**滴在盒内吸水海绵上**\n3. 推回原位，盖好后盖\n4. 开机即可随风散香\n\n🧽 清理前请关闭电源。"
+            }
+        },
+        {
+            "id": "purifier-filter-care",
+            "keywords": [
+                "filter",
+                "replace",
+                "replacement",
+                "change filter",
+                "濾網",
+                "滤网",
+                "更換",
+                "更换",
+                "保養",
+                "保养",
+                "3000 hours",
+                "3000 小時",
+                "3-4 個月",
+                "重置",
+                "lifespan",
+                "壽命",
+                "寿命"
+            ],
+            "answer": {
+                "zh": "**濾網更換與保養**\n\n📅 **建議更換週期**：每天使用 3 小時計算，約 **3-4 個月**換一次；累計使用 **3000 小時** 後機器會亮紅燈並發出提示音。\n\n💨 **平時保養（建議每月一次）**：取出濾網，用**吸塵器**清除表面灰塵 — 可大幅延長使用壽命。**切勿用水或清潔劑清洗濾網**。\n\n☀️ **小撇步**：將濾網於陽光下曝曬 1-2 小時，可讓活性碳與銀離子層恢復部分效能。\n\n🔄 **更換後重置濾網計時**：開機狀態下長按 **重置濾網鍵 3 秒**，機器發出「叮」一聲即重置成功。\n\n⚠️ 若家中有人吸菸或點蚊香，濾網壽命會大幅縮短，請及時更換。",
+                "en": "**Filter replacement & care**\n\n📅 **Replace every 3-4 months** (assuming 3hr/day) or after 3000 cumulative hours — the unit will flash red and chime when due.\n\n💨 **Monthly care**: vacuum the filter surface to extend life. **Never wash with water or detergent.**\n\n☀️ **Tip**: 1-2hr of sunlight rejuvenates activated carbon + silver ion layers.\n\n🔄 **Reset after replacing**: with unit ON, hold the **filter reset button for 3 seconds** — chime confirms reset.\n\n⚠️ Smokers / mosquito coils shorten filter life — replace sooner.",
+                "ja": "**フィルター交換**：3-4ヶ月ごと、または累計3000時間。掃除機で月1回掃除（水洗い禁止）。リセット：電源ON時に3秒長押し。",
+                "fr": "**Filtre** : remplacer tous les 3-4 mois ou 3000h. Aspirer mensuellement (jamais d'eau). Réinitialiser : maintenir 3s.",
+                "es": "**Filtro**: cambiar cada 3-4 meses o 3000 h. Aspirar mensualmente (nunca con agua). Reiniciar: mantén pulsado 3 s.",
+                "zhCN": "**滤网更换与保养**\n\n📅 **建议每 3-4 个月更换**（每天 3 小时使用）或累计 3000 小时\n💨 **每月用吸尘器清洁**滤网表面，**切勿水洗**\n☀️ 阳光曝晒 1-2 小时可恢复活性碳/银离子效能\n🔄 更换后开机长按 **重置滤网键 3 秒** 即重置"
+            }
+        },
+        {
+            "id": "purifier-error-codes",
+            "keywords": [
+                "error",
+                "error code",
+                "E0",
+                "EE",
+                "代碼",
+                "錯誤",
+                "错误",
+                "故障",
+                "fault",
+                "alarm",
+                "red light",
+                "紅燈",
+                "红灯"
+            ],
+            "answer": {
+                "zh": "**錯誤代碼處理**\n\n🚨 **E0 — 門蓋未蓋緊**\n→ 重新檢查機器**前/後濾網蓋**是否完全蓋好。若已正確蓋上仍顯示 E0，請聯絡客服。\n\n🚨 **EE — 濾網壽命到期**\n→ 更換新濾網後，**開機狀態下長按重置濾網鍵 3 秒**，發出「叮」聲即重置成功。\n\n📞 若以上方式仍無法排除，請聯絡：\n• 電話：02-2751-0218\n• LINE：[加入好友 @engo](https://lin.ee/THIUSjW)\n\n⚠️ 請勿自行拆機維修，以免影響保固。",
+                "en": "**Error codes**\n\n🚨 **E0 — door cover open** → reseat the front/back filter cover firmly. If E0 persists, contact support.\n\n🚨 **EE — filter expired** → replace filter, then **with the unit ON, hold the Reset button for 3 seconds** until you hear a chime.\n\n📞 Still stuck? Call 02-2751-0218 or [Add LINE @engo](https://lin.ee/THIUSjW).\n\n⚠️ Do not disassemble — voids warranty.",
+                "ja": "**エラーコード**：E0＝カバー開（蓋を閉め直す）／EE＝フィルター期限切れ（交換後3秒長押し）。サポート：02-2751-0218",
+                "fr": "**Codes d'erreur** : E0 = capot ouvert (refermer) / EE = filtre expiré (remplacer + reset 3s). Support : 02-2751-0218",
+                "es": "**Códigos de error**: E0 = cubierta abierta (cerrar) / EE = filtro vencido (reemplazar + reset 3s). Soporte: 02-2751-0218",
+                "zhCN": "**错误代码处理**\n\n🚨 **E0 — 门盖未盖紧** → 重新检查前/后滤网盖\n🚨 **EE — 滤网寿命到期** → 更换后开机长按重置滤网键 3 秒\n📞 02-2751-0218 / LINE：[@engo](https://lin.ee/THIUSjW)"
+            }
+        },
+        {
+            "id": "purifier-troubleshooting",
+            "keywords": [
+                "not working",
+                "doesn't start",
+                "noise",
+                "smell",
+                "stinks",
+                "loud",
+                "ineffective",
+                "不啟動",
+                "不启动",
+                "異味",
+                "异味",
+                "噪音",
+                "效果",
+                "問題",
+                "问题",
+                "故障"
+            ],
+            "answer": {
+                "zh": "**常見問題排除**\n\n❓ **機器不啟動**\n• 檢查電源插頭是否插好（支援 110-220V）\n• 確認已按下電源鍵\n• 確認濾網蓋已蓋緊（顯示 E0 代表蓋未緊）\n\n❓ **出風口有異味**\n• 環境通風一下\n• 濾網髒污或壽命過低 → 更換濾網\n• 將風量切到最強檔以加速換氣\n\n❓ **運轉噪音太大**\n• 確認機器放置平穩\n• 內部可能有異物 → 聯繫客服檢查\n\n❓ **清淨效果不明顯**\n• 機器是否已裝濾網（沒裝會無法啟動）\n• 適用面積為 **3-8 坪**，過大空間請移到較小房間\n• 濾網太髒 → 清潔或更換\n\n📞 02-2751-0218 ｜ LINE：[@engo](https://lin.ee/THIUSjW)",
+                "en": "**Troubleshooting**\n\n❓ **Unit won't start** — Check plug (100-240V supported), press power button, ensure filter cover is fully closed (E0 = open).\n\n❓ **Bad smell from outlet** — Ventilate the room, replace filter, run on max fan speed.\n\n❓ **Too noisy** — Make sure unit sits level; if foreign object inside, contact support.\n\n❓ **Weak performance** — Confirm filter is installed (won't run without it). Coverage is **3-8 ping (~10-26 m²)** — move to smaller room. Clean or replace dirty filter.\n\n📞 02-2751-0218 | LINE: [@engo](https://lin.ee/THIUSjW)",
+                "ja": "**トラブルシューティング**：起動しない（電源・カバー確認）／異臭（換気・濾網交換）／騒音（設置確認）／効果が弱い（適用 3-8坪）。サポート：02-2751-0218",
+                "fr": "**Dépannage** : Ne démarre pas (alim., capot) / odeur (aérer, changer filtre) / bruyant (mise à niveau) / faible (couvre 10-26 m², filtre propre). Support : 02-2751-0218",
+                "es": "**Solución de problemas**: No arranca (enchufe, cubierta) / mal olor (ventilar, cambiar filtro) / ruidoso (nivelar) / poco efectivo (cubre 10-26 m², filtro limpio). Soporte: 02-2751-0218",
+                "zhCN": "**常见问题排除**\n\n❓ **不启动** → 检查电源、电源键、滤网盖（E0=未盖紧）\n❓ **异味** → 通风、更换滤网、加大风量\n❓ **噪音大** → 确认放置平稳，内部异物联系客服\n❓ **效果弱** → 是否装滤网、空间是否过大（适用 3-8 坪）、滤网是否过脏\n\n📞 02-2751-0218"
+            }
+        },
+        {
+            "id": "purifier-cleaning",
+            "keywords": [
+                "clean",
+                "cleaning",
+                "wipe",
+                "maintain",
+                "清潔",
+                "清洁",
+                "保養",
+                "保养",
+                "擦拭",
+                "擦拭",
+                "alcohol",
+                "酒精",
+                "wet cloth",
+                "濕布",
+                "湿布"
+            ],
+            "answer": {
+                "zh": "**機器清潔保養**\n\n🧹 **清潔機身**\n• 使用**乾布**或軟布擦拭表面灰塵\n• ❌ 不可使用濕布、洗潔精、酒精、有機溶劑\n• ⚠️ 清潔前**務必拔除電源插頭**\n\n💨 **濾網清潔**（建議每月一次）\n• 使用**吸塵器**清除濾網表面灰塵\n• ❌ 切勿用水或清潔劑沖洗濾網\n• 環境較差（粉塵多）時提高頻率\n\n📦 **拆裝濾網蓋**\n• 請依說明書步驟操作，避免破壞結構\n\n📍 **存放注意**\n• 操作環境 **0-40°C**，僅限室內使用\n• 移動時請雙手搬移、勿單手或腳踢",
+                "en": "**Cleaning & care**\n\n🧹 **Body**: wipe with a **dry/soft cloth only**. ❌ No wet cloths, detergents, alcohol, or solvents. ⚠️ **Unplug before cleaning.**\n\n💨 **Filter** (monthly): vacuum the surface. ❌ Never wash with water.\n\n📦 **Filter cover**: follow the manual to avoid damaging the latch.\n\n📍 **Operating range** 0-40°C, indoor use only. Move with both hands.",
+                "ja": "**清掃**：乾いた布のみ／水・洗剤・アルコール禁止／清掃前は電源を抜く／フィルターは掃除機で月1回（水洗い禁止）／使用環境 0-40°C 室内のみ",
+                "fr": "**Nettoyage** : chiffon sec uniquement (pas d'eau/détergent/alcool), débrancher avant. Filtre : aspirer mensuellement (jamais d'eau). 0-40°C intérieur.",
+                "es": "**Limpieza**: solo paño seco (sin agua/detergente/alcohol), desconectar antes. Filtro: aspirar mensualmente (nunca con agua). 0-40°C interior.",
+                "zhCN": "**机器清洁保养**\n\n🧹 **机身** — 使用**干布**擦拭，❌ 禁用湿布/酒精/清洁剂；⚠️ 清洁前拔除电源\n💨 **滤网** — 每月用吸尘器清洁，切勿水洗\n📍 操作环境 0-40°C，仅限室内使用"
+            }
+        },
+        {
+            "id": "purifier-coverage-light",
+            "keywords": [
+                "coverage",
+                "size",
+                "room",
+                "area",
+                "ping",
+                "適用面積",
+                "适用面积",
+                "坪",
+                "坪數",
+                "ambient",
+                "氛圍燈",
+                "氛围灯",
+                "PM2.5 燈",
+                "L1",
+                "L2",
+                "L3",
+                "L4"
+            ],
+            "answer": {
+                "zh": "**適用面積與氛圍燈**\n\n📐 **建議使用面積：3-8 坪**（約 10-26 m²，臥室 / 書房 / 小客廳）。空間過大時建議搭配多台或使用大坪數機種。\n\n💡 **5 種氛圍燈模式**\n• **L1（自動）** — 依空氣品質 PM2.5 自動切換顏色：🟢 綠（優）→ 🔵 藍（佳）→ 🟡 黃（中）→ 🔴 紅（差）\n• **L2 / L3 / L4** — 手動固定燈光氛圍\n• **關閉** — 完全熄燈\n\n🌙 **睡眠模式下**：L1 模式會自動切換為夜燈模式（微亮），其他燈會關閉。\n\n🎵 連接藍牙音樂時，L1 會自動切換為 L3，可手動再切換。",
+                "en": "**Coverage & ambient light**\n\n📐 **Recommended coverage: 3-8 ping (~10-26 m²)** — bedroom, study, small living room.\n\n💡 **5 ambient light modes**\n• **L1 (auto)** — color shifts by PM2.5: 🟢 green (good) → 🔵 blue → 🟡 yellow → 🔴 red (poor)\n• **L2 / L3 / L4** — fixed colors\n• **Off** — no light\n\n🌙 In sleep mode, L1 dims to night-light. When music plays, L1 switches to L3 automatically.",
+                "ja": "**適用 3-8坪（約10-26m²）**。アンビエントライト 5モード：L1自動（PM2.5に応じて緑/青/黄/赤）、L2-L4固定、消灯。睡眠モードはL1のみ夜灯化。",
+                "fr": "**Couverture 10-26 m²**. 5 modes lumineux : L1 auto (couleur selon PM2.5), L2-L4 fixes, off. En sommeil, L1 devient veilleuse.",
+                "es": "**Cobertura 10-26 m²**. 5 modos de luz: L1 auto (color por PM2.5), L2-L4 fijos, apagado. En modo sueño, L1 se atenúa.",
+                "zhCN": "**适用面积与氛围灯**\n\n📐 **3-8 坪**（约 10-26 m²）\n💡 **5 种氛围灯**：L1 自动（依 PM2.5 切换 🟢🔵🟡🔴）、L2-L4 固定、关闭\n🌙 睡眠模式下 L1 切为夜灯"
+            }
+        },
+        {
+            "id": "purifier-warranty-service",
+            "keywords": [
+                "warranty",
+                "保固",
+                "保修",
+                "service",
+                "客服",
+                "repair",
+                "維修",
+                "维修",
+                "support",
+                "委製商",
+                "進口商",
+                "智管家科技"
+            ],
+            "answer": {
+                "zh": "**保固與售後服務**\n\n📞 **服務電話**：02-2751-0218（週一至週五 09:00-18:00）\n💬 **LINE 客服**：[加入好友 @engo](https://lin.ee/THIUSjW)\n📧 **Email**：contacts@smtengo.com\n\n📍 **委製商/進口商**：智管家科技股份有限公司\n📍 **地址**：台北市中山區八德路二段 325 號 3 樓\n\n⚠️ **重要提醒**\n• 請勿自行拆卸維修，以免危險或喪失保固\n• 電源損壞、電源線插頭外觀異常時請停用並聯絡我們安排專業檢測\n• NCC 認證號：CCAJ25LP3901T1（黑）/ CCAJ25LP3901T3（白）",
+                "en": "**Warranty & service**\n\n📞 02-2751-0218 (Mon-Fri 09:00-18:00) | 💬 [LINE @engo](https://lin.ee/THIUSjW) | 📧 contacts@smtengo.com\n\n📍 Distributor: 智管家科技股份有限公司, 3F., No. 325, Sec. 2, Bade Rd., Zhongshan Dist., Taipei\n\n⚠️ Do not disassemble — voids warranty. Stop using if the power cord/plug shows damage and contact us. NCC: CCAJ25LP3901T1 (black) / T3 (white).",
+                "ja": "**保証・サポート**：02-2751-0218（月-金）／LINE @engo／contacts@smtengo.com／智管家科技股份有限公司",
+                "fr": "**Garantie/SAV** : 02-2751-0218 (Lun-Ven) / LINE @engo / contacts@smtengo.com",
+                "es": "**Garantía/Soporte**: 02-2751-0218 (Lun-Vie) / LINE @engo / contacts@smtengo.com",
+                "zhCN": "**保固与售后服务**\n\n📞 02-2751-0218（周一至周五 09:00-18:00）\n💬 LINE：[@engo](https://lin.ee/THIUSjW)\n📧 contacts@smtengo.com\n📍 智管家科技股份有限公司｜台北市中山区八德路二段 325 号 3 楼\n⚠️ 请勿自行拆卸维修。NCC：CCAJ25LP3901T1（黑）/ T3（白）"
+            }
         }
     ],
     "packages": [
@@ -987,39 +1258,66 @@
         {
             "id": "purifier-t01",
             "name": {
-                "zh": "4合1智能空氣清淨機 EAP-T01",
-                "en": "4-in-1 Smart Air Purifier EAP-T01",
-                "ja": "4-in-1 スマート空気清浄機 EAP-T01",
-                "fr": "Purificateur d'air intelligent 4-en-1 EAP-T01",
-                "es": "Purificador de aire inteligente 4 en 1 EAP-T01",
-                "zhCN": "4合1智能空气清净机 EAP-T01"
+                "zh": "enGo 智慧 IoT 空氣清淨機 EAP-T01",
+                "en": "enGo Smart IoT Air Purifier EAP-T01",
+                "ja": "enGo スマート IoT 空気清浄機 EAP-T01",
+                "fr": "Purificateur d'air IoT enGo EAP-T01",
+                "es": "Purificador de aire IoT enGo EAP-T01",
+                "zhCN": "enGo 智能 IoT 空气清净机 EAP-T01"
             },
             "specs": {
-                "zh": "CADR 110 m³/h, HEPA12 醫療級濾網, PM2.5 監測, Ag+ 銀離子抗菌",
-                "en": "CADR 110 m³/h, HEPA12 Medical-Grade Filter, PM2.5 Monitoring, Ag+ Silver Ion Antibacterial",
-                "ja": "CADR 110 m³/h、HEPA12 医療グレードフィルター、PM2.5モニタリング、Ag+銀イオン抗菌",
-                "fr": "CADR 110 m³/h, Filtre HEPA12 médical, Surveillance PM2.5, Antibactérien Ag+",
-                "es": "CADR 110 m³/h, Filtro HEPA12 de grado médico, Monitoreo PM2.5, Antibacteriano con iones de plata Ag+",
-                "zhCN": "CADR 110 m³/h, HEPA12 医疗级滤网, PM2.5 监测, Ag+ 银离子抗菌"
+                "zh": "CADR 1.85 cmm（≈110 m³/h）｜CCM 5000mg｜HEPA12 醫療級複合式濾網（HEPA + UV + 活性碳 + Ag+ 銀離子）｜PM2.5 即時監測｜噪音 ≤61dB（睡眠 ≤38dB）｜適用 3-8 坪｜尺寸 220×160×360mm｜淨重 2.8kg｜額定 24V/48W｜支援 100-240V｜NCC 認證",
+                "en": "CADR 1.85 cmm (≈110 m³/h) | CCM 5000mg | Medical-grade HEPA12 composite filter (HEPA + UV + activated carbon + Ag+ silver ion) | Real-time PM2.5 monitor | Noise ≤61dB (sleep ≤38dB) | Coverage 3-8 ping (~10-26 m²) | Dimensions 220×160×360mm | Net weight 2.8kg | 24V/48W | 100-240V | NCC certified",
+                "ja": "CADR 1.85 cmm（≈110 m³/h）｜CCM 5000mg｜HEPA12複合フィルター（HEPA+UV+活性炭+Ag+銀イオン）｜PM2.5モニタリング｜騒音 ≤61dB（睡眠 ≤38dB）｜適用 3-8坪｜220×160×360mm｜2.8kg｜24V/48W",
+                "fr": "CADR 1,85 cmm (≈110 m³/h) | CCM 5000mg | Filtre HEPA12 composite médical (HEPA + UV + charbon actif + Ag+) | PM2.5 temps réel | Bruit ≤61dB (sommeil ≤38dB) | 10-26 m² | 220×160×360mm | 2,8kg | 24V/48W",
+                "es": "CADR 1,85 cmm (≈110 m³/h) | CCM 5000mg | Filtro compuesto HEPA12 médico (HEPA + UV + carbón activado + Ag+) | Monitor PM2.5 | Ruido ≤61dB (modo sueño ≤38dB) | 10-26 m² | 220×160×360mm | 2,8kg | 24V/48W",
+                "zhCN": "CADR 1.85 cmm（≈110 m³/h）｜CCM 5000mg｜HEPA12 医疗级复合式滤网（HEPA+UV+活性碳+Ag+银离子）｜PM2.5 实时监测｜噪音 ≤61dB（睡眠 ≤38dB）｜适用 3-8 坪｜220×160×360mm｜2.8kg｜24V/48W"
             },
             "features": {
-                "zh": "4合1極致空間整合：空氣清淨、藍牙音響、無線充電、香氛擴香。醫療級 HEPA12 濾網 + Ag+ 銀離子抗菌，可抗 H1N1 流感病毒。支援智慧中控平板與 App 遠端操控。",
-                "en": "4-in-1 All-in-One: Air Purification, Bluetooth Speaker, Wireless Charging, Fragrance Diffuser. Medical-grade HEPA12 + Ag+ silver ion antibacterial, anti-H1N1. Supports smart tablet & App remote control.",
-                "ja": "4-in-1：空気清浄、Bluetoothスピーカー、ワイヤレス充電、フレグランス。HEPA12医療グレード＋Ag+銀イオン抗菌。スマートタブレット＆アプリ連携。",
-                "fr": "4-en-1 : Purification, Bluetooth, Charge sans fil, Fragrance. HEPA12 médical + Ag+ antibactérien anti-H1N1. Compatible tablette & App.",
-                "es": "4 en 1 todo en uno: purificación de aire, altavoz Bluetooth, carga inalámbrica, difusor de fragancia. HEPA12 de grado médico + antibacteriano con iones de plata Ag+, anti-H1N1. Compatible con tableta inteligente y control remoto de aplicación.",
-                "zhCN": "4合1极致空间整合：空气清净、蓝牙音响、无线充电、香氛扩香。医疗级 HEPA12 滤网 + Ag+ 银离子抗菌，可抗 H1N1 流感病毒。支持智慧中控平板与 App 远端操控。"
+                "zh": "**4合1全方位設計**：空氣清淨 + 藍牙音響（雙3W）+ Qi 無線充電（5/9V，最高 10W）+ 香氛擴香盒。**4 段風量 + 自動模式**（A 檔依空氣品質自調節）。**5 種氛圍燈**（L1 自動依 PM2.5 切換紅黃藍綠）。**1-12 小時定時**、睡眠模式、夜燈模式。型號：EAP-T01-B（時尚黑）/ EAP-T01-W（簡約白）。NCC 認證 CCAJ25LP3901T1/T3。TUYA WBR3 雙頻 Wi-Fi+藍牙模組，支援 enGo App 與中控平板遠端操控。",
+                "en": "**4-in-1 design**: air purification + Bluetooth speaker (dual 3W) + Qi wireless charging (5/9V, up to 10W) + aroma diffuser. **4 fan speeds + Auto mode** (adjusts by air quality). **5 ambient light modes** (L1 auto switches red→yellow→blue→green by PM2.5). **1-12hr timer**, sleep mode, night light. Models: EAP-T01-B (Stylish Black) / EAP-T01-W (Minimalist White). NCC certified. TUYA WBR3 dual-band Wi-Fi+BT, supports enGo App and tablet hub.",
+                "ja": "**4-in-1**：空気清浄＋Bluetoothスピーカー（3W×2）＋Qi無線充電（最大10W）＋アロマディフューザー。風量4段＋自動モード、5種類のアンビエントライト、1-12時間タイマー、睡眠モード。EAP-T01-B（スタイリッシュブラック）/ EAP-T01-W（ミニマルホワイト）。",
+                "fr": "**4-en-1** : purification + Bluetooth (2×3W) + charge sans fil Qi (jusqu'à 10W) + diffuseur d'arômes. 4 vitesses + auto, 5 modes d'éclairage d'ambiance, minuterie 1-12h, mode sommeil. EAP-T01-B / EAP-T01-W.",
+                "es": "**4 en 1**: purificación + Bluetooth (2×3W) + carga inalámbrica Qi (hasta 10W) + difusor de aromas. 4 velocidades + auto, 5 modos de luz ambiental, temporizador 1-12h, modo sueño. EAP-T01-B / EAP-T01-W.",
+                "zhCN": "**4合1全方位设计**：空气清净 + 蓝牙音响（双3W）+ Qi 无线充电（5/9V，最高 10W）+ 香氛扩香盒。**4 段风量 + 自动模式**。**5 种氛围灯**（L1 自动依 PM2.5 切换红黄蓝绿）。1-12 小时定时、睡眠模式、夜灯模式。EAP-T01-B（时尚黑）/ EAP-T01-W（简约白）。NCC 认证。TUYA WBR3 双频 Wi-Fi+蓝牙模组。"
             },
             "keywords": [
                 "purifier",
                 "air",
                 "清淨機",
+                "清净机",
+                "空氣清淨機",
+                "EAP-01",
+                "EAP-T01",
+                "EAP-T01-B",
+                "EAP-T01-W",
                 "喇叭",
+                "藍牙",
+                "bluetooth",
+                "speaker",
+                "音響",
                 "無線充電",
+                "wireless charging",
+                "Qi",
                 "CADR",
+                "HEPA",
+                "HEPA12",
+                "PM2.5",
                 "空氣",
-                "小型",
-                "air purifier"
+                "air",
+                "small",
+                "small purifier",
+                "氛圍燈",
+                "ambient light",
+                "夜燈",
+                "擴香",
+                "精油",
+                "aroma",
+                "diffuser",
+                "風量",
+                "fan speed",
+                "睡眠",
+                "sleep mode"
             ]
         },
         {

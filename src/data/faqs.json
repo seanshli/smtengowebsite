@@ -1,302 +1,522 @@
 [
-    {
-        "id": 1,
-        "category": "setup",
-        "question": {
-            "zh": "如何將 enGo 中樞連接到 Wi-Fi？",
-            "zhCN": "如何将 enGo 中枢连接到 Wi-Fi？",
-            "en": "How do I connect the enGo Hub to Wi-Fi?",
-            "fr": "Comment connecter le concentrateur enGo au Wi-Fi ?",
-            "ja": "enGoハブをWi-Fiに接続するにはどうすればよいですか？",
-            "es": "¿Cómo conecto el Hub enGo al Wi-Fi?"
-        },
-        "answer": {
-            "zh": "插上中樞，打開 enGo App，然後按照「新增設備」提示輸入您的 Wi-Fi 密碼。系統支援 Wi-Fi、Zigbee 和藍牙多種協議連線。",
-            "zhCN": "插上中枢，打开 enGo App，然后按照「新增设备」提示输入您的 Wi-Fi 密码。系统支持 Wi-Fi、Zigbee 和蓝牙多种协议连接。",
-            "en": "Plug in the hub, open the enGo App, and follow the 'Add Device' prompts to enter your Wi-Fi password. The system supports Wi-Fi, Zigbee, and Bluetooth protocols.",
-            "fr": "Branchez le concentrateur, ouvrez l'application enGo et suivez les instructions 'Ajouter un appareil' pour saisir votre mot de passe Wi-Fi. Le système prend en charge Wi-Fi, Zigbee et Bluetooth.",
-            "ja": "ハブを電源に接続し、enGoアプリを開いて「デバイスの追加」プロンプトに従い、Wi-Fiパスワードを入力します。Wi-Fi、Zigbee、Bluetooth各種プロトコルに対応しています。",
-            "es": "Conecta el hub, abre la App enGo y sigue las instrucciones de 'Agregar dispositivo' para ingresar tu contraseña Wi-Fi. El sistema es compatible con los protocolos Wi-Fi, Zigbee y Bluetooth."
-        }
+  {
+    "id": 1,
+    "category": "setup",
+    "question": {
+      "zh": "如何將 enGo 中樞連接到 Wi-Fi？",
+      "zhCN": "如何将 enGo 中枢连接到 Wi-Fi？",
+      "en": "How do I connect the enGo Hub to Wi-Fi?",
+      "fr": "Comment connecter le concentrateur enGo au Wi-Fi ?",
+      "ja": "enGoハブをWi-Fiに接続するにはどうすればよいですか？",
+      "es": "¿Cómo conecto el Hub enGo al Wi-Fi?"
     },
-    {
-        "id": 2,
-        "category": "compatibility",
-        "question": {
-            "zh": "有哪些設備與 enGo 系統兼容？",
-            "zhCN": "有哪些设备与 enGo 系统兼容？",
-            "en": "What devices are compatible with the enGo system?",
-            "fr": "Quels appareils sont compatibles avec le système enGo ?",
-            "ja": "enGoシステムと互換性のあるデバイスは何ですか？",
-            "es": "¿Qué dispositivos son compatibles con el sistema enGo?"
-        },
-        "answer": {
-            "zh": "enGo 支持智慧燈光開關、空調遙控器、電動窗簾、門窗感測器、煙霧/漏水偵測器、空氣清淨機、淨水系統、電動升降拉籃等，並兼容 Apple HomeKit（Siri 聲控）與 MEDOLE 新風除濕系統。透過 AIoT 串聯技術，尚未合作的廠商產品也能提供整合支援。",
-            "zhCN": "enGo 支持智慧灯光开关、空调遥控器、电动窗帘、门窗感测器、烟雾/漏水检测器、空气清净机、净水系统、电动升降拉篮等，并兼容 Apple HomeKit（Siri 声控）与 MEDOLE 新风除湿系统。通过 AIoT 串联技术，尚未合作的厂商产品也能提供整合支持。",
-            "en": "enGo supports smart light switches, AC remote controllers, motorized curtains, door/window sensors, smoke/leak detectors, air purifiers, water systems, and motorized storage baskets. It also integrates with Apple HomeKit (Siri voice control) and the MEDOLE fresh air dehumidification system. With AIoT technology, even non-partner devices can be integrated.",
-            "fr": "enGo prend en charge les interrupteurs intelligents, télécommandes de climatisation, rideaux motorisés, capteurs de portes/fenêtres, détecteurs de fumée/fuite, purificateurs d'air, systèmes d'eau et paniers motorisés. Il s'intègre également avec Apple HomeKit (Siri) et le système de ventilation MEDOLE.",
-            "ja": "enGoは、スマートライトスイッチ、エアコンリモコン、電動カーテン、ドア/窓センサー、煙/漏水検知器、空気清浄機、浄水システム、電動収納バスケットなどに対応しています。Apple HomeKit（Siri音声制御）やMEDOLE新鮮空気除湿システムとも統合可能です。",
-            "es": "enGo es compatible con interruptores de luz inteligentes, controladores de AC, cortinas motorizadas, sensores de puertas/ventanas, detectores de humo/fugas, purificadores de aire, sistemas de agua y canastas motorizadas. También se integra con Apple HomeKit (control por voz Siri) y el sistema de deshumidificación MEDOLE. Con tecnología AIoT, incluso dispositivos de terceros pueden integrarse."
-        }
-    },
-    {
-        "id": 3,
-        "category": "setup",
-        "question": {
-            "zh": "我該如何更新固件？",
-            "zhCN": "我该如何更新固件？",
-            "en": "How do I update the firmware?",
-            "fr": "Comment mettre à jour le firmware ?",
-            "ja": "ファームウェアを更新するにはどうすればよいですか？",
-            "es": "¿Cómo actualizo el firmware?"
-        },
-        "answer": {
-            "zh": "如果有可用更新，enGo App 會自動通知您。您可以從設定選單中一鍵更新。系統也可透過雲端遠端診斷進行故障排除。",
-            "zhCN": "如果有可用更新，enGo App 会自动通知您。您可以从设定菜单中一键更新。系统也可通过云端远程诊断进行故障排除。",
-            "en": "The enGo App will notify you automatically if an update is available. You can update with one click from the Settings menu. The system also supports cloud-based remote diagnosis for troubleshooting.",
-            "fr": "L'application enGo vous informera automatiquement si une mise à jour est disponible. Vous pouvez effectuer la mise à jour en un clic depuis le menu Paramètres. Le diagnostic à distance via le cloud est également disponible.",
-            "ja": "更新が利用可能な場合、enGoアプリが自動的に通知します。設定メニューからワンクリックで更新できます。クラウドベースのリモート診断にも対応しています。",
-            "es": "La App enGo te notificará automáticamente si hay una actualización disponible. Puedes actualizar con un clic desde el menú de Configuración. El sistema también soporta diagnóstico remoto basado en la nube."
-        }
-    },
-    {
-        "id": 4,
-        "category": "tutorials",
-        "question": {
-            "zh": "我可以在哪裡找到產品設定和智慧場景的影片教學？",
-            "zhCN": "我可以在哪里找到产品设定和智慧场景的视频教学？",
-            "en": "Where can I find video tutorials for product setup and smart scenes?",
-            "fr": "Où puis-je trouver des tutoriels vidéo pour la configuration des produits et les scènes intelligentes ?",
-            "ja": "製品のセットアップやスマートシーンの動画チュートリアルはどこで見られますか？",
-            "es": "¿Dónde puedo encontrar tutoriales en video para la configuración de productos y escenas inteligentes?"
-        },
-        "answer": {
-            "zh": "您可以到我們的官方 YouTube 頻道查看分步指南，其中包含產品使用及居家場景自動化教學。我們也在本網站的「教學」頁面提供個人用戶、設計師和建商三大類分步教學。",
-            "zhCN": "您可以到我们的官方 YouTube 频道查看分步指南，其中包含产品使用及居家场景自动化教学。我们也在本网站的「教学」页面提供个人用户、设计师和建商三大类分步教学。",
-            "en": "You can find step-by-step guides on our official YouTube channel, featuring tutorials on product usage and smart home scene automation. We also have categorized tutorials on this website's Tutorial page for individuals, designers, and builders.",
-            "fr": "Vous pouvez trouver des guides étape par étape sur notre chaîne YouTube officielle. Notre page Tutoriels offre également des guides catégorisés pour les particuliers, les designers et les constructeurs.",
-            "ja": "公式YouTubeチャンネルでステップバイステップのガイドをご覧いただけます。本サイトのチュートリアルページでも、個人、デザイナー、建設業者向けの各種ガイドを提供しています。",
-            "es": "Puedes encontrar guías paso a paso en nuestro canal oficial de YouTube, con tutoriales sobre el uso de productos y la automatización de escenas. También tenemos tutoriales categorizados en la página de Tutoriales de este sitio para individuos, diseñadores y constructores."
-        }
-    },
-    {
-        "id": 5,
-        "category": "warranty",
-        "question": {
-            "zh": "enGo 產品的保固期有多長？",
-            "zhCN": "enGo 产品的保修期有多长？",
-            "en": "What is the warranty period for enGo products?",
-            "fr": "Quelle est la période de garantie pour les produits enGo ?",
-            "ja": "enGo製品の保証期間はどのくらいですか？",
-            "es": "¿Cuál es el período de garantía para los productos enGo?"
-        },
-        "answer": {
-            "zh": "enGo 主要智慧家庭設備均享有保固服務。水維氧 AI 淨水系統與空氣清淨機的濾芯則有獨立的更換週期（RO 膜 12-24 個月，其他濾芯 6-12 個月）。我們另提供到府維護、遠端雲端診斷與 LINE @engo 即時客服。",
-            "zhCN": "enGo 主要智慧家庭设备均享有保修服务。水维氧 AI 净水系统与空气清净机的滤芯则有独立的更换周期（RO 膜 12-24 个月，其他滤芯 6-12 个月）。我们另提供到府维护、远程云端诊断与 LINE @engo 即时客服。",
-            "en": "enGo's major smart home devices come with warranty coverage. The Water-Sr AI water system and air purifier filters have separate replacement cycles (RO membrane 12-24 months, other filters 6-12 months). We also offer on-site maintenance, cloud-based remote diagnosis, and LINE @engo instant support.",
-            "fr": "Les principaux appareils domestiques intelligents enGo bénéficient d'une garantie. Les filtres du système Water-Sr AI et du purificateur d'air ont des cycles de remplacement distincts (membrane RO 12-24 mois, autres filtres 6-12 mois). Nous offrons également la maintenance à domicile et le diagnostic à distance.",
-            "ja": "enGoの主要スマートホームデバイスには保証サービスが付いています。Water-Sr AI浄水システムと空気清浄機のフィルターには個別の交換サイクルがあります（RO膜12〜24か月、その他6〜12か月）。訪問メンテナンス、クラウド診断、LINE @engoサポートもあります。",
-            "es": "Los principales dispositivos de hogar inteligente enGo cuentan con cobertura de garantía. Los filtros del sistema Water-Sr AI y del purificador de aire tienen ciclos de reemplazo separados (membrana RO 12-24 meses, otros filtros 6-12 meses). También ofrecemos mantenimiento en sitio, diagnóstico remoto en la nube y soporte instantáneo LINE @engo."
-        }
-    },
-    {
-        "id": 6,
-        "category": "features",
-        "question": {
-            "zh": "enGo 智慧家庭系統在沒有網路連線的情況下可以運作嗎？",
-            "zhCN": "enGo 智慧家庭系统在没有网络连接的情况下可以运作吗？",
-            "en": "Does the enGo smart home system work without an internet connection?",
-            "fr": "Le système domestique intelligent enGo fonctionne-t-il sans connexion Internet ?",
-            "ja": "enGoスマートホームシステムはインターネット接続なしで機能しますか？",
-            "es": "¿Funciona el sistema de hogar inteligente enGo sin conexión a internet?"
-        },
-        "answer": {
-            "zh": "透過 T1 平板的基本本地控制和預設智慧場景在離線時仍可運作，但遠端存取與語音控制需要開啟網路連線。Zigbee 設備在本地網路下也可繼續運作。",
-            "zhCN": "通过 T1 平板的基本本地控制和预设智慧场景在离线时仍可运作，但远程访问与语音控制需要开启网络连接。Zigbee 设备在本地网络下也可继续运作。",
-            "en": "Basic local controls via the T1 tablet and preset smart scenes will continue to work offline. Zigbee devices also maintain local functionality. However, remote access and voice control require an active internet connection.",
-            "fr": "Les contrôles locaux de base via la tablette T1 et les scènes intelligentes prédéfinies continueront de fonctionner hors ligne. Les appareils Zigbee maintiennent leur fonctionnalité locale. L'accès à distance et le contrôle vocal nécessitent une connexion Internet.",
-            "ja": "T1タブレットを介した基本的なローカル制御とプリセットのスマートシーンはオフラインでも機能し続けます。Zigbeeデバイスもローカルで動作します。ただし、リモートアクセスと音声制御にはインターネット接続が必要です。",
-            "es": "Los controles locales básicos a través de la tableta T1 y las escenas inteligentes preconfiguradas seguirán funcionando sin conexión. Los dispositivos Zigbee también mantienen funcionalidad local. Sin embargo, el acceso remoto y el control por voz requieren una conexión a internet activa."
-        }
-    },
-    {
-        "id": 7,
-        "category": "maintenance",
-        "question": {
-            "zh": "我應該多久更換一次水維氧 AI 系統中的濾芯？",
-            "zhCN": "我应该多久更换一次水维氧 AI 系统中的滤芯？",
-            "en": "How often should I replace the filters in the Water-Sr AI system?",
-            "fr": "À quelle fréquence dois-je remplacer les filtres du système Water-Sr AI ?",
-            "ja": "Water-Sr AIシステムのフィルターはどのくらいの頻度で交換すべきですか？",
-            "es": "¿Con qué frecuencia debo reemplazar los filtros del sistema Water-Sr AI?"
-        },
-        "answer": {
-            "zh": "濾芯壽命取決於水質和使用情況。一般來說，RO 逆滲透膜可使用 12-24 個月，而其他濾芯應每 6-12 個月更換一次。T1 平板會在需要更換時自動提醒您，也可透過 App 隨時查看濾芯狀態。",
-            "zhCN": "滤芯寿命取决于水质和使用情况。一般来说，RO 逆渗透膜可使用 12-24 个月，而其他滤芯应每 6-12 个月更换一次。T1 平板会在需要更换时自动提醒您，也可通过 App 随时查看滤芯状态。",
-            "en": "Filter lifespan varies based on water quality and usage. Generally, the RO membrane lasts 12-24 months while other filters should be replaced every 6-12 months. The T1 tablet will alert you automatically when replacement is needed, and you can check filter status anytime via the App.",
-            "fr": "La durée de vie du filtre varie selon la qualité de l'eau et l'utilisation. Généralement, la membrane RO dure 12-24 mois tandis que les autres filtres doivent être remplacés tous les 6-12 mois. La tablette T1 vous alertera automatiquement, et vous pouvez vérifier l'état des filtres via l'application.",
-            "ja": "フィルターの寿命は水質と使用量によって異なります。一般的にRO膜は12〜24か月、その他のフィルターは6〜12か月ごとに交換する必要があります。T1タブレットが交換時期を自動通知し、アプリでフィルター状態をいつでも確認できます。",
-            "es": "La vida útil del filtro varía según la calidad del agua y el uso. En general, la membrana RO dura de 12 a 24 meses mientras que los demás filtros deben reemplazarse cada 6 a 12 meses. La tableta T1 te alertará automáticamente cuando sea necesario, y puedes verificar el estado de los filtros en la App en cualquier momento."
-        }
-    },
-    {
-        "id": 8,
-        "category": "products",
-        "question": {
-            "zh": "EAP-T01 智能空氣清淨機有什麼特色？",
-            "zhCN": "EAP-T01 智能空气清净机有什么特色？",
-            "en": "What are the features of the EAP-T01 Smart Air Purifier?",
-            "fr": "Quelles sont les caractéristiques du purificateur d'air intelligent EAP-T01 ?",
-            "ja": "EAP-T01 スマート空気清浄機の特長は何ですか？",
-            "es": "¿Cuáles son las características del purificador de aire inteligente EAP-T01?"
-        },
-        "answer": {
-            "zh": "EAP-T01 是 4合1 智能空氣清淨機，整合空氣清淨、藍牙音響、無線充電與香氛擴香功能。搭載醫療級 HEPA12 濾網 + Ag+ 銀離子抗菌技術，可抗 H1N1 流感病毒。CADR 值 110 m³/h，適合臥室、書房及 15 平方公尺以下空間。支援智慧中控平板與 App 遠端操控。",
-            "zhCN": "EAP-T01 是 4合1 智能空气清净机，整合空气清净、蓝牙音响、无线充电与香氛扩香功能。搭载医疗级 HEPA12 滤网 + Ag+ 银离子抗菌技术，可抗 H1N1 流感病毒。CADR 值 110 m³/h，适合卧室、书房及 15 平方米以下空间。支持智慧中控平板与 App 远程操控。",
-            "en": "The EAP-T01 is a 4-in-1 smart air purifier combining air purification, Bluetooth speaker, wireless charging, and fragrance diffuser. It features medical-grade HEPA12 filtration + Ag+ silver ion antibacterial technology, effective against H1N1 influenza virus. With a CADR of 110 m³/h, it's ideal for bedrooms, studies, and spaces up to 15 m². Supports smart tablet and App remote control.",
-            "fr": "L'EAP-T01 est un purificateur d'air intelligent 4-en-1 : purification, enceinte Bluetooth, charge sans fil et diffuseur de parfum. Il dispose d'un filtre HEPA12 médical + technologie antibactérienne Ag+ ions d'argent, efficace contre le virus H1N1. Avec un CADR de 110 m³/h, il est idéal pour les chambres et espaces jusqu'à 15 m². Compatible tablette et application.",
-            "ja": "EAP-T01は4-in-1スマート空気清浄機で、空気清浄、Bluetoothスピーカー、ワイヤレス充電、フレグランスディフューザーを統合。医療グレードHEPA12フィルター + Ag+銀イオン抗菌技術搭載、H1N1インフルエンザウイルスにも有効。CADR 110 m³/hで、寝室・書斎・15㎡以下の空間に最適。スマートタブレット＆アプリ連携対応。",
-            "es": "El EAP-T01 es un purificador de aire inteligente 4 en 1 que combina purificación de aire, altavoz Bluetooth, carga inalámbrica y difusor de fragancia. Cuenta con filtración HEPA12 de grado médico + tecnología antibacteriana de iones de plata Ag+, efectiva contra el virus de la gripe H1N1. Con un CADR de 110 m³/h, es ideal para dormitorios, estudios y espacios de hasta 15 m². Compatible con tableta inteligente y control remoto por App."
-        }
-    },
-    {
-        "id": 9,
-        "category": "showroom",
-        "question": {
-            "zh": "我可以親自觀看並體驗 enGo 產品嗎？",
-            "zhCN": "我可以亲自观看并体验 enGo 产品吗？",
-            "en": "Can I see and test enGo products in person?",
-            "fr": "Puis-je voir et tester les produits enGo en personne ?",
-            "ja": "enGo製品を直接見て試すことはできますか？",
-            "es": "¿Puedo ver y probar los productos enGo en persona?"
-        },
-        "answer": {
-            "zh": "可以的！我們在北台灣與中台灣都有展示間。您可以預約導覽並親身體驗我們的智慧家庭整合方案，包含 AI 中控平板、淨水系統、空氣清淨機及全屋智慧場景展示。請聯絡我們以進行預約。",
-            "zhCN": "可以的！我们在北台湾与中台湾都有展示间。您可以预约导览并亲身体验我们的智慧家庭整合方案，包含 AI 中控平板、净水系统、空气清净机及全屋智慧场景展示。请联系我们以进行预约。",
-            "en": "Yes! We have showrooms in Northern and Central Taiwan. You can book a guided tour and experience our full smart home integration — including the AI control tablet, water system, air purifier, and whole-home scene automation demos. Please contact us to make a reservation.",
-            "fr": "Oui ! Nous avons des showrooms dans le nord et le centre de Taïwan. Vous pouvez réserver une visite guidée et découvrir notre intégration complète — tablette AI, système d'eau, purificateur d'air et démonstrations de scènes. Contactez-nous pour réserver.",
-            "ja": "はい！台湾北部と中部にショールームがあります。AI制御タブレット、浄水システム、空気清浄機、全室スマートシーンのデモを含むガイド付きツアーを予約できます。ご予約はお問い合わせください。",
-            "es": "¡Sí! Tenemos showrooms en el norte y centro de Taiwán. Puedes reservar una visita guiada y experimentar nuestra integración completa de hogar inteligente — incluyendo la tableta de control AI, sistema de agua, purificador de aire y demos de escenas para toda la casa. Contáctanos para hacer una reservación."
-        }
-    },
-    {
-        "id": 10,
-        "category": "services",
-        "question": {
-            "zh": "enGo 是否提供智慧家庭系統的安裝服務？",
-            "zhCN": "enGo 是否提供智慧家庭系统的安装服务？",
-            "en": "Does enGo provide installation services for the smart home system?",
-            "fr": "enGo fournit-il des services d'installation pour le système domestique intelligent ?",
-            "ja": "enGoはスマートホームシステムのインストールサービスを提供していますか？",
-            "es": "¿enGo ofrece servicios de instalación para el sistema de hogar inteligente?"
-        },
-        "answer": {
-            "zh": "我們提供完整的六步驟服務：免費諮詢、現場丈量、方案設計、專業施工、系統設定、教學驗收。新屋裝潢或舊屋翻新都適用，建議在裝潢初期即諮詢，以最佳化佈線方案。",
-            "zhCN": "我们提供完整的六步骤服务：免费咨询、现场丈量、方案设计、专业施工、系统设定、教学验收。新屋装修或旧屋翻新都适用，建议在装修初期即咨询，以最佳化布线方案。",
-            "en": "We offer a full 6-step service: free consultation, on-site survey, custom design, professional installation, system setup, and training & handover. Works for both new builds and renovations — we recommend consulting early during renovation to optimize wiring plans.",
-            "fr": "Nous offrons un service complet en 6 étapes : consultation gratuite, visite sur site, design personnalisé, installation professionnelle, configuration système et formation. Convient aux constructions neuves et rénovations — nous recommandons de consulter tôt pendant la rénovation.",
-            "ja": "6ステップのフルサービスを提供：無料相談、現地調査、カスタム設計、プロによる設置、システム設定、使い方レクチャー。新築・リフォーム両方に対応。配線の最適化のため、リフォーム初期段階でのご相談をお勧めします。",
-            "es": "Ofrecemos un servicio completo de 6 pasos: consulta gratuita, encuesta en sitio, diseño personalizado, instalación profesional, configuración del sistema y capacitación. Funciona para construcciones nuevas y renovaciones — recomendamos consultar temprano durante la renovación para optimizar el cableado."
-        }
-    },
-    {
-        "id": 11,
-        "category": "features",
-        "question": {
-            "zh": "什麼是一鍵場景自動化？",
-            "zhCN": "什么是一键场景自动化？",
-            "en": "What is one-touch scene automation?",
-            "fr": "Qu'est-ce que l'automatisation de scène en un clic ?",
-            "ja": "ワンタッチシーンオートメーションとは何ですか？",
-            "es": "¿Qué es la automatización de escenas con un toque?"
-        },
-        "answer": {
-            "zh": "enGo ONE TOUCH 突破傳統一鍵開關，實現真正的全屋聯動。例如「回家模式」自動開啟公共空間燈光、窗簾關閉、電器自動調節；「離家模式」窗簾自動開啟、關閉所有燈光並啟動安全監測；「晨曦喚醒」窗簾自動開啟、燈光漸亮；「睡眠模式」一鍵關閉全屋燈光與設備。",
-            "zhCN": "enGo ONE TOUCH 突破传统一键开关，实现真正的全屋联动。例如「回家模式」自动开启公共空间灯光、窗帘关闭、电器自动调节；「离家模式」窗帘自动开启、关闭所有灯光并启动安全监测；「晨曦唤醒」窗帘自动开启、灯光渐亮；「睡眠模式」一键关闭全屋灯光与设备。",
-            "en": "enGo ONE TOUCH goes beyond traditional switches with true whole-home automation. 'Home Mode' turns on common area lights, closes curtains, and auto-adjusts appliances. 'Away Mode' opens curtains for sunlight, turns off lights, and arms security. 'Sunrise Wake' gradually opens curtains and brightens lights. 'Sleep Mode' shuts everything down with one touch.",
-            "fr": "enGo ONE TOUCH va au-delà des interrupteurs traditionnels avec une automatisation complète. 'Mode Maison' allume les lumières et ferme les rideaux. 'Mode Absent' ouvre les rideaux et active la sécurité. 'Réveil Soleil' ouvre les rideaux progressivement. 'Mode Nuit' éteint tout en un geste.",
-            "ja": "enGo ONE TOUCHは従来のスイッチを超え、真の全室連動を実現。「帰宅モード」で共用エリアの照明ON・カーテン閉・家電自動調整。「外出モード」でカーテン開放・照明OFF・セキュリティ起動。「朝焼け」でカーテン開放・照明徐々にON。「就寝モード」で全室一斉OFF。",
-            "es": "enGo ONE TOUCH va más allá de los interruptores tradicionales con verdadera automatización de toda la casa. 'Modo Casa' enciende luces, cierra cortinas y ajusta electrodomésticos. 'Modo Ausencia' abre cortinas, apaga luces y activa seguridad. 'Despertar al Amanecer' abre cortinas y aumenta la luz gradualmente. 'Modo Sueño' apaga todo con un toque."
-        }
-    },
-    {
-        "id": 12,
-        "category": "features",
-        "question": {
-            "zh": "enGo 支援 Apple HomeKit 和 Siri 嗎？",
-            "zhCN": "enGo 支持 Apple HomeKit 和 Siri 吗？",
-            "en": "Does enGo support Apple HomeKit and Siri?",
-            "fr": "enGo prend-il en charge Apple HomeKit et Siri ?",
-            "ja": "enGoはApple HomeKitとSiriに対応していますか？",
-            "es": "¿enGo es compatible con Apple HomeKit y Siri?"
-        },
-        "answer": {
-            "zh": "是的！enGo 系統已整合 Apple HomeKit，您可以使用 Siri 語音控制您的智慧家庭設備。只要說「嘿 Siri！我回家了」即可啟動回家模式。搭配合作供應商產品，透過工程師設定自動化場景，並支援 Apple HomeKit 客製化整合。",
-            "zhCN": "是的！enGo 系统已整合 Apple HomeKit，您可以使用 Siri 语音控制您的智慧家庭设备。只要说「嘿 Siri！我回家了」即可启动回家模式。搭配合作供应商产品，通过工程师设定自动化场景，并支持 Apple HomeKit 客制化整合。",
-            "en": "Yes! enGo integrates with Apple HomeKit for Siri voice control. Just say 'Hey Siri, I'm home!' to activate Home Mode. Our engineers configure automation scenes with partner products, and we offer custom Apple HomeKit integration. With AIoT technology, even non-partner devices can be voice-controlled.",
-            "fr": "Oui ! enGo s'intègre avec Apple HomeKit pour le contrôle vocal Siri. Dites simplement 'Dis Siri, je suis rentré !' pour activer le mode Maison. Nos ingénieurs configurent les scènes d'automatisation et nous proposons une intégration HomeKit personnalisée.",
-            "ja": "はい！enGoはApple HomeKitと統合しており、Siri音声制御が可能です。「Hey Siri、ただいま！」で帰宅モードを起動。エンジニアがパートナー製品との自動化シーンを設定し、Apple HomeKitのカスタム統合にも対応します。",
-            "es": "¡Sí! enGo se integra con Apple HomeKit para el control por voz Siri. Solo di '¡Oye Siri, estoy en casa!' para activar el modo Casa. Nuestros ingenieros configuran escenas de automatización con productos asociados, y ofrecemos integración personalizada de Apple HomeKit. Con tecnología AIoT, incluso dispositivos de terceros pueden controlarse por voz."
-        }
-    },
-    {
-        "id": 13,
-        "category": "safety",
-        "question": {
-            "zh": "enGo 有漏水偵測和瓦斯自動關閉功能嗎？",
-            "zhCN": "enGo 有漏水检测和瓦斯自动关闭功能吗？",
-            "en": "Does enGo have leak detection and automatic gas shutoff?",
-            "fr": "enGo dispose-t-il d'une détection de fuite et d'un arrêt automatique du gaz ?",
-            "ja": "enGoには漏水検知とガス自動遮断機能がありますか？",
-            "es": "¿enGo tiene detección de fugas y cierre automático de gas?"
-        },
-        "answer": {
-            "zh": "有的！enGo 的 24 小時主動防護系統包含：櫥櫃底部漏水感測器偵測到滲水時，自動關閉電子水閥避免更大損失；偵測到瓦斯或煙霧時，系統主動切斷閥門並觸發 IH 爐斷電。所有異常會即時推播通知屋主，從源頭阻斷災害風險。",
-            "zhCN": "有的！enGo 的 24 小时主动防护系统包含：橱柜底部漏水感测器检测到渗水时，自动关闭电子水阀避免更大损失；检测到瓦斯或烟雾时，系统主动切断阀门并触发 IH 炉断电。所有异常会即时推送通知屋主，从源头阻断灾害风险。",
-            "en": "Yes! enGo's 24-hour active protection system includes: cabinet-mounted leak sensors that auto-close electronic water valves when seepage is detected; automatic gas valve shutoff and IH stove power cut when smoke or gas is detected. All anomalies trigger instant App push notifications to the homeowner, stopping disasters at the source.",
-            "fr": "Oui ! Le système de protection active 24h d'enGo comprend : des capteurs de fuite sous les armoires qui ferment automatiquement les vannes d'eau électroniques ; une coupure automatique du gaz et de la plaque IH en cas de détection de fumée ou de gaz. Toutes les anomalies déclenchent des notifications instantanées via l'application.",
-            "ja": "はい！enGoの24時間アクティブ防護システムには、キャビネット下部の漏水センサーが水漏れを検知すると電子水弁を自動閉鎖する機能、ガスや煙を検知するとガス弁遮断とIHコンロの電源カットを行う機能があります。全ての異常はアプリのプッシュ通知で即時に通知されます。",
-            "es": "¡Sí! El sistema de protección activa 24 horas de enGo incluye: sensores de fuga montados en gabinetes que cierran automáticamente las válvulas de agua electrónicas al detectar filtración; cierre automático de la válvula de gas y corte de energía de la estufa IH al detectar humo o gas. Todas las anomalías activan notificaciones push instantáneas al propietario a través de la App."
-        }
-    },
-    {
-        "id": 14,
-        "category": "energy",
-        "question": {
-            "zh": "enGo 如何幫助節能？",
-            "zhCN": "enGo 如何帮助节能？",
-            "en": "How does enGo help with energy savings?",
-            "fr": "Comment enGo aide-t-il à économiser de l'énergie ?",
-            "ja": "enGoはどのように省エネに貢献しますか？",
-            "es": "¿Cómo ayuda enGo a ahorrar energía?"
-        },
-        "answer": {
-            "zh": "enGo AI 系統會學習您的日常習慣，自動調整燈光亮度、空調溫度和用電排程。搭配智慧場景（離家自動關燈關電器、睡眠模式關閉非必要設備），有效降低電費支出。enGo 也致力於 ESG 永續經營，將節能減碳納入企業核心價值。",
-            "zhCN": "enGo AI 系统会学习您的日常习惯，自动调整灯光亮度、空调温度和用电排程。搭配智慧场景（离家自动关灯关电器、睡眠模式关闭非必要设备），有效降低电费支出。enGo 也致力于 ESG 可持续经营，将节能减碳纳入企业核心价值。",
-            "en": "The enGo AI system learns your daily habits and automatically adjusts lighting brightness, AC temperature, and power schedules. Combined with smart scenes (Away Mode auto-shuts lights and appliances, Sleep Mode disables non-essential devices), it effectively reduces energy bills. enGo is also committed to ESG sustainability, with energy saving and carbon reduction as core values.",
-            "fr": "Le système AI d'enGo apprend vos habitudes et ajuste automatiquement l'éclairage, la climatisation et les horaires. Les scènes intelligentes (Mode Absent et Mode Nuit) réduisent efficacement la consommation. enGo s'engage également dans le développement durable ESG.",
-            "ja": "enGo AIシステムは日常の習慣を学習し、照明、エアコン、電力スケジュールを自動調整します。スマートシーン（外出モードで照明・家電OFF、就寝モードで不要機器OFF）と組み合わせ、電気代を効果的に削減。enGoはESGサステナビリティにもコミットし、省エネ・CO2削減をコアバリューとしています。",
-            "es": "El sistema AI de enGo aprende tus hábitos diarios y ajusta automáticamente el brillo, la temperatura del AC y los horarios de energía. Combinado con escenas inteligentes (Modo Ausencia apaga luces y electrodomésticos, Modo Sueño desactiva dispositivos no esenciales), reduce efectivamente las facturas de energía. enGo también está comprometido con la sostenibilidad ESG."
-        }
-    },
-    {
-        "id": 15,
-        "category": "services",
-        "question": {
-            "zh": "enGo 適合長輩使用嗎？",
-            "zhCN": "enGo 适合长辈使用吗？",
-            "en": "Is enGo suitable for elderly users?",
-            "fr": "enGo est-il adapté aux personnes âgées ?",
-            "ja": "enGoは高齢者にも使いやすいですか？",
-            "es": "¿Es enGo adecuado para personas mayores?"
-        },
-        "answer": {
-            "zh": "非常適合！enGo 特別注重「長者友善設計」。T1 平板配備大字體介面、語音控制功能，搭配自動場景（起床自動開燈、入睡自動關燈），讓操作更加簡單。家人可透過 App 遠端查看長輩居家狀態，加上煙霧、漏水、門窗感測即時通知，讓子女在遠方也能安心。",
-            "zhCN": "非常适合！enGo 特别注重「长者友善设计」。T1 平板配备大字体界面、语音控制功能，搭配自动场景（起床自动开灯、入睡自动关灯），让操作更加简单。家人可通过 App 远程查看长辈居家状态，加上烟雾、漏水、门窗感测即时通知，让子女在远方也能安心。",
-            "en": "Absolutely! enGo is designed with 'senior-friendly' features. The T1 tablet has a large-font interface and voice control, combined with auto scenes (lights on at wake, off at sleep) for effortless operation. Family members can remotely monitor home status via the App, plus smoke, leak, and door/window sensors provide real-time alerts for peace of mind.",
-            "fr": "Absolument ! enGo est conçu avec des fonctionnalités adaptées aux seniors : interface à gros caractères, commande vocale, scènes automatiques (lumières au réveil/coucher). La famille peut surveiller à distance via l'application, avec des alertes en temps réel pour la fumée, les fuites et les capteurs de portes/fenêtres.",
-            "ja": "もちろんです！enGoは「シニアフレンドリー設計」を重視。T1タブレットは大きな文字のインターフェースと音声制御を備え、自動シーン（起床時に照明ON、就寝時にOFF）で簡単操作。家族はアプリで遠隔から自宅の状態を確認でき、煙・漏水・ドアセンサーのリアルタイム通知で安心です。",
-            "es": "¡Por supuesto! enGo está diseñado con características 'amigables para adultos mayores'. La tableta T1 tiene una interfaz de texto grande y control por voz, combinada con escenas automáticas (luces al despertar, apagadas al dormir) para una operación sin esfuerzo. Los familiares pueden monitorear el estado del hogar remotamente a través de la App, además de alertas en tiempo real de sensores de humo, fugas y puertas/ventanas."
-        }
+    "answer": {
+      "zh": "插上中樞，打開 enGo App，然後按照「新增設備」提示輸入您的 Wi-Fi 密碼。系統支援 Wi-Fi、Zigbee 和藍牙多種協議連線。",
+      "zhCN": "插上中枢，打开 enGo App，然后按照「新增设备」提示输入您的 Wi-Fi 密码。系统支持 Wi-Fi、Zigbee 和蓝牙多种协议连接。",
+      "en": "Plug in the hub, open the enGo App, and follow the 'Add Device' prompts to enter your Wi-Fi password. The system supports Wi-Fi, Zigbee, and Bluetooth protocols.",
+      "fr": "Branchez le concentrateur, ouvrez l'application enGo et suivez les instructions 'Ajouter un appareil' pour saisir votre mot de passe Wi-Fi. Le système prend en charge Wi-Fi, Zigbee et Bluetooth.",
+      "ja": "ハブを電源に接続し、enGoアプリを開いて「デバイスの追加」プロンプトに従い、Wi-Fiパスワードを入力します。Wi-Fi、Zigbee、Bluetooth各種プロトコルに対応しています。",
+      "es": "Conecta el hub, abre la App enGo y sigue las instrucciones de 'Agregar dispositivo' para ingresar tu contraseña Wi-Fi. El sistema es compatible con los protocolos Wi-Fi, Zigbee y Bluetooth."
     }
+  },
+  {
+    "id": 2,
+    "category": "compatibility",
+    "question": {
+      "zh": "有哪些設備與 enGo 系統兼容？",
+      "zhCN": "有哪些设备与 enGo 系统兼容？",
+      "en": "What devices are compatible with the enGo system?",
+      "fr": "Quels appareils sont compatibles avec le système enGo ?",
+      "ja": "enGoシステムと互換性のあるデバイスは何ですか？",
+      "es": "¿Qué dispositivos son compatibles con el sistema enGo?"
+    },
+    "answer": {
+      "zh": "enGo 支持智慧燈光開關、空調遙控器、電動窗簾、門窗感測器、煙霧/漏水偵測器、空氣清淨機、淨水系統、電動升降拉籃等，並兼容 Apple HomeKit（Siri 聲控）與 MEDOLE 新風除濕系統。透過 AIoT 串聯技術，尚未合作的廠商產品也能提供整合支援。",
+      "zhCN": "enGo 支持智慧灯光开关、空调遥控器、电动窗帘、门窗感测器、烟雾/漏水检测器、空气清净机、净水系统、电动升降拉篮等，并兼容 Apple HomeKit（Siri 声控）与 MEDOLE 新风除湿系统。通过 AIoT 串联技术，尚未合作的厂商产品也能提供整合支持。",
+      "en": "enGo supports smart light switches, AC remote controllers, motorized curtains, door/window sensors, smoke/leak detectors, air purifiers, water systems, and motorized storage baskets. It also integrates with Apple HomeKit (Siri voice control) and the MEDOLE fresh air dehumidification system. With AIoT technology, even non-partner devices can be integrated.",
+      "fr": "enGo prend en charge les interrupteurs intelligents, télécommandes de climatisation, rideaux motorisés, capteurs de portes/fenêtres, détecteurs de fumée/fuite, purificateurs d'air, systèmes d'eau et paniers motorisés. Il s'intègre également avec Apple HomeKit (Siri) et le système de ventilation MEDOLE.",
+      "ja": "enGoは、スマートライトスイッチ、エアコンリモコン、電動カーテン、ドア/窓センサー、煙/漏水検知器、空気清浄機、浄水システム、電動収納バスケットなどに対応しています。Apple HomeKit（Siri音声制御）やMEDOLE新鮮空気除湿システムとも統合可能です。",
+      "es": "enGo es compatible con interruptores de luz inteligentes, controladores de AC, cortinas motorizadas, sensores de puertas/ventanas, detectores de humo/fugas, purificadores de aire, sistemas de agua y canastas motorizadas. También se integra con Apple HomeKit (control por voz Siri) y el sistema de deshumidificación MEDOLE. Con tecnología AIoT, incluso dispositivos de terceros pueden integrarse."
+    }
+  },
+  {
+    "id": 3,
+    "category": "setup",
+    "question": {
+      "zh": "我該如何更新固件？",
+      "zhCN": "我该如何更新固件？",
+      "en": "How do I update the firmware?",
+      "fr": "Comment mettre à jour le firmware ?",
+      "ja": "ファームウェアを更新するにはどうすればよいですか？",
+      "es": "¿Cómo actualizo el firmware?"
+    },
+    "answer": {
+      "zh": "如果有可用更新，enGo App 會自動通知您。您可以從設定選單中一鍵更新。系統也可透過雲端遠端診斷進行故障排除。",
+      "zhCN": "如果有可用更新，enGo App 会自动通知您。您可以从设定菜单中一键更新。系统也可通过云端远程诊断进行故障排除。",
+      "en": "The enGo App will notify you automatically if an update is available. You can update with one click from the Settings menu. The system also supports cloud-based remote diagnosis for troubleshooting.",
+      "fr": "L'application enGo vous informera automatiquement si une mise à jour est disponible. Vous pouvez effectuer la mise à jour en un clic depuis le menu Paramètres. Le diagnostic à distance via le cloud est également disponible.",
+      "ja": "更新が利用可能な場合、enGoアプリが自動的に通知します。設定メニューからワンクリックで更新できます。クラウドベースのリモート診断にも対応しています。",
+      "es": "La App enGo te notificará automáticamente si hay una actualización disponible. Puedes actualizar con un clic desde el menú de Configuración. El sistema también soporta diagnóstico remoto basado en la nube."
+    }
+  },
+  {
+    "id": 4,
+    "category": "tutorials",
+    "question": {
+      "zh": "我可以在哪裡找到產品設定和智慧場景的影片教學？",
+      "zhCN": "我可以在哪里找到产品设定和智慧场景的视频教学？",
+      "en": "Where can I find video tutorials for product setup and smart scenes?",
+      "fr": "Où puis-je trouver des tutoriels vidéo pour la configuration des produits et les scènes intelligentes ?",
+      "ja": "製品のセットアップやスマートシーンの動画チュートリアルはどこで見られますか？",
+      "es": "¿Dónde puedo encontrar tutoriales en video para la configuración de productos y escenas inteligentes?"
+    },
+    "answer": {
+      "zh": "您可以到我們的官方 YouTube 頻道查看分步指南，其中包含產品使用及居家場景自動化教學。我們也在本網站的「教學」頁面提供個人用戶、設計師和建商三大類分步教學。",
+      "zhCN": "您可以到我们的官方 YouTube 频道查看分步指南，其中包含产品使用及居家场景自动化教学。我们也在本网站的「教学」页面提供个人用户、设计师和建商三大类分步教学。",
+      "en": "You can find step-by-step guides on our official YouTube channel, featuring tutorials on product usage and smart home scene automation. We also have categorized tutorials on this website's Tutorial page for individuals, designers, and builders.",
+      "fr": "Vous pouvez trouver des guides étape par étape sur notre chaîne YouTube officielle. Notre page Tutoriels offre également des guides catégorisés pour les particuliers, les designers et les constructeurs.",
+      "ja": "公式YouTubeチャンネルでステップバイステップのガイドをご覧いただけます。本サイトのチュートリアルページでも、個人、デザイナー、建設業者向けの各種ガイドを提供しています。",
+      "es": "Puedes encontrar guías paso a paso en nuestro canal oficial de YouTube, con tutoriales sobre el uso de productos y la automatización de escenas. También tenemos tutoriales categorizados en la página de Tutoriales de este sitio para individuos, diseñadores y constructores."
+    }
+  },
+  {
+    "id": 5,
+    "category": "warranty",
+    "question": {
+      "zh": "enGo 產品的保固期有多長？",
+      "zhCN": "enGo 产品的保修期有多长？",
+      "en": "What is the warranty period for enGo products?",
+      "fr": "Quelle est la période de garantie pour les produits enGo ?",
+      "ja": "enGo製品の保証期間はどのくらいですか？",
+      "es": "¿Cuál es el período de garantía para los productos enGo?"
+    },
+    "answer": {
+      "zh": "enGo 主要智慧家庭設備均享有保固服務。水維氧 AI 淨水系統與空氣清淨機的濾芯則有獨立的更換週期（RO 膜 12-24 個月，其他濾芯 6-12 個月）。我們另提供到府維護、遠端雲端診斷與 LINE @engo 即時客服。",
+      "zhCN": "enGo 主要智慧家庭设备均享有保修服务。水维氧 AI 净水系统与空气清净机的滤芯则有独立的更换周期（RO 膜 12-24 个月，其他滤芯 6-12 个月）。我们另提供到府维护、远程云端诊断与 LINE @engo 即时客服。",
+      "en": "enGo's major smart home devices come with warranty coverage. The Water-Sr AI water system and air purifier filters have separate replacement cycles (RO membrane 12-24 months, other filters 6-12 months). We also offer on-site maintenance, cloud-based remote diagnosis, and LINE @engo instant support.",
+      "fr": "Les principaux appareils domestiques intelligents enGo bénéficient d'une garantie. Les filtres du système Water-Sr AI et du purificateur d'air ont des cycles de remplacement distincts (membrane RO 12-24 mois, autres filtres 6-12 mois). Nous offrons également la maintenance à domicile et le diagnostic à distance.",
+      "ja": "enGoの主要スマートホームデバイスには保証サービスが付いています。Water-Sr AI浄水システムと空気清浄機のフィルターには個別の交換サイクルがあります（RO膜12〜24か月、その他6〜12か月）。訪問メンテナンス、クラウド診断、LINE @engoサポートもあります。",
+      "es": "Los principales dispositivos de hogar inteligente enGo cuentan con cobertura de garantía. Los filtros del sistema Water-Sr AI y del purificador de aire tienen ciclos de reemplazo separados (membrana RO 12-24 meses, otros filtros 6-12 meses). También ofrecemos mantenimiento en sitio, diagnóstico remoto en la nube y soporte instantáneo LINE @engo."
+    }
+  },
+  {
+    "id": 6,
+    "category": "features",
+    "question": {
+      "zh": "enGo 智慧家庭系統在沒有網路連線的情況下可以運作嗎？",
+      "zhCN": "enGo 智慧家庭系统在没有网络连接的情况下可以运作吗？",
+      "en": "Does the enGo smart home system work without an internet connection?",
+      "fr": "Le système domestique intelligent enGo fonctionne-t-il sans connexion Internet ?",
+      "ja": "enGoスマートホームシステムはインターネット接続なしで機能しますか？",
+      "es": "¿Funciona el sistema de hogar inteligente enGo sin conexión a internet?"
+    },
+    "answer": {
+      "zh": "透過 T1 平板的基本本地控制和預設智慧場景在離線時仍可運作，但遠端存取與語音控制需要開啟網路連線。Zigbee 設備在本地網路下也可繼續運作。",
+      "zhCN": "通过 T1 平板的基本本地控制和预设智慧场景在离线时仍可运作，但远程访问与语音控制需要开启网络连接。Zigbee 设备在本地网络下也可继续运作。",
+      "en": "Basic local controls via the T1 tablet and preset smart scenes will continue to work offline. Zigbee devices also maintain local functionality. However, remote access and voice control require an active internet connection.",
+      "fr": "Les contrôles locaux de base via la tablette T1 et les scènes intelligentes prédéfinies continueront de fonctionner hors ligne. Les appareils Zigbee maintiennent leur fonctionnalité locale. L'accès à distance et le contrôle vocal nécessitent une connexion Internet.",
+      "ja": "T1タブレットを介した基本的なローカル制御とプリセットのスマートシーンはオフラインでも機能し続けます。Zigbeeデバイスもローカルで動作します。ただし、リモートアクセスと音声制御にはインターネット接続が必要です。",
+      "es": "Los controles locales básicos a través de la tableta T1 y las escenas inteligentes preconfiguradas seguirán funcionando sin conexión. Los dispositivos Zigbee también mantienen funcionalidad local. Sin embargo, el acceso remoto y el control por voz requieren una conexión a internet activa."
+    }
+  },
+  {
+    "id": 7,
+    "category": "maintenance",
+    "question": {
+      "zh": "我應該多久更換一次水維氧 AI 系統中的濾芯？",
+      "zhCN": "我应该多久更换一次水维氧 AI 系统中的滤芯？",
+      "en": "How often should I replace the filters in the Water-Sr AI system?",
+      "fr": "À quelle fréquence dois-je remplacer les filtres du système Water-Sr AI ?",
+      "ja": "Water-Sr AIシステムのフィルターはどのくらいの頻度で交換すべきですか？",
+      "es": "¿Con qué frecuencia debo reemplazar los filtros del sistema Water-Sr AI?"
+    },
+    "answer": {
+      "zh": "濾芯壽命取決於水質和使用情況。一般來說，RO 逆滲透膜可使用 12-24 個月，而其他濾芯應每 6-12 個月更換一次。T1 平板會在需要更換時自動提醒您，也可透過 App 隨時查看濾芯狀態。",
+      "zhCN": "滤芯寿命取决于水质和使用情况。一般来说，RO 逆渗透膜可使用 12-24 个月，而其他滤芯应每 6-12 个月更换一次。T1 平板会在需要更换时自动提醒您，也可通过 App 随时查看滤芯状态。",
+      "en": "Filter lifespan varies based on water quality and usage. Generally, the RO membrane lasts 12-24 months while other filters should be replaced every 6-12 months. The T1 tablet will alert you automatically when replacement is needed, and you can check filter status anytime via the App.",
+      "fr": "La durée de vie du filtre varie selon la qualité de l'eau et l'utilisation. Généralement, la membrane RO dure 12-24 mois tandis que les autres filtres doivent être remplacés tous les 6-12 mois. La tablette T1 vous alertera automatiquement, et vous pouvez vérifier l'état des filtres via l'application.",
+      "ja": "フィルターの寿命は水質と使用量によって異なります。一般的にRO膜は12〜24か月、その他のフィルターは6〜12か月ごとに交換する必要があります。T1タブレットが交換時期を自動通知し、アプリでフィルター状態をいつでも確認できます。",
+      "es": "La vida útil del filtro varía según la calidad del agua y el uso. En general, la membrana RO dura de 12 a 24 meses mientras que los demás filtros deben reemplazarse cada 6 a 12 meses. La tableta T1 te alertará automáticamente cuando sea necesario, y puedes verificar el estado de los filtros en la App en cualquier momento."
+    }
+  },
+  {
+    "id": 8,
+    "category": "products",
+    "question": {
+      "zh": "EAP-T01 智能空氣清淨機有什麼特色？",
+      "zhCN": "EAP-T01 智能空气清净机有什么特色？",
+      "en": "What are the features of the EAP-T01 Smart Air Purifier?",
+      "fr": "Quelles sont les caractéristiques du purificateur d'air intelligent EAP-T01 ?",
+      "ja": "EAP-T01 スマート空気清浄機の特長は何ですか？",
+      "es": "¿Cuáles son las características del purificador de aire inteligente EAP-T01?"
+    },
+    "answer": {
+      "zh": "EAP-T01 是 4合1 智能空氣清淨機，整合空氣清淨、藍牙音響、無線充電與香氛擴香功能。搭載醫療級 HEPA12 濾網 + Ag+ 銀離子抗菌技術，可抗 H1N1 流感病毒。CADR 值 110 m³/h，適合臥室、書房及 15 平方公尺以下空間。支援智慧中控平板與 App 遠端操控。",
+      "zhCN": "EAP-T01 是 4合1 智能空气清净机，整合空气清净、蓝牙音响、无线充电与香氛扩香功能。搭载医疗级 HEPA12 滤网 + Ag+ 银离子抗菌技术，可抗 H1N1 流感病毒。CADR 值 110 m³/h，适合卧室、书房及 15 平方米以下空间。支持智慧中控平板与 App 远程操控。",
+      "en": "The EAP-T01 is a 4-in-1 smart air purifier combining air purification, Bluetooth speaker, wireless charging, and fragrance diffuser. It features medical-grade HEPA12 filtration + Ag+ silver ion antibacterial technology, effective against H1N1 influenza virus. With a CADR of 110 m³/h, it's ideal for bedrooms, studies, and spaces up to 15 m². Supports smart tablet and App remote control.",
+      "fr": "L'EAP-T01 est un purificateur d'air intelligent 4-en-1 : purification, enceinte Bluetooth, charge sans fil et diffuseur de parfum. Il dispose d'un filtre HEPA12 médical + technologie antibactérienne Ag+ ions d'argent, efficace contre le virus H1N1. Avec un CADR de 110 m³/h, il est idéal pour les chambres et espaces jusqu'à 15 m². Compatible tablette et application.",
+      "ja": "EAP-T01は4-in-1スマート空気清浄機で、空気清浄、Bluetoothスピーカー、ワイヤレス充電、フレグランスディフューザーを統合。医療グレードHEPA12フィルター + Ag+銀イオン抗菌技術搭載、H1N1インフルエンザウイルスにも有効。CADR 110 m³/hで、寝室・書斎・15㎡以下の空間に最適。スマートタブレット＆アプリ連携対応。",
+      "es": "El EAP-T01 es un purificador de aire inteligente 4 en 1 que combina purificación de aire, altavoz Bluetooth, carga inalámbrica y difusor de fragancia. Cuenta con filtración HEPA12 de grado médico + tecnología antibacteriana de iones de plata Ag+, efectiva contra el virus de la gripe H1N1. Con un CADR de 110 m³/h, es ideal para dormitorios, estudios y espacios de hasta 15 m². Compatible con tableta inteligente y control remoto por App."
+    }
+  },
+  {
+    "id": 9,
+    "category": "showroom",
+    "question": {
+      "zh": "我可以親自觀看並體驗 enGo 產品嗎？",
+      "zhCN": "我可以亲自观看并体验 enGo 产品吗？",
+      "en": "Can I see and test enGo products in person?",
+      "fr": "Puis-je voir et tester les produits enGo en personne ?",
+      "ja": "enGo製品を直接見て試すことはできますか？",
+      "es": "¿Puedo ver y probar los productos enGo en persona?"
+    },
+    "answer": {
+      "zh": "可以的！我們在北台灣與中台灣都有展示間。您可以預約導覽並親身體驗我們的智慧家庭整合方案，包含 AI 中控平板、淨水系統、空氣清淨機及全屋智慧場景展示。請聯絡我們以進行預約。",
+      "zhCN": "可以的！我们在北台湾与中台湾都有展示间。您可以预约导览并亲身体验我们的智慧家庭整合方案，包含 AI 中控平板、净水系统、空气清净机及全屋智慧场景展示。请联系我们以进行预约。",
+      "en": "Yes! We have showrooms in Northern and Central Taiwan. You can book a guided tour and experience our full smart home integration — including the AI control tablet, water system, air purifier, and whole-home scene automation demos. Please contact us to make a reservation.",
+      "fr": "Oui ! Nous avons des showrooms dans le nord et le centre de Taïwan. Vous pouvez réserver une visite guidée et découvrir notre intégration complète — tablette AI, système d'eau, purificateur d'air et démonstrations de scènes. Contactez-nous pour réserver.",
+      "ja": "はい！台湾北部と中部にショールームがあります。AI制御タブレット、浄水システム、空気清浄機、全室スマートシーンのデモを含むガイド付きツアーを予約できます。ご予約はお問い合わせください。",
+      "es": "¡Sí! Tenemos showrooms en el norte y centro de Taiwán. Puedes reservar una visita guiada y experimentar nuestra integración completa de hogar inteligente — incluyendo la tableta de control AI, sistema de agua, purificador de aire y demos de escenas para toda la casa. Contáctanos para hacer una reservación."
+    }
+  },
+  {
+    "id": 10,
+    "category": "services",
+    "question": {
+      "zh": "enGo 是否提供智慧家庭系統的安裝服務？",
+      "zhCN": "enGo 是否提供智慧家庭系统的安装服务？",
+      "en": "Does enGo provide installation services for the smart home system?",
+      "fr": "enGo fournit-il des services d'installation pour le système domestique intelligent ?",
+      "ja": "enGoはスマートホームシステムのインストールサービスを提供していますか？",
+      "es": "¿enGo ofrece servicios de instalación para el sistema de hogar inteligente?"
+    },
+    "answer": {
+      "zh": "我們提供完整的六步驟服務：免費諮詢、現場丈量、方案設計、專業施工、系統設定、教學驗收。新屋裝潢或舊屋翻新都適用，建議在裝潢初期即諮詢，以最佳化佈線方案。",
+      "zhCN": "我们提供完整的六步骤服务：免费咨询、现场丈量、方案设计、专业施工、系统设定、教学验收。新屋装修或旧屋翻新都适用，建议在装修初期即咨询，以最佳化布线方案。",
+      "en": "We offer a full 6-step service: free consultation, on-site survey, custom design, professional installation, system setup, and training & handover. Works for both new builds and renovations — we recommend consulting early during renovation to optimize wiring plans.",
+      "fr": "Nous offrons un service complet en 6 étapes : consultation gratuite, visite sur site, design personnalisé, installation professionnelle, configuration système et formation. Convient aux constructions neuves et rénovations — nous recommandons de consulter tôt pendant la rénovation.",
+      "ja": "6ステップのフルサービスを提供：無料相談、現地調査、カスタム設計、プロによる設置、システム設定、使い方レクチャー。新築・リフォーム両方に対応。配線の最適化のため、リフォーム初期段階でのご相談をお勧めします。",
+      "es": "Ofrecemos un servicio completo de 6 pasos: consulta gratuita, encuesta en sitio, diseño personalizado, instalación profesional, configuración del sistema y capacitación. Funciona para construcciones nuevas y renovaciones — recomendamos consultar temprano durante la renovación para optimizar el cableado."
+    }
+  },
+  {
+    "id": 11,
+    "category": "features",
+    "question": {
+      "zh": "什麼是一鍵場景自動化？",
+      "zhCN": "什么是一键场景自动化？",
+      "en": "What is one-touch scene automation?",
+      "fr": "Qu'est-ce que l'automatisation de scène en un clic ?",
+      "ja": "ワンタッチシーンオートメーションとは何ですか？",
+      "es": "¿Qué es la automatización de escenas con un toque?"
+    },
+    "answer": {
+      "zh": "enGo ONE TOUCH 突破傳統一鍵開關，實現真正的全屋聯動。例如「回家模式」自動開啟公共空間燈光、窗簾關閉、電器自動調節；「離家模式」窗簾自動開啟、關閉所有燈光並啟動安全監測；「晨曦喚醒」窗簾自動開啟、燈光漸亮；「睡眠模式」一鍵關閉全屋燈光與設備。",
+      "zhCN": "enGo ONE TOUCH 突破传统一键开关，实现真正的全屋联动。例如「回家模式」自动开启公共空间灯光、窗帘关闭、电器自动调节；「离家模式」窗帘自动开启、关闭所有灯光并启动安全监测；「晨曦唤醒」窗帘自动开启、灯光渐亮；「睡眠模式」一键关闭全屋灯光与设备。",
+      "en": "enGo ONE TOUCH goes beyond traditional switches with true whole-home automation. 'Home Mode' turns on common area lights, closes curtains, and auto-adjusts appliances. 'Away Mode' opens curtains for sunlight, turns off lights, and arms security. 'Sunrise Wake' gradually opens curtains and brightens lights. 'Sleep Mode' shuts everything down with one touch.",
+      "fr": "enGo ONE TOUCH va au-delà des interrupteurs traditionnels avec une automatisation complète. 'Mode Maison' allume les lumières et ferme les rideaux. 'Mode Absent' ouvre les rideaux et active la sécurité. 'Réveil Soleil' ouvre les rideaux progressivement. 'Mode Nuit' éteint tout en un geste.",
+      "ja": "enGo ONE TOUCHは従来のスイッチを超え、真の全室連動を実現。「帰宅モード」で共用エリアの照明ON・カーテン閉・家電自動調整。「外出モード」でカーテン開放・照明OFF・セキュリティ起動。「朝焼け」でカーテン開放・照明徐々にON。「就寝モード」で全室一斉OFF。",
+      "es": "enGo ONE TOUCH va más allá de los interruptores tradicionales con verdadera automatización de toda la casa. 'Modo Casa' enciende luces, cierra cortinas y ajusta electrodomésticos. 'Modo Ausencia' abre cortinas, apaga luces y activa seguridad. 'Despertar al Amanecer' abre cortinas y aumenta la luz gradualmente. 'Modo Sueño' apaga todo con un toque."
+    }
+  },
+  {
+    "id": 12,
+    "category": "features",
+    "question": {
+      "zh": "enGo 支援 Apple HomeKit 和 Siri 嗎？",
+      "zhCN": "enGo 支持 Apple HomeKit 和 Siri 吗？",
+      "en": "Does enGo support Apple HomeKit and Siri?",
+      "fr": "enGo prend-il en charge Apple HomeKit et Siri ?",
+      "ja": "enGoはApple HomeKitとSiriに対応していますか？",
+      "es": "¿enGo es compatible con Apple HomeKit y Siri?"
+    },
+    "answer": {
+      "zh": "是的！enGo 系統已整合 Apple HomeKit，您可以使用 Siri 語音控制您的智慧家庭設備。只要說「嘿 Siri！我回家了」即可啟動回家模式。搭配合作供應商產品，透過工程師設定自動化場景，並支援 Apple HomeKit 客製化整合。",
+      "zhCN": "是的！enGo 系统已整合 Apple HomeKit，您可以使用 Siri 语音控制您的智慧家庭设备。只要说「嘿 Siri！我回家了」即可启动回家模式。搭配合作供应商产品，通过工程师设定自动化场景，并支持 Apple HomeKit 客制化整合。",
+      "en": "Yes! enGo integrates with Apple HomeKit for Siri voice control. Just say 'Hey Siri, I'm home!' to activate Home Mode. Our engineers configure automation scenes with partner products, and we offer custom Apple HomeKit integration. With AIoT technology, even non-partner devices can be voice-controlled.",
+      "fr": "Oui ! enGo s'intègre avec Apple HomeKit pour le contrôle vocal Siri. Dites simplement 'Dis Siri, je suis rentré !' pour activer le mode Maison. Nos ingénieurs configurent les scènes d'automatisation et nous proposons une intégration HomeKit personnalisée.",
+      "ja": "はい！enGoはApple HomeKitと統合しており、Siri音声制御が可能です。「Hey Siri、ただいま！」で帰宅モードを起動。エンジニアがパートナー製品との自動化シーンを設定し、Apple HomeKitのカスタム統合にも対応します。",
+      "es": "¡Sí! enGo se integra con Apple HomeKit para el control por voz Siri. Solo di '¡Oye Siri, estoy en casa!' para activar el modo Casa. Nuestros ingenieros configuran escenas de automatización con productos asociados, y ofrecemos integración personalizada de Apple HomeKit. Con tecnología AIoT, incluso dispositivos de terceros pueden controlarse por voz."
+    }
+  },
+  {
+    "id": 13,
+    "category": "safety",
+    "question": {
+      "zh": "enGo 有漏水偵測和瓦斯自動關閉功能嗎？",
+      "zhCN": "enGo 有漏水检测和瓦斯自动关闭功能吗？",
+      "en": "Does enGo have leak detection and automatic gas shutoff?",
+      "fr": "enGo dispose-t-il d'une détection de fuite et d'un arrêt automatique du gaz ?",
+      "ja": "enGoには漏水検知とガス自動遮断機能がありますか？",
+      "es": "¿enGo tiene detección de fugas y cierre automático de gas?"
+    },
+    "answer": {
+      "zh": "有的！enGo 的 24 小時主動防護系統包含：櫥櫃底部漏水感測器偵測到滲水時，自動關閉電子水閥避免更大損失；偵測到瓦斯或煙霧時，系統主動切斷閥門並觸發 IH 爐斷電。所有異常會即時推播通知屋主，從源頭阻斷災害風險。",
+      "zhCN": "有的！enGo 的 24 小时主动防护系统包含：橱柜底部漏水感测器检测到渗水时，自动关闭电子水阀避免更大损失；检测到瓦斯或烟雾时，系统主动切断阀门并触发 IH 炉断电。所有异常会即时推送通知屋主，从源头阻断灾害风险。",
+      "en": "Yes! enGo's 24-hour active protection system includes: cabinet-mounted leak sensors that auto-close electronic water valves when seepage is detected; automatic gas valve shutoff and IH stove power cut when smoke or gas is detected. All anomalies trigger instant App push notifications to the homeowner, stopping disasters at the source.",
+      "fr": "Oui ! Le système de protection active 24h d'enGo comprend : des capteurs de fuite sous les armoires qui ferment automatiquement les vannes d'eau électroniques ; une coupure automatique du gaz et de la plaque IH en cas de détection de fumée ou de gaz. Toutes les anomalies déclenchent des notifications instantanées via l'application.",
+      "ja": "はい！enGoの24時間アクティブ防護システムには、キャビネット下部の漏水センサーが水漏れを検知すると電子水弁を自動閉鎖する機能、ガスや煙を検知するとガス弁遮断とIHコンロの電源カットを行う機能があります。全ての異常はアプリのプッシュ通知で即時に通知されます。",
+      "es": "¡Sí! El sistema de protección activa 24 horas de enGo incluye: sensores de fuga montados en gabinetes que cierran automáticamente las válvulas de agua electrónicas al detectar filtración; cierre automático de la válvula de gas y corte de energía de la estufa IH al detectar humo o gas. Todas las anomalías activan notificaciones push instantáneas al propietario a través de la App."
+    }
+  },
+  {
+    "id": 14,
+    "category": "energy",
+    "question": {
+      "zh": "enGo 如何幫助節能？",
+      "zhCN": "enGo 如何帮助节能？",
+      "en": "How does enGo help with energy savings?",
+      "fr": "Comment enGo aide-t-il à économiser de l'énergie ?",
+      "ja": "enGoはどのように省エネに貢献しますか？",
+      "es": "¿Cómo ayuda enGo a ahorrar energía?"
+    },
+    "answer": {
+      "zh": "enGo AI 系統會學習您的日常習慣，自動調整燈光亮度、空調溫度和用電排程。搭配智慧場景（離家自動關燈關電器、睡眠模式關閉非必要設備），有效降低電費支出。enGo 也致力於 ESG 永續經營，將節能減碳納入企業核心價值。",
+      "zhCN": "enGo AI 系统会学习您的日常习惯，自动调整灯光亮度、空调温度和用电排程。搭配智慧场景（离家自动关灯关电器、睡眠模式关闭非必要设备），有效降低电费支出。enGo 也致力于 ESG 可持续经营，将节能减碳纳入企业核心价值。",
+      "en": "The enGo AI system learns your daily habits and automatically adjusts lighting brightness, AC temperature, and power schedules. Combined with smart scenes (Away Mode auto-shuts lights and appliances, Sleep Mode disables non-essential devices), it effectively reduces energy bills. enGo is also committed to ESG sustainability, with energy saving and carbon reduction as core values.",
+      "fr": "Le système AI d'enGo apprend vos habitudes et ajuste automatiquement l'éclairage, la climatisation et les horaires. Les scènes intelligentes (Mode Absent et Mode Nuit) réduisent efficacement la consommation. enGo s'engage également dans le développement durable ESG.",
+      "ja": "enGo AIシステムは日常の習慣を学習し、照明、エアコン、電力スケジュールを自動調整します。スマートシーン（外出モードで照明・家電OFF、就寝モードで不要機器OFF）と組み合わせ、電気代を効果的に削減。enGoはESGサステナビリティにもコミットし、省エネ・CO2削減をコアバリューとしています。",
+      "es": "El sistema AI de enGo aprende tus hábitos diarios y ajusta automáticamente el brillo, la temperatura del AC y los horarios de energía. Combinado con escenas inteligentes (Modo Ausencia apaga luces y electrodomésticos, Modo Sueño desactiva dispositivos no esenciales), reduce efectivamente las facturas de energía. enGo también está comprometido con la sostenibilidad ESG."
+    }
+  },
+  {
+    "id": 15,
+    "category": "services",
+    "question": {
+      "zh": "enGo 適合長輩使用嗎？",
+      "zhCN": "enGo 适合长辈使用吗？",
+      "en": "Is enGo suitable for elderly users?",
+      "fr": "enGo est-il adapté aux personnes âgées ?",
+      "ja": "enGoは高齢者にも使いやすいですか？",
+      "es": "¿Es enGo adecuado para personas mayores?"
+    },
+    "answer": {
+      "zh": "非常適合！enGo 特別注重「長者友善設計」。T1 平板配備大字體介面、語音控制功能，搭配自動場景（起床自動開燈、入睡自動關燈），讓操作更加簡單。家人可透過 App 遠端查看長輩居家狀態，加上煙霧、漏水、門窗感測即時通知，讓子女在遠方也能安心。",
+      "zhCN": "非常适合！enGo 特别注重「长者友善设计」。T1 平板配备大字体界面、语音控制功能，搭配自动场景（起床自动开灯、入睡自动关灯），让操作更加简单。家人可通过 App 远程查看长辈居家状态，加上烟雾、漏水、门窗感测即时通知，让子女在远方也能安心。",
+      "en": "Absolutely! enGo is designed with 'senior-friendly' features. The T1 tablet has a large-font interface and voice control, combined with auto scenes (lights on at wake, off at sleep) for effortless operation. Family members can remotely monitor home status via the App, plus smoke, leak, and door/window sensors provide real-time alerts for peace of mind.",
+      "fr": "Absolument ! enGo est conçu avec des fonctionnalités adaptées aux seniors : interface à gros caractères, commande vocale, scènes automatiques (lumières au réveil/coucher). La famille peut surveiller à distance via l'application, avec des alertes en temps réel pour la fumée, les fuites et les capteurs de portes/fenêtres.",
+      "ja": "もちろんです！enGoは「シニアフレンドリー設計」を重視。T1タブレットは大きな文字のインターフェースと音声制御を備え、自動シーン（起床時に照明ON、就寝時にOFF）で簡単操作。家族はアプリで遠隔から自宅の状態を確認でき、煙・漏水・ドアセンサーのリアルタイム通知で安心です。",
+      "es": "¡Por supuesto! enGo está diseñado con características 'amigables para adultos mayores'. La tableta T1 tiene una interfaz de texto grande y control por voz, combinada con escenas automáticas (luces al despertar, apagadas al dormir) para una operación sin esfuerzo. Los familiares pueden monitorear el estado del hogar remotamente a través de la App, además de alertas en tiempo real de sensores de humo, fugas y puertas/ventanas."
+    }
+  },
+  {
+    "id": 16,
+    "category": "products",
+    "question": {
+      "zh": "EAP-01 空氣清淨機適用多大空間？",
+      "zhCN": "EAP-01 空气清净机适用多大空间？",
+      "en": "What room size does the EAP-01 air purifier cover?",
+      "fr": "Quelle est la couverture du purificateur EAP-01 ?",
+      "ja": "EAP-01 はどれくらいの広さに対応？",
+      "es": "¿Qué tamaño de habitación cubre el EAP-01?"
+    },
+    "answer": {
+      "zh": "建議使用面積為 3-8 坪（約 10-26 m²），適合臥室、書房、小客廳。CADR 約 110 m³/h，搭配 4 段風量 + 自動模式（A 檔依空氣品質自動調節）。空間過大時建議多台搭配。",
+      "zhCN": "建议使用面积为 3-8 坪（约 10-26 m²），适合卧室、书房、小客厅。CADR 约 110 m³/h，搭配 4 段风量 + 自动模式。",
+      "en": "Recommended coverage is 3-8 ping (~10-26 m²) — bedroom, study, or small living room. CADR ~110 m³/h with 4 fan speeds + Auto mode that adjusts by air quality.",
+      "fr": "Couverture 10-26 m² (chambre, bureau, petit salon). CADR ~110 m³/h, 4 vitesses + auto.",
+      "ja": "推奨 3-8坪（10-26m²）、CADR約110m³/h、風量4段+自動。",
+      "es": "Cobertura recomendada 10-26 m² (dormitorio, estudio, salón pequeño). CADR ~110 m³/h, 4 velocidades + auto."
+    }
+  },
+  {
+    "id": 17,
+    "category": "features",
+    "question": {
+      "zh": "EAP-01 觸控面板的 7 個按鍵分別有什麼功能？",
+      "zhCN": "EAP-01 触控面板的 7 个按键分别有什么功能？",
+      "en": "What do the 7 buttons on the EAP-01 do?",
+      "fr": "À quoi servent les 7 boutons du EAP-01 ?",
+      "ja": "EAP-01 の 7 つのボタンの機能は？",
+      "es": "¿Qué hacen los 7 botones del EAP-01?"
+    },
+    "answer": {
+      "zh": "電源（開關機）、無線音樂（藍牙配對）、氛圍燈（L1 自動 → L2 → L3 → L4 → 關 循環）、風量（2 → 3 → 4 → A 自動 → 1 循環）、定時（1-12 小時）、睡眠（風速最小、燈微亮）、重置濾網（換濾網後長按 3 秒重置）。",
+      "zhCN": "电源、无线音乐（蓝牙）、氛围灯（L1-L4）、风量（1-4 + 自动）、定时（1-12 小时）、睡眠模式、重置滤网（长按 3 秒）。",
+      "en": "Power, Bluetooth music (pair from phone), Ambient light (L1 auto → L2 → L3 → L4 → off), Fan speed (2 → 3 → 4 → A auto → 1), Timer (1-12hr), Sleep, Filter reset (hold 3s).",
+      "fr": "Marche, Bluetooth, Lumière d'ambiance (L1-L4), Vitesse (1-4 + auto), Minuterie (1-12h), Sommeil, Reset filtre (3s).",
+      "ja": "電源、Bluetooth、アンビエントライト L1-L4、風量 1-4＋自動、タイマー 1-12h、睡眠、フィルターリセット（3秒長押し）。",
+      "es": "Encendido, Bluetooth, Luz ambiental L1-L4, Velocidad 1-4 + auto, Temporizador 1-12 h, Sueño, Reinicio de filtro (3 s)."
+    }
+  },
+  {
+    "id": 18,
+    "category": "features",
+    "question": {
+      "zh": "如何將手機連接 EAP-01 的藍牙音響？",
+      "zhCN": "如何将手机连接 EAP-01 的蓝牙音响？",
+      "en": "How do I connect my phone to the EAP-01 Bluetooth speaker?",
+      "fr": "Comment connecter mon téléphone au haut-parleur Bluetooth EAP-01 ?",
+      "ja": "EAP-01 のBluetoothスピーカーへの接続方法は？",
+      "es": "¿Cómo conecto mi teléfono al altavoz Bluetooth del EAP-01?"
+    },
+    "answer": {
+      "zh": "1) 開機後輕按面板上的「無線音樂鍵」🎵，左側指示燈會開始閃爍。2) 在手機藍牙設定中搜尋「enGo EAP-T01」並點選配對。3) 配對成功後指示燈長亮，即可從手機播放音樂並調整音量。內建雙 3W 喇叭。",
+      "zhCN": "开机后按 🎵 无线音乐键 → 手机蓝牙搜寻「enGo EAP-T01」配对即可。内建双 3W 喇叭。",
+      "en": "Tap the 🎵 button (LED blinks), search 'enGo EAP-T01' in your phone's Bluetooth, pair, and play. Dual 3W speakers built in.",
+      "fr": "Appuyez sur 🎵, cherchez 'enGo EAP-T01' dans Bluetooth, couplez. Haut-parleurs 2×3W intégrés.",
+      "ja": "🎵 ボタンを押す → 「enGo EAP-T01」をBluetoothで検索 → ペアリング。3W×2スピーカー。",
+      "es": "Pulsa 🎵, busca 'enGo EAP-T01' en Bluetooth, empareja. Altavoces 2×3W integrados."
+    }
+  },
+  {
+    "id": 19,
+    "category": "features",
+    "question": {
+      "zh": "EAP-01 上方的無線充電功率多少？支援哪些手機？",
+      "zhCN": "EAP-01 顶部的无线充电功率多少？支援哪些手机？",
+      "en": "What wireless charging power does the EAP-01 support?",
+      "fr": "Quelle puissance de charge sans fil supporte l'EAP-01 ?",
+      "ja": "EAP-01のワイヤレス充電出力は？",
+      "es": "¿Qué potencia de carga inalámbrica soporta el EAP-01?"
+    },
+    "answer": {
+      "zh": "上方為 Qi 標準無線充電區，支援 5V/5W、9V/7.5W、9V/10W（最高）。相容大多數 iPhone（8 以上）與 Android 旗艦機。建議取下厚殼以確保穩定充電。",
+      "zhCN": "顶部 Qi 无线充电区，支援 5V/5W、9V/7.5W、9V/10W。相容 iPhone 8 以上与多数安卓旗舰机。",
+      "en": "Top surface is Qi-compliant, supporting 5V/5W, 9V/7.5W, 9V/10W (max). Works with iPhone 8+ and most Android flagships. Remove thick cases.",
+      "fr": "Surface Qi compatible (5V/5W, 9V/7,5W, 9V/10W). iPhone 8+, Android haut de gamme. Retirer les coques épaisses.",
+      "ja": "Qi対応：5V/5W、9V/7.5W、9V/10W。iPhone 8+/Androidフラッグシップ対応。",
+      "es": "Superficie Qi (5V/5W, 9V/7,5W, 9V/10W). iPhone 8+ y Android premium. Retira fundas gruesas."
+    }
+  },
+  {
+    "id": 20,
+    "category": "features",
+    "question": {
+      "zh": "EAP-01 怎麼使用精油擴香功能？",
+      "zhCN": "EAP-01 怎么使用精油扩香功能？",
+      "en": "How do I use the aroma diffuser on the EAP-01?",
+      "fr": "Comment utiliser le diffuseur d'arômes EAP-01 ?",
+      "ja": "EAP-01のアロマ機能の使い方は？",
+      "es": "¿Cómo uso el difusor de aromas del EAP-01?"
+    },
+    "answer": {
+      "zh": "1) 打開機器後濾網蓋。2) 取出擴香盒，將精油滴在盒內的吸水海綿上（不要直接倒入機器）。3) 推回原位、蓋好後蓋。4) 開機即可隨風扇散發香氛。海綿可定期更換，清理前請關閉電源。",
+      "zhCN": "1) 开后滤网盖 2) 取出扩香盒、滴精油在海绵上 3) 装回 4) 开机即可。清理前请关电源。",
+      "en": "1) Open the back filter cover. 2) Take out the aroma cassette and drop oil onto the sponge (never into the unit). 3) Replace. 4) Power on; airflow disperses scent. Power off before cleaning the cassette.",
+      "fr": "1) Capot arrière 2) cassette → quelques gouttes sur l'éponge 3) refermer 4) allumer. Éteindre avant nettoyage.",
+      "ja": "1) 後部カバー開 2) カセット取り出し、スポンジに精油 3) 戻す 4) 電源ON。清掃時は電源OFF。",
+      "es": "1) Abre la cubierta trasera 2) Casete → gotas en la esponja 3) Vuelve a colocar 4) Enciende. Apaga antes de limpiar."
+    }
+  },
+  {
+    "id": 21,
+    "category": "maintenance",
+    "question": {
+      "zh": "EAP-01 多久要換濾網？換完怎麼重置使用時數？",
+      "zhCN": "EAP-01 多久要换滤网？换完怎么重置使用时数？",
+      "en": "How often should I replace the EAP-01 filter, and how do I reset?",
+      "fr": "Quand remplacer le filtre EAP-01 et comment réinitialiser ?",
+      "ja": "EAP-01のフィルター交換時期とリセット方法は？",
+      "es": "¿Cuándo cambio el filtro del EAP-01 y cómo lo reinicio?"
+    },
+    "answer": {
+      "zh": "建議每 3-4 個月（每天 3 小時使用估算），或累計 3000 小時後機器會亮紅燈並發出提示音。每月用吸塵器清潔表面可延長壽命，切勿水洗濾網。更換新濾網後，於開機狀態下長按「重置濾網鍵」3 秒，發出叮一聲即重置成功。家中吸菸或點蚊香會大幅縮短濾網壽命。",
+      "zhCN": "建议每 3-4 个月或累计 3000 小时更换。每月吸尘器清洁，禁水洗。更换后开机长按重置滤网键 3 秒。",
+      "en": "Replace every 3-4 months (3hr/day average) or after 3000 cumulative hours — unit chimes and shows red. Vacuum monthly (never wash with water). After replacing, hold the Filter Reset button for 3s with the unit ON; chime confirms.",
+      "fr": "Tous les 3-4 mois ou 3000 h. Aspirer mensuellement (jamais d'eau). Reset : maintenir 3 s sur unité allumée.",
+      "ja": "3-4ヶ月または累計3000時間ごと。月1回掃除機で（水洗禁止）。リセット：電源ON時に3秒長押し。",
+      "es": "Cada 3-4 meses o 3000 h. Aspirar mensualmente (sin agua). Reinicio: mantén pulsado 3 s con el equipo encendido."
+    }
+  },
+  {
+    "id": 22,
+    "category": "safety",
+    "question": {
+      "zh": "EAP-01 顯示 E0 或 EE 錯誤代碼怎麼辦？",
+      "zhCN": "EAP-01 显示 E0 或 EE 错误代码怎么办？",
+      "en": "What do the E0 / EE error codes mean on the EAP-01?",
+      "fr": "Que signifient les codes E0 / EE de l'EAP-01 ?",
+      "ja": "EAP-01のエラーコード E0 / EE の意味は？",
+      "es": "¿Qué significan los códigos de error E0 / EE del EAP-01?"
+    },
+    "answer": {
+      "zh": "E0：濾網蓋未蓋緊 → 重新檢查前/後濾網蓋是否完全蓋好。EE：濾網壽命到期 → 更換新濾網後，於開機狀態下長按重置濾網鍵 3 秒。若仍無法排除，請聯絡客服 02-2751-0218 或 LINE @engo。",
+      "zhCN": "E0：门盖未盖紧 → 重新检查前/后滤网盖。EE：滤网寿命到期 → 更换后长按重置 3 秒。客服：02-2751-0218。",
+      "en": "E0 = filter cover open — reseat the front/back cover firmly. EE = filter expired — replace the filter, then hold Reset 3s. Persistent issues: 02-2751-0218.",
+      "fr": "E0 = capot ouvert (refermer). EE = filtre expiré (remplacer + reset 3s). Support : 02-2751-0218.",
+      "ja": "E0＝カバー開（蓋を閉める）／EE＝フィルター期限切れ（交換後3秒長押し）。サポート：02-2751-0218",
+      "es": "E0 = cubierta abierta (cierra). EE = filtro vencido (reemplaza + reset 3 s). Soporte: 02-2751-0218."
+    }
+  },
+  {
+    "id": 23,
+    "category": "safety",
+    "question": {
+      "zh": "EAP-01 不啟動／出風口有異味／噪音太大／清淨效果不明顯怎麼辦？",
+      "zhCN": "EAP-01 不启动／出风口有异味／噪音太大／清净效果不明显怎么办？",
+      "en": "EAP-01 won't start / has odor / is noisy / works weakly — what do I check?",
+      "fr": "EAP-01 ne démarre pas / odeur / bruit / faible — que vérifier ?",
+      "ja": "EAP-01が起動しない／異臭／騒音／効果が弱い場合のチェック項目は？",
+      "es": "El EAP-01 no arranca / huele / es ruidoso / funciona débilmente — ¿qué reviso?"
+    },
+    "answer": {
+      "zh": "不啟動：檢查電源、按下電源鍵、確認濾網蓋蓋緊。異味：通風並更換濾網（活性碳已飽和），可開最強風加速。噪音：確認機器放置平穩；內部有異物時聯繫客服。效果不明顯：確認已裝濾網（沒裝會無法啟動），空間是否超過適用面積（3-8 坪），濾網是否髒污。",
+      "zhCN": "不启动 → 电源/按键/盖子；异味 → 通风+换滤网；噪音 → 摆放平稳；效果差 → 是否装滤网/空间是否过大/滤网是否脏。",
+      "en": "Won't start: check plug, power button, filter cover (E0 if open). Odor: ventilate, replace filter, run on max. Noisy: level the unit; contact support if foreign object. Weak: confirm filter installed, room within 3-8 ping, filter clean.",
+      "fr": "Ne démarre pas : alim./bouton/capot. Odeur : aérer, changer filtre. Bruit : à plat. Faible : filtre installé, pièce ≤26 m², filtre propre.",
+      "ja": "起動不可：電源/ボタン/カバー。異臭：換気＋濾網交換。騒音：水平設置。効果弱：濾網装着・適用範囲・清潔確認。",
+      "es": "No arranca: enchufe/botón/cubierta. Olor: ventila + cambia filtro. Ruido: nivela. Débil: filtro instalado, sala ≤26 m², filtro limpio."
+    }
+  },
+  {
+    "id": 24,
+    "category": "maintenance",
+    "question": {
+      "zh": "EAP-01 機身和濾網要怎麼清潔？可以用酒精嗎？",
+      "zhCN": "EAP-01 机身和滤网要怎么清洁？可以用酒精吗？",
+      "en": "How do I clean the EAP-01 body and filter? Can I use alcohol?",
+      "fr": "Comment nettoyer l'EAP-01 et le filtre ? Puis-je utiliser de l'alcool ?",
+      "ja": "EAP-01本体とフィルターの清掃方法は？アルコールは使える？",
+      "es": "¿Cómo limpio el cuerpo y el filtro del EAP-01? ¿Puedo usar alcohol?"
+    },
+    "answer": {
+      "zh": "機身：使用乾布或軟布擦拭，⚠️ 不可使用濕布、洗潔精、酒精或有機溶劑。清潔前務必拔除電源。濾網：每月用吸塵器清除表面灰塵，⚠️ 切勿用水或清潔劑沖洗。陽光下曝曬 1-2 小時可恢復活性碳/銀離子部分效能。",
+      "zhCN": "机身用干布擦（禁酒精/湿布/清洁剂），清洁前拔电源。滤网月用吸尘器，禁水洗。",
+      "en": "Body: dry/soft cloth only. ❌ No wet cloth, detergent, alcohol, or solvents. Unplug before cleaning. Filter: vacuum monthly. ❌ Never wash with water. 1-2hr sunlight refreshes carbon + Ag+ layers.",
+      "fr": "Corps : chiffon sec uniquement (pas d'alcool). Débrancher avant. Filtre : aspirer (pas d'eau).",
+      "ja": "本体は乾いた布のみ（アルコール等禁止）、清掃前は電源を抜く。フィルターは掃除機で（水洗禁止）。",
+      "es": "Cuerpo: solo paño seco (sin alcohol). Desconecta antes. Filtro: aspira (sin agua)."
+    }
+  },
+  {
+    "id": 25,
+    "category": "products",
+    "question": {
+      "zh": "EAP-01 的完整技術規格？",
+      "zhCN": "EAP-01 的完整技术规格？",
+      "en": "What are the full technical specs of the EAP-01?",
+      "fr": "Quelles sont les spécifications complètes de l'EAP-01 ?",
+      "ja": "EAP-01の詳細スペックは？",
+      "es": "¿Cuáles son las especificaciones completas del EAP-01?"
+    },
+    "answer": {
+      "zh": "型號：EAP-T01-B（時尚黑）/ EAP-T01-W（簡約白）｜額定電壓 24V／48W｜電源輸入 100-240V 50/60Hz 2A｜CADR 1.85 cmm（≈110 m³/h）｜CCM 5000mg｜噪音 ≤61dB（睡眠 ≤38dB）｜適用 3-8 坪｜尺寸 220×160×360mm｜淨重 2.8kg／毛重 3.7kg｜無線充電 5/9V，最高 10W｜雙 3W 藍牙喇叭｜TUYA WBR3 Wi-Fi+BT 模組｜NCC 認證 CCAJ25LP3901T1（黑）/ T3（白）。",
+      "zhCN": "EAP-T01-B/W｜24V/48W｜100-240V｜CADR 1.85 cmm｜CCM 5000mg｜噪音≤61dB（睡眠≤38dB）｜3-8 坪｜220×160×360mm｜2.8kg｜Qi 5/9V 10W｜双 3W 蓝牙｜NCC 认证。",
+      "en": "Models: EAP-T01-B / EAP-T01-W | 24V / 48W | Input 100-240V 50/60Hz | CADR 1.85 cmm (~110 m³/h) | CCM 5000mg | Noise ≤61dB (sleep ≤38dB) | Coverage 3-8 ping (~10-26 m²) | 220×160×360mm | Net 2.8kg / Gross 3.7kg | Qi 5/9V up to 10W | Dual 3W BT speakers | TUYA WBR3 Wi-Fi+BT | NCC: CCAJ25LP3901T1 (black) / T3 (white).",
+      "fr": "EAP-T01-B/W | 24V/48W | 100-240V | CADR 1,85 cmm | Bruit ≤61dB | 10-26 m² | 220×160×360mm | 2,8kg | Qi 10W | 2×3W BT | NCC certifié.",
+      "ja": "EAP-T01-B/W｜24V/48W｜100-240V｜CADR 1.85 cmm｜騒音 ≤61dB（睡眠 ≤38dB）｜3-8坪｜220×160×360mm｜2.8kg｜Qi 最大10W｜BT 3W×2｜NCC認証。",
+      "es": "EAP-T01-B/W | 24V/48W | 100-240V | CADR 1,85 cmm | Ruido ≤61dB | 10-26 m² | 220×160×360mm | 2,8 kg | Qi 10W | BT 2×3W | NCC certificado."
+    }
+  },
+  {
+    "id": 26,
+    "category": "features",
+    "question": {
+      "zh": "EAP-01 氛圍燈有幾種模式？什麼是 PM2.5 自動燈色？",
+      "zhCN": "EAP-01 氛围灯有几种模式？什么是 PM2.5 自动灯色？",
+      "en": "How many ambient light modes does EAP-01 have?",
+      "fr": "Combien de modes lumineux a l'EAP-01 ?",
+      "ja": "EAP-01のアンビエントライトは何種類？",
+      "es": "¿Cuántos modos de luz ambiental tiene el EAP-01?"
+    },
+    "answer": {
+      "zh": "5 種模式：L1（自動依 PM2.5 切換 🟢 綠優 → 🔵 藍佳 → 🟡 黃中 → 🔴 紅差）、L2 / L3 / L4（手動固定燈光氛圍）、關閉。睡眠模式下 L1 會自動切換為夜燈（微亮）。連接藍牙音樂播放時，L1 會自動跳轉為 L3，可手動再切換。",
+      "zhCN": "5 种模式：L1 自动（按 PM2.5 切换红黄蓝绿）、L2-L4 固定、关闭。睡眠模式下 L1 切为夜灯。",
+      "en": "5 modes: L1 (auto — green/blue/yellow/red by PM2.5), L2 / L3 / L4 (fixed), off. L1 dims to night-light in sleep mode. When playing music, L1 auto-switches to L3.",
+      "fr": "5 modes : L1 auto (vert/bleu/jaune/rouge selon PM2.5), L2-L4 fixes, off. L1 devient veilleuse en mode sommeil.",
+      "ja": "5モード：L1自動（PM2.5に応じて緑/青/黄/赤）、L2-L4固定、消灯。睡眠時はL1が夜灯化。",
+      "es": "5 modos: L1 auto (verde/azul/amarillo/rojo según PM2.5), L2-L4 fijos, apagado. L1 atenuada en sueño."
+    }
+  }
 ]
