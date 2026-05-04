@@ -9,13 +9,28 @@
           <div class="phone">{{ $t('contactUsSubtitle2') }}</div>
         </div>
       </div>
-      <!-- Voucher banner: shown only when /contact?topic=eap01_voucher -->
-      <div v-if="isVoucherRequest" class="voucher-banner">
-        <span class="voucher-banner-icon">💌</span>
+      <!-- Voucher banner: always shown to surface the EAP-01 offer to every /contact visitor -->
+      <div class="voucher-banner" :class="{ 'voucher-banner--prefilled': isVoucherRequest }">
+        <span class="voucher-banner-icon">🎁</span>
         <div class="voucher-banner-text">
-          <strong>EAP-01 獨家折扣碼申請</strong>
-          <p>填寫以下聯絡資料，我們將於 1–2 個工作日內將獨家折扣碼寄至您的 Email。</p>
+          <strong>EAP-01 空氣清淨機｜獨家折扣碼限時申請</strong>
+          <p v-if="isVoucherRequest">
+            您正在申請 EAP-01 折扣碼。填寫以下聯絡資料，我們將於 1–2 個工作日內將專屬折扣碼寄至您的 Email。
+          </p>
+          <p v-else>
+            對 EAP-01 有興趣嗎？填寫下方資料並於「我想了解的是」選擇<strong>產品 → 空氣清淨機</strong>，
+            我們將於 1–2 個工作日內將獨家折扣碼寄至您的 Email。
+          </p>
         </div>
+        <a
+          href="https://www.zeczec.com/projects/enGo-Smart-Manager-AI-AirPurifier"
+          target="_blank"
+          rel="noopener"
+          class="voucher-banner-cta"
+          @click="trackVoucherCtaClick"
+        >
+          先看看 EAP-01 →
+        </a>
       </div>
       <div class="contact_inputs flex_vertical">
         <div class="input_label">
@@ -167,8 +182,20 @@ export default defineComponent({
         // Pre-fill the message; user can edit before submitting.
         message.value = '我想申請 EAP-01 空氣清淨機的獨家折扣碼，請寄送至上方留下的 Email。謝謝！'
         trackEvent('voucher_form_opened', { product: 'EAP-01', source: route.query.from || 'direct' })
+      } else {
+        // Banner is now visible to all /contact visitors — track impression so we can
+        // measure conversion lift from the universal banner vs. the targeted voucher URL.
+        trackEvent('voucher_banner_impression', { source: 'organic_contact' })
       }
     })
+
+    const trackVoucherCtaClick = () => {
+      trackEvent('voucher_banner_cta_click', {
+        product: 'EAP-01',
+        destination: 'zeczec',
+        source: isVoucherRequest.value ? 'voucher_link' : 'organic_contact'
+      })
+    }
 
     const jumpToLine = () => {
       trackEvent('click_contact_line')
@@ -271,9 +298,13 @@ export default defineComponent({
         console.log('Product/Plan section is visible');
       }
 
-      // Voucher flow: tag productType so it's easy to filter these submissions
-      // in Supabase + the email subject will read "voucher_eap01,..." for fast triage.
-      if (isVoucherRequest.value) {
+      // Voucher flow: tag productType so it's easy to filter these submissions in Supabase.
+      // Tag as voucher_eap01 if EITHER:
+      //   1) Came from /contact?topic=eap01_voucher (explicit voucher link click), OR
+      //   2) User organically selected 產品 → 空氣清淨機 (active EAP-01 interest)
+      // Result: every potential EAP-01 lead is captured for the manual voucher email workflow.
+      const isAirPurifierInterest = interest.value === 'product' && messagetype.value === 'airfilter';
+      if (isVoucherRequest.value || isAirPurifierInterest) {
         productType = `voucher_eap01,${productType}`;
       }
       const data = {
@@ -330,7 +361,8 @@ export default defineComponent({
       interest,
       planOptions,
       jumpToLine,
-      isVoucherRequest
+      isVoucherRequest,
+      trackVoucherCtaClick
     }
   }
 })
@@ -343,17 +375,39 @@ export default defineComponent({
 .voucher-banner {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   background: linear-gradient(135deg, #fff5f0 0%, #ffe7d9 100%);
   border: 1px solid #f5c4ad;
-  border-left: 4px solid #e05a35;
-  border-radius: 12px;
-  padding: 18px 22px;
-  margin: 0 0 24px;
-  box-shadow: 0 2px 12px rgba(224, 90, 53, 0.08);
+  border-left: 5px solid #e05a35;
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin: 0 0 28px;
+  box-shadow: 0 4px 18px rgba(224, 90, 53, 0.12);
+  position: relative;
+
+  // Pulse the border-left when user landed via the voucher link itself —
+  // they're warmest, so emphasize the "you got it" vibe.
+  &--prefilled {
+    border-left-width: 7px;
+    background: linear-gradient(135deg, #ffefe5 0%, #ffd6bd 100%);
+
+    &::before {
+      content: '已啟用';
+      position: absolute;
+      top: -10px;
+      right: 18px;
+      background: #e05a35;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+    }
+  }
 
   .voucher-banner-icon {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     line-height: 1;
     flex-shrink: 0;
   }
@@ -364,33 +418,77 @@ export default defineComponent({
     strong {
       display: block;
       color: #224274;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     p {
       margin: 0;
-      color: #555;
+      color: #4a4a4a;
       font-size: 0.95rem;
-      line-height: 1.5;
+      line-height: 1.6;
+
+      strong {
+        display: inline;
+        color: #e05a35;
+        font-weight: 600;
+        font-size: inherit;
+        margin: 0;
+      }
     }
   }
 
-  @media (max-width: 600px) {
-    padding: 14px 16px;
-    gap: 12px;
+  .voucher-banner-cta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    background: #e05a35;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(224, 90, 53, 0.25);
+
+    &:hover {
+      background: #c64a28;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(224, 90, 53, 0.35);
+    }
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 18px;
 
     .voucher-banner-icon {
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
 
     .voucher-banner-text strong {
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     .voucher-banner-text p {
-      font-size: 0.875rem;
+      font-size: 0.9rem;
+    }
+
+    .voucher-banner-cta {
+      width: 100%;
+      justify-content: center;
+      padding: 12px 20px;
+    }
+
+    &--prefilled::before {
+      top: -8px;
+      right: 14px;
+      font-size: 0.68rem;
     }
   }
 }
