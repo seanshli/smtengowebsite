@@ -235,6 +235,21 @@
                     "fr": "LedaPlus"
                 },
                 "url": "https://www.ledaplus.com.tw"
+            },
+            {
+                "category": {
+                    "zh": "能源管理",
+                    "en": "Energy Management",
+                    "ja": "エネルギー管理",
+                    "fr": "Gestion de l'énergie"
+                },
+                "name": {
+                    "zh": "金毅泰節能科技",
+                    "en": "JYT AIEMS",
+                    "ja": "金毅泰節能科技",
+                    "fr": "JYT AIEMS"
+                },
+                "url": "https://jyt-aiems.com/"
             }
         ]
     }
