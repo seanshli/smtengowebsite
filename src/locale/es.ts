@@ -16,6 +16,26 @@ export const esLocale = {
   ourPartners: 'Productos Asociados',
   // SEO
   seo: {
+    core: {
+      title: 'Valores | La filosofía de enGo',
+      description: 'Descubre los valores de enGo: usamos IA para integrar luz solar, aire, agua y alimentos en una vida inteligente más sana y segura.'
+    },
+    brand: {
+      title: 'Historia de marca | El origen de enGo',
+      description: 'Conoce la historia de enGo y por qué buscamos llevar una vida inteligente de alta calidad a cada hogar.'
+    },
+    mission: {
+      title: 'Nuestra misión | enGo Smart Home',
+      description: 'La misión de enGo: usar tecnología AIoT para que el hogar inteligente sea un bien accesible para todos.'
+    },
+    vision: {
+      title: 'Nuestra visión | enGo Smart Home',
+      description: 'La visión de enGo: una plataforma integral que une almacenamiento en la nube, dispositivos conectados y compras para definir el hogar del futuro.'
+    },
+    ecosystem: {
+      title: 'Ecosistema inteligente | Plataforma AIoT de enGo',
+      description: 'Explora el ecosistema de enGo: del control con IA a la purificación de agua y aire, conectando cada dispositivo de tu hogar.'
+    },
     default: {
       title: 'enGo Hogar Inteligente - Soluciones AIot Líderes',
       description: 'enGo integra AI con luz, aire, agua y alimentos para crear una vida del hogar más saludable e inteligente.',

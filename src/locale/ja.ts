@@ -16,6 +16,26 @@ export const jaLocale = {
     ourPartners: 'パートナー製品',
     // SEO
     seo: {
+        core: {
+          title: 'コアバリュー | enGoの設計思想',
+          description: 'enGoのコアバリュー。AIで太陽光・空気・水・食をつなぎ、より健康で安心なスマートライフを実現します。'
+        },
+        brand: {
+          title: 'ブランドストーリー | enGoの原点',
+          description: 'enGoの歩みと、上質なスマートライフをすべての家庭へ届けたいという想いをご紹介します。'
+        },
+        mission: {
+          title: '私たちのミッション | enGo スマートホーム',
+          description: 'enGoのミッション。AIoT技術で、スマートホームを誰もが手にできる暮らしの必需品にします。'
+        },
+        vision: {
+          title: '私たちのビジョン | enGo スマートホーム',
+          description: 'enGoのビジョン。クラウド在庫・接続機器・生活購買を統合し、未来の住まいを定義するワンストップ基盤へ。'
+        },
+        ecosystem: {
+          title: 'スマートエコシステム | enGo AIoTプラットフォーム',
+          description: 'AI中央制御から浄水・空気清浄まで、家中のスマート機器をつなぐenGoエコシステムをご紹介します。'
+        },
         default: {
             title: 'enGoスマートホーム - 次世代AIotソリューション',
             description: 'enGoはAIを活用し、日光、空気、水、食をスマートに統合。より健康で安心なスマートライフを実現します。',

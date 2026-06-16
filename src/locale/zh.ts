@@ -17,6 +17,26 @@ export const zhLocale = {
 
   // SEO
   seo: {
+    core: {
+      title: '核心價值 | enGo智管家的設計理念',
+      description: 'enGo 以 AI 整合陽光、空氣、水與食物，從健康、安心到便利，打造智慧生活的核心價值。'
+    },
+    brand: {
+      title: '品牌故事 | enGo「安購」的起源',
+      description: '了解 enGo「安購」的創立初衷與品牌故事，我們如何用科技讓每個家庭享有高品質的智慧生活。'
+    },
+    mission: {
+      title: '我們的使命 | enGo智管家',
+      description: 'enGo 的使命：運用 AIoT 技術，讓智慧居家成為人人都能負擔的生活必需品。'
+    },
+    vision: {
+      title: '未來願景 | enGo智管家',
+      description: 'enGo 的願景——整合雲端倉儲、聯網設備與生活採購，打造定義未來的一站式智慧生活平台。'
+    },
+    ecosystem: {
+      title: '智慧生態系 | enGo AIoT 整合平台',
+      description: '探索 enGo 智慧生態系，從 AI 中控、智慧淨水到空氣清淨，串連家中每一個智慧裝置。'
+    },
     default: {
       title: 'enGo智管家 - 智慧家居第一品牌',
       description: 'enGo「安購」運用 AI 將陽光、空氣、水與食物智慧整合，打造一站式智慧生活平台。',

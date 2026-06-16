@@ -21,11 +21,7 @@
         <!-- 關於enGo -->
         <router-link to="/brand" class="title">{{ $t('footer.about') }}</router-link>
         <!-- 公司介紹 -->
-        <router-link to="/" class="subtitle">{{ $t('footer.brand') }}</router-link>
-        <!-- 使用教學 -->
-        <router-link to="/tutorial" class="subtitle">{{ $t('footer.tutorial') }}</router-link>
-        <!-- 案例分享 -->
-        <router-link to="/cases" class="subtitle">{{ $t('footer.cases') }}</router-link>
+        <router-link to="/core" class="subtitle">{{ $t('footer.brand') }}</router-link>
         <!-- 聯絡我們 -->
         <router-link to="/contact" class="subtitle">{{ $t('footer.contactUs') }}</router-link>
       </div>

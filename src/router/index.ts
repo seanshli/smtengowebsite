@@ -20,8 +20,8 @@ const router = createRouter({
       name: 'core',
       component: () => import('@/views/coreValue.vue'),
       meta: {
-        titleKey: 'seo.about.title',
-        descKey: 'seo.about.description'
+        titleKey: 'seo.core.title',
+        descKey: 'seo.core.description'
       }
     },
     {
@@ -29,8 +29,8 @@ const router = createRouter({
       name: 'brand',
       component: () => import('@/views/brandStory.vue'),
       meta: {
-        titleKey: 'seo.about.title',
-        descKey: 'seo.about.description'
+        titleKey: 'seo.brand.title',
+        descKey: 'seo.brand.description'
       }
     },
     {
@@ -38,8 +38,8 @@ const router = createRouter({
       name: 'mission',
       component: () => import('@/views/mission.vue'),
       meta: {
-        titleKey: 'seo.about.title',
-        descKey: 'seo.about.description'
+        titleKey: 'seo.mission.title',
+        descKey: 'seo.mission.description'
       }
     },
     {
@@ -47,8 +47,8 @@ const router = createRouter({
       name: 'vision',
       component: () => import('@/views/vision.vue'),
       meta: {
-        titleKey: 'seo.about.title',
-        descKey: 'seo.about.description'
+        titleKey: 'seo.vision.title',
+        descKey: 'seo.vision.description'
       }
     },
     {
@@ -56,8 +56,8 @@ const router = createRouter({
       name: 'ecosystem',
       component: () => import('@/views/ecosystem.vue'),
       meta: {
-        titleKey: 'seo.product.title',
-        descKey: 'seo.product.description'
+        titleKey: 'seo.ecosystem.title',
+        descKey: 'seo.ecosystem.description'
       }
     },
     {
