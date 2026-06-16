@@ -1,16 +1,17 @@
-// Post-build prerender of per-route <head> meta so non-JS crawlers and social
-// scrapers (Facebook / LINE / X) get correct title + Open Graph per page.
+// Per-route prerender of <head> meta so non-JS crawlers and social scrapers
+// (Facebook / LINE / X) get correct title + Open Graph per page.
 // Writes dist/<route>/index.html clones of the SPA shell with route-specific meta.
 // Vercel serves these static files before the catch-all rewrite in vercel.json.
 //
+// Invoked two ways (belt + suspenders): as a Vite closeBundle plugin (see
+// vite.config.ts) so it runs on any `vite build`, and as an npm postbuild CLI.
+//
 // NOTE: keep these strings in sync with the seo.* keys in src/locale/zh.ts
 // (zh = Traditional Chinese is the primary/default locale for www.smtengo.com).
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
-const DIST = join(ROOT, 'dist')
 const BASE = 'https://www.smtengo.com'
 
 const ROUTES = {
@@ -28,9 +29,7 @@ const ROUTES = {
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
-const template = readFileSync(join(DIST, 'index.html'), 'utf-8')
-
-function buildHtml(route, title, desc) {
+function buildHtml(template, route, title, desc) {
   const url = BASE + route
   let html = template
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`)
@@ -39,17 +38,31 @@ function buildHtml(route, title, desc) {
   html = html.replace(/<meta property="og:description"[\s\S]*?\/>/, `<meta property="og:description" content="${esc(desc)}" />`)
   html = html.replace(/<meta property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${esc(url)}" />`)
   html = html.replace(/<meta name="twitter:title"[\s\S]*?\/>/, `<meta name="twitter:title" content="${esc(title)}" />\n  <meta name="twitter:description" content="${esc(desc)}" />`)
-  // add canonical (not present in source shell)
   html = html.replace(/<\/head>/, `  <link rel="canonical" href="${esc(url)}" />\n</head>`)
   return html
 }
 
-let n = 0
-for (const [route, [title, desc]] of Object.entries(ROUTES)) {
-  const outDir = join(DIST, route)
-  mkdirSync(outDir, { recursive: true })
-  writeFileSync(join(outDir, 'index.html'), buildHtml(route, title, desc), 'utf-8')
-  console.log(`prerendered ${route}/index.html  ->  ${title}`)
-  n++
+export function generatePrerenderShells(distDir) {
+  const indexPath = join(distDir, 'index.html')
+  if (!existsSync(indexPath)) {
+    console.warn(`[prerender] ${indexPath} not found, skipping`)
+    return 0
+  }
+  const template = readFileSync(indexPath, 'utf-8')
+  let n = 0
+  for (const [route, [title, desc]] of Object.entries(ROUTES)) {
+    const outDir = join(distDir, route)
+    mkdirSync(outDir, { recursive: true })
+    writeFileSync(join(outDir, 'index.html'), buildHtml(template, route, title, desc), 'utf-8')
+    console.log(`[prerender] ${route}/index.html  ->  ${title}`)
+    n++
+  }
+  console.log(`[prerender] ${n} route shells written to ${distDir}`)
+  return n
 }
-console.log(`\nDone: ${n} route shells written to dist/`)
+
+// CLI usage: `node scripts/prerender-meta.mjs`
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const root = join(dirname(fileURLToPath(import.meta.url)), '..')
+  generatePrerenderShells(join(root, 'dist'))
+}
