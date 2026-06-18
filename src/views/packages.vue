@@ -149,6 +149,12 @@ export default defineComponent({
     useScrollReveal()
 
     const buyNow = () => {
+      trackEvent('buy_now_click', {
+        product_id: '435',
+        product_category: 'packages',
+        platform: 'h5_smtengo',
+        locale: locale.value
+      })
       window.open('https://h5.smtengo.com/pages/item/espier-detail?id=435&dtid=0')
     }
 
