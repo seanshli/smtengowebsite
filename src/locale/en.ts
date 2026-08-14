@@ -103,6 +103,7 @@ export const enLocale = {
   catApartment: 'Apartment',
   catOther: 'Other',
   catShowroom: 'Showroom',
+  catPropertyDevelopment: 'Property Development',
   english: 'English',
   chinese: 'Chinese',
   simplifiedChinese: 'Simplified Chinese',

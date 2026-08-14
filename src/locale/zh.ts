@@ -104,6 +104,7 @@ export const zhLocale = {
   catApartment: '大樓公寓',
   catOther: '其他',
   catShowroom: '展間',
+  catPropertyDevelopment: '建案',
 
   // Moved from Product (Generic strings)
   english: '英文',

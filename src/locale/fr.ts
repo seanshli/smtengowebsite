@@ -253,6 +253,7 @@ export const frLocale = {
   catApartment: 'Appartement',
   catOther: 'Autre',
   catShowroom: 'Showroom',
+  catPropertyDevelopment: 'Programme Immobilier',
 
   //success
   submitSuccess: 'Le message a été envoyé avec succès',

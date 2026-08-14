@@ -4008,5 +4008,57 @@
                 ]
             }
         }
+    },
+    {
+        "id": 25,
+        "title": {
+            "zh": "宏盛芯",
+            "en": "Hong Sheng Xin"
+        },
+        "category": {
+            "zh": "建案",
+            "en": "Property Development",
+            "fr": "Programme Immobilier",
+            "ja": "分譲プロジェクト"
+        },
+        "country": {
+            "zh": "台灣",
+            "en": "Taiwan"
+        },
+        "location": {
+            "zh": "新北",
+            "en": "New Taipei"
+        },
+        "description": {
+            "zh": "建案智慧宅整合",
+            "en": "Smart home integration for residential development"
+        },
+        "image": "/images/kitchen.jpg"
+    },
+    {
+        "id": 26,
+        "title": {
+            "zh": "昌毅",
+            "en": "Chang Yi"
+        },
+        "category": {
+            "zh": "建案",
+            "en": "Property Development",
+            "fr": "Programme Immobilier",
+            "ja": "分譲プロジェクト"
+        },
+        "country": {
+            "zh": "台灣",
+            "en": "Taiwan"
+        },
+        "location": {
+            "zh": "新竹",
+            "en": "Hsinchu"
+        },
+        "description": {
+            "zh": "建案智慧宅整合",
+            "en": "Smart home integration for residential development"
+        },
+        "image": "/images/kitchen.jpg"
     }
 ]

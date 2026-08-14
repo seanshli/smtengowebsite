@@ -84,7 +84,8 @@ const types = [
   { key: 'Private Residence', labelKey: 'catPrivateResidence' },
   { key: 'Office', labelKey: 'catOffice' },
   { key: 'Commercial Space', labelKey: 'catCommercialSpace' },
-  { key: 'Showroom', labelKey: 'catShowroom' }
+  { key: 'Showroom', labelKey: 'catShowroom' },
+  { key: 'Property Development', labelKey: 'catPropertyDevelopment' }
 ]
 
 const selectedType = ref('All')

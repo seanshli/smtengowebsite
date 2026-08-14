@@ -103,6 +103,7 @@ export const esLocale = {
   catApartment: 'Apartamento',
   catOther: 'Otro',
   catShowroom: 'Salón de Exposición',
+  catPropertyDevelopment: 'Promoción Inmobiliaria',
   english: 'English',
   chinese: 'Chino',
   simplifiedChinese: 'Chino simplificado',

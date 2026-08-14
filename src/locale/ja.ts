@@ -103,6 +103,7 @@ export const jaLocale = {
     catApartment: 'マンション',
     catOther: 'その他',
     catShowroom: 'ショールーム',
+    catPropertyDevelopment: '分譲プロジェクト',
     english: 'English',
     chinese: '中文',
     simplifiedChinese: '简体中文',
