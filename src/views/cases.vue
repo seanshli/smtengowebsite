@@ -46,7 +46,9 @@
     <div class="cases-grid">
       <transition-group name="fade">
         <div v-for="item in filteredCases" :key="item.id" class="case-card card-hover scroll-reveal" @click="handleCaseClick(item)">
-          <div class="image-wrapper">
+          <!-- view-transition-name pairs with CaseDetail's banner so the
+               card image morphs into the detail header on navigation -->
+          <div class="image-wrapper" :style="{ viewTransitionName: 'case-' + item.id }">
             <img :src="item.image" :alt="getLocaleText(item.title)" />
             <div class="overlay">
               <span>{{ $t('viewDetails') || '查看詳情' }}</span>

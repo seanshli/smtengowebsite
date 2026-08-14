@@ -1,6 +1,10 @@
 <template>
   <div class="case-detail-page" v-if="caseItem">
-    <div class="header-banner" :style="{ backgroundImage: `url(${caseItem.image})` }">
+    <!-- shares view-transition-name with the card's .image-wrapper in cases.vue -->
+    <div
+      class="header-banner"
+      :style="{ backgroundImage: `url(${caseItem.image})`, viewTransitionName: 'case-' + caseItem.id }"
+    >
       <div class="overlay">
         <div class="container">
           <span class="category">{{ getLocaleText(caseItem.category) }}</span>

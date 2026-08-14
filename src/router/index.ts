@@ -1,3 +1,4 @@
+import { nextTick } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/index.vue'
 import { useSeo } from '@/utils/seo'
@@ -172,6 +173,43 @@ const router = createRouter({
 
 const { updateMeta } = useSeo()
 const { trackPageView } = useAnalytics()
+
+// ─── Native View Transitions (progressive enhancement) ───
+// Wrap route changes in document.startViewTransition so pages crossfade and
+// elements with matching view-transition-name (case card -> detail banner)
+// morph. Feature-detected: unsupported browsers navigate exactly as before.
+let finishViewTransition: (() => void) | undefined
+
+router.beforeResolve((to, from) => {
+  if (typeof document === 'undefined' || !('startViewTransition' in document)) return
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  if (to.path === from.path) return // query-only changes (e.g. ?jump=) shouldn't flash
+
+  return new Promise<void>((resolveNav) => {
+    ;(document as any).startViewTransition(
+      () =>
+        new Promise<void>((domUpdated) => {
+          finishViewTransition = domUpdated
+          resolveNav() // let vue-router proceed; afterEach signals DOM completion
+        })
+    )
+  })
+})
+
+router.afterEach(async () => {
+  if (finishViewTransition) {
+    const done = finishViewTransition
+    finishViewTransition = undefined
+    await nextTick()
+    done()
+  }
+})
+
+router.onError(() => {
+  // Aborted navigation: release the captured frame instead of timing out.
+  finishViewTransition?.()
+  finishViewTransition = undefined
+})
 
 router.beforeEach((to, from, next) => {
   updateMeta(to)

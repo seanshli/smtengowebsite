@@ -39,7 +39,22 @@
         </div>
 
         <figure class="ed-hero-figure">
-          <img src="/images/kitchen.jpg" :alt="$t('pageTitle')" loading="eager" />
+          <!-- Remotion-rendered 8s seamless loop (video/src/HeroLoop.tsx).
+               Poster + nested img keep the frame meaningful before load and
+               wherever autoplay is denied. -->
+          <video
+            class="ed-hero-media"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/images/hero-home.jpg"
+            :aria-label="$t('pageTitle')"
+          >
+            <source src="/videos/hero-loop.mp4" type="video/mp4" />
+            <img src="/images/hero-home.jpg" :alt="$t('pageTitle')" loading="eager" />
+          </video>
           <figcaption>
             <span class="ed-cap-initial">e</span>mbrace new
             <span class="ed-cap-initial">G</span>oals,
@@ -300,7 +315,8 @@ export default defineComponent({
   margin: clamp(8px, 3vh, 40px) 0 0;
   animation: edReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
 
-  img {
+  img,
+  .ed-hero-media {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 5;
@@ -331,7 +347,8 @@ export default defineComponent({
   @media (max-width: 900px) {
     max-width: 480px;
 
-    img {
+    img,
+    .ed-hero-media {
       aspect-ratio: 16 / 10;
     }
   }

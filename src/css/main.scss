@@ -10,6 +10,9 @@
 // 3.5 Modern theme (vivid warm animations & utilities)
 @import 'base/modern-theme';
 
+// 3.6 Native View Transitions (route crossfade + case-card morphs)
+@import 'base/view-transitions';
+
 // 4. Layout-related sections
 @import 'layout/header';
 @import 'layout/footer';
