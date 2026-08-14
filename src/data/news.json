@@ -1,5 +1,25 @@
 [
   {
+    "id": 7,
+    "date": "2026-08-14",
+    "title": {
+      "zh": "智管家與麗寶生技合作，優化新產品「智能富氧艙」",
+      "zhCN": "智管家与丽宝生技合作，优化新产品「智能富氧舱」",
+      "en": "enGo Partners with Lihpao Biotech to Optimize Its New Smart Oxygen Chamber",
+      "fr": "enGo s'associe à Lihpao Biotech pour optimiser sa nouvelle chambre à oxygène intelligente",
+      "ja": "智管家、麗寶生技と提携し新製品「スマート高濃度酸素ルーム」を最適化",
+      "es": "enGo se asocia con Lihpao Biotech para optimizar su nueva cámara de oxígeno inteligente"
+    },
+    "summary": {
+      "zh": "智管家攜手麗寶生技，協助優化其新產品「智能富氧艙」。<a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">了解產品詳情</a>",
+      "zhCN": "智管家携手丽宝生技，协助优化其新产品「智能富氧舱」。<a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">了解产品详情</a>",
+      "en": "enGo is working with Lihpao Biotech to optimize their new product, the Smart Oxygen Chamber. <a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">Product details</a>",
+      "fr": "enGo collabore avec Lihpao Biotech pour optimiser leur nouveau produit, la chambre à oxygène intelligente. <a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">Détails du produit</a>",
+      "ja": "智管家は麗寶生技と協力し、新製品「スマート高濃度酸素ルーム」の最適化を進めています。<a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">製品詳細</a>",
+      "es": "enGo colabora con Lihpao Biotech para optimizar su nuevo producto, la cámara de oxígeno inteligente. <a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">Detalles del producto</a>"
+    }
+  },
+  {
     "id": 5,
     "date": "2026-08-14",
     "title": {
