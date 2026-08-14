@@ -9,6 +9,8 @@
  * Used by src/views/product.vue via onMounted + watch(locale) lifecycle.
  */
 
+import { SHOW_AIR_PURIFIER } from '@/configs/systemConfig'
+
 type Locale = 'zh' | 'zhCN' | 'en' | 'fr' | 'ja' | 'es'
 
 const BASE_URL = 'https://www.smtengo.com'
@@ -152,7 +154,11 @@ export function injectProductSchemas(rawLocale: string): void {
   // when the user switches languages.
   cleanupProductSchemas()
 
-  PRODUCTS.forEach((product) => {
+  // ponytail: skip schema for products currently hidden from the site, so we
+  // don't advertise a product visitors can't find. See systemConfig.
+  const visible = PRODUCTS.filter((p) => p.id !== 'air-purifier' || SHOW_AIR_PURIFIER)
+
+  visible.forEach((product) => {
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.setAttribute('data-schema', 'product')

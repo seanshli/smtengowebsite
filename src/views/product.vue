@@ -1052,6 +1052,9 @@
           </button>
         </div>
       </div>
+      <!-- ponytail: EAP-01 空氣清淨機 section temporarily hidden.
+           Re-enable via SHOW_AIR_PURIFIER in src/configs/systemConfig.ts -->
+      <template v-if="SHOW_AIR_PURIFIER">
       <div
   id="oxygen1"
   class="engo_products scroll-anchor px-142 px-tab-80 px-mob-36 pt-106 pb-124 pb-tab-0 pt-mob-140 pb-mob-20 pos-r"
@@ -1200,11 +1203,12 @@
               </swiper-slide>
               <swiper-slide>
                 <img src="/images/AirPurifier008.png" alt="空氣清淨機" />
-              </swiper-slide>                                                                                   
+              </swiper-slide>
             </swiper>
           </div>
         </div>
       </div>
+      </template>
     </div>
 
     <CatalogMenu
@@ -1236,6 +1240,7 @@ import { useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 import { injectProductSchemas, cleanupProductSchemas } from '@/utils/productSchema'
 import { useI18n } from 'vue-i18n'
+import { SHOW_AIR_PURIFIER } from '@/configs/systemConfig'
 
 export default defineComponent({
   name: 'Product',
@@ -1414,7 +1419,8 @@ export default defineComponent({
       closeCatalogMenu,
       selectCatalogProduct,
       closeCatalog,
-      buyAirPurifier
+      buyAirPurifier,
+      SHOW_AIR_PURIFIER
     }
   }
 })

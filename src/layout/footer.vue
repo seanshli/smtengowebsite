@@ -9,7 +9,7 @@
         <!-- 水維氧AI智慧淨水系 -->
         <span class="subtitle link" @click="jumpToProduct">{{ $t('footer.secondLink') }}</span>
         <!-- 水維氧AI智慧淨水系 -->
-        <span class="subtitle link" @click="jumpToProduct1">{{ $t('product.air_purifier.title') }}</span>
+        <span v-if="SHOW_AIR_PURIFIER" class="subtitle link" @click="jumpToProduct1">{{ $t('product.air_purifier.title') }}</span>
         <!-- 智慧管家方案 -->
         <router-link to="/packages" class="subtitle link">{{ $t('product.packages.tag') }}</router-link>
         <!-- 使用教學 -->
@@ -100,6 +100,7 @@
 import { defineComponent, ref } from 'vue'
 import { changeLocale, type LanguageType, i18n } from '../main'
 import { useRouter } from 'vue-router'
+import { SHOW_AIR_PURIFIER } from '../configs/systemConfig'
 
 export default defineComponent({
   name: 'Header',
@@ -139,7 +140,8 @@ export default defineComponent({
       toggleMenu,
       changeLanguage,
       jumpToProduct,
-      jumpToProduct1
+      jumpToProduct1,
+      SHOW_AIR_PURIFIER
     }
   }
 })
