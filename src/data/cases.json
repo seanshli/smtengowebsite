@@ -4012,7 +4012,7 @@
     {
         "id": 25,
         "title": {
-            "zh": "宏盛芯",
+            "zh": "宏盛心",
             "en": "Hong Sheng Xin"
         },
         "category": {
@@ -4030,16 +4030,16 @@
             "en": "New Taipei"
         },
         "description": {
-            "zh": "建案智慧宅整合",
-            "en": "Smart home integration for residential development"
+            "zh": "宏盛建設｜新北汐止　地上21層/地下3層，314戶，20–39坪（1–3房）",
+            "en": "Hong Sheng Construction | Xizhi, New Taipei — 21F/B3, 314 units, 20–39 pings (1–3BR)"
         },
         "image": "/images/kitchen.jpg"
     },
     {
         "id": 26,
         "title": {
-            "zh": "昌毅",
-            "en": "Chang Yi"
+            "zh": "昌益南青山",
+            "en": "Chang Yi Nan Qing Shan"
         },
         "category": {
             "zh": "建案",
@@ -4052,12 +4052,12 @@
             "en": "Taiwan"
         },
         "location": {
-            "zh": "新竹",
-            "en": "Hsinchu"
+            "zh": "台南",
+            "en": "Tainan"
         },
         "description": {
-            "zh": "建案智慧宅整合",
-            "en": "Smart home integration for residential development"
+            "zh": "昌益建設｜台南　建案智慧宅整合",
+            "en": "Chang Yi Construction | Tainan — smart home integration"
         },
         "image": "/images/kitchen.jpg"
     }

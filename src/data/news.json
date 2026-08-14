@@ -1,5 +1,45 @@
 [
   {
+    "id": 5,
+    "date": "2026-08-14",
+    "title": {
+      "zh": "智管家聯手大雅進入建案：宏盛建設「宏盛心」",
+      "zhCN": "智管家联手大雅进入建案：宏盛建设「宏盛心」",
+      "en": "enGo Partners with Taya to Enter Property Development: Hong Sheng Construction's \"Hong Sheng Xin\"",
+      "fr": "enGo s'associe à Taya pour l'immobilier neuf : « Hong Sheng Xin » de Hong Sheng Construction",
+      "ja": "智管家、大雅と提携し分譲事業へ：宏盛建設「宏盛心」",
+      "es": "enGo se asocia con Taya en promoción inmobiliaria: «Hong Sheng Xin» de Hong Sheng Construction"
+    },
+    "summary": {
+      "zh": "智管家攜手大雅廚具進駐位於新北市汐止區的知名大基地住宅社區「宏盛心」。該案由宏盛建設推出，規劃地上 21 層、地下 3 層，總戶數 314 戶，主力坪數約 20 至 39 坪（1 至 3 房）。<a href=\"/cases/25\">查看案例</a>",
+      "zhCN": "智管家携手大雅厨具进驻位于新北市汐止区的知名大基地住宅社区「宏盛心」。该案由宏盛建设推出，规划地上 21 层、地下 3 层，总户数 314 户，主力坪数约 20 至 39 坪（1 至 3 房）。<a href=\"/cases/25\">查看案例</a>",
+      "en": "enGo and Taya Kitchen enter \"Hong Sheng Xin\", a large-scale residential community in Xizhi District, New Taipei, developed by Hong Sheng Construction. The project spans 21 floors above ground and 3 below, with 314 units sized roughly 20–39 pings (1–3 bedrooms). <a href=\"/cases/25\">View case</a>",
+      "fr": "enGo et Taya Kitchen intègrent « Hong Sheng Xin », une grande résidence du district de Xizhi, Nouveau Taipei, développée par Hong Sheng Construction. Le programme compte 21 étages et 3 niveaux de sous-sol, pour 314 logements d'environ 20 à 39 pings (1 à 3 chambres). <a href=\"/cases/25\">Voir le cas</a>",
+      "ja": "智管家と大雅キッチンが、新北市汐止区の大規模住宅コミュニティ「宏盛心」に参画。宏盛建設による本プロジェクトは地上21階・地下3階、総戸数314戸、主力面積は約20〜39坪（1〜3LDK）です。<a href=\"/cases/25\">事例を見る</a>",
+      "es": "enGo y Taya Kitchen entran en «Hong Sheng Xin», una gran comunidad residencial en el distrito de Xizhi, Nuevo Taipéi, desarrollada por Hong Sheng Construction. El proyecto tiene 21 plantas sobre rasante y 3 bajo rasante, con 314 viviendas de unos 20 a 39 pings (1 a 3 dormitorios). <a href=\"/cases/25\">Ver caso</a>"
+    }
+  },
+  {
+    "id": 6,
+    "date": "2026-08-14",
+    "title": {
+      "zh": "智管家聯手大雅進入建案：昌益建設「南青山」台南",
+      "zhCN": "智管家联手大雅进入建案：昌益建设「南青山」台南",
+      "en": "enGo Partners with Taya to Enter Property Development: Chang Yi Construction's \"Nan Qing Shan\", Tainan",
+      "fr": "enGo s'associe à Taya pour l'immobilier neuf : « Nan Qing Shan » de Chang Yi Construction, Tainan",
+      "ja": "智管家、大雅と提携し分譲事業へ：昌益建設「南青山」台南",
+      "es": "enGo se asocia con Taya en promoción inmobiliaria: «Nan Qing Shan» de Chang Yi Construction, Tainan"
+    },
+    "summary": {
+      "zh": "智管家攜手大雅廚具進駐台南建案「南青山」，由昌益建設推出。<a href=\"https://nanqing.tw\" target=\"_blank\" rel=\"noopener\">建案官網</a> · <a href=\"/cases/26\">查看案例</a>",
+      "zhCN": "智管家携手大雅厨具进驻台南建案「南青山」，由昌益建设推出。<a href=\"https://nanqing.tw\" target=\"_blank\" rel=\"noopener\">建案官网</a> · <a href=\"/cases/26\">查看案例</a>",
+      "en": "enGo and Taya Kitchen enter \"Nan Qing Shan\", a Tainan development by Chang Yi Construction. <a href=\"https://nanqing.tw\" target=\"_blank\" rel=\"noopener\">Project site</a> · <a href=\"/cases/26\">View case</a>",
+      "fr": "enGo et Taya Kitchen intègrent « Nan Qing Shan », un programme de Chang Yi Construction à Tainan. <a href=\"https://nanqing.tw\" target=\"_blank\" rel=\"noopener\">Site du programme</a> · <a href=\"/cases/26\">Voir le cas</a>",
+      "ja": "智管家と大雅キッチンが、昌益建設による台南の分譲プロジェクト「南青山」に参画しました。<a href=\"https://nanqing.tw\" target=\"_blank\" rel=\"noopener\">プロジェクト公式サイト</a> · <a href=\"/cases/26\">事例を見る</a>",
+      "es": "enGo y Taya Kitchen entran en «Nan Qing Shan», una promoción de Chang Yi Construction en Tainan. <a href=\"https://nanqing.tw\" target=\"_blank\" rel=\"noopener\">Sitio del proyecto</a> · <a href=\"/cases/26\">Ver caso</a>"
+    }
+  },
+  {
     "id": 1,
     "date": "2026-04-10",
     "image": "/images/technology.jpeg",
