@@ -9,8 +9,13 @@
           <div class="phone">{{ $t('contactUsSubtitle2') }}</div>
         </div>
       </div>
-      <!-- Voucher banner: always shown to surface the EAP-01 offer to every /contact visitor -->
-      <div class="voucher-banner" :class="{ 'voucher-banner--prefilled': isVoucherRequest }">
+      <!-- Voucher banner for the EAP-01 offer. Hidden while the product is
+           disabled — see SHOW_AIR_PURIFIER in src/configs/systemConfig.ts -->
+      <div
+        v-if="SHOW_AIR_PURIFIER"
+        class="voucher-banner"
+        :class="{ 'voucher-banner--prefilled': isVoucherRequest }"
+      >
         <span class="voucher-banner-icon">🎁</span>
         <div class="voucher-banner-text">
           <strong>EAP-01 空氣清淨機｜獨家折扣碼限時申請</strong>
@@ -136,7 +141,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, computed, onMounted } from 'vue'
-import { config } from '../configs/systemConfig'
+import { config, SHOW_AIR_PURIFIER } from '../configs/systemConfig'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
@@ -362,7 +367,8 @@ export default defineComponent({
       planOptions,
       jumpToLine,
       isVoucherRequest,
-      trackVoucherCtaClick
+      trackVoucherCtaClick,
+      SHOW_AIR_PURIFIER
     }
   }
 })
