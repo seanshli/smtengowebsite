@@ -250,6 +250,21 @@
                     "fr": "JYT AIEMS"
                 },
                 "url": "https://jyt-aiems.com/"
+            },
+            {
+                "category": {
+                    "zh": "智能富氧艙",
+                    "en": "Smart Oxygen Chamber",
+                    "ja": "スマート高濃度酸素ルーム",
+                    "fr": "Chambre à oxygène intelligente"
+                },
+                "name": {
+                    "zh": "麗寶生技",
+                    "en": "Lihpao Biotech",
+                    "ja": "麗寶生技",
+                    "fr": "Lihpao Biotech"
+                },
+                "url": "https://libobio.com/?page_id=6002"
             }
         ]
     }
