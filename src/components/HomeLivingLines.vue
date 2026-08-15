@@ -44,7 +44,15 @@
       >
         <circle class="ll-node-ring" r="34" />
         <circle class="ll-node-core" r="27" />
-        <text class="ll-node-label" y="6">{{ label(d) }}</text>
+        <text class="ll-node-label">
+          <tspan
+            v-for="(line, j) in label(d).split('\n')"
+            :key="j"
+            x="0"
+            :y="label(d).includes('\n') ? (j === 0 ? -3 : 15) : 6"
+            :font-size="label(d).includes('\n') ? 13 : 15"
+          >{{ line }}</tspan>
+        </text>
       </g>
 
       <!-- hub -->
@@ -75,12 +83,14 @@ interface Device {
   ja: string
 }
 
-// Six devices ringed around the hub at (500, 310). Curves bow outward so the
-// drawn lines read as organic wiring, not spokes.
+// Seven devices ringed around the hub at (500, 310). Curves bow outward so
+// the drawn lines read as organic wiring, not spokes. Labels may contain \n
+// for a two-line fit inside the node circle.
 const DEVICES: Device[] = [
   { x: 150, y: 105, path: 'M 150 105 C 290 130, 360 220, 448 278', zh: '燈光', en: 'Lighting', ja: '照明' },
   { x: 500, y: 62,  path: 'M 500 62 C 470 140, 520 190, 500 248',  zh: '空調', en: 'Climate',  ja: '空調' },
   { x: 850, y: 105, path: 'M 850 105 C 710 130, 640 220, 552 278', zh: '窗簾', en: 'Curtains', ja: 'カーテン' },
+  { x: 88,  y: 310, path: 'M 88 310 C 210 252, 330 368, 436 310',  zh: '清風\n除濕機', en: 'Fresh Air', ja: '新風\n除湿' },
   { x: 150, y: 515, path: 'M 150 515 C 290 490, 360 400, 448 342', zh: '淨水', en: 'Water',    ja: '浄水' },
   { x: 500, y: 558, path: 'M 500 558 C 530 480, 480 430, 500 372', zh: '廚房', en: 'Kitchen',  ja: 'キッチン' },
   { x: 850, y: 515, path: 'M 850 515 C 710 490, 640 400, 552 342', zh: '安防', en: 'Security', ja: 'セキュリティ' }
