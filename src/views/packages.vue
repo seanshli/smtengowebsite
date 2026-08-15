@@ -1,13 +1,13 @@
 <template>
   <section class="packages-page w-100 pt-70">
-    <div id="packages-wrapper" style="background-color: #f8fafd; width: 100%; border-top: 1px solid #e1e8ef;">
+    <div id="packages-wrapper">
       <!-- 套裝方案 -->
       <div id="packages" class="package-section container py-100 py-mob-60">
-        <div class="tag as-fs mb-32">
-          <img src="/assets/layers.svg" alt="Package Plans icon" />
-          <span>{{ $t('product.packages.tag') || '套裝方案' }}</span>
-        </div>
-        <h2 class="fz-48 fw-700 text-grey-blue mb-56 tac">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</h2>
+        <header class="ed-mast-block">
+          <p class="ed-mast-kicker">enGo 生活誌</p>
+          <h1 class="ed-mast-title">{{ $t('product.packages.tag') || '套裝方案' }}</h1>
+          <p class="ed-mast-sub">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</p>
+        </header>
         
         <div class="package-grid">
           <div v-for="pkg in packages.main_packages" :key="pkg.id" class="package-card card-hover scroll-reveal">
@@ -446,5 +446,61 @@ export default defineComponent({
       font-family: inherit;
     }
   }
+}
+</style>
+
+<style scoped lang="scss">
+@import '../css/utils/variables';
+
+// ─── Editorial pass (design/editorial-phase2) ───
+.packages-page {
+  background: $warm-bg-light;
+}
+
+#packages-wrapper {
+  background: $warm-bg-light;
+  width: 100%;
+  border-top: none;
+}
+
+.packages-page :is(h1, h2, h3, h4) {
+  font-family: 'Noto Serif TC', serif;
+}
+
+.ed-mast-block {
+  border-top: 3px solid $grey-blue3;
+  padding-top: 22px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.ed-mast-kicker {
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  color: $brand-orange;
+  margin-bottom: 8px;
+}
+
+.ed-mast-title {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  line-height: 1.1;
+  color: $grey-blue3;
+  margin-bottom: 14px;
+}
+
+.ed-mast-sub {
+  font-size: clamp(1.16rem, 2vw, 1.42rem);
+  font-weight: 500;
+  line-height: 1.95;
+  color: $grey-blue2;
+  max-width: 34em;
+}
+
+// mounted-plate system: squared corners page-wide
+.packages-page :is(div[class*="card"], table, th, td, button, a[class*="btn"]) {
+  border-radius: 0 !important;
 }
 </style>

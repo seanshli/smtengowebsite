@@ -1,6 +1,7 @@
 <template>
   <div class="tutorial-page">
-    <div class="header-section">
+    <div class="header-section ed-mast-block">
+      <p class="ed-mast-kicker">enGo 生活誌</p>
       <h1 class="page-title">{{ $t('tutorialTitle') }}</h1>
       <p class="subtitle">{{ $t('tutorialSubtitle') }}</p>
     </div>
@@ -635,5 +636,54 @@ onUnmounted(() => {
       }
     }
   }
+}
+</style>
+
+<style scoped lang="scss">
+@import '../css/utils/variables';
+
+// ─── Editorial pass (design/editorial-phase2) ───
+.tutorial-page {
+  background: $warm-bg-light;
+}
+
+.tutorial-page :is(h1, h2, h3, h4) {
+  font-family: 'Noto Serif TC', serif;
+}
+
+.header-section.ed-mast-block {
+  text-align: left;
+  border-top: 3px solid $grey-blue3;
+  padding-top: 22px;
+  margin-bottom: 44px;
+
+  .ed-mast-kicker {
+    font-size: 1.02rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    color: $brand-orange;
+    margin-bottom: 8px;
+  }
+
+  .page-title {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    line-height: 1.1;
+    color: $grey-blue3;
+    margin-bottom: 14px;
+  }
+
+  .subtitle {
+    font-size: clamp(1.16rem, 2vw, 1.42rem);
+    font-weight: 500;
+    line-height: 1.95;
+    color: $grey-blue2;
+    max-width: 34em;
+  }
+}
+
+.tutorial-page :is(div[class*="card"], div[class*="faq"], button) {
+  border-radius: 0 !important;
 }
 </style>

@@ -2,6 +2,7 @@
   <div class="contact">
     <div class="contact_wrap">
       <div class="contact_title">
+        <p class="ed-mast-kicker">enGo 生活誌</p>
         <h1 class="fz-48 lh-70 fw-500">{{ $t('contactUsTitle') }}</h1>
         <p class="fz-24 lh-34 web">{{ $t('contactUsSubtitle') }}</p>
         <div class="phone container">
@@ -534,5 +535,29 @@ export default defineComponent({
     height: 24px;
     object-fit: contain;
   }
+}
+</style>
+
+<style scoped lang="scss">
+@import '../css/utils/variables';
+
+// ─── Editorial pass (design/editorial-phase2) ───
+.contact :is(h1, h2, h3) {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  color: $grey-blue3;
+}
+
+.ed-mast-kicker {
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  color: $brand-orange;
+  margin-bottom: 6px;
+}
+
+// squared inputs and plates, matching the mounted-plate system
+.contact :is(input, select, textarea, button, div[class*="banner"]) {
+  border-radius: 0 !important;
 }
 </style>
