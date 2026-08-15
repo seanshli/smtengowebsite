@@ -1,6 +1,7 @@
 <template>
   <div class="cases-page">
     <div class="header-section">
+      <p class="page-kicker">enGo 生活誌</p>
       <h1 class="page-title">{{ $t('casesTitle') }}</h1>
       <p class="subtitle">{{ $t('casesSubtitle') }}</p>
     </div>
@@ -141,41 +142,52 @@ const getLocaleText = (obj: any) => {
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
+
 .cases-page {
-  padding: 100px 20px;
+  padding: 110px 5vw 100px;
   max-width: 1200px;
   margin: 0 auto;
 
+  // editorial masthead, matching the homepage sections
   .header-section {
-    text-align: center;
-    margin-bottom: 60px;
-    .page-title { 
-      font-size: 2.5rem; 
-      color: #333; 
-      margin-bottom: 10px; 
-      @media (max-width: 768px) { font-size: 1.8rem; }
+    text-align: left;
+    border-top: 3px solid $grey-blue3;
+    padding-top: 22px;
+    margin-bottom: 44px;
+
+    .page-kicker {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      color: $brand-orange;
+      margin-bottom: 6px;
     }
-    .subtitle { 
-      color: #666; 
-      font-size: 1.1rem;
-      @media (max-width: 768px) { font-size: 1rem; padding: 0 10px; }
+
+    .page-title {
+      font-family: 'Noto Serif TC', serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.1;
+      color: $grey-blue3;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: $dark-grey;
+      font-size: clamp(1rem, 2vw, 1.2rem);
     }
   }
 
+  // filters as an editorial rule-bounded strip, not a card
   .filters-container {
-    background: #fdfdfd;
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid #f0f0f0;
+    border-top: 1px solid rgba($grey-blue3, 0.25);
+    border-bottom: 1px solid rgba($grey-blue3, 0.25);
+    padding: 20px 0;
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-
-    @media (max-width: 768px) {
-      padding: 20px;
-      gap: 20px;
-    }
+    gap: 18px;
 
     .filter-group {
       display: flex;
@@ -187,30 +199,41 @@ const getLocaleText = (obj: any) => {
         align-items: flex-start;
         gap: 10px;
       }
-      
+
       label {
         font-weight: 700;
-        color: #333;
-        min-width: 80px;
-        font-size: 0.95rem;
+        color: $grey-blue3;
+        min-width: 64px;
+        font-size: 0.88rem;
+        letter-spacing: 0.12em;
       }
     }
 
+    // underline tabs instead of pills
     .filters {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 4px 22px;
+
       button {
-        padding: 8px 20px;
-        border: 1px solid #eee;
-        background: white;
+        padding: 4px 2px 6px;
+        border: none;
+        border-bottom: 2px solid transparent;
+        background: none;
         cursor: pointer;
-        border-radius: 30px;
         font-weight: 500;
-        transition: all 0.3s ease;
-        font-size: 0.9rem;
-        &:hover { border-color: #c46043; color: #c46043; }
-        &.active { background: #c46043; color: white; border-color: #c46043; box-shadow: 0 4px 12px rgba(196, 96, 67, 0.2); }
+        font-size: 0.95rem;
+        color: $dark-grey;
+        transition: color 0.25s ease, border-color 0.25s ease;
+
+        &:hover { color: $brand-orange; }
+
+        &.active {
+          font-family: 'Noto Serif TC', serif;
+          font-weight: 700;
+          color: $grey-blue3;
+          border-bottom-color: $brand-orange;
+        }
       }
     }
 
@@ -223,7 +246,7 @@ const getLocaleText = (obj: any) => {
         flex-direction: column;
         gap: 15px;
       }
-      
+
       .select-wrapper {
         display: flex;
         align-items: center;
@@ -233,17 +256,17 @@ const getLocaleText = (obj: any) => {
           width: 100%;
           justify-content: space-between;
         }
-        
+
         select {
-          padding: 8px 15px;
-          border: 1px solid #eee;
-          border-radius: 8px;
-          background: white;
-          color: #666;
+          padding: 6px 12px;
+          border: 1px solid rgba($grey-blue3, 0.35);
+          border-radius: 0;
+          background: $warm-bg-light;
+          color: $grey-blue2;
           font-size: 0.9rem;
           min-width: 150px;
           cursor: pointer;
-          &:focus { border-color: #c46043; outline: none; }
+          &:focus { border-color: $brand-orange; outline: none; }
           @media (max-width: 768px) { min-width: 120px; flex: 1; }
         }
       }
@@ -260,17 +283,27 @@ const getLocaleText = (obj: any) => {
     }
   }
 
+  // mounted plates, matching the hero figure: hard edges, hairline border,
+  // orange offset frame on hover instead of a soft shadow lift
   .case-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+    position: relative;
+    background: $warm-bg-light;
+    border: 1px solid rgba($grey-blue3, 0.32);
+    transition: transform 0.3s ease;
     cursor: pointer;
 
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 8px -8px -8px 8px;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+      z-index: -1;
+    }
+
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      transform: translate(-3px, -3px);
+      &::before { border-color: $brand-orange; }
       .image-wrapper .overlay { opacity: 1; }
     }
 
@@ -278,26 +311,46 @@ const getLocaleText = (obj: any) => {
       position: relative;
       height: 250px;
       overflow: hidden;
+      border-bottom: 1px solid rgba($grey-blue3, 0.25);
       img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
       .overlay {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(196, 96, 67, 0.8);
+        background: rgba($brand-orange, 0.82);
         display: flex;
         align-items: center;
         justify-content: center;
         opacity: 0;
         transition: opacity 0.3s ease;
-        span { color: white; font-weight: 600; border: 2px solid white; padding: 8px 20px; border-radius: 5px; }
+        span {
+          color: white;
+          font-family: 'Noto Serif TC', serif;
+          font-weight: 700;
+          border: 1px solid white;
+          padding: 8px 22px;
+        }
       }
     }
 
     .card-content {
-      padding: 25px;
-      .category { color: #c46043; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-      .title { margin: 10px 0 5px; font-size: 1.4rem; color: #333; }
-      .location { color: #888; font-size: 0.9rem; margin-bottom: 15px; }
-      .desc { color: #666; font-size: 0.95rem; line-height: 1.6; }
+      padding: 22px 24px 24px;
+      .category {
+        color: $brand-orange;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+      }
+      .title {
+        margin: 8px 0 4px;
+        font-family: 'Noto Serif TC', serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+        line-height: 1.45;
+        color: $grey-blue3;
+      }
+      .location { color: $dark-grey; font-size: 0.88rem; margin-bottom: 12px; }
+      .desc { color: #5a5a5a; font-size: 0.94rem; line-height: 1.7; }
     }
   }
 }

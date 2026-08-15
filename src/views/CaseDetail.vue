@@ -229,20 +229,21 @@ onMounted(() => {
         color: white;
         
         .category {
-          background: #c46043;
-          padding: 5px 15px;
-          border-radius: 20px;
-          font-size: 0.9rem;
-          font-weight: 600;
-          text-transform: uppercase;
-        }
-        
-        .title {
-          font-size: 3rem;
-          margin: 15px 0;
+          background: #e05a35;
+          padding: 5px 16px;
+          border-radius: 0; // squared, matching the editorial plates
+          font-size: 0.82rem;
           font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.18em;
+        }
+
+        .title {
+          font-family: 'Noto Serif TC', serif;
+          font-weight: 900;
+          font-size: clamp(2rem, 5vw, 3.2rem);
+          margin: 15px 0;
           text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-          @media(max-width: 768px) { font-size: 2rem; }
         }
         
         .location {
