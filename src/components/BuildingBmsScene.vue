@@ -14,13 +14,13 @@
       </p>
     </header>
 
-    <svg class="bms-scene" viewBox="0 0 1040 680" fill="none" role="img"
+    <svg class="bms-scene" viewBox="0 0 1040 700" fill="none" role="img"
       :aria-label="isZh ? 'enGo HMS 與 BMS 互通示意' : 'enGo HMS and BMS integration diagram'">
       <!-- ground -->
-      <line class="bms-ground" x1="60" y1="620" x2="980" y2="620" />
+      <line class="bms-ground" x1="60" y1="640" x2="980" y2="640" />
 
       <!-- building shell -->
-      <path ref="shell" class="bms-shell" d="M 120 620 V 130 L 265 70 L 410 130 V 620" />
+      <path ref="shell" class="bms-shell" d="M 120 640 V 130 L 265 70 L 410 130 V 640" />
 
       <!-- floor slabs -->
       <line v-for="(y, i) in floors" :key="'f'+i" ref="slabs" class="bms-slab"
@@ -38,33 +38,37 @@
       <path ref="leader" class="bms-leader" d="M 378 250 C 420 220, 430 200, 466 185" />
 
       <!-- HMS card: what runs inside every unit -->
-      <g ref="hmsCard" class="bms-card-g" transform="translate(470, 78)">
-        <rect class="bms-card" x="0" y="0" width="252" height="252" rx="6" />
-        <text class="bms-card-title" x="18" y="34">HMS・{{ isZh ? '每一戶' : 'Every Unit' }}</text>
-        <line class="bms-card-rule" x1="18" y1="48" x2="234" y2="48" />
-        <g v-for="(f, i) in hmsRows" :key="'h'+i" ref="hmsRowEls" :transform="`translate(18, ${76 + i * 36})`">
-          <rect class="bms-row-tick bms-row-tick--hms" x="0" y="-9" width="10" height="10" />
-          <text class="bms-row-text" x="22" y="0">{{ isZh ? f.zh : f.en }}</text>
+      <g ref="hmsCard" class="bms-card-g" transform="translate(470, 44)">
+        <rect class="bms-card" x="0" y="0" width="252" height="322" rx="6" />
+        <image href="/images/cases/case-home.jpg" x="12" y="12" width="228" height="76" preserveAspectRatio="xMidYMid slice" />
+        <rect x="12" y="12" width="228" height="76" fill="none" stroke="rgba(21,41,57,0.35)" stroke-width="1.5" />
+        <text class="bms-card-title" x="18" y="116">HMS・{{ isZh ? '每一戶' : 'Every Unit' }}</text>
+        <line class="bms-card-rule" x1="18" y1="130" x2="234" y2="130" />
+        <g v-for="(f, i) in hmsRows" :key="'h'+i" ref="hmsRowEls" :transform="`translate(18, ${158 + i * 34})`">
+          <g class="bms-row-icon bms-row-icon--hms" v-html="f.icon"></g>
+          <text class="bms-row-text" x="28" y="0">{{ isZh ? f.zh : f.en }}</text>
         </g>
       </g>
 
       <!-- BMS facilities card: what the building itself runs -->
-      <g ref="bmsCard" class="bms-card-g" transform="translate(470, 398)">
-        <rect class="bms-card" x="0" y="0" width="252" height="204" rx="6" />
-        <text class="bms-card-title" x="18" y="34">BMS・{{ isZh ? '整棟公設' : 'The Building' }}</text>
-        <line class="bms-card-rule" x1="18" y1="48" x2="234" y2="48" />
-        <g v-for="(f, i) in bmsRows" :key="'b'+i" ref="bmsRowEls" :transform="`translate(18, ${76 + i * 34})`">
-          <rect class="bms-row-tick bms-row-tick--bms" x="0" y="-9" width="10" height="10" />
-          <text class="bms-row-text" x="22" y="0">{{ isZh ? f.zh : f.en }}</text>
+      <g ref="bmsCard" class="bms-card-g" transform="translate(470, 400)">
+        <rect class="bms-card" x="0" y="0" width="252" height="272" rx="6" />
+        <image href="/images/home/bms-lobby.jpg" x="12" y="12" width="228" height="76" preserveAspectRatio="xMidYMid slice" />
+        <rect x="12" y="12" width="228" height="76" fill="none" stroke="rgba(21,41,57,0.35)" stroke-width="1.5" />
+        <text class="bms-card-title" x="18" y="116">BMS・{{ isZh ? '整棟公設' : 'The Building' }}</text>
+        <line class="bms-card-rule" x1="18" y1="130" x2="234" y2="130" />
+        <g v-for="(f, i) in bmsRows" :key="'b'+i" ref="bmsRowEls" :transform="`translate(18, ${156 + i * 30})`">
+          <g class="bms-row-icon bms-row-icon--bms" v-html="f.icon"></g>
+          <text class="bms-row-text" x="28" y="0">{{ isZh ? f.zh : f.en }}</text>
         </g>
       </g>
 
       <!-- building base feeds the facilities -->
-      <path ref="baseLink" class="bms-wire" d="M 410 500 C 435 500, 440 500, 466 500" />
+      <path ref="baseLink" class="bms-wire" d="M 410 520 C 435 520, 440 522, 466 524" />
 
       <!-- both cards converge on the dashboard; HMS wire is bidirectional -->
-      <path ref="hmsWire" class="bms-wire" d="M 722 204 C 762 204, 768 260, 800 300" />
-      <path ref="bmsWire" class="bms-wire" d="M 722 500 C 762 500, 768 440, 800 400" />
+      <path ref="hmsWire" class="bms-wire" d="M 722 190 C 762 190, 768 255, 800 300" />
+      <path ref="bmsWire" class="bms-wire" d="M 722 530 C 762 530, 768 455, 800 405" />
       <circle ref="dotDown" class="bms-dot bms-dot--hms" r="5" />
       <circle ref="dotUp" class="bms-dot bms-dot--hms" r="5" />
       <circle ref="dotBms" class="bms-dot bms-dot--bms" r="5" />
@@ -101,18 +105,31 @@ const FLOOR_YS = [150, 260, 370, 480]
 const UNIT_XS = [180, 265, 350]
 
 // The real enGo feature sets.
+// tiny 18px line glyphs, drawn at (0,-6) center, stroke via CSS
+const I = {
+  bulletin: '<g fill="none" stroke="currentColor" stroke-width="2"><rect x="0" y="-14" width="16" height="14" rx="1.5"/><line x1="3.5" y1="-10" x2="12.5" y2="-10"/><line x1="3.5" y1="-6.5" x2="12.5" y2="-6.5"/></g>',
+  property: '<g fill="none" stroke="currentColor" stroke-width="2"><path d="M 1 0 V -11 L 8 -15 L 15 -11 V 0"/><line x1="5.5" y1="0" x2="5.5" y2="-5"/><line x1="10.5" y1="0" x2="10.5" y2="-5"/></g>',
+  sliders: '<g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="0" y1="-11" x2="16" y2="-11"/><line x1="0" y1="-4" x2="16" y2="-4"/><circle cx="5" cy="-11" r="2.6" fill="currentColor" stroke="none"/><circle cx="11" cy="-4" r="2.6" fill="currentColor" stroke="none"/></g>',
+  bell: '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M 2 -3 C 2 -3, 3 -4.5, 3 -8 A 5 5 0 0 1 13 -8 C 13 -4.5, 14 -3, 14 -3 Z"/><path d="M 6.5 -1 A 1.8 1.8 0 0 0 9.5 -1"/></g>',
+  chip: '<g fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="-13" width="12" height="12" rx="2"/><rect x="6" y="-9" width="4" height="4" fill="currentColor" stroke="none"/><line x1="2" y1="-7" x2="-1" y2="-7"/><line x1="14" y1="-7" x2="17" y2="-7"/><line x1="8" y1="-13" x2="8" y2="-16"/><line x1="8" y1="-1" x2="8" y2="2"/></g>',
+  locker: '<g fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="-14" width="14" height="14" rx="1.5"/><line x1="8" y1="-14" x2="8" y2="0"/><circle cx="5" cy="-7" r="1.2" fill="currentColor" stroke="none"/><circle cx="11.5" cy="-7" r="1.2" fill="currentColor" stroke="none"/></g>',
+  camera: '<g fill="none" stroke="currentColor" stroke-width="2"><path d="M 1 -12 H 15 V -8 A 7 5.5 0 0 1 1 -8 Z"/><circle cx="8" cy="-7" r="2.2"/></g>',
+  mailbox: '<g fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="-12" width="14" height="10" rx="1.5"/><path d="M 1 -11 L 8 -6 L 15 -11"/></g>',
+  bolt: '<path d="M 9 -15 L 2 -5 H 7 L 6 2 L 14 -8 H 8.5 Z" fill="currentColor"/>'
+}
+
 const HMS_ROWS = [
-  { zh: '公布欄', en: 'Bulletin board' },
-  { zh: '物業管理', en: 'Property services' },
-  { zh: '家居系統管理', en: 'Home system control' },
-  { zh: '通訊警報', en: 'Comms & alerts' },
-  { zh: 'AIoT 智慧連動', en: 'AIoT automation' }
+  { zh: '公布欄', en: 'Bulletin board', icon: I.bulletin },
+  { zh: '物業管理', en: 'Property services', icon: I.property },
+  { zh: '家居系統管理', en: 'Home system control', icon: I.sliders },
+  { zh: '通訊警報', en: 'Comms & alerts', icon: I.bell },
+  { zh: 'AIoT 智慧連動', en: 'AIoT automation', icon: I.chip }
 ]
 const BMS_ROWS = [
-  { zh: '智能櫃', en: 'Smart lockers' },
-  { zh: '監控系統', en: 'Surveillance' },
-  { zh: '智能信箱', en: 'Smart mailboxes' },
-  { zh: '能源管理', en: 'Energy management' }
+  { zh: '智能櫃', en: 'Smart lockers', icon: I.locker },
+  { zh: '監控系統', en: 'Surveillance', icon: I.camera },
+  { zh: '智能信箱', en: 'Smart mailboxes', icon: I.mailbox },
+  { zh: '能源管理', en: 'Energy management', icon: I.bolt }
 ]
 
 export default defineComponent({
@@ -170,7 +187,7 @@ export default defineComponent({
         gsap.set(slabs.value, { scaleX: 0, transformOrigin: 'left center' })
         gsap.set(unitEls.value, { opacity: 0, scale: 0.4, transformOrigin: '50% 50%' })
         gsap.set(focusRing.value, { opacity: 0, scale: 0.5, transformOrigin: '50% 50%' })
-        gsap.set(cards, { opacity: 0, y: 16 })
+        gsap.set(cards, { opacity: 0, scale: 0.94, transformOrigin: '50% 50%' })
         gsap.set(rows, { opacity: 0, x: -10 })
         gsap.set(barEls.value, { scaleY: 0, transformOrigin: '50% 100%' })
         gsap.set(dots, { opacity: 0 })
@@ -195,15 +212,15 @@ export default defineComponent({
           // one unit steps forward and unfolds its HMS
           .to(focusRing.value, { opacity: 1, scale: 1, ease: 'back.out(2)', duration: 0.2 })
           .to(leader.value, { strokeDashoffset: 0, ease: 'none', duration: 0.15 })
-          .to(hmsCard.value, { opacity: 1, y: 0, ease: 'power2.out', duration: 0.25 })
+          .to(hmsCard.value, { opacity: 1, scale: 1, ease: 'power2.out', duration: 0.25 })
           .to(hmsRowEls.value, { opacity: 1, x: 0, ease: 'power2.out', stagger: 0.05, duration: 0.2 }, '<0.05')
           // the building unfolds its BMS facilities
           .to(baseLink.value, { strokeDashoffset: 0, ease: 'none', duration: 0.12 })
-          .to(bmsCard.value, { opacity: 1, y: 0, ease: 'power2.out', duration: 0.25 }, '<')
+          .to(bmsCard.value, { opacity: 1, scale: 1, ease: 'power2.out', duration: 0.25 }, '<')
           .to(bmsRowEls.value, { opacity: 1, x: 0, ease: 'power2.out', stagger: 0.05, duration: 0.2 }, '<0.05')
           // both meet in the dashboard
           .to([hmsWire.value, bmsWire.value], { strokeDashoffset: 0, ease: 'none', duration: 0.2 })
-          .to(dash.value, { opacity: 1, y: 0, ease: 'power2.out', duration: 0.25 })
+          .to(dash.value, { opacity: 1, scale: 1, ease: 'power2.out', duration: 0.25 })
           .to(barEls.value, { scaleY: 1, ease: 'back.out(1.4)', stagger: 0.05, duration: 0.25 }, '<0.05')
           .to(spark.value, { strokeDashoffset: 0, ease: 'none', duration: 0.25 }, '<')
 
@@ -391,13 +408,13 @@ export default defineComponent({
   }
 }
 
-.bms-row-tick {
+.bms-row-icon {
   &--hms {
-    fill: $brand-orange;
+    color: $brand-orange;
   }
 
   &--bms {
-    fill: $gold;
+    color: darken($gold, 12%);
   }
 }
 
