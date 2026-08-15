@@ -93,39 +93,6 @@ const MEMBERS: Member[] = [
     }
   },
   {
-    id: 'jacky-chang',
-    photo: '/images/team/jacky-chang.jpg',
-    nameEn: 'Jacky Chang',
-    name: { zh: '張宏彰', en: 'Jacky Chang' },
-    role: { zh: '共同創辦人・營運長', en: 'Co-founder · COO' },
-    story: {
-      zh: '橫跨環保建材、數智實業、家居製造與地產開發的連續創業者，長年深耕兩岸與日本市場，深諳供應鏈與跨國營運。於 enGo 掌管營運、供應鏈與通路合作。',
-      en: 'A serial entrepreneur across green building materials, digital industry, home manufacturing, and property development, with deep supply-chain and cross-border operating experience spanning Taiwan, China, and Japan. At enGo he runs operations, supply chain, and channel partnerships.'
-    },
-    creds: {
-      zh: [
-        '智管家科技股份有限公司 營運長',
-        '睿呈環保實業有限公司 負責人',
-        '珐興數智實業有限公司 總經理',
-        '廈門松粽家居股份有限公司 營運總監',
-        '帝觀地產開發股份有限公司 董事長',
-        '日商台灣變克工業股份有限公司 董事合夥人',
-        '國立台中科技大學日文系・日本京都教育大學經濟系',
-        '中興大學 EMBA 企管碩士'
-      ],
-      en: [
-        'COO, Smart enGo Home Corp.',
-        'Principal, Ruicheng Green Materials',
-        'GM, Faxing Digital Industry',
-        'Operations Director, Xiamen Songzong Home',
-        'Chairman, Diguan Property Development',
-        'Board Partner, Vector Industry Taiwan (Japan)',
-        'NTCUST Japanese · Kyoto University of Education, Economics',
-        'EMBA, National Chung Hsing University'
-      ]
-    }
-  },
-  {
     id: 'enzo-chang',
     photo: '/images/team/enzo-chang.jpg',
     nameEn: 'Enzo Chang',
@@ -153,6 +120,39 @@ const MEMBERS: Member[] = [
         'École d\'Art et de Culture, Paris — Sotheby\'s art management certification',
         'EMBA (\'18), Fudan University · Fudan private board',
         'Harvard Business School global executive leadership program'
+      ]
+    }
+  },
+  {
+    id: 'jacky-chang',
+    photo: '/images/team/jacky-chang.jpg',
+    nameEn: 'Jacky Chang',
+    name: { zh: '張宏彰', en: 'Jacky Chang' },
+    role: { zh: '業務營運長', en: 'VP of Business Operations' },
+    story: {
+      zh: '橫跨環保建材、數智實業、家居製造與地產開發的連續創業者，長年深耕兩岸與日本市場，深諳供應鏈與跨國營運。於 enGo 掌管營運、供應鏈與通路合作。',
+      en: 'A serial entrepreneur across green building materials, digital industry, home manufacturing, and property development, with deep supply-chain and cross-border operating experience spanning Taiwan, China, and Japan. At enGo he runs operations, supply chain, and channel partnerships.'
+    },
+    creds: {
+      zh: [
+        '智管家科技股份有限公司 業務營運長',
+        '睿呈環保實業有限公司 負責人',
+        '珐興數智實業有限公司 總經理',
+        '廈門松粽家居股份有限公司 營運總監',
+        '帝觀地產開發股份有限公司 董事長',
+        '日商台灣變克工業股份有限公司 董事合夥人',
+        '國立台中科技大學日文系・日本京都教育大學經濟系',
+        '中興大學 EMBA 企管碩士'
+      ],
+      en: [
+        'VP of Business Operations, Smart enGo Home Corp.',
+        'Principal, Ruicheng Green Materials',
+        'GM, Faxing Digital Industry',
+        'Operations Director, Xiamen Songzong Home',
+        'Chairman, Diguan Property Development',
+        'Board Partner, Vector Industry Taiwan (Japan)',
+        'NTCUST Japanese · Kyoto University of Education, Economics',
+        'EMBA, National Chung Hsing University'
       ]
     }
   },
