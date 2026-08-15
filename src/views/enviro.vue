@@ -17,32 +17,18 @@
       </router-link>
     </header>
 
-    <!-- Network scene: hand-built in brand colors (swap-ready for a rendered
-         illustration in /images/enviro/ once one is generated). -->
-    <div class="ev-scene-wrap fade-in" aria-hidden="true">
-      <svg class="ev-scene" viewBox="0 0 720 560" fill="none">
-        <!-- wires -->
-        <path class="ev-wire" d="M 170 130 C 260 180, 290 230, 330 260" />
-        <path class="ev-wire" d="M 550 130 C 460 180, 430 230, 390 260" />
-        <path class="ev-wire" d="M 170 430 C 260 380, 290 330, 330 300" />
-        <path class="ev-wire" d="M 550 430 C 460 380, 430 330, 390 300" />
-
-        <!-- hub -->
-        <g transform="translate(360, 280)">
-          <rect class="ev-hub-halo" x="-84" y="-84" width="168" height="168" rx="10" transform="rotate(45)" />
-          <rect class="ev-hub" x="-62" y="-62" width="124" height="124" rx="8" transform="rotate(45)" />
-          <text class="ev-hub-label" y="9">enGo</text>
-        </g>
-
-        <!-- device cards -->
-        <g v-for="d in devices" :key="d.id" :transform="`translate(${d.x}, ${d.y})`" class="ev-node">
-          <rect class="ev-card" x="-92" y="-46" width="184" height="92" rx="6" />
-          <g transform="translate(-62, 0)" v-html="d.icon"></g>
-          <text class="ev-card-title" x="-30" y="-4">{{ isZh ? d.zh : d.en }}</text>
-          <text class="ev-card-sub" x="-30" y="20">{{ d.tag }}</text>
-        </g>
-      </svg>
-    </div>
+    <!-- Network scene: Gemini-rendered illustration in the night-edition
+         palette (generated via the ai-studio-image skill, text-free edit of
+         v1). Replaces the earlier hand-built SVG — one diagram, the richer
+         one; the SVG lives in git history if ever needed again. -->
+    <figure class="ev-scene-wrap fade-in">
+      <img
+        class="ev-scene-img"
+        src="/images/enviro/enviro-network.jpg"
+        :alt="isZh ? 'enGo 智慧環控網絡示意圖' : 'enGo environmental control network illustration'"
+        decoding="async"
+      />
+    </figure>
 
     <!-- Four pillars -->
     <div class="ev-pillars">
@@ -88,21 +74,6 @@ interface Pillar {
   copy: Bi
   points: { zh: string[]; en: string[] }
 }
-
-// Simple line icons, stroke-based, colored via CSS currentColor.
-const ICONS: Record<string, string> = {
-  sun: '<circle r="10" fill="none" stroke="currentColor" stroke-width="2.5"/><g stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="0" y1="-19" x2="0" y2="-14"/><line x1="0" y1="14" x2="0" y2="19"/><line x1="-19" y1="0" x2="-14" y2="0"/><line x1="14" y1="0" x2="19" y2="0"/><line x1="-13" y1="-13" x2="-10" y2="-10"/><line x1="10" y1="10" x2="13" y2="13"/><line x1="-13" y1="13" x2="-10" y2="10"/><line x1="10" y1="-10" x2="13" y2="-13"/></g>',
-  air: '<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M -18 -8 H 8 a 7 7 0 1 0 -7 -7"/><path d="M -18 2 H 14 a 7 7 0 1 1 -7 7"/><path d="M -18 12 H 2"/></g>',
-  water: '<path d="M 0 -18 C 8 -6, 14 2, 14 9 a 14 14 0 1 1 -28 0 C -14 2, -8 -6, 0 -18 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>',
-  kitchen: '<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="-16" y="-2" width="32" height="16" rx="3"/><line x1="-16" y1="-2" x2="16" y2="-2"/><path d="M -8 -8 C -8 -12, -4 -12, -4 -16"/><path d="M 4 -8 C 4 -12, 8 -12, 8 -16"/></g>'
-}
-
-const DEVICES = [
-  { id: 'sun', x: 150, y: 110, zh: '智慧陽光控溫', en: 'Daylight & Temp', tag: 'LUX · °C', icon: ICONS.sun },
-  { id: 'air', x: 570, y: 110, zh: '空氣淨化監測', en: 'Air Purification', tag: 'PM2.5 · VOC', icon: ICONS.air },
-  { id: 'water', x: 150, y: 450, zh: '智慧水務管理', en: 'Smart Water', tag: 'TDS · FLOW', icon: ICONS.water },
-  { id: 'kitchen', x: 570, y: 450, zh: '智慧廚房安全', en: 'Kitchen Safety', tag: 'GAS · FIRE', icon: ICONS.kitchen }
-]
 
 const PILLARS: Pillar[] = [
   {
@@ -161,7 +132,7 @@ export default defineComponent({
     const { locale } = useI18n()
     useScrollReveal('.fade-in', 'visible')
     const isZh = computed(() => locale.value.startsWith('zh'))
-    return { isZh, devices: DEVICES, pillars: PILLARS }
+    return { isZh, pillars: PILLARS }
   }
 })
 </script>
@@ -187,9 +158,6 @@ export default defineComponent({
     transition: none;
   }
 
-  .ev-wire {
-    animation: none !important;
-  }
 }
 
 // ─── night ground ───
@@ -253,76 +221,18 @@ export default defineComponent({
   }
 }
 
-// ─── network scene ───
+// ─── network scene (rendered illustration) ───
 .ev-scene-wrap {
   max-width: 900px;
-  margin: 8px auto 40px;
+  margin: 8px auto 48px;
 }
 
-.ev-scene {
+.ev-scene-img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.ev-wire {
-  stroke: $brand-orange;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-dasharray: 6 10;
-  animation: evFlow 1.6s linear infinite;
-  opacity: 0.9;
-}
-
-@keyframes evFlow {
-  to {
-    stroke-dashoffset: -32;
-  }
-}
-
-.ev-hub-halo {
-  fill: rgba($brand-orange, 0.14);
-}
-
-.ev-hub {
-  fill: #1d3346;
-  stroke: $brand-orange;
-  stroke-width: 2.5;
-}
-
-.ev-hub-label {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: 30px;
-  fill: $warm-bg-light;
-  text-anchor: middle;
-}
-
-.ev-card {
-  fill: #1d3346;
-  stroke: rgba($warm-bg-light, 0.35);
-  stroke-width: 1.5;
-}
-
-.ev-node {
-  color: $gold; // icons pick this up via currentColor
-
-  &:nth-of-type(odd) {
-    color: $orange2;
-  }
-}
-
-.ev-card-title {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: 19px;
-  fill: $warm-bg-light;
-}
-
-.ev-card-sub {
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  fill: rgba($warm-bg-light, 0.55);
+  border: 1px solid rgba($warm-bg-light, 0.28);
+  box-shadow: 0 22px 44px -24px rgba(0, 0, 0, 0.65);
 }
 
 // ─── pillars ───
