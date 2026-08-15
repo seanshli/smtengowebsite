@@ -56,7 +56,8 @@
             <img src="/images/hero-home.jpg" :alt="$t('pageTitle')" loading="eager" />
           </video>
           <figcaption>
-            <span class="ed-cap-initial">e</span>mbrace new
+            <span class="ed-cap-initial">e</span>mbrace
+            <span class="ed-cap-initial">n</span>ew
             <span class="ed-cap-initial">G</span>oals,
             <span class="ed-cap-initial">o</span>vercome
           </figcaption>
@@ -306,7 +307,7 @@ export default defineComponent({
 
     .ed-cap-initial {
       color: $brand-orange;
-      font-weight: 700;
+      font-weight: 900;
     }
   }
 
