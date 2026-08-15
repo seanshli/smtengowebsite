@@ -129,12 +129,23 @@ const jumpToLine = () => {
   window.open('https://lin.ee/THIUSjW')
 }
 
+const escapeHtml = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+
+// This renders through v-html and the user's own typed question is echoed back
+// as a message — so escape first, then apply the markdown-ish formatting to the
+// escaped text. Link targets are restricted to http(s) and site-relative paths
+// so a crafted [x](javascript:...) can't become an executable href.
 const formatMessage = (text: string) => {
   if (!text) return ''
-  return text
+  return escapeHtml(text)
     .replace(/\n/g, '<br/>')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color: #e05a35; font-weight: bold; text-decoration: underline;">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (whole: string, label: string, href: string) =>
+      /^(https?:\/\/|\/)/.test(href)
+        ? `<a href="${href}" target="_blank" rel="noopener noreferrer" style="color: #e05a35; font-weight: bold; text-decoration: underline;">${label}</a>`
+        : whole
+    )
 }
 
 const logQuery = async (keyword: string, matchFound: boolean) => {

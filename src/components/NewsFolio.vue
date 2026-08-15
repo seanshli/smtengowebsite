@@ -413,15 +413,18 @@ export default defineComponent({
 
   @media (max-width: 768px) {
     display: block;
-    flex: 0 0 38%;
+    // auto, not a fixed 38% of the body: the art is landscape, so a fixed
+    // band cropped it the same way the desktop plate did
+    flex: 0 0 auto;
     margin: 0;
     border: 1px solid rgba($grey-blue3, 0.3);
     overflow: hidden;
 
     img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      max-height: 34vh;
+      object-fit: contain;
       display: block;
     }
   }
