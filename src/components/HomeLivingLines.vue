@@ -42,24 +42,30 @@
         class="ll-node"
         :transform="`translate(${d.x}, ${d.y})`"
       >
-        <circle class="ll-node-ring" r="34" />
-        <circle class="ll-node-core" r="27" />
-        <text class="ll-node-label">
-          <tspan
-            v-for="(line, j) in label(d).split('\n')"
-            :key="j"
-            x="0"
-            :y="label(d).includes('\n') ? (j === 0 ? -3 : 15) : 6"
-            :font-size="label(d).includes('\n') ? 13 : 15"
-          >{{ line }}</tspan>
-        </text>
+        <!-- inner group exists so mobile CSS can scale the node around its
+             own centre without clobbering the outer translate() -->
+        <g class="ll-node-inner">
+          <circle class="ll-node-ring" r="34" />
+          <circle class="ll-node-core" r="27" />
+          <text class="ll-node-label">
+            <tspan
+              v-for="(line, j) in label(d).split('\n')"
+              :key="j"
+              x="0"
+              :y="label(d).includes('\n') ? (j === 0 ? -3 : 15) : 6"
+              :font-size="label(d).includes('\n') ? 13 : 15"
+            >{{ line }}</tspan>
+          </text>
+        </g>
       </g>
 
       <!-- hub -->
       <g class="ll-hub" transform="translate(500, 310)">
-        <circle class="ll-hub-halo" r="86" ref="halo" />
-        <circle class="ll-hub-core" r="60" />
-        <text class="ll-hub-label" y="7">enGo</text>
+        <g class="ll-hub-inner">
+          <circle class="ll-hub-halo" r="86" ref="halo" />
+          <circle class="ll-hub-core" r="60" />
+          <text class="ll-hub-label" y="7">enGo</text>
+        </g>
       </g>
     </svg>
   </section>
@@ -289,5 +295,26 @@ export default defineComponent({
   fill: $warm-bg-light;
   text-anchor: middle;
   letter-spacing: 0.04em;
+}
+
+// Mobile legibility: the whole viewBox scales down to ~0.375x on a phone,
+// leaving 15px labels at ~4.5px. Scale node/hub interiors back up around
+// their own centres; the wiring layout itself is untouched.
+@media (max-width: 768px) {
+  .ll-node-inner {
+    transform: scale(1.85);
+  }
+
+  .ll-hub-inner {
+    transform: scale(1.35);
+  }
+
+  .ll-path {
+    stroke-width: 3.5;
+  }
+
+  .ll-dot {
+    r: 9;
+  }
 }
 </style>
