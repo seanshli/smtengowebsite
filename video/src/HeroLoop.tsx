@@ -22,6 +22,13 @@ const STUDY_LAMP = P(940, 300)
 const GROUND_Y = 380.5 + 0.767 * 672
 const DOOR_X = 0.767 * 1052
 
+// room interiors, original-art boxes mapped to final coordinates
+const ROOM = (x: number, y: number, w: number, h: number) =>
+  ({ x: 0.767 * x, y: 380.5 + 0.767 * y, w: 0.767 * w, h: 0.767 * h })
+const LIVING_ROOM = ROOM(320, 420, 370, 235)
+const BEDROOM = ROOM(352, 212, 150, 135)
+const KITCHEN = ROOM(782, 385, 245, 270)
+
 // bedroom window (for the curtain panels), original-art box
 const WIN = { x: 0.767 * 505, y: 380.5 + 0.767 * 228, w: 0.767 * 110, h: 0.767 * 78 }
 
@@ -29,6 +36,23 @@ const WIN = { x: 0.767 * 505, y: 380.5 + 0.767 * 228, w: 0.767 * 110, h: 0.767 *
 // t=1, which is what keeps every cue loop-safe.
 const box = (t: number, a: number, b: number, f: number) =>
   Math.max(0, Math.min(1, Math.min(t - a, b - t) / f))
+
+// A room region that visibly darkens when its light is off (multiply veil)
+const Dim: React.FC<{ x: number; y: number; w: number; h: number; on: number }> = ({ x, y, w, h, on }) => (
+  <div
+    style={{
+      position: 'absolute',
+      left: x,
+      top: y,
+      width: w,
+      height: h,
+      background: 'rgba(21,41,57,0.22)',
+      mixBlendMode: 'multiply',
+      borderRadius: 6,
+      opacity: 1 - on
+    }}
+  />
+)
 
 const Glow: React.FC<{ at: [number, number]; r: number; o: number; warm?: boolean }> = ({ at, r, o, warm }) => (
   <div
@@ -93,20 +117,23 @@ export const HeroLoop: React.FC = () => {
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
 
-        {/* lighting automation */}
-        <Glow at={LIVING_LIGHT} r={120} o={0.85 * livingOn} warm />
-        <Glow at={BEDROOM_LAMP} r={80} o={0.9 * bedroomOn} warm />
-        <Glow at={KITCHEN_PENDANTS} r={95} o={0.75 * kitchenOn} warm />
-        <Glow at={STUDY_LAMP} r={70} o={0.7 * studyOn} />
+        {/* lighting automation: rooms dim when empty, light when occupied */}
+        <Dim x={LIVING_ROOM.x} y={LIVING_ROOM.y} w={LIVING_ROOM.w} h={LIVING_ROOM.h} on={livingOn} />
+        <Dim x={BEDROOM.x} y={BEDROOM.y} w={BEDROOM.w} h={BEDROOM.h} on={bedroomOn} />
+        <Dim x={KITCHEN.x} y={KITCHEN.y} w={KITCHEN.w} h={KITCHEN.h} on={kitchenOn} />
+        <Glow at={LIVING_LIGHT} r={150} o={0.95 * livingOn} warm />
+        <Glow at={BEDROOM_LAMP} r={95} o={livingOn ? 0.95 * bedroomOn : 0.95 * bedroomOn} warm />
+        <Glow at={KITCHEN_PENDANTS} r={110} o={0.85 * kitchenOn} warm />
+        <Glow at={STUDY_LAMP} r={75} o={0.75 * studyOn} />
 
         {/* bedroom curtains drawing closed */}
         <div style={{ position: 'absolute', left: WIN.x, top: WIN.y, width: panelW, height: WIN.h, background: CREAM, borderRight: `2px solid ${NAVY}`, opacity: curtain > 0.02 ? 1 : 0 }} />
         <div style={{ position: 'absolute', left: WIN.x + WIN.w - panelW, top: WIN.y, width: panelW, height: WIN.h, background: CREAM, borderLeft: `2px solid ${NAVY}`, opacity: curtain > 0.02 ? 1 : 0 }} />
 
         {/* the resident, coming home and heading out */}
-        <div style={{ position: 'absolute', left: personX, top: GROUND_Y - 34 + bob * 0.4, opacity: personVisible, transform: walkingOut ? 'scaleX(-1)' : undefined }}>
-          <div style={{ width: 13, height: 13, borderRadius: '50%', background: NAVY, margin: '0 auto 1px' }} />
-          <div style={{ width: 15, height: 22, borderRadius: '7px 7px 3px 3px', background: NAVY }} />
+        <div style={{ position: 'absolute', left: personX, top: GROUND_Y - 52 + bob * 0.5, opacity: personVisible, transform: walkingOut ? 'scaleX(-1)' : undefined }}>
+          <div style={{ width: 19, height: 19, borderRadius: '50%', background: NAVY, margin: '0 auto 2px' }} />
+          <div style={{ width: 22, height: 32, borderRadius: '10px 10px 4px 4px', background: NAVY }} />
         </div>
       </AbsoluteFill>
 
