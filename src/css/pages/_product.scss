@@ -316,7 +316,7 @@ body {
     .tablet_function {
         .tag {
             width: fit-content;
-            border-radius: 25px;
+            border-radius: 0; // squared — editorial plate system
             background-color: #043655;
 
             @media (max-width: 768px) {
@@ -867,7 +867,7 @@ body {
         .tag {
             width: fit-content;
             align-items: center;
-            border-radius: 25px;
+            border-radius: 0; // squared — editorial plate system
             background-color: #043655;
 
             img {

@@ -1791,4 +1791,29 @@ export default defineComponent({
   text-align: center;
   letter-spacing: 0.01em;
 }
+
+// ─── Editorial pass (design/live-redesign) ─────────────────────────────
+// Two levers, applied at the end so they win the cascade:
+// 1. every heading on this page speaks the site's serif voice;
+// 2. rounded plates/pills square off to match the mounted-plate system
+//    used on the homepage and /cases.
+h1,
+h2,
+h3 {
+  font-family: 'Noto Serif TC', serif;
+  letter-spacing: 0.02em;
+}
+
+.ap-model-pill,
+.ap-feature-card,
+.ap-specs-strip,
+.ap-spec-cell,
+.ap-price-card,
+.ap-price-flag,
+.ap-buy-btn,
+.wf-price-card,
+.wf-price-flag,
+.wf-buy-btn-card {
+  border-radius: 0;
+}
 </style>
