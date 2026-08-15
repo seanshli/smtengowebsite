@@ -1,40 +1,35 @@
 <template>
-  <section id="mission" class="mission-section">
-    <!-- Hero area with image -->
-    <div class="mission-hero">
-      <div class="mission-section-image-container">
-        <img
-          class="mission-section-image"
-          src="/images/technology.jpeg"
-          alt="enGo smart home technology"
-        />
-        <div class="image-gradient-overlay"></div>
-      </div>
-      <div class="mission-hero-text">
-        <h2 class="section-title with-vertical-strip-white text-color-white">
-          {{ $t('missionTitle') }}
-        </h2>
-        <p class="mission-subtitle fade-in">
-          {{ $t('missionSubtitle') }}
-        </p>
-      </div>
-    </div>
+  <!-- msn- namespace: the old class names collided with _about.scss's global
+       .mission-section (display:flex row), which crushed this page into three
+       side-by-side columns. The About page keeps those globals untouched. -->
+  <section id="mission" class="msn-page">
+    <!-- Editorial masthead -->
+    <header class="msn-mast">
+      <p class="msn-kicker">enGo 生活誌</p>
+      <h1 class="msn-title">{{ $t('missionTitle') }}</h1>
+      <p class="msn-sub fade-in">{{ $t('missionSubtitle') }}</p>
+    </header>
 
-    <!-- Core Values Cards -->
-    <div class="mission-values-section">
-      <div class="values-intro fade-in">
+    <!-- Mission statement as a pull-quote beside the family plate -->
+    <div class="msn-feature">
+      <blockquote class="msn-quote fade-in">
         <p>{{ $t('fiveValues') }}</p>
-      </div>
-      <div class="values-cards">
-        <div class="value-card fade-in" v-html="$t('fiveValues1')"></div>
-        <div class="value-card fade-in" v-html="$t('fiveValues2')"></div>
-        <div class="value-card fade-in" v-html="$t('fiveValues3')"></div>
-      </div>
+      </blockquote>
+      <figure class="msn-figure fade-in">
+        <img src="/images/mission-family.jpg" :alt="$t('missionTitle')" loading="lazy" />
+      </figure>
     </div>
 
-    <!-- Closing Statement -->
-    <div class="mission-closing">
-      <div class="mission-closing-content fade-in">
+    <!-- Three values as mounted plates -->
+    <div class="msn-values">
+      <div class="msn-card fade-in" v-html="$t('fiveValues1')"></div>
+      <div class="msn-card fade-in" v-html="$t('fiveValues2')"></div>
+      <div class="msn-card fade-in" v-html="$t('fiveValues3')"></div>
+    </div>
+
+    <!-- Closing statement: navy band, serif, orange accents -->
+    <div class="msn-closing">
+      <div class="msn-closing-inner fade-in">
         <p v-html="$t('missionConclusion')"></p>
       </div>
     </div>
@@ -70,6 +65,8 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
+
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
@@ -81,235 +78,184 @@ export default defineComponent({
   transform: translateY(0);
 }
 
-@keyframes floatOrb {
-  0%, 100% {
-    transform: translate(0px, 0px);
-  }
-  33% {
-    transform: translate(30px, -40px);
-  }
-  66% {
-    transform: translate(-20px, 30px);
-  }
-}
-
-.mission-section {
-  width: 100%;
-  height: auto !important;
-  overflow: visible !important;
-}
-
-.mission-hero {
-  position: relative;
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+.msn-page {
+  background: $warm-bg-light;
+  padding: 110px 5vw 0;
 
   @media (max-width: 768px) {
-    min-height: 320px;
-  }
-
-  // Floating decorative orb — top-left
-  &::before {
-    content: '';
-    position: absolute;
-    top: -5%;
-    left: -8%;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(254, 139, 5, 0.15), transparent 65%);
-    animation: floatOrb 9s ease-in-out infinite;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  // Floating decorative orb — bottom-right
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -10%;
-    right: -5%;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(224, 90, 53, 0.12), transparent 65%);
-    animation: floatOrb 12s ease-in-out infinite reverse;
-    pointer-events: none;
-    z-index: 2;
+    padding-top: 96px;
   }
 }
 
-.mission-section-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
-  // Additional floating orb accent
-  &::before {
-    content: '';
-    position: absolute;
-    top: 30%;
-    right: 15%;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(59, 190, 255, 0.08), transparent 70%);
-    animation: floatOrb 11s ease-in-out infinite;
-    pointer-events: none;
-    z-index: 1;
-  }
+// ─── masthead ───
+.msn-mast {
+  max-width: 1100px;
+  margin: 0 auto 56px;
+  border-top: 3px solid $grey-blue3;
+  padding-top: 22px;
 }
 
-.mission-section-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.msn-kicker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: $brand-orange;
+  margin-bottom: 6px;
 }
 
-.image-gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(34, 66, 116, 0.5) 0%, rgba(224, 90, 53, 0.35) 50%, rgba(254, 139, 5, 0.2) 100%);
+.msn-title {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  line-height: 1.1;
+  color: $grey-blue3;
+  margin-bottom: 14px;
 }
 
-.mission-hero-text {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 80px 40px;
-
-  @media (max-width: 768px) {
-    padding: 50px 20px;
-  }
-}
-
-.mission-subtitle {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.25rem;
+.msn-sub {
+  font-size: clamp(1.02rem, 1.8vw, 1.25rem);
   line-height: 2;
-  margin-top: 24px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-
-  @media (max-width: 768px) {
-    font-size: 1.05rem;
-  }
+  color: #454545;
+  max-width: 36em;
 }
 
-.mission-values-section {
-  max-width: 100%;
-  padding: 70px 40px;
-  background: #fff;
-  position: relative;
-  z-index: 1;
-
-  @media (max-width: 768px) {
-    padding: 40px 20px;
-  }
-}
-
-.values-intro {
-  text-align: center;
-  margin-bottom: 48px;
-
-  p {
-    font-size: 1.2rem;
-    line-height: 1.9;
-    color: #222;
-    font-weight: 500;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-}
-
-.values-cards {
+// ─── pull-quote + family plate ───
+.msn-feature {
+  max-width: 1100px;
+  margin: 0 auto 72px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 }
 
-.value-card {
-  background: white;
-  border-radius: 16px;
-  padding: 32px 28px;
-  box-shadow: 0 4px 24px rgba(224, 90, 53, 0.08);
-  border: 1px solid #f0e8e4;
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: #444;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.msn-quote {
+  margin: 0;
+  border-left: 3px solid $brand-orange;
+  padding-left: clamp(20px, 3vw, 36px);
+
+  p {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    font-size: clamp(1.3rem, 2.8vw, 2rem);
+    line-height: 1.9;
+    color: $grey-blue2;
+  }
+}
+
+// mounted plate, same device as the homepage hero and /cases cards
+.msn-figure {
+  position: relative;
+  margin: 0;
+
+  img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 1px solid rgba($grey-blue3, 0.35);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 14px -14px -14px 14px;
+    border: 2px solid $brand-orange;
+    z-index: 0;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 440px;
+
+    img {
+      aspect-ratio: 16 / 10;
+    }
+  }
+}
+
+// ─── value plates ───
+.msn-values {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-bottom: 56px;
+  }
+}
+
+.msn-card {
+  position: relative;
+  background: $warm-bg-light;
+  border: 1px solid rgba($grey-blue3, 0.32);
+  padding: 30px 28px;
+  font-size: 1rem;
+  line-height: 1.95;
+  color: #4c4c4c;
+  transition: transform 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 8px -8px -8px 8px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    z-index: -1;
+  }
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(224, 90, 53, 0.14);
+    transform: translate(-3px, -3px);
+
+    &::before {
+      border-color: $brand-orange;
+    }
   }
 
-  :deep(font[color="e05a35"]) {
-    color: #e05a35;
-    font-weight: 700;
-    font-size: 1.15rem;
+  // the locale strings mark card titles with <font color="e05a35">
+  :deep(font[color='e05a35']) {
     display: block;
-    margin-bottom: 8px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 24px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: $brand-orange;
+    margin-bottom: 10px;
   }
 }
 
-.mission-closing {
-  background: linear-gradient(135deg, #fff8f5, #fef3ee);
-  padding: 60px 40px;
+// ─── closing band ───
+.msn-closing {
+  background: $grey-blue3;
+  margin: 0 -5vw;
+  padding: 84px 5vw;
   text-align: center;
-  position: relative;
-  z-index: 1;
-
-  @media (max-width: 768px) {
-    padding: 40px 20px;
-  }
 }
 
-.mission-closing-content {
-  max-width: 700px;
+.msn-closing-inner {
+  max-width: 760px;
   margin: 0 auto;
 
   p {
-    font-size: 1.2rem;
-    line-height: 2;
-    color: #333;
-    font-weight: 500;
-  }
-
-  :deep(font[color="e05a35"]) {
-    color: #e05a35;
+    font-family: 'Noto Serif TC', serif;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+    line-height: 2.1;
+    color: $warm-bg-light;
   }
 
-  @media (max-width: 768px) {
-    p {
-      font-size: 1.05rem;
-    }
-
-    :deep(font[color="e05a35"]) {
-      font-size: 1.1rem;
-    }
+  :deep(font[color='e05a35']) {
+    color: $orange2;
+    font-weight: 900;
   }
 }
 </style>
