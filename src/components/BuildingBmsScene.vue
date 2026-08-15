@@ -19,23 +19,18 @@
       <!-- ground -->
       <line class="bms-ground" x1="60" y1="640" x2="980" y2="640" />
 
-      <!-- building shell -->
-      <path ref="shell" class="bms-shell" d="M 120 640 V 130 L 265 70 L 410 130 V 640" />
-
-      <!-- floor slabs -->
-      <line v-for="(y, i) in floors" :key="'f'+i" ref="slabs" class="bms-slab"
-        :x1="130" :y1="y + 55" :x2="400" :y2="y + 55" />
-
-      <!-- units: every apartment is a small enGo hub -->
-      <g v-for="(u, i) in units" :key="'u'+i" ref="unitEls" class="bms-unit"
-        :transform="`translate(${u.x}, ${u.y})`">
-        <rect class="bms-unit-halo" x="-24" y="-24" width="48" height="48" rx="4" transform="rotate(45)" />
-        <rect class="bms-unit-core" x="-13" y="-13" width="26" height="26" rx="3" transform="rotate(45)" />
+      <!-- the building: a lived-in cutaway (Gemini pro render). Units glow,
+           families cook, the lobby runs lockers/mail/energy — the hub wires
+           it all. Replaces the earlier line-art building. -->
+      <g ref="buildingG">
+        <image href="/images/home/bms-building.jpg" x="80" y="45" width="400" height="580"
+          preserveAspectRatio="xMidYMid slice" />
+        <rect x="80" y="45" width="400" height="580" fill="none" stroke="rgba(21,41,57,0.4)" stroke-width="2" />
       </g>
 
-      <!-- highlighted unit -> HMS card leader -->
-      <circle ref="focusRing" class="bms-focus" cx="350" cy="260" r="30" />
-      <path ref="leader" class="bms-leader" d="M 378 250 C 420 220, 430 200, 466 185" />
+      <!-- highlighted unit -> HMS card leader (the sofa-family unit) -->
+      <circle ref="focusRing" class="bms-focus" cx="388" cy="200" r="34" />
+      <path ref="leader" class="bms-leader" d="M 414 186 C 438 178, 448 172, 466 166" />
 
       <!-- HMS card: what runs inside every unit -->
       <g ref="hmsCard" class="bms-card-g" transform="translate(470, 44)">
@@ -64,7 +59,7 @@
       </g>
 
       <!-- building base feeds the facilities -->
-      <path ref="baseLink" class="bms-wire" d="M 410 520 C 435 520, 440 522, 466 524" />
+      <path ref="baseLink" class="bms-wire" d="M 452 590 C 470 580, 466 550, 468 532" />
 
       <!-- both cards converge on the dashboard; HMS wire is bidirectional -->
       <path ref="hmsWire" class="bms-wire" d="M 722 190 C 762 190, 768 255, 800 300" />
@@ -99,10 +94,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
-
-// Building cross-section: four floors, three units each.
-const FLOOR_YS = [150, 260, 370, 480]
-const UNIT_XS = [180, 265, 350]
 
 // The real enGo feature sets.
 // tiny 18px line glyphs, drawn at (0,-6) center, stroke via CSS
@@ -139,9 +130,7 @@ export default defineComponent({
     const isZh = computed(() => locale.value.startsWith('zh'))
 
     const root = ref<HTMLElement | null>(null)
-    const shell = ref<SVGPathElement | null>(null)
-    const slabs = ref<SVGLineElement[]>([])
-    const unitEls = ref<SVGGElement[]>([])
+    const buildingG = ref<SVGGElement | null>(null)
     const focusRing = ref<SVGCircleElement | null>(null)
     const leader = ref<SVGPathElement | null>(null)
     const hmsCard = ref<SVGGElement | null>(null)
@@ -159,8 +148,6 @@ export default defineComponent({
     const statusEls = ref<SVGCircleElement[]>([])
     const spark = ref<SVGPathElement | null>(null)
 
-    const floors = FLOOR_YS
-    const units = FLOOR_YS.flatMap((y) => UNIT_XS.map((x) => ({ x, y })))
     const bars = [60, 96, 76, 112, 84]
 
     let ctx: gsap.Context | null = null
@@ -175,17 +162,16 @@ export default defineComponent({
         const dots = [dotDown.value!, dotUp.value!, dotBms.value!]
 
         if (reduced) {
-          gsap.set([...unitEls.value, ...cards, ...rows, focusRing.value], { opacity: 1 })
+          gsap.set([buildingG.value, ...cards, ...rows, focusRing.value], { opacity: 1 })
           gsap.set(dots, { opacity: 0 })
           return
         }
 
-        ;[shell.value!, ...wires, spark.value!].forEach((p) => {
+        ;[...wires, spark.value!].forEach((p) => {
           const len = p.getTotalLength()
           gsap.set(p, { strokeDasharray: len, strokeDashoffset: len })
         })
-        gsap.set(slabs.value, { scaleX: 0, transformOrigin: 'left center' })
-        gsap.set(unitEls.value, { opacity: 0, scale: 0.4, transformOrigin: '50% 50%' })
+        gsap.set(buildingG.value, { opacity: 0, y: 24 })
         gsap.set(focusRing.value, { opacity: 0, scale: 0.5, transformOrigin: '50% 50%' })
         gsap.set(cards, { opacity: 0, scale: 0.94, transformOrigin: '50% 50%' })
         gsap.set(rows, { opacity: 0, x: -10 })
@@ -201,14 +187,7 @@ export default defineComponent({
             scrub: 0.6
           }
         })
-        tl.to(shell.value, { strokeDashoffset: 0, ease: 'none', duration: 0.7 })
-          .to(slabs.value, { scaleX: 1, ease: 'power1.out', stagger: 0.06, duration: 0.25 }, '<0.25')
-          .to(unitEls.value, {
-            opacity: 1, scale: 1,
-            ease: 'back.out(2.2)',
-            stagger: { each: 0.04, from: 'end' },
-            duration: 0.35
-          }, '<0.15')
+        tl.to(buildingG.value, { opacity: 1, y: 0, ease: 'power2.out', duration: 0.6 })
           // one unit steps forward and unfolds its HMS
           .to(focusRing.value, { opacity: 1, scale: 1, ease: 'back.out(2)', duration: 0.2 })
           .to(leader.value, { strokeDashoffset: 0, ease: 'none', duration: 0.15 })
@@ -226,10 +205,6 @@ export default defineComponent({
 
         // ── Continuous life, paused off-screen ──
         const life = gsap.timeline({ repeat: -1, paused: true })
-        life.to(unitEls.value.map(g => g.querySelector('.bms-unit-halo')), {
-          opacity: 0.55, duration: 1.1, ease: 'sine.inOut',
-          stagger: { each: 0.1, yoyo: true, repeat: 1 }
-        }, 0)
         // HMS <-> dashboard is a conversation: one dot each way
         life.to(dotDown.value, {
           motionPath: { path: hmsWire.value!, align: hmsWire.value!, alignOrigin: [0.5, 0.5] },
@@ -271,10 +246,10 @@ export default defineComponent({
     onUnmounted(() => ctx?.revert())
 
     return {
-      isZh, root, shell, slabs, unitEls, focusRing, leader,
+      isZh, root, buildingG, focusRing, leader,
       hmsCard, hmsRowEls, bmsCard, bmsRowEls, baseLink, hmsWire, bmsWire,
       dotDown, dotUp, dotBms, dash, barEls, statusEls, spark,
-      floors, units, bars, hmsRows: HMS_ROWS, bmsRows: BMS_ROWS
+      bars, hmsRows: HMS_ROWS, bmsRows: BMS_ROWS
     }
   }
 })
@@ -334,26 +309,6 @@ export default defineComponent({
 .bms-ground {
   stroke: rgba($grey-blue3, 0.4);
   stroke-width: 2;
-}
-
-.bms-shell {
-  stroke: $grey-blue3;
-  stroke-width: 3;
-  stroke-linejoin: round;
-}
-
-.bms-slab {
-  stroke: rgba($grey-blue3, 0.3);
-  stroke-width: 1.5;
-}
-
-.bms-unit-halo {
-  fill: rgba($brand-orange, 0.16);
-  opacity: 0.2;
-}
-
-.bms-unit-core {
-  fill: $grey-blue3;
 }
 
 .bms-focus {
@@ -446,7 +401,6 @@ export default defineComponent({
 // mobile: thicken strokes, grow card text (SVG text scales with viewBox,
 // so bump user units — CSS wins over the attribute values)
 @media (max-width: 768px) {
-  .bms-shell { stroke-width: 4; }
   .bms-leader, .bms-wire { stroke-width: 3.5; }
   .bms-card-title { font-size: 26px; }
   .bms-row-text { font-size: 22px; }

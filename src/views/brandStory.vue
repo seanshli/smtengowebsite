@@ -16,7 +16,7 @@
       <div class="core-value-section-bg-container">
         <img
           class="core-value-section-bg"
-          src="/images/kitchen-interior.jpeg"
+          src="/images/brand-morning.jpg"
           alt="Modern smart home interior"
         />
       </div>
