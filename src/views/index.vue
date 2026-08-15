@@ -73,9 +73,15 @@
     <section id="news" class="ed-news">
       <header class="ed-news-head">
         <p class="ed-news-kicker">enGo 生活誌</p>
-        <h3 class="ed-news-heading">Our Story, Our Journey</h3>
+        <h3 class="ed-news-heading">
+          <template v-if="locale === 'zh'">我們的故事，我們的旅程</template>
+          <template v-else-if="locale === 'zhCN'">我们的故事，我们的旅程</template>
+          <template v-else>
+            our <span class="ed-cap-accent">S</span>tory, our <span class="ed-cap-accent">J</span>ourney
+          </template>
+        </h3>
         <p class="ed-news-sub">
-          {{ locale.startsWith('zh') ? '我們的故事，我們的旅程 — 最新消息' : $t('newsTitle') }}
+          {{ locale.startsWith('zh') ? 'our Story, our Journey — 最新消息' : $t('newsTitle') }}
         </p>
       </header>
 
@@ -339,6 +345,11 @@ export default defineComponent({
   font-weight: 900;
   font-size: clamp(1.8rem, 4.5vw, 3rem);
   color: $grey-blue3;
+
+  // capital accents echo the brand's "embrace new Goals, overcome" treatment
+  .ed-cap-accent {
+    color: $brand-orange;
+  }
 }
 
 .ed-news-sub {
