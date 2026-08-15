@@ -24,6 +24,11 @@
         </div>
         <figcaption v-if="current" class="folio-plate-cap">
           <span class="folio-plate-brand">enGo 生活誌</span>
+          <!-- Every news plate is our own illustration, not a photo of the
+               event or of a partner's product. Say so rather than imply it. -->
+          <span v-if="current.image" class="folio-plate-note">
+            {{ locale.startsWith('zh') ? '示意圖' : 'Illustration' }}
+          </span>
           <time>{{ formatDate(current.date) }}</time>
         </figcaption>
       </div>
@@ -458,6 +463,14 @@ export default defineComponent({
 .folio-plate-brand {
   color: $brand-orange;
   letter-spacing: 0.16em;
+}
+
+.folio-plate-note {
+  margin-right: auto;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: rgba($grey-blue3, 0.45);
 }
 
 // letterpress: navy ink at reading size. #4c4c4c on cream is what read as faint.
