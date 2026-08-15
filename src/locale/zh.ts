@@ -29,6 +29,10 @@ export const zhLocale = {
       title: '我們的使命 | enGo智管家',
       description: 'enGo 的使命：運用 AIoT 技術，讓智慧居家成為人人都能負擔的生活必需品。'
     },
+    team: {
+      title: '經營團隊 | enGo智管家',
+      description: '認識 enGo 智管家的創始團隊與董事顧問：跨越 AI、營運、設計與技術戰略的四位掌舵者。'
+    },
     vision: {
       title: '未來願景 | enGo智管家',
       description: 'enGo 的願景——整合雲端倉儲、聯網設備與生活採購，打造定義未來的一站式智慧生活平台。'
@@ -174,6 +178,8 @@ export const zhLocale = {
   coreValue3: '創造未來 - 給下一代擁有有更的生品質',
   coreValueConclusion: '好宅不再是夢想、願平凡的我們及曾經被忽略的弱勢群體，都能透過科技能讓生活遇見更好的未來。enGo的誕生，把我們的家都變大了，生活品質都變好了⋯⋯',
   missionTitle: '我們的使命',
+  teamTitle: '經營團隊',
+  teamSubtitle: '創始團隊與董事顧問——跨越 AI、營運、設計與技術戰略的掌舵者。',
   missionSubtitle: '讓每個家庭都能享受 AI 帶來的舒適與安心——不分年齡、不論預算，科技應該為人服務，而非成為門檻。',
   threeCoreValue1: '技術領導：整合 AIoT 應用場景並擴展其應用範圍，成為市場的絕對領導者。',
   threeCoreValue2: '服務領導：以服務和用戶需求為核心，提供頂級的安心、健康、智能生活服務。',

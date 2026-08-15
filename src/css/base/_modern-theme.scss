@@ -432,6 +432,15 @@ body {
 }
 
 // ─── Scroll reveal animations ───
+// ponytail: no-JS / reduced-motion safety — content must never stay invisible
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -456,12 +465,8 @@ img {
   height: auto;
 }
 
-// Lazy loading hint
-img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-
-  &.loaded, &[complete] {
-    opacity: 1;
-  }
-}
+// (removed) img[loading="lazy"] { opacity: 0 } reveal rule: nothing ever
+// added the .loaded class, and [complete] is a DOM property rather than an
+// attribute, so the selector could never match — every lazy image on the
+// site was rendered permanently invisible. Browser-default rendering is
+// correct here.

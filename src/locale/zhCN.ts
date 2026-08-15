@@ -29,6 +29,10 @@ export const zhCNLocale = {
       title: '我们的使命 | enGo智管家',
       description: 'enGo 的使命：运用 AIoT 技术，让智慧居家成为人人都能负担的生活必需品。'
     },
+    team: {
+      title: '经营团队 | enGo智管家',
+      description: '认识 enGo 智管家的创始团队与董事顾问：跨越 AI、运营、设计与技术战略的四位掌舵者。'
+    },
     vision: {
       title: '未来愿景 | enGo智管家',
       description: 'enGo 的愿景——整合云端仓储、联网设备与生活采购，打造定义未来的一站式智慧生活平台。'
@@ -174,6 +178,8 @@ export const zhCNLocale = {
   coreValue3: '创造未来 - 给下一代拥有有更的生品质',
   coreValueConclusion: '好宅不再是梦想、愿平凡的我们及曾经被忽略的弱势群体，都能透过科技能让生活遇见更好的未来。enGo的诞生，把我们的家都变大了，生活品质都变好了⋯⋯',
   missionTitle: '我们的使命',
+  teamTitle: '经营团队',
+  teamSubtitle: '创始团队与董事顾问——跨越 AI、运营、设计与技术战略的掌舵者。',
   missionSubtitle: '让每个家庭都能享受 AI 带来的舒适与安心——不分年龄、不论预算，科技应该为人服务，而非成为门槛。',
   threeCoreValue1: '技术领导：整合 AIoT 应用场景并扩展其应用范围，成为市场的绝对领导者。',
   threeCoreValue2: '服务领导：以服务和用户需求为核心，提供顶级的安心、健康、智能生活服务。',

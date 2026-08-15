@@ -44,6 +44,15 @@ const router = createRouter({
       }
     },
     {
+      path: '/team',
+      name: 'team',
+      component: () => import('@/views/team.vue'),
+      meta: {
+        titleKey: 'seo.team.title',
+        descKey: 'seo.team.description'
+      }
+    },
+    {
       path: '/vision',
       name: 'vision',
       component: () => import('@/views/vision.vue'),

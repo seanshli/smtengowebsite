@@ -40,6 +40,10 @@ export const frLocale = {
       title: 'Notre mission | enGo Smart Home',
       description: 'La mission d\'enGo : utiliser la technologie AIoT pour faire de la maison connectée un essentiel abordable pour tous.'
     },
+    team: {
+      title: 'Équipe dirigeante | enGo Smart Home',
+      description: 'Rencontrez l\'équipe fondatrice et le conseiller du conseil d\'enGo — IA, opérations, design et stratégie technologique.'
+    },
     vision: {
       title: 'Notre vision | enGo Smart Home',
       description: 'La vision d\'enGo : une plateforme tout-en-un réunissant stockage cloud, objets connectés et approvisionnement pour définir la maison de demain.'
@@ -131,6 +135,8 @@ export const frLocale = {
   coreValueConclusion:
     "Face à l'adversité économique, enGo offre une qualité de vie. La technologie ne doit pas être réservée qu'à une élite, elle doit être partagée pour le bien de tous. <br />enGo valorise une cuisine accessible et pratique en stimulant nos souvenirs conviviaux.",
   missionTitle: 'Notre mission',
+  teamTitle: 'Équipe dirigeante',
+  teamSubtitle: 'L\'équipe fondatrice et le conseiller du conseil — IA, opérations, design et stratégie technologique.',
   missionSubtitle:
     "Offrir à chaque famille le confort et la sérénité d'un foyer intelligent — quel que soit l'âge ou le budget. La technologie doit servir les gens, pas créer des obstacles.",
   fiveValues: "Nous croyons qu'une bonne technologie n'a pas besoin de mode d'emploi. enGo transforme l'IA en le membre le plus attentionné de votre foyer — il connaît vos habitudes, veille sur votre santé et protège votre famille.",
