@@ -33,6 +33,10 @@ export const zhCNLocale = {
       title: '经营团队 | enGo智管家',
       description: '认识 enGo 智管家的创始团队与董事顾问：跨越 AI、运营、设计与技术战略的四位掌舵者。'
     },
+    enviro: {
+      title: '智慧环控 | enGo智管家',
+      description: '整合阳光、空气、水与智慧厨房的全方位环控方案——动态控温、空气净化监测、智慧水务与厨房安全，一套系统全部联动。'
+    },
     vision: {
       title: '未来愿景 | enGo智管家',
       description: 'enGo 的愿景——整合云端仓储、联网设备与生活采购，打造定义未来的一站式智慧生活平台。'
@@ -179,6 +183,7 @@ export const zhCNLocale = {
   coreValueConclusion: '好宅不再是梦想、愿平凡的我们及曾经被忽略的弱势群体，都能透过科技能让生活遇见更好的未来。enGo的诞生，把我们的家都变大了，生活品质都变好了⋯⋯',
   missionTitle: '我们的使命',
   teamTitle: '经营团队',
+  enviroTitle: '智慧环控',
   teamSubtitle: '创始团队与董事顾问——跨越 AI、运营、设计与技术战略的掌舵者。',
   missionSubtitle: '让每个家庭都能享受 AI 带来的舒适与安心——不分年龄、不论预算，科技应该为人服务，而非成为门槛。',
   threeCoreValue1: '技术领导：整合 AIoT 应用场景并扩展其应用范围，成为市场的绝对领导者。',

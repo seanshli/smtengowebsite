@@ -32,6 +32,10 @@ export const esLocale = {
       title: 'Equipo directivo | enGo Smart Home',
       description: 'Conoce al equipo fundador y al asesor del consejo de enGo: IA, operaciones, diseño y estrategia tecnológica.'
     },
+    enviro: {
+      title: 'Control ambiental | enGo Smart Home',
+      description: 'Control ambiental de enGo: luz y temperatura dinámicas, purificación del aire, agua inteligente y seguridad en la cocina — un solo sistema conectado.'
+    },
     vision: {
       title: 'Nuestra visión | enGo Smart Home',
       description: 'La visión de enGo: una plataforma integral que une almacenamiento en la nube, dispositivos conectados y compras para definir el hogar del futuro.'
@@ -175,6 +179,7 @@ export const esLocale = {
     'Empodera a los agobiados por la economía para elevar su calidad de vida. Si bien la tecnología puede beneficiar a unos pocos, nuestro objetivo es hacerla accesible y realista para todos. Todos anhelamos un hogar cómodo y estable. Con enGo, priorizamos un hogar de calidad sobre el lujo. Nuestro objetivo es traer de vuelta recuerdos queridos y mejorar el tiempo en familia, asegurando una vida mejor para todos.',
   missionTitle: 'Nuestra Misión',
   teamTitle: 'Equipo directivo',
+  enviroTitle: 'Control ambiental',
   teamSubtitle: 'El equipo fundador y el asesor del consejo: IA, operaciones, diseño y estrategia tecnológica.',
   missionSubtitle:
     'Llevar la comodidad y seguridad de la vida inteligente a cada familia — sin importar la edad ni el presupuesto. La tecnología debe servir a las personas, no crear barreras.',

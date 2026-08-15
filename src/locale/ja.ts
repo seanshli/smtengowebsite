@@ -32,6 +32,10 @@ export const jaLocale = {
           title: '経営チーム | enGo スマートホーム',
           description: 'enGoの創業チームと顧問をご紹介。AI・オペレーション・デザイン・技術戦略のリーダーたち。'
         },
+        enviro: {
+          title: '環境コントロール | enGo スマートホーム',
+          description: 'enGoの環境コントロール：採光と温度の動的制御、空気清浄モニタリング、スマート水管理、キッチン安全をひとつのシステムで。'
+        },
         vision: {
           title: '私たちのビジョン | enGo スマートホーム',
           description: 'enGoのビジョン。クラウド在庫・接続機器・生活購買を統合し、未来の住まいを定義するワンストップ基盤へ。'
@@ -177,6 +181,7 @@ export const jaLocale = {
     coreValueConclusion: '理想の住まいはもはや夢ではありません。テクノロジーの力で、より良い未来を。',
     missionTitle: '私たちの使命',
     teamTitle: '経営チーム',
+    enviroTitle: '環境コントロール',
     teamSubtitle: '創業チームと顧問——AI・オペレーション・デザイン・技術戦略のリーダーたち。',
     missionSubtitle: 'すべての家庭にAIがもたらす快適と安心を届けること——年齢も予算も関係なく、テクノロジーは人に寄り添うべきです。',
     threeCoreValue1: '技術リーダーシップ：AIoTの活用シーンを統合し、市場をリードします。',

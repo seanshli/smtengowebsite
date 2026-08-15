@@ -53,6 +53,15 @@ const router = createRouter({
       }
     },
     {
+      path: '/enviro',
+      name: 'enviro',
+      component: () => import('@/views/enviro.vue'),
+      meta: {
+        titleKey: 'seo.enviro.title',
+        descKey: 'seo.enviro.description'
+      }
+    },
+    {
       path: '/vision',
       name: 'vision',
       component: () => import('@/views/vision.vue'),
