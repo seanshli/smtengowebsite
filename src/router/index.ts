@@ -229,6 +229,21 @@ router.onError(() => {
   finishViewTransition = undefined
 })
 
+/**
+ * Reads the `exp` claim out of a `payload.signature` session token. Signature
+ * verification is the server's job — a token that fails this check is treated
+ * as expired, which is the safe direction to be wrong in.
+ */
+const isExpired = (token: string): boolean => {
+  try {
+    const payload = token.split('.')[0]
+    const { exp } = JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/')))
+    return typeof exp !== 'number' || exp <= Math.floor(Date.now() / 1000)
+  } catch {
+    return true
+  }
+}
+
 router.beforeEach((to, from, next) => {
   updateMeta(to)
   trackPageView(to.fullPath)
@@ -236,6 +251,15 @@ router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth) {
     const token = localStorage.getItem('admin_token')
     const user = JSON.parse(localStorage.getItem('admin_user') || '{}')
+
+    // Sessions now expire. Drop a stale one here so the user lands on the login
+    // form instead of a dashboard that 401s on every request. The server checks
+    // the signature regardless — this only keeps the UI honest.
+    if (token && isExpired(token)) {
+      localStorage.removeItem('admin_token')
+      localStorage.removeItem('admin_user')
+      return next({ name: 'login' })
+    }
 
     if (!token) {
       next({ name: 'login' })
