@@ -32,8 +32,16 @@
 
     <!-- Four pillars -->
     <div class="ev-pillars">
-      <article v-for="(p, i) in pillars" :key="p.id" class="ev-pillar fade-in">
-        <span class="ev-pillar-num">{{ String(i + 1).padStart(2, '0') }}</span>
+      <article
+        v-for="(p, i) in pillars"
+        :key="p.id"
+        class="ev-pillar fade-in"
+        :style="{ '--pc': p.color }"
+      >
+        <div class="ev-pillar-head">
+          <span class="ev-pillar-num">{{ String(i + 1).padStart(2, '0') }}</span>
+          <svg class="ev-pillar-icon" viewBox="-24 -24 48 48" aria-hidden="true" v-html="p.icon"></svg>
+        </div>
         <h2 class="ev-pillar-title">{{ isZh ? p.title.zh : p.title.en }}</h2>
         <p class="ev-pillar-copy">{{ isZh ? p.copy.zh : p.copy.en }}</p>
         <ul class="ev-pillar-points">
@@ -70,14 +78,26 @@ interface Bi {
 
 interface Pillar {
   id: string
+  color: string // pillar accent — matches its card color in the illustration
+  icon: string // inline SVG fragment, stroke via currentColor
   title: Bi
   copy: Bi
   points: { zh: string[]; en: string[] }
 }
 
+// Simple line icons, stroke-based, colored via CSS currentColor.
+const ICONS: Record<string, string> = {
+  sun: '<circle r="10" fill="none" stroke="currentColor" stroke-width="2.5"/><g stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="0" y1="-19" x2="0" y2="-14"/><line x1="0" y1="14" x2="0" y2="19"/><line x1="-19" y1="0" x2="-14" y2="0"/><line x1="14" y1="0" x2="19" y2="0"/><line x1="-13" y1="-13" x2="-10" y2="-10"/><line x1="10" y1="10" x2="13" y2="13"/><line x1="-13" y1="13" x2="-10" y2="10"/><line x1="10" y1="-10" x2="13" y2="-13"/></g>',
+  air: '<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M -18 -8 H 8 a 7 7 0 1 0 -7 -7"/><path d="M -18 2 H 14 a 7 7 0 1 1 -7 7"/><path d="M -18 12 H 2"/></g>',
+  water: '<path d="M 0 -18 C 8 -6, 14 2, 14 9 a 14 14 0 1 1 -28 0 C -14 2, -8 -6, 0 -18 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>',
+  kitchen: '<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="-16" y="-2" width="32" height="16" rx="3"/><line x1="-16" y1="-2" x2="16" y2="-2"/><path d="M -8 -8 C -8 -12, -4 -12, -4 -16"/><path d="M 4 -8 C 4 -12, 8 -12, 8 -16"/></g>'
+}
+
 const PILLARS: Pillar[] = [
   {
     id: 'sun',
+    color: '#FE8B05',
+    icon: ICONS.sun,
     title: { zh: '智慧陽光控溫', en: 'Smart daylight & temperature' },
     copy: {
       zh: '動態採光與溫度調節，依日照、時段與人的活動自動連動窗簾、空調與照明，營造舒適節能的空間。',
@@ -90,6 +110,8 @@ const PILLARS: Pillar[] = [
   },
   {
     id: 'air',
+    color: '#34c98e',
+    icon: ICONS.air,
     title: { zh: '空氣淨化監測', en: 'Air purification & monitoring' },
     copy: {
       zh: '全天候 PM2.5、VOC 與氣體監測，串連清風除濕與新風設備，保障室內每一口健康空氣。',
@@ -102,6 +124,8 @@ const PILLARS: Pillar[] = [
   },
   {
     id: 'water',
+    color: '#3bbeff',
+    icon: ICONS.water,
     title: { zh: '智慧水務管理', en: 'Smart water management' },
     copy: {
       zh: '水質過濾與流量優化，濾芯壽命、漏水偵測與用水數據一目瞭然，智慧供水更安全高效。',
@@ -114,6 +138,8 @@ const PILLARS: Pillar[] = [
   },
   {
     id: 'kitchen',
+    color: '#ff5a5a',
+    icon: ICONS.kitchen,
     title: { zh: '智慧廚房安全', en: 'Smart kitchen safety' },
     copy: {
       zh: '遠端監控廚房設備，火災預警、瓦斯偵測與能源優化——安心，從家的心臟開始。',
@@ -271,9 +297,15 @@ export default defineComponent({
     transform: translate(-3px, -3px);
 
     &::before {
-      border-color: $brand-orange;
+      border-color: var(--pc, $brand-orange);
     }
   }
+}
+
+.ev-pillar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .ev-pillar-num {
@@ -281,14 +313,20 @@ export default defineComponent({
   font-weight: 900;
   font-size: 1.7rem;
   color: transparent;
-  -webkit-text-stroke: 1.5px $orange2;
+  -webkit-text-stroke: 1.5px var(--pc, $orange2);
+}
+
+.ev-pillar-icon {
+  width: 44px;
+  height: 44px;
+  color: var(--pc, $orange2);
 }
 
 .ev-pillar-title {
   font-family: 'Noto Serif TC', serif;
   font-weight: 900;
   font-size: clamp(1.35rem, 2.6vw, 1.75rem);
-  color: $warm-bg-light;
+  color: var(--pc, $warm-bg-light);
   margin: 10px 0 12px;
 }
 
@@ -318,7 +356,7 @@ export default defineComponent({
       top: 1em;
       width: 8px;
       height: 2px;
-      background: $orange2;
+      background: var(--pc, $orange2);
     }
   }
 }
