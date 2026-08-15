@@ -144,7 +144,10 @@ export default defineComponent({
     // floats above everything at 300.
     const settle = (el: HTMLElement, i: number, flipped: boolean) => {
       el.style.zIndex = String(flipped ? 10 + i : 100 - i)
-      if (flipped && isMobile()) el.style.visibility = 'hidden'
+      // A page that has finished turning comes to rest face-down over the left
+      // leaf and hid the plate — the photo appeared for the length of the flip
+      // and then vanished. The left leaf IS the plate, so read pages retire.
+      if (flipped) el.style.visibility = 'hidden'
     }
 
     onMounted(() => {
@@ -290,6 +293,7 @@ export default defineComponent({
   // padding mirrors .folio-face so both leaves share one margin.
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: clamp(18px, 3vw, 34px);
 
   .folio-watermark {
@@ -424,9 +428,12 @@ export default defineComponent({
 }
 
 // ─── left leaf: the plate ───
+// The plate hugs the photo instead of filling the leaf: news art is landscape
+// (1200x655) and the leaf is portrait, so `flex: 1` + cover was cropping most
+// of every image away.
 .folio-plate {
   position: relative;
-  flex: 1;
+  flex: 0 1 auto;
   min-height: 0;
   margin: 0;
   overflow: hidden;
@@ -435,8 +442,9 @@ export default defineComponent({
 
   img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
     display: block;
     filter: saturate(0.94) contrast(1.05);
   }
