@@ -68,87 +68,43 @@
     <HomeLivingLines />
 
     <!-- ────────────────────────────────────────────────────────────────
-         NEWS — numbered editorial index
+         NEWS — 翻閱生活誌: a flippable broadsheet folio
     ───────────────────────────────────────────────────────────────── -->
     <section id="news" class="ed-news">
       <header class="ed-news-head">
-        <h3 class="ed-news-heading">{{ $t('newsTitle') }}</h3>
+        <p class="ed-news-kicker">enGo 生活誌</p>
+        <h3 class="ed-news-heading">Our Story, Our Journey</h3>
+        <p class="ed-news-sub">
+          {{ locale.startsWith('zh') ? '我們的故事，我們的旅程 — 最新消息' : $t('newsTitle') }}
+        </p>
       </header>
 
-      <article
-        v-for="(item, idx) in newsItems"
-        :key="item.id"
-        class="ed-news-row fade-in"
-      >
-        <span class="ed-news-index" aria-hidden="true">{{ String(idx + 1).padStart(2, '0') }}</span>
-        <div class="ed-news-body">
-          <span class="ed-news-date">{{ formatDate(item.date) }}</span>
-          <h4 class="ed-news-title">{{ tr(item.title) }}</h4>
-          <p class="ed-news-summary" v-html="tr(item.summary)"></p>
-        </div>
-        <div class="ed-news-thumb" v-if="item.image">
-          <img :src="item.image" :alt="tr(item.title)" loading="lazy" />
-        </div>
-      </article>
+      <NewsFolio :items="newsItems" />
     </section>
   </main>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import newsData from '@/data/news.json'
 import { SHOW_AIR_PURIFIER } from '@/configs/systemConfig'
 import HomeLivingLines from '@/components/HomeLivingLines.vue'
+import NewsFolio from '@/components/NewsFolio.vue'
 
 // News items tied to a product that may be switched off. Their summaries link
 // to /product?jump=oxygen1, an anchor that does not exist while the EAP-01
 // section is hidden — so the card goes with it rather than dead-ending.
 const AIR_PURIFIER_NEWS_IDS = [2]
 
-type NewsLocale = 'zh' | 'zhCN' | 'en' | 'fr' | 'ja' | 'es'
-
 export default defineComponent({
   name: 'Home',
-  components: { HomeLivingLines },
+  components: { HomeLivingLines, NewsFolio },
   setup() {
     const { locale } = useI18n()
     const newsItems = ref(
       newsData.filter((n) => SHOW_AIR_PURIFIER || !AIR_PURIFIER_NEWS_IDS.includes(n.id))
     )
-
-    // Type-safe localized field accessor.
-    // locale.value is typed as a broad `string` by vue-i18n, so TS can't index
-    // our narrow { zh, zhCN, en, fr, ja, es } record without a cast.
-    const tr = (field: Record<NewsLocale, string>): string =>
-      field[locale.value as NewsLocale] || field.en
-
-    const formatDate = (dateStr: string) => {
-      const date = new Date(dateStr)
-      const loc = locale.value as NewsLocale
-      const dateLocale =
-        loc === 'zh' || loc === 'zhCN' ? 'zh-TW' :
-        loc === 'ja' ? 'ja-JP' :
-        loc === 'fr' ? 'fr-FR' :
-        loc === 'es' ? 'es-ES' : 'en-US'
-      return date.toLocaleDateString(dateLocale, {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      })
-    }
-
-    onMounted(() => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      }, { threshold: 0.1 })
-
-      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
-    })
 
     const scrollToNews = () => {
       const el = document.getElementById('news')
@@ -160,8 +116,6 @@ export default defineComponent({
     return {
       locale,
       newsItems,
-      tr,
-      formatDate,
       scrollToNews
     }
   }
@@ -372,6 +326,14 @@ export default defineComponent({
   margin-bottom: 14px;
 }
 
+.ed-news-kicker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: $brand-orange;
+  margin-bottom: 6px;
+}
+
 .ed-news-heading {
   font-family: 'Noto Serif TC', serif;
   font-weight: 900;
@@ -379,97 +341,14 @@ export default defineComponent({
   color: $grey-blue3;
 }
 
-.ed-news-row {
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) 180px;
-  gap: 26px;
-  align-items: start;
-  padding: 30px 0;
-  border-bottom: 1px solid rgba($grey-blue3, 0.18);
-
-  @media (max-width: 768px) {
-    grid-template-columns: 44px minmax(0, 1fr);
-
-    .ed-news-thumb {
-      grid-column: 2;
-    }
-  }
+.ed-news-sub {
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  color: $dark-grey;
+  margin-top: 6px;
+  margin-bottom: 26px;
 }
 
-.ed-news-index {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: 2rem;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px $brand-orange;
-  padding-top: 4px;
-}
-
-.ed-news-date {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: $brand-orange;
-  margin-bottom: 6px;
-}
-
-.ed-news-title {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-  line-height: 1.5;
-  color: $grey-blue3;
-  margin-bottom: 8px;
-}
-
-.ed-news-summary {
-  font-size: 0.94rem;
-  color: #5a5a5a;
-  line-height: 1.85;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  // Inline links inside news summaries (rendered via v-html from news.json).
-  // :deep() so scoped selectors reach v-html content.
-  :deep(a) {
-    color: $brand-orange;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: $orange2;
-    }
-  }
-}
-
-.ed-news-thumb {
-  img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border: 1px solid rgba($grey-blue3, 0.3);
-  }
-}
-
-// ─── Shared reveal + keyframes ────────────────────────────────────────
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+// ─── Keyframes ────────────────────────────────────────────────────────
 
 @keyframes edFade {
   from { opacity: 0; }
@@ -501,11 +380,6 @@ export default defineComponent({
   .ed-news-jump span,
   .ed-hero-figure {
     animation: none;
-  }
-
-  .fade-in {
-    opacity: 1;
-    transform: none;
   }
 }
 </style>
