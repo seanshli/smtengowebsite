@@ -60,5 +60,9 @@ function prerenderMeta() {
 export default defineConfig({
   plugins: [vue(), prerenderMeta()],
   resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
-  css: { modules: { localsConvention: 'camelCase' } }
+  css: { modules: { localsConvention: 'camelCase' } },
+  // host: true binds IPv4 + IPv6 + LAN. Without it Vite sometimes binds
+  // [::1] only, and browsers resolving localhost to 127.0.0.1 get
+  // connection refused — "the dev site is down" while curl says 200.
+  server: { host: true }
 })
