@@ -518,5 +518,45 @@
       "ja": "5モード：L1自動（PM2.5に応じて緑/青/黄/赤）、L2-L4固定、消灯。睡眠時はL1が夜灯化。",
       "es": "5 modos: L1 auto (verde/azul/amarillo/rojo según PM2.5), L2-L4 fijos, apagado. L1 atenuada en sueño."
     }
+  },
+  {
+    "id": 27,
+    "category": "services",
+    "question": {
+      "zh": "enGo 有哪些合作夥伴？",
+      "zhCN": "enGo 有哪些合作伙伴？",
+      "en": "Who are enGo's partners?",
+      "fr": "Quels sont les partenaires d'enGo ?",
+      "ja": "enGo のパートナーはどこですか？",
+      "es": "¿Quiénes son los socios de enGo?"
+    },
+    "answer": {
+      "zh": "我們與大雅全屋裝修（台中）、撰美室內裝修（台北）、米多力 MEDOLE（新風除濕）、麗寶生技（智能富氧艙）、合野木業（功能櫃）等夥伴合作，涵蓋裝修、空氣、健康與能源領域，並共同設有台北、新北與台中展示空間。",
+      "zhCN": "我们与大雅全屋装修（台中）、撰美室内装修（台北）、米多力 MEDOLE（新风除湿）、丽宝生技（智能富氧舱）、合野木业（功能柜）等伙伴合作，涵盖装修、空气、健康与能源领域，并共同设有台北、新北与台中展示空间。",
+      "en": "We partner with Taya Full-Home Renovation (Taichung), Zhuanmei Interior Renovation (Taipei), MEDOLE (fresh-air dehumidification), Lihpao Biotech (Smart Oxygen Chamber), and Heye Woodwork (function cabinets), covering renovation, air, health, and energy — with showrooms in Taipei, New Taipei, and Taichung.",
+      "fr": "Nous collaborons avec Taya (Taichung), Zhuanmei (Taipei), MEDOLE (déshumidification), Lihpao Biotech (chambre à oxygène) et Heye Woodwork, couvrant la rénovation, l'air, la santé et l'énergie, avec des showrooms à Taipei, New Taipei et Taichung.",
+      "ja": "大雅（台中）、撰美（台北）、MEDOLE（新風除湿）、麗寶生技（酸素ルーム）、合野木業（機能収納）などと提携し、リノベーション・空気・健康・エネルギー分野をカバー。台北・新北・台中にショールームがあります。",
+      "es": "Colaboramos con Taya (Taichung), Zhuanmei (Taipéi), MEDOLE (deshumidificación), Lihpao Biotech (cámara de oxígeno) y Heye Woodwork, cubriendo renovación, aire, salud y energía, con showrooms en Taipéi, Nuevo Taipéi y Taichung."
+    }
+  },
+  {
+    "id": 28,
+    "category": "features",
+    "question": {
+      "zh": "enGo 系統有哪三大能力？",
+      "zhCN": "enGo 系统有哪三大能力？",
+      "en": "What are enGo's three core capabilities?",
+      "fr": "Quelles sont les trois capacités clés d'enGo ?",
+      "ja": "enGo の三大能力とは何ですか？",
+      "es": "¿Cuáles son las tres capacidades clave de enGo?"
+    },
+    "answer": {
+      "zh": "一、HMS 居家管理系統：公布欄、物業管理、家居系統管理、通訊警報與 AIoT 智慧連動。二、BMS 建築管理系統：智能櫃、監控系統、智能信箱與能源管理，與 HMS 雙向連動。三、智慧環控：智慧陽光控溫、空氣淨化監測、智慧水務與廚房安全。",
+      "zhCN": "一、HMS 居家管理系统：公布栏、物业管理、家居系统管理、通讯警报与 AIoT 智慧联动。二、BMS 建筑管理系统：智能柜、监控系统、智能信箱与能源管理，与 HMS 双向联动。三、智慧环控：智慧阳光控温、空气净化监测、智慧水务与厨房安全。",
+      "en": "1) HMS (Home Management): bulletin board, property management, home system management, alerts, and AIoT scene linkage. 2) BMS (Building Management): smart lockers, surveillance, smart mailboxes, and energy management, linked two-way with HMS. 3) Environmental Control: sunlight & temperature, air quality monitoring, smart water, and kitchen safety.",
+      "fr": "1) HMS (gestion du foyer) : tableau d'affichage, gestion immobilière, alertes et scénarios AIoT. 2) BMS (gestion du bâtiment) : casiers intelligents, vidéosurveillance, boîtes aux lettres intelligentes et gestion de l'énergie. 3) Contrôle environnemental : lumière, air, eau et sécurité de la cuisine.",
+      "ja": "1）HMS（ホーム管理）：掲示板、物件管理、ホームシステム管理、通信アラート、AIoT連動。2）BMS（ビル管理）：スマートロッカー、監視、スマートメールボックス、エネルギー管理。3）スマート環境制御：採光・温度、空気質、水管理、キッチン安全。",
+      "es": "1) HMS (gestión del hogar): tablón de anuncios, gestión de la propiedad, alertas y escenas AIoT. 2) BMS (gestión del edificio): casilleros inteligentes, videovigilancia, buzones inteligentes y gestión energética. 3) Control ambiental: luz y temperatura, calidad del aire, agua y seguridad en la cocina."
+    }
   }
 ]

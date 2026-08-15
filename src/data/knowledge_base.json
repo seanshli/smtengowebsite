@@ -461,6 +461,126 @@
                 "es": "**Tecnología inteligente de calidad de agua**\n\nDe equipos de agua a mayordomo de agua inteligente:\n\n🔍 **Detección dual** — Muestreo de agua de entrada/salida para monitoreo de filtración\n📊 **Estado del filtro** — Seguimiento del tiempo de vida del filtro en tiempo real\n💧 **Respuesta instantánea a fugas** — Válvula electrónica cierra automáticamente el agua\n📈 **Impulsado por datos** — Recordatorios inteligentes para reemplazo de filtros\n\n🔸 **Filtración de 3 etapas**: Las primeras dos etapas eliminan el 99% de impurezas, la tercera agrega minerales traza (estroncio) para la salud ósea/dental y mejor sabor.\n\n🔗 [Más información](/product?jump=oxygen)",
                 "zhCN": "**关键水质检测技术**\n\n从净水设备到智慧水质管家：\n\n🔍 **双向侦测** — 入水、出水精准采样，掌握过滤动效\n📊 **滤心状态** — 一目了然，良好的滤材管理\n💧 **漏水即时处理** — 搭配电子水阀，可即时断水\n📈 **数据赋能** — 滤芯使用寿命即时监控提醒更换\n🔒 **信任升级** — 饮水安心、用水放心，水质数字透明化\n\n🔸 **三道滤心系统**：前两道去除 99% 杂质达到纯水品质，最后一道加入微量矿物质锶，让骨骼牙齿更健康，也能提升水的口感。\n\n🔗 [了解更多](/product?jump=oxygen)"
             }
+        },
+        {
+            "id": "engo-capabilities",
+            "keywords": [
+                "HMS",
+                "BMS",
+                "環控",
+                "环控",
+                "三大",
+                "系統功能",
+                "capability",
+                "capabilities",
+                "居家管理",
+                "建築管理",
+                "building management",
+                "home management",
+                "智慧環控",
+                "environmental control",
+                "三大功能",
+                "main functions"
+            ],
+            "answer": {
+                "zh": "**enGo 三大系統能力**\n\n🏠 **HMS 居家管理系統** — 公布欄、物業管理、家居系統管理、通訊警報、AIoT 智慧連動；串聯燈光、空調、窗簾、清風除濕機、淨水、廚房與安防。\n\n🏢 **BMS 建築管理系統** — 智能櫃、監控系統、智能信箱、能源管理；與 HMS 雙向連動，社區與住戶即時互通。\n\n🌿 **智慧環控** — 智慧陽光控溫、空氣淨化監測、智慧水務管理、智慧廚房安全，四大環境要素一站整合。\n\n🔗 [智慧環控介紹](/enviro)\n🔗 [探索產品](/product)",
+                "zhCN": "**enGo 三大系统能力**\n\n🏠 **HMS 居家管理系统** — 公布栏、物业管理、家居系统管理、通讯警报、AIoT 智慧联动；串联灯光、空调、窗帘、清风除湿机、净水、厨房与安防。\n\n🏢 **BMS 建筑管理系统** — 智能柜、监控系统、智能信箱、能源管理；与 HMS 双向联动，社区与住户即时互通。\n\n🌿 **智慧环控** — 智慧阳光控温、空气净化监测、智慧水务管理、智慧厨房安全，四大环境要素一站整合。\n\n🔗 [智慧环控介绍](/enviro)\n🔗 [探索产品](/product)",
+                "en": "**enGo's Three Core Capabilities**\n\n🏠 **HMS (Home Management System)** — bulletin board, property management, home system management, alerts & communication, AIoT scene linkage; connecting lighting, AC, curtains, fresh-air dehumidifier, water purification, kitchen, and security.\n\n🏢 **BMS (Building Management System)** — smart lockers, surveillance, smart mailboxes, energy management; linked two-way with HMS so the community and residents stay connected.\n\n🌿 **Environmental Control** — smart sunlight & temperature, air quality monitoring, smart water management, kitchen safety — all four elements in one platform.\n\n🔗 [Environmental control](/enviro)\n🔗 [Explore products](/product)",
+                "fr": "**Les trois capacités clés d'enGo**\n\n🏠 **HMS (gestion du foyer)** — tableau d'affichage, gestion immobilière, gestion des systèmes domestiques, alertes, scénarios AIoT ; reliant éclairage, climatisation, rideaux, déshumidificateur, purification d'eau, cuisine et sécurité.\n\n🏢 **BMS (gestion du bâtiment)** — casiers intelligents, vidéosurveillance, boîtes aux lettres intelligentes, gestion de l'énergie ; connecté au HMS dans les deux sens.\n\n🌿 **Contrôle environnemental** — lumière et température, qualité de l'air, gestion de l'eau, sécurité de la cuisine.\n\n🔗 [Contrôle environnemental](/enviro)",
+                "ja": "**enGo の三大システム能力**\n\n🏠 **HMS（ホーム管理システム）** — 掲示板、物件管理、ホームシステム管理、通信アラート、AIoT連動。照明・空調・カーテン・除湿機・浄水・キッチン・セキュリティを統合。\n\n🏢 **BMS（ビル管理システム）** — スマートロッカー、監視システム、スマートメールボックス、エネルギー管理。HMSと双方向連動。\n\n🌿 **スマート環境制御** — 採光・温度、空気質モニタリング、水管理、キッチン安全の4要素をワンストップで統合。\n\n🔗 [環境制御の紹介](/enviro)",
+                "es": "**Las tres capacidades clave de enGo**\n\n🏠 **HMS (gestión del hogar)** — tablón de anuncios, gestión de la propiedad, gestión de sistemas del hogar, alertas y escenas AIoT; conectando iluminación, aire acondicionado, cortinas, deshumidificador, purificación de agua, cocina y seguridad.\n\n🏢 **BMS (gestión del edificio)** — casilleros inteligentes, videovigilancia, buzones inteligentes y gestión energética; enlazado bidireccionalmente con el HMS.\n\n🌿 **Control ambiental** — luz y temperatura, calidad del aire, gestión del agua y seguridad en la cocina.\n\n🔗 [Control ambiental](/enviro)"
+            }
+        },
+        {
+            "id": "partner-taya",
+            "keywords": [
+                "大雅",
+                "taya",
+                "全屋裝修",
+                "全屋装修",
+                "台中",
+                "裝修",
+                "装修",
+                "renovation",
+                "廚具",
+                "厨具"
+            ],
+            "answer": {
+                "zh": "**大雅全屋裝修（台中）**\n\nenGo 長期合作夥伴，專精全屋裝修與系統廚具。雙方攜手將 enGo 智慧系統導入全屋裝修與建案：\n\n🏗️ 宏盛建設「宏盛心」（新北汐止）\n🏗️ 昌益建設「南青山」（台南）\n\n📍 台中展示間可預約參觀：[點我查看](/cases/24)\n🔗 [建案案例](/cases)",
+                "zhCN": "**大雅全屋装修（台中）**\n\nenGo 长期合作伙伴，专精全屋装修与系统厨具。双方携手将 enGo 智慧系统导入全屋装修与建案：\n\n🏗️ 宏盛建设「宏盛心」（新北汐止）\n🏗️ 昌益建设「南青山」（台南）\n\n📍 台中展示间可预约参观：[点我查看](/cases/24)",
+                "en": "**Taya Full-Home Renovation (Taichung)**\n\nA long-term enGo partner specializing in full-home renovation and system kitchens. Together we bring enGo smart systems into renovations and property developments:\n\n🏗️ Hong Sheng Construction \"Hong Sheng Xin\" (Xizhi, New Taipei)\n🏗️ Chang Yi Construction \"Nan Qing Shan\" (Tainan)\n\n📍 Taichung showroom: [View details](/cases/24)",
+                "fr": "**Taya Rénovation (Taichung)**\n\nPartenaire de longue date d'enGo, spécialisé en rénovation complète et cuisines sur mesure. Ensemble, nous intégrons les systèmes enGo dans des rénovations et des projets immobiliers (« Hong Sheng Xin » à New Taipei, « Nan Qing Shan » à Tainan).\n\n📍 Showroom de Taichung : [voir](/cases/24)",
+                "ja": "**大雅フルリノベーション（台中）**\n\nenGo の長期パートナー。フルリノベーションとシステムキッチンを専門とし、enGo スマートシステムをリノベーションや建設プロジェクト（新北「宏盛心」、台南「南青山」）に導入しています。\n\n📍 台中ショールーム：[詳細を見る](/cases/24)",
+                "es": "**Taya Renovación Integral (Taichung)**\n\nSocio a largo plazo de enGo, especializado en renovación integral y cocinas de sistema. Juntos integramos los sistemas enGo en renovaciones y desarrollos inmobiliarios (\"Hong Sheng Xin\" en Nuevo Taipéi, \"Nan Qing Shan\" en Tainan).\n\n📍 Showroom de Taichung: [ver detalles](/cases/24)"
+            }
+        },
+        {
+            "id": "partner-zhuanmei",
+            "keywords": [
+                "撰美",
+                "zhuanmei",
+                "室內裝修",
+                "室内装修",
+                "系統櫥櫃",
+                "系统橱柜",
+                "系統櫃",
+                "台北展間",
+                "台北展示間"
+            ],
+            "answer": {
+                "zh": "**撰美室內裝修（台北）**\n\n專精全室裝修與系統櫥櫃的 enGo 合作夥伴。雙方於台北打造 enGo 智慧家居展示空間，完整呈現智慧照明、環境監測與 AI 中控的真實居家情境，並將 enGo 智慧系統導入全室裝修與建案規劃。\n\n🔗 [聯絡我們預約體驗](/contact)",
+                "zhCN": "**撰美室内装修（台北）**\n\n专精全室装修与系统橱柜的 enGo 合作伙伴。双方于台北打造 enGo 智慧家居展示空间，完整呈现智慧照明、环境监测与 AI 中控的真实居家情境，并将 enGo 智慧系统导入全室装修与建案规划。\n\n🔗 [联络我们预约体验](/contact)",
+                "en": "**Zhuanmei Interior Renovation (Taipei)**\n\nAn enGo partner specializing in full-home renovation and system cabinetry. Together we built an enGo smart home showroom in Taipei — smart lighting, environmental monitoring, and the AI control hub in a real living setting — and integrate enGo systems into renovation and development projects.\n\n🔗 [Contact us to book a visit](/contact)",
+                "fr": "**Zhuanmei Interior Renovation (Taipei)**\n\nPartenaire d'enGo spécialisé en rénovation complète et mobilier sur mesure. Ensemble, nous avons créé un showroom domotique enGo à Taipei et intégrons les systèmes enGo dans des projets de rénovation.\n\n🔗 [Contactez-nous](/contact)",
+                "ja": "**撰美室内装修（台北）**\n\nフルリノベーションとシステム収納を専門とする enGo パートナー。台北に enGo スマートホーム・ショールームを共同開設し、リノベーションや建設プロジェクトへの enGo システム導入を進めています。\n\n🔗 [お問い合わせ](/contact)",
+                "es": "**Zhuanmei Interior Renovation (Taipéi)**\n\nSocio de enGo especializado en renovación integral y mobiliario de sistema. Juntos creamos un showroom de hogar inteligente enGo en Taipéi e integramos los sistemas enGo en proyectos de renovación.\n\n🔗 [Contáctenos](/contact)"
+            }
+        },
+        {
+            "id": "partner-lihpao",
+            "keywords": [
+                "麗寶",
+                "丽宝",
+                "富氧艙",
+                "富氧舱",
+                "oxygen chamber",
+                "lihpao",
+                "氧氣",
+                "氧气",
+                "生技"
+            ],
+            "answer": {
+                "zh": "**麗寶生技 — 智能富氧艙**\n\nenGo 與麗寶生技合作，協助優化其新產品「智能富氧艙」，將 enGo 的智慧監控與環境控制技術帶入健康科技領域。\n\n🔗 [智能富氧艙介紹（麗寶生技官網）](https://libobio.com/?page_id=6002)\n🔗 [合作夥伴產品](/tutorial)",
+                "zhCN": "**丽宝生技 — 智能富氧舱**\n\nenGo 与丽宝生技合作，协助优化其新产品「智能富氧舱」，将 enGo 的智慧监控与环境控制技术带入健康科技领域。\n\n🔗 [智能富氧舱介绍（丽宝生技官网）](https://libobio.com/?page_id=6002)",
+                "en": "**Lihpao Biotech — Smart Oxygen Chamber**\n\nenGo works with Lihpao Biotech to optimize their new Smart Oxygen Chamber, bringing enGo's smart monitoring and environmental control technology into health tech.\n\n🔗 [Smart Oxygen Chamber (Lihpao Biotech)](https://libobio.com/?page_id=6002)\n🔗 [Partner products](/tutorial)",
+                "fr": "**Lihpao Biotech — chambre à oxygène intelligente**\n\nenGo collabore avec Lihpao Biotech pour optimiser sa nouvelle chambre à oxygène intelligente, apportant les technologies de surveillance et de contrôle environnemental d'enGo à la santé connectée.\n\n🔗 [En savoir plus](https://libobio.com/?page_id=6002)",
+                "ja": "**麗寶生技 — スマート高濃度酸素ルーム**\n\nenGo は麗寶生技と協力し、新製品「スマート高濃度酸素ルーム」を最適化。enGo のスマートモニタリングと環境制御技術をヘルステック分野に展開しています。\n\n🔗 [詳細はこちら](https://libobio.com/?page_id=6002)",
+                "es": "**Lihpao Biotech — cámara de oxígeno inteligente**\n\nenGo colabora con Lihpao Biotech para optimizar su nueva cámara de oxígeno inteligente, llevando la tecnología de monitoreo y control ambiental de enGo al sector de la salud.\n\n🔗 [Más información](https://libobio.com/?page_id=6002)"
+            }
+        },
+        {
+            "id": "partners-overview",
+            "keywords": [
+                "合作夥伴",
+                "合作伙伴",
+                "partners",
+                "夥伴",
+                "伙伴",
+                "partner",
+                "生態夥伴",
+                "合作廠商",
+                "合作厂商",
+                "誰合作",
+                "who do you work with"
+            ],
+            "answer": {
+                "zh": "**enGo 合作夥伴生態**\n\n🛠️ **大雅全屋裝修**（台中）— 全屋裝修＋建案智慧化，台中展示間\n🛠️ **撰美室內裝修**（台北）— 全室裝修＋系統櫥櫃，台北智慧家居展示空間\n💨 **米多力 MEDOLE** — 吊隱式新風除濕機、3合1 智慧空氣平衡系統\n🧬 **麗寶生技** — 智能富氧艙優化合作\n🪵 **合野木業** — 智慧功能櫃，北部展示間\n⚡ **嘉義達光電、金毅泰節能科技** — 能源與節能方案\n\n🔗 [合作夥伴產品](/tutorial)\n🔗 [洽談合作](/contact)",
+                "zhCN": "**enGo 合作伙伴生态**\n\n🛠️ **大雅全屋装修**（台中）— 全屋装修＋建案智慧化，台中展示间\n🛠️ **撰美室内装修**（台北）— 全室装修＋系统橱柜，台北智慧家居展示空间\n💨 **米多力 MEDOLE** — 吊隐式新风除湿机、3合1 智慧空气平衡系统\n🧬 **丽宝生技** — 智能富氧舱优化合作\n🪵 **合野木业** — 智慧功能柜，北部展示间\n⚡ **嘉义达光电、金毅泰节能科技** — 能源与节能方案\n\n🔗 [合作伙伴产品](/tutorial)",
+                "en": "**enGo Partner Ecosystem**\n\n🛠️ **Taya Full-Home Renovation** (Taichung) — renovations + smart property developments, Taichung showroom\n🛠️ **Zhuanmei Interior Renovation** (Taipei) — full-home renovation + system cabinetry, Taipei smart home showroom\n💨 **MEDOLE** — ceiling-mounted fresh-air dehumidifier, 3-in-1 air balance system\n🧬 **Lihpao Biotech** — Smart Oxygen Chamber optimization\n🪵 **Heye Woodwork** — smart function cabinets, northern showroom\n⚡ **Chiayida Optoelectronics, Jinyitai Energy** — energy solutions\n\n🔗 [Partner products](/tutorial)\n🔗 [Work with us](/contact)",
+                "fr": "**L'écosystème de partenaires enGo**\n\n🛠️ **Taya** (Taichung) — rénovation complète + projets immobiliers intelligents\n🛠️ **Zhuanmei** (Taipei) — rénovation + mobilier sur mesure, showroom domotique à Taipei\n💨 **MEDOLE** — déshumidificateur à air neuf encastré\n🧬 **Lihpao Biotech** — chambre à oxygène intelligente\n🪵 **Heye Woodwork** — meubles fonctionnels intelligents\n⚡ **Chiayida, Jinyitai** — solutions énergétiques\n\n🔗 [Produits partenaires](/tutorial)",
+                "ja": "**enGo パートナーエコシステム**\n\n🛠️ **大雅**（台中）— フルリノベーション＋スマート建設、台中ショールーム\n🛠️ **撰美**（台北）— リノベーション＋システム収納、台北スマートホーム・ショールーム\n💨 **MEDOLE 米多力** — 天井埋込型・新風除湿機\n🧬 **麗寶生技** — スマート高濃度酸素ルーム\n🪵 **合野木業** — スマート機能収納\n⚡ **嘉義達光電・金毅泰** — 省エネソリューション\n\n🔗 [パートナー製品](/tutorial)",
+                "es": "**Ecosistema de socios de enGo**\n\n🛠️ **Taya** (Taichung) — renovación integral + desarrollos inteligentes\n🛠️ **Zhuanmei** (Taipéi) — renovación + mobiliario de sistema, showroom en Taipéi\n💨 **MEDOLE** — deshumidificador de aire fresco de techo\n🧬 **Lihpao Biotech** — cámara de oxígeno inteligente\n🪵 **Heye Woodwork** — muebles funcionales inteligentes\n⚡ **Chiayida, Jinyitai** — soluciones energéticas\n\n🔗 [Productos de socios](/tutorial)"
+            }
         }
     ],
     "tutorials": [

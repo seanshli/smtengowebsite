@@ -144,5 +144,26 @@
       "ja": "<a href=\"/cases/23\">新北体験センター</a>と<a href=\"/cases/24\">台中体験センター</a>が予約受付を開始しました。<a href=\"/contact\">お問い合わせフォーム</a>からのご予約、または<a href=\"https://page.line.me/247cjlve?oat_content=url&openQrModal=true\" target=\"_blank\" rel=\"noopener\">LINE 公式アカウント</a>でのご連絡を承ります。",
       "es": "Nuestros centros de experiencia en <a href=\"/cases/23\">Nuevo Taipéi</a> y <a href=\"/cases/24\">Taichung</a> ya aceptan reservas. Reserve a través de nuestro <a href=\"/contact\">formulario de contacto</a> o contáctenos por <a href=\"https://page.line.me/247cjlve?oat_content=url&openQrModal=true\" target=\"_blank\" rel=\"noopener\">LINE</a>."
     }
+  },
+  {
+    "id": 8,
+    "date": "2024-10-16",
+    "image": "/images/news/zhuanmei-showroom.jpg",
+    "title": {
+      "zh": "智管家攜手撰美室內裝修，打造台北智慧家居展示空間",
+      "zhCN": "智管家携手撰美室内装修，打造台北智慧家居展示空间",
+      "en": "enGo Partners with Zhuanmei Interior Renovation to Open a Taipei Smart Home Showroom",
+      "fr": "enGo s'associe à Zhuanmei Interior Renovation pour ouvrir un showroom domotique à Taipei",
+      "ja": "智管家、撰美室内装修と提携し台北にスマートホーム・ショールームを開設",
+      "es": "enGo se asocia con Zhuanmei Interior Renovation para abrir un showroom de hogar inteligente en Taipéi"
+    },
+    "summary": {
+      "zh": "智管家與撰美室內裝修事業有限公司正式合作，結合撰美在全室裝修與系統櫥櫃的專業，於台北打造 enGo 智慧家居展示空間，完整呈現智慧照明、環境監測與 AI 中控平板的真實居家情境。雙方並攜手將 enGo 智慧系統導入全室裝修與建案規劃，讓智慧生活從裝修的第一步開始。",
+      "zhCN": "智管家与撰美室内装修事业有限公司正式合作，结合撰美在全室装修与系统橱柜的专业，于台北打造 enGo 智慧家居展示空间，完整呈现智慧照明、环境监测与 AI 中控平板的真实居家情境。双方并携手将 enGo 智慧系统导入全室装修与建案规划，让智慧生活从装修的第一步开始。",
+      "en": "enGo has teamed up with Zhuanmei Interior Renovation Co., combining Zhuanmei's expertise in full-home renovation and system cabinetry to create an enGo smart home showroom in Taipei — presenting smart lighting, environmental monitoring, and the AI control tablet in a real living setting. The partners are also bringing enGo smart systems into full-home renovation and property development projects.",
+      "fr": "enGo s'est associé à Zhuanmei Interior Renovation, alliant l'expertise de Zhuanmei en rénovation complète et en mobilier sur mesure pour créer un showroom domotique enGo à Taipei — éclairage intelligent, surveillance environnementale et tablette de contrôle IA présentés dans un cadre de vie réel. Les partenaires intègrent également les systèmes enGo dans des projets de rénovation et de promotion immobilière.",
+      "ja": "智管家は撰美室内装修有限公司と提携し、撰美のフルリノベーションとシステム収納の専門性を活かして、台北に enGo スマートホーム・ショールームを開設。スマート照明、環境モニタリング、AI中控タブレットを実際の住空間で体験できます。両社はリノベーションや建設プロジェクトへの enGo システム導入も進めています。",
+      "es": "enGo se ha asociado con Zhuanmei Interior Renovation, combinando la experiencia de Zhuanmei en renovación integral y mobiliario de sistema para crear un showroom de hogar inteligente enGo en Taipéi, que presenta iluminación inteligente, monitoreo ambiental y la tableta de control con IA en un entorno real. Los socios también integran los sistemas enGo en proyectos de renovación y desarrollo inmobiliario."
+    }
   }
 ]
