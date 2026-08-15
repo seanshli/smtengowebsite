@@ -16,7 +16,9 @@
         <p>{{ $t('fiveValues') }}</p>
       </blockquote>
       <figure class="msn-figure fade-in">
-        <img src="/images/mission-family.jpg" :alt="$t('missionTitle')" loading="lazy" />
+        <!-- ponytail: NOT lazy. This is the page's primary editorial plate and sits
+             near the fold; lazy-loading it is what left the frame empty. -->
+        <img src="/images/mission-family.jpg" :alt="$t('missionTitle')" decoding="async" />
       </figure>
     </div>
 
@@ -37,25 +39,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useScrollReveal } from '../composables/useScrollReveal'
 
 export default defineComponent({
   name: 'Mission',
   setup() {
     const { locale } = useI18n()
 
-    onMounted(() => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      }, { threshold: 0.15 })
-
-      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
-    })
+    useScrollReveal('.fade-in', 'visible')
 
     return {
       locale
@@ -78,6 +71,15 @@ export default defineComponent({
   transform: translateY(0);
 }
 
+// ponytail: no-JS / reduced-motion safety — content must never stay invisible
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .msn-page {
   background: $warm-bg-light;
   padding: 110px 5vw 0;
@@ -96,11 +98,11 @@ export default defineComponent({
 }
 
 .msn-kicker {
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 1.02rem;
+  font-weight: 800;
   letter-spacing: 0.28em;
   color: $brand-orange;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .msn-title {
@@ -112,11 +114,13 @@ export default defineComponent({
   margin-bottom: 14px;
 }
 
+// letterpress: body ink is navy, not grey. Grey-on-cream is what read as washed out.
 .msn-sub {
-  font-size: clamp(1.02rem, 1.8vw, 1.25rem);
-  line-height: 2;
-  color: #454545;
-  max-width: 36em;
+  font-size: clamp(1.16rem, 2vw, 1.42rem);
+  font-weight: 500;
+  line-height: 1.95;
+  color: $grey-blue2;
+  max-width: 34em;
 }
 
 // ─── pull-quote + family plate ───
@@ -159,7 +163,11 @@ export default defineComponent({
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    border: 1px solid rgba($grey-blue3, 0.35);
+    // letterpress plate: a printed photo sits ON the page, it doesn't float.
+    border: 1px solid rgba($grey-blue3, 0.5);
+    box-shadow: 0 18px 38px -22px rgba(21, 41, 57, 0.55);
+    // warms the dated stock photo into the cream/navy story
+    filter: saturate(0.92) contrast(1.06);
   }
 
   &::before {

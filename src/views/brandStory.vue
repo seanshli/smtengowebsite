@@ -40,26 +40,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useScrollReveal } from '../composables/useScrollReveal'
 
 export default defineComponent({
   name: 'CoreValue',
   setup() {
     const { locale } = useI18n()
 
-    onMounted(() => {
-      // Intersection Observer for fade-in animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      }, { threshold: 0.15 })
-
-      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
-    })
+    useScrollReveal('.fade-in', 'visible')
 
     return {
       locale
@@ -83,6 +73,15 @@ export default defineComponent({
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+// ponytail: no-JS / reduced-motion safety — content must never stay invisible
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @keyframes floatOrb {
