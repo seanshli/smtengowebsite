@@ -64,8 +64,10 @@
       </div>
     </section>
 
-    <!-- Signature scroll scene: the home wires itself to the hub -->
+    <!-- Signature scroll scenes: the home wires itself to the hub (HMS),
+         then the building assembles under one dashboard (BMS) -->
     <HomeLivingLines />
+    <BuildingBmsScene />
 
     <!-- ────────────────────────────────────────────────────────────────
          NEWS — 翻閱生活誌: a flippable broadsheet folio
@@ -96,6 +98,7 @@ import { useI18n } from 'vue-i18n'
 import newsData from '@/data/news.json'
 import { SHOW_AIR_PURIFIER } from '@/configs/systemConfig'
 import HomeLivingLines from '@/components/HomeLivingLines.vue'
+import BuildingBmsScene from '@/components/BuildingBmsScene.vue'
 import NewsFolio from '@/components/NewsFolio.vue'
 
 // News items tied to a product that may be switched off. Their summaries link
@@ -105,7 +108,7 @@ const AIR_PURIFIER_NEWS_IDS = [2]
 
 export default defineComponent({
   name: 'Home',
-  components: { HomeLivingLines, NewsFolio },
+  components: { HomeLivingLines, BuildingBmsScene, NewsFolio },
   setup() {
     const { locale } = useI18n()
     const newsItems = ref(
@@ -201,11 +204,13 @@ export default defineComponent({
   }
 }
 
+// letterpress: the Taiwanese-vernacular kicker is a voice, not a label — set it loud.
 .ed-kicker {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 700;
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1.45rem, 3.1vw, 2rem);
+  font-weight: 900;
   color: $brand-orange;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   animation: edRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
 }
 
@@ -221,10 +226,11 @@ export default defineComponent({
 }
 
 .ed-lede {
-  font-size: clamp(1.02rem, 1.6vw, 1.22rem);
-  line-height: 2;
-  color: #454545;
-  max-width: 34em;
+  font-size: clamp(1.16rem, 1.9vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.95;
+  color: $grey-blue2;
+  max-width: 32em;
   animation: edRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
 }
 
