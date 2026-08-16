@@ -32,3 +32,6 @@ dist-ssr
 # Vite build artifacts
 vite.config.ts.timestamp-*.mjs
 vite.config.js.timestamp-*.mjs
+
+# graphify knowledge graph — regenerable, and the obsidian export alone is ~3 MB
+graphify-out/
