@@ -1,11 +1,7 @@
-import { createClient } from '@supabase/supabase-js'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import bcrypt from 'bcryptjs'
 import { authenticate } from '../../lib/session.js'
-
-const supabaseUrl = process.env.SUPABASE_URL || ''
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || ''
-const supabase = createClient(supabaseUrl, supabaseAnonKey)
+import { supabaseAdmin as supabase } from '../../lib/supabase-admin.js'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     const session = await authenticate(req, supabase)
