@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { rateLimit } from './_ratelimit'
+import { rateLimit } from '../lib/ratelimit.js'
 
 const supabaseUrl = process.env.SUPABASE_URL || ''
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || ''
