@@ -1,6 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import bcrypt from 'bcryptjs'
+import { signSession, isConfigured } from './_session'
+import { rateLimit } from '../_ratelimit'
 
 const supabaseUrl = process.env.SUPABASE_URL || ''
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || ''
@@ -9,6 +11,19 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey)
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' })
+    }
+
+    // Slow down password guessing before doing any database or bcrypt work.
+    const limit = rateLimit(req, { limit: 10, windowMs: 15 * 60 * 1000, bucket: 'login' })
+    if (!limit.allowed) {
+        res.setHeader('Retry-After', String(limit.retryAfter))
+        return res.status(429).json({ error: 'Too many attempts. Please try again later.' })
+    }
+
+    // Fail closed: without a secret we cannot issue a token anyone could trust.
+    if (!isConfigured()) {
+        console.error('AUTH_SECRET is missing or shorter than 32 chars — refusing to issue sessions')
+        return res.status(503).json({ error: 'Authentication is not configured' })
     }
 
     const { username, password } = req.body
@@ -29,9 +44,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             return res.status(401).json({ error: 'Invalid username or password' })
         }
 
-        // Return user info and a "token" (using user ID as token for simplicity as discussed)
         return res.status(200).json({
-            token: user.id,
+            token: signSession(user.id),
             user: {
                 id: user.id,
                 username: user.username,
@@ -40,6 +54,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             }
         })
     } catch (err: any) {
-        return res.status(500).json({ error: err.message })
+        console.error('admin/auth:', err)
+        return res.status(500).json({ error: 'Internal error' })
     }
 }

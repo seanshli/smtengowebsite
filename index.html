@@ -38,6 +38,35 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="enGo智管家 - 智慧家居第一品牌" />
   <meta name="twitter:image" content="https://www.smtengo.com/og-image-1200x630.jpg" />
+  <!-- Consent Mode v2 defaults. This MUST stay above the GTM snippet: tags read
+       the consent state at load, so denying by default here is what stops
+       analytics/ads storage before the visitor has answered the banner. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('cookieConsent');
+        // Visitors who accepted under the previous banner keep that choice.
+        if (stored === null && localStorage.getItem('acceptCookie') === 'yes') {
+          stored = 'granted';
+        }
+      } catch (e) { /* private mode: fall through to denied */ }
+
+      var state = stored === 'granted' ? 'granted' : 'denied';
+      gtag('consent', 'default', {
+        ad_storage: state,
+        ad_user_data: state,
+        ad_personalization: state,
+        analytics_storage: state,
+        functionality_storage: state,
+        personalization_storage: state,
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+    })();
+  </script>
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({

@@ -1,18 +1,18 @@
 import { createClient } from '@supabase/supabase-js'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import bcrypt from 'bcryptjs'
+import { authenticate } from './_session'
 
 const supabaseUrl = process.env.SUPABASE_URL || ''
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || ''
 const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    const authHeader = req.headers.authorization
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    const session = await authenticate(req, supabase)
+    if (!session) {
         return res.status(401).json({ error: 'Unauthorized' })
     }
-
-    const userId = authHeader.split(' ')[1]
+    const userId = session.id
 
     if (req.method === 'POST') {
         const { currentPassword, newPassword } = req.body
@@ -42,7 +42,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             if (updateError) throw updateError
             return res.status(200).json({ success: true })
         } catch (err: any) {
-            return res.status(500).json({ error: err.message })
+            console.error('admin/profile:', err)
+            return res.status(500).json({ error: 'Internal error' })
         }
     }
 
