@@ -1,7 +1,10 @@
 import { createClient } from '@supabase/supabase-js'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import nodemailer from 'nodemailer'
-import { rateLimit } from '../lib/ratelimit'
+// package.json sets "type": "module", so Node's ESM loader needs the explicit
+// extension on relative imports. TypeScript wants .js here even though the
+// source is .ts. Without it the function dies with ERR_MODULE_NOT_FOUND.
+import { rateLimit } from '../lib/ratelimit.js'
 
 const supabaseUrl = process.env.SUPABASE_URL || ''
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || ''

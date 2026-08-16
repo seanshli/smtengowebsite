@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { authenticate } from '../../lib/session'
+import { authenticate } from '../../lib/session.js'
 
 const supabaseUrl = process.env.SUPABASE_URL || ''
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || ''
