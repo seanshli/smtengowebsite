@@ -1,14 +1,27 @@
 import { createClient } from '@supabase/supabase-js'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { authenticate } from './_session'
 
 const supabaseUrl = process.env.SUPABASE_URL || ''
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || ''
 const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || 'admin-secret-token' // Default for dev, should be set in Vercel
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    const user = await authenticate(req, supabase)
-    if (!user) {
+    // Auth Check
+    const authHeader = req.headers.authorization
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(401).json({ error: 'Unauthorized' })
+    }
+
+    const userId = authHeader.split(' ')[1]
+    const { data: user, error: authError } = await supabase
+        .from('backend_members')
+        .select('*')
+        .eq('id', userId)
+        .single()
+
+    if (authError || !user) {
         return res.status(401).json({ error: 'Unauthorized' })
     }
 

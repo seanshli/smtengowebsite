@@ -528,7 +528,7 @@ export const jaLocale = {
             'Cookieは利便性向上のために使用されます。匿名で利用状況を分析し、最適なコンテンツを提供します。',
         seeMore: '詳細を見る',
         accpet: '同意する',
-        reject: '必須以外を拒否'
+        check: '設定を確認'
     },
 
     chatbot: {

@@ -399,7 +399,7 @@ export const frLocale = {
       'Ces cookies nous aident à comprendre comment vous utilisez notre site et à rendre votre expérience plus fluide. Ils nous indiquent si vous venez d\'un autre de nos sites ou si vous utilisez nos services. Ces informations sont anonymes.',
     seeMore: 'En savoir plus',
     accpet: 'Accepter les cookies',
-    reject: 'Refuser les non essentiels'
+    check: 'Vérifier les paramètres'
   },
 
   chatbot: {

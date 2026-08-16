@@ -400,7 +400,7 @@ export const esLocale = {
       'Estas cookies son nuestros pequeños ayudantes, ayudándonos a entender cómo utilizas el sitio y haciendo tu experiencia de navegación más suave. Nos dicen si viniste aquí desde nuestros otros sitios o si utilizaste o compraste nuestros productos y servicios. No te preocupes, esta información es anónima y no revela tu identidad. Almacenamos información de ubicación para proporcionar contenido localizado y podemos registrar preferencias para hacer tu experiencia más personal.',
     seeMore: 'Ver Más',
     accpet: 'Aceptar Cookie',
-    reject: 'Rechazar no esenciales'
+    check: 'Verificar Configuración'
   },
 
   chatbot: {
