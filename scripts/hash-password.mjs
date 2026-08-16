@@ -10,6 +10,7 @@
 // stored inside the hash, so changing it here still verifies fine, but keep
 // them aligned so new and reset passwords behave identically.
 import bcrypt from 'bcryptjs'
+import { createInterface } from 'node:readline/promises'
 
 const COST = 10
 const MIN_LENGTH = 12
@@ -68,6 +69,19 @@ const promptHidden = (question) =>
     stdin.on('data', onData)
   })
 
+// Ask for the username here so the SQL below comes out ready to run. Leaving
+// placeholders in emitted SQL is how accounts called 'your-username' end up in
+// the table with the literal word PASTE-HASH-HERE as their password.
+const rl = createInterface({ input: process.stdin, output: process.stdout })
+const username = (await rl.question('Username (e.g. seanshli): ')).trim()
+const displayName = (await rl.question('Display name (optional): ')).trim()
+rl.close()
+
+if (!username) {
+  console.error('A username is required. Nothing was generated.')
+  process.exit(1)
+}
+
 const password = await promptHidden('New password: ')
 const confirm = await promptHidden('Confirm password: ')
 
@@ -83,12 +97,21 @@ if (password.length < MIN_LENGTH) {
 
 const hash = await bcrypt.hash(password, COST)
 
-console.log('\nHash (safe to copy):\n')
-console.log(hash)
-console.log(`
-Then in the Supabase SQL Editor — replace the username and name:
+// Single-quote escaping, so a name like O'Brien cannot break the statement.
+const sqlString = (v) => `'${String(v).replace(/'/g, "''")}'`
 
-  insert into backend_members (username, name, role, password)
-  values ('your-username', 'Your Name', 'superuser', '${hash}')
-  on conflict (username) do update set password = excluded.password;
+console.log(`
+Copy everything between the lines into the Supabase SQL Editor and run it.
+Nothing needs replacing — the username and hash are already filled in.
+
+------------------------------------------------------------------
+insert into backend_members (username, name, role, password)
+values (${sqlString(username)}, ${sqlString(displayName || username)}, 'superuser', ${sqlString(hash)})
+on conflict (username) do update set password = excluded.password;
+------------------------------------------------------------------
+
+Then run this to confirm it took — expect prefix $2b$10$ and len 60:
+
+select username, left(password, 7) as prefix, length(password) as len
+from backend_members where username = ${sqlString(username)};
 `)
