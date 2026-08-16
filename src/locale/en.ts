@@ -400,7 +400,7 @@ export const enLocale = {
       'These cookies are our little helpers, helping us understand how you use the site and making your browsing experience smoother. They tell us if you came here from our other sites or if you used or purchased our products and services. Don\'t worry, this information is anonymous and does not reveal your identity. We store some location info to provide localized content and may record preferences to make your experience more personal.',
     seeMore: 'See More',
     accpet: 'Accept Cookie',
-    check: 'Check Settings'
+    reject: 'Reject Non-Essential'
   },
 
   chatbot: {

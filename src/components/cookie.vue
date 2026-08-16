@@ -9,12 +9,13 @@
     </div>
     <div class="btn-container">
       <div class="inner">
-        <div class="btn accept" @click="closeCookie">
+        <button type="button" class="btn accept" @click="closeCookie">
           <span>{{ $t('cookie.accpet') }}</span>
-        </div>
-        <div class="btn check">
-          <span>{{ $t('cookie.check') }}</span>
-        </div>
+        </button>
+        <!-- Refusing has to be exactly as easy as accepting. -->
+        <button type="button" class="btn check" @click="rejectCookie">
+          <span>{{ $t('cookie.reject') }}</span>
+        </button>
       </div>
     </div>
   </div>
@@ -22,20 +23,23 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { getConsent, setConsent } from '@/utils/consent'
 
 export default defineComponent({
-  name: 'Mission',
+  name: 'CookieBanner',
   setup() {
-    const isShowCookie = ref(true)
+    // Only ask visitors who have not answered yet.
+    const isShowCookie = ref(getConsent() === null)
     const isSeeMore = ref(false)
-
-    if (localStorage.getItem('acceptCookie') === 'yes') {
-      isShowCookie.value = false
-    }
 
     const closeCookie = () => {
       isShowCookie.value = false
-      localStorage.setItem('acceptCookie', 'yes')
+      setConsent('granted')
+    }
+
+    const rejectCookie = () => {
+      isShowCookie.value = false
+      setConsent('denied')
     }
 
     const seeMore = () => {
@@ -45,6 +49,7 @@ export default defineComponent({
     return {
       isShowCookie,
       closeCookie,
+      rejectCookie,
       seeMore,
       isSeeMore
     }
