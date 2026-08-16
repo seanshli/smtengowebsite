@@ -21,7 +21,7 @@ const bearer = (token: string) => ({ headers: { authorization: `Bearer ${token}`
 
 beforeAll(async () => {
   process.env.AUTH_SECRET = 'test-secret-at-least-32-characters-long'
-  const mod = await import('./_session')
+  const mod = await import('./session')
   signSession = mod.signSession
   authenticate = mod.authenticate as any
   isConfigured = mod.isConfigured

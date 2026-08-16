@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
-import { rateLimit } from './_ratelimit'
+import { rateLimit } from './ratelimit'
 
 // 203.0.113.0/24 and 198.51.100.0/24 are reserved documentation ranges.
 const req = (ip: string) => ({ headers: { 'x-forwarded-for': ip } }) as any
