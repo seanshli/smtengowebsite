@@ -40,7 +40,9 @@ function buildHtml(template, route, title, desc) {
   html = html.replace(/<meta property="og:description"[\s\S]*?\/>/, `<meta property="og:description" content="${esc(desc)}" />`)
   html = html.replace(/<meta property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${esc(url)}" />`)
   html = html.replace(/<meta name="twitter:title"[\s\S]*?\/>/, `<meta name="twitter:title" content="${esc(title)}" />\n  <meta name="twitter:description" content="${esc(desc)}" />`)
-  html = html.replace(/<\/head>/, `  <link rel="canonical" href="${esc(url)}" />\n</head>`)
+  // Replace, don't append — index.html carries its own canonical now, and two
+  // canonicals per shell would point the whole site at "/".
+  html = html.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${esc(url)}" />`)
   return html
 }
 

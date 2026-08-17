@@ -44,7 +44,10 @@ function prerenderMeta() {
         html = html.replace(/<meta property="og:description"[\s\S]*?\/>/, `<meta property="og:description" content="${esc(desc)}" />`)
         html = html.replace(/<meta property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${esc(url)}" />`)
         html = html.replace(/<meta name="twitter:title"[\s\S]*?\/>/, `<meta name="twitter:title" content="${esc(title)}" />\n  <meta name="twitter:description" content="${esc(desc)}" />`)
-        html = html.replace(/<\/head>/, `  <link rel="canonical" href="${esc(url)}" />\n</head>`)
+        // Replace, don't append: index.html now ships its own canonical, so
+        // appending left every route shell with two — the first pointing at the
+        // home page, which would canonicalise the whole site onto "/".
+        html = html.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${esc(url)}" />`)
         const outDir = join(dist, route)
         mkdirSync(outDir, { recursive: true })
         writeFileSync(join(outDir, 'index.html'), html, 'utf-8')
