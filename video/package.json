@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "compositions": "remotion compositions src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@remotion/captions": "^4.0.509",
     "@remotion/cli": "^4.0.509",
+    "@remotion/install-whisper-cpp": "^4.0.509",
+    "@remotion/media-parser": "^4.0.509",
+    "@remotion/transitions": "^4.0.509",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "remotion": "^4.0.509"

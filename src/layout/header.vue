@@ -13,6 +13,7 @@
           <router-link to="/brand">{{ $t('brand.brandStoryTitle') }}</router-link>
           <router-link to="/core">{{ $t('coreValueTitle') }}</router-link>
           <router-link to="/mission">{{ $t('missionTitle') }}</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
           <router-link to="/team">{{ $t('teamTitle') }}</router-link>
           <!--<router-link to="/vision">{{ $t('visionTitle') }}</router-link>-->
           <router-link to="/ecosystem">{{ $t('ecosystemTitle') }}</router-link>
@@ -79,6 +80,7 @@
         <router-link to="/brand" class="sublink">{{ $t('brand.brandStoryTitle') }}</router-link>
         <router-link to="/core" class="sublink">{{ $t('coreValueTitle') }}</router-link>
         <router-link to="/mission" class="sublink">{{ $t('missionTitle') }}</router-link>
+        <router-link :to="{ path: '/', hash: '#news' }" class="sublink">{{ $t('newsTitle') }}</router-link>
         <router-link to="/team" class="sublink">{{ $t('teamTitle') }}</router-link>
         <!--<router-link to="/vision" class="sublink">{{ $t('visionTitle') }}</router-link>-->
         <router-link to="/ecosystem" class="sublink">{{ $t('ecosystemTitle') }}</router-link>

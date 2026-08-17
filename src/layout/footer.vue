@@ -28,6 +28,7 @@
             <router-link to="/brand">{{ $t('brand.brandStoryTitle') }}</router-link>
             <router-link to="/core">{{ $t('coreValueTitle') }}</router-link>
             <router-link to="/team">{{ $t('teamTitle') }}</router-link>
+            <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
             <router-link to="/ecosystem">{{ $t('ecosystemTitle') }}</router-link>
           </div>
 

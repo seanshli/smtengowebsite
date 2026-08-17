@@ -185,6 +185,11 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to, from, savedPosition) {
+    // Honour #news and friends — without this, linking to /#news from another
+    // page lands at the top and the section the user asked for is off-screen.
+    if (to.hash) {
+      return { el: to.hash, behavior: 'smooth', top: 80 } // clear the fixed header
+    }
     return { top: 0 }
   }
 })
