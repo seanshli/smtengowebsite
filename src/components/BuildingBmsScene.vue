@@ -45,7 +45,7 @@
       </defs>
       <g ref="hubG" class="bms-hub">
         <circle ref="hubHalo" class="bms-hub-halo" cx="280" cy="335" r="104" />
-        <image href="/images/home/engo-hub-3d.jpg" x="192" y="239" width="176" height="176"
+        <image href="/images/home/engo-brain-3d.jpg" x="192" y="239" width="176" height="176"
           clip-path="url(#bmsHubClip)" preserveAspectRatio="xMidYMid slice" />
         <circle class="bms-hub-rim" cx="280" cy="335" r="82" />
         <text class="bms-hub-label" x="280" y="392">enGo</text>
