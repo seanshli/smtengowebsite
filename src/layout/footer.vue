@@ -11,11 +11,6 @@
           <p class="ft-tag">
             {{ isZh ? '把智慧生活，寫進每一天。' : 'Smart living, written into every day.' }}
           </p>
-          <!-- 最新消息 sits with the masthead rather than buried in a column:
-               it is the thing that changes, so it earns the prominent slot -->
-          <router-link class="ft-news" :to="{ path: '/', hash: '#news' }">
-            {{ $t('newsTitle') }} →
-          </router-link>
         </div>
 
         <nav class="ft-cols" aria-label="footer navigation">
@@ -40,6 +35,8 @@
             <p class="ft-col-title">{{ $t('contactTitle') }}</p>
             <!-- 最新消息 is a home-page section, so it sits with 首頁 -->
             <router-link to="/">{{ $t('homeTitle') }}</router-link>
+            <!-- directly under 首頁: 最新消息 is a section of the home page -->
+            <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
             <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
             <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
             <router-link to="/contact">{{ $t('footer.contactUs') }}</router-link>

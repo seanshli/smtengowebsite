@@ -45,10 +45,13 @@
       </defs>
       <g ref="hubG" class="bms-hub">
         <circle ref="hubHalo" class="bms-hub-halo" cx="280" cy="335" r="104" />
-        <image href="/images/home/engo-brain-3d.jpg" x="192" y="239" width="176" height="176"
+        <image ref="brainImg" href="/images/home/engo-brain-3d.jpg"
+          x="192" y="239" width="176" height="176"
           clip-path="url(#bmsHubClip)" preserveAspectRatio="xMidYMid slice" />
         <circle class="bms-hub-rim" cx="280" cy="335" r="82" />
-        <text class="bms-hub-label" x="280" y="392">enGo</text>
+        <!-- wordmark centred over the brain; +11 puts the cap-height optically
+             on the disc centre rather than the baseline -->
+        <text class="bms-hub-label" x="280" y="346">enGo</text>
       </g>
 
       <!-- HMS card: what runs inside every unit -->
@@ -131,6 +134,7 @@ export default defineComponent({
     const buildingG = ref<SVGGElement | null>(null)
     const hubG = ref<SVGGElement | null>(null)
     const hubHalo = ref<SVGCircleElement | null>(null)
+    const brainImg = ref<SVGImageElement | null>(null)
     const hmsCard = ref<SVGGElement | null>(null)
     const hmsRowEls = ref<SVGGElement[]>([])
     const bmsCard = ref<SVGGElement | null>(null)
@@ -214,11 +218,18 @@ export default defineComponent({
         travel(dotBmsOut.value!, bmsWire.value!, 0.55)
         travel(dotBmsBack.value!, bmsWire.value!, 1.65, true)
 
-        // the brain breathes
+        // The brain thinks: the halo pulses outward while the brain itself
+        // swells a little behind its clip, so the glow reads as coming from
+        // inside rather than being a ring stuck on top. Slow and out of phase
+        // with the traffic, so it never competes with the moving dots.
         life.to(hubHalo.value, {
           scale: 1.14, opacity: 0.3, duration: 1.4, yoyo: true, repeat: 1,
           ease: 'sine.inOut', transformOrigin: '50% 50%'
         }, 0)
+        life.to(brainImg.value, {
+          scale: 1.05, duration: 1.7, yoyo: true, repeat: 1,
+          ease: 'sine.inOut', transformOrigin: '50% 50%'
+        }, 0.3)
 
         ScrollTrigger.create({
           trigger: root.value,
@@ -234,7 +245,7 @@ export default defineComponent({
     onUnmounted(() => ctx?.revert())
 
     return {
-      isZh, root, buildingG, hubG, hubHalo,
+      isZh, root, buildingG, hubG, hubHalo, brainImg,
       hmsCard, hmsRowEls, bmsCard, bmsRowEls, hmsWire, bmsWire,
       dotHmsOut, dotHmsBack, dotBmsOut, dotBmsBack,
       hmsRows: HMS_ROWS, bmsRows: BMS_ROWS
@@ -329,6 +340,11 @@ export default defineComponent({
   font-weight: 900;
   font-size: 30px;
   fill: $warm-bg-light;
+  // the brain's core is bright amber; without this the wordmark washes out
+  paint-order: stroke;
+  stroke: rgba(21, 41, 57, 0.55);
+  stroke-width: 5;
+  stroke-linejoin: round;
   text-anchor: middle;
   letter-spacing: 0.03em;
 }
