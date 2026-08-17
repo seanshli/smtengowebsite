@@ -37,7 +37,13 @@
       <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
       
       <a @click="toMall">{{ $t('mallTitle') }}</a>
-      <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
+      <!-- 常見問題 is a section of 使用教學, so it hangs off it -->
+      <div class="dropdown">
+        <router-link to="/tutorial" class="dropdown-trigger">{{ $t('tutorialTitle') }}</router-link>
+        <div class="dropdown-content">
+          <router-link :to="{ path: '/tutorial', hash: '#faq' }">{{ $t('faqTitle') }}</router-link>
+        </div>
+      </div>
       <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
       <router-link to="/contact">{{ $t('contactTitle') }}</router-link>
       <select
@@ -98,6 +104,7 @@
         <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
         <a @click="toMall">{{ $t('mallTitle') }}</a>
         <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
+        <router-link :to="{ path: '/tutorial', hash: '#faq' }" class="sublink">{{ $t('faqTitle') }}</router-link>
         <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
         <router-link to="/contact">{{ $t('contactTitle') }}</router-link>
       </div>

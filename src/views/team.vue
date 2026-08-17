@@ -142,7 +142,8 @@ const MEMBERS: Member[] = [
         '帝觀地產開發股份有限公司 董事長',
         '日商台灣變克工業股份有限公司 董事合夥人',
         '國立台中科技大學日文系・日本京都教育大學經濟系',
-        '中興大學 EMBA 企管碩士'
+        '中興大學 EMBA 企管碩士',
+        '彰師大財經博士候選人'
       ],
       en: [
         'VP of Business Operations, Smart enGo Home Corp.',
@@ -152,7 +153,8 @@ const MEMBERS: Member[] = [
         'Chairman, Diguan Property Development',
         'Board Partner, Vector Industry Taiwan (Japan)',
         'NTCUST Japanese · Kyoto University of Education, Economics',
-        'EMBA, National Chung Hsing University'
+        'EMBA, National Chung Hsing University',
+        'Ph.D. candidate in Finance, National Changhua University of Education'
       ]
     }
   },

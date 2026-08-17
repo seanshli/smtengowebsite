@@ -38,6 +38,8 @@
             <!-- directly under 首頁: 最新消息 is a section of the home page -->
             <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
             <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
+            <!-- 常見問題 is a section of 使用教學 -->
+            <router-link :to="{ path: '/tutorial', hash: '#faq' }">{{ $t('faqTitle') }}</router-link>
             <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
             <router-link to="/contact">{{ $t('footer.contactUs') }}</router-link>
             <router-link to="/login">{{ $t('login') || '登入' }}</router-link>

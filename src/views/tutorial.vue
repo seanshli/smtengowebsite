@@ -35,7 +35,8 @@
         </div>
       </div>
     </div>
-    <div class="faq-section py-80 py-mob-40">
+    <!-- anchor target for the 常見問題 links in the header and footer -->
+    <div id="faq" class="faq-section py-80 py-mob-40">
       <h2 class="faq-title tac mb-50">{{ $t('faqTitle') }}</h2>
 
       <!-- Category filter pills -->
