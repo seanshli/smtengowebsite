@@ -2,10 +2,22 @@ import { nextTick } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { useSeo } from '@/utils/seo'
 import { useAnalytics } from '@/utils/analytics'
+import { changeLocale, i18n } from '@/main'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+// Traditional Chinese is the default and stays unprefixed, so every existing
+// URL and backlink keeps working. English mirrors the content routes under
+// /en/*. Only these two are real for search — see public/sitemap.xml.
+export const LOCALE_PREFIXES = { zh: '', en: '/en' } as const
+
+// Pages worth indexing per language. login/success/display/admin are tools,
+// not content, so they stay single-locale.
+const LOCALIZED = new Set([
+  'home', 'core', 'brand', 'mission', 'team', 'enviro', 'vision',
+  'ecosystem', 'product', 'contact', 'packages', 'tutorial', 'cases',
+  'case-detail'
+])
+
+const baseRoutes: any[] = [
     {
       path: '/',
       name: 'home',
@@ -184,7 +196,25 @@ const router = createRouter({
       name: 'Not Found',
       component: () => import('@/views/NotFound.vue')
     }
-  ],
+]
+
+// The catch-all has to stay last or it swallows /en/* before those routes are
+// ever reached.
+const catchAll = baseRoutes.filter((r) => String(r.path).startsWith('/:pathMatch'))
+const normal = baseRoutes.filter((r) => !String(r.path).startsWith('/:pathMatch'))
+
+const enRoutes = normal
+  .filter((r) => LOCALIZED.has(String(r.name)))
+  .map((r) => ({
+    ...r,
+    path: r.path === '/' ? '/en' : `/en${r.path}`,
+    name: `en-${String(r.name)}`,
+    meta: { ...(r.meta || {}), locale: 'en' }
+  }))
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [...normal, ...enRoutes, ...catchAll],
   scrollBehavior(to, from, savedPosition) {
     // Honour #news and friends — without this, linking to /#news from another
     // page lands at the top and the section the user asked for is off-screen.
@@ -251,6 +281,19 @@ const isExpired = (token: string): boolean => {
 }
 
 router.beforeEach((to, from, next) => {
+  // The URL is the source of truth for language on the two indexed locales, so
+  // /en/team renders English for a crawler — and for anyone opening the link —
+  // without needing a click on the switcher first.
+  const wantsEn = to.path === '/en' || to.path.startsWith('/en/')
+  const current = i18n.global.locale.value
+  if (wantsEn && current !== 'en') {
+    changeLocale('en')
+  } else if (!wantsEn && current === 'en') {
+    // Leaving an /en URL: fall back to the default rather than staying English
+    // on a Chinese URL, which would contradict that page's own hreflang.
+    changeLocale('zh')
+  }
+
   updateMeta(to)
   trackPageView(to.fullPath)
 

@@ -110,7 +110,8 @@
 }
 </style>
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import { changeLocale, type LanguageType, i18n } from '../main'
 import { SHOW_AIR_PURIFIER } from '../configs/systemConfig'
 
@@ -118,6 +119,17 @@ export default defineComponent({
   name: 'Header',
   setup() {
     const selectedLanguage = ref<LanguageType>(i18n.global.locale.value || 'zh')
+    const router = useRouter()
+
+    // Opening /en sets the locale from the URL, so the dropdown has to follow —
+    // otherwise the page is in English while the switcher still reads 中文.
+    watch(
+      () => i18n.global.locale.value,
+      (lang) => {
+        if (lang && lang !== selectedLanguage.value) selectedLanguage.value = lang as LanguageType
+      },
+      { immediate: true }
+    )
 
     const toggleMenu = () => {
       const menu = document.querySelector('.collapsible-menu-container')
@@ -127,8 +139,25 @@ export default defineComponent({
       }
     }
 
+    // zh and en are the two locales with real URLs, so switching between them
+    // has to move the address bar — otherwise the page contradicts its own
+    // hreflang and the visitor cannot share what they are looking at.
     const changeLanguage = () => {
-      changeLocale(selectedLanguage.value)
+      const lang = selectedLanguage.value
+      const path = router.currentRoute.value.path
+      const bare = path === '/en' ? '/' : path.startsWith('/en/') ? path.slice(3) : path
+
+      if (lang === 'en') {
+        router.push(bare === '/' ? '/en' : `/en${bare}`)
+        return
+      }
+      if (lang === 'zh') {
+        router.push(bare)
+        return
+      }
+      // The remaining locales have no URL of their own yet: switch in place.
+      if (path !== bare) router.push(bare)
+      changeLocale(lang)
     }
 
     const toMall = () => {
