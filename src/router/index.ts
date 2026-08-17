@@ -1,6 +1,5 @@
 import { nextTick } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/index.vue'
 import { useSeo } from '@/utils/seo'
 import { useAnalytics } from '@/utils/analytics'
 
@@ -179,9 +178,11 @@ const router = createRouter({
       ]
     },
     {
+      // Rendering HomeView here made every bad URL a 200 duplicate of the home
+      // page — an unbounded set of indexable soft-404s.
       path: '/:pathMatch(.*)*',
       name: 'Not Found',
-      component: HomeView
+      component: () => import('@/views/NotFound.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

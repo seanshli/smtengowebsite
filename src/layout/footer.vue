@@ -11,6 +11,11 @@
           <p class="ft-tag">
             {{ isZh ? '把智慧生活，寫進每一天。' : 'Smart living, written into every day.' }}
           </p>
+          <!-- 最新消息 sits with the masthead rather than buried in a column:
+               it is the thing that changes, so it earns the prominent slot -->
+          <router-link class="ft-news" :to="{ path: '/', hash: '#news' }">
+            {{ $t('newsTitle') }} →
+          </router-link>
         </div>
 
         <nav class="ft-cols" aria-label="footer navigation">
@@ -35,7 +40,6 @@
             <p class="ft-col-title">{{ $t('contactTitle') }}</p>
             <!-- 最新消息 is a home-page section, so it sits with 首頁 -->
             <router-link to="/">{{ $t('homeTitle') }}</router-link>
-            <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
             <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
             <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
             <router-link to="/contact">{{ $t('footer.contactUs') }}</router-link>
@@ -149,6 +153,25 @@ $cream: #fefbf6;
   font-size: 1.02rem;
   letter-spacing: 0.06em;
   color: rgba($cream, 0.75);
+}
+
+.ft-news {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.06em;
+  color: $orange2;
+  text-decoration: none;
+  border-bottom: 2px solid $brand-orange;
+  padding-bottom: 3px;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: $warm-bg-light;
+  }
 }
 
 .ft-cols {

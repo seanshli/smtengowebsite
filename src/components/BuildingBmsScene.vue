@@ -36,12 +36,19 @@
       <circle ref="dotBmsBack" class="bms-dot bms-dot--bms" r="5.5" />
 
       <!-- THE hub: the enGo brain, sitting dead centre of the building it runs.
-           A rotated square gives the diamond; the label stays upright. -->
-      <g ref="hubG" class="bms-hub" transform="translate(280, 335)">
-        <circle ref="hubHalo" class="bms-hub-halo" r="92" />
-        <rect class="bms-hub-diamond" x="-50" y="-50" width="100" height="100" rx="10"
-          transform="rotate(45)" />
-        <text class="bms-hub-label" y="9">enGo</text>
+           Same glowing-glass language as the /enviro hero, clipped to a disc so
+           it reads as one object against the cutaway. -->
+      <defs>
+        <clipPath id="bmsHubClip">
+          <circle cx="280" cy="335" r="82" />
+        </clipPath>
+      </defs>
+      <g ref="hubG" class="bms-hub">
+        <circle ref="hubHalo" class="bms-hub-halo" cx="280" cy="335" r="104" />
+        <image href="/images/home/engo-hub-3d.jpg" x="192" y="239" width="176" height="176"
+          clip-path="url(#bmsHubClip)" preserveAspectRatio="xMidYMid slice" />
+        <circle class="bms-hub-rim" cx="280" cy="335" r="82" />
+        <text class="bms-hub-label" x="280" y="392">enGo</text>
       </g>
 
       <!-- HMS card: what runs inside every unit -->
@@ -49,11 +56,11 @@
         <rect class="bms-card" x="0" y="0" width="252" height="322" rx="6" />
         <image href="/images/cases/case-home.jpg" x="12" y="12" width="228" height="76" preserveAspectRatio="xMidYMid slice" />
         <rect x="12" y="12" width="228" height="76" fill="none" stroke="rgba(21,41,57,0.35)" stroke-width="1.5" />
-        <text class="bms-card-title" x="26" y="116">HMS・{{ isZh ? '每一戶' : 'Every Unit' }}</text>
-        <line class="bms-card-rule" x1="26" y1="130" x2="226" y2="130" />
-        <!-- x=26 matches the title inset, and every glyph is boxed 0..16, so the
+        <text class="bms-card-title" x="36" y="116">HMS・{{ isZh ? '每一戶' : 'Every Unit' }}</text>
+        <line class="bms-card-rule" x1="36" y1="130" x2="216" y2="130" />
+        <!-- x=36 matches the title inset, and every glyph is boxed 0..16, so the
              icon column and the title start on exactly the same edge -->
-        <g v-for="(f, i) in hmsRows" :key="'h'+i" ref="hmsRowEls" :transform="`translate(26, ${158 + i * 34})`">
+        <g v-for="(f, i) in hmsRows" :key="'h'+i" ref="hmsRowEls" :transform="`translate(36, ${158 + i * 34})`">
           <g class="bms-row-icon bms-row-icon--hms" v-html="f.icon"></g>
           <text class="bms-row-text" x="34" y="0">{{ isZh ? f.zh : f.en }}</text>
         </g>
@@ -64,9 +71,9 @@
         <rect class="bms-card" x="0" y="0" width="252" height="272" rx="6" />
         <image href="/images/home/bms-lobby.jpg" x="12" y="12" width="228" height="76" preserveAspectRatio="xMidYMid slice" />
         <rect x="12" y="12" width="228" height="76" fill="none" stroke="rgba(21,41,57,0.35)" stroke-width="1.5" />
-        <text class="bms-card-title" x="26" y="116">BMS・{{ isZh ? '整棟公設' : 'The Building' }}</text>
-        <line class="bms-card-rule" x1="26" y1="130" x2="226" y2="130" />
-        <g v-for="(f, i) in bmsRows" :key="'b'+i" ref="bmsRowEls" :transform="`translate(26, ${156 + i * 30})`">
+        <text class="bms-card-title" x="36" y="116">BMS・{{ isZh ? '整棟公設' : 'The Building' }}</text>
+        <line class="bms-card-rule" x1="36" y1="130" x2="216" y2="130" />
+        <g v-for="(f, i) in bmsRows" :key="'b'+i" ref="bmsRowEls" :transform="`translate(36, ${156 + i * 30})`">
           <g class="bms-row-icon bms-row-icon--bms" v-html="f.icon"></g>
           <text class="bms-row-text" x="34" y="0">{{ isZh ? f.zh : f.en }}</text>
         </g>
@@ -311,8 +318,8 @@ export default defineComponent({
   fill: rgba($brand-orange, 0.2);
 }
 
-.bms-hub-diamond {
-  fill: $grey-blue3;
+.bms-hub-rim {
+  fill: none;
   stroke: $brand-orange;
   stroke-width: 3;
 }
