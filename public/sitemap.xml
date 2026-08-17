@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.smtengo.com/</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.smtengo.com/"/>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://www.smtengo.com/tutorial</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.smtengo.com/tutorial"/>
@@ -143,5 +143,44 @@
     <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/core</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.smtengo.com/core"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.smtengo.com/core"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/core"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.smtengo.com/core"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.smtengo.com/core"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.smtengo.com/core"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/core"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/team</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.smtengo.com/team"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.smtengo.com/team"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/team"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.smtengo.com/team"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.smtengo.com/team"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.smtengo.com/team"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/team"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/enviro</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.smtengo.com/enviro"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.smtengo.com/enviro"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/enviro"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.smtengo.com/enviro"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.smtengo.com/enviro"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.smtengo.com/enviro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/enviro"/>
   </url>
 </urlset>

@@ -28,12 +28,14 @@
             <router-link to="/brand">{{ $t('brand.brandStoryTitle') }}</router-link>
             <router-link to="/core">{{ $t('coreValueTitle') }}</router-link>
             <router-link to="/team">{{ $t('teamTitle') }}</router-link>
-            <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
             <router-link to="/ecosystem">{{ $t('ecosystemTitle') }}</router-link>
           </div>
 
           <div class="ft-col">
             <p class="ft-col-title">{{ $t('contactTitle') }}</p>
+            <!-- 最新消息 is a home-page section, so it sits with 首頁 -->
+            <router-link to="/">{{ $t('homeTitle') }}</router-link>
+            <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
             <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
             <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
             <router-link to="/contact">{{ $t('footer.contactUs') }}</router-link>

@@ -106,7 +106,9 @@ const AIR = '#34c98e'
 const WATER = '#3bbeff'
 const KITCHEN = '#ff5a5a'
 const GOLD = '#C7B763'
-const NAVY = '#043655'
+// Security shares the kitchen red: both are the "something needs your
+// attention" family, and red is what an alarm reads as.
+const SECURITY = KITCHEN
 
 // Seven devices ringed around the hub at (500, 310). Curves bow outward so
 // the drawn lines read as organic wiring, not spokes.
@@ -159,7 +161,7 @@ const DEVICES: Device[] = [
   },
   {
     x: 850, y: 515, path: 'M 850 515 C 710 490, 640 400, 552 342',
-    color: NAVY, zh: '安防', en: 'Security', ja: 'セキュリティ',
+    color: SECURITY, zh: '安防', en: 'Security', ja: 'セキュリティ',
     icon: [
       'M 0 -10 L 8.5 -6.5 V 0 C 8.5 5.5, 4.5 8.5, 0 10 C -4.5 8.5, -8.5 5.5, -8.5 0 V -6.5 Z',
       'M -3.2 0.4 L -0.8 3 L 3.6 -2'
