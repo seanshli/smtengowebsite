@@ -6,7 +6,7 @@
     <div class="ft-inner">
       <div class="ft-top">
         <div class="ft-brand">
-          <p class="ft-kicker">enGo 生活誌</p>
+          <p class="ft-kicker">{{ $t('brandJournal') }}</p>
           <p class="ft-word">enGo</p>
           <p class="ft-tag">
             {{ isZh ? '把智慧生活，寫進每一天。' : 'Smart living, written into every day.' }}

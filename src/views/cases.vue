@@ -1,7 +1,7 @@
 <template>
   <div class="cases-page">
     <div class="header-section">
-      <p class="page-kicker">enGo 生活誌</p>
+      <p class="page-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="page-title">{{ $t('casesTitle') }}</h1>
       <p class="subtitle">{{ $t('casesSubtitle') }}</p>
     </div>

@@ -2,7 +2,7 @@
   <div class="contact">
     <div class="contact_wrap">
       <div class="contact_title">
-        <p class="ed-mast-kicker">enGo 生活誌</p>
+        <p class="ed-mast-kicker">{{ $t('brandJournal') }}</p>
         <h1 class="fz-48 lh-70 fw-500">{{ $t('contactUsTitle') }}</h1>
         <p class="fz-24 lh-34 web">{{ $t('contactUsSubtitle') }}</p>
         <div class="phone container">
@@ -19,13 +19,12 @@
       >
         <span class="voucher-banner-icon">🎁</span>
         <div class="voucher-banner-text">
-          <strong>EAP-01 空氣清淨機｜獨家折扣碼限時申請</strong>
+          <strong>{{ $t('voucherTitle') }}</strong>
           <p v-if="isVoucherRequest">
-            您正在申請 EAP-01 折扣碼。填寫以下聯絡資料，我們將於 1–2 個工作日內將專屬折扣碼寄至您的 Email。
+            {{ $t('voucherRequesting') }}
           </p>
           <p v-else>
-            對 EAP-01 有興趣嗎？填寫下方資料並於「我想了解的是」選擇<strong>產品 → 空氣清淨機</strong>，
-            我們將於 1–2 個工作日內將獨家折扣碼寄至您的 Email。
+            {{ $t('voucherIntro1') }}<strong>{{ $t('voucherIntroPath') }}</strong>{{ $t('voucherIntro2') }}
           </p>
         </div>
         <a
@@ -35,7 +34,7 @@
           class="voucher-banner-cta"
           @click="trackVoucherCtaClick"
         >
-          先看看 EAP-01 →
+          {{ $t('voucherCta') }}
         </a>
       </div>
       <div class="contact_inputs flex_vertical">
@@ -186,7 +185,7 @@ export default defineComponent({
         interest.value = 'product'
         messagetype.value = 'airfilter'
         // Pre-fill the message; user can edit before submitting.
-        message.value = '我想申請 EAP-01 空氣清淨機的獨家折扣碼，請寄送至上方留下的 Email。謝謝！'
+        message.value = t('voucherPrefillMessage')
         trackEvent('voucher_form_opened', { product: 'EAP-01', source: route.query.from || 'direct' })
       } else {
         // Banner is now visible to all /contact visitors — track impression so we can

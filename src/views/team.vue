@@ -2,7 +2,7 @@
   <section id="team" class="tm-page">
     <!-- Editorial masthead -->
     <header class="tm-mast">
-      <p class="tm-kicker">enGo 生活誌</p>
+      <p class="tm-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="tm-title">{{ $t('teamTitle') }}</h1>
       <p class="tm-sub fade-in">{{ $t('teamSubtitle') }}</p>
     </header>

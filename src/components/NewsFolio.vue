@@ -23,7 +23,7 @@
           <span class="folio-watermark">enGo</span>
         </div>
         <figcaption v-if="current" class="folio-plate-cap">
-          <span class="folio-plate-brand">enGo 生活誌</span>
+          <span class="folio-plate-brand">{{ $t('brandJournal') }}</span>
           <!-- Every news plate is our own illustration, not a photo of the
                event or of a partner's product. Say so rather than imply it. -->
           <span v-if="current.image" class="folio-plate-note">
@@ -45,7 +45,7 @@
       >
         <div class="folio-face" @click="onPageClick">
           <header class="folio-mast">
-            <span class="folio-brand">enGo 生活誌</span>
+            <span class="folio-brand">{{ $t('brandJournal') }}</span>
             <span class="folio-issue">N°{{ String(i + 1).padStart(2, '0') }}</span>
             <time class="folio-date">{{ formatDate(item.date) }}</time>
           </header>

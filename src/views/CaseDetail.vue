@@ -123,7 +123,7 @@ import casesData from '@/data/cases.json'
 
 const route = useRoute()
 const router = useRouter()
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const caseId = parseInt(route.params.id as string)
 
 const caseItem = computed(() => {
@@ -198,7 +198,7 @@ onMounted(() => {
         // Update Title for SEO
         const title = getLocaleText(caseItem.value.title)
         if (title) {
-            document.title = `${title} | enGo 智管家`
+            document.title = `${title} | ${t('brandName')}`
         }
     }
 })

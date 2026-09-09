@@ -12,7 +12,7 @@
             <img src="/assets/logo.svg" alt="enGo" />
           </div>
           <div>
-            <h3>enGo 小精靈</h3>
+            <h3>{{ $t('chatbotTitle') }}</h3>
             <span class="chat-header-status">{{ $t('chatbot.online') || 'Online' }}</span>
           </div>
         </div>

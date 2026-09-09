@@ -3,7 +3,7 @@
        now an editorial page that owns its own layout. -->
   <section id="engo-ecosystem" class="eco-page">
     <header class="eco-mast">
-      <p class="eco-kicker">enGo 生活誌</p>
+      <p class="eco-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="eco-title">{{ $t('ecosystemTitle') }}</h1>
       <p class="eco-sub fade-in">
         {{ isZh

@@ -4,7 +4,7 @@
   <section id="core-value" class="cv-page">
     <!-- Editorial masthead -->
     <header class="cv-mast">
-      <p class="cv-kicker">enGo 生活誌</p>
+      <p class="cv-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="cv-title">{{ $t('coreValueTitle') }}</h1>
       <p class="cv-sub fade-in">{{ $t('coreValueSubtitle') }}</p>
     </header>

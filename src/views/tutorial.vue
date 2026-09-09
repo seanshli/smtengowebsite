@@ -1,7 +1,7 @@
 <template>
   <div class="tutorial-page">
     <div class="header-section ed-mast-block">
-      <p class="ed-mast-kicker">enGo 生活誌</p>
+      <p class="ed-mast-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="page-title">{{ $t('tutorialTitle') }}</h1>
       <p class="subtitle">{{ $t('tutorialSubtitle') }}</p>
     </div>

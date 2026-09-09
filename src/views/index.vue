@@ -10,7 +10,7 @@
       <div class="ed-grain" aria-hidden="true"></div>
 
       <div class="ed-masthead">
-        <span class="ed-mast-brand">enGo 智管家</span>
+        <span class="ed-mast-brand">{{ $t('brandName') }}</span>
         <span class="ed-mast-rule" aria-hidden="true"></span>
         <span class="ed-mast-tag">{{
           locale.startsWith('zh') ? '智慧家居生活誌' : 'A LIVING HOME JOURNAL'
@@ -75,7 +75,7 @@
     ───────────────────────────────────────────────────────────────── -->
     <section id="news" class="ed-news">
       <header class="ed-news-head">
-        <p class="ed-news-kicker">enGo 生活誌</p>
+        <p class="ed-news-kicker">{{ $t('brandJournal') }}</p>
         <h3 class="ed-news-heading">
           <template v-if="locale === 'zh'">我們的故事，我們的旅程</template>
           <template v-else-if="locale === 'zhCN'">我们的故事，我们的旅程</template>

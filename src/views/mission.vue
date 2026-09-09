@@ -5,7 +5,7 @@
   <section id="mission" class="msn-page">
     <!-- Editorial masthead -->
     <header class="msn-mast">
-      <p class="msn-kicker">enGo 生活誌</p>
+      <p class="msn-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="msn-title">{{ $t('missionTitle') }}</h1>
       <p class="msn-sub fade-in">{{ $t('missionSubtitle') }}</p>
     </header>
