@@ -343,7 +343,7 @@ export default defineComponent({
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.28em;
-  color: $brand-orange;
+  color: $brand-orange-text;
   margin-bottom: 6px;
 }
 

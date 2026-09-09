@@ -44,6 +44,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
+@import '../css/utils/masthead';
 
 .fade-in {
   opacity: 0;
@@ -76,25 +77,15 @@ export default defineComponent({
 .cv-mast {
   max-width: 1100px;
   margin: 0 auto 48px;
-  border-top: 3px solid $grey-blue3;
-  padding-top: 22px;
+  @include masthead-block;
 }
 
 .cv-kicker {
-  font-size: 1.02rem;
-  font-weight: 800;
-  letter-spacing: 0.28em;
-  color: $brand-orange;
-  margin-bottom: 8px;
+  @include masthead-kicker;
 }
 
 .cv-title {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: clamp(2.4rem, 7vw, 4.6rem);
-  line-height: 1.1;
-  color: $grey-blue3;
-  margin-bottom: 14px;
+  @include masthead-title;
 }
 
 .cv-sub {

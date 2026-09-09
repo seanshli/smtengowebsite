@@ -1,6 +1,11 @@
 // ─── Vivid Warm Color Palette ───
 $brand-blue: #224274;
 $brand-orange: #e05a35;
+// Accessible orange for kickers and other small text: $brand-orange is
+// only 3.58:1 on the cream grounds and fails WCAG AA for text under 24px.
+// 5.27:1 on $warm-bg-light, 5.04:1 on $warm-bg-cream, 4.93:1 on $warm-bg-section.
+// Do NOT use for rules, borders, large display titles or the SVG scenes.
+$brand-orange-text: #b8431f;
 $grey-blue: #1A3A5B;
 $grey-blue2: #043655;
 $grey-blue3: #152939;

@@ -1,0 +1,36 @@
+// ─── 溫暖生活誌 masthead ───
+// One source of truth for the editorial masthead: 3px navy top rule,
+// orange letter-spaced kicker, Noto Serif TC 900 clamped title.
+// Pages keep their own class prefixes and their own max-width / margins;
+// only the shared typography lives here.
+//
+// Canonical values are the ones already used by the majority of pages:
+//   kicker 1.02rem  (9 of 11 mastheads)
+//   title  clamp(2.4rem, 7vw, 4.6rem)  (7 of 11 mastheads)
+@import 'variables';
+
+// Small orange text: $brand-orange is only 3.58:1 on the cream ground,
+// so kickers use the darker $brand-orange-text (5.27:1). Dark-ground pages
+// (enviro) pass their own colour in.
+@mixin masthead-kicker($color: $brand-orange-text) {
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  color: $color;
+  margin-bottom: 8px;
+}
+
+@mixin masthead-title($color: $grey-blue3) {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  line-height: 1.1;
+  color: $color;
+  margin-bottom: 14px;
+}
+
+// The rule above the masthead. Callers add their own max-width / margin.
+@mixin masthead-block($rule-color: $grey-blue3) {
+  border-top: 3px solid $rule-color;
+  padding-top: 22px;
+}

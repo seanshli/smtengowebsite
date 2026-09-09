@@ -81,7 +81,7 @@ export default defineComponent({
   font-size: 1.02rem;
   font-weight: 800;
   letter-spacing: 0.28em;
-  color: $brand-orange;
+  color: $brand-orange-text;
   margin-bottom: 8px;
 }
 

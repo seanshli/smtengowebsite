@@ -165,6 +165,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
+@import '../css/utils/masthead';
 
 .fade-in {
   opacity: 0;
@@ -200,25 +201,15 @@ export default defineComponent({
 .ev-mast {
   max-width: 1100px;
   margin: 0 auto 20px;
-  border-top: 3px solid $warm-bg-light;
-  padding-top: 22px;
+  @include masthead-block($warm-bg-light);
 }
 
 .ev-kicker {
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: 0.28em;
-  color: $orange2;
-  margin-bottom: 8px;
+  @include masthead-kicker($orange2);
 }
 
 .ev-title {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: clamp(2.6rem, 8vw, 5.4rem);
-  line-height: 1.08;
-  color: $warm-bg-light;
-  margin-bottom: 14px;
+  @include masthead-title($warm-bg-light);
 }
 
 .ev-sub {

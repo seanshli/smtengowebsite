@@ -540,6 +540,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
+@import '../css/utils/masthead';
 
 // ─── Editorial pass (design/editorial-phase2) ───
 .contact :is(h1, h2, h3) {
@@ -549,11 +550,7 @@ export default defineComponent({
 }
 
 .ed-mast-kicker {
-  font-size: 1.02rem;
-  font-weight: 800;
-  letter-spacing: 0.28em;
-  color: $brand-orange;
-  margin-bottom: 6px;
+  @include masthead-kicker;
 }
 
 // squared inputs and plates, matching the mounted-plate system
