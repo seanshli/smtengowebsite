@@ -599,6 +599,10 @@ export const zhCNLocale = {
 
   // Admin
   admin: {
+    resetPassword: '重设密码',
+    resetPasswordPrompt: '请为 {username} 输入新密码（至少 8 个字符）。请自行记下并亲自转交，系统不会寄送。',
+    passwordTooShort: '密码至少需要 8 个字符。',
+    passwordResetDone: '{username} 的密码已更新。请将新密码亲自转交，并提醒对方登录后至「个人资料」自行修改。',
     dashboard: '管理后台',
     submissions: '联络表单管理',
     logout: '登出',

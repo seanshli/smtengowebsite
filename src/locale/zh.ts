@@ -599,6 +599,10 @@ export const zhLocale = {
 
   // Admin
   admin: {
+    resetPassword: '重設密碼',
+    resetPasswordPrompt: '請為 {username} 輸入新密碼（至少 8 個字元）。請自行記下並親自轉交，系統不會寄送。',
+    passwordTooShort: '密碼至少需要 8 個字元。',
+    passwordResetDone: '{username} 的密碼已更新。請將新密碼親自轉交，並提醒對方登入後至「個人資料」自行修改。',
     dashboard: '管理後台',
     submissions: '聯絡表單管理',
     logout: '登出',

@@ -52,6 +52,34 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
     }
 
+    // Password reset. There is no email or phone on a backend_members row, so
+    // a member who forgets their password has no self-service path -- without
+    // this a superuser's only recourse was deleting and recreating the account.
+    // Only the password is updatable here: narrowing it the same way
+    // api/admin/submissions.ts does keeps role escalation out of this endpoint.
+    if (req.method === 'PUT') {
+        const { id } = req.query
+        const { password } = req.body || {}
+        if (!id) return res.status(400).json({ error: 'Missing ID' })
+        if (typeof password !== 'string' || password.length < 8) {
+            return res.status(400).json({ error: 'Password must be at least 8 characters' })
+        }
+
+        try {
+            const hashedPassword = await bcrypt.hash(password, 10)
+            const { error } = await supabase
+                .from('backend_members')
+                .update({ password: hashedPassword })
+                .eq('id', id)
+
+            if (error) throw error
+            return res.status(200).json({ success: true })
+        } catch (err: any) {
+            console.error('admin/members:', err)
+            return res.status(500).json({ error: 'Could not complete member operation' })
+        }
+    }
+
     if (req.method === 'DELETE') {
         const { id } = req.query
         if (!id) return res.status(400).json({ error: 'Missing ID' })

@@ -30,6 +30,7 @@
             </td>
             <td>{{ formatDate(member.created_at) }}</td>
             <td>
+              <button @click="resetPassword(member)" class="btn-text">{{ $t('admin.resetPassword') }}</button>
               <button @click="confirmDelete(member)" class="btn-text delete">{{ $t('admin.delete') }}</button>
             </td>
           </tr>
@@ -124,6 +125,37 @@ const handleAddMember = async () => {
     alert(err.message)
   } finally {
     submitting.value = false
+  }
+}
+
+const resetPassword = async (member: any) => {
+  // prompt() shows the value, which is wanted here: the superuser has to read
+  // the temporary password back to hand it over out of band. There is no
+  // email or SMS path to deliver it.
+  const pw = prompt(t('admin.resetPasswordPrompt', { username: member.username }))
+  if (pw === null) return
+  if (pw.length < 8) {
+    alert(t('admin.passwordTooShort'))
+    return
+  }
+
+  try {
+    const token = localStorage.getItem('admin_token')
+    const response = await fetch(`/api/admin/members?id=${member.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({ password: pw })
+    })
+    if (!response.ok) {
+      const data = await response.json()
+      throw new Error(data.error || 'Failed to reset password')
+    }
+    alert(t('admin.passwordResetDone', { username: member.username }))
+  } catch (err: any) {
+    alert(err.message)
   }
 }
 
