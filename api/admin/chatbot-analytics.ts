@@ -29,6 +29,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(401).json({ error: 'Unauthorized' })
     }
 
+    // Chatbot logs are free text typed by visitors and routinely contain
+    // personal details, so they get the same superuser-only gate as
+    // api/admin/submissions.ts.
+    if (user.role !== 'superuser') {
+        return res.status(403).json({ error: 'Forbidden: Superuser access required' })
+    }
+
     if (req.method !== 'GET') {
         return res.status(405).json({ error: 'Method not allowed' })
     }

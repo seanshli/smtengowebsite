@@ -8,6 +8,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(401).json({ error: 'Unauthorized' })
     }
 
+    // Customer submissions carry name, email, phone and address. An operator
+    // account has no business reading or deleting them, so this fails closed
+    // to superuser only -- matching api/admin/members.ts.
+    if (user.role !== 'superuser') {
+        return res.status(403).json({ error: 'Forbidden: Superuser access required' })
+    }
+
     if (req.method === 'GET') {
         try {
             const { data, error } = await supabase
