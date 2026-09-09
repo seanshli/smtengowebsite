@@ -538,6 +538,9 @@ export const jaLocale = {
 
     // footer
     footer: {
+        returnPolicy: '返品ポリシー',
+        privacyPolicy: 'プライバシーポリシー',
+        termsOfService: '利用規約',
         product: '製品',
         firstLink: 'enGo AIスマート管理システム',
         secondLink: '水維氧AIスマート浄水システム',

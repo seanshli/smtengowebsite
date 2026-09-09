@@ -577,6 +577,9 @@ export const zhCNLocale = {
 
   // footer (Top Level)
   footer: {
+    returnPolicy: '退货政策',
+    privacyPolicy: '隐私权政策',
+    termsOfService: '服务条款',
     product: '产品',
     firstLink: 'enGo AI智慧中控系统',
     secondLink: '水维氧AI智慧净水系统',

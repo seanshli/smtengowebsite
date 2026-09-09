@@ -412,6 +412,9 @@ export const enLocale = {
   },
   // footer
   footer: {
+    returnPolicy: 'Return Policy',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
     product: 'Product',
     firstLink: 'enGo AI Smart Hub',
     secondLink: 'Aiox AI Smart Water Purifier',

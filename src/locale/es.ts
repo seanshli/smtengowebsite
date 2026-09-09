@@ -412,6 +412,9 @@ export const esLocale = {
   },
   // footer
   footer: {
+    returnPolicy: 'Política de devoluciones',
+    privacyPolicy: 'Política de privacidad',
+    termsOfService: 'Términos del servicio',
     product: 'Producto',
     firstLink: 'Centro Inteligente AI enGo',
     secondLink: 'Purificador de Agua Inteligente AI Aiox',

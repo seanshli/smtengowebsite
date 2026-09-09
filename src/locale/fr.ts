@@ -411,6 +411,9 @@ export const frLocale = {
 
   // footer
   footer: {
+    returnPolicy: 'Politique de retour',
+    privacyPolicy: 'Politique de confidentialité',
+    termsOfService: 'Conditions de service',
     product: 'Produit',
     firstLink: 'Système de contrôle intelligent enGo',
     secondLink: 'Système de purification d\'eau intelligent',
