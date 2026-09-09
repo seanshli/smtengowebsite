@@ -19,14 +19,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             return res.status(200).json(data)
         } catch (err: any) {
             console.error('Fetch error:', err)
-            return res.status(500).json({ error: err.message })
+            return res.status(500).json({ error: 'Could not load submissions' })
         }
     }
 
     if (req.method === 'PUT') {
-        const { id, ...updates } = req.body
+        const { id } = req.body || {}
         if (!id) {
             return res.status(400).json({ error: 'Missing submission ID' })
+        }
+
+        // Whitelist. Spreading req.body into .update() let any authenticated
+        // staff member write any column, including ones the UI never exposes
+        // (email, phone, message, created_at). These two are what the admin
+        // dashboard actually edits.
+        const EDITABLE = ['status', 'notes'] as const
+        const updates: Record<string, unknown> = {}
+        for (const field of EDITABLE) {
+            if (field in (req.body || {})) updates[field] = req.body[field]
+        }
+        if (Object.keys(updates).length === 0) {
+            return res.status(400).json({ error: 'No editable fields supplied' })
         }
 
         try {
@@ -40,7 +53,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             return res.status(200).json(data[0])
         } catch (err: any) {
             console.error('Update error:', err)
-            return res.status(500).json({ error: err.message })
+            return res.status(500).json({ error: 'Could not update submission' })
         }
     }
 
@@ -60,7 +73,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             return res.status(200).json({ success: true })
         } catch (err: any) {
             console.error('Delete error:', err)
-            return res.status(500).json({ error: err.message })
+            return res.status(500).json({ error: 'Could not delete submission' })
         }
     }
 

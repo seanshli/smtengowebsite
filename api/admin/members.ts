@@ -22,7 +22,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             if (error) throw error
             return res.status(200).json(data)
         } catch (err: any) {
-            return res.status(500).json({ error: err.message })
+            // Log the real error; callers get a generic message so table and
+            // constraint names are not disclosed.
+            console.error('admin/members:', err)
+            return res.status(500).json({ error: 'Could not complete member operation' })
         }
     }
 
@@ -42,7 +45,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             if (error) throw error
             return res.status(201).json(data[0])
         } catch (err: any) {
-            return res.status(500).json({ error: err.message })
+            // Log the real error; callers get a generic message so table and
+            // constraint names are not disclosed.
+            console.error('admin/members:', err)
+            return res.status(500).json({ error: 'Could not complete member operation' })
         }
     }
 
@@ -59,7 +65,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             if (error) throw error
             return res.status(200).json({ success: true })
         } catch (err: any) {
-            return res.status(500).json({ error: err.message })
+            // Log the real error; callers get a generic message so table and
+            // constraint names are not disclosed.
+            console.error('admin/members:', err)
+            return res.status(500).json({ error: 'Could not complete member operation' })
         }
     }
 

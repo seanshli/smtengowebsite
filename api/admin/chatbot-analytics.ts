@@ -114,6 +114,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         })
     } catch (err: any) {
         console.error('chatbot-analytics error:', err)
-        return res.status(500).json({ error: err.message })
+        return res.status(500).json({ error: 'Could not load analytics' })
     }
 }

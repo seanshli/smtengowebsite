@@ -193,9 +193,12 @@ export default defineComponent({
 
       ctx = gsap.context(() => {
         if (reduced) {
-          // No motion: show the finished scene.
+          // No motion: show the finished scene. Dots stay hidden — they are
+          // only ever positioned by the motionPath tween, so revealing them
+          // here stacked all seven at the SVG origin.
           gsap.set(paths.value, { strokeDasharray: 'none' })
-          gsap.set([nodes.value, dots.value], { opacity: 1, scale: 1 })
+          gsap.set(nodes.value, { opacity: 1, scale: 1 })
+          gsap.set(dots.value, { opacity: 0 })
           return
         }
 
