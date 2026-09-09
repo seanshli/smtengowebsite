@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { authenticate } from '../../lib/session.js'
 import { supabaseAdmin as supabase } from '../../lib/supabase-admin.js'
+import { redactSubmission } from '../../lib/redact.js'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     const user = await authenticate(req, supabase)
@@ -8,12 +9,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(401).json({ error: 'Unauthorized' })
     }
 
-    // Customer submissions carry name, email, phone and address. An operator
-    // account has no business reading or deleting them, so this fails closed
-    // to superuser only -- matching api/admin/members.ts.
-    if (user.role !== 'superuser') {
-        return res.status(403).json({ error: 'Forbidden: Superuser access required' })
-    }
+    // Operators triage the queue; superusers see the customer's actual contact
+    // details. Read is allowed for both but redacted for operators, status and
+    // notes are editable by both, and deleting a customer record stays
+    // superuser-only.
+    const isSuperuser = user.role === 'superuser'
 
     if (req.method === 'GET') {
         try {
@@ -23,7 +23,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 .order('created_at', { ascending: false })
 
             if (error) throw error
-            return res.status(200).json(data)
+            // Redact before the response is built, not in the UI: whatever is
+            // sent reaches the browser's network tab regardless of what renders.
+            return res.status(200).json(isSuperuser ? data : (data || []).map(redactSubmission))
         } catch (err: any) {
             console.error('Fetch error:', err)
             return res.status(500).json({ error: 'Could not load submissions' })
@@ -65,6 +67,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     if (req.method === 'DELETE') {
+        if (!isSuperuser) {
+            return res.status(403).json({ error: 'Forbidden: Superuser access required' })
+        }
         const { id } = req.query
         if (!id) {
             return res.status(400).json({ error: 'Missing submission ID' })
