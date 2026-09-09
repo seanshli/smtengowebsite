@@ -14,6 +14,7 @@
           <tr>
             <th>{{ $t('admin.username') }}</th>
             <th>{{ $t('admin.name') }}</th>
+            <th>{{ $t('email') }}</th>
             <th>{{ $t('admin.role') }}</th>
             <th>Created At</th>
             <th>{{ $t('admin.actions') }}</th>
@@ -23,6 +24,7 @@
           <tr v-for="member in members" :key="member.id">
             <td>{{ member.username }}</td>
             <td>{{ member.name }}</td>
+            <td>{{ member.email || member.phone || '—' }}</td>
             <td>
               <span :class="['role-badge', member.role]">
                 {{ $t(`admin.${member.role}`) }}
@@ -56,6 +58,14 @@
             <input v-model="newMember.name" type="text" />
           </div>
           <div class="form-group">
+            <label>{{ $t('email') }}</label>
+            <input v-model="newMember.email" type="email" />
+          </div>
+          <div class="form-group">
+            <label>{{ $t('phone') }}</label>
+            <input v-model="newMember.phone" type="tel" />
+          </div>
+          <div class="form-group">
             <label>{{ $t('admin.role') }}</label>
             <select v-model="newMember.role" required>
               <option value="operator">{{ $t('admin.operator') }}</option>
@@ -84,7 +94,7 @@ const loading = ref(true)
 const error = ref('')
 const showAddModal = ref(false)
 const submitting = ref(false)
-const newMember = ref({ username: '', password: '', name: '', role: 'operator' })
+const newMember = ref({ username: '', password: '', name: '', email: '', phone: '', role: 'operator' })
 
 const fetchMembers = async () => {
   loading.value = true
@@ -120,7 +130,7 @@ const handleAddMember = async () => {
     }
     await fetchMembers()
     showAddModal.value = false
-    newMember.value = { username: '', password: '', name: '', role: 'operator' }
+    newMember.value = { username: '', password: '', name: '', email: '', phone: '', role: 'operator' }
   } catch (err: any) {
     alert(err.message)
   } finally {

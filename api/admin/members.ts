@@ -16,7 +16,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         try {
             const { data, error } = await supabase
                 .from('backend_members')
-                .select('id, username, name, role, created_at')
+                .select('id, username, name, role, email, phone, created_at')
                 .order('created_at', { ascending: false })
 
             if (error) throw error
@@ -30,16 +30,38 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     if (req.method === 'POST') {
-        const { username, password, name, role } = req.body
+        const { username, password, name, role, email, phone } = req.body
         if (!username || !password || !role) {
             return res.status(400).json({ error: 'Missing required fields' })
+        }
+        if (typeof password !== 'string' || password.length < 8) {
+            return res.status(400).json({ error: 'Password must be at least 8 characters' })
+        }
+
+        // A member row had no way to reach the person it belonged to, so a
+        // forgotten password meant deleting and recreating the account. At
+        // least one contact route is required; which one is the caller's call.
+        const cleanEmail = typeof email === 'string' ? email.trim() : ''
+        const cleanPhone = typeof phone === 'string' ? phone.trim() : ''
+        if (!cleanEmail && !cleanPhone) {
+            return res.status(400).json({ error: 'An email address or phone number is required' })
+        }
+        if (cleanEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
+            return res.status(400).json({ error: 'Invalid email address' })
         }
 
         try {
             const hashedPassword = await bcrypt.hash(password, 10)
             const { data, error } = await supabase
                 .from('backend_members')
-                .insert([{ username, password: hashedPassword, name, role }])
+                .insert([{
+                    username,
+                    password: hashedPassword,
+                    name,
+                    role,
+                    email: cleanEmail || null,
+                    phone: cleanPhone || null
+                }])
                 .select()
 
             if (error) throw error
