@@ -69,7 +69,10 @@ export function useSeo() {
     // 5. Open Graph tags
     ensureMeta('property', 'og:title', title)
     ensureMeta('property', 'og:description', description)
-    ensureMeta('property', 'og:url', window.location.href)
+    // updateMeta runs in beforeEach, where window.location.href is still the
+    // page being left -- og:url was always one navigation behind. Build it
+    // from the route we are going to instead.
+    ensureMeta('property', 'og:url', `${BASE_URL}${to.fullPath}`)
     ensureMeta('property', 'og:locale', LOCALE_TO_OG_LOCALE[locale] || 'en_US')
 
     // OG locale alternates

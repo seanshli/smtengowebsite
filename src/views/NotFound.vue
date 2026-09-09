@@ -12,10 +12,10 @@
       </p>
 
       <div class="nf-links">
-        <router-link to="/">{{ $t('homeTitle') }} →</router-link>
-        <router-link to="/product">{{ $t('productTitle') }} →</router-link>
-        <router-link to="/cases">{{ $t('casesTitle') }} →</router-link>
-        <router-link to="/contact">{{ $t('contactTitle') }} →</router-link>
+        <router-link :to="localePath('/')">{{ $t('homeTitle') }} →</router-link>
+        <router-link :to="localePath('/product')">{{ $t('productTitle') }} →</router-link>
+        <router-link :to="localePath('/cases')">{{ $t('casesTitle') }} →</router-link>
+        <router-link :to="localePath('/contact')">{{ $t('contactTitle') }} →</router-link>
       </div>
     </div>
   </section>
@@ -39,7 +39,26 @@ export default defineComponent({
     const { locale } = useI18n()
     const isZh = computed(() => locale.value.startsWith('zh'))
 
+    // English is the one prefixed locale (zh is unprefixed, fr/ja/es reuse the
+    // unprefixed routes). Without this the recovery links carried English
+    // labels to Chinese pages, pushing every English visitor off the /en site.
+    const localePath = (path: string) =>
+      locale.value === 'en' ? (path === '/' ? '/en' : `/en${path}`) : path
+
+    // The catch-all rewrite serves the home shell for every unmatched URL, so
+    // a 404 arrives carrying the home page's canonical and hreflang set. Left
+    // in place that asserts this URL *is* the home page -- the same duplicate
+    // signal the noindex exists to kill, and a direct contradiction of it.
+    // Park the nodes while this page is mounted and restore them on the way
+    // out, so a client-side navigation back to a real route is unaffected.
+    let parked: Element[] = []
+
     onMounted(() => {
+      parked = Array.from(
+        document.querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang]')
+      )
+      parked.forEach((el) => el.remove())
+
       if (document.getElementById(ROBOTS_ID)) return
       const meta = document.createElement('meta')
       meta.id = ROBOTS_ID
@@ -48,12 +67,15 @@ export default defineComponent({
       document.head.appendChild(meta)
     })
 
-    // Leaving it behind would tag the next route noindex too.
+    // Leaving any of this behind would tag the next route noindex and strip
+    // its canonical.
     onUnmounted(() => {
       document.getElementById(ROBOTS_ID)?.remove()
+      parked.forEach((el) => document.head.appendChild(el))
+      parked = []
     })
 
-    return { isZh }
+    return { isZh, localePath }
   }
 })
 </script>

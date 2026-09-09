@@ -28,6 +28,10 @@ export const frLocale = {
 
   // SEO
   seo: {
+    notFound: {
+      title: 'Page introuvable | enGo Smart Home',
+      description: 'Ce lien a peut-être changé ou expiré. Revenez à l\'accueil, ou consultez nos produits, études de cas et coordonnées.'
+    },
     core: {
       title: 'Valeurs | La philosophie d\'enGo',
       description: 'Découvrez les valeurs d\'enGo : nous utilisons l\'IA pour intégrer soleil, air, eau et alimentation dans une vie connectée plus saine et sûre.'

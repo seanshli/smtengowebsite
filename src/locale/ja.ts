@@ -16,6 +16,10 @@ export const jaLocale = {
     ourPartners: 'パートナー製品',
     // SEO
     seo: {
+        notFound: {
+          title: 'ページが見つかりません | enGo スマートホーム',
+          description: 'このリンクは変更または期限切れの可能性があります。ホームに戻るか、製品・導入事例・お問い合わせをご覧ください。'
+        },
         core: {
           title: 'コアバリュー | enGoの設計思想',
           description: 'enGoのコアバリュー。AIで太陽光・空気・水・食をつなぎ、より健康で安心なスマートライフを実現します。'

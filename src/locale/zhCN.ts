@@ -17,6 +17,10 @@ export const zhCNLocale = {
 
   // SEO
   seo: {
+    notFound: {
+      title: '找不到页面 | enGo智管家',
+      description: '这个链接可能已经变更或失效。回到首页，或前往产品介绍、案例分享与联系我们。'
+    },
     core: {
       title: '核心价值 | enGo智管家的设计理念',
       description: 'enGo 以 AI 整合阳光、空气、水与食物，从健康、安心到便利，打造智慧生活的核心价值。'

@@ -16,6 +16,10 @@ export const enLocale = {
   ourPartners: 'Partner Products',
   // SEO
   seo: {
+    notFound: {
+      title: 'Page Not Found | enGo Smart Home',
+      description: 'This link may have changed or expired. Return to the home page, or browse our products, case studies and contact details.'
+    },
     core: {
       title: 'Core Values | The Philosophy Behind enGo',
       description: 'Discover the core values of enGo — using AI to integrate sunlight, air, water and food into a healthier, safer smart-living experience.'

@@ -16,6 +16,10 @@ export const esLocale = {
   ourPartners: 'Productos Asociados',
   // SEO
   seo: {
+    notFound: {
+      title: 'Página no encontrada | enGo Smart Home',
+      description: 'Es posible que este enlace haya cambiado o caducado. Vuelve al inicio, o consulta nuestros productos, casos y contacto.'
+    },
     core: {
       title: 'Valores | La filosofía de enGo',
       description: 'Descubre los valores de enGo: usamos IA para integrar luz solar, aire, agua y alimentos en una vida inteligente más sana y segura.'
