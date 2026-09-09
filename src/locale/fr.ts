@@ -161,6 +161,34 @@ export const frLocale = {
   vision6: 'Récompenses Bonus engo',
   vision7: "Structure d'Interaction B2B2C",
 
+  visionIntextLogo:
+    'enGo applies advanced AI to weave sunlight, air, water and food into everyday home life — an energy-efficient, healthier, lower-waste home that is kinder to the planet.',
+  // TODO: translate — English placeholder so nothing renders blank
+  vision: {
+    sun: {
+      title: 'Sunlight — living with the natural day',
+      copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home — brighter mornings, calmer evenings, and comfort that follows the sun.'
+    },
+    air: {
+      title: 'Air — breathe without a second thought',
+      copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk — with air quality you can see at a glance.'
+    },
+    water: {
+      title: 'Water — protection you can see',
+      copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way — every glass is the best it can be.'
+    },
+    food: {
+      title: 'Food safety — health you stay on top of',
+      copy: 'enGo\'s intelligent management system provides end-to-end food safety assurance, so every meal on your table is one you can trust.'
+    },
+    safety: {
+      title: 'Security — watching over every moment at home',
+      copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry — and share in the value a connected community creates.'
+    },
+    closing:
+      'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream — enGo is here to look after your home for the long run.'
+  },
+
   // ecosystem
   ecosystemTitle: 'Écosystème enGo',
 
