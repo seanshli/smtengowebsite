@@ -18,18 +18,21 @@
         <img src="/images/scroll-top.png" alt="scroll to top" />
       </div>
       <div class="tablet_intro mt-mob-56 pb-44 pb-tab-20" :class="{ 'mt-70': hasHeader }">
-        <div class="container title_wrap d-flex fd-column ai-c text-white mt-54 mb-24 mt-mob-40">
+        <div class="container title_wrap d-flex fd-column ai-c text-white tac mt-54 mb-24 mt-mob-40">
           <h1 class="h2-title fz-48 lh-70 fz-mob-24 lh-mob-34 fw-600">
-            <!-- AI智慧家居全能管家 -->
             {{ $t('product.tablet_intro.title') }}
           </h1>
-          <div class="subtitle fz-24 lh-36 fz-mob-14 lh-mob-18 fw-500 fw-mob-700">
-            <!-- enGo智慧中控平板，可用AI語音操作，整合智慧管家、商城、食譜、物業連結及訊息管理。 -->
-            <img class="engo-white" src="/images/footer_logo_white.png" alt="enGo logo" />
+          <h2 class="fz-28 lh-42 fz-tab-24 lh-tab-36 fz-mob-16 lh-mob-26 fw-500 mt-4 mb-20 mb-mob-12">
+            {{ $t('product.tablet_intro.tagline') }}
+          </h2>
+          <p class="subtitle fz-20 lh-34 fz-tab-18 lh-tab-30 fz-mob-14 lh-mob-22 fw-500">
+            <img class="engo-white" src="/images/footer_logo_white.png" alt="enGo" />
             {{ $t('product.tablet_intro.info') }}
-          </div>
+          </p>
         </div>
-        <img src="/images/tablet_1.png" alt="tablet photo" loading="eager" />
+        <!-- Phase 1: the ONE place tablet_1.png remains (ENGO-WEB-002). Phase 2
+             swaps it for the 3.0.64 home screen — ENGO-WEB-001 §3.2 shot #1. -->
+        <img src="/images/tablet_1.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
       </div>
       <div class="gradient_container_i">
         <div class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
@@ -37,102 +40,43 @@
             <div
               class="badge text-white bg-grey-blue2 fz-mob-18 lh-mob-26 fw-mob-500 py-10 px-20 py-mob-12 px-mob-18"
             >
-              <img class="pr-8" src="/assets/logo_G.svg" alt="engo logo branding" />
-              <!-- 產品介紹 -->
+              <img class="pr-8" src="/assets/logo_G.svg" alt="" />
               {{ $t('product.brand_intro.badge') }}
             </div>
             <h2
               class="product-describe fz-72 fw-700 text-grey-blue tac mt-36 mb-56 d-tab-none d-mob-none"
             >
-              <!-- 【桌機】AI智慧管家中控平板 -->
-              <img src="/images/logo_darkblue.svg" alt="enGo logo" />
+              <img src="/images/logo_darkblue.svg" alt="enGo" />
               {{ $t('product.brand_intro.title') }}
             </h2>
-            <!-- 【手機】家中的大小事，都是智管家的事... -->
-            <i18n-t
-              keypath="product.brand_intro.subTitle_mob"
-              tag="h3"
-              class="fz-mob-16 lh-mob-24 fw-mob-500 text-mob-white tac mt-mob-16 d-none d-mob-block"
-            >
-              <template v-slot:housekeeper>
-                <span class="text-orange">
-                  <!-- 智管家 -->
-                  {{ $t('product.brand_intro.housekeeper') }}
-                </span>
-              </template>
-            </i18n-t>
-            <h2
-              class="fz-tab-56 lh-tab-78 fz-mob-24 lh-mob-34 fw-tab-500 text-grey-blue text-mob-white tac mt-tab-36 mb-tab-70 my-mob-12 d-none d-tab-block d-mob-block"
-            >
-              <!-- 【平板/手機】AI 替您輕鬆管理家中一切 -->
-              {{ $t('product.brand_intro.title_tab') }}
-            </h2>
           </div>
+          <!-- ENGO-WEB-001 §2.2. One copy for every breakpoint: the old page kept
+               three device-specific variants of this paragraph, which is how
+               食譜／音響系統／門鎖 could sit in three places at once. -->
           <div class="brand_desc d-flex">
             <div class="brand_desc_img d-mob-none">
-              <img src="/images/Frame74.png" alt="廚房平板位置" loading="lazy" />
+              <img src="/images/Frame74.png" :alt="$t('product.brand_intro.title')" loading="lazy" />
             </div>
-            <div class="brand_desc_info pl-72 pr-100 pr-tab-74 px-mob-24 text-grey-blue fw-500">
-              <h3 class="fw-500 fz-36 lh-50 text-grey-blue tac pt-30 mb-32 d-tab-none d-mob-none">
-                <!-- 【桌機】AI 管家替您輕鬆管理家中一切 -->
-                {{ $t('product.brand_intro.subTitle') }}
+            <div
+              class="brand_desc_info pl-72 pr-100 pr-tab-74 px-mob-24 pb-mob-40 text-grey-blue text-mob-white fw-500"
+            >
+              <h3 class="fw-700 fz-36 lh-52 fz-tab-28 lh-tab-40 fz-mob-22 lh-mob-32 pt-30 pt-mob-28 mb-20">
+                {{ $t('product.brand_intro.heading') }}
               </h3>
-              <h4 class="fw-500 fz-24 lh-34 d-tab-none d-mob-none">
-                <!-- 【桌機】通過整合智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升了家居的舒適度、安全性和能源效率。用戶可以隨時隨地通過手機或enGo
-                AI智慧中控平板遠程控制和監控。 -->
-                {{ $t('product.brand_intro.desc01') }}
-              </h4>
-              <h4 class="fw-500 fz-tab-20 lh-tab-28 d-none d-tab-block d-mob-none">
-                <!-- 【平板】通過整合智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升了家居的舒適度、安全性和能源效率。用戶可以隨時隨地通過手機或enGo
-                AI智慧中控平板遠程控制和監控。 -->
-                {{ $t('product.brand_intro.desc01_tab') }}
-              </h4>
-              <h4 class="fw-500 fz-mob-14 lh-mob-20 text-mob-white d-none d-mob-block">
-                <!-- 智管家是一個創新平台，將智慧AI科技深度融入家庭生活，提供智慧管家式的貼心照顧。 -->
-                {{ $t('product.brand_intro.desc01_mob') }}
-              </h4>
-              <br />
-              <h4 class="fw-500 fz-24 lh-34 fz-tab-20 lh-tab-28 d-mob-none">
-                <!-- 智管家以人工智慧、物聯網和自動化技術為核心，致力於讓生活更便利、更健康，為您和家人打造安全、舒適、便捷的智慧生活，讓AI智慧整合系統替您創造美好生活。 -->
-                {{ $t('product.brand_intro.desc02') }}
-              </h4>
-              <h4
-                class="readMore_wrap fw-500 fz-mob-14 lh-mob-20 text-mob-white d-none d-mob-block"
-                v-show="!isExpandWrReadMore"
-              >
-                <!-- 通過整合智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升了家居的舒適度、安全性和能源效率。用戶可以隨時隨地通過手機或enGo AI智慧中控平板遠程控制和監控。
-智管家以人工智慧、物聯網和自動化技術為核心，致力於讓生活更便利、更健康，為您和家人打造安全、舒適、便捷的智慧生活，讓AI智慧整合系統替您創造美好生活。 -->
-                {{ $t('product.brand_intro.desc02_mob') }}
-              </h4>
-              <h4
-                class="fw-500 fz-mob-14 lh-mob-20 text-mob-white d-none d-mob-block"
-                v-show="isExpandWrReadMore"
-              >
-                <!-- 通過整合智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升了家居的舒適度、安全性和能源效率。用戶可以隨時隨地通過手機或enGo AI智慧中控平板遠程控制和監控。
-智管家以人工智慧、物聯網和自動化技術為核心，致力於讓生活更便利、更健康，為您和家人打造安全、舒適、便捷的智慧生活，讓AI智慧整合系統替您創造美好生活。 -->
-                {{ $t('product.brand_intro.desc02_mob') }}
-              </h4>
-              <div
-                @click="expandReadMore()"
-                class="jc-fe ai-c text-white d-none"
-                :class="{ 'd-mob-flex': !isExpandWrReadMore }"
-              >
-                <div class="readMore_txt">
-                  <!-- 閱讀更多 -->
-                  {{ $t('product.brand_intro.readMore') }}
-                </div>
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="#FFFFFF"
-                  >
-                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                  </svg>
-                </div>
-              </div>
+              <p class="fz-22 lh-36 fz-tab-18 lh-tab-30 fz-mob-15 lh-mob-25 mb-24 mb-mob-16">
+                {{ $t('product.brand_intro.lead') }}
+              </p>
+              <p class="fz-20 lh-34 fz-tab-17 lh-tab-28 fz-mob-15 lh-mob-25 mb-16">
+                <strong class="intro-label">{{ $t('product.brand_intro.homeLabel') }}</strong>
+                {{ $t('product.brand_intro.home') }}
+              </p>
+              <p class="fz-20 lh-34 fz-tab-17 lh-tab-28 fz-mob-15 lh-mob-25 mb-16">
+                <strong class="intro-label">{{ $t('product.brand_intro.communityLabel') }}</strong>
+                {{ $t('product.brand_intro.community') }}
+              </p>
+              <p class="fz-20 lh-34 fz-tab-17 lh-tab-28 fz-mob-15 lh-mob-25">
+                {{ $t('product.brand_intro.scenes') }}
+              </p>
             </div>
           </div>
         </div>
@@ -228,7 +172,7 @@
                 </span>
                 <span class="fz-32 fz-tab-20 fw-500">
                   <!-- 萬次 -->
-                  {{ $t('product.brand_intro.countCard.card04.unit') }}
+                  {{ $t('product.brand_intro.countCard.card04.tenThousand') }}{{ $t('product.brand_intro.countCard.card04.unit') }}
                 </span>
               </div>
               <div>
@@ -319,12 +263,12 @@
                     style="height: 70px; width: 20px; right: -20px; top: 0"
                   >
                     <div>
-                      <!-- 次 -->
-                      {{ $t('product.brand_intro.countCard.card04.unit') }}
-                    </div>
-                    <div>
                       <!-- 萬 -->
                       {{ $t('product.brand_intro.countCard.card04.tenThousand') }}
+                    </div>
+                    <div>
+                      <!-- 次 -->
+                      {{ $t('product.brand_intro.countCard.card04.unit') }}
                     </div>
                   </div>
                 </div>
@@ -360,155 +304,120 @@
             </div>
           </div>
         </div>
+        <!-- 三種介面，一組帳號 — ENGO-WEB-001 §2.3. New to this page: the old one
+             never mentioned the iOS and Android apps. Solid ground because
+             background_2.png is mid-transition here and text colour would be a guess. -->
+        <div class="interfaces px-118 px-tab-50 px-mob-24 pt-72 pb-72 pt-mob-48 pb-mob-40 text-white">
+          <div class="tag d-flex ai-c py-8 px-16 ml-mob-0">
+            <img class="pr-4" src="/assets/engo.svg" alt="" />
+            <div>{{ $t('product.interfaces.title') }}</div>
+          </div>
+          <div class="interfaces-scroll mt-40 mt-mob-28">
+            <table class="interfaces-table">
+              <thead>
+                <tr>
+                  <td></td>
+                  <th scope="col">{{ $t('product.interfaces.columns.tablet') }}</th>
+                  <th scope="col">{{ $t('product.interfaces.columns.ios') }}</th>
+                  <th scope="col">{{ $t('product.interfaces.columns.android') }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">{{ $t('product.interfaces.rows.control') }}</th>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ $t('product.interfaces.rows.community') }}</th>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ $t('product.interfaces.rows.voice') }}</th>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span><small class="if-only">{{ $t('product.interfaces.tabletOnly') }}</small></td>
+                  <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
+                  <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ $t('product.interfaces.rows.photowall') }}</th>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span><small class="if-only">{{ $t('product.interfaces.tabletOnly') }}</small></td>
+                  <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
+                  <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="interfaces-note fz-16 lh-28 fz-mob-14 lh-mob-24 mt-24">
+            {{ $t('product.interfaces.footnote') }}
+          </p>
+          <!-- Phase 2: ENGO-WEB-001 §3.2 shots #6 (iPhone home) and #7 (Android home). -->
+          <div v-if="interfaceImages.ios || interfaceImages.android" class="interfaces-figures mt-40">
+            <figure v-if="interfaceImages.ios">
+              <img :src="interfaceImages.ios" :alt="$t('product.interfaces.columns.ios')" loading="lazy" />
+            </figure>
+            <figure v-if="interfaceImages.android">
+              <img :src="interfaceImages.android" :alt="$t('product.interfaces.columns.android')" loading="lazy" />
+            </figure>
+          </div>
+        </div>
         <div
           ref="observeTarget"
-          class="tablet_function pt-64 pb-80 px-118 px-tab-50 pt-mob-60 pb-mob-40 px-mob-10 pos-r"
+          class="tablet_function pt-64 pb-96 px-118 px-tab-50 pt-mob-60 pb-mob-48 px-mob-24 pos-r"
         >
           <div class="tag text-white d-flex ai-c py-8 px-16 ml-mob-0">
-            <img class="pr-4" src="/assets/joystick.svg" alt="function icon" />
-            <div>
-              <!-- 功能介紹 -->
-              {{ $t('product.tablet_function.tag') }}
-            </div>
+            <img class="pr-4" src="/assets/joystick.svg" alt="" />
+            <div>{{ $t('product.tablet_function.tag') }}</div>
           </div>
-          <!-- 【桌機/平板】黃框動畫 -->
-          <div class="pos-r d-mob-none">
-            <div class="d-flex jc-fe pt-162">
-              <div class="tablet_img pos-r">
-                <img src="/images/tablet_1.png" alt="平板介面介紹" />
-                <div class="annotation annotation_A" :class="{ animate2: targetIsVisible }"></div>
-                <div class="annotation annotation_B" :class="{ animate2: targetIsVisible }"></div>
-                <div class="annotation annotation_C" :class="{ animate2: targetIsVisible }"></div>
-                <div class="annotation annotation_D" :class="{ animate2: targetIsVisible }"></div>
+          <!-- ENGO-WEB-001 §2.4: four text cards. tablet_1.png is deliberately NOT
+               reused here — ENGO-WEB-002: 一張正確的圖加四張留白，比五張錯的圖好.
+               Each card's figure renders once featureImages carries a path (§3.2 #2–#5). -->
+          <div class="tf-features mt-48 mt-mob-32" :class="{ 'is-visible': targetIsVisible }">
+            <article class="tf-card">
+              <figure v-if="featureImages.voice" class="tf-figure">
+                <img :src="featureImages.voice" :alt="$t('product.tablet_function.features.voice.title')" loading="lazy" />
+              </figure>
+              <div class="tf-card-head">
+                <span class="tf-num">01</span>
+                <span class="tf-badge">{{ $t('product.tablet_function.tabletOnly') }}</span>
               </div>
-            </div>
-            <div
-              class="pos-a p-16 annotation_frame annotation_text_A"
-              :class="{ animate1: targetIsVisible, animate4: targetIsVisible }"
-            >
-              <div class="pos-a annotation_line_A01">
-                <div class="pos-a dot dot-01"></div>
-                <div class="pos-a dot dot-02"></div>
+              <h3>{{ $t('product.tablet_function.features.voice.title') }}</h3>
+              <p>{{ $t('product.tablet_function.features.voice.body') }}</p>
+              <p class="tf-note">{{ $t('product.tablet_function.features.voice.note') }}</p>
+            </article>
+            <article class="tf-card">
+              <figure v-if="featureImages.floorplan" class="tf-figure">
+                <img :src="featureImages.floorplan" :alt="$t('product.tablet_function.features.floorplan.title')" loading="lazy" />
+              </figure>
+              <div class="tf-card-head">
+                <span class="tf-num">02</span>
               </div>
-              <div class="pos-a annotation_line_A02">
-                <div class="pos-a dot dot-01"></div>
+              <h3>{{ $t('product.tablet_function.features.floorplan.title') }}</h3>
+              <p>{{ $t('product.tablet_function.features.floorplan.body') }}</p>
+            </article>
+            <article class="tf-card">
+              <figure v-if="featureImages.photowall" class="tf-figure">
+                <img :src="featureImages.photowall" :alt="$t('product.tablet_function.features.photowall.title')" loading="lazy" />
+              </figure>
+              <div class="tf-card-head">
+                <span class="tf-num">03</span>
+                <span class="tf-badge">{{ $t('product.tablet_function.tabletOnly') }}</span>
               </div>
-              <div class="pos-a annotation_line_A03">
-                <div class="pos-a dot dot-01"></div>
+              <h3>{{ $t('product.tablet_function.features.photowall.title') }}</h3>
+              <p>{{ $t('product.tablet_function.features.photowall.body') }}</p>
+            </article>
+            <article class="tf-card">
+              <figure v-if="featureImages.inventory" class="tf-figure">
+                <img :src="featureImages.inventory" :alt="$t('product.tablet_function.features.inventory.title')" loading="lazy" />
+              </figure>
+              <div class="tf-card-head">
+                <span class="tf-num">04</span>
               </div>
-              <h4 class="text-gold fz-32 lh-46 fz-tab-24 lh-tab-34 fw-700">
-                <!-- 資訊整合平台 -->
-                {{ $t('product.tablet_function.annotation.A.title') }}
-              </h4>
-              <h5 class="text-white fz-16 lh-24 fw-500">
-                <!-- 社區物業、家庭、個人訊息管理， 資訊同步不漏接 -->
-                {{ $t('product.tablet_function.annotation.A.info') }}
-              </h5>
-            </div>
-            <div
-              class="pos-a p-16 annotation_frame annotation_text_B"
-              :class="{ animate1: targetIsVisible, animate3: targetIsVisible }"
-            >
-              <div class="pos-a annotation_line_B">
-                <div class="pos-a dot dot-01"></div>
-                <div class="pos-a dot dot-02"></div>
-              </div>
-              <h4 class="text-gold fz-32 lh-46 fz-tab-24 lh-tab-34 fw-700">
-                <!-- 智慧倉儲管理 -->
-                {{ $t('product.tablet_function.annotation.B.title') }}
-              </h4>
-              <h5 class="text-white fz-16 lh-24 fw-500">
-                <!-- 家庭儲物隨時監控，並與商城服 務連結，缺什麼馬上補！ -->
-                {{ $t('product.tablet_function.annotation.B.info') }}
-              </h5>
-            </div>
-            <div
-              class="pos-a p-16 annotation_frame annotation_text_C"
-              :class="{ animate1: targetIsVisible, animate3: targetIsVisible }"
-            >
-              <div class="pos-a annotation_line_C">
-                <div class="pos-a dot dot-01"></div>
-                <div class="pos-a dot dot-02"></div>
-              </div>
-              <h4 class="text-gold fz-32 lh-46 fz-tab-24 lh-tab-34 fw-700">
-                <!-- AIoT 雲端智慧串連 -->
-                {{ $t('product.tablet_function.annotation.C.title') }}
-              </h4>
-              <h5 class="text-white fz-16 lh-24 fw-500">
-                <!-- 隨時掌控居家聯網設備狀態與管理，AI 管家 24hr 全天候守護 -->
-                {{ $t('product.tablet_function.annotation.C.info') }}
-              </h5>
-            </div>
-          </div>
-          <!-- 【手機】黃框輪播 -->
-          <div class="mob_img_wrap d-none d-mob-block">
-            <div class="d-flex jc-c ai-fe fz-24 fw-700 text-white">
-              <!-- 【桌機】AI智慧管家中控平板 -->
-              <img class="engo-white mr-8" src="/images/footer_logo_white.png" alt="enGo logo" />
-              <h3 class="fz-24 fw-700 text-white">
-                {{ $t('product.brand_intro.title') }}
-              </h3>
-            </div>
-            <swiper
-              :slidesPerView="1"
-              :spaceBetween="30"
-              :loop="true"
-              :pagination="{
-                clickable: true
-              }"
-              :navigation="true"
-              :modules="modules"
-              :style="{
-                '--swiper-navigation-color': '#043655',
-                '--swiper-pagination-color': '#043655',
-                '--swiper-navigation-size': '15px'
-              }"
-              :lazy="true"
-            >
-              <swiper-slide class="px-30 pt-20 pb-24">
-                <div class="tablet_img pos-r mb-24">
-                  <img src="/images/tablet_1.png" alt="平板介面介紹" />
-                  <div class="annotation annotation_A" :class="{ animate2: targetIsVisible }"></div>
-                </div>
-                <h4 class="text-gold fz-32 lh-46 fz-tab-24 lh-tab-34 fw-700">
-                  <!-- 智慧倉儲管理 -->
-                  {{ $t('product.tablet_function.annotation.B.title') }}
-                </h4>
-                <h5 class="text-white fz-16 lh-24 fw-500">
-                  <!-- 家庭儲物隨時監控，並與商城服 務連結，缺什麼馬上補！ -->
-                  {{ $t('product.tablet_function.annotation.B.info') }}
-                </h5>
-              </swiper-slide>
-              <swiper-slide class="px-30 pt-20 pb-24">
-                <div class="tablet_img pos-r mb-24">
-                  <img src="/images/tablet_1.png" alt="平板介面介紹" />
-                  <div class="annotation annotation_C" :class="{ animate2: targetIsVisible }"></div>
-                  <div class="annotation annotation_D" :class="{ animate2: targetIsVisible }"></div>
-                </div>
-                <h4 class="text-gold fz-32 lh-46 fz-tab-24 lh-tab-34 fw-700">
-                  <!-- 資訊整合平台 -->
-                  {{ $t('product.tablet_function.annotation.A.title') }}
-                </h4>
-                <h5 class="text-white fz-16 lh-24 fw-500">
-                  <!-- 社區物業、家庭、個人訊息管理， 資訊同步不漏接 -->
-                  {{ $t('product.tablet_function.annotation.A.info') }}
-                </h5>
-              </swiper-slide>
-              <swiper-slide class="px-30 pt-20 pb-24">
-                <div class="tablet_img pos-r mb-24">
-                  <img src="/images/tablet_1.png" alt="平板介面介紹" />
-                  <div class="annotation annotation_B" :class="{ animate2: targetIsVisible }"></div>
-                </div>
-                <h4 class="text-gold fz-32 lh-46 fz-tab-24 lh-tab-34 fw-700">
-                  <!-- AIoT 雲端智慧串連 -->
-                  {{ $t('product.tablet_function.annotation.C.title') }}
-                </h4>
-                <h5 class="text-white fz-16 lh-24 fw-500">
-                  <!-- 隨時掌控居家聯網設備狀態與管理，AI 管家 24hr 全天候守護 -->
-                  {{ $t('product.tablet_function.annotation.C.info') }}
-                </h5>
-              </swiper-slide>
-            </swiper>
+              <h3>{{ $t('product.tablet_function.features.inventory.title') }}</h3>
+              <p>{{ $t('product.tablet_function.features.inventory.body') }}</p>
+            </article>
           </div>
         </div>
       </div>
@@ -1255,6 +1164,22 @@ export default defineComponent({
     const { t, locale } = useI18n()
     const observeTarget = ref(null)
     const targetIsVisible = ref(false)
+
+    // Phase 2 image slots (ENGO-WEB-001 §3.2). A figure renders only once a path
+    // is set here, so the layout is reserved without shipping an empty box.
+    //   featureImages.voice     → shot #2  語音對話進行中（平板橫向）
+    //   featureImages.floorplan → shot #3  平面圖即時視圖
+    //   featureImages.photowall → shot #4  待機相片牆（含資訊層）
+    //   featureImages.inventory → shot #5  倉儲物品清單
+    //   interfaceImages.ios     → shot #6  首頁（iPhone）
+    //   interfaceImages.android → shot #7  首頁（Android）
+    const featureImages: Record<'voice' | 'floorplan' | 'photowall' | 'inventory', string | null> = {
+      voice: null,
+      floorplan: null,
+      photowall: null,
+      inventory: null
+    }
+    const interfaceImages: Record<'ios' | 'android', string | null> = { ios: null, android: null }
     const router = useRouter()
     const hasHeader = ref(true)
     const { trackEvent } = useAnalytics()
@@ -1314,7 +1239,9 @@ export default defineComponent({
     const { stop } = useIntersectionObserver(
       observeTarget,
       ([{ isIntersecting }], observerElement) => {
-        targetIsVisible.value = isIntersecting
+        // Sticky: reveal the feature cards once and leave them; re-hiding on
+        // scroll-out made the old annotations flicker.
+        if (isIntersecting) targetIsVisible.value = true
       }
     )
 
@@ -1352,11 +1279,6 @@ export default defineComponent({
     }
     const closeImg = () => {
       targetExpand.value = false
-    }
-
-    const isExpandWrReadMore = ref(false)
-    const expandReadMore = () => {
-      isExpandWrReadMore.value = true
     }
 
     const scrollToTop = () => {
@@ -1407,8 +1329,8 @@ export default defineComponent({
       targetExpand,
       expandImg,
       closeImg,
-      isExpandWrReadMore,
-      expandReadMore,
+      featureImages,
+      interfaceImages,
       scrollToTop,
       locale,
       toMall,

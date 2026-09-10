@@ -368,8 +368,52 @@ export const enLocale = {
       }
     },
     tablet_intro: {
-      title: 'AI Smart Hub Tablet',
-      info: 'Central Control of Your Smart Home'
+      title: 'The All-in-One AI Home Manager',
+      tagline: 'Everything at home, everything in your community — on one wall.',
+      info: 'The enGo AI smart control tablet brings together appliance control, environmental sensing and security monitoring, plus community notices, repair requests, facility bookings and parcel notifications. Away from home, the mobile app keeps you just as much in control.'
+    },
+    brand_intro: {
+      badge: 'Product',
+      title: 'AI Smart Home Control Tablet',
+      heading: 'Whatever needs doing at home, your smart butler handles it.',
+      lead: 'Most smart home products only look after the home. enGo looks after the home and the community together — that is the most fundamental way it differs from other systems.',
+      homeLabel: 'At home',
+      home: 'Lighting, sockets, curtains and air conditioning, plus infrared appliances such as TVs and air conditioners. Real-time sensing of temperature and humidity, air quality, presence, gas, water leaks and smoke. Camera feeds, door intercom and circuit-level power monitoring.',
+      communityLabel: 'In the community',
+      community: 'Never miss a notice, track repair requests, book facilities online, and when a parcel reaches the smart locker, open it by entering the code in the app.',
+      scenes: 'Save your everyday combinations as one-tap scenes — press “Leaving home” and every light goes off, the air conditioning shuts down and security mode switches on. Or set up automations that run on a schedule or on sensor status.',
+      countCard: {
+        card01: { unit: '', info: 'Patented designs' },
+        card02: { unit: '', info: 'AI features' },
+        card03: { unit: ' yrs', info: 'of R&D' },
+        // 10 + '0K' renders "100K": the count-up end value is fixed at 10 to match
+        // the zh "10 萬次", so the English magnitude has to come from the suffix.
+        card04: { tenThousand: '0K', unit: '', info: 'Verification tests' }
+      }
+    },
+    interfaces: {
+      title: 'Three interfaces, one account',
+      columns: { tablet: 'enGo3 wall tablet', ios: 'iPhone / iPad', android: 'Android phone' },
+      rows: {
+        control: 'Appliance control, scenes, floor plan',
+        community: 'Community services, cameras, inventory',
+        voice: 'Voice control',
+        photowall: 'Standby photo wall'
+      },
+      tabletOnly: 'Tablet only',
+      yes: 'Supported',
+      no: 'Not available',
+      footnote: 'The “enGo智慧管家” mobile app is available on the App Store and Google Play.'
+    },
+    tablet_function: {
+      tag: 'Features',
+      tabletOnly: 'Tablet only',
+      features: {
+        voice: { title: 'Voice control', body: 'Just walk up to the wall and say it. “Turn on the living room light.” “Set the AC to 26 degrees.” “Turn off all the lights in the meeting room.” “After-work mode.” No reaching for your phone, no hunting for the right button. Safety-related devices ask you to confirm first, and when two names sound alike the system asks which you mean rather than guessing.', note: 'The system does not listen continuously and never records in the background.' },
+        floorplan: { title: 'Live floor plan', body: 'A floor plan generated from your home’s actual room layout shows at a glance which rooms are occupied, which lights are still on and which air conditioners are running — no need to open devices one by one.' },
+        photowall: { title: 'Standby photo wall', body: 'When no one is using it, the tablet switches to your family photos, with the time, weather and latest community notices overlaid. Brightness follows the ambient light — never glaring at night, lighting up only when the hallway lights come on. One touch brings the screen back.' },
+        inventory: { title: 'Smart inventory', body: 'Manage household storage, shop stock and office supplies alike: items, shelf locations, categories and low-stock alerts, linked to your shop orders and delivery notifications.' }
+      }
     },
     purchase: {
       btn: 'Buy Now'
