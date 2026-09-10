@@ -1729,6 +1729,11 @@ h3,
   letter-spacing: 0.02em;
 }
 
+// The tagline broke as 都在同／一面牆上 on phones; balance splits it evenly.
+.tagline {
+  text-wrap: balance;
+}
+
 .ap-model-pill,
 .ap-feature-card,
 .ap-specs-strip,
