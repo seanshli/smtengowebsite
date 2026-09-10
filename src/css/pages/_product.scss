@@ -369,7 +369,9 @@ body {
 
             @media (max-width: 768px) {
                 font-size: 15px;
-                min-width: 560px;
+                // 480 in a ~330px box leaves the second column half visible,
+                // which is the cue that the table scrolls.
+                min-width: 480px;
 
                 th,
                 td {
@@ -397,6 +399,11 @@ body {
             font-size: 12px;
             letter-spacing: 0.12em;
             color: $gold;
+        }
+
+        &-hint {
+            opacity: 0.7;
+            letter-spacing: 0.04em;
         }
 
         &-note {

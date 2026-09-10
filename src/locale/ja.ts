@@ -283,6 +283,7 @@ export const jaLocale = {
             tabletOnly: 'タブレット専用',
             yes: '対応',
             no: '非対応',
+            scrollHint: '左右にスワイプして他のプラットフォームを表示 →',
             footnote: 'スマホアプリ「enGo智慧管家」は App Store と Google Play からダウンロードできます。'
         },
         tablet_function: {

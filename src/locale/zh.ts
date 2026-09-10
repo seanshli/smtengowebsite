@@ -431,6 +431,7 @@ export const zhLocale = {
       tabletOnly: '平板專屬',
       yes: '支援',
       no: '不提供',
+      scrollHint: '左右滑動可查看其他平台 →',
       footnote: '手機 App「enGo智慧管家」於 App Store 與 Google Play 下載。'
     },
     tablet_function: {

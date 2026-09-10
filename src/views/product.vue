@@ -352,6 +352,11 @@
               </tbody>
             </table>
           </div>
+          <!-- Phones see one platform column at a time; the second column peeks in
+               (min-width in _product.scss) and this line says the rest is a swipe away. -->
+          <p class="interfaces-hint fz-mob-13 lh-mob-20 d-none d-mob-block mt-mob-8">
+            {{ $t('product.interfaces.scrollHint') }}
+          </p>
           <p class="interfaces-note fz-16 lh-28 fz-mob-14 lh-mob-24 mt-24">
             {{ $t('product.interfaces.footnote') }}
           </p>

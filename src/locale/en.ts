@@ -403,6 +403,7 @@ export const enLocale = {
       tabletOnly: 'Tablet only',
       yes: 'Supported',
       no: 'Not available',
+      scrollHint: 'Swipe to compare all three platforms →',
       footnote: 'The “enGo智慧管家” mobile app is available on the App Store and Google Play.'
     },
     tablet_function: {
