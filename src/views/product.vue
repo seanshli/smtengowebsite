@@ -22,9 +22,11 @@
           <h1 class="h2-title fz-48 lh-70 fz-mob-24 lh-mob-34 fw-600">
             {{ $t('product.tablet_intro.title') }}
           </h1>
-          <h2 class="fz-28 lh-42 fz-tab-24 lh-tab-36 fz-mob-16 lh-mob-26 fw-500 mt-4 mb-20 mb-mob-12">
+          <!-- A tagline, not a section: as an h2 it sat at 28px beside the 72px
+               h2 product name below and broke the heading scale. -->
+          <p class="tagline fz-28 lh-42 fz-tab-24 lh-tab-36 fz-mob-16 lh-mob-26 fw-500 mt-4 mb-20 mb-mob-12">
             {{ $t('product.tablet_intro.tagline') }}
-          </h2>
+          </p>
           <p class="subtitle fz-20 lh-34 fz-tab-18 lh-tab-30 fz-mob-14 lh-mob-22 fw-500">
             <img class="engo-white" src="/images/footer_logo_white.png" alt="enGo" />
             {{ $t('product.tablet_intro.info') }}
@@ -1721,7 +1723,8 @@ export default defineComponent({
 //    used on the homepage and /cases.
 h1,
 h2,
-h3 {
+h3,
+.tagline {
   font-family: 'Noto Serif TC', serif;
   letter-spacing: 0.02em;
 }
