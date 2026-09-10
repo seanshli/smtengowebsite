@@ -4,7 +4,7 @@
       <!-- 套裝方案 -->
       <div id="packages" class="package-section container py-100 py-mob-60">
         <header class="ed-mast-block">
-          <p class="ed-mast-kicker">enGo 生活誌</p>
+          <p class="ed-mast-kicker">{{ $t('brandJournal') }}</p>
           <h1 class="ed-mast-title">{{ $t('product.packages.tag') || '套裝方案' }}</h1>
           <p class="ed-mast-sub">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</p>
         </header>
@@ -94,10 +94,10 @@
               <h3 class="fz-24 mb-20">{{ $t('product.reviews.add') || '發表評論' }}</h3>
               <form @submit.prevent="submitReview">
                 <div class="mb-16">
-                  <input v-model="newReview.name" type="text" placeholder="您的姓名" class="w-100 p-12 border-radius-8 border-none" required />
+                  <input v-model="newReview.name" type="text" :placeholder="$t('reviewNamePlaceholder')" class="w-100 p-12 border-radius-8 border-none" required />
                 </div>
                 <div class="mb-16">
-                  <textarea v-model="newReview.comment" placeholder="您的寶貴意見..." class="w-100 p-12 border-radius-8 border-none" rows="4" required></textarea>
+                  <textarea v-model="newReview.comment" :placeholder="$t('reviewCommentPlaceholder')" class="w-100 p-12 border-radius-8 border-none" rows="4" required></textarea>
                 </div>
                 <button type="submit" class="bg-orange2 text-white border-none py-12 px-32 border-radius-30 fw-500 cursor-pointer hover-scale">
                   {{ $t('submitForm') }}
@@ -194,7 +194,7 @@ export default defineComponent({
       reviews.value.unshift({ ...newReview.value, date: today })
       trackEvent('submit_product_review', { name: newReview.value.name })
       newReview.value = { name: '', comment: '' }
-      alert('感謝您的評價！')
+      alert(t('reviewThanks'))
     }
 
     return {
@@ -451,6 +451,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
+@import '../css/utils/masthead';
 
 // ─── Editorial pass (design/editorial-phase2) ───
 .packages-page {
@@ -468,27 +469,17 @@ export default defineComponent({
 }
 
 .ed-mast-block {
-  border-top: 3px solid $grey-blue3;
-  padding-top: 22px;
+  @include masthead-block;
   margin-bottom: 48px;
   text-align: left;
 }
 
 .ed-mast-kicker {
-  font-size: 1.02rem;
-  font-weight: 800;
-  letter-spacing: 0.28em;
-  color: $brand-orange;
-  margin-bottom: 8px;
+  @include masthead-kicker;
 }
 
 .ed-mast-title {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: clamp(2.4rem, 7vw, 4.6rem);
-  line-height: 1.1;
-  color: $grey-blue3;
-  margin-bottom: 14px;
+  @include masthead-title;
 }
 
 .ed-mast-sub {

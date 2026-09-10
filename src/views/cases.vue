@@ -1,7 +1,7 @@
 <template>
   <div class="cases-page">
     <div class="header-section">
-      <p class="page-kicker">enGo 生活誌</p>
+      <p class="page-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="page-title">{{ $t('casesTitle') }}</h1>
       <p class="subtitle">{{ $t('casesSubtitle') }}</p>
     </div>
@@ -143,6 +143,7 @@ const getLocaleText = (obj: any) => {
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
+@import '../css/utils/masthead';
 
 .cases-page {
   padding: 110px 5vw 100px;
@@ -152,25 +153,15 @@ const getLocaleText = (obj: any) => {
   // editorial masthead, matching the homepage sections
   .header-section {
     text-align: left;
-    border-top: 3px solid $grey-blue3;
-    padding-top: 22px;
+    @include masthead-block;
     margin-bottom: 44px;
 
     .page-kicker {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.28em;
-      color: $brand-orange;
-      margin-bottom: 6px;
+      @include masthead-kicker;
     }
 
     .page-title {
-      font-family: 'Noto Serif TC', serif;
-      font-weight: 900;
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      line-height: 1.1;
-      color: $grey-blue3;
-      margin-bottom: 10px;
+      @include masthead-title;
     }
 
     .subtitle {
@@ -266,7 +257,7 @@ const getLocaleText = (obj: any) => {
           font-size: 0.9rem;
           min-width: 150px;
           cursor: pointer;
-          &:focus { border-color: $brand-orange; outline: none; }
+          &:focus-visible { border-color: $brand-orange; outline: 2px solid $brand-orange; outline-offset: 2px; }
           @media (max-width: 768px) { min-width: 120px; flex: 1; }
         }
       }

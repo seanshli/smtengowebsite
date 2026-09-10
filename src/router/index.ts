@@ -194,7 +194,10 @@ const baseRoutes: any[] = [
       // page — an unbounded set of indexable soft-404s.
       path: '/:pathMatch(.*)*',
       name: 'Not Found',
-      component: () => import('@/views/NotFound.vue')
+      component: () => import('@/views/NotFound.vue'),
+      // Without its own meta, seo.ts falls through to the home page's title
+      // and description, so every bad URL introduced itself as the home page.
+      meta: { titleKey: 'seo.notFound.title', descKey: 'seo.notFound.description' }
     }
 ]
 

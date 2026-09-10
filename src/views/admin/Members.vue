@@ -14,6 +14,7 @@
           <tr>
             <th>{{ $t('admin.username') }}</th>
             <th>{{ $t('admin.name') }}</th>
+            <th>{{ $t('email') }}</th>
             <th>{{ $t('admin.role') }}</th>
             <th>Created At</th>
             <th>{{ $t('admin.actions') }}</th>
@@ -23,6 +24,7 @@
           <tr v-for="member in members" :key="member.id">
             <td>{{ member.username }}</td>
             <td>{{ member.name }}</td>
+            <td>{{ member.email || member.phone || '—' }}</td>
             <td>
               <span :class="['role-badge', member.role]">
                 {{ $t(`admin.${member.role}`) }}
@@ -30,6 +32,7 @@
             </td>
             <td>{{ formatDate(member.created_at) }}</td>
             <td>
+              <button @click="resetPassword(member)" class="btn-text">{{ $t('admin.resetPassword') }}</button>
               <button @click="confirmDelete(member)" class="btn-text delete">{{ $t('admin.delete') }}</button>
             </td>
           </tr>
@@ -53,6 +56,14 @@
           <div class="form-group">
             <label>{{ $t('admin.name') }}</label>
             <input v-model="newMember.name" type="text" />
+          </div>
+          <div class="form-group">
+            <label>{{ $t('email') }}</label>
+            <input v-model="newMember.email" type="email" />
+          </div>
+          <div class="form-group">
+            <label>{{ $t('phone') }}</label>
+            <input v-model="newMember.phone" type="tel" />
           </div>
           <div class="form-group">
             <label>{{ $t('admin.role') }}</label>
@@ -83,7 +94,7 @@ const loading = ref(true)
 const error = ref('')
 const showAddModal = ref(false)
 const submitting = ref(false)
-const newMember = ref({ username: '', password: '', name: '', role: 'operator' })
+const newMember = ref({ username: '', password: '', name: '', email: '', phone: '', role: 'operator' })
 
 const fetchMembers = async () => {
   loading.value = true
@@ -119,11 +130,42 @@ const handleAddMember = async () => {
     }
     await fetchMembers()
     showAddModal.value = false
-    newMember.value = { username: '', password: '', name: '', role: 'operator' }
+    newMember.value = { username: '', password: '', name: '', email: '', phone: '', role: 'operator' }
   } catch (err: any) {
     alert(err.message)
   } finally {
     submitting.value = false
+  }
+}
+
+const resetPassword = async (member: any) => {
+  // prompt() shows the value, which is wanted here: the superuser has to read
+  // the temporary password back to hand it over out of band. There is no
+  // email or SMS path to deliver it.
+  const pw = prompt(t('admin.resetPasswordPrompt', { username: member.username }))
+  if (pw === null) return
+  if (pw.length < 8) {
+    alert(t('admin.passwordTooShort'))
+    return
+  }
+
+  try {
+    const token = localStorage.getItem('admin_token')
+    const response = await fetch(`/api/admin/members?id=${member.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({ password: pw })
+    })
+    if (!response.ok) {
+      const data = await response.json()
+      throw new Error(data.error || 'Failed to reset password')
+    }
+    alert(t('admin.passwordResetDone', { username: member.username }))
+  } catch (err: any) {
+    alert(err.message)
   }
 }
 

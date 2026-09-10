@@ -13,6 +13,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method === 'POST') {
         const { currentPassword, newPassword } = req.body
 
+        // The form enforces required-and-matching, but that is browser-side
+        // only: a request sent straight to this endpoint skips it entirely.
+        // Same minimum as the superuser reset in api/admin/members.ts, so the
+        // two password paths cannot disagree about what is acceptable.
+        if (typeof currentPassword !== 'string' || !currentPassword) {
+            return res.status(400).json({ error: 'Current password is required' })
+        }
+        if (typeof newPassword !== 'string' || newPassword.length < 8) {
+            return res.status(400).json({ error: 'Password must be at least 8 characters' })
+        }
+
         try {
             const { data: user, error } = await supabase
                 .from('backend_members')

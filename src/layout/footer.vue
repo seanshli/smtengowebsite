@@ -6,7 +6,7 @@
     <div class="ft-inner">
       <div class="ft-top">
         <div class="ft-brand">
-          <p class="ft-kicker">enGo 生活誌</p>
+          <p class="ft-kicker">{{ $t('brandJournal') }}</p>
           <p class="ft-word">enGo</p>
           <p class="ft-tag">
             {{ isZh ? '把智慧生活，寫進每一天。' : 'Smart living, written into every day.' }}
@@ -63,11 +63,11 @@
             ｜{{ $t('footer.customer') }}
           </span>
           <span class="ft-legal">
-            <a href="/return-policy.html">退貨政策</a>
+            <a :href="legalDoc('return-policy')">{{ $t('footer.returnPolicy') }}</a>
             <i>·</i>
-            <a href="/privacy.html">隱私權政策</a>
+            <a :href="legalDoc('privacy')">{{ $t('footer.privacyPolicy') }}</a>
             <i>·</i>
-            <a href="/terms.html">服務條款</a>
+            <a :href="legalDoc('terms')">{{ $t('footer.termsOfService') }}</a>
           </span>
         </div>
       </div>
@@ -88,6 +88,13 @@ export default defineComponent({
     const router = useRouter()
 
     const isZh = computed(() => locale.value.startsWith('zh'))
+
+    // The legal documents are static pages, not routes, and exist in two
+    // languages only. Chinese readers get the Traditional Chinese originals
+    // (which remain the governing text); everyone else gets the English
+    // translation rather than a page they cannot read.
+    const legalDoc = (name: string) =>
+      isZh.value ? `/${name}.html` : `/${name}-en.html`
     // Locale strings say "© 2024"; keep the year current without touching 6 files.
     const copyright = computed(() =>
       String(t('footer.copyright')).replace(/20\d{2}/, String(new Date().getFullYear()))
@@ -100,7 +107,7 @@ export default defineComponent({
       router.push({ name: 'product', query: { jump: 'oxygen1' } })
     }
 
-    return { isZh, copyright, jumpToProduct, jumpToProduct1, SHOW_AIR_PURIFIER }
+    return { isZh, copyright, jumpToProduct, jumpToProduct1, SHOW_AIR_PURIFIER, legalDoc }
   }
 })
 </script>

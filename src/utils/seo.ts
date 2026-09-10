@@ -69,7 +69,10 @@ export function useSeo() {
     // 5. Open Graph tags
     ensureMeta('property', 'og:title', title)
     ensureMeta('property', 'og:description', description)
-    ensureMeta('property', 'og:url', window.location.href)
+    // updateMeta runs in beforeEach, where window.location.href is still the
+    // page being left -- og:url was always one navigation behind. Build it
+    // from the route we are going to instead.
+    ensureMeta('property', 'og:url', `${BASE_URL}${to.fullPath}`)
     ensureMeta('property', 'og:locale', LOCALE_TO_OG_LOCALE[locale] || 'en_US')
 
     // OG locale alternates
@@ -89,31 +92,18 @@ export function useSeo() {
     ensureMeta('name', 'twitter:description', description)
     ensureMeta('name', 'twitter:image', `${BASE_URL}/og-image-1200x630.jpg`)
 
-    // 7. Canonical link
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.setAttribute('rel', 'canonical')
-      document.head.appendChild(canonical)
-    }
-    canonical.setAttribute('href', window.location.href.split('?')[0])
-
-    // 8. Hreflang alternate links
-    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove())
-    const path = to.path
-    for (const [loc, htmlLang] of Object.entries(LOCALE_TO_HTML_LANG)) {
-      const link = document.createElement('link')
-      link.setAttribute('rel', 'alternate')
-      link.setAttribute('hreflang', htmlLang)
-      link.setAttribute('href', `${BASE_URL}${path}`)
-      document.head.appendChild(link)
-    }
-    // x-default hreflang
-    const xDefault = document.createElement('link')
-    xDefault.setAttribute('rel', 'alternate')
-    xDefault.setAttribute('hreflang', 'x-default')
-    xDefault.setAttribute('href', `${BASE_URL}${path}`)
-    document.head.appendChild(xDefault)
+    // Canonical and hreflang are NOT touched here on purpose.
+    //
+    // They describe the served document, and the prerendered shell
+    // (scripts/prerender-meta.mjs) already emits the correct pair: a
+    // self-referencing canonical plus reciprocal zh-Hant / en / x-default
+    // alternates for the two indexed locales.
+    //
+    // This function used to delete every alternate on each navigation and
+    // rewrite six of them all pointing at the same URL — which is invalid
+    // (Google discards such a set) and silently undid the shell's correct
+    // markup the moment Vue hydrated. Rewriting canonical from
+    // window.location.href had the same problem. Leave both to the shell.
   }
 
   return {

@@ -134,6 +134,10 @@ const fetchData = async () => {
         'Authorization': `Bearer ${token}`
       }
     })
+    // A 403 here is a deliberate permission decision, not an outage.
+    if (response.status === 403) {
+      throw new Error('Your account does not have permission to view customer submissions.')
+    }
     if (!response.ok) throw new Error('Failed to fetch')
     submissions.value = await response.json()
   } catch (err: any) {

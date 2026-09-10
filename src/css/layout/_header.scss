@@ -128,6 +128,11 @@ nav a {
     &:hover {
         transform: scale(1.1);
     }
+
+    &:focus-visible {
+        outline: 2px solid $brand-orange;
+        outline-offset: 2px;
+    }
 }
 
 .collapsible-menu-nav {
@@ -146,6 +151,11 @@ nav a {
 
     &:hover {
         transform: rotate(90deg);
+    }
+
+    &:focus-visible {
+        outline: 2px solid $brand-orange;
+        outline-offset: 2px;
     }
 }
 

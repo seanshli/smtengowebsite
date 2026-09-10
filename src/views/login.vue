@@ -112,7 +112,7 @@ const handleLogin = async () => {
         border-radius: 8px;
         font-size: 1rem;
         transition: border-color 0.3s;
-        &:focus { border-color: #c46043; outline: none; }
+        &:focus-visible { border-color: #c46043; outline: 2px solid #c46043; outline-offset: 2px; }
       }
     }
     

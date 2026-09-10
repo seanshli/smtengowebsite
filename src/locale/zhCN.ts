@@ -17,6 +17,10 @@ export const zhCNLocale = {
 
   // SEO
   seo: {
+    notFound: {
+      title: '找不到页面 | enGo智管家',
+      description: '这个链接可能已经变更或失效。回到首页，或前往产品介绍、案例分享与联系我们。'
+    },
     core: {
       title: '核心价值 | enGo智管家的设计理念',
       description: 'enGo 以 AI 整合阳光、空气、水与食物，从健康、安心到便利，打造智慧生活的核心价值。'
@@ -206,11 +210,50 @@ export const zhCNLocale = {
   vision6: 'enGo 安购币回馈机制',
   vision7: 'B2B2C的互动架构',
 
+  // vision page — 五大元素 body copy
+  vision: {
+    sun: {
+      title: '阳光——拥抱自然',
+      copy: 'enGo 采用 AIoT 光线控制技术，让阳光成为您生活中的自然伴侣，带来愉悦与舒心的感受。'
+    },
+    air: {
+      title: '空气——无忧深呼吸',
+      copy: 'AI 智能空气品质管理系统，确保您在家中随时呼吸到清新、纯净的空气。过滤杂质并降低过敏源与病毒风险，让空气品质一目了然。'
+    },
+    water: {
+      title: '水——看得见的保障',
+      copy: 'enGo 的智慧水质管理系统搭载超级滤芯技术，利用 AI 精准监控，为您提供最纯净的饮用水。不再需要盲目更换滤芯，也无需担心浪费水源，确保您每一口喝到的都是最好的水。'
+    },
+    food: {
+      title: '食安——掌握健康生活',
+      copy: 'enGo 的智能管理系统为您提供全方位的食品安全保障，确保每一餐都能安心享用。'
+    },
+    safety: {
+      title: '安全——守护家的每一刻',
+      copy: '领先的智慧安防技术全天候守护您的家园，让您无忧无虑地享受高品质的家庭生活，体验社区经济带来的价值。'
+    },
+    closing:
+      'enGo「安购」，用科技温暖您的心灵，让 AI 帮您节能减碳，打造完美的家居生活。智慧管家不再是梦想，智慧家居 enGo「安购」将永远守护您。'
+  },
+
   // ecosystem (Top Level)
   ecosystemTitle: 'enGo 生态系统',
 
   // Forms / Misc (Top Level)
   name: '姓名',
+  chatbotTitle: 'enGo 小精灵',
+  brandName: 'enGo 智管家',
+  voucherTitle: 'EAP-01 空气清净机｜独家折扣码限时申请',
+  voucherRequesting: '您正在申请 EAP-01 折扣码。填写以下联络资料，我们将于 1–2 个工作日内将专属折扣码寄至您的 Email。',
+  voucherIntro1: '对 EAP-01 有兴趣吗？填写下方资料并于「我想了解的是」选择',
+  voucherIntroPath: '产品 → 空气清净机',
+  voucherIntro2: '，我们将于 1–2 个工作日内将独家折扣码寄至您的 Email。',
+  voucherCta: '先看看 EAP-01 →',
+  reviewNamePlaceholder: '您的姓名',
+  reviewCommentPlaceholder: '您的宝贵意见...',
+  reviewThanks: '感谢您的评价！',
+  voucherPrefillMessage: '我想申请 EAP-01 空气清净机的独家折扣码，请寄送至上方留下的 Email。谢谢！',
+  brandJournal: 'enGo 生活志',
   email: '电子邮件',
   phone: '电话',
   city: '城市',
@@ -342,26 +385,20 @@ export const zhCNLocale = {
     },
 
     tablet_intro: {
-      title: 'AI智慧家居全能管家',
-      info: 'AI 智慧家中控平板，可用AI语音操作，整合智慧管家、商城、食谱、物业连结及讯息管理。'
+      title: 'AI 智慧家居全能管家',
+      tagline: '家里的事，社区的事，都在同一面墙上',
+      info: 'enGo AI 智慧中控平板整合家电控制、环境感知、安全监控，以及社区公告、报修、公设预约与包裹通知。出门在外，用手机 App 一样掌握。'
     },
     brand_intro: {
       badge: '产品介绍',
       title: 'AI智慧管家中控平板',
-      title_tab: 'AI 替您轻松管理家中一切',
-      subTitle: 'AI 管家替您轻松管理家中一切',
-      subTitle_mob: '家中的大小事，都是 {housekeeper} 的事...',
-      housekeeper: '智管家',
-      desc01:
-        '透过 enGo AI 智慧中控平板整合管理家中的智能照明、智能家电、安全监控、音响系统、门锁及水处理等设备，提升家居的舒适度、安全性和能源效率。用户可以随时随地通过手机或 enGo AI 智慧中控平板远程控制和监控。',
-      desc01_tab:
-        '通过整合智能照明、智能家电、安全监控、音响系统、门锁及水处理等设备，提升了家居的舒适度、安全性和能源效率。用户可以随时随地通过手机或 enGo AI 智慧中控平板远程控制和监控。',
-      desc02:
-        '智管家以人工智慧、物联网和自动化技术为核心，致力于让生活更便利、更健康，为您和家人打造安全、舒适、便捷的智慧生活，让AI智慧整合系统替您创造美好生活。',
-      desc01_mob: '智管家是一个创新平台，将智慧AI科技深度融入家庭生活，提供智慧管家式的贴心照顾。',
-      desc02_mob:
-        '通过整合智能照明、智能家电、安全监控、音响系统、门锁及水处理等设备，提升了家居的舒适度、安全性和能源效率。用户可以随时随地通过手机或enGo AI智慧中控平板远程控制和监控。智管家以人工智慧、物联网和自动化技术为核心，致力于让生活更便利、更健康，为您和家人打造安全、舒适、便捷的智慧生活，让AI智慧整合系统替您创造美好生活。',
-      readMore: '阅读更多',
+      heading: '家中的大小事，都是智管家的事',
+      lead: '多数智慧家庭产品只管家里。enGo 同时管家里与社区——这是它与其他系统最根本的不同。',
+      homeLabel: '家里',
+      home: '照明、插座、窗帘、空调，以及电视、冷气等红外线家电。温湿度、空气质量、人体存在、瓦斯、漏水、烟雾的即时感知。摄影机画面、门口对讲、回路用电监测。',
+      communityLabel: '社区',
+      community: '公告不漏接、报修可追踪、公设线上预约、包裹送达智能柜后直接在 App 输码开柜。',
+      scenes: '常用的组合可以存成一键情境——「离家」一按，灯全关、空调关闭、安全模式开启。也可以设定自动化，让它依时间或感测器状态自己执行。',
       countCard: {
         card01: {
           unit: '项',
@@ -382,21 +419,29 @@ export const zhCNLocale = {
         }
       }
     },
+    interfaces: {
+      title: '三种界面，一组账号',
+      columns: { tablet: 'enGo3 墙挂平板', ios: 'iPhone / iPad', android: 'Android 手机' },
+      rows: {
+        control: '家电控制、情境、平面图',
+        community: '社区服务、摄影机、仓储',
+        voice: '语音操作',
+        photowall: '待机相片墙'
+      },
+      tabletOnly: '平板专属',
+      yes: '支持',
+      no: '不提供',
+      scrollHint: '左右滑动可查看其他平台 →',
+      footnote: '手机 App「enGo智慧管家」于 App Store 与 Google Play 下载。'
+    },
     tablet_function: {
       tag: '功能介绍',
-      annotation: {
-        A: {
-          title: '资讯整合平台',
-          info: '社区物业、家庭、个人讯息管理， 资讯同步不漏接'
-        },
-        B: {
-          title: '智慧仓储管理',
-          info: '家庭储物随时监控，并与商城服务连结，缺什么马上补！'
-        },
-        C: {
-          title: 'AIoT 云端智慧串连',
-          info: '随时掌控居家联网设备状态与管理，AI 管家 24hr 全天候守护'
-        }
+      tabletOnly: '平板专属',
+      features: {
+        voice: { title: '语音操作', body: '走到墙边说一句话就好。「开客厅灯」「冷气调到 26 度」「关掉会议室所有的灯」「下班模式」——不必掏出手机、不必找到那个按钮。涉及安全的装置会先向您确认；名称相似时系统会反问，不会替您乱猜。', note: '系统不会持续聆听，也不会在后台录音。' },
+        floorplan: { title: '平面图即时视图', body: '依您家实际房间格局生成的平面图，一眼看出哪间房有人、哪盏灯还亮着、哪台空调在运转。不必逐一点开装置。' },
+        photowall: { title: '待机相片墙', body: '没人使用时，平板自动切换成家人的照片，并可叠加时间、天气与最新社区公告。依现场环境光自动调整亮度——半夜不会刺眼，走廊开灯才亮起。碰一下就回到原本的画面。' },
+        inventory: { title: '智慧仓储管理', body: '家中储物、门市与办公室库存都能管。物品、柜位、分类、低库存提醒，并与商城订单与配送通知连结。' }
       }
     },
     engo_products: {
@@ -547,6 +592,9 @@ export const zhCNLocale = {
 
   // footer (Top Level)
   footer: {
+    returnPolicy: '退货政策',
+    privacyPolicy: '隐私权政策',
+    termsOfService: '服务条款',
     product: '产品',
     firstLink: 'enGo AI智慧中控系统',
     secondLink: '水维氧AI智慧净水系统',
@@ -569,6 +617,10 @@ export const zhCNLocale = {
 
   // Admin
   admin: {
+    resetPassword: '重设密码',
+    resetPasswordPrompt: '请为 {username} 输入新密码（至少 8 个字符）。请自行记下并亲自转交，系统不会寄送。',
+    passwordTooShort: '密码至少需要 8 个字符。',
+    passwordResetDone: '{username} 的密码已更新。请将新密码亲自转交，并提醒对方登录后至「个人资料」自行修改。',
     dashboard: '管理后台',
     submissions: '联络表单管理',
     logout: '登出',

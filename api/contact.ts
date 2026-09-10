@@ -119,7 +119,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const mailOptions = {
             from: `"enGo Website" <${process.env.SMTP_USER}>`,
             to: process.env.NOTIFICATION_EMAIL,
-            subject: `New Form Submission: ${name}`,
+            // CR/LF in a header value splits it — an injected \r\n in `name`
+            // would let a submitter forge extra mail headers.
+            subject: `New Form Submission: ${String(name).replace(/[\r\n]+/g, ' ').slice(0, 100)}`,
             text: `
         You have a new contact form submission:
 

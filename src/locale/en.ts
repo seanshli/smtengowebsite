@@ -16,6 +16,10 @@ export const enLocale = {
   ourPartners: 'Partner Products',
   // SEO
   seo: {
+    notFound: {
+      title: 'Page Not Found | enGo Smart Home',
+      description: 'This link may have changed or expired. Return to the home page, or browse our products, case studies and contact details.'
+    },
     core: {
       title: 'Core Values | The Philosophy Behind enGo',
       description: 'Discover the core values of enGo — using AI to integrate sunlight, air, water and food into a healthier, safer smart-living experience.'
@@ -200,6 +204,34 @@ export const enLocale = {
   vision6: 'enGo rewards point',
   vision7: 'B2B2C Interaction Framework',
 
+  visionIntextLogo:
+    'enGo applies advanced AI to weave sunlight, air, water and food into everyday home life — an energy-efficient, healthier, lower-waste home that is kinder to the planet.',
+  // vision page body copy
+  vision: {
+    sun: {
+      title: 'Sunlight — living with the natural day',
+      copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home — brighter mornings, calmer evenings, and comfort that follows the sun.'
+    },
+    air: {
+      title: 'Air — breathe without a second thought',
+      copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk — with air quality you can see at a glance.'
+    },
+    water: {
+      title: 'Water — protection you can see',
+      copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way — every glass is the best it can be.'
+    },
+    food: {
+      title: 'Food safety — health you stay on top of',
+      copy: 'enGo\'s intelligent management system provides end-to-end food safety assurance, so every meal on your table is one you can trust.'
+    },
+    safety: {
+      title: 'Security — watching over every moment at home',
+      copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry — and share in the value a connected community creates.'
+    },
+    closing:
+      'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream — enGo is here to look after your home for the long run.'
+  },
+
   // ecosystem
   ecosystemTitle: 'engo Ecosystem',
 
@@ -210,6 +242,19 @@ export const enLocale = {
   contactUsSubtitle1: 'If you have any questions',
   contactUsSubtitle2: 'please feel free to contact us.',
   name: 'Name',
+  chatbotTitle: 'enGo Assistant',
+  brandName: 'enGo Smart Home',
+  voucherTitle: 'EAP-01 Air Purifier | Limited-time exclusive discount code',
+  voucherRequesting: 'You are requesting an EAP-01 discount code. Fill in your contact details below and we will email your code within 1–2 working days.',
+  voucherIntro1: 'Interested in the EAP-01? Fill in the form below and choose ',
+  voucherIntroPath: 'Product → Air Purifier',
+  voucherIntro2: ' under "What I\'d like to know about", and we will email your exclusive code within 1–2 working days.',
+  voucherCta: 'See the EAP-01 →',
+  reviewNamePlaceholder: 'Your name',
+  reviewCommentPlaceholder: 'Your feedback...',
+  reviewThanks: 'Thank you for your review!',
+  voucherPrefillMessage: 'I would like to request the exclusive discount code for the EAP-01 air purifier. Please send it to the email address above. Thank you!',
+  brandJournal: 'enGo LIVING JOURNAL',
   email: 'E-mail',
   phone: 'Phone',
   city: 'City',
@@ -323,8 +368,53 @@ export const enLocale = {
       }
     },
     tablet_intro: {
-      title: 'AI Smart Hub Tablet',
-      info: 'Central Control of Your Smart Home'
+      title: 'The All-in-One AI Home Manager',
+      tagline: 'Everything at home, everything in your community — on one wall.',
+      info: 'The enGo AI smart control tablet brings together appliance control, environmental sensing and security monitoring, plus community notices, repair requests, facility bookings and parcel notifications. Away from home, the mobile app keeps you just as much in control.'
+    },
+    brand_intro: {
+      badge: 'Product',
+      title: 'AI Smart Home Control Tablet',
+      heading: 'Whatever needs doing at home, your smart butler handles it.',
+      lead: 'Most smart home products only look after the home. enGo looks after the home and the community together — that is the most fundamental way it differs from other systems.',
+      homeLabel: 'At home',
+      home: 'Lighting, sockets, curtains and air conditioning, plus infrared appliances such as TVs and air conditioners. Real-time sensing of temperature and humidity, air quality, presence, gas, water leaks and smoke. Camera feeds, door intercom and circuit-level power monitoring.',
+      communityLabel: 'In the community',
+      community: 'Never miss a notice, track repair requests, book facilities online, and when a parcel reaches the smart locker, open it by entering the code in the app.',
+      scenes: 'Save your everyday combinations as one-tap scenes — press “Leaving home” and every light goes off, the air conditioning shuts down and security mode switches on. Or set up automations that run on a schedule or on sensor status.',
+      countCard: {
+        card01: { unit: '', info: 'Patented designs' },
+        card02: { unit: '', info: 'AI features' },
+        card03: { unit: ' yrs', info: 'of R&D' },
+        // 10 + '0K' renders "100K": the count-up end value is fixed at 10 to match
+        // the zh "10 萬次", so the English magnitude has to come from the suffix.
+        card04: { tenThousand: '0K', unit: '', info: 'Verification tests' }
+      }
+    },
+    interfaces: {
+      title: 'Three interfaces, one account',
+      columns: { tablet: 'enGo3 wall tablet', ios: 'iPhone / iPad', android: 'Android phone' },
+      rows: {
+        control: 'Appliance control, scenes, floor plan',
+        community: 'Community services, cameras, inventory',
+        voice: 'Voice control',
+        photowall: 'Standby photo wall'
+      },
+      tabletOnly: 'Tablet only',
+      yes: 'Supported',
+      no: 'Not available',
+      scrollHint: 'Swipe to compare all three platforms →',
+      footnote: 'The “enGo智慧管家” mobile app is available on the App Store and Google Play.'
+    },
+    tablet_function: {
+      tag: 'Features',
+      tabletOnly: 'Tablet only',
+      features: {
+        voice: { title: 'Voice control', body: 'Just walk up to the wall and say it. “Turn on the living room light.” “Set the AC to 26 degrees.” “Turn off all the lights in the meeting room.” “After-work mode.” No reaching for your phone, no hunting for the right button. Safety-related devices ask you to confirm first, and when two names sound alike the system asks which you mean rather than guessing.', note: 'The system does not listen continuously and never records in the background.' },
+        floorplan: { title: 'Live floor plan', body: 'A floor plan generated from the actual room layout of your home shows at a glance which rooms are occupied, which lights are still on and which air conditioners are running — no need to open devices one by one.' },
+        photowall: { title: 'Standby photo wall', body: 'When no one is using it, the tablet switches to your family photos, with the time, weather and latest community notices overlaid. Brightness follows the ambient light — never glaring at night, lighting up only when the hallway lights come on. One touch brings the screen back.' },
+        inventory: { title: 'Smart inventory', body: 'Manage household storage, shop stock and office supplies alike: items, shelf locations, categories and low-stock alerts, linked to your shop orders and delivery notifications.' }
+      }
     },
     purchase: {
       btn: 'Buy Now'
@@ -380,6 +470,9 @@ export const enLocale = {
   },
   // footer
   footer: {
+    returnPolicy: 'Return Policy',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
     product: 'Product',
     firstLink: 'enGo AI Smart Hub',
     secondLink: 'Aiox AI Smart Water Purifier',

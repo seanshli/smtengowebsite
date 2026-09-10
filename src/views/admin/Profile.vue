@@ -61,6 +61,11 @@ const handleUpdatePassword = async () => {
   pwdError.value = ''
   successMsg.value = ''
   
+  if (passwords.value.new.length < 8) {
+    pwdError.value = t('admin.passwordTooShort')
+    return
+  }
+
   if (passwords.value.new !== passwords.value.confirm) {
     pwdError.value = t('admin.passwordMismatch')
     return

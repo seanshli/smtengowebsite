@@ -247,18 +247,17 @@ body {
                     width: 100vw;
                 }
 
-                .readMore {
-                    &_wrap {
-                        height: 40px;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                    }
-
-                    &_txt {
-                        text-decoration: underline;
-                    }
+                .intro-label {
+                    display: inline-block;
+                    margin-right: 8px;
+                    padding: 1px 8px;
+                    font-size: 0.85em;
+                    font-weight: 700;
+                    letter-spacing: 0.08em;
+                    border: 1px solid currentColor;
+                    vertical-align: 1px;
                 }
+
             }
 
             img {
@@ -313,6 +312,128 @@ body {
         }
     }
 
+    // 三種介面，一組帳號 — ENGO-WEB-001 §2.3
+    .interfaces {
+        background: $grey-blue3;
+
+        .tag {
+            width: fit-content;
+            border-radius: 0;
+            background-color: $grey-blue2;
+            color: #fff;
+
+            img {
+                width: 1.2em;
+                height: 1.2em;
+            }
+        }
+
+        &-scroll {
+            // The table scrolls inside its own box; the page never scrolls sideways.
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        &-table {
+            width: 100%;
+            min-width: 640px;
+            border-collapse: collapse;
+            font-size: 18px;
+            line-height: 1.5;
+
+            th,
+            td {
+                padding: 18px 16px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            thead th,
+            thead td {
+                border-bottom: 2px solid rgba(199, 183, 99, 0.6);
+            }
+
+            thead th {
+                font-family: 'Noto Serif TC', serif;
+                font-weight: 700;
+                font-size: 20px;
+                color: $gold;
+            }
+
+            tbody th {
+                text-align: left;
+                font-weight: 500;
+                width: 34%;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 15px;
+                // 480 in a ~330px box leaves the second column half visible,
+                // which is the cue that the table scrolls.
+                min-width: 480px;
+
+                th,
+                td {
+                    padding: 14px 10px;
+                }
+
+                thead th {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .if-yes {
+            color: $gold;
+            font-size: 1.1em;
+        }
+
+        .if-no {
+            opacity: 0.45;
+        }
+
+        .if-only {
+            display: block;
+            margin-top: 4px;
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            color: $gold;
+        }
+
+        &-hint {
+            opacity: 0.7;
+            letter-spacing: 0.04em;
+        }
+
+        &-note {
+            max-width: 42em;
+            opacity: 0.85;
+        }
+
+        // Phase 2 phone shots (§3.2 #6, #7)
+        &-figures {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            max-width: 720px;
+
+            figure {
+                margin: 0;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            @media (max-width: 560px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
     .tablet_function {
         .tag {
             width: fit-content;
@@ -328,411 +449,128 @@ body {
             }
         }
 
-        .tablet_img {
-            width: fit-content;
+        // 功能介紹 — ENGO-WEB-001 §2.4, four text cards; mirrors the .ap-feature-card
+        // plates used by the air-purifier block so the page keeps one card language.
+        .tf-features {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            &.is-visible .tf-card {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .tf-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 28px 26px 26px;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+
+            &:nth-child(2) { transition-delay: 0.1s; }
+            &:nth-child(3) { transition-delay: 0.2s; }
+            &:nth-child(4) { transition-delay: 0.3s; }
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            h3 {
+                margin: 0 0 12px;
+                font-size: 26px;
+                line-height: 1.35;
+                font-weight: 700;
+                color: $gold;
+            }
+
+            p {
+                margin: 0;
+                font-size: 17px;
+                line-height: 1.75;
+                opacity: 0.9;
+            }
+
+            @media (max-width: 768px) {
+                padding: 22px 18px;
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 15px;
+                    line-height: 1.7;
+                }
+            }
+        }
+
+        .tf-card-head {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .tf-num {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            color: $orange2;
+        }
+
+        .tf-badge {
+            padding: 3px 10px;
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            color: $gold;
+            border: 1px solid rgba(199, 183, 99, 0.6);
+        }
+
+        .tf-note {
+            margin-top: 14px !important;
+            padding-top: 12px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+            opacity: 1 !important;
+        }
+
+        // Phase 2 image slot — 16:10 like the tablet shots it will hold.
+        .tf-figure {
+            margin: 0 0 18px;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.04);
 
             img {
-                max-width: 831px;
+                display: block;
                 width: 100%;
-                height: auto;
-            }
-
-            @media (max-width: 1024px) and (min-width: 769px) {
-                img {
-                    width: 500px;
-                    height: 320px;
-                }
-            }
-
-        }
-
-        .annotation {
-            position: absolute;
-            border: 2px dashed $gold;
-            border-radius: 4px;
-            background-color: #ecd97d5b;
-
-            &_A {
-                width: 64px;
-                height: 114px;
-                top: 88px;
-                left: 49px;
-
-                @media (max-width: 1024px) and (min-width: 769px) {
-                    width: 55px;
-                    height: 78px;
-                    top: 50px;
-                    left: 23px;
-                }
-            }
-
-            &_B {
-                width: 126px;
-                height: 192px;
-                top: 251px;
-                left: 49px;
-
-                @media (max-width: 1024px) and (min-width: 769px) {
-                    width: 77px;
-                    height: 105px;
-                    top: 162px;
-                    left: 28px;
-                }
-            }
-
-            &_C {
-                width: 378px;
-                height: 316px;
-                top: 88px;
-                left: 183px;
-
-                @media (max-width: 1024px) and (min-width: 769px) {
-                    width: 232px;
-                    height: 193px;
-                    top: 47px;
-                    left: 109px;
-                }
-            }
-
-            &_D {
-                width: 38px;
-                height: 38px;
-                top: 49px;
-                right: 51px;
-
-                @media (max-width: 1024px) and (min-width: 769px) {
-                    height: 28px;
-                    top: 27px;
-                    right: 28px;
-                    width: 27px;
-                }
-            }
-
-            &_frame {
-                border: 2px dashed $gold;
-                border-radius: 16px;
-
-
-                .dot {
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 999em;
-                    display: block;
-                    content: '';
-                    background: $gold;
-                }
-            }
-
-            &_line {
-                &_A01 {
-                    top: 126px;
-                    right: 65px;
-                    width: 2px;
-                    height: 85px;
-                    border: 2px solid $gold;
-
-                    @media (max-width: 1024px) and (min-width: 769px) {
-                        height: 91px;
-                        top: 97px;
-                        right: 37px;
-                        border: 1px solid $gold;
-                    }
-
-                    .dot {
-                        left: -5px;
-
-                        &-01 {
-                            top: -5px;
-                        }
-
-                        &-02 {
-                            bottom: -5px;
-                        }
-                    }
-                }
-
-                &_A02 {
-                    top: 63px;
-                    left: -186px;
-                    width: 186px;
-                    height: 2px;
-                    border: 2px solid $gold;
-
-                    @media (max-width: 1024px) and (min-width: 769px) {
-                        width: 105px;
-                        left: -106px;
-                        border: 1px solid $gold;
-                    }
-
-                    .dot {
-                        right: -5px;
-
-                        &-01 {
-                            top: -5px;
-                        }
-                    }
-                }
-
-                &_A03 {
-                    top: 63px;
-                    left: -186px;
-                    width: 2px;
-                    height: 186px;
-                    border: 2px solid $gold;
-
-                    @media (max-width: 1024px) and (min-width: 769px) {
-                        height: 146px;
-                        left: -108px;
-                        border: 1px solid $gold;
-                    }
-
-                    .dot {
-                        right: -5px;
-
-                        &-01 {
-                            bottom: -5px;
-                        }
-                    }
-                }
-
-                &_B {
-                    width: 220px;
-                    height: 2px;
-                    border: 2px solid $gold;
-                    top: 60px;
-                    left: 256px;
-
-                    @media (max-width: 1024px) and (min-width: 900px) {
-                        width: 140px;
-                        height: 2px;
-                        top: 47px;
-                        left: 175px;
-                        border: 1px solid $gold;
-                    }
-
-                    @media (max-width: 900px) and (min-width: 769px) {
-                        width: 110px;
-                        height: 2px;
-                        top: 47px;
-                        left: 175px;
-                        border: 1px solid $gold;
-                    }
-
-                    .dot {
-                        top: -5px;
-
-                        &-01 {
-                            left: -5px;
-                        }
-
-                        &-02 {
-                            right: -5px;
-                        }
-                    }
-                }
-
-                &_C {
-                    width: 290px;
-                    height: 2px;
-                    border: 2px solid $gold;
-                    top: 60px;
-                    left: 325px;
-
-                    @media (max-width: 1024px) and (min-width: 900px) {
-                        width: 180px;
-                        height: 2px;
-                        top: 22px;
-                        left: 172px;
-                        border: 1px solid $gold;
-                    }
-
-                    @media (max-width: 900px) and (min-width: 769px) {
-                        width: 150px;
-                        height: 2px;
-                        top: 22px;
-                        left: 172px;
-                        border: 1px solid $gold;
-                    }
-
-                    .dot {
-                        top: -5px;
-
-                        &-01 {
-                            left: -5px;
-                        }
-
-                        &-02 {
-                            right: -5px;
-                        }
-                    }
-                }
-            }
-
-            &_text {
-                &_A {
-                    width: 272px;
-                    top: 0;
-                    right: 0;
-
-                    @media (max-width: 1024px) and (min-width: 769px) {
-                        width: 200px;
-                        padding: 8px !important;
-
-                        h4 {
-                            font-size: 16px !important;
-                        }
-
-                        h5 {
-                            font-size: 12px !important;
-                        }
-                    }
-                }
-
-                &_B {
-                    width: 256px;
-                    top: 205px;
-                    left: 24px;
-
-                    @media (max-width: 1024px) and (min-width: 900px) {
-                        width: 176px;
-                        left: 120px;
-                        padding: 8px !important;
-                        top: 185px;
-
-                        h4 {
-                            font-size: 16px !important;
-                        }
-
-                        h5 {
-                            font-size: 12px !important;
-                        }
-                    }
-
-                    @media (max-width: 900px) and (min-width: 769px) {
-                        width: 176px;
-                        left: 0;
-                        padding: 8px !important;
-                        top: 185px;
-
-                        h4 {
-                            font-size: 16px !important;
-                        }
-
-                        h5 {
-                            font-size: 12px !important;
-                        }
-                    }
-                }
-
-                &_C {
-                    width: 325px;
-                    top: 482px;
-                    left: 24px;
-
-                    @media (max-width: 1024px) and (min-width: 900px) {
-                        width: 175px;
-                        padding: 8px !important;
-                        left: 120px;
-                        top: 343px;
-
-                        h4 {
-                            font-size: 16px !important;
-                        }
-
-                        h5 {
-                            font-size: 12px !important;
-                        }
-                    }
-
-                    @media (max-width: 900px) and (min-width: 769px) {
-                        width: 175px;
-                        padding: 8px !important;
-                        left: 0;
-                        top: 343px;
-
-                        h4 {
-                            font-size: 16px !important;
-                        }
-
-                        h5 {
-                            font-size: 12px !important;
-                        }
-                    }
-                }
-            }
-
-        }
-
-        .mob_img_wrap {
-            max-width: 100%;
-
-            .tablet_img {
-                max-width: 100%;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-
-                .annotation {
-                    position: absolute;
-                    border: 2px dashed $gold;
-                    border-radius: 4px;
-                    background-color: #ecd97d5b;
-
-                    &_A {
-                        width: 7%;
-                        height: 20%;
-                        top: 16%;
-                        left: 6%;
-                    }
-
-                    &_B {
-                        width: 15%;
-                        height: 36%;
-                        top: 47%;
-                        left: 6%;
-                    }
-
-                    &_C {
-                        width: 46%;
-                        height: 65%;
-                        top: 16%;
-                        left: 22%;
-                    }
-
-                    &_D {
-                        width: 4%;
-                        height: 7%;
-                        top: 10%;
-                        right: 6%;
-                    }
-                }
-
+                height: 100%;
+                object-fit: cover;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tf-card {
+                transition: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
 
     }
-}
-
-.animate1 {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-}
-
-.animate2 {
-    animation-name: colorChange;
-    animation-duration: 3s;
-}
-
-.animate3 {
-    animation-name: moveFromLeft;
-    animation-duration: 2s;
-}
-
-.animate4 {
-    animation-name: moveFromTop;
-    animation-duration: 2s;
 }
 
 @keyframes fadeIn {
@@ -742,28 +580,6 @@ body {
 
     to {
         opacity: 1;
-    }
-}
-
-@keyframes colorChange {
-    from {
-        background-color: transparent;
-    }
-
-    to {
-        background-color: #ecd97d5b;
-    }
-}
-
-@keyframes moveFromLeft {
-    from {
-        left: -38px;
-    }
-}
-
-@keyframes moveFromTop {
-    from {
-        top: -38px;
     }
 }
 

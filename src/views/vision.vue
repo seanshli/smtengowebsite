@@ -1,93 +1,265 @@
 <template>
-  <section id="vision" class="vision-section">
-    <div class="vision-section-container">
-      <h2 class="section-title with-horizontal-strip-orange">{{ $t('visionTitle') }}</h2>
-      <h2></h2>
-      <p class="text-color-dark-grey">{{ $t('visionIntextLogo') }}</p>
-      <h2 class="section-second-title">
-        <img class="in-text-logo-engo" src="/assets/logo-orange.svg" alt="enGo Logo" />
-        **陽光——擁抱自然**
-      </h2>
-      <h2></h2>
-      <p class="text-color-dark-grey">"enGo 採用 AIot 光線控制技術，讓陽光成為您生活中的自然伴侶，帶來愉悅與舒心的感受。</p>
-      <h2 class="section-second-title">
-        <img class="in-text-logo-engo" src="/assets/logo-orange.svg" alt="enGo Logo" />
-        **空氣——無憂深呼吸**
-      </h2>
-      <h2></h2>
-      <p class="text-color-dark-grey">"AI 智能空氣品質管理系統，確保您在家中隨時呼吸到清新、純淨的空氣。通過過濾雜質並降低過敏源與病毒風險，讓空氣品質一目了然。</p>
-      <h2 class="section-second-title">
-        <img class="in-text-logo-engo" src="/assets/logo-orange.svg" alt="enGo Logo" />
-        **水——看的見保障**
-      </h2>
-      <h2></h2>
-      <p class="text-color-dark-grey">enGo 的智慧水質管理系統搭載超級濾芯技術，利用 AI 精準監控，為您提供最純淨的飲用水。不再需要盲目更換濾芯，也無需擔心浪費水源，確保您每一口喝到的都是最好的水。</p>
-      <h2 class="section-second-title">
-        <img class="in-text-logo-engo" src="/assets/logo-orange.svg" alt="enGo Logo" />
-        **食安——掌握健康生活**
-      </h2>
-      <h2></h2>
-      <p class="text-color-dark-grey">enGo 的智能管理系統為您提供全方位的食品安全保障，確保每一餐都能安心享用。</p>
-      <h2 class="section-second-title">
-        <img class="in-text-logo-engo" src="/assets/logo-orange.svg" alt="enGo Logo" />
-        **安全——守護家的每一刻**
-      </h2>
-      <h2></h2>
-      <p class="text-color-dark-grey">領先的智慧安防技術全天候守護您的家園，讓您無憂無慮地享受高品質的家庭生活，體驗社區經濟帶來的價值。</p>
-      <h2></h2>
-      <p class="text-color-dark-grey">enGo「安購」，用科技溫暖您的心靈，讓 AI 幫您節能減碳，打造完美的家居生活。智慧管家不再是夢想。智慧家居 enGo「安購」將永遠守護您。</p>
-      <h2></h2>
-      <div class="vision-blocks-container">
-        <div class="vision-block">
-          <div class="vision-number vision-number-red">01</div>
-          <img
-            class="vision-image"
-            src="/images/business-model-icon.svg"
-            alt="business model icon"
-          />
-          <div class="vision-text">{{ $t('vision1') }}</div>
-        </div>
-        <div class="vision-block">
-          <div class="vision-number vision-number-light-blue">02</div>
-          <img
-            class="vision-image"
-            src="/images/artificial-intelligence-ai-icon.svg"
-            alt="artificial intelligence ai icon"
-          />
-          <div class="vision-text">{{ $t('vision2') }}</div>
-        </div>
-        <div class="vision-block">
-          <div class="vision-number vision-number-blue">03</div>
-          <img class="vision-image" src="/images/sharing-icon.svg" alt="branding icon" />
-          <div class="vision-text">{{ $t('vision3') }}</div>
-        </div>
-        <div class="vision-block">
-          <div class="vision-number vision-number-green">04</div>
-          <img
-            class="vision-image"
-            src="/images/shelf-shelves-icon.svg"
-            alt="shelves icon"
-          />
-          <div class="vision-text">{{ $t('vision4') }}</div>
-        </div>
-        <div class="vision-block">
-          <div class="vision-number vision-number-yellow">05</div>
-          <img class="vision-image" src="/images/iot-icon.svg" alt="iot icon" />
-          <div class="vision-text">{{ $t('vision5') }}</div>
-        </div>
-        <div class="vision-block">
-          <div class="vision-number vision-number-red">06</div>
-          <img class="vision-image" src="/images/engo-coin.svg" alt="enGo icon" />
-          <div class="vision-text">{{ $t('vision6') }}</div>
-        </div>
-        <div class="vision-block">
-          <div class="vision-number vision-number-light-blue">07</div>
-          <img class="vision-image" src="/images/b2b2c.svg" alt="b2c framework icon" />
-          <div class="vision-text">{{ $t('vision7') }}</div>
-        </div>
+  <!-- vsn- namespace: the .vision-* classes in _about.scss are shared with
+       about.vue, so this page owns its editorial layout under its own prefix. -->
+  <section id="vision" class="vsn-page">
+    <!-- Editorial masthead -->
+    <header class="vsn-mast">
+      <p class="vsn-kicker">{{ $t('brandJournal') }}</p>
+      <h1 class="vsn-title">{{ $t('visionTitle') }}</h1>
+      <p class="vsn-sub fade-in">{{ $t('visionIntextLogo') }}</p>
+    </header>
+
+    <!-- The five elements as numbered editorial plates -->
+    <div class="vsn-elements">
+      <article v-for="(id, i) in elements" :key="id" class="vsn-plate fade-in">
+        <span class="vsn-plate-num">{{ String(i + 1).padStart(2, '0') }}</span>
+        <h2 class="vsn-plate-title">
+          <img class="vsn-plate-logo" src="/assets/logo-orange.svg" alt="enGo" />
+          {{ $t(`vision.${id}.title`) }}
+        </h2>
+        <p class="vsn-plate-copy">{{ $t(`vision.${id}.copy`) }}</p>
+      </article>
+    </div>
+
+    <!-- Conclusion as a pull-quote -->
+    <blockquote class="vsn-quote fade-in">
+      <p>{{ $t('vision.closing') }}</p>
+    </blockquote>
+
+    <!-- Seven strategic directions -->
+    <div class="vsn-blocks">
+      <div v-for="(b, i) in blocks" :key="b.icon" class="vsn-block fade-in">
+        <span class="vsn-block-num">{{ String(i + 1).padStart(2, '0') }}</span>
+        <img class="vsn-block-img" :src="b.icon" :alt="b.alt" />
+        <p class="vsn-block-text">{{ $t('vision' + (i + 1)) }}</p>
       </div>
     </div>
   </section>
 </template>
-<script setup lang="ts">
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useScrollReveal } from '../composables/useScrollReveal'
+
+// Order drives both the numbering and the locale lookup `vision.<id>.*`.
+const ELEMENTS = ['sun', 'air', 'water', 'food', 'safety'] as const
+
+// Text comes from the existing flat vision1..vision7 keys, by position.
+const BLOCKS = [
+  { icon: '/images/business-model-icon.svg', alt: 'business model icon' },
+  { icon: '/images/artificial-intelligence-ai-icon.svg', alt: 'artificial intelligence ai icon' },
+  { icon: '/images/sharing-icon.svg', alt: 'branding icon' },
+  { icon: '/images/shelf-shelves-icon.svg', alt: 'shelves icon' },
+  { icon: '/images/iot-icon.svg', alt: 'iot icon' },
+  { icon: '/images/engo-coin.svg', alt: 'enGo icon' },
+  { icon: '/images/b2b2c.svg', alt: 'b2b2c framework icon' }
+]
+
+export default defineComponent({
+  name: 'Vision',
+  setup() {
+    useScrollReveal('.fade-in', 'visible')
+    return { elements: ELEMENTS, blocks: BLOCKS }
+  }
+})
 </script>
+
+<style scoped lang="scss">
+@import '../css/utils/variables';
+@import '../css/utils/masthead';
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.vsn-page {
+  background: $warm-bg-light;
+  padding: 110px 5vw 100px;
+
+  @media (max-width: 768px) {
+    padding-top: 96px;
+  }
+}
+
+.vsn-mast {
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  @include masthead-block;
+}
+
+.vsn-kicker {
+  @include masthead-kicker;
+}
+
+.vsn-title {
+  @include masthead-title;
+}
+
+.vsn-sub {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+  line-height: 1.8;
+  color: $grey-blue2;
+  max-width: 30em;
+}
+
+// ─── five elements ───
+.vsn-elements {
+  max-width: 1100px;
+  margin: 0 auto 64px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+.vsn-plate {
+  position: relative;
+  background: $warm-bg-cream;
+  border: 1px solid rgba($grey-blue3, 0.32);
+  border-radius: 0;
+  padding: 30px 28px 26px;
+  transition: transform 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 8px -8px -8px 8px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    transform: translate(-3px, -3px);
+
+    &::before {
+      border-color: $brand-orange;
+    }
+  }
+}
+
+.vsn-plate-num {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+  color: transparent;
+  -webkit-text-stroke: 1.5px $brand-orange;
+}
+
+.vsn-plate-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  line-height: 1.45;
+  color: $grey-blue3;
+  margin: 10px 0 12px;
+}
+
+.vsn-plate-logo {
+  flex: none;
+  width: auto;
+  height: 1em;
+}
+
+.vsn-plate-copy {
+  font-size: 1.02rem;
+  line-height: 1.95;
+  color: #4c4c4c;
+}
+
+// ─── closing pull-quote ───
+.vsn-quote {
+  max-width: 1100px;
+  margin: 0 auto 72px;
+  border-left: 3px solid $brand-orange;
+  padding-left: clamp(20px, 3vw, 36px);
+
+  p {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.6vw, 1.8rem);
+    line-height: 2;
+    color: $grey-blue2;
+    max-width: 34em;
+  }
+}
+
+// ─── seven strategic directions ───
+.vsn-blocks {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vsn-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background: $warm-bg-cream;
+  border: 1px solid rgba($grey-blue3, 0.32);
+  border-radius: 0;
+  padding: 24px 22px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translate(-3px, -3px);
+    border-color: $brand-orange;
+  }
+}
+
+.vsn-block-num {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: transparent;
+  -webkit-text-stroke: 1.3px $brand-orange;
+}
+
+.vsn-block-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.vsn-block-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 600;
+  color: $grey-blue2;
+}
+</style>
