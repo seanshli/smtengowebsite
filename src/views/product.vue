@@ -309,7 +309,7 @@
         <!-- 三種介面，一組帳號 — ENGO-WEB-001 §2.3. New to this page: the old one
              never mentioned the iOS and Android apps. Solid ground because
              background_2.png is mid-transition here and text colour would be a guess. -->
-        <div class="interfaces px-118 px-tab-50 px-mob-24 pt-72 pb-72 pt-mob-48 pb-mob-40 text-white">
+        <div id="interfaces" class="interfaces px-118 px-tab-50 px-mob-24 pt-72 pb-72 pt-mob-48 pb-mob-40 text-white">
           <div class="tag d-flex ai-c py-8 px-16 ml-mob-0">
             <img class="pr-4" src="/assets/logo_G.svg" alt="" />
             <div>{{ $t('product.interfaces.title') }}</div>
