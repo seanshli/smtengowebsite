@@ -311,7 +311,7 @@
              background_2.png is mid-transition here and text colour would be a guess. -->
         <div class="interfaces px-118 px-tab-50 px-mob-24 pt-72 pb-72 pt-mob-48 pb-mob-40 text-white">
           <div class="tag d-flex ai-c py-8 px-16 ml-mob-0">
-            <img class="pr-4" src="/assets/engo.svg" alt="" />
+            <img class="pr-4" src="/assets/logo_G.svg" alt="" />
             <div>{{ $t('product.interfaces.title') }}</div>
           </div>
           <div class="interfaces-scroll mt-40 mt-mob-28">
