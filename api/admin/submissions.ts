@@ -59,7 +59,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 .select()
 
             if (error) throw error
-            return res.status(200).json(data[0])
+            // The updated row comes back whole. An operator who just changed a
+            // status must not receive the customer's contact details here when
+            // GET would have masked them -- same redaction, same rule.
+            return res.status(200).json(isSuperuser ? data[0] : redactSubmission(data[0]))
         } catch (err: any) {
             console.error('Update error:', err)
             return res.status(500).json({ error: 'Could not update submission' })
