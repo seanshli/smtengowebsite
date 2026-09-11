@@ -422,7 +422,7 @@ export const zhLocale = {
     },
     interfaces: {
       title: '三種介面，一組帳號',
-      columns: { tablet: 'enGo3 牆掛平板', ios: 'iPhone / iPad', android: 'Android 手機' },
+      columns: { tablet: 'enGo 牆掛平板', ios: 'iPhone / iPad', android: 'Android 手機' },
       rows: {
         control: '家電控制、情境、平面圖',
         community: '社區服務、攝影機、倉儲',

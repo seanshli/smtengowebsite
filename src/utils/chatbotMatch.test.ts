@@ -17,7 +17,7 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['支援 Apple HomeKit 嗎', 'homekit-siri'],
     ['相片牆半夜會很亮嗎', 'photo-wall'],
     ['App 叫什麼名字 哪裡下載', 'app-download'],
-    ['iPhone 和平板功能一樣嗎', 'engo3-interfaces'],
+    ['iPhone 和平板功能一樣嗎', 'engo-interfaces'],
     ['怎麼報修', 'property-management'],
     ['配網失敗 連不上', 'device-pairing'],
     ['資料存在哪裡 會傳到國外嗎', 'data-privacy'],
