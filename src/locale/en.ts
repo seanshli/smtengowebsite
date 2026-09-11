@@ -394,7 +394,7 @@ export const enLocale = {
     },
     interfaces: {
       title: 'Three interfaces, one account',
-      columns: { tablet: 'enGo3 wall tablet', ios: 'iPhone / iPad', android: 'Android phone' },
+      columns: { tablet: 'enGo wall tablet', ios: 'iPhone / iPad', android: 'Android phone' },
       rows: {
         control: 'Appliance control, scenes, floor plan',
         community: 'Community services, cameras, inventory',

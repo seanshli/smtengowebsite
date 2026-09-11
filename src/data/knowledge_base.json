@@ -19,8 +19,8 @@
                 "智慧管家",
                 "hms",
                 "engo hms",
-                "enGo3",
-                "enGo 3",
+                "enGo",
+                "enGo",
                 "智慧中控",
                 "中控系統"
             ],
@@ -34,7 +34,7 @@
             }
         },
         {
-            "id": "engo3-interfaces",
+            "id": "engo-interfaces",
             "keywords": [
                 "介面",
                 "界面",
@@ -65,12 +65,12 @@
                 "平板跟手機"
             ],
             "answer": {
-                "zh": "**三種介面，一組帳號**\n\n同一組帳號可在三種介面登入，功能**不完全相同**：\n\n📺 **enGo3 牆掛平板** — 家中主控台，隨系統安裝\n📱 **iPhone / iPad** — 在外遠端掌握，App Store 下載\n🤖 **Android 手機** — 在外遠端掌握，Google Play 下載\n\n三種介面都有：家電控制、情境、平面圖即時視圖、社區服務（公告／報修／預約／包裹）、攝影機即時畫面、倉儲管理。\n\n⭐ **僅平板**：語音操作、待機相片牆。\n\n手機 App 免費下載；同一住家的成員各自用自己的帳號登入，登入裝置數不限。\n\n🔗 [了解三種介面](/product)",
-                "en": "**Three interfaces, one account**\n\nOne account signs in on three interfaces, which **do not have identical features**:\n\n📺 **enGo3 wall tablet** — the control hub at home, installed with the system\n📱 **iPhone / iPad** — remote control when out, from the App Store\n🤖 **Android phone** — remote control when out, from Google Play\n\nOn all three: appliance control, scenes, live floor plan, community services (notices/repairs/bookings/parcels), live camera view, inventory.\n\n⭐ **Tablet only**: voice control and the standby photo wall.\n\nThe mobile app is free; each household member signs in with their own account, on any number of devices.\n\n🔗 [See the three interfaces](/product)",
-                "ja": "**3つのインターフェース、1つのアカウント**\n\n同じアカウントで3つの画面にログインできますが、機能は**同一ではありません**：\n\n📺 **enGo3 壁掛けタブレット** — 家の司令塔、システムと一緒に設置\n📱 **iPhone / iPad** — 外出先から操作、App Store\n🤖 **Android** — 外出先から操作、Google Play\n\n3つ共通：家電操作・シーン・フロアプラン・コミュニティサービス（お知らせ/修理/予約/宅配）・カメラ・在庫管理。\n\n⭐ **タブレットのみ**：音声操作・待機フォトウォール。\n\nアプリは無料。家族それぞれのアカウントでログインでき、台数制限はありません。\n\n🔗 [3つの画面を見る](/product)",
-                "fr": "**Trois interfaces, un seul compte**\n\nUn même compte se connecte sur trois interfaces, dont les fonctions **ne sont pas identiques** :\n\n📺 **Tablette murale enGo3** — le poste de commande à la maison, installée avec le système\n📱 **iPhone / iPad** — commande à distance, sur l'App Store\n🤖 **Android** — commande à distance, sur Google Play\n\nSur les trois : appareils, scènes, plan en direct, services de la résidence (avis/réparations/réservations/colis), caméras, inventaire.\n\n⭐ **Tablette uniquement** : commande vocale et mur de photos en veille.\n\nL'appli est gratuite ; chaque membre du foyer se connecte avec son propre compte, sans limite d'appareils.\n\n🔗 [Voir les trois interfaces](/product)",
-                "es": "**Tres interfaces, una cuenta**\n\nUna misma cuenta entra en tres interfaces, cuyas funciones **no son idénticas**:\n\n📺 **Tableta de pared enGo3** — el centro de control en casa, instalada con el sistema\n📱 **iPhone / iPad** — control remoto fuera de casa, en el App Store\n🤖 **Android** — control remoto fuera de casa, en Google Play\n\nEn las tres: electrodomésticos, escenas, plano en tiempo real, servicios de la comunidad (avisos/reparaciones/reservas/paquetes), cámaras, inventario.\n\n⭐ **Solo tableta**: control por voz y muro de fotos en reposo.\n\nLa app es gratuita; cada miembro del hogar entra con su propia cuenta, sin límite de dispositivos.\n\n🔗 [Ver las tres interfaces](/product)",
-                "zhCN": "**三种界面，一组账号**\n\n同一组账号可在三种界面登入，功能**不完全相同**：\n\n📺 **enGo3 墙挂平板** — 家中主控台，随系统安装\n📱 **iPhone / iPad** — 在外远端掌握，App Store 下载\n🤖 **Android 手机** — 在外远端掌握，Google Play 下载\n\n三种界面都有：家电控制、情境、平面图即时视图、社区服务（公告／报修／预约／包裹）、摄影机即时画面、仓储管理。\n\n⭐ **仅平板**：语音操作、待机相片墙。\n\n手机 App 免费下载；同一住家的成员各自用自己的账号登入，登入装置数不限。\n\n🔗 [了解三种界面](/product)"
+                "zh": "**三種介面，一組帳號**\n\n同一組帳號可在三種介面登入，功能**不完全相同**：\n\n📺 **enGo 牆掛平板** — 家中主控台，隨系統安裝\n📱 **iPhone / iPad** — 在外遠端掌握，App Store 下載\n🤖 **Android 手機** — 在外遠端掌握，Google Play 下載\n\n三種介面都有：家電控制、情境、平面圖即時視圖、社區服務（公告／報修／預約／包裹）、攝影機即時畫面、倉儲管理。\n\n⭐ **僅平板**：語音操作、待機相片牆。\n\n手機 App 免費下載；同一住家的成員各自用自己的帳號登入，登入裝置數不限。\n\n🔗 [了解三種介面](/product)",
+                "en": "**Three interfaces, one account**\n\nOne account signs in on three interfaces, which **do not have identical features**:\n\n📺 **enGo wall tablet** — the control hub at home, installed with the system\n📱 **iPhone / iPad** — remote control when out, from the App Store\n🤖 **Android phone** — remote control when out, from Google Play\n\nOn all three: appliance control, scenes, live floor plan, community services (notices/repairs/bookings/parcels), live camera view, inventory.\n\n⭐ **Tablet only**: voice control and the standby photo wall.\n\nThe mobile app is free; each household member signs in with their own account, on any number of devices.\n\n🔗 [See the three interfaces](/product)",
+                "ja": "**3つのインターフェース、1つのアカウント**\n\n同じアカウントで3つの画面にログインできますが、機能は**同一ではありません**：\n\n📺 **enGo 壁掛けタブレット** — 家の司令塔、システムと一緒に設置\n📱 **iPhone / iPad** — 外出先から操作、App Store\n🤖 **Android** — 外出先から操作、Google Play\n\n3つ共通：家電操作・シーン・フロアプラン・コミュニティサービス（お知らせ/修理/予約/宅配）・カメラ・在庫管理。\n\n⭐ **タブレットのみ**：音声操作・待機フォトウォール。\n\nアプリは無料。家族それぞれのアカウントでログインでき、台数制限はありません。\n\n🔗 [3つの画面を見る](/product)",
+                "fr": "**Trois interfaces, un seul compte**\n\nUn même compte se connecte sur trois interfaces, dont les fonctions **ne sont pas identiques** :\n\n📺 **Tablette murale enGo** — le poste de commande à la maison, installée avec le système\n📱 **iPhone / iPad** — commande à distance, sur l'App Store\n🤖 **Android** — commande à distance, sur Google Play\n\nSur les trois : appareils, scènes, plan en direct, services de la résidence (avis/réparations/réservations/colis), caméras, inventaire.\n\n⭐ **Tablette uniquement** : commande vocale et mur de photos en veille.\n\nL'appli est gratuite ; chaque membre du foyer se connecte avec son propre compte, sans limite d'appareils.\n\n🔗 [Voir les trois interfaces](/product)",
+                "es": "**Tres interfaces, una cuenta**\n\nUna misma cuenta entra en tres interfaces, cuyas funciones **no son idénticas**:\n\n📺 **Tableta de pared enGo** — el centro de control en casa, instalada con el sistema\n📱 **iPhone / iPad** — control remoto fuera de casa, en el App Store\n🤖 **Android** — control remoto fuera de casa, en Google Play\n\nEn las tres: electrodomésticos, escenas, plano en tiempo real, servicios de la comunidad (avisos/reparaciones/reservas/paquetes), cámaras, inventario.\n\n⭐ **Solo tableta**: control por voz y muro de fotos en reposo.\n\nLa app es gratuita; cada miembro del hogar entra con su propia cuenta, sin límite de dispositivos.\n\n🔗 [Ver las tres interfaces](/product)",
+                "zhCN": "**三种界面，一组账号**\n\n同一组账号可在三种界面登入，功能**不完全相同**：\n\n📺 **enGo 墙挂平板** — 家中主控台，随系统安装\n📱 **iPhone / iPad** — 在外远端掌握，App Store 下载\n🤖 **Android 手机** — 在外远端掌握，Google Play 下载\n\n三种界面都有：家电控制、情境、平面图即时视图、社区服务（公告／报修／预约／包裹）、摄影机即时画面、仓储管理。\n\n⭐ **仅平板**：语音操作、待机相片墙。\n\n手机 App 免费下载；同一住家的成员各自用自己的账号登入，登入装置数不限。\n\n🔗 [了解三种界面](/product)"
             }
         },
         {
@@ -146,12 +146,12 @@
                 "手機沒有語音"
             ],
             "answer": {
-                "zh": "**語音操作（enGo3 牆掛平板專屬）**\n\n語音為牆掛平板專屬功能，手機 App 沒有語音介面。**具體的啟動方式依機型設定而異，請洽專人說明。**\n\n可以這樣說：\n🗣️ 「開客廳燈」「把冷氣關掉」\n🗣️ 「冷氣調到 26 度」「客廳燈調亮一點」\n🗣️ 「關掉會議室所有的燈」\n🗣️ 「下班模式」「執行回家情境」\n🗣️ 「我的報修進度」「這週有什麼公告」\n\n🔒 系統**不會持續聆聽，也不會在背景錄音**——只有在您主動啟動語音後才接收聲音，一次對話結束就停止。\n\n💡 認不出裝置時：改用 App 裡的完整名稱；剛改過名稱可按首頁右上的手動更新；吵雜時靠近平板再說一次。名稱相似時系統會反問，不會亂猜。\n\n📞 啟動方式與機型設定：02-27510218（週一至週五 09:00–18:00）",
-                "en": "**Voice control (enGo3 wall tablet only)**\n\nVoice is exclusive to the wall tablet; the mobile app has no voice interface. **How voice is activated depends on the model configuration — please ask our team.**\n\nThings you can say:\n🗣️ \"Turn on the living room light\" / \"Turn off the AC\"\n🗣️ \"Set the AC to 26 degrees\" / \"Brighten the living room light\"\n🗣️ \"Turn off all the lights in the meeting room\"\n🗣️ \"After-work mode\" / \"Run the home scene\"\n🗣️ \"My repair status\" / \"Any notices this week?\"\n\n🔒 The system **does not listen continuously and never records in the background** — it only receives audio after you activate voice, and stops when the exchange ends.\n\n💡 If a device isn't recognised: use its full name from the app; tap manual refresh (top right of Home) after renaming; move closer in noisy rooms. When two names sound alike it asks which you mean rather than guessing.\n\n📞 Activation and model setup: 02-27510218 (Mon–Fri 09:00–18:00)",
-                "ja": "**音声操作（enGo3 壁掛けタブレット専用）**\n\n音声はタブレット専用で、スマホアプリにはありません。**起動方法は機種設定により異なるため、担当者にご確認ください。**\n\n話しかけ方の例：\n🗣️ 「リビングの照明をつけて」「エアコンを消して」\n🗣️ 「エアコンを26度に」「リビングを明るく」\n🗣️ 「会議室の照明を全部消して」\n🗣️ 「退勤モード」「帰宅シーンを実行」\n🗣️ 「修理依頼の進捗」「今週のお知らせ」\n\n🔒 **常時聞き取りやバックグラウンド録音はしません。**音声を起動した後だけ音声を受け取り、会話が終われば停止します。\n\n💡 認識されないとき：アプリ上の正式名称で言う／名前変更後はホーム右上の手動更新／騒がしい場所ではタブレットに近づく。似た名前があれば推測せず聞き返します。\n\n📞 起動方法・機種設定：02-27510218（月〜金 09:00–18:00）",
-                "fr": "**Commande vocale (tablette murale enGo3 uniquement)**\n\nLa voix est réservée à la tablette murale ; l'appli mobile n'a pas d'interface vocale. **Le mode d'activation dépend de la configuration du modèle — demandez à notre équipe.**\n\nExemples :\n🗣️ « Allume la lumière du salon » / « Éteins la clim »\n🗣️ « Clim à 26 degrés » / « Salon un peu plus lumineux »\n🗣️ « Éteins toutes les lumières de la salle de réunion »\n🗣️ « Mode fin de journée » / « Lance la scène retour »\n🗣️ « Où en est ma réparation ? » / « Des avis cette semaine ? »\n\n🔒 Le système **n'écoute pas en continu et n'enregistre jamais en arrière-plan** : il ne reçoit le son qu'après activation, et s'arrête à la fin de l'échange.\n\n💡 Appareil non reconnu : utilisez son nom complet dans l'appli ; après un renommage, touchez l'actualisation manuelle (haut à droite) ; rapprochez-vous en cas de bruit. Si deux noms se ressemblent, il demande lequel au lieu de deviner.\n\n📞 Activation et configuration : 02-27510218 (lun.–ven. 09:00–18:00)",
-                "es": "**Control por voz (solo tableta de pared enGo3)**\n\nLa voz es exclusiva de la tableta de pared; la app móvil no tiene interfaz de voz. **Cómo se activa depende de la configuración del modelo — consúltalo con nuestro equipo.**\n\nEjemplos:\n🗣️ «Encender la luz del salón» / «Apagar el aire»\n🗣️ «Aire a 26 grados» / «Salón un poco más brillante»\n🗣️ «Apagar todas las luces de la sala de reuniones»\n🗣️ «Modo fin de jornada» / «Ejecutar la escena de llegada»\n🗣️ «Estado de mi reparación» / «¿Avisos esta semana?»\n\n🔒 El sistema **no escucha de forma continua ni graba en segundo plano**: solo recibe audio tras activar la voz y se detiene al terminar.\n\n💡 Si no reconoce un dispositivo: usa su nombre completo de la app; tras renombrar, pulsa actualizar (arriba a la derecha); acércate si hay ruido. Si dos nombres se parecen, pregunta cuál en vez de adivinar.\n\n📞 Activación y configuración: 02-27510218 (lun.–vie. 09:00–18:00)",
-                "zhCN": "**语音操作（enGo3 墙挂平板专属）**\n\n语音为墙挂平板专属功能，手机 App 没有语音界面。**具体的启动方式依机型设定而异，请洽专人说明。**\n\n可以这样说：\n🗣️ “开客厅灯”“把冷气关掉”\n🗣️ “冷气调到 26 度”“客厅灯调亮一点”\n🗣️ “关掉会议室所有的灯”\n🗣️ “下班模式”“执行回家情境”\n🗣️ “我的报修进度”“这周有什么公告”\n\n🔒 系统**不会持续聆听，也不会在背景录音**——只有在您主动启动语音后才接收声音，一次对话结束就停止。\n\n💡 认不出装置时：改用 App 里的完整名称；刚改过名称可按首页右上的手动更新；吵杂时靠近平板再说一次。名称相似时系统会反问，不会乱猜。\n\n📞 启动方式与机型设定：02-27510218（周一至周五 09:00–18:00）"
+                "zh": "**語音操作（enGo 牆掛平板專屬）**\n\n語音為牆掛平板專屬功能，手機 App 沒有語音介面。**具體的啟動方式依機型設定而異，請洽專人說明。**\n\n可以這樣說：\n🗣️ 「開客廳燈」「把冷氣關掉」\n🗣️ 「冷氣調到 26 度」「客廳燈調亮一點」\n🗣️ 「關掉會議室所有的燈」\n🗣️ 「下班模式」「執行回家情境」\n🗣️ 「我的報修進度」「這週有什麼公告」\n\n🔒 系統**不會持續聆聽，也不會在背景錄音**——只有在您主動啟動語音後才接收聲音，一次對話結束就停止。\n\n💡 認不出裝置時：改用 App 裡的完整名稱；剛改過名稱可按首頁右上的手動更新；吵雜時靠近平板再說一次。名稱相似時系統會反問，不會亂猜。\n\n📞 啟動方式與機型設定：02-27510218（週一至週五 09:00–18:00）",
+                "en": "**Voice control (enGo wall tablet only)**\n\nVoice is exclusive to the wall tablet; the mobile app has no voice interface. **How voice is activated depends on the model configuration — please ask our team.**\n\nThings you can say:\n🗣️ \"Turn on the living room light\" / \"Turn off the AC\"\n🗣️ \"Set the AC to 26 degrees\" / \"Brighten the living room light\"\n🗣️ \"Turn off all the lights in the meeting room\"\n🗣️ \"After-work mode\" / \"Run the home scene\"\n🗣️ \"My repair status\" / \"Any notices this week?\"\n\n🔒 The system **does not listen continuously and never records in the background** — it only receives audio after you activate voice, and stops when the exchange ends.\n\n💡 If a device isn't recognised: use its full name from the app; tap manual refresh (top right of Home) after renaming; move closer in noisy rooms. When two names sound alike it asks which you mean rather than guessing.\n\n📞 Activation and model setup: 02-27510218 (Mon–Fri 09:00–18:00)",
+                "ja": "**音声操作（enGo 壁掛けタブレット専用）**\n\n音声はタブレット専用で、スマホアプリにはありません。**起動方法は機種設定により異なるため、担当者にご確認ください。**\n\n話しかけ方の例：\n🗣️ 「リビングの照明をつけて」「エアコンを消して」\n🗣️ 「エアコンを26度に」「リビングを明るく」\n🗣️ 「会議室の照明を全部消して」\n🗣️ 「退勤モード」「帰宅シーンを実行」\n🗣️ 「修理依頼の進捗」「今週のお知らせ」\n\n🔒 **常時聞き取りやバックグラウンド録音はしません。**音声を起動した後だけ音声を受け取り、会話が終われば停止します。\n\n💡 認識されないとき：アプリ上の正式名称で言う／名前変更後はホーム右上の手動更新／騒がしい場所ではタブレットに近づく。似た名前があれば推測せず聞き返します。\n\n📞 起動方法・機種設定：02-27510218（月〜金 09:00–18:00）",
+                "fr": "**Commande vocale (tablette murale enGo uniquement)**\n\nLa voix est réservée à la tablette murale ; l'appli mobile n'a pas d'interface vocale. **Le mode d'activation dépend de la configuration du modèle — demandez à notre équipe.**\n\nExemples :\n🗣️ « Allume la lumière du salon » / « Éteins la clim »\n🗣️ « Clim à 26 degrés » / « Salon un peu plus lumineux »\n🗣️ « Éteins toutes les lumières de la salle de réunion »\n🗣️ « Mode fin de journée » / « Lance la scène retour »\n🗣️ « Où en est ma réparation ? » / « Des avis cette semaine ? »\n\n🔒 Le système **n'écoute pas en continu et n'enregistre jamais en arrière-plan** : il ne reçoit le son qu'après activation, et s'arrête à la fin de l'échange.\n\n💡 Appareil non reconnu : utilisez son nom complet dans l'appli ; après un renommage, touchez l'actualisation manuelle (haut à droite) ; rapprochez-vous en cas de bruit. Si deux noms se ressemblent, il demande lequel au lieu de deviner.\n\n📞 Activation et configuration : 02-27510218 (lun.–ven. 09:00–18:00)",
+                "es": "**Control por voz (solo tableta de pared enGo)**\n\nLa voz es exclusiva de la tableta de pared; la app móvil no tiene interfaz de voz. **Cómo se activa depende de la configuración del modelo — consúltalo con nuestro equipo.**\n\nEjemplos:\n🗣️ «Encender la luz del salón» / «Apagar el aire»\n🗣️ «Aire a 26 grados» / «Salón un poco más brillante»\n🗣️ «Apagar todas las luces de la sala de reuniones»\n🗣️ «Modo fin de jornada» / «Ejecutar la escena de llegada»\n🗣️ «Estado de mi reparación» / «¿Avisos esta semana?»\n\n🔒 El sistema **no escucha de forma continua ni graba en segundo plano**: solo recibe audio tras activar la voz y se detiene al terminar.\n\n💡 Si no reconoce un dispositivo: usa su nombre completo de la app; tras renombrar, pulsa actualizar (arriba a la derecha); acércate si hay ruido. Si dos nombres se parecen, pregunta cuál en vez de adivinar.\n\n📞 Activación y configuración: 02-27510218 (lun.–vie. 09:00–18:00)",
+                "zhCN": "**语音操作（enGo 墙挂平板专属）**\n\n语音为墙挂平板专属功能，手机 App 没有语音界面。**具体的启动方式依机型设定而异，请洽专人说明。**\n\n可以这样说：\n🗣️ “开客厅灯”“把冷气关掉”\n🗣️ “冷气调到 26 度”“客厅灯调亮一点”\n🗣️ “关掉会议室所有的灯”\n🗣️ “下班模式”“执行回家情境”\n🗣️ “我的报修进度”“这周有什么公告”\n\n🔒 系统**不会持续聆听，也不会在背景录音**——只有在您主动启动语音后才接收声音，一次对话结束就停止。\n\n💡 认不出装置时：改用 App 里的完整名称；刚改过名称可按首页右上的手动更新；吵杂时靠近平板再说一次。名称相似时系统会反问，不会乱猜。\n\n📞 启动方式与机型设定：02-27510218（周一至周五 09:00–18:00）"
             }
         },
         {
@@ -180,12 +180,12 @@
                 "閒置"
             ],
             "answer": {
-                "zh": "**待機相片牆（enGo3 牆掛平板專屬）**\n\n平板閒置一段時間後會自動切換成**待機相片牆**，播放住戶選定的照片，並可疊加時間、日期、天氣與最新社區公告。碰一下螢幕就回到原本的畫面。\n\n⚙️ 預設：閒置 5 分鐘進入｜進入後 30 分鐘調暗（可設不調暗）｜每張停留 15 秒｜亮度上限 80%｜疊加資訊開\n\n🌙 半夜不會刺眼：相片牆期間會壓低亮度上限，並依**現場環境光**自動調整——室內變暗時亮度降到最低、顯示全黑畫面，走廊開燈才亮起來。",
-                "en": "**Standby photo wall (enGo3 wall tablet only)**\n\nAfter a period of inactivity the tablet switches to the **photo wall**, showing photos you choose with the time, date, weather and latest community notices overlaid. One touch brings the screen back.\n\n⚙️ Defaults: enters after 5 min idle | dims after 30 min (or never) | 15 s per photo | brightness cap 80% | overlay on\n\n🌙 Not glaring at night: the brightness cap is lowered and follows the **ambient light** — when the room goes dark the screen drops to minimum brightness and shows black, lighting up again when the hallway light comes on.",
-                "ja": "**待機フォトウォール（enGo3 壁掛けタブレット専用）**\n\n一定時間操作がないと**フォトウォール**に切り替わり、選んだ写真に時刻・日付・天気・最新のお知らせを重ねて表示します。画面に触れると元に戻ります。\n\n⚙️ 初期値：5分無操作で開始｜30分後に減光（減光なしも可）｜1枚15秒｜明るさ上限80%｜情報表示オン\n\n🌙 夜間もまぶしくありません：明るさ上限を下げ、**周囲の明るさ**に合わせて自動調整。部屋が暗くなると最低輝度の黒画面になり、廊下の照明がつくと再び表示します。",
-                "fr": "**Mur de photos en veille (tablette murale enGo3 uniquement)**\n\nAprès un temps d'inactivité, la tablette passe au **mur de photos** : vos photos avec l'heure, la date, la météo et les derniers avis en surimpression. Une touche et l'écran revient.\n\n⚙️ Par défaut : après 5 min d'inactivité | assombrissement après 30 min (ou jamais) | 15 s par photo | luminosité max 80 % | infos affichées\n\n🌙 Pas d'éblouissement la nuit : le plafond de luminosité est abaissé et suit la **lumière ambiante** — quand la pièce s'assombrit, l'écran passe au minimum et affiche du noir, puis se rallume quand le couloir s'éclaire.",
-                "es": "**Muro de fotos en reposo (solo tableta de pared enGo3)**\n\nTras un tiempo sin uso, la tableta pasa al **muro de fotos**: tus fotos con la hora, la fecha, el tiempo y los últimos avisos superpuestos. Un toque y vuelve la pantalla.\n\n⚙️ Por defecto: entra a los 5 min | atenúa a los 30 min (o nunca) | 15 s por foto | brillo máx. 80 % | información activada\n\n🌙 Sin deslumbrar de noche: baja el límite de brillo y sigue la **luz ambiente** — al oscurecerse la habitación, la pantalla baja al mínimo y muestra negro; vuelve a encenderse cuando se ilumina el pasillo.",
-                "zhCN": "**待机相片墙（enGo3 墙挂平板专属）**\n\n平板闲置一段时间后会自动切换成**待机相片墙**，播放住户选定的照片，并可叠加时间、日期、天气与最新社区公告。碰一下萤幕就回到原本的画面。\n\n⚙️ 预设：闲置 5 分钟进入｜进入后 30 分钟调暗（可设不调暗）｜每张停留 15 秒｜亮度上限 80%｜叠加资讯开\n\n🌙 半夜不会刺眼：相片墙期间会压低亮度上限，并依**现场环境光**自动调整——室内变暗时亮度降到最低、显示全黑画面，走廊开灯才亮起来。"
+                "zh": "**待機相片牆（enGo 牆掛平板專屬）**\n\n平板閒置一段時間後會自動切換成**待機相片牆**，播放住戶選定的照片，並可疊加時間、日期、天氣與最新社區公告。碰一下螢幕就回到原本的畫面。\n\n⚙️ 預設：閒置 5 分鐘進入｜進入後 30 分鐘調暗（可設不調暗）｜每張停留 15 秒｜亮度上限 80%｜疊加資訊開\n\n🌙 半夜不會刺眼：相片牆期間會壓低亮度上限，並依**現場環境光**自動調整——室內變暗時亮度降到最低、顯示全黑畫面，走廊開燈才亮起來。",
+                "en": "**Standby photo wall (enGo wall tablet only)**\n\nAfter a period of inactivity the tablet switches to the **photo wall**, showing photos you choose with the time, date, weather and latest community notices overlaid. One touch brings the screen back.\n\n⚙️ Defaults: enters after 5 min idle | dims after 30 min (or never) | 15 s per photo | brightness cap 80% | overlay on\n\n🌙 Not glaring at night: the brightness cap is lowered and follows the **ambient light** — when the room goes dark the screen drops to minimum brightness and shows black, lighting up again when the hallway light comes on.",
+                "ja": "**待機フォトウォール（enGo 壁掛けタブレット専用）**\n\n一定時間操作がないと**フォトウォール**に切り替わり、選んだ写真に時刻・日付・天気・最新のお知らせを重ねて表示します。画面に触れると元に戻ります。\n\n⚙️ 初期値：5分無操作で開始｜30分後に減光（減光なしも可）｜1枚15秒｜明るさ上限80%｜情報表示オン\n\n🌙 夜間もまぶしくありません：明るさ上限を下げ、**周囲の明るさ**に合わせて自動調整。部屋が暗くなると最低輝度の黒画面になり、廊下の照明がつくと再び表示します。",
+                "fr": "**Mur de photos en veille (tablette murale enGo uniquement)**\n\nAprès un temps d'inactivité, la tablette passe au **mur de photos** : vos photos avec l'heure, la date, la météo et les derniers avis en surimpression. Une touche et l'écran revient.\n\n⚙️ Par défaut : après 5 min d'inactivité | assombrissement après 30 min (ou jamais) | 15 s par photo | luminosité max 80 % | infos affichées\n\n🌙 Pas d'éblouissement la nuit : le plafond de luminosité est abaissé et suit la **lumière ambiante** — quand la pièce s'assombrit, l'écran passe au minimum et affiche du noir, puis se rallume quand le couloir s'éclaire.",
+                "es": "**Muro de fotos en reposo (solo tableta de pared enGo)**\n\nTras un tiempo sin uso, la tableta pasa al **muro de fotos**: tus fotos con la hora, la fecha, el tiempo y los últimos avisos superpuestos. Un toque y vuelve la pantalla.\n\n⚙️ Por defecto: entra a los 5 min | atenúa a los 30 min (o nunca) | 15 s por foto | brillo máx. 80 % | información activada\n\n🌙 Sin deslumbrar de noche: baja el límite de brillo y sigue la **luz ambiente** — al oscurecerse la habitación, la pantalla baja al mínimo y muestra negro; vuelve a encenderse cuando se ilumina el pasillo.",
+                "zhCN": "**待机相片墙（enGo 墙挂平板专属）**\n\n平板闲置一段时间后会自动切换成**待机相片墙**，播放住户选定的照片，并可叠加时间、日期、天气与最新社区公告。碰一下萤幕就回到原本的画面。\n\n⚙️ 预设：闲置 5 分钟进入｜进入后 30 分钟调暗（可设不调暗）｜每张停留 15 秒｜亮度上限 80%｜叠加资讯开\n\n🌙 半夜不会刺眼：相片墙期间会压低亮度上限，并依**现场环境光**自动调整——室内变暗时亮度降到最低、显示全黑画面，走廊开灯才亮起来。"
             }
         },
         {
@@ -213,15 +213,21 @@
                 "cloud",
                 "沒有網路",
                 "需要網路",
-                "斷電"
+                "斷電",
+                "同網域",
+                "同网域",
+                "區網直控",
+                "同一網路",
+                "same network",
+                "lan"
             ],
             "answer": {
-                "zh": "**需要網路嗎？**\n\n**是。** 目前所有控制指令都需要網路連線。\n\n我們正在開發**區網直控**——讓平板在家中網路內直接對裝置下指令、不經外網。這項功能**尚未對外提供**，上線後會另行公告。\n\n📴 斷網時，平板仍會顯示房間與裝置清單（裝置標示為離線）以及待機相片牆，但**無法下達控制指令**。\n\n📶 配對智慧裝置時，手機或平板需連上家中的 **2.4GHz Wi-Fi**。",
-                "en": "**Do I need an internet connection?**\n\n**Yes.** All control commands currently require a connection.\n\nWe are developing **local-network control** — the tablet commanding devices directly inside your home network. It is **not yet available**; we will announce it when it launches.\n\n📴 Offline, the tablet still shows your rooms and device list (devices marked offline) and the photo wall, but **cannot send commands**.\n\n📶 When pairing devices, the phone or tablet must be on the home's **2.4 GHz Wi-Fi**.",
-                "ja": "**ネット接続は必要ですか？**\n\n**はい。**現在すべての操作指令にネット接続が必要です。\n\n家庭内ネットワーク内で直接機器を制御する**ローカル直接制御**を開発中ですが、**まだ提供していません**。提供開始時に改めてお知らせします。\n\n📴 オフライン時もタブレットには部屋と機器一覧（オフライン表示）とフォトウォールは表示されますが、**操作はできません**。\n\n📶 機器のペアリング時は、スマホ／タブレットを自宅の **2.4GHz Wi-Fi** に接続してください。",
-                "fr": "**Faut-il une connexion Internet ?**\n\n**Oui.** Toutes les commandes passent actuellement par Internet.\n\nNous développons la **commande en réseau local** (la tablette pilote les appareils directement dans le réseau de la maison). Elle **n'est pas encore disponible** ; nous l'annoncerons à son lancement.\n\n📴 Hors ligne, la tablette affiche toujours vos pièces et appareils (marqués hors ligne) et le mur de photos, mais **ne peut pas envoyer de commandes**.\n\n📶 Pour appairer un appareil, le téléphone ou la tablette doit être sur le **Wi-Fi 2,4 GHz** de la maison.",
-                "es": "**¿Necesito conexión a Internet?**\n\n**Sí.** Todas las órdenes de control requieren conexión actualmente.\n\nEstamos desarrollando el **control en red local** (la tableta manda a los dispositivos directamente dentro de la red doméstica). **Aún no está disponible**; lo anunciaremos cuando se lance.\n\n📴 Sin conexión, la tableta sigue mostrando habitaciones y dispositivos (marcados como desconectados) y el muro de fotos, pero **no puede enviar órdenes**.\n\n📶 Para emparejar dispositivos, el móvil o la tableta debe estar en el **Wi-Fi de 2,4 GHz** de casa.",
-                "zhCN": "**需要网络吗？**\n\n**是。** 目前所有控制指令都需要网络连线。\n\n我们正在开发**区网直控**——让平板在家中网络内直接对装置下指令、不经外网。这项功能**尚未对外提供**，上线后会另行公告。\n\n📴 断网时，平板仍会显示房间与装置清单（装置标示为离线）以及待机相片墙，但**无法下达控制指令**。\n\n📶 配对智慧装置时，手机或平板需连上家中的 **2.4GHz Wi-Fi**。"
+                "zh": "**需要網路嗎？**\n\n遠端操作（在外用手機 App）、社區服務與通知需要網路連線。\n\n🏠 **同網域可直接控制**：當 enGo 平板與裝置連在同一個家用網路（同網域）時，即使對外網路中斷，仍可直接控制裝置。\n\n⚠️ **情境（一鍵模式）目前無法完全支援**離線執行。\n\n📶 配對智慧裝置時，手機或平板需連上家中的 **2.4GHz Wi-Fi**。",
+                "en": "**Do I need an internet connection?**\n\nRemote control from the mobile app, community services and notifications need an internet connection.\n\n🏠 **Direct control on the same network**: when the enGo tablet and your devices are on the same home network, the tablet can still control them directly even if the internet is down.\n\n⚠️ **Scenes (one-tap modes) are not yet fully supported** without the internet.\n\n📶 When pairing devices, the phone or tablet must be on the home's **2.4 GHz Wi-Fi**.",
+                "ja": "**ネット接続は必要ですか？**\n\n外出先からのアプリ操作、コミュニティサービス、通知にはネット接続が必要です。\n\n🏠 **同一ネットワーク内なら直接操作**：enGo タブレットと機器が同じ家庭内ネットワークにあれば、インターネットが切れていても機器を直接操作できます。\n\n⚠️ **シーン（ワンタップモード）はオフラインでは完全には対応していません**。\n\n📶 機器のペアリング時は、スマホ／タブレットを自宅の **2.4GHz Wi-Fi** に接続してください。",
+                "fr": "**Faut-il une connexion Internet ?**\n\nLa commande à distance depuis l'appli, les services de la résidence et les notifications nécessitent Internet.\n\n🏠 **Commande directe sur le même réseau** : lorsque la tablette enGo et vos appareils sont sur le même réseau domestique, la tablette peut toujours les piloter directement, même si Internet est coupé.\n\n⚠️ **Les scènes (modes en un geste) ne sont pas encore entièrement prises en charge** hors ligne.\n\n📶 Pour appairer un appareil, le téléphone ou la tablette doit être sur le **Wi-Fi 2,4 GHz** de la maison.",
+                "es": "**¿Necesito conexión a Internet?**\n\nEl control remoto desde la app, los servicios de la comunidad y las notificaciones requieren Internet.\n\n🏠 **Control directo en la misma red**: cuando la tableta enGo y tus dispositivos están en la misma red doméstica, la tableta puede seguir controlándolos directamente aunque no haya Internet.\n\n⚠️ **Las escenas (modos de un toque) aún no están totalmente soportadas** sin conexión.\n\n📶 Para emparejar dispositivos, el móvil o la tableta debe estar en el **Wi-Fi de 2,4 GHz** de casa.",
+                "zhCN": "**需要网络吗？**\n\n远端操作（在外用手机 App）、社区服务与通知需要网络连线。\n\n🏠 **同网域可直接控制**：当 enGo 平板与装置连在同一个家用网络（同网域）时，即使对外网络中断，仍可直接控制装置。\n\n⚠️ **情境（一键模式）目前无法完全支援**离线执行。\n\n📶 配对智慧装置时，手机或平板需连上家中的 **2.4GHz Wi-Fi**。"
             }
         },
         {
@@ -603,12 +609,12 @@
                 "whole home"
             ],
             "answer": {
-                "zh": "**enGo 智慧生態系**\n\nenGo 生態系以 AI 智慧中控平板為核心，串聯全屋智慧設備：\n\n🏠 **enGo3 牆掛平板** — 家中主控台；手機 App 在外同步掌握\n💨 **空氣精靈** — 4合1空氣清淨機，PM2.5 即時監控\n💧 **水精靈** — RO 智能淨水系統，TDS 監測\n🔒 **安控系統** — 煙霧/漏水/門窗全方位偵測\n💡 **智慧照明** — 情境控制、排程管理\n❄️ **智慧空調** — AI 恆溫、遠端控制\n🪟 **智慧窗簾** — 自動開合、場景聯動\n\n所有設備透過 App 遠端管理，隨時隨地掌控家中狀態！\n\n🔗 [觀看生態系影片](/about)",
-                "en": "**enGo Smart Ecosystem**\n\nCentered around our AI Smart Tablet, connecting all home devices:\n\n🏠 **enGo3 wall tablet** — the control hub at home; the mobile app keeps you in charge when out\n💨 **Air Purifier** — 4-in-1 with PM2.5 monitoring\n💧 **Water System** — RO smart filtration with TDS tracking\n🔒 **Security** — Smoke/leak/door sensor mesh\n💡 **Smart Lighting** — Scene control & scheduling\n❄️ **Smart AC** — AI thermostat & remote\n🪟 **Smart Curtains** — Auto & scene-linked\n\nAll managed via the enGo App — control your home from anywhere!\n\n🔗 [Watch Ecosystem Video](/about)",
+                "zh": "**enGo 智慧生態系**\n\nenGo 生態系以 AI 智慧中控平板為核心，串聯全屋智慧設備：\n\n🏠 **enGo 牆掛平板** — 家中主控台；手機 App 在外同步掌握\n💨 **空氣精靈** — 4合1空氣清淨機，PM2.5 即時監控\n💧 **水精靈** — RO 智能淨水系統，TDS 監測\n🔒 **安控系統** — 煙霧/漏水/門窗全方位偵測\n💡 **智慧照明** — 情境控制、排程管理\n❄️ **智慧空調** — AI 恆溫、遠端控制\n🪟 **智慧窗簾** — 自動開合、場景聯動\n\n所有設備透過 App 遠端管理，隨時隨地掌控家中狀態！\n\n🔗 [觀看生態系影片](/about)",
+                "en": "**enGo Smart Ecosystem**\n\nCentered around our AI Smart Tablet, connecting all home devices:\n\n🏠 **enGo wall tablet** — the control hub at home; the mobile app keeps you in charge when out\n💨 **Air Purifier** — 4-in-1 with PM2.5 monitoring\n💧 **Water System** — RO smart filtration with TDS tracking\n🔒 **Security** — Smoke/leak/door sensor mesh\n💡 **Smart Lighting** — Scene control & scheduling\n❄️ **Smart AC** — AI thermostat & remote\n🪟 **Smart Curtains** — Auto & scene-linked\n\nAll managed via the enGo App — control your home from anywhere!\n\n🔗 [Watch Ecosystem Video](/about)",
                 "ja": "**enGoスマートエコシステム**\n\nAI中控タブレットを中心に、全家電を接続。空気清浄機、浄水器、照明、エアコン、カーテン、セキュリティを統合管理。\n\n🔗 [エコシステム動画](/about)",
                 "fr": "**Écosystème enGo**\n\nCentré sur notre tablette AI, connectant tous les appareils domestiques : purificateur d'air, eau, éclairage, climatisation, rideaux, sécurité.\n\n🔗 [Voir la vidéo](/about)",
-                "es": "**Ecosistema inteligente de enGo**\n\nCentrado en nuestra tableta inteligente de IA, conectando todos los dispositivos del hogar:\n\n🏠 **Tableta de pared enGo3** — el centro de control en casa; la app móvil te acompaña fuera\n💨 **Purificador de Aire** — 4 en 1 con monitoreo PM2.5\n💧 **Sistema de Agua** — Filtración RO inteligente con seguimiento TDS\n🔒 **Seguridad** — Malla de sensores de humo/fuga/puerta\n💡 **Iluminación Inteligente** — Control de escena y programación\n❄️ **AC Inteligente** — Termostato IA y control remoto\n🪟 **Cortinas Inteligentes** — Automáticas y vinculadas a escenas\n\n¡Todo gestionado a través de la aplicación enGo — ¡controla tu hogar desde cualquier lugar!\n\n🔗 [Ver video del ecosistema](/about)",
-                "zhCN": "**enGo 智慧生态系**\n\nenGo 生态系以 AI 智慧中控平板为核心，串联全屋智慧设备：\n\n🏠 **enGo3 墙挂平板** — 家中主控台；手机 App 在外同步掌握\n💨 **空气精灵** — 4合1空气清净机，PM2.5 即时监控\n💧 **水精灵** — RO 智能净水系统，TDS 监测\n🔒 **安控系统** — 烟雾/漏水/门窗全方位侦测\n💡 **智慧照明** — 情境控制、排程管理\n❄️ **智慧空调** — AI 恒温、远端控制\n🪟 **智慧窗帘** — 自动开合、场景联动\n\n所有设备通过 App 远端管理，随时随地掌控家中状态！\n\n🔗 [观看生态系影片](/about)"
+                "es": "**Ecosistema inteligente de enGo**\n\nCentrado en nuestra tableta inteligente de IA, conectando todos los dispositivos del hogar:\n\n🏠 **Tableta de pared enGo** — el centro de control en casa; la app móvil te acompaña fuera\n💨 **Purificador de Aire** — 4 en 1 con monitoreo PM2.5\n💧 **Sistema de Agua** — Filtración RO inteligente con seguimiento TDS\n🔒 **Seguridad** — Malla de sensores de humo/fuga/puerta\n💡 **Iluminación Inteligente** — Control de escena y programación\n❄️ **AC Inteligente** — Termostato IA y control remoto\n🪟 **Cortinas Inteligentes** — Automáticas y vinculadas a escenas\n\n¡Todo gestionado a través de la aplicación enGo — ¡controla tu hogar desde cualquier lugar!\n\n🔗 [Ver video del ecosistema](/about)",
+                "zhCN": "**enGo 智慧生态系**\n\nenGo 生态系以 AI 智慧中控平板为核心，串联全屋智慧设备：\n\n🏠 **enGo 墙挂平板** — 家中主控台；手机 App 在外同步掌握\n💨 **空气精灵** — 4合1空气清净机，PM2.5 即时监控\n💧 **水精灵** — RO 智能净水系统，TDS 监测\n🔒 **安控系统** — 烟雾/漏水/门窗全方位侦测\n💡 **智慧照明** — 情境控制、排程管理\n❄️ **智慧空调** — AI 恒温、远端控制\n🪟 **智慧窗帘** — 自动开合、场景联动\n\n所有设备通过 App 远端管理，随时随地掌控家中状态！\n\n🔗 [观看生态系影片](/about)"
             }
         },
         {
@@ -710,15 +716,22 @@
                 "alexa",
                 "google assistant",
                 "第三方",
-                "third party"
+                "third party",
+                "matter 網關",
+                "matter gateway",
+                "nest hub",
+                "google nest",
+                "網關",
+                "网关",
+                "gateway"
             ],
             "answer": {
-                "zh": "**Apple HomeKit／Siri**\n\nenGo 的語音操作是 **enGo3 牆掛平板內建**的功能——直接對牆上的平板說話即可，不經 Siri。手機 App 沒有語音介面。\n\n關於 Apple HomeKit、Google Home 等第三方平台的整合，不在我能確認的範圍內，幫您轉給專人確認會比較準確。\n\n📞 02-27510218（週一至週五 09:00–18:00），或在 [聯絡我們](/contact) 留下聯絡方式。",
-                "en": "**Apple HomeKit / Siri**\n\nenGo's voice control is **built into the enGo3 wall tablet** — you speak to the tablet directly, not through Siri. The mobile app has no voice interface.\n\nIntegration with third-party platforms such as Apple HomeKit or Google Home is something I can't confirm here — our team can answer that properly.\n\n📞 02-27510218 (Mon–Fri 09:00–18:00), or leave your details on [Contact us](/contact).",
-                "ja": "**Apple HomeKit / Siri**\n\nenGo の音声操作は **enGo3 壁掛けタブレット内蔵**の機能です。Siri を介さず、タブレットに直接話しかけます。スマホアプリには音声機能はありません。\n\nApple HomeKit や Google Home など第三者プラットフォームとの連携については、ここではお答えできません。担当者にご確認ください。\n\n📞 02-27510218（月〜金 09:00–18:00）、または [お問い合わせ](/contact) からご連絡ください。",
-                "fr": "**Apple HomeKit / Siri**\n\nLa commande vocale d'enGo est **intégrée à la tablette murale enGo3** : vous parlez directement à la tablette, sans passer par Siri. L'appli mobile n'a pas d'interface vocale.\n\nPour l'intégration avec Apple HomeKit, Google Home ou d'autres plateformes tierces, je ne peux pas me prononcer ici — notre équipe vous répondra précisément.\n\n📞 02-27510218 (lun.–ven. 09:00–18:00), ou laissez vos coordonnées sur [Contact](/contact).",
-                "es": "**Apple HomeKit / Siri**\n\nEl control por voz de enGo está **integrado en la tableta de pared enGo3**: hablas directamente a la tableta, sin pasar por Siri. La app móvil no tiene interfaz de voz.\n\nSobre la integración con Apple HomeKit, Google Home u otras plataformas, no puedo confirmarlo aquí — nuestro equipo te responderá con precisión.\n\n📞 02-27510218 (lun.–vie. 09:00–18:00), o deja tus datos en [Contacto](/contact).",
-                "zhCN": "**Apple HomeKit／Siri**\n\nenGo 的语音操作是 **enGo3 墙挂平板内建**的功能——直接对墙上的平板说话即可，不经 Siri。手机 App 没有语音界面。\n\n关于 Apple HomeKit、Google Home 等第三方平台的整合，不在我能确认的范围内，帮您转给专人确认会比较准确。\n\n📞 02-27510218（周一至周五 09:00–18:00），或在 [联络我们](/contact) 留下联络方式。"
+                "zh": "**Apple HomeKit／Google Home 整合**\n\nenGo 目前透過 **Matter 網關**接入 Apple HomeKit（HomePod）與 Google Home（Nest Hub）等平台。\n\nenGo 本身的語音操作是牆掛平板內建的功能，直接對牆上的平板說話即可；手機 App 沒有語音介面。\n\n可接入的裝置範圍與設定方式請洽專人：📞 02-27510218（週一至週五 09:00–18:00），或在 [聯絡我們](/contact) 留下聯絡方式。",
+                "en": "**Apple HomeKit / Google Home**\n\nenGo currently connects to Apple HomeKit (HomePod), Google Home (Nest Hub) and similar platforms through a **Matter gateway**.\n\nenGo's own voice control is built into the wall tablet — you speak to the tablet directly; the mobile app has no voice interface.\n\nFor which devices can be bridged and how to set it up, please ask our team: 📞 02-27510218 (Mon–Fri 09:00–18:00), or leave your details on [Contact us](/contact).",
+                "ja": "**Apple HomeKit / Google Home 連携**\n\nenGo は現在 **Matter ゲートウェイ**を通じて Apple HomeKit（HomePod）や Google Home（Nest Hub）などのプラットフォームに接続しています。\n\nenGo 自体の音声操作は壁掛けタブレット内蔵の機能で、タブレットに直接話しかけます。スマホアプリに音声機能はありません。\n\n接続できる機器の範囲や設定方法は担当者にご確認ください：📞 02-27510218（月〜金 09:00–18:00）、または [お問い合わせ](/contact) へ。",
+                "fr": "**Apple HomeKit / Google Home**\n\nenGo se connecte actuellement à Apple HomeKit (HomePod), Google Home (Nest Hub) et aux plateformes similaires via une **passerelle Matter**.\n\nLa commande vocale propre à enGo est intégrée à la tablette murale : vous parlez directement à la tablette ; l'appli mobile n'a pas d'interface vocale.\n\nPour savoir quels appareils peuvent être reliés et comment configurer, contactez notre équipe : 📞 02-27510218 (lun.–ven. 09:00–18:00), ou via [Contact](/contact).",
+                "es": "**Apple HomeKit / Google Home**\n\nenGo se conecta actualmente a Apple HomeKit (HomePod), Google Home (Nest Hub) y plataformas similares mediante una **pasarela Matter**.\n\nEl control por voz propio de enGo está integrado en la tableta de pared: hablas directamente a la tableta; la app móvil no tiene interfaz de voz.\n\nPara saber qué dispositivos pueden enlazarse y cómo configurarlo, consulta con nuestro equipo: 📞 02-27510218 (lun.–vie. 09:00–18:00), o en [Contacto](/contact).",
+                "zhCN": "**Apple HomeKit／Google Home 整合**\n\nenGo 目前透过 **Matter 网关**接入 Apple HomeKit（HomePod）与 Google Home（Nest Hub）等平台。\n\nenGo 本身的语音操作是墙挂平板内建的功能，直接对墙上的平板说话即可；手机 App 没有语音界面。\n\n可接入的装置范围与设定方式请洽专人：📞 02-27510218（周一至周五 09:00–18:00），或在 [联络我们](/contact) 留下联络方式。"
             }
         },
         {
@@ -1734,12 +1747,12 @@
         {
             "id": "tablet-t1",
             "name": {
-                "zh": "enGo AI智慧中控系統 — enGo3 牆掛平板",
-                "en": "enGo HMS — enGo3 wall tablet",
-                "ja": "enGo HMS — enGo3 壁掛けタブレット",
-                "fr": "enGo HMS — tablette murale enGo3",
-                "es": "enGo HMS — tableta de pared enGo3",
-                "zhCN": "enGo AI智慧中控系统 — enGo3 墙挂平板"
+                "zh": "enGo AI智慧中控系統 — enGo 牆掛平板",
+                "en": "enGo HMS — enGo wall tablet",
+                "ja": "enGo HMS — enGo 壁掛けタブレット",
+                "fr": "enGo HMS — tablette murale enGo",
+                "es": "enGo HMS — tableta de pared enGo",
+                "zhCN": "enGo AI智慧中控系统 — enGo 墙挂平板"
             },
             "specs": {
                 "zh": "Android 牆掛式平板（需常時供電）｜Wi-Fi、ZigBee、Matter、紅外線｜配對智慧裝置需 2.4GHz Wi-Fi｜手機 App：iOS、Android",
@@ -1763,8 +1776,7 @@
                 "中控",
                 "螢幕",
                 "product",
-                "enGo3",
-                "engo 3",
+                "enGo",
                 "牆掛",
                 "墙挂",
                 "智慧中控",
@@ -1881,14 +1893,14 @@
     "catalog": [
         {
             "id": "tablet_t1",
-            "name": "enGo AI智慧中控系統 — enGo3 牆掛平板 + 手機 App",
+            "name": "enGo AI智慧中控系統 — enGo 牆掛平板 + 手機 App",
             "description": {
-                "zh": "enGo 是住家與社區合一的智慧生活系統：牆上的 enGo3 平板是家中主控台，手機 App 讓您在外也能掌握。整合照明、插座、窗簾、空調、紅外線家電、感測器、攝影機與門口對講，加上社區公告、報修、公設預約與包裹通知；語音操作與待機相片牆為平板專屬。",
-                "en": "enGo manages home and community together: the enGo3 wall tablet is the control hub at home and the mobile app keeps you in charge when out. It integrates lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras and the door intercom, plus community notices, repair requests, facility bookings and parcel notifications; voice control and the standby photo wall are tablet-only.",
-                "ja": "enGo は住まいとコミュニティを一つにするスマートリビングシステム。壁掛けの enGo3 タブレットが家の司令塔、外出先ではスマホアプリで操作。照明・コンセント・カーテン・エアコン・赤外線家電・センサー・カメラ・インターホンに加え、お知らせ・修理依頼・共用施設予約・宅配通知を統合。音声操作と待機フォトウォールはタブレット専用。",
-                "fr": "enGo gère la maison et la résidence ensemble : la tablette murale enGo3 est le poste de commande à la maison, l'appli mobile prend le relais à l'extérieur. Éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone, plus avis, réparations, réservations et colis ; commande vocale et mur de photos réservés à la tablette.",
-                "es": "enGo gestiona el hogar y la comunidad juntos: la tableta de pared enGo3 es el centro de control en casa y la app móvil te acompaña fuera. Integra iluminación, enchufes, cortinas, aire acondicionado, electrodomésticos por infrarrojos, sensores, cámaras y portero, además de avisos, reparaciones, reservas y paquetes; la voz y el muro de fotos son solo de tableta.",
-                "zhCN": "enGo 是住家与社区合一的智慧生活系统：墙上的 enGo3 平板是家中主控台，手机 App 让您在外也能掌握。整合照明、插座、窗帘、空调、红外线家电、感测器、摄影机与门口对讲，加上社区公告、报修、公设预约与包裹通知；语音操作与待机相片墙为平板专属。"
+                "zh": "enGo 是住家與社區合一的智慧生活系統：牆上的 enGo 平板是家中主控台，手機 App 讓您在外也能掌握。整合照明、插座、窗簾、空調、紅外線家電、感測器、攝影機與門口對講，加上社區公告、報修、公設預約與包裹通知；語音操作與待機相片牆為平板專屬。",
+                "en": "enGo manages home and community together: the enGo wall tablet is the control hub at home and the mobile app keeps you in charge when out. It integrates lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras and the door intercom, plus community notices, repair requests, facility bookings and parcel notifications; voice control and the standby photo wall are tablet-only.",
+                "ja": "enGo は住まいとコミュニティを一つにするスマートリビングシステム。壁掛けの enGo タブレットが家の司令塔、外出先ではスマホアプリで操作。照明・コンセント・カーテン・エアコン・赤外線家電・センサー・カメラ・インターホンに加え、お知らせ・修理依頼・共用施設予約・宅配通知を統合。音声操作と待機フォトウォールはタブレット専用。",
+                "fr": "enGo gère la maison et la résidence ensemble : la tablette murale enGo est le poste de commande à la maison, l'appli mobile prend le relais à l'extérieur. Éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone, plus avis, réparations, réservations et colis ; commande vocale et mur de photos réservés à la tablette.",
+                "es": "enGo gestiona el hogar y la comunidad juntos: la tableta de pared enGo es el centro de control en casa y la app móvil te acompaña fuera. Integra iluminación, enchufes, cortinas, aire acondicionado, electrodomésticos por infrarrojos, sensores, cámaras y portero, además de avisos, reparaciones, reservas y paquetes; la voz y el muro de fotos son solo de tableta.",
+                "zhCN": "enGo 是住家与社区合一的智慧生活系统：墙上的 enGo 平板是家中主控台，手机 App 让您在外也能掌握。整合照明、插座、窗帘、空调、红外线家电、感测器、摄影机与门口对讲，加上社区公告、报修、公设预约与包裹通知；语音操作与待机相片墙为平板专属。"
             },
             "image": "screens/01-home-tablet.png",
             "spec_image": null,
@@ -1904,7 +1916,7 @@
                 "中控",
                 "螢幕",
                 "管家",
-                "enGo3",
+                "enGo",
                 "智慧中控",
                 "中控平板",
                 "牆掛",

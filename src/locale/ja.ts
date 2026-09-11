@@ -274,7 +274,7 @@ export const jaLocale = {
         },
         interfaces: {
             title: '3つのインターフェース、1つのアカウント',
-            columns: { tablet: 'enGo3 壁掛けタブレット', ios: 'iPhone / iPad', android: 'Android スマートフォン' },
+            columns: { tablet: 'enGo 壁掛けタブレット', ios: 'iPhone / iPad', android: 'Android スマートフォン' },
             rows: {
                 control: '家電操作・シーン・フロアプラン',
                 community: 'コミュニティサービス・カメラ・在庫管理',

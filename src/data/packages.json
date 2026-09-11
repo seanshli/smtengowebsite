@@ -439,16 +439,16 @@
         {
             "id": "tablet_t1",
             "name": {
-                "zh": "enGo AI智慧中控系統 — enGo3 牆掛平板 + 手機 App",
-                "en": "enGo HMS — enGo3 wall tablet + mobile app",
-                "ja": "enGo HMS — enGo3 壁掛けタブレット + アプリ",
-                "fr": "enGo HMS — tablette murale enGo3 + appli mobile"
+                "zh": "enGo AI智慧中控系統 — enGo 牆掛平板 + 手機 App",
+                "en": "enGo HMS — enGo wall tablet + mobile app",
+                "ja": "enGo HMS — enGo 壁掛けタブレット + アプリ",
+                "fr": "enGo HMS — tablette murale enGo + appli mobile"
             },
             "description": {
-                "zh": "enGo 是住家與社區合一的智慧生活系統：牆上的 enGo3 平板是家中主控台，手機 App 讓您在外也能掌握。整合照明、插座、窗簾、空調、紅外線家電、感測器、攝影機與門口對講，加上社區公告、報修、公設預約與包裹通知；語音操作與待機相片牆為平板專屬。同一組帳號通用，手機 App「enGo智慧管家」免費下載。",
-                "en": "enGo manages home and community together: the enGo3 wall tablet is the control hub at home and the mobile app keeps you in charge when out. It integrates lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras and the door intercom, plus community notices, repair requests, facility bookings and parcel notifications; voice control and the standby photo wall are tablet-only. One account works everywhere; the mobile app (listed as enGo智慧管家) is free.",
-                "ja": "enGo は住まいとコミュニティを一つにするスマートリビングシステム。壁掛けの enGo3 タブレットが家の司令塔、外出先ではスマホアプリで操作。照明・コンセント・カーテン・エアコン・赤外線家電・センサー・カメラ・インターホンに加え、お知らせ・修理依頼・共用施設予約・宅配通知を統合。音声操作と待機フォトウォールはタブレット専用。アカウントは共通、アプリ（enGo智慧管家）は無料。",
-                "fr": "enGo gère la maison et la résidence ensemble : la tablette murale enGo3 est le poste de commande à la maison, l'appli mobile prend le relais à l'extérieur. Éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone, plus avis, réparations, réservations et colis ; commande vocale et mur de photos réservés à la tablette. Un seul compte ; l'appli (enGo智慧管家) est gratuite."
+                "zh": "enGo 是住家與社區合一的智慧生活系統：牆上的 enGo 平板是家中主控台，手機 App 讓您在外也能掌握。整合照明、插座、窗簾、空調、紅外線家電、感測器、攝影機與門口對講，加上社區公告、報修、公設預約與包裹通知；語音操作與待機相片牆為平板專屬。同一組帳號通用，手機 App「enGo智慧管家」免費下載。",
+                "en": "enGo manages home and community together: the enGo wall tablet is the control hub at home and the mobile app keeps you in charge when out. It integrates lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras and the door intercom, plus community notices, repair requests, facility bookings and parcel notifications; voice control and the standby photo wall are tablet-only. One account works everywhere; the mobile app (listed as enGo智慧管家) is free.",
+                "ja": "enGo は住まいとコミュニティを一つにするスマートリビングシステム。壁掛けの enGo タブレットが家の司令塔、外出先ではスマホアプリで操作。照明・コンセント・カーテン・エアコン・赤外線家電・センサー・カメラ・インターホンに加え、お知らせ・修理依頼・共用施設予約・宅配通知を統合。音声操作と待機フォトウォールはタブレット専用。アカウントは共通、アプリ（enGo智慧管家）は無料。",
+                "fr": "enGo gère la maison et la résidence ensemble : la tablette murale enGo est le poste de commande à la maison, l'appli mobile prend le relais à l'extérieur. Éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone, plus avis, réparations, réservations et colis ; commande vocale et mur de photos réservés à la tablette. Un seul compte ; l'appli (enGo智慧管家) est gratuite."
             },
             "image": "screens/01-home-tablet.png",
             "spec_image": null,
