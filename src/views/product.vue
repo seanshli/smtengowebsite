@@ -32,9 +32,10 @@
             {{ $t('product.tablet_intro.info') }}
           </p>
         </div>
-        <!-- ENGO-WEB-001 §3.2 shot #1: the 3.0.64 home screen, real device, full frame.
-             tablet_1.png (2023 UI whose sidebar drew 食譜／影音／門鎖) is deleted. -->
-        <img src="/images/screens/01-home-tablet.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
+        <!-- ENGO-WEB-001 §3.2 shot #1 composited onto the enGo tablet render (the old
+             hero's device body, its 2023 screen replaced by the real 3.0.64 home
+             screenshot — screen pixels untouched, cover-fit into the 1755×1054 panel). -->
+        <img src="/images/screens/01-home-tablet-device.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
       </div>
       <div class="gradient_container_i">
         <div class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
@@ -1195,9 +1196,9 @@ export default defineComponent({
     //   ios       → shot #6 not available. Never substitute the Android shot.
     const featureImages: Record<'voice' | 'floorplan' | 'photowall' | 'inventory', string | null> = {
       voice: null,
-      floorplan: '/images/screens/03-floorplan-tablet.png',
+      floorplan: '/images/screens/03-floorplan-tablet-device.png',
       photowall: null,
-      inventory: '/images/screens/05-warehouse-tablet.png'
+      inventory: '/images/screens/05-warehouse-tablet-device.png'
     }
     const interfaceImages: Record<'ios' | 'android', string | null> = {
       ios: null,
