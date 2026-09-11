@@ -32,9 +32,9 @@
             {{ $t('product.tablet_intro.info') }}
           </p>
         </div>
-        <!-- Phase 1: the ONE place tablet_1.png remains (ENGO-WEB-002). Phase 2
-             swaps it for the 3.0.64 home screen — ENGO-WEB-001 §3.2 shot #1. -->
-        <img src="/images/tablet_1.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
+        <!-- ENGO-WEB-001 §3.2 shot #1: the 3.0.64 home screen, real device, full frame.
+             tablet_1.png (2023 UI whose sidebar drew 食譜／影音／門鎖) is deleted. -->
+        <img src="/images/screens/01-home-tablet.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
       </div>
       <div class="gradient_container_i">
         <div class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
@@ -76,6 +76,12 @@
                 <strong class="intro-label">{{ $t('product.brand_intro.communityLabel') }}</strong>
                 {{ $t('product.brand_intro.community') }}
               </p>
+              <!-- §3.2 shot #8, cropped to the two real notices (違規勸導／社區除蟲通知);
+                   the same screen also carried a／b／123／test entries. -->
+              <figure class="intro-figure">
+                <img src="/images/screens/08-announcements-phone.png" :alt="$t('product.brand_intro.communityFigure')" loading="lazy" />
+                <figcaption>{{ $t('product.brand_intro.communityFigure') }}</figcaption>
+              </figure>
               <p class="fz-20 lh-34 fz-tab-17 lh-tab-28 fz-mob-15 lh-mob-25">
                 {{ $t('product.brand_intro.scenes') }}
               </p>
@@ -143,28 +149,6 @@
             <div class="d-flex fd-column jc-sb">
               <div class="count_card_number">
                 <span class="fz-72 fz-tab-58 fw-500 pr-8">
-                  <count-up :end-val="5" :duration="2" :options="options" @init="onInit"></count-up>
-                </span>
-                <span class="fz-32 fz-tab-20 fw-500">
-                  <!-- 年 -->
-                  {{ $t('product.brand_intro.countCard.card03.unit') }}
-                </span>
-              </div>
-              <div>
-                <span class="fz-24 fw-500">
-                  <!-- 研發時間 -->
-                  {{ $t('product.brand_intro.countCard.card03.info') }}
-                </span>
-              </div>
-            </div>
-            <div>
-              <img src="/assets/lightbulb.svg" alt="研發 icon" />
-            </div>
-          </div>
-          <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
-            <div class="d-flex fd-column jc-sb">
-              <div class="count_card_number">
-                <span class="fz-72 fz-tab-58 fw-500 pr-8">
                   <count-up
                     :end-val="10"
                     :duration="2.5"
@@ -186,6 +170,28 @@
             </div>
             <div>
               <img src="/assets/test_tubes.svg" alt="驗證測試 icon" />
+            </div>
+          </div>
+          <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
+            <div class="d-flex fd-column jc-sb">
+              <div class="count_card_number">
+                <span class="fz-72 fz-tab-58 fw-500 pr-8">
+                  <count-up :end-val="5" :duration="2" :options="options" @init="onInit"></count-up>
+                </span>
+                <span class="fz-32 fz-tab-20 fw-500">
+                  <!-- 年 -->
+                  {{ $t('product.brand_intro.countCard.card03.unit') }}
+                </span>
+              </div>
+              <div>
+                <span class="fz-24 fw-500">
+                  <!-- 研發時間 -->
+                  {{ $t('product.brand_intro.countCard.card03.info') }}
+                </span>
+              </div>
+            </div>
+            <div>
+              <img src="/assets/lightbulb.svg" alt="研發 icon" />
             </div>
           </div>
         </div>
@@ -360,13 +366,21 @@
           <p class="interfaces-note fz-16 lh-28 fz-mob-14 lh-mob-24 mt-24">
             {{ $t('product.interfaces.footnote') }}
           </p>
+          <!-- Direct store links: the listing is named enGo智慧管家 in every locale,
+               so an English reader searching "enGo HMS" would not find it. -->
+          <p class="interfaces-stores mt-12">
+            <a href="https://apps.apple.com/app/id6743929358" target="_blank" rel="noopener">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.engo.life" target="_blank" rel="noopener">Google Play</a>
+          </p>
           <!-- Phase 2: ENGO-WEB-001 §3.2 shots #6 (iPhone home) and #7 (Android home). -->
           <div v-if="interfaceImages.ios || interfaceImages.android" class="interfaces-figures mt-40">
             <figure v-if="interfaceImages.ios">
               <img :src="interfaceImages.ios" :alt="$t('product.interfaces.columns.ios')" loading="lazy" />
+              <figcaption>{{ $t('product.interfaces.columns.ios') }}</figcaption>
             </figure>
             <figure v-if="interfaceImages.android">
               <img :src="interfaceImages.android" :alt="$t('product.interfaces.columns.android')" loading="lazy" />
+              <figcaption>{{ $t('product.interfaces.columns.android') }}</figcaption>
             </figure>
           </div>
         </div>
@@ -1172,21 +1186,23 @@ export default defineComponent({
     const observeTarget = ref(null)
     const targetIsVisible = ref(false)
 
-    // Phase 2 image slots (ENGO-WEB-001 §3.2). A figure renders only once a path
-    // is set here, so the layout is reserved without shipping an empty box.
-    //   featureImages.voice     → shot #2  語音對話進行中（平板橫向）
-    //   featureImages.floorplan → shot #3  平面圖即時視圖
-    //   featureImages.photowall → shot #4  待機相片牆（含資訊層）
-    //   featureImages.inventory → shot #5  倉儲物品清單
-    //   interfaceImages.ios     → shot #6  首頁（iPhone）
-    //   interfaceImages.android → shot #7  首頁（Android）
+    // ENGO-WEB-001 §3.2 image slots. A figure renders only once a path is set,
+    // so an unfilled slot is simply absent — never an empty box.
+    //   voice     → shot #2 not taken: the idle screen draws no voice entry point
+    //               and the wake method is unconfirmed. Stays text-only until told.
+    //   photowall → shot #4 delivered, but it shows a MEDOLE catalogue page rather
+    //               than family photos; kept text-only (2026-09-11 feedback).
+    //   ios       → shot #6 not available. Never substitute the Android shot.
     const featureImages: Record<'voice' | 'floorplan' | 'photowall' | 'inventory', string | null> = {
       voice: null,
-      floorplan: null,
+      floorplan: '/images/screens/03-floorplan-tablet.png',
       photowall: null,
-      inventory: null
+      inventory: '/images/screens/05-warehouse-tablet.png'
     }
-    const interfaceImages: Record<'ios' | 'android', string | null> = { ios: null, android: null }
+    const interfaceImages: Record<'ios' | 'android', string | null> = {
+      ios: null,
+      android: '/images/screens/07-home-phone.png'
+    }
     const router = useRouter()
     const hasHeader = ref(true)
     const { trackEvent } = useAnalytics()

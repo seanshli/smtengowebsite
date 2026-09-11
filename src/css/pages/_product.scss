@@ -258,6 +258,27 @@ body {
                     vertical-align: 1px;
                 }
 
+                // §3.2 shot #8 beside the 社區 paragraph
+                .intro-figure {
+                    margin: 4px 0 24px;
+                    max-width: 440px;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        border-radius: 14px;
+                        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    }
+
+                    figcaption {
+                        margin-top: 8px;
+                        font-size: 14px;
+                        letter-spacing: 0.04em;
+                        opacity: 0.75;
+                    }
+                }
+
             }
 
             img {
@@ -411,25 +432,53 @@ body {
             opacity: 0.85;
         }
 
-        // Phase 2 phone shots (§3.2 #6, #7)
+        // B-2: direct store links under the footnote
+        &-stores {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            a {
+                display: inline-block;
+                padding: 8px 18px;
+                border: 1px solid $gold;
+                color: $gold;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                text-decoration: none;
+
+                &:hover,
+                &:focus-visible {
+                    background: $gold;
+                    color: $grey-blue3;
+                }
+            }
+        }
+
+        // §3.2 phone shots (#6 iPhone, #7 Android). Only #7 exists today, so a
+        // flex row keeps a lone figure phone-width instead of half a grid.
         &-figures {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 24px;
-            max-width: 720px;
 
             figure {
                 margin: 0;
+                flex: 0 1 300px;
             }
 
             img {
                 display: block;
                 width: 100%;
                 height: auto;
+                border-radius: 14px;
             }
 
-            @media (max-width: 560px) {
-                grid-template-columns: 1fr;
+            figcaption {
+                margin-top: 8px;
+                font-size: 14px;
+                letter-spacing: 0.06em;
+                opacity: 0.75;
             }
         }
     }
