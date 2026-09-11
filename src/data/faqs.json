@@ -3,40 +3,40 @@
     "id": 1,
     "category": "setup",
     "question": {
-      "zh": "如何將 enGo 中樞連接到 Wi-Fi？",
-      "zhCN": "如何将 enGo 中枢连接到 Wi-Fi？",
-      "en": "How do I connect the enGo Hub to Wi-Fi?",
-      "fr": "Comment connecter le concentrateur enGo au Wi-Fi ?",
-      "ja": "enGoハブをWi-Fiに接続するにはどうすればよいですか？",
-      "es": "¿Cómo conecto el Hub enGo al Wi-Fi?"
+      "zh": "如何新增裝置（配網）？連不上怎麼辦？",
+      "zhCN": "如何新增装置（配网）？连不上怎么办？",
+      "en": "How do I add a device (pairing)? What if it won't connect?",
+      "fr": "Comment ajouter un appareil (appairage) ? Et s'il ne se connecte pas ?",
+      "ja": "機器を追加（ペアリング）するには？接続できないときは？",
+      "es": "¿Cómo añado un dispositivo (emparejar)? ¿Y si no conecta?"
     },
     "answer": {
-      "zh": "插上中樞，打開 enGo App，然後按照「新增設備」提示輸入您的 Wi-Fi 密碼。系統支援 Wi-Fi、Zigbee 和藍牙多種協議連線。",
-      "zhCN": "插上中枢，打开 enGo App，然后按照「新增设备」提示输入您的 Wi-Fi 密码。系统支持 Wi-Fi、Zigbee 和蓝牙多种协议连接。",
-      "en": "Plug in the hub, open the enGo App, and follow the 'Add Device' prompts to enter your Wi-Fi password. The system supports Wi-Fi, Zigbee, and Bluetooth protocols.",
-      "fr": "Branchez le concentrateur, ouvrez l'application enGo et suivez les instructions 'Ajouter un appareil' pour saisir votre mot de passe Wi-Fi. Le système prend en charge Wi-Fi, Zigbee et Bluetooth.",
-      "ja": "ハブを電源に接続し、enGoアプリを開いて「デバイスの追加」プロンプトに従い、Wi-Fiパスワードを入力します。Wi-Fi、Zigbee、Bluetooth各種プロトコルに対応しています。",
-      "es": "Conecta el hub, abre la App enGo y sigue las instrucciones de 'Agregar dispositivo' para ingresar tu contraseña Wi-Fi. El sistema es compatible con los protocolos Wi-Fi, Zigbee y Bluetooth."
+      "zh": "在 App 首頁點「新增裝置」，依畫面指示操作；系統支援子裝置、Matter、掃碼、AP 模式等配網方式。配網前請確認手機或平板已連上家中的 2.4GHz Wi-Fi，且裝置已通電並進入配網模式（多數裝置需長按重置鍵）。最常見的失敗原因是連到 5GHz Wi-Fi，或裝置未進入配網模式；仍失敗請洽專人 02-27510218。",
+      "zhCN": "在 App 首页点“新增装置”，依画面指示操作；系统支援子装置、Matter、扫码、AP 模式等配网方式。配网前请确认手机或平板已连上家中的 2.4GHz Wi-Fi，且装置已通电并进入配网模式（多数装置需长按重置键）。最常见的失败原因是连到 5GHz Wi-Fi，或装置未进入配网模式；仍失败请洽专人 02-27510218。",
+      "en": "Tap \"Add device\" on the app's Home screen and follow the prompts; sub-device, Matter, QR-scan and AP-mode pairing are supported. Before pairing, make sure the phone or tablet is on the home's 2.4 GHz Wi-Fi and the device is powered and in pairing mode (most need a long press on reset). The most common failures are being on 5 GHz Wi-Fi or the device not being in pairing mode; if it still fails, call 02-27510218.",
+      "fr": "Touchez « Ajouter un appareil » sur l'accueil de l'appli et suivez les étapes (sous-appareil, Matter, QR, mode AP). Vérifiez d'abord que le téléphone ou la tablette est sur le Wi-Fi 2,4 GHz de la maison et que l'appareil est alimenté et en mode appairage (souvent un appui long sur reset). Causes fréquentes d'échec : Wi-Fi 5 GHz, ou appareil pas en mode appairage ; sinon appelez le 02-27510218.",
+      "ja": "アプリのホームで「機器を追加」をタップし、画面の案内に従います（サブデバイス・Matter・QR・AP モードに対応）。事前にスマホ／タブレットが自宅の 2.4GHz Wi-Fi に接続され、機器に電源が入りペアリングモードになっていることを確認してください（多くはリセット長押し）。よくある原因は 5GHz への接続とペアリングモード未移行です。解決しない場合は 02-27510218 へ。",
+      "es": "Toca «Añadir dispositivo» en el inicio de la app y sigue las indicaciones (subdispositivo, Matter, QR, modo AP). Comprueba antes que el móvil o la tableta está en el Wi-Fi de 2,4 GHz de casa y que el dispositivo tiene corriente y está en modo emparejamiento (la mayoría requiere pulsación larga en reset). Los fallos más habituales son estar en 5 GHz o no estar en modo emparejamiento; si persiste, llama al 02-27510218."
     }
   },
   {
     "id": 2,
     "category": "compatibility",
     "question": {
-      "zh": "有哪些設備與 enGo 系統兼容？",
-      "zhCN": "有哪些设备与 enGo 系统兼容？",
-      "en": "What devices are compatible with the enGo system?",
-      "fr": "Quels appareils sont compatibles avec le système enGo ?",
-      "ja": "enGoシステムと互換性のあるデバイスは何ですか？",
-      "es": "¿Qué dispositivos son compatibles con el sistema enGo?"
+      "zh": "有哪些裝置與 enGo 系統相容？",
+      "zhCN": "有哪些装置与 enGo 系统相容？",
+      "en": "Which devices are compatible with enGo?",
+      "fr": "Quels appareils sont compatibles avec enGo ?",
+      "ja": "enGo に対応する機器は？",
+      "es": "¿Qué dispositivos son compatibles con enGo?"
     },
     "answer": {
-      "zh": "enGo 支持智慧燈光開關、空調遙控器、電動窗簾、門窗感測器、煙霧/漏水偵測器、空氣清淨機、淨水系統、電動升降拉籃等，並兼容 Apple HomeKit（Siri 聲控）與 MEDOLE 新風除濕系統。透過 AIoT 串聯技術，尚未合作的廠商產品也能提供整合支援。",
-      "zhCN": "enGo 支持智慧灯光开关、空调遥控器、电动窗帘、门窗感测器、烟雾/漏水检测器、空气清净机、净水系统、电动升降拉篮等，并兼容 Apple HomeKit（Siri 声控）与 MEDOLE 新风除湿系统。通过 AIoT 串联技术，尚未合作的厂商产品也能提供整合支持。",
-      "en": "enGo supports smart light switches, AC remote controllers, motorized curtains, door/window sensors, smoke/leak detectors, air purifiers, water systems, and motorized storage baskets. It also integrates with Apple HomeKit (Siri voice control) and the MEDOLE fresh air dehumidification system. With AIoT technology, even non-partner devices can be integrated.",
-      "fr": "enGo prend en charge les interrupteurs intelligents, télécommandes de climatisation, rideaux motorisés, capteurs de portes/fenêtres, détecteurs de fumée/fuite, purificateurs d'air, systèmes d'eau et paniers motorisés. Il s'intègre également avec Apple HomeKit (Siri) et le système de ventilation MEDOLE.",
-      "ja": "enGoは、スマートライトスイッチ、エアコンリモコン、電動カーテン、ドア/窓センサー、煙/漏水検知器、空気清浄機、浄水システム、電動収納バスケットなどに対応しています。Apple HomeKit（Siri音声制御）やMEDOLE新鮮空気除湿システムとも統合可能です。",
-      "es": "enGo es compatible con interruptores de luz inteligentes, controladores de AC, cortinas motorizadas, sensores de puertas/ventanas, detectores de humo/fugas, purificadores de aire, sistemas de agua y canastas motorizadas. También se integra con Apple HomeKit (control por voz Siri) y el sistema de deshumidificación MEDOLE. Con tecnología AIoT, incluso dispositivos de terceros pueden integrarse."
+      "zh": "照明（開關、調光、調色溫、RGB）、插座（開關、用電量）、窗簾（開合、百分比）、空調（溫度、模式、風速）、紅外線家電（電視、冷氣等）、感測器（溫濕度、空氣品質、人體存在、瓦斯、漏水、煙霧）、攝影機、門口對講（依社區設備）、迴路用電監測、水閥。支援 Wi-Fi、ZigBee、Matter、紅外線；支援範圍依實際配對的裝置而定，特定品牌／型號請洽專人確認。門鎖目前不在支援範圍內。",
+      "zhCN": "照明（开关、调光、调色温、RGB）、插座（开关、用电量）、窗帘（开合、百分比）、空调（温度、模式、风速）、红外线家电（电视、冷气等）、感测器（温湿度、空气质量、人体存在、瓦斯、漏水、烟雾）、摄影机、门口对讲（依社区设备）、回路用电监测、水阀。支援 Wi-Fi、ZigBee、Matter、红外线；支援范围依实际配对的装置而定，特定品牌／型号请洽专人确认。门锁目前不在支援范围内。",
+      "en": "Lighting (on/off, dimming, colour temperature, RGB), sockets (on/off, power), curtains (open/close, percentage), air conditioning (temperature, mode, fan), infrared appliances (TV, AC…), sensors (temperature/humidity, air quality, presence, gas, water leak, smoke), cameras, door intercom (depends on community equipment), circuit-level power monitoring and water valves. Protocols: Wi-Fi, ZigBee, Matter, infrared. Support depends on the devices actually paired — please check specific brands/models with our team. Door locks are not currently supported.",
+      "fr": "Éclairage (marche/arrêt, variation, température de couleur, RGB), prises (marche/arrêt, consommation), rideaux (ouverture, pourcentage), climatisation (température, mode, ventilation), appareils infrarouges (TV, clim…), capteurs (température/humidité, qualité de l'air, présence, gaz, fuite, fumée), caméras, interphone (selon la résidence), suivi électrique par circuit et vannes d'eau. Protocoles : Wi-Fi, ZigBee, Matter, infrarouge. La prise en charge dépend des appareils appairés — vérifiez les marques/modèles précis avec notre équipe. Les serrures ne sont pas prises en charge actuellement.",
+      "ja": "照明（オンオフ・調光・調色・RGB）、コンセント（オンオフ・電力）、カーテン（開閉・開度）、エアコン（温度・モード・風量）、赤外線家電（テレビ・エアコンなど）、センサー（温湿度・空気質・人感・ガス・漏水・煙）、カメラ、ドアインターホン（設備による）、回路別電力監視、水バルブ。対応プロトコルは Wi-Fi・ZigBee・Matter・赤外線。対応範囲は実際にペアリングした機器によるため、特定ブランド・型番は担当者にご確認ください。ドアロックは現在非対応です。",
+      "es": "Iluminación (encendido, regulación, temperatura de color, RGB), enchufes (encendido, consumo), cortinas (apertura, porcentaje), aire acondicionado (temperatura, modo, ventilador), electrodomésticos por infrarrojos (TV, aire…), sensores (temperatura/humedad, calidad del aire, presencia, gas, fuga, humo), cámaras, portero (según la comunidad), consumo por circuito y válvulas de agua. Protocolos: Wi-Fi, ZigBee, Matter, infrarrojos. La compatibilidad depende de los dispositivos emparejados — consulta marcas/modelos concretos con nuestro equipo. Las cerraduras no son compatibles actualmente."
     }
   },
   {
@@ -103,20 +103,20 @@
     "id": 6,
     "category": "features",
     "question": {
-      "zh": "enGo 智慧家庭系統在沒有網路連線的情況下可以運作嗎？",
-      "zhCN": "enGo 智慧家庭系统在没有网络连接的情况下可以运作吗？",
-      "en": "Does the enGo smart home system work without an internet connection?",
-      "fr": "Le système domestique intelligent enGo fonctionne-t-il sans connexion Internet ?",
-      "ja": "enGoスマートホームシステムはインターネット接続なしで機能しますか？",
-      "es": "¿Funciona el sistema de hogar inteligente enGo sin conexión a internet?"
+      "zh": "enGo 在沒有網路的情況下可以運作嗎？",
+      "zhCN": "enGo 在没有网络的情况下可以运作吗？",
+      "en": "Does enGo work without an internet connection?",
+      "fr": "enGo fonctionne-t-il sans Internet ?",
+      "ja": "enGo はインターネットなしで使えますか？",
+      "es": "¿Funciona enGo sin conexión a Internet?"
     },
     "answer": {
-      "zh": "透過 T1 平板的基本本地控制和預設智慧場景在離線時仍可運作，但遠端存取與語音控制需要開啟網路連線。Zigbee 設備在本地網路下也可繼續運作。",
-      "zhCN": "通过 T1 平板的基本本地控制和预设智慧场景在离线时仍可运作，但远程访问与语音控制需要开启网络连接。Zigbee 设备在本地网络下也可继续运作。",
-      "en": "Basic local controls via the T1 tablet and preset smart scenes will continue to work offline. Zigbee devices also maintain local functionality. However, remote access and voice control require an active internet connection.",
-      "fr": "Les contrôles locaux de base via la tablette T1 et les scènes intelligentes prédéfinies continueront de fonctionner hors ligne. Les appareils Zigbee maintiennent leur fonctionnalité locale. L'accès à distance et le contrôle vocal nécessitent une connexion Internet.",
-      "ja": "T1タブレットを介した基本的なローカル制御とプリセットのスマートシーンはオフラインでも機能し続けます。Zigbeeデバイスもローカルで動作します。ただし、リモートアクセスと音声制御にはインターネット接続が必要です。",
-      "es": "Los controles locales básicos a través de la tableta T1 y las escenas inteligentes preconfiguradas seguirán funcionando sin conexión. Los dispositivos Zigbee también mantienen funcionalidad local. Sin embargo, el acceso remoto y el control por voz requieren una conexión a internet activa."
+      "zh": "目前所有控制指令都需要網路連線。我們正在開發區網直控（平板在家中網路內直接對裝置下指令），這項功能尚未對外提供，上線後會另行公告。斷網時，平板仍會顯示房間與裝置清單（裝置標示為離線）以及待機相片牆，但無法下達控制指令。",
+      "zhCN": "目前所有控制指令都需要网络连线。我们正在开发区网直控（平板在家中网络内直接对装置下指令），这项功能尚未对外提供，上线后会另行公告。断网时，平板仍会显示房间与装置清单（装置标示为离线）以及待机相片墙，但无法下达控制指令。",
+      "en": "All control commands currently require an internet connection. We are developing local-network control (the tablet commanding devices directly within the home network); it is not yet available and will be announced when it launches. Offline, the tablet still shows rooms and the device list (marked offline) and the photo wall, but cannot send commands.",
+      "fr": "Toutes les commandes passent actuellement par Internet. Nous développons la commande en réseau local (la tablette pilote les appareils directement dans le réseau de la maison) ; elle n'est pas encore disponible et sera annoncée à son lancement. Hors ligne, la tablette affiche toujours les pièces et appareils (marqués hors ligne) et le mur de photos, mais ne peut pas envoyer de commandes.",
+      "ja": "現在すべての操作指令にネット接続が必要です。家庭内ネットワークで直接制御するローカル直接制御を開発中ですが、まだ提供していません（提供時に告知します）。オフライン時もタブレットには部屋と機器一覧（オフライン表示）やフォトウォールは表示されますが、操作はできません。",
+      "es": "Actualmente todas las órdenes requieren conexión a Internet. Estamos desarrollando el control en red local (la tableta manda a los dispositivos directamente dentro de la red doméstica); aún no está disponible y se anunciará cuando se lance. Sin conexión, la tableta sigue mostrando habitaciones y dispositivos (marcados como desconectados) y el muro de fotos, pero no puede enviar órdenes."
     }
   },
   {
@@ -131,12 +131,12 @@
       "es": "¿Con qué frecuencia debo reemplazar los filtros del sistema Water-Sr AI?"
     },
     "answer": {
-      "zh": "濾芯壽命取決於水質和使用情況。一般來說，RO 逆滲透膜可使用 12-24 個月，而其他濾芯應每 6-12 個月更換一次。T1 平板會在需要更換時自動提醒您，也可透過 App 隨時查看濾芯狀態。",
-      "zhCN": "滤芯寿命取决于水质和使用情况。一般来说，RO 逆渗透膜可使用 12-24 个月，而其他滤芯应每 6-12 个月更换一次。T1 平板会在需要更换时自动提醒您，也可通过 App 随时查看滤芯状态。",
-      "en": "Filter lifespan varies based on water quality and usage. Generally, the RO membrane lasts 12-24 months while other filters should be replaced every 6-12 months. The T1 tablet will alert you automatically when replacement is needed, and you can check filter status anytime via the App.",
-      "fr": "La durée de vie du filtre varie selon la qualité de l'eau et l'utilisation. Généralement, la membrane RO dure 12-24 mois tandis que les autres filtres doivent être remplacés tous les 6-12 mois. La tablette T1 vous alertera automatiquement, et vous pouvez vérifier l'état des filtres via l'application.",
-      "ja": "フィルターの寿命は水質と使用量によって異なります。一般的にRO膜は12〜24か月、その他のフィルターは6〜12か月ごとに交換する必要があります。T1タブレットが交換時期を自動通知し、アプリでフィルター状態をいつでも確認できます。",
-      "es": "La vida útil del filtro varía según la calidad del agua y el uso. En general, la membrana RO dura de 12 a 24 meses mientras que los demás filtros deben reemplazarse cada 6 a 12 meses. La tableta T1 te alertará automáticamente cuando sea necesario, y puedes verificar el estado de los filtros en la App en cualquier momento."
+      "zh": "濾芯壽命取決於水質和使用情況。一般來說，RO 逆滲透膜可使用 12-24 個月，而其他濾芯應每 6-12 個月更換一次。enGo3 平板會在需要更換時自動提醒您，也可透過 App 隨時查看濾芯狀態。",
+      "zhCN": "滤芯寿命取决于水质和使用情况。一般来说，RO 逆渗透膜可使用 12-24 个月，而其他滤芯应每 6-12 个月更换一次。enGo3 平板会在需要更换时自动提醒您，也可通过 App 随时查看滤芯状态。",
+      "en": "Filter lifespan varies based on water quality and usage. Generally, the RO membrane lasts 12-24 months while other filters should be replaced every 6-12 months. The enGo3 tablet will alert you automatically when replacement is needed, and you can check filter status anytime via the App.",
+      "fr": "La durée de vie du filtre varie selon la qualité de l'eau et l'utilisation. Généralement, la membrane RO dure 12-24 mois tandis que les autres filtres doivent être remplacés tous les 6-12 mois. La tablette enGo3 vous alertera automatiquement, et vous pouvez vérifier l'état des filtres via l'application.",
+      "ja": "フィルターの寿命は水質と使用量によって異なります。一般的にRO膜は12〜24か月、その他のフィルターは6〜12か月ごとに交換する必要があります。enGo3 タブレットが交換時期を自動通知し、アプリでフィルター状態をいつでも確認できます。",
+      "es": "La vida útil del filtro varía según la calidad del agua y el uso. En general, la membrana RO dura de 12 a 24 meses mientras que los demás filtros deben reemplazarse cada 6 a 12 meses. La tableta enGo3 te alertará automáticamente cuando sea necesario, y puedes verificar el estado de los filtros en la App en cualquier momento."
     }
   },
   {
@@ -224,19 +224,19 @@
     "category": "features",
     "question": {
       "zh": "enGo 支援 Apple HomeKit 和 Siri 嗎？",
-      "zhCN": "enGo 支持 Apple HomeKit 和 Siri 吗？",
+      "zhCN": "enGo 支援 Apple HomeKit 和 Siri 吗？",
       "en": "Does enGo support Apple HomeKit and Siri?",
       "fr": "enGo prend-il en charge Apple HomeKit et Siri ?",
-      "ja": "enGoはApple HomeKitとSiriに対応していますか？",
+      "ja": "enGo は Apple HomeKit や Siri に対応していますか？",
       "es": "¿enGo es compatible con Apple HomeKit y Siri?"
     },
     "answer": {
-      "zh": "是的！enGo 系統已整合 Apple HomeKit，您可以使用 Siri 語音控制您的智慧家庭設備。只要說「嘿 Siri！我回家了」即可啟動回家模式。搭配合作供應商產品，透過工程師設定自動化場景，並支援 Apple HomeKit 客製化整合。",
-      "zhCN": "是的！enGo 系统已整合 Apple HomeKit，您可以使用 Siri 语音控制您的智慧家庭设备。只要说「嘿 Siri！我回家了」即可启动回家模式。搭配合作供应商产品，通过工程师设定自动化场景，并支持 Apple HomeKit 客制化整合。",
-      "en": "Yes! enGo integrates with Apple HomeKit for Siri voice control. Just say 'Hey Siri, I'm home!' to activate Home Mode. Our engineers configure automation scenes with partner products, and we offer custom Apple HomeKit integration. With AIoT technology, even non-partner devices can be voice-controlled.",
-      "fr": "Oui ! enGo s'intègre avec Apple HomeKit pour le contrôle vocal Siri. Dites simplement 'Dis Siri, je suis rentré !' pour activer le mode Maison. Nos ingénieurs configurent les scènes d'automatisation et nous proposons une intégration HomeKit personnalisée.",
-      "ja": "はい！enGoはApple HomeKitと統合しており、Siri音声制御が可能です。「Hey Siri、ただいま！」で帰宅モードを起動。エンジニアがパートナー製品との自動化シーンを設定し、Apple HomeKitのカスタム統合にも対応します。",
-      "es": "¡Sí! enGo se integra con Apple HomeKit para el control por voz Siri. Solo di '¡Oye Siri, estoy en casa!' para activar el modo Casa. Nuestros ingenieros configuran escenas de automatización con productos asociados, y ofrecemos integración personalizada de Apple HomeKit. Con tecnología AIoT, incluso dispositivos de terceros pueden controlarse por voz."
+      "zh": "enGo 的語音操作是 enGo3 牆掛平板內建的功能，直接對牆上的平板說話即可，不經 Siri；手機 App 沒有語音介面。關於 Apple HomeKit、Google Home 等第三方平台的整合，請洽專人確認：02-27510218（週一至週五 09:00–18:00）。",
+      "zhCN": "enGo 的语音操作是 enGo3 墙挂平板内建的功能，直接对墙上的平板说话即可，不经 Siri；手机 App 没有语音界面。关于 Apple HomeKit、Google Home 等第三方平台的整合，请洽专人确认：02-27510218（周一至周五 09:00–18:00）。",
+      "en": "enGo's voice control is built into the enGo3 wall tablet — you speak to the tablet directly, not through Siri; the mobile app has no voice interface. For integration with third-party platforms such as Apple HomeKit or Google Home, please check with our team: 02-27510218 (Mon–Fri 09:00–18:00).",
+      "fr": "La commande vocale d'enGo est intégrée à la tablette murale enGo3 : vous parlez directement à la tablette, sans Siri ; l'appli mobile n'a pas d'interface vocale. Pour l'intégration avec Apple HomeKit, Google Home ou d'autres plateformes, contactez notre équipe : 02-27510218 (lun.–ven. 09:00–18:00).",
+      "ja": "enGo の音声操作は enGo3 壁掛けタブレット内蔵の機能で、Siri を介さずタブレットに直接話しかけます。スマホアプリに音声機能はありません。Apple HomeKit や Google Home など第三者プラットフォームとの連携は担当者にご確認ください：02-27510218（月〜金 09:00–18:00）。",
+      "es": "El control por voz de enGo está integrado en la tableta de pared enGo3: hablas directamente a la tableta, sin Siri; la app móvil no tiene interfaz de voz. Para la integración con Apple HomeKit, Google Home u otras plataformas, consulta con nuestro equipo: 02-27510218 (lun.–vie. 09:00–18:00)."
     }
   },
   {
@@ -291,12 +291,12 @@
       "es": "¿Es enGo adecuado para personas mayores?"
     },
     "answer": {
-      "zh": "非常適合！enGo 特別注重「長者友善設計」。T1 平板配備大字體介面、語音控制功能，搭配自動場景（起床自動開燈、入睡自動關燈），讓操作更加簡單。家人可透過 App 遠端查看長輩居家狀態，加上煙霧、漏水、門窗感測即時通知，讓子女在遠方也能安心。",
-      "zhCN": "非常适合！enGo 特别注重「长者友善设计」。T1 平板配备大字体界面、语音控制功能，搭配自动场景（起床自动开灯、入睡自动关灯），让操作更加简单。家人可通过 App 远程查看长辈居家状态，加上烟雾、漏水、门窗感测即时通知，让子女在远方也能安心。",
-      "en": "Absolutely! enGo is designed with 'senior-friendly' features. The T1 tablet has a large-font interface and voice control, combined with auto scenes (lights on at wake, off at sleep) for effortless operation. Family members can remotely monitor home status via the App, plus smoke, leak, and door/window sensors provide real-time alerts for peace of mind.",
-      "fr": "Absolument ! enGo est conçu avec des fonctionnalités adaptées aux seniors : interface à gros caractères, commande vocale, scènes automatiques (lumières au réveil/coucher). La famille peut surveiller à distance via l'application, avec des alertes en temps réel pour la fumée, les fuites et les capteurs de portes/fenêtres.",
-      "ja": "もちろんです！enGoは「シニアフレンドリー設計」を重視。T1タブレットは大きな文字のインターフェースと音声制御を備え、自動シーン（起床時に照明ON、就寝時にOFF）で簡単操作。家族はアプリで遠隔から自宅の状態を確認でき、煙・漏水・ドアセンサーのリアルタイム通知で安心です。",
-      "es": "¡Por supuesto! enGo está diseñado con características 'amigables para adultos mayores'. La tableta T1 tiene una interfaz de texto grande y control por voz, combinada con escenas automáticas (luces al despertar, apagadas al dormir) para una operación sin esfuerzo. Los familiares pueden monitorear el estado del hogar remotamente a través de la App, además de alertas en tiempo real de sensores de humo, fugas y puertas/ventanas."
+      "zh": "非常適合！enGo 特別注重「長者友善設計」。enGo3 牆掛平板配備大字體介面與語音操作（平板專屬），搭配自動場景（起床自動開燈、入睡自動關燈），讓操作更加簡單。家人可透過 App 遠端查看長輩居家狀態，加上煙霧、漏水、門窗感測即時通知，讓子女在遠方也能安心。",
+      "zhCN": "非常适合！enGo 特别注重「长者友善设计」。enGo3 墙挂平板配备大字体界面与语音操作（平板专属），搭配自动场景（起床自动开灯、入睡自动关灯），让操作更加简单。家人可通过 App 远程查看长辈居家状态，加上烟雾、漏水、门窗感测即时通知，让子女在远方也能安心。",
+      "en": "Absolutely! enGo is designed with 'senior-friendly' features. The enGo3 wall tablet has a large-font interface and voice control (tablet only), combined with auto scenes (lights on at wake, off at sleep) for effortless operation. Family members can remotely monitor home status via the App, plus smoke, leak, and door/window sensors provide real-time alerts for peace of mind.",
+      "fr": "Absolument ! enGo est conçu avec des fonctionnalités adaptées aux seniors : interface à gros caractères, commande vocale (tablette uniquement), scènes automatiques (lumières au réveil/coucher). La famille peut surveiller à distance via l'application, avec des alertes en temps réel pour la fumée, les fuites et les capteurs de portes/fenêtres.",
+      "ja": "もちろんです！enGoは「シニアフレンドリー設計」を重視。enGo3 壁掛けタブレットは大きな文字のインターフェースと音声操作（タブレット専用）を備え、自動シーン（起床時に照明ON、就寝時にOFF）で簡単操作。家族はアプリで遠隔から自宅の状態を確認でき、煙・漏水・ドアセンサーのリアルタイム通知で安心です。",
+      "es": "¡Por supuesto! enGo está diseñado con características 'amigables para adultos mayores'. La tableta de pared enGo3 tiene una interfaz de texto grande y control por voz (solo tableta), combinada con escenas automáticas (luces al despertar, apagadas al dormir) para una operación sin esfuerzo. Los familiares pueden monitorear el estado del hogar remotamente a través de la App, además de alertas en tiempo real de sensores de humo, fugas y puertas/ventanas."
     }
   },
   {
@@ -557,6 +557,166 @@
       "fr": "1) HMS (gestion du foyer) : tableau d'affichage, gestion immobilière, alertes et scénarios AIoT. 2) BMS (gestion du bâtiment) : casiers intelligents, vidéosurveillance, boîtes aux lettres intelligentes et gestion de l'énergie. 3) Contrôle environnemental : lumière, air, eau et sécurité de la cuisine.",
       "ja": "1）HMS（ホーム管理）：掲示板、物件管理、ホームシステム管理、通信アラート、AIoT連動。2）BMS（ビル管理）：スマートロッカー、監視、スマートメールボックス、エネルギー管理。3）スマート環境制御：採光・温度、空気質、水管理、キッチン安全。",
       "es": "1) HMS (gestión del hogar): tablón de anuncios, gestión de la propiedad, alertas y escenas AIoT. 2) BMS (gestión del edificio): casilleros inteligentes, videovigilancia, buzones inteligentes y gestión energética. 3) Control ambiental: luz y temperatura, calidad del aire, agua y seguridad en la cocina."
+    }
+  },
+  {
+    "id": 29,
+    "category": "features",
+    "question": {
+      "zh": "enGo 有哪些使用介面？手機和平板的功能一樣嗎？",
+      "zhCN": "enGo 有哪些使用界面？手机和平板的功能一样吗？",
+      "en": "What interfaces does enGo have? Do the phone and tablet do the same things?",
+      "fr": "Quelles interfaces propose enGo ? Le téléphone et la tablette font-ils la même chose ?",
+      "ja": "enGo にはどんな画面がありますか？スマホとタブレットは同じですか？",
+      "es": "¿Qué interfaces tiene enGo? ¿El móvil y la tableta hacen lo mismo?"
+    },
+    "answer": {
+      "zh": "三種介面、一組帳號：enGo3 牆掛平板（家中主控台）、iPhone／iPad（App Store）、Android 手機（Google Play）。家電控制、情境、平面圖即時視圖、社區服務、攝影機、倉儲管理三者都有；語音操作與待機相片牆為平板專屬。手機 App 免費下載，同一住家的成員各自用自己的帳號登入，裝置數不限。",
+      "zhCN": "三种界面、一组账号：enGo3 墙挂平板（家中主控台）、iPhone／iPad（App Store）、Android 手机（Google Play）。家电控制、情境、平面图即时视图、社区服务、摄影机、仓储管理三者都有；语音操作与待机相片墙为平板专属。手机 App 免费下载，同一住家的成员各自用自己的账号登入，装置数不限。",
+      "en": "Three interfaces, one account: the enGo3 wall tablet (the control hub at home), iPhone/iPad (App Store) and Android (Google Play). Appliance control, scenes, live floor plan, community services, cameras and inventory are on all three; voice control and the standby photo wall are tablet-only. The mobile app is free; each household member signs in with their own account, on any number of devices.",
+      "fr": "Trois interfaces, un compte : la tablette murale enGo3 (poste de commande à la maison), iPhone/iPad (App Store) et Android (Google Play). Appareils, scènes, plan en direct, services de la résidence, caméras et inventaire sont sur les trois ; la commande vocale et le mur de photos sont réservés à la tablette. L'appli est gratuite ; chaque membre du foyer se connecte avec son compte, sans limite d'appareils.",
+      "ja": "3つの画面・1つのアカウント：enGo3 壁掛けタブレット（家の司令塔）、iPhone/iPad（App Store）、Android（Google Play）。家電操作・シーン・フロアプラン・コミュニティサービス・カメラ・在庫管理は共通。音声操作と待機フォトウォールはタブレット専用です。アプリは無料、家族それぞれのアカウントで台数制限なくログインできます。",
+      "es": "Tres interfaces, una cuenta: la tableta de pared enGo3 (centro de control en casa), iPhone/iPad (App Store) y Android (Google Play). Electrodomésticos, escenas, plano en tiempo real, servicios de la comunidad, cámaras e inventario están en las tres; la voz y el muro de fotos son solo de tableta. La app es gratuita; cada miembro entra con su cuenta, sin límite de dispositivos."
+    }
+  },
+  {
+    "id": 30,
+    "category": "setup",
+    "question": {
+      "zh": "手機 App 叫什麼名字？在哪裡下載？",
+      "zhCN": "手机 App 叫什么名字？在哪里下载？",
+      "en": "What is the mobile app called, and where do I get it?",
+      "fr": "Comment s'appelle l'appli mobile et où la télécharger ?",
+      "ja": "スマホアプリの名前は？どこでダウンロードできますか？",
+      "es": "¿Cómo se llama la app móvil y dónde la descargo?"
+    },
+    "answer": {
+      "zh": "App 顯示名稱為「enGo智慧管家」（所有語系皆同），免費下載：App Store https://apps.apple.com/app/id6743929358；Google Play https://play.google.com/store/apps/details?id=com.engo.life。英文產品名稱為 enGo HMS，但商店中請以「enGo智慧管家」為準。與牆掛平板使用同一組帳號。",
+      "zhCN": "App 显示名称为“enGo智慧管家”（所有语系皆同），免费下载：App Store https://apps.apple.com/app/id6743929358；Google Play https://play.google.com/store/apps/details?id=com.engo.life。英文产品名称为 enGo HMS，但商店中请以“enGo智慧管家”为准。与墙挂平板使用同一组账号。",
+      "en": "The app is listed as \"enGo智慧管家\" in every store language (the product name is enGo HMS). Free download: App Store https://apps.apple.com/app/id6743929358; Google Play https://play.google.com/store/apps/details?id=com.engo.life. It uses the same account as the wall tablet.",
+      "fr": "L'appli est publiée sous le nom « enGo智慧管家 » dans toutes les langues du store (le produit s'appelle enGo HMS). Gratuite : App Store https://apps.apple.com/app/id6743929358 ; Google Play https://play.google.com/store/apps/details?id=com.engo.life. Même compte que la tablette murale.",
+      "ja": "アプリの表示名はどの言語でも「enGo智慧管家」です（製品名は enGo HMS）。無料：App Store https://apps.apple.com/app/id6743929358、Google Play https://play.google.com/store/apps/details?id=com.engo.life。壁掛けタブレットと同じアカウントを使います。",
+      "es": "La app aparece como «enGo智慧管家» en todos los idiomas de la tienda (el producto es enGo HMS). Gratuita: App Store https://apps.apple.com/app/id6743929358; Google Play https://play.google.com/store/apps/details?id=com.engo.life. Usa la misma cuenta que la tableta de pared."
+    }
+  },
+  {
+    "id": 31,
+    "category": "features",
+    "question": {
+      "zh": "語音操作怎麼用？手機也可以語音嗎？",
+      "zhCN": "语音操作怎么用？手机也可以语音吗？",
+      "en": "How does voice control work? Can I use voice on the phone?",
+      "fr": "Comment fonctionne la commande vocale ? Et sur le téléphone ?",
+      "ja": "音声操作の使い方は？スマホでも使えますか？",
+      "es": "¿Cómo funciona el control por voz? ¿Puedo usarlo en el móvil?"
+    },
+    "answer": {
+      "zh": "語音為 enGo3 牆掛平板專屬，手機 App 沒有語音介面。可以說「開客廳燈」「冷氣調到 26 度」「關掉會議室所有的燈」「下班模式」「我的報修進度」等。具體的啟動方式依機型設定而異，請洽專人說明（02-27510218）。認不出裝置時，改用 App 裡的完整名稱、剛改過名稱可按首頁右上的手動更新；名稱相似時系統會反問，不會亂猜。",
+      "zhCN": "语音为 enGo3 墙挂平板专属，手机 App 没有语音界面。可以说“开客厅灯”“冷气调到 26 度”“关掉会议室所有的灯”“下班模式”“我的报修进度”等。具体的启动方式依机型设定而异，请洽专人说明（02-27510218）。认不出装置时，改用 App 里的完整名称、刚改过名称可按首页右上的手动更新；名称相似时系统会反问，不会乱猜。",
+      "en": "Voice is exclusive to the enGo3 wall tablet; the mobile app has no voice interface. You can say things like \"Turn on the living room light\", \"Set the AC to 26 degrees\", \"Turn off all the lights in the meeting room\", \"After-work mode\" or \"My repair status\". How voice is activated depends on the model configuration — please ask our team (02-27510218). If a device isn't recognised, use its full name from the app, or tap manual refresh after renaming; when two names sound alike it asks which you mean rather than guessing.",
+      "fr": "La voix est réservée à la tablette murale enGo3 ; l'appli mobile n'a pas d'interface vocale. Vous pouvez dire « Allume la lumière du salon », « Clim à 26 degrés », « Éteins toutes les lumières de la salle de réunion », « Mode fin de journée » ou « Où en est ma réparation ? ». Le mode d'activation dépend de la configuration du modèle — demandez à notre équipe (02-27510218). Appareil non reconnu : utilisez son nom complet dans l'appli, ou actualisez manuellement après un renommage ; si deux noms se ressemblent, il demande lequel.",
+      "ja": "音声は enGo3 壁掛けタブレット専用で、スマホアプリにはありません。「リビングの照明をつけて」「エアコンを26度に」「会議室の照明を全部消して」「退勤モード」「修理依頼の進捗」などが使えます。起動方法は機種設定により異なるため担当者にご確認ください（02-27510218）。認識されないときはアプリ上の正式名称で言うか、名前変更後にホーム右上の手動更新を。似た名前は推測せず聞き返します。",
+      "es": "La voz es exclusiva de la tableta de pared enGo3; la app móvil no tiene interfaz de voz. Puedes decir «Encender la luz del salón», «Aire a 26 grados», «Apagar todas las luces de la sala de reuniones», «Modo fin de jornada» o «Estado de mi reparación». Cómo se activa depende de la configuración del modelo — consúltalo con nuestro equipo (02-27510218). Si no reconoce un dispositivo, usa su nombre completo de la app o pulsa actualizar tras renombrar; si dos nombres se parecen, pregunta cuál."
+    }
+  },
+  {
+    "id": 32,
+    "category": "safety",
+    "question": {
+      "zh": "平板會一直錄音或監聽嗎？",
+      "zhCN": "平板会一直录音或监听吗？",
+      "en": "Does the tablet listen or record all the time?",
+      "fr": "La tablette écoute-t-elle ou enregistre-t-elle en permanence ?",
+      "ja": "タブレットは常に録音・聞き取りしていますか？",
+      "es": "¿La tableta escucha o graba todo el tiempo?"
+    },
+    "answer": {
+      "zh": "不會。系統不會持續聆聽，也不會在背景錄音。只有在您主動啟動語音功能之後，才會開始接收聲音；一次對話結束就停止。",
+      "zhCN": "不会。系统不会持续聆听，也不会在背景录音。只有在您主动启动语音功能之后，才会开始接收声音；一次对话结束就停止。",
+      "en": "No. The system does not listen continuously and never records in the background. It only starts receiving audio after you deliberately activate voice, and stops when that exchange ends.",
+      "fr": "Non. Le système n'écoute pas en continu et n'enregistre jamais en arrière-plan. Il ne reçoit le son qu'après que vous ayez activé la voix, et s'arrête à la fin de l'échange.",
+      "ja": "いいえ。常時聞き取りやバックグラウンド録音はしません。音声機能を意図的に起動した後だけ音声を受け取り、その会話が終われば停止します。",
+      "es": "No. El sistema no escucha de forma continua ni graba en segundo plano. Solo recibe audio después de que actives la voz deliberadamente, y se detiene al terminar ese intercambio."
+    }
+  },
+  {
+    "id": 33,
+    "category": "features",
+    "question": {
+      "zh": "平板沒人用的時候會顯示什麼？半夜會不會很亮？",
+      "zhCN": "平板没人用的时候会显示什么？半夜会不会很亮？",
+      "en": "What does the tablet show when nobody is using it? Is it bright at night?",
+      "fr": "Qu'affiche la tablette quand personne ne l'utilise ? Est-elle lumineuse la nuit ?",
+      "ja": "使っていないときタブレットは何を表示しますか？夜はまぶしくないですか？",
+      "es": "¿Qué muestra la tableta cuando nadie la usa? ¿Brilla mucho de noche?"
+    },
+    "answer": {
+      "zh": "閒置一段時間後，平板會切換成待機相片牆（平板專屬），播放住戶選定的照片，並可疊加時間、日期、天氣與最新社區公告；碰一下螢幕就回到原本畫面。預設閒置 5 分鐘進入、每張停留 15 秒、亮度上限 80%。半夜不會刺眼：相片牆期間會壓低亮度上限，並依現場環境光自動調整——室內變暗時亮度降到最低並顯示全黑畫面，走廊開燈才亮起來。",
+      "zhCN": "闲置一段时间后，平板会切换成待机相片墙（平板专属），播放住户选定的照片，并可叠加时间、日期、天气与最新社区公告；碰一下萤幕就回到原本画面。预设闲置 5 分钟进入、每张停留 15 秒、亮度上限 80%。半夜不会刺眼：相片墙期间会压低亮度上限，并依现场环境光自动调整——室内变暗时亮度降到最低并显示全黑画面，走廊开灯才亮起来。",
+      "en": "After a period of inactivity it switches to the standby photo wall (tablet-only): your chosen photos with the time, date, weather and latest community notices overlaid; one touch brings the screen back. Defaults: enters after 5 minutes idle, 15 seconds per photo, brightness capped at 80%. It is not glaring at night — the cap is lowered and follows the ambient light, dropping to minimum brightness and showing black when the room goes dark, and lighting up again when the hallway light comes on.",
+      "fr": "Après un temps d'inactivité, elle passe au mur de photos en veille (tablette uniquement) : vos photos avec l'heure, la date, la météo et les derniers avis ; une touche et l'écran revient. Par défaut : après 5 minutes, 15 s par photo, luminosité plafonnée à 80 %. Pas d'éblouissement la nuit : le plafond est abaissé et suit la lumière ambiante, l'écran passe au minimum et affiche du noir quand la pièce s'assombrit, puis se rallume quand le couloir s'éclaire.",
+      "ja": "一定時間操作がないと待機フォトウォール（タブレット専用）に切り替わり、選んだ写真に時刻・日付・天気・最新のお知らせを重ねて表示します。画面に触れると戻ります。初期値は5分無操作で開始、1枚15秒、明るさ上限80%。夜間もまぶしくありません。上限を下げて周囲の明るさに合わせて自動調整し、部屋が暗くなると最低輝度の黒画面になり、廊下の照明で再表示します。",
+      "es": "Tras un tiempo sin uso pasa al muro de fotos en reposo (solo tableta): tus fotos con la hora, la fecha, el tiempo y los últimos avisos; un toque y vuelve la pantalla. Por defecto: entra a los 5 minutos, 15 s por foto, brillo máximo 80 %. No deslumbra de noche: baja el límite y sigue la luz ambiente, pasando al mínimo y mostrando negro cuando la habitación se oscurece, y volviendo a encenderse cuando se ilumina el pasillo."
+    }
+  },
+  {
+    "id": 34,
+    "category": "compatibility",
+    "question": {
+      "zh": "可以控制門鎖嗎？",
+      "zhCN": "可以控制门锁吗？",
+      "en": "Can enGo control a door lock?",
+      "fr": "enGo peut-il commander une serrure ?",
+      "ja": "ドアロックは操作できますか？",
+      "es": "¿Puede enGo controlar una cerradura?"
+    },
+    "answer": {
+      "zh": "門鎖目前不在 enGo 支援的裝置範圍內。目前支援的是照明、插座、窗簾、空調、紅外線家電、各類感測器、攝影機與門口對講。若您有門禁或門鎖的需求，可洽專人評估：02-27510218（週一至週五 09:00–18:00）。",
+      "zhCN": "门锁目前不在 enGo 支援的装置范围内。目前支援的是照明、插座、窗帘、空调、红外线家电、各类感测器、摄影机与门口对讲。若您有门禁或门锁的需求，可洽专人评估：02-27510218（周一至周五 09:00–18:00）。",
+      "en": "Door locks are not currently within enGo's supported devices. We currently support lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras and the door intercom. If you have an access-control or lock requirement, our team can assess it: 02-27510218 (Mon–Fri 09:00–18:00).",
+      "fr": "Les serrures ne font pas partie des appareils pris en charge actuellement. Sont pris en charge : éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone. Pour un besoin de contrôle d'accès ou de serrure, notre équipe peut l'étudier : 02-27510218 (lun.–ven. 09:00–18:00).",
+      "ja": "ドアロックは現在 enGo の対応機器に含まれていません。対応しているのは照明・コンセント・カーテン・エアコン・赤外線家電・各種センサー・カメラ・ドアインターホンです。入退室管理やロックのご要望は担当者が検討します：02-27510218（月〜金 09:00–18:00）。",
+      "es": "Las cerraduras no están actualmente entre los dispositivos compatibles. Hoy son compatibles: iluminación, enchufes, cortinas, aire acondicionado, electrodomésticos por infrarrojos, sensores, cámaras y portero. Si necesitas control de accesos o cerraduras, nuestro equipo puede valorarlo: 02-27510218 (lun.–vie. 09:00–18:00)."
+    }
+  },
+  {
+    "id": 35,
+    "category": "setup",
+    "question": {
+      "zh": "換住戶、搬家或想刪除帳號怎麼處理？",
+      "zhCN": "换住户、搬家或想删除账号怎么处理？",
+      "en": "What do I do when moving out, changing residents, or deleting my account?",
+      "fr": "Que faire en cas de déménagement, de changement d'occupant ou pour supprimer mon compte ?",
+      "ja": "引っ越し・住人交代・アカウント削除はどうすればいいですか？",
+      "es": "¿Qué hago si me mudo, cambia el residente o quiero eliminar mi cuenta?"
+    },
+    "answer": {
+      "zh": "在 App 登出即可：登出會清除該帳號在這台裝置上的登入憑證與住家資料快取。牆掛平板轉手給新住戶時，請聯絡專人協助完整重設（02-27510218）。刪除帳號：App 設定頁提供帳號註銷入口，註銷後在一定期間內仍可取消註銷、還原帳號。",
+      "zhCN": "在 App 登出即可：登出会清除该账号在这台装置上的登入凭证与住家资料快取。墙挂平板转手给新住户时，请联络专人协助完整重设（02-27510218）。删除账号：App 设定页提供账号注销入口，注销后在一定期间内仍可取消注销、还原账号。",
+      "en": "Sign out in the app: this clears that account's credentials and cached home data on the device. When a wall tablet is handed to a new resident, contact our team for a full reset (02-27510218). To delete your account, use the account deletion option in the app's settings; it can still be restored within a set period after deletion.",
+      "fr": "Déconnectez-vous dans l'appli : cela efface les identifiants et le cache du logement sur l'appareil. Pour une tablette murale transmise à un nouvel occupant, contactez notre équipe pour une remise à zéro complète (02-27510218). Pour supprimer votre compte, utilisez l'option dans les réglages de l'appli ; il reste restaurable pendant une période définie.",
+      "ja": "アプリからログアウトしてください。その端末上のログイン情報と住まいデータのキャッシュが消去されます。壁掛けタブレットを新しい住人に引き渡す場合は担当者による完全リセットをご依頼ください（02-27510218）。アカウント削除はアプリの設定から行え、削除後も一定期間は取り消して復元できます。",
+      "es": "Cierra sesión en la app: se borran las credenciales y la caché del hogar en ese dispositivo. Si la tableta de pared pasa a un nuevo residente, contacta con nuestro equipo para un restablecimiento completo (02-27510218). Para eliminar tu cuenta, usa la opción en los ajustes de la app; se puede restaurar durante un periodo tras la eliminación."
+    }
+  },
+  {
+    "id": 36,
+    "category": "safety",
+    "question": {
+      "zh": "我的資料安全嗎？資料存在哪裡？",
+      "zhCN": "我的资料安全吗？资料存在哪里？",
+      "en": "Is my data secure? Where is it stored?",
+      "fr": "Mes données sont-elles sécurisées ? Où sont-elles stockées ?",
+      "ja": "データは安全ですか？どこに保存されますか？",
+      "es": "¿Mis datos están seguros? ¿Dónde se almacenan?"
+    },
+    "answer": {
+      "zh": "登入憑證儲存在手機／平板的系統安全區（iOS Keychain／Android Keystore）；App 關閉系統備份，避免資料被備份到第三方；攝影機畫面不經我們的伺服器留存；語音不會持續聆聽或背景錄音。資料儲存位置、跨境傳輸與法規遵循等問題，請洽專人確認：02-27510218（週一至週五 09:00–18:00）。",
+      "zhCN": "登入凭证储存在手机／平板的系统安全区（iOS Keychain／Android Keystore）；App 关闭系统备份，避免资料被备份到第三方；摄影机画面不经我们的服务器留存；语音不会持续聆听或背景录音。资料储存位置、跨境传输与法规遵循等问题，请洽专人确认：02-27510218（周一至周五 09:00–18:00）。",
+      "en": "Sign-in credentials are kept in the device's secure store (iOS Keychain / Android Keystore); system backup is disabled for the app so data isn't backed up to third parties; camera footage is not retained on our servers; voice does not listen continuously or record in the background. For where data is stored, cross-border transfer and regulatory compliance, please confirm with our team: 02-27510218 (Mon–Fri 09:00–18:00).",
+      "fr": "Les identifiants sont conservés dans la zone sécurisée de l'appareil (iOS Keychain / Android Keystore) ; la sauvegarde système est désactivée pour l'appli ; les images des caméras ne sont pas conservées sur nos serveurs ; la voix n'écoute pas en continu et n'enregistre pas en arrière-plan. Pour le lieu de stockage, les transferts hors frontières et la conformité, confirmez avec notre équipe : 02-27510218 (lun.–ven. 09:00–18:00).",
+      "ja": "ログイン情報は端末のセキュア領域（iOS Keychain / Android Keystore）に保存され、アプリのシステムバックアップは無効化、カメラ映像は当社サーバーに保存されず、音声は常時聞き取り・バックグラウンド録音をしません。保存場所・国外への転送・法令遵守については担当者にご確認ください：02-27510218（月〜金 09:00–18:00）。",
+      "es": "Las credenciales se guardan en la zona segura del dispositivo (iOS Keychain / Android Keystore); la copia de seguridad del sistema está desactivada para la app; las imágenes de las cámaras no se conservan en nuestros servidores; la voz no escucha de forma continua ni graba en segundo plano. Sobre la ubicación de los datos, transferencias internacionales y cumplimiento normativo, confírmalo con nuestro equipo: 02-27510218 (lun.–vie. 09:00–18:00)."
     }
   }
 ]

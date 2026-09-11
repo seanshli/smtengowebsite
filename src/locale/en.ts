@@ -504,7 +504,7 @@ export const enLocale = {
     features: 'Features',
     found_video: 'I found a video for you:',
     found_info: 'I found some information for you. You can click here to view:',
-    no_match: "Sorry, I couldn't find a specific answer to that question. You can contact our live support via LINE for immediate assistance!",
+    no_match: "Sorry, I'm not certain about that one — a specialist can answer it properly. Call 02-27510218 (Mon–Fri 09:00–18:00) or reach our live support via LINE.",
     line_handoff: 'Contact via LINE',
     replies: {
       product: 'Product Info',

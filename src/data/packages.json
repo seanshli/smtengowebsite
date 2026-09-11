@@ -439,19 +439,19 @@
         {
             "id": "tablet_t1",
             "name": {
-                "zh": "AI智慧家居全能管家 中控平板 + 管理系統",
-                "en": "AI Smart Home Hub Tablet + Management System",
-                "ja": "AIスマートホームハブ + 管理システム",
-                "fr": "Tablette Hub Intelligent AI + Système de Gestion"
+                "zh": "enGo AI智慧中控系統 — enGo3 牆掛平板 + 手機 App",
+                "en": "enGo HMS — enGo3 wall tablet + mobile app",
+                "ja": "enGo HMS — enGo3 壁掛けタブレット + アプリ",
+                "fr": "enGo HMS — tablette murale enGo3 + appli mobile"
             },
             "description": {
-                "zh": "AI 管家替您輕鬆管理家中一切透過 enGo AI 智慧中控平板整合管理家中的智能照明、智能家電、安全監控、音響系統、門鎖及水處理等設備，提升家居的舒適度、安全性和能源效率。用戶可以隨時隨地通過手機或 enGo AI智慧中控平板遠程控制和監控。智管家以人工智慧、物聯網和自動化技術為核心，致力於讓生活更便利、更健康，為您和家人打造安全、舒適、便捷的智慧生活，讓AI智慧整合系統替您創造美好生活。",
-                "en": "The AI Butler manages everything in your home effortlessly through the enGo AI Smart Hub Tablet. It integrates smart lighting, appliances, security, audio systems, door locks, and water treatment devices, enhancing comfort, safety, and energy efficiency. Users can remotely control and monitor their home anytime, anywhere via mobile phone or the enGo AI Smart Hub Tablet. Centered on AI, IoT, and automation technologies, Smart Butler is dedicated to making life more convenient and healthy, creating a safe, comfortable, and convenient smart life for you and your family.",
-                "ja": "AI執事が家のすべてを簡単に管理します。enGo AIスマートコントロールタブレットを通じて、家のスマート照明、家電、セキュリティ監視、オーディオシステム、ドアロック、水処理設備などを統合管理し、家の快適さ、安全性、エネルギー効率を向上させます。ユーザーはいつでもどこでも携帯電話やenGo AIスマートコントロールタブレットを通じて遠隔操作および監視が可能です。AI、IoT、自動化技術を核心とし、生活をより便利で健康的にし、あなたと家族のために安全で快適で便利なスマートライフを創造します。",
-                "fr": "Le majordome AI gère tout dans votre maison sans effort grâce à la tablette enGo AI Smart Hub. Il intègre l'éclairage intelligent, les appareils électroménagers, la sécurité, les systèmes audio, les serrures de porte et les dispositifs de traitement de l'eau, améliorant le confort, la sécurité et l'efficacité énergétique. Les utilisateurs peuvent contrôler et surveiller à distance leur maison à tout moment et en tout lieu via un téléphone portable ou la tablette enGo AI Smart Hub. Centré sur l'IA, l'IoT et les technologies d'automatisation, Smart Butler se consacre à rendre la vie plus pratique et plus saine, créant une vie intelligente sûre, confortable et pratique pour vous et votre famille."
+                "zh": "enGo 是住家與社區合一的智慧生活系統：牆上的 enGo3 平板是家中主控台，手機 App 讓您在外也能掌握。整合照明、插座、窗簾、空調、紅外線家電、感測器、攝影機與門口對講，加上社區公告、報修、公設預約與包裹通知；語音操作與待機相片牆為平板專屬。同一組帳號通用，手機 App「enGo智慧管家」免費下載。",
+                "en": "enGo manages home and community together: the enGo3 wall tablet is the control hub at home and the mobile app keeps you in charge when out. It integrates lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras and the door intercom, plus community notices, repair requests, facility bookings and parcel notifications; voice control and the standby photo wall are tablet-only. One account works everywhere; the mobile app (listed as enGo智慧管家) is free.",
+                "ja": "enGo は住まいとコミュニティを一つにするスマートリビングシステム。壁掛けの enGo3 タブレットが家の司令塔、外出先ではスマホアプリで操作。照明・コンセント・カーテン・エアコン・赤外線家電・センサー・カメラ・インターホンに加え、お知らせ・修理依頼・共用施設予約・宅配通知を統合。音声操作と待機フォトウォールはタブレット専用。アカウントは共通、アプリ（enGo智慧管家）は無料。",
+                "fr": "enGo gère la maison et la résidence ensemble : la tablette murale enGo3 est le poste de commande à la maison, l'appli mobile prend le relais à l'extérieur. Éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone, plus avis, réparations, réservations et colis ; commande vocale et mur de photos réservés à la tablette. Un seul compte ; l'appli (enGo智慧管家) est gratuite."
             },
-            "image": "product_tablet_t1.png",
-            "spec_image": "product_tablet_t1_specs.png",
+            "image": "screens/01-home-tablet.png",
+            "spec_image": null,
             "specs": {
                 "display": {
                     "en": "1920*1200 FHD 10.1 inch touch screen",

@@ -77,6 +77,7 @@ import { ref, nextTick, onMounted } from 'vue'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import knowledgeBase from '@/data/knowledge_base.json'
+import { normalizeQuery, expandQuery, rankKnowledge } from '@/utils/chatbotMatch'
 
 const isOpen = ref(false)
 const userQuery = ref('')
@@ -179,84 +180,6 @@ const scrollToBottom = async () => {
   }
 }
 
-// --- Intent matching helpers ---------------------------------------------
-// Synonyms: maps common user phrasings to canonical KB keywords. Keeps the
-// KB keyword arrays lean while still catching how real people actually ask.
-const SYNONYMS: Record<string, string[]> = {
-  // Pricing
-  '多少錢': ['價格', '費用', 'price'],
-  '多少': ['價格', 'price'],
-  '費用': ['價格', 'pricing'],
-  '報價': ['價格', 'quote'],
-  'cost': ['price', 'pricing'],
-  'how much': ['price', 'cost'],
-  'cuanto': ['price', 'precio'],
-  // Hours
-  '幾點': ['hours', '時間', '營業'],
-  '開門': ['營業', 'open', 'hours'],
-  '什麼時候': ['when', 'hours'],
-  'when open': ['hours', 'open'],
-  // Location
-  '怎麼去': ['address', '地址'],
-  '在哪': ['address', '地址', 'location'],
-  '怎麼走': ['address', '地址'],
-  // LINE
-  '加好友': ['line', 'add'],
-  '加line': ['line', 'add', '好友'],
-  '加入line': ['line'],
-  // Product discovery
-  '買什麼': ['product', 'packages'],
-  '有什麼產品': ['product', 'catalog'],
-  '推薦': ['product', 'packages', 'recommend'],
-  // Contact
-  '找人': ['contact', '客服'],
-  '怎麼聯絡': ['contact', '聯絡'],
-  'reach you': ['contact'],
-}
-
-// Normalize a query: lowercase, strip punctuation, collapse whitespace,
-// convert full-width digits to half-width.
-const normalizeQuery = (q: string): string => {
-  return q
-    .toLowerCase()
-    .replace(/[？?！!，,。、；;：:()\[\]【】「」『』"'`~]/g, ' ')
-    .replace(/[０-９]/g, (d) => String.fromCharCode(d.charCodeAt(0) - 0xFEE0))
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
-// Expand a query with synonyms: appends canonical terms so downstream matching
-// can find KB entries keyed on the canonical form.
-const expandQuery = (q: string): string => {
-  let expanded = q
-  for (const [phrase, canon] of Object.entries(SYNONYMS)) {
-    if (q.includes(phrase.toLowerCase())) {
-      expanded += ' ' + canon.join(' ')
-    }
-  }
-  return expanded
-}
-
-// Score an item against a (normalized+expanded) query. Longer keywords score
-// higher — they're more specific. Also score weak reverse match (keyword
-// contains a short query) at lower weight.
-const scoreItem = (query: string, keywords: string[]): number => {
-  let score = 0
-  for (const k of keywords) {
-    const kw = k.toLowerCase()
-    if (!kw) continue
-    if (query.includes(kw)) {
-      // Longer keyword = more specific hit. Clamp so single-char words still
-      // score something but can't dominate.
-      score += Math.max(2, Math.min(kw.length, 12))
-    } else if (kw.length >= 4 && query.length >= 2 && kw.includes(query)) {
-      // Reverse partial match for short user queries like "line"
-      score += 1
-    }
-  }
-  return score
-}
-
 const handleSearch = () => {
   if (!userQuery.value.trim()) return
 
@@ -280,17 +203,7 @@ const handleSearch = () => {
     // Score every item across every category — gather the top-K so we can
     // optionally render more than one when a user asks a compound question
     // like "營業時間跟地址".
-    const scored: Array<{ item: any; cat: string; score: number }> = []
-    const categories = ['general', 'catalog', 'products', 'packages', 'tutorials', 'cases', 'youtube', 'faqs']
-    for (const cat of categories) {
-      const items = (knowledgeBase as any)[cat]
-      if (!items) continue
-      for (const item of items) {
-        const score = scoreItem(query, item.keywords || [])
-        if (score > 0) scored.push({ item, cat, score })
-      }
-    }
-    scored.sort((a, b) => b.score - a.score)
+    const scored = rankKnowledge(knowledgeBase as any, query)
 
     const bestMatch: any = scored.length > 0
       ? { ...scored[0].item, type: scored[0].cat }

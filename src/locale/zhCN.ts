@@ -334,7 +334,7 @@ export const zhCNLocale = {
     features: '特色',
     found_video: '我为您找到了一段影片：',
     found_info: '我为您找到了一些资讯。您可以点击这里查看：',
-    no_match: '抱歉，我找不到该问题的具体答案。您可以透过 LINE 联络我们的真人客服获取即时协助！',
+    no_match: '抱歉，这个问题我没有把握，帮您转给专人确认会比较准确。您可以拨 02-27510218（周一至周五 09:00–18:00），或透过 LINE 联络真人客服。',
     line_handoff: '联络 LINE 客服',
     replies: {
       product: '了解产品',

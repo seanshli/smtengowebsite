@@ -458,7 +458,7 @@ export const esLocale = {
     features: 'Características',
     found_video: 'Encontré un video para ti:',
     found_info: 'Encontré información para ti. Puedes hacer clic aquí para ver:',
-    no_match: 'Lo siento, no pude encontrar una respuesta específica a esa pregunta. ¡Puedes contactar a nuestro soporte en vivo por LINE para asistencia inmediata!',
+    no_match: 'Lo siento, no estoy seguro de esa respuesta; un especialista podrá ayudarte mejor. Llama al 02-27510218 (lun.–vie. 09:00–18:00) o contáctanos por LINE.',
     line_handoff: 'Contactar por LINE',
     replies: {
       product: 'Información de Producto',
