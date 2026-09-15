@@ -141,4 +141,11 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     for (const gone of [3, 8, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]) expect(ids.has(gone), `#${gone} removed`).toBe(false)
     for (const here of [37, 40, 42, 44, 45, 46, 47, 48, 49]) expect(ids.has(here), `#${here} present`).toBe(true)
   })
+  it('solution pricing goes to a person: the developer answer quotes no figures, FAQ 48 points to list prices + a quote', () => {
+    const bp = (kb as any).general.find((e: any) => e.id === 'builder-proposal').answer
+    for (const loc of Object.keys(bp)) expect(bp[loc], `builder-proposal ${loc}`).not.toMatch(/NT\$|[0-9]{2},[0-9]{3}/)
+    const f48 = (faqs as any[]).find((f) => f.id === 48).answer.zh as string
+    expect(f48).toContain('定價列在套裝方案頁')
+    expect(f48).toContain('依需求報價')
+  })
 })
