@@ -60,6 +60,8 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     // online-only ("not fully supported" reads as "partly works").
     'Alexa', '一鍵控制全家', '一句話就能控制全家', '透過 Matter 網關接入', '已整合 HomeKit',
     '無法完全支援', 'not yet fully supported',
+    // 2026-09-15 owner ruling: no component/platform vendor names in customer text.
+    'Tuya', 'TUYA', '塗鴉', '涂鸦',
   ]
   for (const phrase of banned) {
     it(`does not contain "${phrase}"`, () => {
@@ -76,13 +78,13 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
       if (f.answer.zh.includes('門鎖')) expect(f.answer.zh, String(f.id)).toMatch(/不在.*支援|不支援|不在支援範圍/)
     }
   })
-  it('the offline answer is split by device type (Tuya-paired vs MEDOLE / enGo-native), per the 2026-09-11 code check', () => {
+  it('the offline answer is split by device type (curtains/sensors/switches vs MEDOLE / enGo-native), per the 2026-09-11 code check', () => {
     const zh = (kb as any).general.find((e: any) => e.id === 'network-required').answer.zh as string
-    expect(zh).toMatch(/Tuya/)
+    expect(zh).toMatch(/窗簾、部分感測器與開關類/)
     expect(zh).toMatch(/米多力.*仍需連網/)
     expect(zh).toMatch(/情境（一鍵模式）目前需要連網/)
     const faq6 = (faqs as any[]).find((f) => f.id === 6).answer.zh as string
-    expect(faq6).toMatch(/Tuya/)
+    expect(faq6).toMatch(/窗簾、部分感測器與開關類/)
     expect(faq6).toMatch(/米多力.*仍需連網/)
   })
   it('the store-listing name is enGo智管家 (verified on both stores 2026-09-15), installed name enGo智慧管家', () => {
@@ -90,6 +92,9 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
       expect(s).toContain('enGo智管家')
       expect(s).toContain('enGo智慧管家')
     }
+  })
+  it('no vendor name leaks through the /packages data (names, copy, image paths)', () => {
+    expect(JSON.stringify(packages)).not.toMatch(/tuya|塗鴉|涂鸦/i)
   })
   it('the /packages catalog sells no door lock and the tablet card carries no unverified hardware spec table', () => {
     const cat = (packages as any).catalog as any[]

@@ -466,7 +466,7 @@
                 "ja": "スマートゲートウェイZ1はスマートホームの頭脳であり、Zigbee 3.0標準とMatterプロトコルをサポートし、100以上のサブデバイスを接続できます。コンパクトなサイズで、家のどこにでも配置でき、ネットワークカバレッジの死角をなくします。",
                 "fr": "Smart Gateway Z1 est le cerveau de la maison intelligente, prenant en charge la norme Zigbee 3.0 et le protocole Matter, capable de connecter plus de 100 sous-appareils. De taille compacte, il peut être placé n'importe où dans la maison pour garantir l'absence de zones mortes dans la couverture réseau."
             },
-            "image": "tuya_matter_gateway.png",
+            "image": "matter_gateway.png",
             "specs": {
                 "power_input": {
                     "en": "5V/1A Type-C",
