@@ -450,38 +450,7 @@
                 "ja": "enGo は住まいとコミュニティを一つにするスマートリビングシステム。壁掛けの enGo タブレットが家の司令塔、外出先ではスマホアプリで操作。照明・コンセント・カーテン・エアコン・赤外線家電・センサー・カメラ・インターホンに加え、お知らせ・修理依頼・共用施設予約・宅配通知を統合。音声操作と待機フォトウォールはタブレット専用。アカウントは共通、アプリ（enGo智慧管家）は無料。",
                 "fr": "enGo gère la maison et la résidence ensemble : la tablette murale enGo est le poste de commande à la maison, l'appli mobile prend le relais à l'extérieur. Éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone, plus avis, réparations, réservations et colis ; commande vocale et mur de photos réservés à la tablette. Un seul compte ; l'appli (enGo智慧管家) est gratuite."
             },
-            "image": "screens/01-home-tablet.png",
-            "spec_image": null,
-            "specs": {
-                "display": {
-                    "en": "1920*1200 FHD 10.1 inch touch screen",
-                    "zh": "1920*1200 FHD 10.1吋 觸控螢幕"
-                },
-                "input": {
-                    "en": "100~240V AC 50/60Hz",
-                    "zh": "100~240V AC 50/60Hz"
-                },
-                "working_temp": {
-                    "en": "0°C ~ 40°C",
-                    "zh": "0°C ~ 40°C"
-                },
-                "working_humidity": {
-                    "en": "5% to 90%RH (non-condensing)",
-                    "zh": "5% 至 90%RH (無凝結)"
-                },
-                "wireless": {
-                    "en": "Wi-Fi / Zigbee / Bluetooth",
-                    "zh": "Wi-Fi / Zigbee / 藍牙"
-                },
-                "base": {
-                    "en": "EU/US optional",
-                    "zh": "歐規 / 美規 可選"
-                },
-                "size": {
-                    "en": "159*161*13mm (without base), 259*161*37mm (including base)",
-                    "zh": "159*161*13mm (不含底座), 259*161*37mm (含底座)"
-                }
-            }
+            "image": "screens/01-home-tablet.png"
         },
         {
             "id": "gateway_z1",
@@ -552,40 +521,6 @@
                 "current": {
                     "en": "74mA (Rated)",
                     "zh": "74mA (額定)"
-                }
-            }
-        },
-        {
-            "id": "smart_lock_l1",
-            "name": {
-                "zh": "智能門鎖 L1",
-                "en": "Smart Lock L1",
-                "ja": "スマートロック L1",
-                "fr": "Serrure Intelligente L1"
-            },
-            "description": {
-                "zh": "L1 智能門鎖提供指紋、密碼、卡片、鑰匙與 App 遠端解鎖等多重開鎖方式。內建電子門鈴與防撬警報，守護您家的第一道防線。",
-                "en": "The L1 Smart Lock offers multiple unlocking methods including fingerprint, password, card, key, and App remote unlocking. Built-in electronic doorbell and anti-pry alarm guard the first line of defense for your home.",
-                "ja": "L1スマートロックは、指紋、パスワード、カード、キー、アプリによる遠隔解錠など、複数の解錠方法を提供します。内蔵の電子ドアベルとこじ開け防止アラームが、家の第一防衛線を守ります。",
-                "fr": "La serrure intelligente L1 offre plusieurs méthodes de déverrouillage, notamment l'empreinte digitale, le mot de passe, la carte, la clé et le déverrouillage à distance via l'application. La sonnette électronique intégrée et l'alarme anti-effraction protègent la première ligne de défense de votre maison."
-            },
-            "image": "iot-icon.svg",
-            "specs": {
-                "unlock": {
-                    "en": "Fingerprint / Password / Card / Key / App",
-                    "zh": "指紋 / 密碼 / 卡片 / 鑰匙 / App"
-                },
-                "power": {
-                    "en": "AA Battery * 4 or 8",
-                    "zh": "AA 電池 * 4 或 8"
-                },
-                "wireless": {
-                    "en": "Zigbee / Bluetooth",
-                    "zh": "Zigbee / 藍牙"
-                },
-                "features": {
-                    "en": "Anti-pry alarm, Virtual password",
-                    "zh": "防撬警報, 虛位密碼"
                 }
             }
         },

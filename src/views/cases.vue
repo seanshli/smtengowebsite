@@ -4,6 +4,7 @@
       <p class="page-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="page-title">{{ $t('casesTitle') }}</h1>
       <p class="subtitle">{{ $t('casesSubtitle') }}</p>
+      <p class="history-note">{{ $t('casesHistoryNote') }} <router-link to="/product">{{ $t('productTitle') }} →</router-link></p>
     </div>
 
     <div class="filters-container">
@@ -167,6 +168,14 @@ const getLocaleText = (obj: any) => {
     .subtitle {
       color: $dark-grey;
       font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+    .history-note {
+      margin: 0.75rem auto 0;
+      max-width: 60ch;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: $dark-grey;
+      a { color: inherit; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
     }
   }
 

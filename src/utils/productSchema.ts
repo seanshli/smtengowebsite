@@ -56,12 +56,12 @@ const PRODUCTS: ProductDef[] = [
       es: 'Tableta de Control Inteligente enGo AI'
     },
     description: {
-      zh: '整合 MEDOLE 架構，支援 Apple HomeKit、Google Home、Amazon Alexa，一鍵控制全家智慧家電與情境模式。',
-      zhCN: '整合 MEDOLE 架构，支持 Apple HomeKit、Google Home、Amazon Alexa，一键控制全家智慧家电与情境模式。',
-      en: 'Built on the MEDOLE framework with Apple HomeKit, Google Home, and Amazon Alexa support — central control for all smart appliances and scene modes.',
-      fr: 'Basé sur le framework MEDOLE avec Apple HomeKit, Google Home et Amazon Alexa — contrôle central pour tous les appareils intelligents et scénarios.',
-      ja: 'MEDOLEフレームワークを採用し、Apple HomeKit、Google Home、Amazon Alexaに対応。全家のスマート家電とシーンモードを一元制御。',
-      es: 'Construido sobre el framework MEDOLE con soporte para Apple HomeKit, Google Home y Amazon Alexa — control central para todos los electrodomésticos inteligentes.'
+      zh: '住家與社區合一的 AI 智慧中控：enGo 牆掛平板搭配手機 App，整合照明、插座、窗簾、空調、紅外線家電、感測器與攝影機，加上社區公告、報修、公設預約與包裹通知。支援將 Matter 網關下的裝置分享至 Apple HomeKit 與 Google Home；enGo 語音操作為平板內建功能。',
+      zhCN: '住家与社区合一的 AI 智慧中控：enGo 墙挂平板搭配手机 App，整合照明、插座、窗帘、空调、红外线家电、传感器与摄像头，加上社区公告、报修、公设预约与包裹通知。支持将 Matter 网关下的设备分享至 Apple HomeKit 与 Google Home；enGo 语音操作为平板内置功能。',
+      en: 'AI home control for home and community in one: the enGo wall tablet plus mobile app manage lighting, sockets, curtains, air conditioning, IR appliances, sensors and cameras, alongside community notices, repair requests, facility bookings and parcel alerts. Devices on the Matter gateway can be shared to Apple HomeKit and Google Home; enGo voice control is built into the tablet.',
+      fr: 'Contrôle intelligent du domicile et de la résidence en un : la tablette murale enGo et l\'appli mobile gèrent éclairage, prises, rideaux, climatisation, appareils IR, capteurs et caméras, ainsi que les avis de résidence, demandes de réparation, réservations et alertes colis. Les appareils rattachés à la passerelle Matter peuvent être partagés vers Apple HomeKit et Google Home ; la commande vocale enGo est intégrée à la tablette.',
+      ja: '住まいとコミュニティを一つにする AI ホームコントロール。enGo 壁掛けタブレットとスマホアプリで照明・コンセント・カーテン・空調・赤外線家電・センサー・カメラを管理し、コミュニティのお知らせ、修理依頼、施設予約、宅配通知にも対応。Matter ゲートウェイ配下の機器は Apple HomeKit と Google Home に共有可能。enGo の音声操作はタブレット内蔵機能です。',
+      es: 'Control inteligente del hogar y la comunidad en uno: la tableta de pared enGo y la app móvil gestionan iluminación, enchufes, cortinas, aire acondicionado, aparatos IR, sensores y cámaras, además de avisos de la comunidad, solicitudes de reparación, reservas de instalaciones y alertas de paquetes. Los dispositivos de la puerta de enlace Matter pueden compartirse con Apple HomeKit y Google Home; el control por voz de enGo está integrado en la tableta.'
     }
   },
   {

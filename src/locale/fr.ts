@@ -297,6 +297,7 @@ export const frLocale = {
   },
   casesTitle: 'Partage de cas',
   casesSubtitle: 'Transformations réelles de maisons intelligentes',
+  casesHistoryNote: 'Ces pages documentent des installations passées et reflètent la configuration et les appareils de l\'époque ; consultez la page Produit pour les fonctionnalités actuelles.',
   viewDetails: 'Voir les détails',
   filterCategory: 'Catégorie',
   filterCountry: 'Pays',

@@ -103,6 +103,7 @@ export const esLocale = {
   },
   casesTitle: 'Compartir Casos',
   casesSubtitle: 'Transformaciones de hogares inteligentes en el mundo real',
+  casesHistoryNote: 'Estas páginas documentan instalaciones pasadas y reflejan la configuración y los dispositivos de ese momento; consulte la página de Producto para las funciones actuales.',
   viewDetails: 'Ver Detalles',
   filterCategory: 'Categoría',
   filterCountry: 'País',

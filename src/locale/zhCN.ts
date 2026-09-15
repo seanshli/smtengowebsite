@@ -104,6 +104,7 @@ export const zhCNLocale = {
   },
   casesTitle: '案例分享',
   casesSubtitle: '真实世界的智慧家居转型',
+  casesHistoryNote: '本页为过往建案的实作纪录，内容反映当时的设置与设备；现行产品功能请以「产品介绍」页为准。',
   viewDetails: '查看详情',
   filterCategory: '类别',
   filterCountry: '国家',
@@ -433,7 +434,7 @@ export const zhCNLocale = {
       yes: '支持',
       no: '不提供',
       scrollHint: '左右滑动可查看其他平台 →',
-      footnote: '手机 App「enGo智慧管家」于 App Store 与 Google Play 下载。'
+      footnote: '手机 App 于 App Store 与 Google Play 下载，商店名称「enGo智管家」（安装后显示为「enGo智慧管家」）。'
     },
     tablet_function: {
       tag: '功能介绍',
