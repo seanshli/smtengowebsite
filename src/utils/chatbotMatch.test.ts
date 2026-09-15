@@ -144,6 +144,8 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
   it('solution pricing goes to a person: the developer answer quotes no figures, FAQ 48 points to list prices + a quote', () => {
     const bp = (kb as any).general.find((e: any) => e.id === 'builder-proposal').answer
     for (const loc of Object.keys(bp)) expect(bp[loc], `builder-proposal ${loc}`).not.toMatch(/NT\$|[0-9]{2},[0-9]{3}/)
+    // the pre-2026-09 bundles (自動新「聲」活 = tablet + EAP-01 air purifier) no longer exist
+    for (const loc of Object.keys(bp)) expect(bp[loc], `builder-proposal ${loc}`).not.toMatch(/自動新|自动新|Smart voice living|スマート音声生活|Vie connectée par la voix|Vida de voz/)
     const f48 = (faqs as any[]).find((f) => f.id === 48).answer.zh as string
     expect(f48).toContain('定價列在套裝方案頁')
     expect(f48).toContain('依需求報價')
