@@ -170,15 +170,37 @@ body {
 }
 
 .tablet_intro {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)),
-        url(/images/kitchen_1.png);
-    background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-position: right top;
-    background-size: cover;
+
+    // The kitchen photo lives on a pseudo-element so it can breathe (slow settle
+    // from 1.06 → 1) without the content moving with it.
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)),
+            url(/images/kitchen_1.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: cover;
+        transform-origin: 60% 40%;
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: heroSettle 14s cubic-bezier(0.2, 0.6, 0.2, 1) both;
+        }
+    }
+
+    .hero-device {
+        will-change: transform;
+        filter: drop-shadow(0 30px 60px rgba(4, 54, 85, 0.35));
+    }
 
     .title_wrap {
         max-width: 870px;
@@ -196,12 +218,44 @@ body {
 }
 
 .gradient_container_i {
+    position: relative;
+    isolation: isolate;
     background-image: url(/images/background_2.png);
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (max-width: 768px) {
         background: linear-gradient(to bottom, #324770, #1B2944);
+    }
+
+    // Atmosphere: two warm glows drifting slowly behind the content, plus a
+    // whisper of grain so the flat navy reads as material, not a fill.
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+            radial-gradient(38% 30% at 18% 22%, rgba(254, 139, 5, 0.22), transparent 70%),
+            radial-gradient(34% 28% at 84% 70%, rgba(199, 183, 99, 0.18), transparent 70%);
+        background-repeat: no-repeat;
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: glowDrift 22s ease-in-out infinite alternate;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 160px 160px;
+        mix-blend-mode: soft-light;
     }
 
     .brand_intro {
@@ -299,6 +353,12 @@ body {
         max-width: 320px;
         height: 220px;
         flex: 1;
+        transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: $warm-shadow-hover;
+        }
 
         .count_card_number {
             display: flex;
@@ -342,6 +402,25 @@ body {
             border-radius: 0;
             background-color: $grey-blue2;
             color: #fff;
+            position: relative;
+
+            // Gold rule draws in from the left once the plate scrolls into view.
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -2px;
+                height: 2px;
+                background: $gold;
+                transform: scaleX(0);
+                transform-origin: left center;
+                transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+            }
+
+            &.is-in::after {
+                transform: scaleX(1);
+            }
 
             img {
                 width: 1.2em;
@@ -438,7 +517,16 @@ body {
             flex-wrap: wrap;
             align-items: center;
             gap: 12px;
-            a { display: inline-flex; line-height: 0; border: 0; padding: 0; background: none; }
+            a {
+                display: inline-flex;
+                line-height: 0;
+                border: 0;
+                padding: 0;
+                background: none;
+                transition: transform 0.25s ease;
+
+                &:hover { transform: translateY(-2px); }
+            }
             img { display: block; width: auto; }
             .badge-apple { height: 40px; }
             // Google's generic badge ships with transparent padding (~20%); oversize it so the
@@ -479,6 +567,24 @@ body {
             width: fit-content;
             border-radius: 0; // squared — editorial plate system
             background-color: #043655;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -2px;
+                height: 2px;
+                background: $gold;
+                transform: scaleX(0);
+                transform-origin: left center;
+                transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+            }
+
+            &.is-in::after {
+                transform: scaleX(1);
+            }
 
             @media (max-width: 768px) {
                 border-radius: 0;
@@ -504,10 +610,6 @@ body {
                 gap: 16px;
             }
 
-            &.is-visible .tf-card {
-                opacity: 1;
-                transform: none;
-            }
         }
 
         .tf-card {
@@ -515,16 +617,19 @@ body {
             border: 1px solid rgba(255, 255, 255, 0.12);
             padding: 28px 26px 26px;
             color: #fff;
-            opacity: 0;
-            transform: translateY(14px);
-            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
-
-            &:nth-child(2) { transition-delay: 0.1s; }
-            &:nth-child(3) { transition-delay: 0.2s; }
-            &:nth-child(4) { transition-delay: 0.3s; }
+            // Entrance is scripted (useEditorialMotion); hover/tilt stay in CSS + transform.
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: background 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
 
             &:hover {
                 background: rgba(255, 255, 255, 0.1);
+                border-color: rgba(199, 183, 99, 0.45);
+                box-shadow: 0 24px 60px rgba(4, 54, 85, 0.35);
+            }
+
+            &:hover .tf-figure img {
+                transform: scale(1.035);
             }
 
             h3 {
@@ -599,14 +704,14 @@ body {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
+                transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
             }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .tf-card {
+            .tf-card,
+            .tf-figure img {
                 transition: none;
-                opacity: 1;
-                transform: none;
             }
         }
 
@@ -1285,4 +1390,15 @@ body {
             }
         }
     }
+}
+
+// --- editorial motion keyframes (CSS side; scripted reveals live in useEditorialMotion) ---
+@keyframes heroSettle {
+    from { transform: scale(1.06); }
+    to { transform: scale(1); }
+}
+
+@keyframes glowDrift {
+    from { transform: translate3d(0, 0, 0) scale(1); }
+    to { transform: translate3d(3%, -4%, 0) scale(1.08); }
 }

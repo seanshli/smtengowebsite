@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section ref="motionRoot">
     <div class="product-container">
       <!-- 【桌機】立即購買 -->
       <!-- 
@@ -17,8 +17,8 @@
       <div class="scroll-top-btn" @click="scrollToTop">
         <img src="/images/scroll-top.png" alt="scroll to top" />
       </div>
-      <div class="tablet_intro mt-mob-56 pb-44 pb-tab-20" :class="{ 'mt-70': hasHeader }">
-        <div class="container title_wrap d-flex fd-column ai-c text-white tac mt-54 mb-24 mt-mob-40">
+      <div id="hero" class="tablet_intro mt-mob-56 pb-44 pb-tab-20" :class="{ 'mt-70': hasHeader }">
+        <div data-reveal-group class="container title_wrap d-flex fd-column ai-c text-white tac mt-54 mb-24 mt-mob-40">
           <h1 class="h2-title fz-48 lh-70 fz-mob-24 lh-mob-34 fw-600">
             {{ $t('product.tablet_intro.title') }}
           </h1>
@@ -35,10 +35,10 @@
         <!-- ENGO-WEB-001 §3.2 shot #1 composited onto the enGo tablet render (the old
              hero's device body, its 2023 screen replaced by the real 3.0.64 home
              screenshot — screen pixels untouched, cover-fit into the 1755×1054 panel). -->
-        <img src="/images/screens/01-home-tablet-device.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
+        <img data-reveal data-parallax="36" data-float class="hero-device" src="/images/screens/01-home-tablet-device.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
       </div>
       <div class="gradient_container_i">
-        <div class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
+        <div id="intro" class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
           <div class="title_wrap">
             <div
               class="badge text-white bg-grey-blue2 fz-mob-18 lh-mob-26 fw-mob-500 py-10 px-20 py-mob-12 px-mob-18"
@@ -56,7 +56,7 @@
           <!-- ENGO-WEB-001 §2.2. One copy for every breakpoint: the old page kept
                three device-specific variants of this paragraph, which is how
                食譜／音響系統／門鎖 could sit in three places at once. -->
-          <div class="brand_desc d-flex">
+          <div data-reveal-group class="brand_desc d-flex">
             <div class="brand_desc_img d-mob-none">
               <img src="/images/Frame74.png" :alt="$t('product.brand_intro.title')" loading="lazy" />
             </div>
@@ -91,7 +91,7 @@
         </div>
         <!-- 以下數字使用 CountUp.js 套件 -->
         <!-- 【桌機/平板】 -->
-        <div class="d-flex jc-se p-40 px-tab-20 py-tab-24 d-mob-none">
+        <div data-reveal-group class="d-flex jc-se p-40 px-tab-20 py-tab-24 d-mob-none">
           <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
             <div class="d-flex fd-column jc-sb">
               <div class="count_card_number">
@@ -197,7 +197,7 @@
           </div>
         </div>
         <!-- 【手機】 -->
-        <div class="d-mob-flex jc-se px-20 py-24 d-none d-tab-none">
+        <div data-reveal-group class="d-mob-flex jc-se px-20 py-24 d-none d-tab-none">
           <div class="count_card text-grey-blue2 px-8 py-10">
             <div class="d-flex jc-fs">
               <img src="/assets/file-badge.svg" alt="專利icon" />
@@ -253,7 +253,7 @@
             </div>
           </div>
         </div>
-        <div class="d-mob-flex jc-se px-20 mb-24 d-none d-tab-none">
+        <div data-reveal-group class="d-mob-flex jc-se px-20 mb-24 d-none d-tab-none">
           <div class="count_card text-grey-blue2 px-8 py-10">
             <div class="d-flex jc-fs">
               <img src="/assets/test_tubes.svg" alt="驗證測試 icon" />
@@ -317,7 +317,7 @@
              never mentioned the iOS and Android apps. Solid ground because
              background_2.png is mid-transition here and text colour would be a guess. -->
         <div id="interfaces" class="interfaces px-118 px-tab-50 px-mob-24 pt-72 pb-72 pt-mob-48 pb-mob-40 text-white">
-          <div class="tag d-flex ai-c py-8 px-16 ml-mob-0">
+          <div data-tag class="tag d-flex ai-c py-8 px-16 ml-mob-0">
             <img class="pr-4" src="/assets/logo_G.svg" alt="" />
             <div>{{ $t('product.interfaces.title') }}</div>
           </div>
@@ -364,14 +364,14 @@
           <p class="interfaces-hint fz-mob-13 lh-mob-20 d-none d-mob-block mt-mob-8">
             {{ $t('product.interfaces.scrollHint') }}
           </p>
-          <p class="interfaces-note fz-16 lh-28 fz-mob-14 lh-mob-24 mt-24">
+          <p data-reveal class="interfaces-note fz-16 lh-28 fz-mob-14 lh-mob-24 mt-24">
             {{ $t('product.interfaces.footnote') }}
           </p>
           <!-- Official store badges. Apple: badge API SVG, zh-TW for the Chinese locales,
                en-US otherwise. Google: generic English badge (no zh-TW asset is published).
                Both stores list the app as enGo智慧管家 (iOS tw.smtengo.engohome.ios = id6680188565,
                Android tw.smtengo.engohome.android). An English reader searching "enGo HMS" finds neither. -->
-          <p class="interfaces-stores mt-12">
+          <p data-reveal class="interfaces-stores mt-12">
             <a href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener">
               <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" height="40" loading="lazy" />
             </a>
@@ -393,16 +393,17 @@
         </div>
         <div
           ref="observeTarget"
+          id="features"
           class="tablet_function pt-64 pb-96 px-118 px-tab-50 pt-mob-60 pb-mob-48 px-mob-24 pos-r"
         >
-          <div class="tag text-white d-flex ai-c py-8 px-16 ml-mob-0">
+          <div data-tag class="tag text-white d-flex ai-c py-8 px-16 ml-mob-0">
             <img class="pr-4" src="/assets/joystick.svg" alt="" />
             <div>{{ $t('product.tablet_function.tag') }}</div>
           </div>
           <!-- ENGO-WEB-001 §2.4: four text cards. tablet_1.png is deliberately NOT
                reused here — ENGO-WEB-002: 一張正確的圖加四張留白，比五張錯的圖好.
                Each card's figure renders once featureImages carries a path (§3.2 #2–#5). -->
-          <div class="tf-features mt-48 mt-mob-32" :class="{ 'is-visible': targetIsVisible }">
+          <div data-reveal-group data-tilt class="tf-features mt-48 mt-mob-32" :class="{ 'is-visible': targetIsVisible }">
             <article class="tf-card">
               <figure v-if="featureImages.voice" class="tf-figure">
                 <img :src="featureImages.voice" :alt="$t('product.tablet_function.features.voice.title')" loading="lazy" />
@@ -465,7 +466,7 @@
               </div>
             </div>
           </div>
-          <div class="tag text-white px-16 py-8 mb-30 d-flex">
+          <div data-tag class="tag text-white px-16 py-8 mb-30 d-flex">
             <img src="/assets/glasswater.svg" alt="智慧應用icon" />
             <span>
               <!-- 智慧應用 -->
@@ -500,7 +501,7 @@
         </div>
         <div class="water_filter pos-r pt-70 pt-mob-0">
           <div class="container ai-c mb-80 mb-mob-30">
-            <h2 class="fz-72 fz-tab-64 fz-mob-30 lh-104 lh-tab-92 lh-mob-48 fw-700 tac">
+            <h2 data-reveal class="fz-72 fz-tab-64 fz-mob-30 lh-104 lh-tab-92 lh-mob-48 fw-700 tac">
               <!-- 水維氧AI智慧淨水系統 -->
               {{ $t('product.water_filter.title') }}
             </h2>
@@ -1004,6 +1005,7 @@
       :product="selectedCatalogItem" 
       @close="closeCatalog" 
     />
+    <SectionDots :items="sectionDots" :aria-label="$t('product.tablet_intro.title')" />
   </section>
 </template>
 <script lang="ts">
@@ -1013,12 +1015,14 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { defineComponent, ref, watch, watchEffect, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
+import { computed, defineComponent, ref, watch, watchEffect, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
 import type { CountUpOptions, ICountUp } from 'vue-countup-v3'
 import CountUp from 'vue-countup-v3'
 import { useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 import { injectProductSchemas, cleanupProductSchemas } from '@/utils/productSchema'
+import { useEditorialMotion } from '@/composables/useEditorialMotion'
+import SectionDots from '@/components/SectionDots.vue'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
@@ -1027,6 +1031,7 @@ export default defineComponent({
     CountUp,
     Swiper,
     SwiperSlide,
+    SectionDots,
     ProductCatalog: defineAsyncComponent(() => import('@/components/ProductCatalog.vue')),
     CatalogMenu: defineAsyncComponent(() => import('@/components/CatalogMenu.vue'))
   },
@@ -1055,6 +1060,17 @@ export default defineComponent({
     const router = useRouter()
     const hasHeader = ref(true)
     const { trackEvent } = useAnalytics()
+
+    // Editorial motion (scroll reveals, hero parallax, card tilt) + right-edge section dots.
+    const motionRoot = ref<HTMLElement | null>(null)
+    useEditorialMotion(motionRoot)
+    const sectionDots = computed(() => [
+      { id: 'hero', label: t('product.tablet_intro.title') },
+      { id: 'intro', label: t('product.brand_intro.title') },
+      { id: 'interfaces', label: t('product.interfaces.title') },
+      { id: 'features', label: t('product.tablet_function.tag') },
+      { id: 'oxygen', label: t('product.water_filter.title') }
+    ])
 
     // Product JSON-LD schema injection for SEO rich results — re-inject on locale change
     onMounted(() => {
@@ -1173,6 +1189,8 @@ const targetExpand = ref(false)
 
 
     return {
+      motionRoot,
+      sectionDots,
       buyNow,
       targetIsVisible,
       observeTarget,
