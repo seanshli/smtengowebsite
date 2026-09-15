@@ -91,7 +91,7 @@ function hreflangBlock(route) {
   ].join('\n')
 }
 
-function buildHtml(template, route, lang) {
+export function buildHtml(template, route, lang) {
   const [title, desc] = ROUTES[route][lang]
   const url = BASE + (lang === 'en' ? EN_PREFIX + (route === '/' ? '' : route) : route)
 
@@ -105,6 +105,10 @@ function buildHtml(template, route, lang) {
   html = html.replace(/<meta property="og:description"[\s\S]*?\/>/, `<meta property="og:description" content="${esc(desc)}" />`)
   html = html.replace(/<meta property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${esc(url)}" />`)
   html = html.replace(/<meta property="og:locale"[^>]*\/>/, `<meta property="og:locale" content="${lang === 'en' ? 'en_US' : 'zh_TW'}" />`)
+  // Same idempotency need as the alternates above: twitter:description is not
+  // in index.html, this pass adds it, and the postbuild pass reads dist/index.html
+  // back as its template — without stripping, every shell ends up with two.
+  html = html.replace(/[ \t]*<meta name="twitter:description"[^>]*\/>\n?/g, "")
   html = html.replace(/<meta name="twitter:title"[\s\S]*?\/>/, `<meta name="twitter:title" content="${esc(title)}" />\n  <meta name="twitter:description" content="${esc(desc)}" />`)
   // Replace, don't append — index.html ships its own canonical, and two
   // canonicals per shell would point the whole site at "/".
