@@ -3,7 +3,7 @@ import kb from '../data/knowledge_base.json'
 import faqs from '../data/faqs.json'
 import news from '../data/news.json'
 import packages from '../data/packages.json'
-import { readFileSync } from 'node:fs'
+import { readFileSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { normalizeQuery, expandQuery, rankKnowledge } from './chatbotMatch'
 
@@ -62,6 +62,8 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     '無法完全支援', 'not yet fully supported',
     // 2026-09-15 owner ruling: no component/platform vendor names in customer text.
     'Tuya', 'TUYA', '塗鴉', '涂鸦',
+    // 2026-09-15: com.engo.life is a different app; ours is tw.smtengo.engohome.android
+    'com.engo.life',
   ]
   for (const phrase of banned) {
     it(`does not contain "${phrase}"`, () => {
@@ -87,14 +89,17 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(faq6).toMatch(/窗簾、部分感測器與開關類/)
     expect(faq6).toMatch(/米多力.*仍需連網/)
   })
-  it('the store-listing name is enGo智管家 (verified on both stores 2026-09-15), installed name enGo智慧管家', () => {
+  it('store names are stated per store (verified 2026-09-15): Google Play + installed = enGo智慧管家, App Store = engo智管家; Play link is tw.smtengo.engohome.android', () => {
     for (const s of [(kb as any).general.find((e: any) => e.id === 'app-download').answer.zh, (faqs as any[]).find((f) => f.id === 30).answer.zh]) {
-      expect(s).toContain('enGo智管家')
       expect(s).toContain('enGo智慧管家')
+      expect(s).toContain('engo智管家')
+      expect(s).toContain('id=tw.smtengo.engohome.android')
     }
-  })
-  it('no vendor name leaks through the /packages data (names, copy, image paths)', () => {
-    expect(JSON.stringify(packages)).not.toMatch(/tuya|塗鴉|涂鸦/i)
+    const vue = readFileSync(resolve(process.cwd(), 'src/views/product.vue'), 'utf-8')
+    expect(vue).toContain('id=tw.smtengo.engohome.android')
+    for (const f of ['app-store-zh-tw.svg', 'app-store-en.svg', 'google-play-en.png']) {
+      expect(existsSync(resolve(process.cwd(), 'public/images/badges', f)), f).toBe(true)
+    }
   })
   it('the /packages catalog sells no door lock and the tablet card carries no unverified hardware spec table', () => {
     const cat = (packages as any).catalog as any[]

@@ -434,7 +434,7 @@ export const zhLocale = {
       yes: '支援',
       no: '不提供',
       scrollHint: '左右滑動可查看其他平台 →',
-      footnote: '手機 App 於 App Store 與 Google Play 下載，商店名稱「enGo智管家」（安裝後顯示為「enGo智慧管家」）。'
+      footnote: '手機 App「enGo智慧管家」於 Google Play 與 App Store 免費下載（App Store 商店頁名稱顯示為「engo智管家」）。'
     },
     tablet_function: {
       tag: '功能介紹',

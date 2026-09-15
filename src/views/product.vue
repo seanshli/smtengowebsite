@@ -367,11 +367,17 @@
           <p class="interfaces-note fz-16 lh-28 fz-mob-14 lh-mob-24 mt-24">
             {{ $t('product.interfaces.footnote') }}
           </p>
-          <!-- Direct store links: the listing is named enGo智慧管家 in every locale,
-               so an English reader searching "enGo HMS" would not find it. -->
+          <!-- Official store badges. Apple: badge API SVG, zh-TW for the Chinese locales,
+               en-US otherwise. Google: generic English badge (no zh-TW asset is published).
+               Listing names differ per store: Google Play enGo智慧管家 (tw.smtengo.engohome.android),
+               App Store engo智管家 (tw.smtengo.engohome.ios) — hence links, not "search for". -->
           <p class="interfaces-stores mt-12">
-            <a href="https://apps.apple.com/app/id6743929358" target="_blank" rel="noopener">App Store</a>
-            <a href="https://play.google.com/store/apps/details?id=com.engo.life" target="_blank" rel="noopener">Google Play</a>
+            <a href="https://apps.apple.com/app/id6743929358" target="_blank" rel="noopener">
+              <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" height="40" loading="lazy" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener">
+              <img class="badge-google" src="/images/badges/google-play-en.png" alt="Get it on Google Play" height="60" loading="lazy" />
+            </a>
           </p>
           <!-- Phase 2: ENGO-WEB-001 §3.2 shots #6 (iPhone home) and #7 (Android home). -->
           <div v-if="interfaceImages.ios || interfaceImages.android" class="interfaces-figures mt-40">
