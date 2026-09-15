@@ -71,7 +71,7 @@
           </div>
           <transition name="faq-expand">
             <div v-if="openFaqId === faq.id" class="faq-body">
-              <p class="answer">A: {{ (faq.answer as any)[locale] || (faq.answer as any)['zh'] }}</p>
+              <p class="answer" @click="handleLinkClick" v-html="'A: ' + renderStepContent((faq.answer as any)[locale] || (faq.answer as any)['zh'])"></p>
               <span class="faq-helpful" v-if="faqClicks[faq.id]">{{ faqClicks[faq.id] }} {{ locale === 'zh' || locale === 'zhCN' ? '人瀏覽' : locale === 'ja' ? '回閲覧' : locale === 'fr' ? 'vues' : locale === 'es' ? 'vistas' : 'views' }}</span>
             </div>
           </transition>
@@ -217,11 +217,22 @@ const getYoutubeThumbnail = (url: string) => {
 
 const renderStepContent = (text: string) => {
   if (!text) return ''
-  return text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2" class="step-link">$1</a>')
+  // Markdown links only — nothing else is allowed through. Internal paths stay in-app
+  // via handleLinkClick; external URLs (YouTube, partner sites) open in a new tab.
+  return text
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/\n/g, '<br>')
+    .replace(/\[([^\]]+)\]\(([^\)\s]+)\)/g, (_m: string, label: string, href: string) =>
+      /^https?:\/\//.test(href)
+        ? `<a href="${href}" class="step-link" target="_blank" rel="noopener">${label}</a>`
+        : `<a href="${href}" class="step-link">${label}</a>`
+    )
 }
 
 const handleLinkClick = (e: MouseEvent) => {
   const target = e.target as HTMLElement
+  // A click on any link inside an FAQ body must not toggle the accordion.
+  if (target.tagName === 'A') e.stopPropagation()
   if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('/')) {
     e.preventDefault()
     e.stopPropagation()

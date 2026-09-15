@@ -97,24 +97,16 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import newsData from '@/data/news.json'
-import { SHOW_AIR_PURIFIER } from '@/configs/systemConfig'
 import HomeLivingLines from '@/components/HomeLivingLines.vue'
 import BuildingBmsScene from '@/components/BuildingBmsScene.vue'
 import NewsFolio from '@/components/NewsFolio.vue'
-
-// News items tied to a product that may be switched off. Their summaries link
-// to /product?jump=oxygen1, an anchor that does not exist while the EAP-01
-// section is hidden — so the card goes with it rather than dead-ending.
-const AIR_PURIFIER_NEWS_IDS = [2]
 
 export default defineComponent({
   name: 'Home',
   components: { HomeLivingLines, BuildingBmsScene, NewsFolio },
   setup() {
     const { locale } = useI18n()
-    const newsItems = ref(
-      newsData.filter((n) => SHOW_AIR_PURIFIER || !AIR_PURIFIER_NEWS_IDS.includes(n.id))
-    )
+    const newsItems = ref(newsData)
 
     const scrollToNews = () => {
       const el = document.getElementById('news')

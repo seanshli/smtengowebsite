@@ -52,7 +52,7 @@ export const zhCNLocale = {
     default: {
       title: 'enGo智管家 - 智慧家居第一品牌',
       description: 'enGo「安购」运用 AI 将阳光、空气、水与食物智慧整合，打造一站式智慧生活平台。',
-      keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 净水器, 空气清净机, 云端仓储'
+      keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 净水器, 云端仓储'
     },
     home: {
       title: '首页 | enGo智管家 - 智慧家居第一品牌',
@@ -167,7 +167,7 @@ export const zhCNLocale = {
     brandStoryTitle: 'enGo 的故事',
     intextLogo: '科技，不该只属于少数人',
     paragraph1:
-      '每天早晨，当你还在赖床，<font color="e05a35">enGo 已经为你拉开窗帘、调好灯光、启动空气清净机。</font>不是因为你设了闹钟，而是因为它学会了你的生活节奏。这就是 enGo — 取自「<font color="e05a35">Energy Go</font>」— 让能源聪明流动，让科技真正融入你的家。我们从一个简单的信念出发：好的生活品质，不该是豪宅的专利。无论是空气、水质、光线，还是每天的用电习惯，enGo 通过 AI 懂你所需，先你一步打造舒适、安全、节能的居家体验。',
+      '每天早晨，当你还在赖床，<font color="e05a35">enGo 已经为你拉开窗帘、调好灯光、开好空调。</font>不是因为你设了闹钟，而是因为它学会了你的生活节奏。这就是 enGo — 取自「<font color="e05a35">Energy Go</font>」— 让能源聪明流动，让科技真正融入你的家。我们从一个简单的信念出发：好的生活品质，不该是豪宅的专利。无论是空气、水质、光线，还是每天的用电习惯，enGo 通过 AI 懂你所需，先你一步打造舒适、安全、节能的居家体验。',
     paragraph2:
       '面对老龄化社会的来临，我们看见了科技最温暖的一面。<font color="e05a35">enGo 不只守护「智慧宅」，更是「乐龄宅」的贴心管家。</font>大字体界面、语音控制、自动场景，让长辈轻松操作；远程监控与即时通知，让远方的子女随时安心。',
     paragraph3:
@@ -244,16 +244,9 @@ export const zhCNLocale = {
   name: '姓名',
   chatbotTitle: 'enGo 小精灵',
   brandName: 'enGo 智管家',
-  voucherTitle: 'EAP-01 空气清净机｜独家折扣码限时申请',
-  voucherRequesting: '您正在申请 EAP-01 折扣码。填写以下联络资料，我们将于 1–2 个工作日内将专属折扣码寄至您的 Email。',
-  voucherIntro1: '对 EAP-01 有兴趣吗？填写下方资料并于「我想了解的是」选择',
-  voucherIntroPath: '产品 → 空气清净机',
-  voucherIntro2: '，我们将于 1–2 个工作日内将独家折扣码寄至您的 Email。',
-  voucherCta: '先看看 EAP-01 →',
   reviewNamePlaceholder: '您的姓名',
   reviewCommentPlaceholder: '您的宝贵意见...',
   reviewThanks: '感谢您的评价！',
-  voucherPrefillMessage: '我想申请 EAP-01 空气清净机的独家折扣码，请寄送至上方留下的 Email。谢谢！',
   brandJournal: 'enGo 生活志',
   email: '电子邮件',
   phone: '电话',
@@ -280,16 +273,13 @@ export const zhCNLocale = {
   messagetypePlaceholder: '选择产品',
   msgType1: 'AI 智慧管家中控平板',
   msgType2: 'AI 水维氧智慧净水器',
-  msgType3: 'AI 智慧空气清净机',
 
   planItems: [
     { id: 1, name: '买断：滤水器' },
-    { id: 2, name: '买断：空气机' },
     { id: 3, name: '买断：滤水器滤芯' },
-    { id: 4, name: '买断：空气机滤芯' },
-    { id: 5, name: '买断：enGo 管理中控＋滤水器＋空气机' },
-    { id: 6, name: '租赁：enGo 管理中控＋滤水器（12个月）' },
-    { id: 7, name: '租赁：enGo 管理中控＋滤水器＋空气机（12个月）' }
+    { id: 5, name: '买断：enGo 管理中控＋滤水器' },
+    { id: 6, name: '租赁：enGo 管理中控＋滤水器（12个月）' }
+    
   ],
   plan: '方案',
   planPlaceholder: '选择方案',
@@ -338,13 +328,16 @@ export const zhCNLocale = {
     no_match: '抱歉，这个问题我没有把握，帮您转给专人确认会比较准确。您可以拨 02-27510218（周一至周五 09:00–18:00），或透过 LINE 联络真人客服。',
     line_handoff: '联络 LINE 客服',
     replies: {
-      product: '了解产品',
-      tutorial: '使用教学',
+      product: 'enGo 是什么',
+      app: 'App 下载',
+      devices: '支持哪些设备',
+      voice: '语音操作',
+      offline: '断网怎么办',
       water: '净水系统',
-      air: '空气清净机',
-      contact: '联络我们',
-      purchase: '如何购买',
+      tutorial: '使用教学',
       showroom: '展示间预约',
+      contact: '联系我们',
+      purchase: '如何购买',
       pricing: '方案预算'
     },
     answers: {
@@ -521,53 +514,6 @@ export const zhCNLocale = {
       btn: '立即购买',
       title: '早鸟优惠价',
       desc: '*含enGo AI智慧中控平板、水维氧 AI智慧净水系统、三年份滤心、安装费'
-    },
-    air_purifier: {
-      tag: '空气清净机',
-      title: '智能空气清净机系列',
-      headline: '一机四用，守护全家每一口呼吸',
-      subHeadline: '空气净化 × SoundBox × 无线充电 × 香氛扩香',
-      modelLabel: '型号',
-      modelBlack: 'EAP-01B 时尚黑',
-      modelWhite: 'EAP-01W 简约白',
-      features: {
-        filter: {
-          title: '三重过滤净化',
-          desc: 'HEPA12 + NIH1 + 银离子 Silver Ionizer，PM2.5、细菌、异味一次净化'
-        },
-        sound: {
-          title: 'SoundBox 蓝牙音响',
-          desc: '内建高音质蓝牙喇叭，净化同时享受音乐'
-        },
-        charge: {
-          title: 'Qi 无线充电',
-          desc: '顶盖即放即充，手机放上就开始充电'
-        },
-        aroma: {
-          title: '香氛扩香',
-          desc: '搭配专属精油，净化空气同时释放疗愈香氛'
-        }
-      },
-      specs: {
-        title: '规格总览',
-        filterLifeLabel: '滤网寿命',
-        filterLifeValue: '3–6 个月（视空气品质而定）',
-        certLabel: '认证',
-        certValue: 'NCC · BSMI',
-        coverageLabel: '适用坪数',
-        coverageValue: '8–10 坪',
-        noiseLabel: '最大噪音',
-        noiseValue: '< 61 dB'
-      },
-      price: {
-        tag: '预售优惠',
-        msrpLabel: 'MSRP',
-        msrp: 'NT$12,800',
-        promo: 'NT$8,960',
-        bonus: '加赠一组原厂滤网',
-        btn: '立即购买',
-        presaleNote: '预售期间商品，若预购量未达最低生产门槛，本公司保留取消预售之权利，并于取消后 30 日内全额退款。'
-      }
     },
     reviews: {
       title: '用户评价',

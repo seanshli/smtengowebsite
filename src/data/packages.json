@@ -318,7 +318,6 @@
                     "智能煙霧偵測 x1",
                     "智能斷電器/瓦斯閥 x1",
                     "窗簾馬達 x2",
-                    "空氣清淨連動器 x1",
                     "人體感應器 x2"
                 ],
                 "en": [
@@ -331,7 +330,6 @@
                     "Smart Smoke Detector x1",
                     "Smart Breaker / Gas Valve x1",
                     "Curtain Motor x2",
-                    "Air Purifier Link x1",
                     "Motion Sensor x2"
                 ],
                 "fr": [
@@ -344,7 +342,6 @@
                     "Détecteur de fumée intelligent x1",
                     "Disjoncteur / Vanne de gaz intelligent x1",
                     "Moteur de rideau x2",
-                    "Séquenceur purificateur d'air x1",
                     "Capteur de mouvement x2"
                 ],
                 "ja": [
@@ -357,7 +354,6 @@
                     "スマート煙感知器 x1",
                     "スマートブレーカー/ガスバルブ x1",
                     "カーテンモーター x2",
-                    "空気清浄機連携器 x1",
                     "人感センサー x2"
                 ]
             }
@@ -375,23 +371,19 @@
             "components": {
                 "zh": [
                     "enGo 中控平板 + 管理系統",
-                    "enGo 水精靈 (RO + 礦物質 + 記量) ＋智能漏水偵測斷水閥",
-                    "enGo 智慧 3合1 空氣清淨機 (清淨機 + 藍牙喇叭 + 無線充) ＋ 智能 6合一空氣盒"
+                    "enGo 水精靈 (RO + 礦物質 + 記量) ＋智能漏水偵測斷水閥"
                 ],
                 "en": [
                     "enGo Hub + Management System",
-                    "enGo Water Fairy (RO + Minerals + Meter)",
-                    "enGo Smart 3-in-1 Air Purifier (Purifier + BT Speaker + Wireless Charge)"
+                    "enGo Water Fairy (RO + Minerals + Meter)"
                 ],
                 "fr": [
                     "Hub enGo + Système de gestion",
-                    "enGo Water Fairy (RO + Minéraux + Compteur)",
-                    "Purificateur d'air intelligent 3-en-1 (Purificateur + HP BT + Charge sans fil)"
+                    "enGo Water Fairy (RO + Minéraux + Compteur)"
                 ],
                 "ja": [
                     "enGo コントロールパネル + 管理システム",
-                    "enGo 水精靈 (RO + 鉱物質 + 計量)",
-                    "enGo スマート 3-in-1 空気清浄機 (清浄機 + Bluetoothスピーカー + ワイヤレス充電)"
+                    "enGo 水精靈 (RO + 鉱物質 + 計量)"
                 ]
             }
         },

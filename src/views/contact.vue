@@ -10,33 +10,6 @@
           <div class="phone">{{ $t('contactUsSubtitle2') }}</div>
         </div>
       </div>
-      <!-- Voucher banner for the EAP-01 offer. Hidden while the product is
-           disabled — see SHOW_AIR_PURIFIER in src/configs/systemConfig.ts -->
-      <div
-        v-if="SHOW_AIR_PURIFIER"
-        class="voucher-banner"
-        :class="{ 'voucher-banner--prefilled': isVoucherRequest }"
-      >
-        <span class="voucher-banner-icon">🎁</span>
-        <div class="voucher-banner-text">
-          <strong>{{ $t('voucherTitle') }}</strong>
-          <p v-if="isVoucherRequest">
-            {{ $t('voucherRequesting') }}
-          </p>
-          <p v-else>
-            {{ $t('voucherIntro1') }}<strong>{{ $t('voucherIntroPath') }}</strong>{{ $t('voucherIntro2') }}
-          </p>
-        </div>
-        <a
-          href="https://www.zeczec.com/projects/enGo-Smart-Manager-AI-AirPurifier"
-          target="_blank"
-          rel="noopener"
-          class="voucher-banner-cta"
-          @click="trackVoucherCtaClick"
-        >
-          {{ $t('voucherCta') }}
-        </a>
-      </div>
       <div class="contact_inputs flex_vertical">
         <div class="input_label">
           <input
@@ -103,7 +76,6 @@
               </option>
               <option value="engosystem">{{ $t('msgType1') }}</option>
               <option value="waterfilter">{{ $t('msgType2') }}</option>
-			  <option value="airfilter">{{ $t('msgType3') }}</option>
             </select>
           </div>
           <div class="input_label">
@@ -141,7 +113,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, computed, onMounted } from 'vue'
-import { config, SHOW_AIR_PURIFIER } from '../configs/systemConfig'
+import { config } from '../configs/systemConfig'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
@@ -161,13 +133,6 @@ export default defineComponent({
     const message = ref('')
     const errorMessage = ref('')
 
-    // Voucher lead-capture flow: when /contact?topic=eap01_voucher is opened
-    // (e.g. from the EAP-01 product page voucher link), prefill the form with
-    // air-purifier interest + a templated message so the user just adds their
-    // contact details. submitForm() also tags the productType with a voucher
-    // flag so admins can filter these in Supabase.
-    const isVoucherRequest = ref(false)
-
     const { locale, tm, t } = useI18n()
     const { trackEvent } = useAnalytics()
 
@@ -178,31 +143,7 @@ export default defineComponent({
     const route = useRoute()
     const router = useRouter()
 
-    onMounted(() => {
-      const topic = (route.query.topic || '').toString()
-      if (topic === 'eap01_voucher') {
-        isVoucherRequest.value = true
-        interest.value = 'product'
-        messagetype.value = 'airfilter'
-        // Pre-fill the message; user can edit before submitting.
-        message.value = t('voucherPrefillMessage')
-        trackEvent('voucher_form_opened', { product: 'EAP-01', source: route.query.from || 'direct' })
-      } else {
-        // Banner is now visible to all /contact visitors — track impression so we can
-        // measure conversion lift from the universal banner vs. the targeted voucher URL.
-        trackEvent('voucher_banner_impression', { source: 'organic_contact' })
-      }
-    })
-
-    const trackVoucherCtaClick = () => {
-      trackEvent('voucher_banner_cta_click', {
-        product: 'EAP-01',
-        destination: 'zeczec',
-        source: isVoucherRequest.value ? 'voucher_link' : 'organic_contact'
-      })
-    }
-
-    const jumpToLine = () => {
+const jumpToLine = () => {
       trackEvent('click_contact_line')
       window.open('https://lin.ee/THIUSjW')
     }
@@ -303,15 +244,6 @@ export default defineComponent({
         console.log('Product/Plan section is visible');
       }
 
-      // Voucher flow: tag productType so it's easy to filter these submissions in Supabase.
-      // Tag as voucher_eap01 if EITHER:
-      //   1) Came from /contact?topic=eap01_voucher (explicit voucher link click), OR
-      //   2) User organically selected 產品 → 空氣清淨機 (active EAP-01 interest)
-      // Result: every potential EAP-01 lead is captured for the manual voucher email workflow.
-      const isAirPurifierInterest = interest.value === 'product' && messagetype.value === 'airfilter';
-      if (isVoucherRequest.value || isAirPurifierInterest) {
-        productType = `voucher_eap01,${productType}`;
-      }
       const data = {
         name: name.value,
         email: email.value,
@@ -366,9 +298,6 @@ export default defineComponent({
       interest,
       planOptions,
       jumpToLine,
-      isVoucherRequest,
-      trackVoucherCtaClick,
-      SHOW_AIR_PURIFIER
     }
   }
 })

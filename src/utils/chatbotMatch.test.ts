@@ -30,6 +30,12 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['米多力斷網還能控制嗎', 'network-required'],
     ['Matter 網關可以接 Google Home 嗎', 'homekit-siri'],
     ['App Store 上的名稱是什麼 哪裡下載', 'app-download'],
+    // the chatbot's quick-question chips (zh) must land on the intended entry
+    ['enGo 是什麼', 'what-is-engo'],
+    ['App 下載', 'app-download'],
+    ['支援哪些裝置', 'compatibility'],
+    ['語音操作', 'voice-control'],
+    ['斷網怎麼辦', 'network-required'],
   ]
   for (const [q, id] of cases) {
     it(`"${q}" → ${id}`, () => {
@@ -65,6 +71,8 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     // 2026-09-15: com.engo.life / App Store id6743929358 ("engo智管家") is a different app;
     // ours is tw.smtengo.engohome.android / id6680188565, named enGo智慧管家 on both stores.
     'com.engo.life', 'id6743929358', 'engo智管家',
+    // 2026-09-15: EAP-01 air purifier discontinued — no trace in customer text
+    'EAP-01', 'EAP-T01', '空氣清淨機', '空气清净机', 'air purifier', 'Air Purifier',
   ]
   for (const phrase of banned) {
     it(`does not contain "${phrase}"`, () => {
@@ -112,5 +120,25 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     const src = readFileSync(resolve(process.cwd(), 'src/utils/productSchema.ts'), 'utf-8')
     expect(src).not.toMatch(/Alexa/)
     expect(src).not.toMatch(/一鍵控制全家|MEDOLE/)
+  })
+  it('every FAQ has six locales, a known category, and well-formed links to real routes or our YouTube channel', () => {
+    const cats = ['setup', 'features', 'products', 'services', 'safety', 'energy', 'maintenance', 'warranty', 'compatibility', 'tutorials', 'showroom']
+    const routes = ['/product', '/product?jump=oxygen', '/product?jump=packages', '/tutorial', '/contact', '/packages', '/enviro', '/ecosystem', '/brandStory', '/cases', '/cases/23', '/cases/24']
+    const ids = new Set<number>()
+    for (const f of faqs as any[]) {
+      expect(ids.has(f.id), `duplicate id ${f.id}`).toBe(false); ids.add(f.id)
+      expect(cats, `category ${f.category} on #${f.id}`).toContain(f.category)
+      for (const loc of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) {
+        expect(f.question[loc], `#${f.id} question ${loc}`).toBeTruthy()
+        expect(f.answer[loc], `#${f.id} answer ${loc}`).toBeTruthy()
+        for (const m of String(f.answer[loc]).matchAll(/\]\(([^)\s]+)\)/g)) {
+          const href = m[1]
+          const ok = routes.includes(href) || /^https:\/\/(www\.)?youtube\.com\//.test(href)
+          expect(ok, `#${f.id} ${loc} links to ${href}`).toBe(true)
+        }
+      }
+    }
+    for (const gone of [3, 8, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]) expect(ids.has(gone), `#${gone} removed`).toBe(false)
+    for (const here of [37, 40, 42, 44, 45, 46, 47, 48, 49]) expect(ids.has(here), `#${here} present`).toBe(true)
   })
 })

@@ -30,7 +30,6 @@
         <div class="dropdown-content">
           <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
           <router-link to="product?jump=oxygen">{{ $t('footer.secondLink') }}</router-link>
-          <router-link v-if="SHOW_AIR_PURIFIER" to="product?jump=oxygen1">{{ $t('product.air_purifier.title') }}</router-link>
           <router-link to="/enviro">{{ $t('enviroTitle') }}</router-link>
         </div>
       </div>
@@ -99,7 +98,6 @@
         <router-link to="/product">{{ $t('productTitle') }}</router-link>
         <router-link to="/product" class="sublink">{{ $t('footer.firstLink') }}</router-link>
         <router-link to="product?jump=oxygen" class="sublink">{{ $t('footer.secondLink') }}</router-link>
-        <router-link v-if="SHOW_AIR_PURIFIER" to="product?jump=oxygen1" class="sublink">{{ $t('product.air_purifier.title') }}</router-link>
         <router-link to="/enviro" class="sublink">{{ $t('enviroTitle') }}</router-link>
         <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
         <a @click="toMall">{{ $t('mallTitle') }}</a>
@@ -120,7 +118,6 @@
 import { defineComponent, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { changeLocale, type LanguageType, i18n } from '../main'
-import { SHOW_AIR_PURIFIER } from '../configs/systemConfig'
 
 export default defineComponent({
   name: 'Header',
@@ -175,8 +172,7 @@ export default defineComponent({
       selectedLanguage,
       toggleMenu,
       changeLanguage,
-      toMall,
-      SHOW_AIR_PURIFIER
+      toMall
     }
   }
 })

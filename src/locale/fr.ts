@@ -205,16 +205,9 @@ export const frLocale = {
   name: 'Nom',
   chatbotTitle: 'Assistant enGo',
   brandName: 'enGo Smart Home',
-  voucherTitle: 'Purificateur d\'air EAP-01 | Code de réduction exclusif, durée limitée',
-  voucherRequesting: 'Vous demandez un code de réduction EAP-01. Renseignez vos coordonnées ci-dessous et nous vous l\'enverrons par e-mail sous 1 à 2 jours ouvrés.',
-  voucherIntro1: 'Le EAP-01 vous intéresse ? Remplissez le formulaire ci-dessous et choisissez ',
-  voucherIntroPath: 'Produit → Purificateur d\'air',
-  voucherIntro2: ' sous « Ce que je souhaite savoir » ; nous vous enverrons votre code exclusif par e-mail sous 1 à 2 jours ouvrés.',
-  voucherCta: 'Découvrir le EAP-01 →',
   reviewNamePlaceholder: 'Votre nom',
   reviewCommentPlaceholder: 'Votre avis...',
   reviewThanks: 'Merci pour votre avis !',
-  voucherPrefillMessage: 'Je souhaite demander le code de réduction exclusif pour le purificateur d\'air EAP-01. Merci de l\'envoyer à l\'adresse e-mail ci-dessus.',
   brandJournal: 'LE JOURNAL enGo',
   email: 'E-mail',
   phone: 'Téléphone',
@@ -241,16 +234,13 @@ export const frLocale = {
   messagetypePlaceholder: 'Sélectionner un produit',
   msgType1: 'enGo système intelligent',
   msgType2: 'filtre à eau',
-  msgType3: 'enGo Air filter',
 
   planItems: [
     { id: 1, name: 'Achat : Filtre à eau' },
-    { id: 2, name: 'Achat : Purificateur d\'air' },
     { id: 3, name: 'Achat : Cartouche de filtre à eau' },
-    { id: 4, name: 'Achat : Filtre de purificateur d\'air' },
-    { id: 5, name: 'Achat : enGo Hub + Filtre à eau + Purificateur d\'air' },
-    { id: 6, name: 'Location : enGo Hub + Filtre à eau (12 mois)' },
-    { id: 7, name: 'Location : enGo Hub + Filtre à eau + Purificateur d\'air (12 mois)' }
+    { id: 5, name: 'Achat : enGo Hub + Filtre à eau' },
+    { id: 6, name: 'Location : enGo Hub + Filtre à eau (12 mois)' }
+    
   ],
   plan: 'forfait',
   planPlaceholder: 'Choisissez un forfait',
@@ -319,53 +309,6 @@ export const frLocale = {
   backToHome: "Retour à la page d'accueil",
 
   product: {
-    air_purifier: {
-      tag: 'Purificateur d\'air',
-      title: 'Série de purificateurs d\'air intelligents',
-      headline: 'Un appareil, quatre essentiels — pour chaque respiration à la maison',
-      subHeadline: 'Purification × SoundBox × Recharge sans fil × Diffuseur d\'arôme',
-      modelLabel: 'Modèle',
-      modelBlack: "EAP-01B Noir Élégant",
-      modelWhite: "EAP-01W Blanc Minimaliste",
-      features: {
-        filter: {
-          title: 'Filtration triple couche',
-          desc: 'HEPA12 + NIH1 + Ioniseur d\'argent — capture PM2.5, bactéries et odeurs en un passage'
-        },
-        sound: {
-          title: 'Enceinte Bluetooth SoundBox',
-          desc: 'Haut-parleur Bluetooth intégré — purifiez l\'air tout en écoutant de la musique'
-        },
-        charge: {
-          title: 'Recharge sans fil Qi',
-          desc: 'Chargeur sans fil sur le dessus — posez votre téléphone, il se charge'
-        },
-        aroma: {
-          title: 'Diffuseur d\'arôme',
-          desc: 'Huiles essentielles dédiées pour diffuser un parfum apaisant pendant la purification'
-        }
-      },
-      specs: {
-        title: 'Spécifications',
-        filterLifeLabel: 'Durée du filtre',
-        filterLifeValue: '3–6 mois (selon la qualité de l\'air)',
-        certLabel: 'Certification',
-        certValue: 'NCC · BSMI',
-        coverageLabel: 'Couverture',
-        coverageValue: '8–10 ping (≈26–33 m²)',
-        noiseLabel: 'Bruit max.',
-        noiseValue: '< 61 dB'
-      },
-      price: {
-        tag: 'Offre de prévente',
-        msrpLabel: 'PDSF',
-        msrp: 'NT$12 800',
-        promo: 'NT$8 960',
-        bonus: 'Un jeu de filtres offert',
-        btn: 'Acheter',
-        presaleNote: 'Article en prévente. Si le seuil minimal de production n\'est pas atteint, enGo se réserve le droit d\'annuler la prévente et de procéder à un remboursement intégral sous 30 jours après l\'annulation.'
-      }
-    },
     reviews: {
       title: 'Avis des utilisateurs',
       add: 'Écrire un avis',
@@ -461,12 +404,17 @@ export const frLocale = {
     no_match: 'Désolé, je ne suis pas certain de cette réponse — un conseiller pourra vous répondre précisément. Appelez le 02-27510218 (lun.–ven. 09:00–18:00) ou contactez-nous via LINE.',
     line_handoff: 'Contacter via LINE',
     replies: {
-      product: 'Infos produits',
+      product: 'Qu\'est-ce qu\'enGo',
+      app: 'Obtenir l\'appli',
+      devices: 'Appareils compatibles',
+      voice: 'Commande vocale',
+      offline: 'Sans Internet ?',
+      water: 'Système d\'eau',
       tutorial: 'Tutoriels',
+      showroom: 'Visiter le showroom',
       contact: 'Contact',
       purchase: 'Comment acheter',
-      showroom: 'Visiter Showroom',
-      pricing: 'Tarifs et Plans'
+      pricing: 'Tarifs et formules'
     },
     answers: {
       product: 'Notre hub intelligent intègre appareils, sécurité et purification d\'eau. Consultez la page produits.',
