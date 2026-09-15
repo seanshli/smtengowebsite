@@ -1,275 +1,107 @@
-# Production Deployment Readiness - smtengo Website
+# Deployment — www.smtengo.com
 
-**Status**: ✅ Ready for deployment
+Snapshot verified 2026-09-15 against the live Vercel project. Update this file when any of it changes.
 
-## Build Verification
+## Where it runs
 
-### ✅ Build Success
-- Production build completed successfully
-- No TypeScript errors
-- All assets properly bundled and optimized
+| Item | Value |
+|---|---|
+| Host | Vercel, team **Sean Li's projects** (`sean-lis-projects-e3ebb6ec`), project **`smtengowebsite`** |
+| Framework preset | Vite · build `vite build` · output `dist` · install `npm install` · Node 24.x |
+| Git integration | GitHub `seanshli/smtengowebsite`. Push to `main` → **production**. Any other branch or PR → **preview** URL. No GitHub Actions, no branch protection. |
+| Production aliases | `https://www.smtengo.com` (primary), `https://web.smtengo.com`, `https://w2.smtengo.com`, `smtengowebsite.vercel.app` |
+| DNS | `www` is a CNAME to Vercel DNS. The apex `smtengo.com` is fronted by Cloudflare. The `smtengo.com` domain is registered with a third party and attached to the Vercel team. |
+| Functions region | `iad1` (Vercel default) |
 
-### Build Output Summary
-```
-Total Build Size: ~23 MB
-- HTML: 3.50 kB (gzip: 1.72 kB)
-- CSS: 587.56 kB (gzip: 67.82 kB)
-- JS: 492.51 kB (gzip: 193.76 kB)
-- Assets: ~21.9 MB (images and media)
-```
+The `gh-pages` branch is a leftover from the pre-Vercel GitHub Pages deploy. It is not served
+anywhere and can be deleted whenever convenient.
 
-## Configuration Checklist
+## Environment variables (Vercel project settings)
 
-### ✅ Vite Configuration
-- Build configuration is production-ready
-- Assets are properly hashed for cache-busting
-- CSS modules configured correctly
+All are set for Production. `vercel env pull .env.local` fetches them for local `vercel dev`, but
+**sensitive-type variables come back empty** — that is the CLI refusing to decrypt, not an empty
+value. Add those two to `.env.local` by hand from the Vercel dashboard.
 
-### ✅ SEO & Analytics
-- Google Tag Manager integrated (GTM-PBH3CKR5)
-- Structured data (JSON-LD) implemented
-- Meta tags configured for all pages
-- Open Graph tags present
+| Variable | Used by | Notes |
+|---|---|---|
+| `SUPABASE_URL` | `api/contact.ts`, `api/chatbot-query.ts`, `lib/supabase-admin.ts` | Supabase project `website` (Tokyo) |
+| `SUPABASE_ANON_KEY` | public endpoints (`contact`, `chatbot-query`) | INSERT-only via RLS |
+| `SUPABASE_SERVICE_ROLE_KEY` | `lib/supabase-admin.ts` → `api/admin/*` | **sensitive**; bypasses RLS, server only |
+| `AUTH_SECRET` | `lib/session.ts` (signed admin session tokens) | **sensitive** |
+| `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` | `api/contact.ts` (nodemailer) | contact-form notification mail |
+| `NOTIFICATION_EMAIL` | `api/contact.ts` | recipient of contact notifications |
 
-### ✅ Third-Party Integrations
-- Tawk.to chat widget configured
-- Google Analytics via GTM
-- Social media integration ready
+The browser bundle contains **no** Supabase client and no keys; everything above is read only inside
+`api/` at request time.
 
-### ✅ Multi-language Support
-- English (en)
-- Chinese (zh)
-- French (fr)
-- Japanese (ja)
+## Supabase
 
-## Hosting Recommendations
+Project **`website`**, ref `hukiymqfjhzcdsaqcjoi`, region Northeast Asia (Tokyo).
 
-### Option 1: GitHub Pages (Already Configured)
-The project includes a `deploy.sh` script configured for GitHub Pages:
-- Repository: `smtengo-dev/smtengoweb`
-- Branch: `gh-pages`
-- Custom domain support available
+One-time SQL, in order, from the Supabase SQL editor:
 
-**To deploy:**
-```bash
-bash deploy.sh
-```
+1. `supabase_setup.sql` — `backend_members`, `contact_submissions`, chatbot tables, RLS.
+2. `supabase_add_member_contact.sql` — adds `email` / `phone` to `backend_members`.
 
-### Option 2: Vercel (Recommended)
-Vercel offers excellent performance for Vue applications:
-- Automatic SSL
-- Global CDN
-- Zero configuration deployment
-- Preview deployments for branches
+To create or reset an admin password, run `node scripts/hash-password.mjs` (hidden prompt, prints only
+the bcrypt hash) and paste the hash into the `backend_members` row. Cost 10 matches `api/admin/auth.ts`.
 
-**To deploy:**
-```bash
-npm install -g vercel
-vercel
-```
+## Serverless functions (`api/`)
 
-### Option 3: Netlify
-Similar to Vercel with drag-and-drop deployment:
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Automatic HTTPS
+| Route | Purpose | Credentials |
+|---|---|---|
+| `POST /api/contact` | store a contact submission, send SMTP notification | anon key + SMTP |
+| `POST /api/chatbot-query` | log chatbot questions for analytics | anon key |
+| `/api/admin/auth` | admin login → signed session cookie | service role + `AUTH_SECRET` |
+| `/api/admin/members`, `/profile`, `/submissions`, `/chatbot-analytics` | admin back office (`/admin` in the SPA) | service role, session-gated |
 
-### Option 4: Traditional Server (Nginx/Apache)
-For self-hosted solutions:
-1. Build the project: `npm run build`
-2. Copy the `dist` folder to your server
-3. Configure web server to serve the files
-4. Ensure proper routing for SPA
+Rate limiting (`lib/ratelimit.ts`) is per-instance memory. Log redaction lives in `lib/redact.ts`.
 
-## Server Configuration Requirements
+## Build pipeline
 
-### Nginx Configuration (if using traditional hosting)
-```nginx
-server {
-    listen 80;
-    server_name smtengo.com www.smtengo.com;
-    root /var/www/smtengo/dist;
-    index index.html;
+`npm run build` = `vue-tsc --build --force` **and** `vite build`, then `postbuild` runs
+`scripts/prerender-meta.mjs`. The same prerender also runs as a Vite `closeBundle` plugin, so the
+26 route shells (`dist/<route>/index.html`, zh + `/en`) are produced on Vercel even though Vercel only
+runs `vite build`. Consequence: **the TypeScript check is a local gate only** — always run
+`npm run build` before pushing.
 
-    # Gzip compression
-    gzip on;
-    gzip_vary on;
-    gzip_min_length 1024;
-    gzip_types text/plain text/css text/xml text/javascript application/javascript application/json;
+`vercel.json` serves the prerendered shells first, then falls back to `index.html` for the SPA, and adds
+HSTS, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, and a
+**report-only** CSP. Promote the CSP to enforcing only after checking the report volume.
 
-    # SPA routing - fallback to index.html
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
+## Analytics and third parties
 
-    # Cache static assets
-    location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|webp)$ {
-        expires 1y;
-        add_header Cache-Control "public, immutable";
-    }
-}
+- Google Tag Manager `GTM-PBH3CKR5`, loaded after Consent Mode v2 defaults in `index.html`; the
+  cookie banner (`src/components/cookie.vue`) updates consent state.
+- Tawk.to chat snippet is present in `index.html` but **disabled**.
+- Google fonts, YouTube embeds (allowed in CSP `frame-src`).
+
+## Local development
+
+```sh
+npm ci
+npm run dev                          # SPA only, http://localhost:5173
+vercel link                          # once; picks project smtengowebsite
+vercel env pull .env.local           # then hand-add AUTH_SECRET + SUPABASE_SERVICE_ROLE_KEY
+vercel dev                           # SPA + api/ with env
 ```
 
-### Apache Configuration (.htaccess)
-```apache
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
-</IfModule>
+`.claude/launch.json` defines the `smtengo-dev` preview config (`npm run dev`, port 5173).
 
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript
-</IfModule>
+## Ship checklist
 
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-</IfModule>
-```
+1. Branch from `main`; `npm run build` and `npx vitest run` green locally.
+2. Push, open a PR. Vercel posts a preview URL; smoke-test `/`, `/en`, `/product`, `/contact`,
+   `/admin` login, language toggle, and one prerendered route with `curl -I`.
+3. Merge to `main`. Vercel builds production (~30 s). Confirm `https://www.smtengo.com` serves the
+   new deployment (`vercel inspect https://www.smtengo.com`).
+4. Rollback: Vercel dashboard → Deployments → promote the previous production deployment, or
+   `vercel rollback`.
 
-## Pre-Deployment Checklist
+## Known debt
 
-- [x] Production build successful
-- [x] No console errors in development
-- [x] TypeScript compilation clean
-- [x] All routes accessible
-- [x] Multi-language switching works
-- [x] Analytics tracking configured
-- [x] Chat widget integrated
-- [x] SEO metadata complete
-- [ ] Custom domain DNS configured (if applicable)
-- [ ] SSL certificate ready (automatic with most modern hosts)
-- [ ] Favicon and app icons present
-
-## Post-Deployment Verification
-
-After deployment, verify:
-
-1. **Homepage loads correctly**
-   - https://your-domain.com
-
-2. **All routes work**
-   - /about (brand story, mission, vision, etc.)
-   - /product
-   - /cases
-   - /tutorial
-   - /contact
-   - /login
-
-3. **Language switching**
-   - Test EN, ZH, FR, JA
-
-4. **Analytics**
-   - Check Google Analytics for tracking
-   - Verify GTM is firing
-
-5. **Performance**
-   - Run Lighthouse audit
-   - Check PageSpeed Insights
-   - Verify assets are cached properly
-
-6. **Mobile responsiveness**
-   - Test on various devices/screen sizes
-
-## Environment Variables
-
-> [!NOTE]
-> This project does not currently use environment variables. All configuration is hard-coded in the source files.
-
-If you need environment-specific configuration in the future:
-- Create `.env.production` for production settings
-- Use `import.meta.env.VITE_*` variables in code
-- Configure deployment platform to inject environment variables
-
-## Domain Configuration
-
-### Current Configuration
-The website is configured for `https://www.smtengo.com`
-
-### DNS Settings Needed (for custom domain)
-```
-Type    Name    Value               TTL
-A       @       <your-server-ip>    3600
-CNAME   www     <your-domain>       3600
-```
-
-For GitHub Pages:
-```
-Type    Name    Value                           TTL
-CNAME   www     smtengo-dev.github.io          3600
-```
-
-## Performance Optimization Notes
-
-> [!IMPORTANT]
-> Some image assets are quite large (>1MB). Consider:
-> - Converting to WebP format
-> - Implementing lazy loading
-> - Using responsive images
-
-Large assets identified:
-- `technology.jpeg` (5.1 MB)
-- `filter_level.png` (4.2 MB)
-- Multiple air purifier images (1.5-2.6 MB each)
-
-## Security Considerations
-
-- [x] No sensitive data in client-side code
-- [x] HTTPS enforcement via hosting platform
-- [x] No API keys exposed in frontend
-- [ ] Set up Content Security Policy (CSP) headers
-- [ ] Configure CORS if needed for API calls
-
-## Deployment Commands
-
-### GitHub Pages
-```bash
-./deploy.sh
-```
-
-### Vercel
-```bash
-vercel --prod
-```
-
-### Netlify
-```bash
-netlify deploy --prod
-```
-
-### Manual Deployment
-```bash
-npm run build
-# Then upload the 'dist' folder to your server
-```
-
-## Support & Maintenance
-
-**Build Scripts:**
-- `npm run dev` - Development server
-- `npm run build` - Production build
-- `npm run preview` - Preview production build locally
-- `npm run type-check` - TypeScript validation
-- `npm run lint` - Code linting
-
-**Monitoring:**
-- Google Tag Manager for analytics
-- Tawk.to for customer support tracking
-
----
-
-> [!TIP]
-> For the best deployment experience, we recommend **Vercel** or **Netlify** for instant deployment with zero configuration. Both offer:
-> - Automatic SSL
-> - Global CDN
-> - Automatic deployments from Git
-> - Free tier available
+- Large tracked images (`two-machines02-bg.png` ~3.4 MB, duplicated in `src/assets` and
+  `public/assets`); several product photos >1 MB. Convert to WebP / lazy-load.
+- Rate limiter is per-instance; fine at current traffic, not a real limiter under load.
+- `fr`, `ja`, `zhCN`, `es` dictionaries are shipped but unreachable from the UI and not prerendered.
+- Sass `mixed-decls` deprecation warnings during build (harmless until Dart Sass 2).
