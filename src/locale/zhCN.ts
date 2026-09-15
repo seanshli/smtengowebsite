@@ -434,7 +434,7 @@ export const zhCNLocale = {
       yes: '支持',
       no: '不提供',
       scrollHint: '左右滑动可查看其他平台 →',
-      footnote: '手机 App「enGo智慧管家」于 Google Play 与 App Store 免费下载（App Store 商店页名称显示为「engo智管家」）。'
+      footnote: '手机 App「enGo智慧管家」于 App Store 与 Google Play 免费下载。'
     },
     tablet_function: {
       tag: '功能介绍',

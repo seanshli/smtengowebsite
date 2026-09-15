@@ -369,10 +369,10 @@
           </p>
           <!-- Official store badges. Apple: badge API SVG, zh-TW for the Chinese locales,
                en-US otherwise. Google: generic English badge (no zh-TW asset is published).
-               Listing names differ per store: Google Play enGo智慧管家 (tw.smtengo.engohome.android),
-               App Store engo智管家 (tw.smtengo.engohome.ios) — hence links, not "search for". -->
+               Both stores list the app as enGo智慧管家 (iOS tw.smtengo.engohome.ios = id6680188565,
+               Android tw.smtengo.engohome.android). An English reader searching "enGo HMS" finds neither. -->
           <p class="interfaces-stores mt-12">
-            <a href="https://apps.apple.com/app/id6743929358" target="_blank" rel="noopener">
+            <a href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener">
               <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" height="40" loading="lazy" />
             </a>
             <a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener">
