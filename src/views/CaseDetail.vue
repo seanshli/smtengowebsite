@@ -18,6 +18,7 @@
       <div class="back-link" @click="$router.push('/cases')">
         <i class="icon-arrow-left"></i> {{ $t('casesTitle') }}
       </div>
+      <p class="history-note">{{ $t('casesHistoryNote') }} <router-link to="/product">{{ $t('productTitle') }} →</router-link></p>
 
       <!-- 1. Intro -->
       <section v-if="details.intro" class="section intro">
@@ -205,6 +206,13 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+.history-note {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #6b7280;
+  a { color: inherit; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+}
 .case-detail-page {
   padding-bottom: 100px;
   

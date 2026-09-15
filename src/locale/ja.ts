@@ -103,6 +103,7 @@ export const jaLocale = {
     },
     casesTitle: '導入事例',
     casesSubtitle: 'スマートホームが変える暮らしのリアル',
+    casesHistoryNote: '本ページは過去の導入事例の記録で、当時の設定と機器を反映しています。現行製品の機能は「製品紹介」ページをご確認ください。',
     viewDetails: '詳細を見る',
     filterCategory: 'カテゴリー',
     filterCountry: '国',
@@ -285,7 +286,7 @@ export const jaLocale = {
             yes: '対応',
             no: '非対応',
             scrollHint: '左右にスワイプして他のプラットフォームを表示 →',
-            footnote: 'スマホアプリ「enGo智慧管家」は App Store と Google Play からダウンロードできます。'
+            footnote: 'スマホアプリは App Store と Google Play で「enGo智管家」として公開されています（インストール後は「enGo智慧管家」と表示）。'
         },
         tablet_function: {
             tag: '機能紹介',

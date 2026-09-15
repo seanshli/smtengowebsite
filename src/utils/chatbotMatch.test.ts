@@ -1,6 +1,10 @@
 import { describe, it, expect } from 'vitest'
 import kb from '../data/knowledge_base.json'
 import faqs from '../data/faqs.json'
+import news from '../data/news.json'
+import packages from '../data/packages.json'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { normalizeQuery, expandQuery, rankKnowledge } from './chatbotMatch'
 
 const top = (q: string) => rankKnowledge(kb as any, expandQuery(normalizeQuery(q)))[0]
@@ -23,6 +27,9 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['資料存在哪裡 會傳到國外嗎', 'data-privacy'],
     ['搬家要怎麼處理帳號', 'data-privacy'],
     ['支援哪些家電', 'compatibility'],
+    ['米多力斷網還能控制嗎', 'network-required'],
+    ['Matter 網關可以接 Google Home 嗎', 'homekit-siri'],
+    ['App Store 上的名稱是什麼 哪裡下載', 'app-download'],
   ]
   for (const [q, id] of cases) {
     it(`"${q}" → ${id}`, () => {
@@ -40,13 +47,19 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     ['answer', 'specs', 'features', 'description', 'name', 'question']
       .flatMap((k) => (e[k] && typeof e[k] === 'object' ? Object.values(e[k]) : e[k] ? [e[k]] : []))
       .join('\n')
-  const text = [...Object.values(kb as any).flat(), ...(faqs as any[])].map(textOf).join('\n')
+  const newsText = (news as any[]).map((n) => [n.title, n.summary].flatMap((o) => Object.values(o ?? {})).join('\n')).join('\n')
+  const text = [...Object.values(kb as any).flat(), ...(faqs as any[])].map(textOf).join('\n') + '\n' + newsText
   const banned = [
     '嘿 Siri', '嘿！Siri', 'Hey Siri', 'Hey Siri', 'Dis Siri',
     '已整合 Apple HomeKit', 'integrates with Apple HomeKit',
     '離線時仍可運作', 'continue to work offline',
     '食譜', '音響系統', '門鎖及', 'locks, and water',
     '喚醒詞', 'wake word,', 'T1 平板', '10.1吋',
+    // 2026-09-11 project-side verification: no Alexa integration exists; HomeKit is
+    // per-device Matter sharing, not "enGo integrates HomeKit"; scenes are fully
+    // online-only ("not fully supported" reads as "partly works").
+    'Alexa', '一鍵控制全家', '一句話就能控制全家', '透過 Matter 網關接入', '已整合 HomeKit',
+    '無法完全支援', 'not yet fully supported',
   ]
   for (const phrase of banned) {
     it(`does not contain "${phrase}"`, () => {
@@ -62,5 +75,30 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     for (const f of faqs as any[]) {
       if (f.answer.zh.includes('門鎖')) expect(f.answer.zh, String(f.id)).toMatch(/不在.*支援|不支援|不在支援範圍/)
     }
+  })
+  it('the offline answer is split by device type (Tuya-paired vs MEDOLE / enGo-native), per the 2026-09-11 code check', () => {
+    const zh = (kb as any).general.find((e: any) => e.id === 'network-required').answer.zh as string
+    expect(zh).toMatch(/Tuya/)
+    expect(zh).toMatch(/米多力.*仍需連網/)
+    expect(zh).toMatch(/情境（一鍵模式）目前需要連網/)
+    const faq6 = (faqs as any[]).find((f) => f.id === 6).answer.zh as string
+    expect(faq6).toMatch(/Tuya/)
+    expect(faq6).toMatch(/米多力.*仍需連網/)
+  })
+  it('the store-listing name is enGo智管家 (verified on both stores 2026-09-15), installed name enGo智慧管家', () => {
+    for (const s of [(kb as any).general.find((e: any) => e.id === 'app-download').answer.zh, (faqs as any[]).find((f) => f.id === 30).answer.zh]) {
+      expect(s).toContain('enGo智管家')
+      expect(s).toContain('enGo智慧管家')
+    }
+  })
+  it('the /packages catalog sells no door lock and the tablet card carries no unverified hardware spec table', () => {
+    const cat = (packages as any).catalog as any[]
+    expect(cat.some((c) => /門鎖|Smart Lock|门锁/.test(JSON.stringify(c.name)))).toBe(false)
+    expect(cat.find((c) => c.id === 'tablet_t1').specs).toBeUndefined()
+  })
+  it('the product JSON-LD claims no Alexa and no whole-home one-tap control', () => {
+    const src = readFileSync(resolve(process.cwd(), 'src/utils/productSchema.ts'), 'utf-8')
+    expect(src).not.toMatch(/Alexa/)
+    expect(src).not.toMatch(/一鍵控制全家|MEDOLE/)
   })
 })

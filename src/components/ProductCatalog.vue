@@ -19,7 +19,7 @@
               <p>{{ (product.description as any)[locale] || product.description['zh'] }}</p>
             </div>
             
-            <div class="specs-section">
+            <div v-if="product.specs && Object.keys(product.specs).length" class="specs-section">
               <h3>{{ $t('product.specs') || '產品規格' }}</h3>
               
               <table class="specs-table">

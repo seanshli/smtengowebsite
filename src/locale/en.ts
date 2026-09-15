@@ -103,6 +103,7 @@ export const enLocale = {
   },
   casesTitle: 'Case Sharing',
   casesSubtitle: 'Real-world smart home transformations',
+  casesHistoryNote: 'These are records of past installations and reflect the setup and devices at that time; see the Product page for current product capabilities.',
   viewDetails: 'View Details',
   filterCategory: 'Category',
   filterCountry: 'Country',
@@ -405,7 +406,7 @@ export const enLocale = {
       yes: 'Supported',
       no: 'Not available',
       scrollHint: 'Swipe to compare all three platforms →',
-      footnote: 'The enGo HMS app is available on the App Store and Google Play, listed as enGo智慧管家.'
+      footnote: 'The enGo HMS app is available on the App Store and Google Play, listed as enGo智管家 (it appears as enGo智慧管家 once installed).'
     },
     tablet_function: {
       tag: 'Features',
