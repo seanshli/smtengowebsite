@@ -436,23 +436,14 @@ body {
         &-stores {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             gap: 12px;
-
-            a {
-                display: inline-block;
-                padding: 8px 18px;
-                border: 1px solid $gold;
-                color: $gold;
-                font-weight: 700;
-                letter-spacing: 0.06em;
-                text-decoration: none;
-
-                &:hover,
-                &:focus-visible {
-                    background: $gold;
-                    color: $grey-blue3;
-                }
-            }
+            a { display: inline-flex; line-height: 0; border: 0; padding: 0; background: none; }
+            img { display: block; width: auto; }
+            .badge-apple { height: 40px; }
+            // Google's generic badge ships with transparent padding (~20%); oversize it so the
+            // visible badge matches the Apple one, and pull the padding back with margins.
+            .badge-google { height: 60px; margin: -10px -14px; }
         }
 
         // §3.2 phone shots (#6 iPhone, #7 Android). Only #7 exists today, so a

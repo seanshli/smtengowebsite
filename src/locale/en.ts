@@ -406,7 +406,7 @@ export const enLocale = {
       yes: 'Supported',
       no: 'Not available',
       scrollHint: 'Swipe to compare all three platforms →',
-      footnote: 'The enGo HMS app is available on the App Store and Google Play, listed as enGo智管家 (it appears as enGo智慧管家 once installed).'
+      footnote: 'The enGo HMS app is free on Google Play and the App Store, listed as enGo智慧管家 (the App Store page shows it as engo智管家).'
     },
     tablet_function: {
       tag: 'Features',

@@ -286,7 +286,7 @@ export const jaLocale = {
             yes: '対応',
             no: '非対応',
             scrollHint: '左右にスワイプして他のプラットフォームを表示 →',
-            footnote: 'スマホアプリは App Store と Google Play で「enGo智管家」として公開されています（インストール後は「enGo智慧管家」と表示）。'
+            footnote: 'スマホアプリ「enGo智慧管家」は Google Play と App Store から無料でダウンロードできます（App Store では「engo智管家」と表示）。'
         },
         tablet_function: {
             tag: '機能紹介',
