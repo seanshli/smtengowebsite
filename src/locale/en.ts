@@ -51,7 +51,7 @@ export const enLocale = {
     default: {
       title: 'enGo Smart Home - Leading AIot Solutions',
       description: 'enGo integrates AI with light, air, water, and food to create a healthier, smarter home life.',
-      keywords: 'enGo, Smart Home, AIot, Water Purifier, Air Purifier, Home Automation'
+      keywords: 'enGo, Smart Home, AIot, Water Purifier, Home Automation'
     },
     home: {
       title: 'Home | enGo Smart Home - Leading AIot Solutions',
@@ -162,7 +162,7 @@ export const enLocale = {
     brandStoryTitle: 'The enGo Story',
     intextLogo: 'Technology should belong to every home',
     paragraph1:
-      'Every morning, before you even get out of bed, <font color="e05a35">enGo has already opened your curtains, adjusted the lights, and started the air purifier.</font> Not because you set an alarm — but because it learned your rhythm. That\'s enGo — short for "<font color="e05a35">Energy Go</font>" — making energy flow smarter so technology truly becomes part of your home. We started with a simple belief: a better quality of life shouldn\'t be a luxury. Whether it\'s air, water, lighting, or your daily energy habits, enGo uses AI to understand what you need — and stays one step ahead to create a comfortable, safe, and energy-efficient home.',
+      'Every morning, before you even get out of bed, <font color="e05a35">enGo has already opened your curtains, adjusted the lights, and set the air conditioning.</font> Not because you set an alarm — but because it learned your rhythm. That\'s enGo — short for "<font color="e05a35">Energy Go</font>" — making energy flow smarter so technology truly becomes part of your home. We started with a simple belief: a better quality of life shouldn\'t be a luxury. Whether it\'s air, water, lighting, or your daily energy habits, enGo uses AI to understand what you need — and stays one step ahead to create a comfortable, safe, and energy-efficient home.',
     paragraph2:
       'As our society ages, we see technology\'s most human side. <font color="e05a35">enGo isn\'t just a smart home guardian — it\'s a caring companion for senior living.</font> Large-font interfaces, voice control, and automated scenes make daily life effortless for elderly users, while remote monitoring and real-time alerts give their families peace of mind from anywhere.',
     paragraph3:
@@ -245,16 +245,9 @@ export const enLocale = {
   name: 'Name',
   chatbotTitle: 'enGo Assistant',
   brandName: 'enGo Smart Home',
-  voucherTitle: 'EAP-01 Air Purifier | Limited-time exclusive discount code',
-  voucherRequesting: 'You are requesting an EAP-01 discount code. Fill in your contact details below and we will email your code within 1–2 working days.',
-  voucherIntro1: 'Interested in the EAP-01? Fill in the form below and choose ',
-  voucherIntroPath: 'Product → Air Purifier',
-  voucherIntro2: ' under "What I\'d like to know about", and we will email your exclusive code within 1–2 working days.',
-  voucherCta: 'See the EAP-01 →',
   reviewNamePlaceholder: 'Your name',
   reviewCommentPlaceholder: 'Your feedback...',
   reviewThanks: 'Thank you for your review!',
-  voucherPrefillMessage: 'I would like to request the exclusive discount code for the EAP-01 air purifier. Please send it to the email address above. Thank you!',
   brandJournal: 'enGo LIVING JOURNAL',
   email: 'E-mail',
   phone: 'Phone',
@@ -281,16 +274,13 @@ export const enLocale = {
   messagetypePlaceholder: 'Select a product',
   msgType1: 'enGo intlligent system',
   msgType2: 'water filter',
-  msgType3: 'enGo Air filter',
 
   planItems: [
     { id: 1, name: 'Purchase: Water Filter' },
-    { id: 2, name: 'Purchase: Air Purifier' },
     { id: 3, name: 'Purchase: Water Filter Cartridge' },
-    { id: 4, name: 'Purchase: Air Purifier Filter' },
-    { id: 5, name: 'Purchase: enGo Hub + Water Filter + Air Purifier' },
-    { id: 6, name: 'Lease: enGo Hub + Water Filter (12 months)' },
-    { id: 7, name: 'Lease: enGo Hub + Water Filter + Air Purifier (12 months)' }
+    { id: 5, name: 'Purchase: enGo Hub + Water Filter' },
+    { id: 6, name: 'Lease: enGo Hub + Water Filter (12 months)' }
+    
   ],
   plan: 'Plan',
   planPlaceholder: 'Select a plan',
@@ -320,54 +310,6 @@ export const enLocale = {
   backToHome: 'Return to Homepage',
 
   product: {
-    air_purifier: {
-      tag: 'Air Purifier',
-      title: 'Smart Air Purifier Series',
-      desc: 'HEPA 13 medical grade filtration effectively removes PM2.5, formaldehyde, and bacteria.',
-      headline: 'One device, four essentials — for every breath at home',
-      subHeadline: 'Air purification × SoundBox × Wireless charging × Aroma diffuser',
-      modelLabel: 'Model',
-      modelBlack: 'EAP-01B Stylish Black',
-      modelWhite: 'EAP-01W Minimalist White',
-      features: {
-        filter: {
-          title: 'Triple-layer filtration',
-          desc: 'HEPA12 + NIH1 + Silver Ionizer — captures PM2.5, bacteria, and odors in one pass'
-        },
-        sound: {
-          title: 'SoundBox Bluetooth speaker',
-          desc: 'Built-in premium Bluetooth speaker — purify the air while you enjoy music'
-        },
-        charge: {
-          title: 'Qi wireless charging',
-          desc: 'Top-panel wireless charger — drop your phone, it starts charging'
-        },
-        aroma: {
-          title: 'Aroma diffuser',
-          desc: 'Use proprietary essential oils to release calming scent as air is purified'
-        }
-      },
-      specs: {
-        title: 'Specs',
-        filterLifeLabel: 'Filter life',
-        filterLifeValue: '3–6 months (depending on air quality)',
-        certLabel: 'Certification',
-        certValue: 'NCC · BSMI',
-        coverageLabel: 'Coverage',
-        coverageValue: '8–10 ping (≈26–33 m²)',
-        noiseLabel: 'Max noise',
-        noiseValue: '< 61 dB'
-      },
-      price: {
-        tag: 'Presale offer',
-        msrpLabel: 'MSRP',
-        msrp: 'NT$12,800',
-        promo: 'NT$8,960',
-        bonus: 'Includes one bonus filter set',
-        btn: 'Buy now',
-        presaleNote: 'Presale item. If the minimum production threshold is not reached, enGo reserves the right to cancel the presale and issue a full refund within 30 days of cancellation.'
-      }
-    },
     tablet_intro: {
       title: 'The All-in-One AI Home Manager',
       tagline: 'Everything at home, everything in your community — on one wall.',
@@ -508,14 +450,17 @@ export const enLocale = {
     no_match: "Sorry, I'm not certain about that one — a specialist can answer it properly. Call 02-27510218 (Mon–Fri 09:00–18:00) or reach our live support via LINE.",
     line_handoff: 'Contact via LINE',
     replies: {
-      product: 'Product Info',
+      product: 'What is enGo',
+      app: 'Get the app',
+      devices: 'Supported devices',
+      voice: 'Voice control',
+      offline: 'Works offline?',
+      water: 'Water system',
       tutorial: 'Tutorials',
-      water: 'Water System',
-      air: 'Air Purifier',
-      contact: 'Contact Us',
-      purchase: 'How to Buy',
-      showroom: 'Showroom Visit',
-      pricing: 'Pricing & Plans'
+      showroom: 'Showroom visit',
+      contact: 'Contact us',
+      purchase: 'How to buy',
+      pricing: 'Pricing & plans'
     },
     answers: {
       product: 'Our AI Smart Hub integrates home appliances, security, and water filtration. Visit our Product page for details.',

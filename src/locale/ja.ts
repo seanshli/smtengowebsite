@@ -51,7 +51,7 @@ export const jaLocale = {
         default: {
             title: 'enGoスマートホーム - 次世代AIotソリューション',
             description: 'enGoはAIを活用し、日光、空気、水、食をスマートに統合。より健康で安心なスマートライフを実現します。',
-            keywords: 'enGo, スマートホーム, AIot, 浄水器, 空気清浄機, ホームオートメーション'
+            keywords: 'enGo, スマートホーム, AIot, 浄水器, ホームオートメーション'
         },
         home: {
             title: 'ホーム | enGoスマートホーム - 次世代AIotソリューション',
@@ -165,7 +165,7 @@ export const jaLocale = {
         brandStoryTitle: 'enGoのストーリー',
         intextLogo: 'テクノロジーは、すべての家庭のために',
         paragraph1:
-            '毎朝、あなたがまだベッドにいる間に、<font color="e05a35">enGoはすでにカーテンを開け、照明を調整し、空気清浄機を起動しています。</font>アラームを設定したからではありません — あなたの生活リズムを学んだからです。これがenGo — 「<font color="e05a35">Energy Go</font>」から生まれた名前 — エネルギーをスマートに流し、テクノロジーを本当に家の一部にします。私たちはシンプルな信念から始めました：より良い生活は、贅沢であるべきではない。空気、水、照明、日々のエネルギー習慣。enGoのAIがあなたのニーズを理解し、一歩先を行く快適で安全、省エネな住まいを実現します。',
+            '毎朝、あなたがまだベッドにいる間に、<font color="e05a35">enGoはすでにカーテンを開け、照明を調整し、空調を調整しています。</font>アラームを設定したからではありません — あなたの生活リズムを学んだからです。これがenGo — 「<font color="e05a35">Energy Go</font>」から生まれた名前 — エネルギーをスマートに流し、テクノロジーを本当に家の一部にします。私たちはシンプルな信念から始めました：より良い生活は、贅沢であるべきではない。空気、水、照明、日々のエネルギー習慣。enGoのAIがあなたのニーズを理解し、一歩先を行く快適で安全、省エネな住まいを実現します。',
         paragraph2:
             '高齢化社会を迎え、私たちはテクノロジーの最も人間的な側面を見出しました。<font color="e05a35">enGoはスマートホームの守護者であるだけでなく、シニアライフの心強いパートナーです。</font>大きな文字のインターフェース、音声操作、自動シーンで毎日を楽に。遠隔モニタリングとリアルタイム通知で、離れて暮らすご家族も安心です。',
         paragraph3:
@@ -374,53 +374,6 @@ export const jaLocale = {
             title: '先行予約割引',
             desc: '*パネル、浄水システム、3年分フィルター、設置費用込み'
         },
-        air_purifier: {
-            tag: '空気清浄機',
-            title: 'スマート空気清浄機シリーズ',
-            headline: '一台四役、家族の一呼吸を守る',
-            subHeadline: '空気清浄 × SoundBox × ワイヤレス充電 × アロマディフューザー',
-            modelLabel: 'モデル',
-            modelBlack: 'EAP-01B スタイリッシュブラック',
-            modelWhite: 'EAP-01W ミニマルホワイト',
-            features: {
-                filter: {
-                    title: '三層フィルター浄化',
-                    desc: 'HEPA12 + NIH1 + シルバーイオン — PM2.5・細菌・匂いを一度に除去'
-                },
-                sound: {
-                    title: 'SoundBox Bluetoothスピーカー',
-                    desc: '高音質Bluetoothスピーカー内蔵。浄化しながら音楽を楽しめます'
-                },
-                charge: {
-                    title: 'Qi ワイヤレス充電',
-                    desc: '天面に置くだけで充電開始。スマホを置けば充電スタート'
-                },
-                aroma: {
-                    title: 'アロマディフューザー',
-                    desc: '専用エッセンシャルオイルで、清浄しながら癒しの香りを放出'
-                }
-            },
-            specs: {
-                title: '仕様',
-                filterLifeLabel: 'フィルター寿命',
-                filterLifeValue: '3〜6ヶ月（空気品質により異なる）',
-                certLabel: '認証',
-                certValue: 'NCC · BSMI',
-                coverageLabel: '適用畳数',
-                coverageValue: '8〜10坪（約26〜33㎡）',
-                noiseLabel: '最大騒音',
-                noiseValue: '< 61 dB'
-            },
-            price: {
-                tag: '予約販売',
-                msrpLabel: '希望小売価格',
-                msrp: 'NT$12,800',
-                promo: 'NT$8,960',
-                bonus: '純正フィルター1セットプレゼント',
-                btn: '今すぐ購入',
-                presaleNote: '予約販売商品。最低生産数に達しない場合、当社は予約販売をキャンセルし、キャンセル後30日以内に全額返金する権利を留保します。'
-            }
-        },
         reviews: {
             title: 'カスタマーレビュー',
             add: 'レビューを書く',
@@ -479,16 +432,9 @@ export const jaLocale = {
     name: 'お名前',
     chatbotTitle: 'enGo アシスタント',
     brandName: 'enGo スマートホーム',
-    voucherTitle: 'EAP-01 空気清浄機｜期間限定の特別割引コード',
-    voucherRequesting: 'EAP-01 の割引コードを申請しています。以下の連絡先をご記入ください。1〜2 営業日以内にメールでお送りします。',
-    voucherIntro1: 'EAP-01 にご興味がありますか？下記のフォームで「知りたいこと」に',
-    voucherIntroPath: '製品 → 空気清浄機',
-    voucherIntro2: 'をお選びください。1〜2 営業日以内に特別割引コードをメールでお送りします。',
-    voucherCta: 'EAP-01 を見る →',
     reviewNamePlaceholder: 'お名前',
     reviewCommentPlaceholder: 'ご意見をお聞かせください...',
     reviewThanks: 'ご評価ありがとうございます！',
-    voucherPrefillMessage: 'EAP-01 空気清浄機の特別割引コードを申請します。上記のメールアドレスへお送りください。よろしくお願いいたします。',
     brandJournal: 'enGo 暮らしの誌',
     email: 'メールアドレス',
     phone: '電話番号',
@@ -515,16 +461,13 @@ export const jaLocale = {
     messagetypePlaceholder: '製品を選択',
     msgType1: 'AIスマートコントロールパネル',
     msgType2: 'AIスマート浄水器',
-    msgType3: 'AIスマート空気清浄機',
 
     planItems: [
         { id: 1, name: '購入：浄水フィルター' },
-        { id: 2, name: '購入：空気清浄機' },
         { id: 3, name: '購入：浄水フィルターカートリッジ' },
-        { id: 4, name: '購入：空気清浄機フィルター' },
-        { id: 5, name: '購入：enGo Hub＋浄水フィルター＋空気清浄機' },
-        { id: 6, name: 'レンタル：enGo Hub＋浄水フィルター（12ヶ月）' },
-        { id: 7, name: 'レンタル：enGo Hub＋浄水フィルター＋空気清浄機（12ヶ月）' }
+        { id: 5, name: '購入：enGo Hub＋浄水フィルター' },
+        { id: 6, name: 'レンタル：enGo Hub＋浄水フィルター（12ヶ月）' }
+        
     ],
     plan: 'プラン',
     planPlaceholder: 'プランを選択',
@@ -591,11 +534,16 @@ export const jaLocale = {
         no_match: '申し訳ありません、この質問には確実にお答えできません。担当者にご確認いただくのが確実です。02-27510218（月〜金 09:00–18:00）へお電話いただくか、LINE でお問い合わせください。',
         line_handoff: 'LINEで問い合わせる',
         replies: {
-            product: '製品情報',
+            product: 'enGo とは',
+            app: 'アプリ入手',
+            devices: '対応機器',
+            voice: '音声操作',
+            offline: 'オフライン時は？',
+            water: '浄水システム',
             tutorial: '使い方',
+            showroom: '展示場予約',
             contact: 'お問い合わせ',
             purchase: '購入方法',
-            showroom: '展示場予約',
             pricing: '料金プラン'
         },
         answers: {

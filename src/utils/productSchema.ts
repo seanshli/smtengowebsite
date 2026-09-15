@@ -2,14 +2,12 @@
  * Product JSON-LD schema injection for SEO rich results.
  *
  * Injects schema.org/Product structured data into <head> for each of enGo's
- * three products: AI Smart Hub tablet, 水維氧 water purifier, and the
- * EAP-01 air purifier. Schemas are re-injected on locale change so content
+ * two products: the AI home-control tablet and the 水維氧 water system.
+ * Schemas are re-injected on locale change so content
  * stays in sync with the visible language.
  *
  * Used by src/views/product.vue via onMounted + watch(locale) lifecycle.
  */
-
-import { SHOW_AIR_PURIFIER } from '@/configs/systemConfig'
 
 type Locale = 'zh' | 'zhCN' | 'en' | 'fr' | 'ja' | 'es'
 
@@ -86,30 +84,8 @@ const PRODUCTS: ProductDef[] = [
       ja: '電子水バルブ、貯水タンクレス設計、三重フィルター、BSMI商品検査とSGS水質検査認証済み。',
       es: 'Válvula de agua electrónica sin tanque, triple filtración, certificada por BSMI y pruebas de calidad de agua SGS.'
     }
-  },
-  {
-    id: 'air-purifier',
-    sku: 'EAP-01',
-    anchor: 'oxygen1',
-    image: `${BASE_URL}/images/AirPurifier001.png`,
-    priceTWD: 8960, // presale; MSRP 12,800 TWD
-    name: {
-      zh: 'enGo 智能空氣清淨機 EAP-01',
-      zhCN: 'enGo 智能空气清净机 EAP-01',
-      en: 'enGo Smart Air Purifier EAP-01',
-      fr: 'Purificateur d\'air intelligent enGo EAP-01',
-      ja: 'enGo スマート空気清浄機 EAP-01',
-      es: 'Purificador de Aire Inteligente enGo EAP-01'
-    },
-    description: {
-      zh: '一機四用：HEPA12 + NIH1 + 銀離子三重濾網、SoundBox 藍牙音響、Qi 無線充電、香氛擴香。適用 8–10 坪，最大噪音 < 61dB，NCC / BSMI 認證。',
-      zhCN: '一机四用：HEPA12 + NIH1 + 银离子三重滤网、SoundBox 蓝牙音响、Qi 无线充电、香氛扩香。适用 8–10 坪，最大噪音 < 61dB，NCC / BSMI 认证。',
-      en: 'Four essentials in one: HEPA12 + NIH1 + Silver Ionizer triple filter, SoundBox Bluetooth speaker, Qi wireless charging, and aroma diffuser. Coverage 8–10 ping, max noise <61dB, NCC/BSMI certified.',
-      fr: 'Quatre essentiels en un : Filtre triple HEPA12 + NIH1 + Ioniseur d\'argent, enceinte Bluetooth SoundBox, recharge sans fil Qi, diffuseur d\'arôme. Couverture 8–10 ping, bruit max <61dB, certifié NCC/BSMI.',
-      ja: '一台四役：HEPA12 + NIH1 + シルバーイオン三層フィルター、SoundBox Bluetoothスピーカー、Qiワイヤレス充電、アロマディフューザー。適用畳数 8〜10坪、最大騒音 <61dB、NCC/BSMI認証。',
-      es: 'Cuatro esenciales en uno: Filtro triple HEPA12 + NIH1 + Ionizador de Plata, altavoz Bluetooth SoundBox, carga inalámbrica Qi y difusor de aroma. Cobertura 8–10 ping, ruido máx. <61dB, certificado NCC/BSMI.'
-    }
   }
+
 ]
 
 function buildSchema(product: ProductDef, locale: Locale): object {
@@ -154,11 +130,7 @@ export function injectProductSchemas(rawLocale: string): void {
   // when the user switches languages.
   cleanupProductSchemas()
 
-  // ponytail: skip schema for products currently hidden from the site, so we
-  // don't advertise a product visitors can't find. See systemConfig.
-  const visible = PRODUCTS.filter((p) => p.id !== 'air-purifier' || SHOW_AIR_PURIFIER)
-
-  visible.forEach((product) => {
+  PRODUCTS.forEach((product) => {
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.setAttribute('data-schema', 'product')

@@ -898,7 +898,7 @@
       <div class="background_B">
         <div class="competitor container d-flex fd-column ai-c py-80 py-mob-0">
           <div class="tag as-fs mb-12">
-            <img src="/assets/radar.svg" alt="{{ $t('product.air_purifier.tag') }} icon" />
+            <img src="/assets/radar.svg" :alt="$t('product.competitor.tag') + ' icon'" />
             <span>
               <!-- 產品比較 -->
               {{ $t('product.competitor.tag') }}
@@ -972,7 +972,7 @@
           </div>
         </div>-->
       </div>
-      <!-- 水維氧 enGoW-601 pricing card — mirrors EAP-01 .ap-price-card pattern -->
+      <!-- 水維氧 enGoW-601 pricing card (.ap-price-card pattern) -->
       <div class="wf-price-section">
         <div class="wf-price-card">
           <div class="wf-price-flag">早鳥優惠</div>
@@ -989,163 +989,6 @@
           </button>
         </div>
       </div>
-      <!-- ponytail: EAP-01 空氣清淨機 section temporarily hidden.
-           Re-enable via SHOW_AIR_PURIFIER in src/configs/systemConfig.ts -->
-      <template v-if="SHOW_AIR_PURIFIER">
-      <div
-  id="oxygen1"
-  class="engo_products scroll-anchor px-142 px-tab-80 px-mob-36 pt-106 pb-124 pb-tab-0 pt-mob-140 pb-mob-20 pos-r"
-  aria-hidden="true"
-></div>
-        <div class="background_B">
-        <div class="competitor container d-flex fd-column ai-c py-80 py-mob-0">
-          <div class="tag as-fs mb-12">
-            <img src="/assets/radar.svg" :alt="$t('product.air_purifier.tag') + ' icon'" />
-            <span>
-              {{ $t('product.air_purifier.tag') }}
-            </span>
-          </div>
-
-          <!-- Title + headline block -->
-          <h2 class="text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fz-mob-30 lh-mob-40 fw-700 tac">
-            {{ $t('product.air_purifier.title') }}
-          </h2>
-          <h3 class="text-gold fz-28 lh-38 fz-mob-18 lh-mob-24 fw-500 tac mt-12 mb-8">
-            {{ $t('product.air_purifier.headline') }}
-          </h3>
-          <p class="text-white fz-18 lh-26 fz-mob-14 lh-mob-20 tac op-80 mb-24">
-            {{ $t('product.air_purifier.subHeadline') }}
-          </p>
-          <div class="ap-model-row text-white fz-14 fw-500 mb-40">
-            <span class="ap-model-label">{{ $t('product.air_purifier.modelLabel') }}：</span>
-            <span class="ap-model-pill">{{ $t('product.air_purifier.modelBlack') }}</span>
-            <span class="ap-model-pill">{{ $t('product.air_purifier.modelWhite') }}</span>
-          </div>
-
-          <!-- 4-feature grid -->
-          <div class="ap-features-grid">
-            <div class="ap-feature-card">
-              <div class="ap-feature-num">01</div>
-              <h4>{{ $t('product.air_purifier.features.filter.title') }}</h4>
-              <p>{{ $t('product.air_purifier.features.filter.desc') }}</p>
-            </div>
-            <div class="ap-feature-card">
-              <div class="ap-feature-num">02</div>
-              <h4>{{ $t('product.air_purifier.features.sound.title') }}</h4>
-              <p>{{ $t('product.air_purifier.features.sound.desc') }}</p>
-            </div>
-            <div class="ap-feature-card">
-              <div class="ap-feature-num">03</div>
-              <h4>{{ $t('product.air_purifier.features.charge.title') }}</h4>
-              <p>{{ $t('product.air_purifier.features.charge.desc') }}</p>
-            </div>
-            <div class="ap-feature-card">
-              <div class="ap-feature-num">04</div>
-              <h4>{{ $t('product.air_purifier.features.aroma.title') }}</h4>
-              <p>{{ $t('product.air_purifier.features.aroma.desc') }}</p>
-            </div>
-          </div>
-
-          <!-- Specs strip -->
-          <div class="ap-specs-strip">
-            <div class="ap-spec-cell">
-              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.filterLifeLabel') }}</div>
-              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.filterLifeValue') }}</div>
-            </div>
-            <div class="ap-spec-cell">
-              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.certLabel') }}</div>
-              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.certValue') }}</div>
-            </div>
-            <div class="ap-spec-cell">
-              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.coverageLabel') }}</div>
-              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.coverageValue') }}</div>
-            </div>
-            <div class="ap-spec-cell">
-              <div class="ap-spec-label">{{ $t('product.air_purifier.specs.noiseLabel') }}</div>
-              <div class="ap-spec-value">{{ $t('product.air_purifier.specs.noiseValue') }}</div>
-            </div>
-          </div>
-
-          <!-- Price + CTA block -->
-          <div class="ap-price-card">
-            <div class="ap-price-flag">{{ $t('product.air_purifier.price.tag') }}</div>
-            <div class="ap-price-amounts">
-              <span class="ap-price-msrp">
-                <span class="ap-price-msrp-label">{{ $t('product.air_purifier.price.msrpLabel') }}</span>
-                <s>{{ $t('product.air_purifier.price.msrp') }}</s>
-              </span>
-              <span class="ap-price-promo">{{ $t('product.air_purifier.price.promo') }}</span>
-            </div>
-            <div class="ap-price-bonus">★ {{ $t('product.air_purifier.price.bonus') }}</div>
-            <button class="ap-buy-btn" @click="buyAirPurifier">
-              立即至嘖嘖預訂 →
-            </button>
-            <div class="ap-voucher-offer">
-              💌 提供聯絡資料即可獲得獨家折扣碼
-              <a href="/contact?topic=eap01_voucher" class="ap-voucher-link">立即索取 →</a>
-            </div>
-            <div class="ap-price-presale-note">
-              {{ $t('product.air_purifier.price.presaleNote') }}
-            </div>
-          </div>
-
-          <div class="competitor_img d-mob-none">
-            <img src="/images/AirPurifier001.png" alt="" />
-            <img src="/images/AirPurifier002.png" alt="" />
-            <img src="/images/AirPurifier003.png" alt="" />
-            <img src="/images/AirPurifier004.png" alt="" />
-            <img src="/images/AirPurifier005.png" alt="" />
-            <img src="/images/AirPurifier006.png" alt="" />
-            <img src="/images/AirPurifier007.png" alt="" />
-            <img src="/images/AirPurifier008.png" alt="" />
-          </div>
-          <div class="competitor_img d-none d-mob-block">
-            <swiper
-              :slidesPerView="1"
-              :spaceBetween="30"
-              :loop="true"
-              :pagination="{
-                clickable: true
-              }"
-              :navigation="true"
-              :modules="modules"
-              class="d-none d-mob-block"
-              :style="{
-                '--swiper-navigation-color': '#333',
-                '--swiper-pagination-color': '#fff',
-                '--swiper-navigation-size': '15px'
-              }"
-              :lazy="true"
-            >
-              <swiper-slide>
-                <img src="/images/AirPurifier001.png" alt="空氣清淨機" />
-              </swiper-slide>
-               <swiper-slide>
-                <img src="/images/AirPurifier002.png" alt="空氣清淨機" />
-              </swiper-slide>
-              <swiper-slide>
-                <img src="/images/AirPurifier003.png" alt="空氣清淨機" />
-              </swiper-slide> 
-              <swiper-slide>
-                <img src="/images/AirPurifier004.png" alt="空氣清淨機" />
-              </swiper-slide>
-              <swiper-slide>
-                <img src="/images/AirPurifier005.png" alt="空氣清淨機" />
-              </swiper-slide>
-              <swiper-slide>
-                <img src="/images/AirPurifier006.png" alt="空氣清淨機" />
-              </swiper-slide>
-              <swiper-slide>
-                <img src="/images/AirPurifier007.png" alt="空氣清淨機" />
-              </swiper-slide>
-              <swiper-slide>
-                <img src="/images/AirPurifier008.png" alt="空氣清淨機" />
-              </swiper-slide>
-            </swiper>
-          </div>
-        </div>
-      </div>
-      </template>
     </div>
 
     <CatalogMenu
@@ -1177,7 +1020,6 @@ import { useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 import { injectProductSchemas, cleanupProductSchemas } from '@/utils/productSchema'
 import { useI18n } from 'vue-i18n'
-import { SHOW_AIR_PURIFIER } from '@/configs/systemConfig'
 
 export default defineComponent({
   name: 'Product',
@@ -1287,23 +1129,7 @@ export default defineComponent({
       window.open('https://h5.smtengo.com/pages/item/espier-detail?id=428&dtid=0')
     }
 
-    const buyAirPurifier = () => {
-      trackEvent('buy_now_click', {
-        product_id: '352',
-        product_name: 'engo_air_purifier',
-        product_category: 'air_purifier_zeczec',
-        product_sku: 'EAP-01',
-        price_twd: 8960,
-        locale: locale.value,
-        platform: 'zeczec'
-      })
-      // EAP-01 presale runs on 嘖嘖 (zeczec) crowdfunding platform.
-      // Smtengo direct buy via h5.smtengo.com/?id=352 is intentionally bypassed —
-      // all traffic should funnel through 嘖嘖 during the presale window.
-      window.open('https://www.zeczec.com/projects/enGo-Smart-Manager-AI-AirPurifier', '_blank', 'noopener')
-    }
-
-    const targetExpand = ref(false)
+const targetExpand = ref(false)
     const expandImg = () => {
       targetExpand.value = true
     }
@@ -1370,9 +1196,8 @@ export default defineComponent({
       openCatalogMenu,
       closeCatalogMenu,
       selectCatalogProduct,
-      closeCatalog,
-      buyAirPurifier,
-      SHOW_AIR_PURIFIER
+      closeCatalog
+      
     }
   }
 })

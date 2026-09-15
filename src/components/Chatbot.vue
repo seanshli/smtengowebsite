@@ -115,13 +115,18 @@ watch(locale, () => {
   }
 })
 
+// Quick questions: what KB-001 says customers actually ask (what enGo is, the app,
+// devices, voice, offline), then the water line, tutorials, showroom, contact, pricing.
 const quickReplyKeys = [
   'chatbot.replies.product',
+  'chatbot.replies.app',
+  'chatbot.replies.devices',
+  'chatbot.replies.voice',
+  'chatbot.replies.offline',
   'chatbot.replies.water',
-  'chatbot.replies.air',
   'chatbot.replies.tutorial',
-  'chatbot.replies.contact',
   'chatbot.replies.showroom',
+  'chatbot.replies.contact',
   'chatbot.replies.pricing'
 ]
 

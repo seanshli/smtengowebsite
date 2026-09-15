@@ -18,7 +18,6 @@
             <p class="ft-col-title">{{ $t('footer.product') }}</p>
             <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
             <span class="ft-link" @click="jumpToProduct">{{ $t('footer.secondLink') }}</span>
-            <span v-if="SHOW_AIR_PURIFIER" class="ft-link" @click="jumpToProduct1">{{ $t('product.air_purifier.title') }}</span>
             <router-link to="/enviro">{{ $t('enviroTitle') }}</router-link>
             <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
           </div>
@@ -79,7 +78,6 @@
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { SHOW_AIR_PURIFIER } from '../configs/systemConfig'
 
 export default defineComponent({
   name: 'Footer',
@@ -107,7 +105,7 @@ export default defineComponent({
       router.push({ name: 'product', query: { jump: 'oxygen1' } })
     }
 
-    return { isZh, copyright, jumpToProduct, jumpToProduct1, SHOW_AIR_PURIFIER, legalDoc }
+    return { isZh, copyright, jumpToProduct, jumpToProduct1, legalDoc }
   }
 })
 </script>

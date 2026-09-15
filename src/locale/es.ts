@@ -51,7 +51,7 @@ export const esLocale = {
     default: {
       title: 'enGo Hogar Inteligente - Soluciones AIot Líderes',
       description: 'enGo integra AI con luz, aire, agua y alimentos para crear una vida del hogar más saludable e inteligente.',
-      keywords: 'enGo, Hogar Inteligente, AIot, Purificador de Agua, Purificador de Aire, Automatización del Hogar'
+      keywords: 'enGo, Hogar Inteligente, AIot, Purificador de Agua, Automatización del Hogar'
     },
     home: {
       title: 'Inicio | enGo Hogar Inteligente - Soluciones AIot Líderes',
@@ -162,7 +162,7 @@ export const esLocale = {
     brandStoryTitle: 'La historia de enGo',
     intextLogo: 'La tecnología debe pertenecer a cada hogar',
     paragraph1:
-      'Cada mañana, antes de que salgas de la cama, <font color="e05a35">enGo ya abrió tus cortinas, ajustó las luces e inició el purificador de aire.</font> No porque programaste una alarma — sino porque aprendió tu ritmo. Eso es enGo — de "<font color="e05a35">Energy Go</font>" — haciendo que la energía fluya de forma más inteligente para que la tecnología sea verdaderamente parte de tu hogar. Empezamos con una creencia simple: una mejor calidad de vida no debería ser un lujo. Ya sea el aire, el agua, la iluminación o tus hábitos de energía diarios, enGo usa IA para entender lo que necesitas — y se adelanta un paso para crear un hogar cómodo, seguro y eficiente.',
+      'Cada mañana, antes de que salgas de la cama, <font color="e05a35">enGo ya abrió tus cortinas, ajustó las luces y ajustó el aire acondicionado.</font> No porque programaste una alarma — sino porque aprendió tu ritmo. Eso es enGo — de "<font color="e05a35">Energy Go</font>" — haciendo que la energía fluya de forma más inteligente para que la tecnología sea verdaderamente parte de tu hogar. Empezamos con una creencia simple: una mejor calidad de vida no debería ser un lujo. Ya sea el aire, el agua, la iluminación o tus hábitos de energía diarios, enGo usa IA para entender lo que necesitas — y se adelanta un paso para crear un hogar cómodo, seguro y eficiente.',
     paragraph2:
       'A medida que nuestra sociedad envejece, vemos el lado más humano de la tecnología. <font color="e05a35">enGo no es solo un guardián del hogar inteligente — es un compañero atento para la vida de los adultos mayores.</font> Interfaces con texto grande, control por voz y escenas automatizadas hacen que la vida diaria sea fácil para los mayores, mientras que el monitoreo remoto y las alertas en tiempo real dan tranquilidad a sus familias desde cualquier lugar.',
     paragraph3:
@@ -245,16 +245,9 @@ export const esLocale = {
   name: 'Nombre',
   chatbotTitle: 'Asistente enGo',
   brandName: 'enGo Smart Home',
-  voucherTitle: 'Purificador de aire EAP-01 | Código de descuento exclusivo por tiempo limitado',
-  voucherRequesting: 'Estás solicitando un código de descuento EAP-01. Completa tus datos de contacto y te lo enviaremos por correo en 1–2 días hábiles.',
-  voucherIntro1: '¿Te interesa el EAP-01? Completa el formulario y elige ',
-  voucherIntroPath: 'Producto → Purificador de aire',
-  voucherIntro2: ' en «Lo que quiero saber»; te enviaremos tu código exclusivo por correo en 1–2 días hábiles.',
-  voucherCta: 'Ver el EAP-01 →',
   reviewNamePlaceholder: 'Tu nombre',
   reviewCommentPlaceholder: 'Tu opinión...',
   reviewThanks: '¡Gracias por tu opinión!',
-  voucherPrefillMessage: 'Quiero solicitar el código de descuento exclusivo del purificador de aire EAP-01. Envíalo al correo indicado arriba. ¡Gracias!',
   brandJournal: 'EL DIARIO enGo',
   email: 'Correo Electrónico',
   phone: 'Teléfono',
@@ -281,16 +274,13 @@ export const esLocale = {
   messagetypePlaceholder: 'Seleccionar un producto',
   msgType1: 'Sistema inteligente enGo',
   msgType2: 'Filtro de agua',
-  msgType3: 'Filtro de aire enGo',
 
   planItems: [
     { id: 1, name: 'Comprar: Filtro de Agua' },
-    { id: 2, name: 'Comprar: Purificador de Aire' },
     { id: 3, name: 'Comprar: Cartucho de Filtro de Agua' },
-    { id: 4, name: 'Comprar: Filtro de Purificador de Aire' },
-    { id: 5, name: 'Comprar: Centro enGo + Filtro de Agua + Purificador de Aire' },
-    { id: 6, name: 'Alquiler: Centro enGo + Filtro de Agua (12 meses)' },
-    { id: 7, name: 'Alquiler: Centro enGo + Filtro de Agua + Purificador de Aire (12 meses)' }
+    { id: 5, name: 'Comprar: Centro enGo + Filtro de Agua' },
+    { id: 6, name: 'Alquiler: Centro enGo + Filtro de Agua (12 meses)' }
+    
   ],
   plan: 'Plan',
   planPlaceholder: 'Seleccionar un plan',
@@ -320,54 +310,6 @@ export const esLocale = {
   backToHome: 'Volver a la Página de Inicio',
 
   product: {
-    air_purifier: {
-      tag: 'Purificador de Aire',
-      title: 'Serie de Purificador de Aire Inteligente',
-      desc: 'Filtración de grado médico HEPA 13 que elimina efectivamente PM2.5, formaldehído y bacterias.',
-      headline: 'Un dispositivo, cuatro esenciales — para cada respiración en casa',
-      subHeadline: 'Purificación × SoundBox × Carga inalámbrica × Difusor de aroma',
-      modelLabel: 'Modelo',
-      modelBlack: 'EAP-01B Negro Elegante',
-      modelWhite: 'EAP-01W Blanco Minimalista',
-      features: {
-        filter: {
-          title: 'Filtración de triple capa',
-          desc: 'HEPA12 + NIH1 + Ionizador de plata — captura PM2.5, bacterias y olores en una pasada'
-        },
-        sound: {
-          title: 'Altavoz Bluetooth SoundBox',
-          desc: 'Altavoz Bluetooth premium incorporado — purifica el aire mientras disfrutas de la música'
-        },
-        charge: {
-          title: 'Carga inalámbrica Qi',
-          desc: 'Cargador inalámbrico en la parte superior — apoya tu teléfono y empieza a cargar'
-        },
-        aroma: {
-          title: 'Difusor de aroma',
-          desc: 'Usa aceites esenciales dedicados para liberar un aroma relajante durante la purificación'
-        }
-      },
-      specs: {
-        title: 'Especificaciones',
-        filterLifeLabel: 'Vida del filtro',
-        filterLifeValue: '3–6 meses (según la calidad del aire)',
-        certLabel: 'Certificación',
-        certValue: 'NCC · BSMI',
-        coverageLabel: 'Cobertura',
-        coverageValue: '8–10 ping (≈26–33 m²)',
-        noiseLabel: 'Ruido máx.',
-        noiseValue: '< 61 dB'
-      },
-      price: {
-        tag: 'Oferta de preventa',
-        msrpLabel: 'PVP',
-        msrp: 'NT$12.800',
-        promo: 'NT$8.960',
-        bonus: 'Incluye un juego de filtros adicional',
-        btn: 'Comprar ahora',
-        presaleNote: 'Artículo en preventa. Si no se alcanza el umbral mínimo de producción, enGo se reserva el derecho de cancelar la preventa y emitir un reembolso íntegro en un plazo de 30 días tras la cancelación.'
-      }
-    },
     tablet_intro: {
       title: 'Tableta Centro Inteligente AI',
       info: 'Control Central de Tu Hogar Inteligente'
@@ -462,14 +404,17 @@ export const esLocale = {
     no_match: 'Lo siento, no estoy seguro de esa respuesta; un especialista podrá ayudarte mejor. Llama al 02-27510218 (lun.–vie. 09:00–18:00) o contáctanos por LINE.',
     line_handoff: 'Contactar por LINE',
     replies: {
-      product: 'Información de Producto',
+      product: 'Qué es enGo',
+      app: 'Descargar la app',
+      devices: 'Dispositivos compatibles',
+      voice: 'Control por voz',
+      offline: '¿Sin Internet?',
+      water: 'Sistema de agua',
       tutorial: 'Tutoriales',
-      water: 'Sistema de Agua',
-      air: 'Purificador de Aire',
+      showroom: 'Visita al showroom',
       contact: 'Contáctenos',
-      purchase: 'Cómo Comprar',
-      showroom: 'Visita al Salón de Exposición',
-      pricing: 'Precios y Planes'
+      purchase: 'Cómo comprar',
+      pricing: 'Precios y planes'
     },
     answers: {
       product: 'Nuestro Centro Inteligente AI integra electrodomésticos del hogar, seguridad y filtración de agua. Visita nuestra página de Producto para más detalles.',
