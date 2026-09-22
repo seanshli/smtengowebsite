@@ -102,7 +102,7 @@ const SUN = '#FE8B05'
 const AIR = '#34c98e'
 const WATER = '#3bbeff'
 const KITCHEN = '#ff5a5a'
-const GOLD = '#C7B763'
+const GOLD = '#12B5A8'
 // Security shares the kitchen red: both are the "something needs your
 // attention" family, and red is what an alarm reads as.
 const SECURITY = KITCHEN

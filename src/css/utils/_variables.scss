@@ -14,20 +14,26 @@ $dark-grey: #5c5c5c;
 $light-blue: #3bbeff;
 $green: #179c8d;
 $yellow: #eb9f0c;
-$gold: #C7B763;
+// Palette B (design review 2026-09-22, Sean D2): the warm cream + gold set read as
+// 「鄉村／AI 預設」. Grounds are now cool porcelain, and the second accent is a
+// signal teal reserved for live / system / data emphasis. Orange stays the one
+// action colour. Token names kept so 80+ call sites did not have to change.
+$signal: #12B5A8;
+$signal-text: #0B7F77; // AA on the porcelain grounds for text under 24px
+$gold: $signal;
 $orange2: #FE8B05;
 
 // ─── Vivid Warm Accents ───
 $warm-gradient: linear-gradient(135deg, #e05a35, #FE8B05);
 $warm-gradient-soft: linear-gradient(135deg, #f8a068, #f06543);
 $blue-gradient: linear-gradient(135deg, #224274, #3bbeff);
-$sunset-gradient: linear-gradient(135deg, #e05a35, #eb9f0c, #C7B763);
+$sunset-gradient: linear-gradient(135deg, #e05a35, #eb9f0c);
 $warm-glow: rgba(224, 90, 53, 0.35);
-$gold-glow: rgba(199, 183, 99, 0.3);
+$gold-glow: rgba(18, 181, 168, 0.3);
 $blue-glow: rgba(59, 190, 255, 0.25);
-$warm-bg-light: #fefbf6;
-$warm-bg-cream: #fdf5ec;
-$warm-bg-section: #f9f3eb;
+$warm-bg-light: #F5F7FA;
+$warm-bg-cream: #EEF2F6;
+$warm-bg-section: #E9EEF4;
 $warm-shadow: 0 8px 30px rgba(34, 66, 116, 0.1);
 $warm-shadow-hover: 0 16px 50px rgba(34, 66, 116, 0.18);
 

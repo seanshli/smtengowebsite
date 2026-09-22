@@ -257,7 +257,7 @@ export default defineComponent({
 
     &.featured {
       border-color: #043655;
-      .p-card-header { background: #043655; margin: -40px -40px 30px; padding: 32px 40px 28px; border-radius: 24px 24px 0 0; .pkg-name, .pkg-usage { color: #fff; } .pkg-price { color: #C7B763; } }
+      .p-card-header { background: #043655; margin: -40px -40px 30px; padding: 32px 40px 28px; border-radius: 24px 24px 0 0; .pkg-name, .pkg-usage { color: #fff; } .pkg-price { color: #12B5A8; } }
       &:hover .p-card-header { background: #032a43; }
     }
 

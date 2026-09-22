@@ -109,12 +109,12 @@ onUnmounted(() => observer?.disconnect())
   }
 
   &:focus-visible {
-    outline: 2px solid #c7b763;
+    outline: 2px solid #12B5A8;
     outline-offset: 2px;
   }
 
   &.is-active .section-dot-mark {
-    background: #c7b763;
+    background: #12B5A8;
     transform: scale(1.5);
   }
 }
