@@ -21,7 +21,10 @@
           <div class="hm-plate hm-plate-tablet" data-float>
             <img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="eager" fetchpriority="high" />
           </div>
-          <div class="hm-plate hm-plate-phone">
+          <!-- The only phone capture is the top half of an Android home screen (1080×1130).
+               Shown at its true aspect in a frame that emerges from the section edge; a
+               tall frame with cover-fit turned it into "neither iPhone nor Android". -->
+          <div class="hm-phone hm-phone-hero">
             <img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="1130" loading="eager" />
           </div>
         </figure>
@@ -40,13 +43,19 @@
             <div class="hm-plate"><img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="lazy" /></div>
             <div class="hm-if-cap"><strong>{{ T.ifTablet }}</strong><span>{{ T.ifTabletCap }}</span></div>
           </div>
-          <div class="hm-if-item">
-            <div class="hm-plate hm-plate-tall"><img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="1130" loading="lazy" /></div>
+          <!-- No iOS capture exists yet (WEB-002: never pass an Android screen off as iPhone),
+               so this column carries the store badge instead of a screen. -->
+          <div class="hm-if-item hm-if-ios">
+            <a class="hm-store" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
+              <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" width="120" height="40" loading="lazy" />
+            </a>
             <div class="hm-if-cap"><strong>iPhone / iPad</strong><span>{{ T.ifIosCap }}</span></div>
           </div>
           <div class="hm-if-item">
-            <div class="hm-plate hm-plate-tall"><img src="/images/screens/08-announcements-phone.png" :alt="T.altAnnounce" width="1080" height="620" loading="lazy" /></div>
-            <div class="hm-if-cap"><strong>{{ T.ifAndroid }}</strong><span>{{ T.ifAndroidCap }}</span></div>
+            <div class="hm-phone-well">
+              <div class="hm-phone"><img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="1130" loading="lazy" /></div>
+            </div>
+            <div class="hm-if-cap"><strong>{{ T.ifAndroid }}</strong><span>{{ T.ifAndroidCap }}</span><a class="hm-store hm-store-inline" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play"><img src="/images/badges/google-play-en.png" alt="Get it on Google Play" height="40" loading="lazy" /></a></div>
           </div>
         </div>
         <p class="hm-if-note" data-reveal>{{ T.ifNote }}</p>
@@ -97,8 +106,8 @@
           </ul>
         </div>
         <div class="hm-bms-media" data-reveal-group>
-          <div class="hm-plate hm-plate-tall"><img src="/images/screens/08-announcements-phone.png" :alt="T.altAnnounce" width="1080" height="620" loading="lazy" /></div>
-          <router-link :to="'/cases/' + bmsCase.id" class="hm-photo" v-if="bmsCase">
+          <div class="hm-plate hm-plate-land"><img src="/images/screens/08-announcements-phone.png" :alt="T.altAnnounce" width="1080" height="620" loading="lazy" /></div>
+          <router-link :to="'/cases/' + bmsCase.id" class="hm-photo hm-photo-land" v-if="bmsCase">
             <img :src="bmsCase.image" :alt="pick(bmsCase.title)" loading="lazy" />
             <div class="hm-photo-cap"><strong>{{ pick(bmsCase.title) }}</strong><span>{{ pick(bmsCase.category) }}</span></div>
           </router-link>
@@ -288,6 +297,20 @@ $navy-2: $grey-blue2;
   img { display: block; width: 100%; height: auto; border-radius: 14px; }
 }
 .hm-plate-tall img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
+.hm-plate-land img { aspect-ratio: 1080 / 620; object-fit: cover; object-position: top; }
+
+// Phone frame open at the bottom: the capture is the top of the screen, so the frame
+// is cut by its container instead of the image being zoomed to fill a tall frame.
+.hm-phone {
+  background: $navy; border-radius: 34px 34px 0 0; padding: 12px 12px 0; box-shadow: 0 24px 60px rgba($navy, .25); overflow: hidden;
+  img { display: block; width: 100%; height: auto; border-radius: 24px 24px 0 0; }
+}
+.hm-phone-well { height: 300px; overflow: hidden; display: flex; align-items: flex-end; padding: 0 12%; position: relative;
+  &::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 40px; background: linear-gradient(180deg, rgba($warm-bg-section, 0), $warm-bg-section); pointer-events: none; }
+}
+.hm-store { display: inline-block; line-height: 0; img { height: 40px; width: auto; } }
+.hm-store-inline { margin-top: 10px; img { height: 56px; margin: -8px -12px; } }
+.hm-if-ios { justify-content: flex-end; .hm-store { padding-bottom: 8px; } }
 
 // ─── hero ────────────────────────────────────────────────────────
 .hm-hero { position: relative; overflow: hidden; padding: clamp(72px, 9vh, 104px) 0 clamp(40px, 6vw, 72px); }
@@ -315,8 +338,8 @@ $navy-2: $grey-blue2;
 .hm-hero-figure {
   position: relative; margin: 0; min-height: 440px; animation: hmReveal 1s cubic-bezier(.22,1,.36,1) .4s both;
   .hm-plate-tablet { position: absolute; right: 0; top: 10px; width: 92%; }
-  .hm-plate-phone { position: absolute; left: 0; bottom: 0; width: 30%; border-radius: 28px; padding: 7px; img { border-radius: 22px; aspect-ratio: 1 / 1.05; object-fit: cover; object-position: top; } }
-  @media (max-width: 900px) { min-height: 0; padding-top: 24px; .hm-plate-tablet { position: relative; width: 100%; top: 0; } .hm-plate-phone { position: absolute; left: 0; bottom: -18px; width: 34%; } margin-bottom: 30px; }
+  .hm-phone-hero { position: absolute; left: 0; bottom: -12px; width: 32%; }
+  @media (max-width: 900px) { min-height: 0; padding-top: 24px; .hm-plate-tablet { position: relative; width: 100%; top: 0; } .hm-phone-hero { display: none; } margin-bottom: 30px; }
 }
 
 // ─── interfaces ──────────────────────────────────────────────────
@@ -365,14 +388,16 @@ a.hm-cell-img:hover img { transform: scale(1.03); }
   list-style: none; padding: 0; margin: 22px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px;
   li { border-top: 1px solid #D8DFE8; padding-top: 10px; font-weight: 500; color: $navy; font-size: .98rem; }
 }
-.hm-bms-media { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; .hm-plate-tall img { aspect-ratio: 4 / 5.2; } }
+.hm-bms-media { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.hm-photo-land { aspect-ratio: 16 / 9; }
 .hm-photo {
   position: relative; display: block; border-radius: 20px; overflow: hidden; text-decoration: none; color: $warm-bg-light; aspect-ratio: 4 / 5;
   img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
   &:hover img { transform: scale(1.04); }
 }
 .hm-photo-cap {
-  position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 20px; display: flex; flex-direction: column; gap: 2px;
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 20px; display: flex; flex-direction: column; gap: 2px; color: #fff;
+  strong, span { color: #fff; }
   background: linear-gradient(180deg, rgba($navy, 0) 0%, rgba($navy, .9) 100%);
   strong { font-family: 'Noto Serif TC', serif; font-size: 1.15rem; line-height: 1.3; } span { font-size: .78rem; letter-spacing: .1em; opacity: .85; }
 }
