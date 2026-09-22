@@ -1,18 +1,12 @@
 <template>
   <div class="tutorial-page">
     <div class="header-section ed-mast-block">
-      <p class="ed-mast-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="page-title">{{ $t('tutorialTitle') }}</h1>
       <p class="subtitle">{{ $t('tutorialSubtitle') }}</p>
     </div>
     
     <div class="tutorial-grid">
       <div v-for="item in tutorials" :key="item.id" class="tutorial-card" @click="handleCardClick(item)">
-        <div class="card-icon">
-          <img v-if="item.id === 'individual'" src="/assets/logo.svg" alt="Individual" />
-          <img v-else-if="item.id === 'designer'" src="/assets/logo-orange.svg" alt="Designer" />
-          <img v-else src="/assets/logo.svg" alt="Builder" />
-        </div>
         <h2>{{ (item.title as any)[locale] || item.title['zh'] }}</h2>
         <p>{{ (item.description as any)[locale] || item.description['zh'] }}</p>
         <ul v-if="item.steps" class="steps">
@@ -472,6 +466,8 @@ onUnmounted(() => {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    // three personas, three weights: the owner card leads (design review 2026-09-22)
+    @media (min-width: 1024px) { grid-template-columns: 1.35fr 1fr 1fr; align-items: start; }
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 20px;
@@ -482,6 +478,9 @@ onUnmounted(() => {
     background: #fff;
     padding: 40px;
     border-radius: 20px;
+    border-top: 6px solid #e05a35;
+    &:nth-child(2) { border-top-color: #043655; }
+    &:nth-child(3) { border-top-color: #C7B763; }
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;

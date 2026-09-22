@@ -4,13 +4,12 @@
       <!-- 套裝方案 -->
       <div id="packages" class="package-section container py-100 py-mob-60">
         <header class="ed-mast-block">
-          <p class="ed-mast-kicker">{{ $t('brandJournal') }}</p>
           <h1 class="ed-mast-title">{{ $t('product.packages.tag') || '套裝方案' }}</h1>
           <p class="ed-mast-sub">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</p>
         </header>
         
         <div class="package-grid">
-          <div v-for="pkg in packages.main_packages" :key="pkg.id" class="package-card card-hover scroll-reveal">
+          <div v-for="(pkg, idx) in packages.main_packages" :key="pkg.id" class="package-card card-hover scroll-reveal" :class="{ featured: idx === 1 }">
             <div class="p-card-header">
               <h3 class="pkg-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h3>
               <p class="pkg-usage">{{ (pkg.suggested_usage as any)[locale] || pkg.suggested_usage['zh'] }}</p>
@@ -254,6 +253,12 @@ export default defineComponent({
         .spec-group ul li { color: #fff; }
       }
       .buy-pkg-btn { background: #c46043; color: #fff; }
+    }
+
+    &.featured {
+      border-color: #043655;
+      .p-card-header { background: #043655; margin: -40px -40px 30px; padding: 32px 40px 28px; border-radius: 24px 24px 0 0; .pkg-name, .pkg-usage { color: #fff; } .pkg-price { color: #C7B763; } }
+      &:hover .p-card-header { background: #032a43; }
     }
 
     .p-card-header {

@@ -2,7 +2,6 @@
   <div class="contact">
     <div class="contact_wrap">
       <div class="contact_title">
-        <p class="ed-mast-kicker">{{ $t('brandJournal') }}</p>
         <h1 class="fz-48 lh-70 fw-500">{{ $t('contactUsTitle') }}</h1>
         <p class="fz-24 lh-34 web">{{ $t('contactUsSubtitle') }}</p>
         <div class="phone container">
