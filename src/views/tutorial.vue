@@ -35,6 +35,46 @@
         </div>
       </div>
     </div>
+    <!-- ─── 操作指南（依功能模組）───
+         每個模組帶 id="howto-<模組>"，供 FAQ 與 chatbot 的 /tutorial#howto-xxx 深連結落點。
+         內容來自 src/data/howto.json，截圖為 enGo 3.2.2（489）實機擷取。 -->
+    <div id="howto" class="howto-section py-80 py-mob-40">
+      <h2 class="howto-title tac mb-12">{{ howtoHeading }}</h2>
+      <p class="howto-sub tac mb-40">{{ howtoSubheading }}</p>
+
+      <nav class="howto-nav mb-40" aria-label="module index">
+        <a v-for="m in howtoModules" :key="'nav-' + m.id" class="howto-pill" :href="'#howto-' + m.id">
+          {{ pick(m.title) }}
+        </a>
+      </nav>
+
+      <section
+        v-for="m in howtoModules"
+        :key="m.id"
+        :id="'howto-' + m.id"
+        class="howto-module"
+      >
+        <h3 class="howto-module-title">{{ pick(m.title) }}</h3>
+        <p class="howto-module-summary">{{ pick(m.summary) }}</p>
+
+        <ol class="howto-steps">
+          <li v-for="(st, i) in m.steps" :key="i" class="howto-step">
+            <h4 class="howto-step-title">{{ pick(st.title) }}</h4>
+            <p class="howto-step-body">{{ pick(st.body) }}</p>
+            <figure v-if="st.image" class="howto-shot">
+              <img :src="st.image" :alt="pick(st.title)" loading="lazy" decoding="async" />
+            </figure>
+          </li>
+        </ol>
+
+        <ul v-if="m.tips && m.tips.length" class="howto-tips">
+          <li v-for="(t, i) in m.tips" :key="'tip-' + i">{{ pick(t) }}</li>
+        </ul>
+
+        <p v-if="m.imagesPending" class="howto-pending">{{ pendingLabel }}</p>
+      </section>
+    </div>
+
     <!-- anchor target for the 常見問題 links in the header and footer -->
     <div id="faq" class="faq-section py-80 py-mob-40">
       <h2 class="faq-title tac mb-50">{{ $t('faqTitle') }}</h2>
@@ -112,6 +152,7 @@
 import tutorialsData from '@/data/tutorials.json'
 import faqsData from '@/data/faqs.json'
 import knowledgeBaseData from '@/data/knowledge_base.json'
+import howtoData from '@/data/howto.json'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
@@ -120,6 +161,36 @@ import { useRouter } from 'vue-router'
 const tutorials = ref(tutorialsData)
 const faqs = ref(faqsData as any[])
 const youtubeVideos = ref(knowledgeBaseData.youtube)
+
+// ── 操作指南（howto.json）
+// 缺語系一律落回 zh，與本頁 tutorials／FAQ 的既有做法一致。
+const howtoModules = ref((howtoData as any).modules as any[])
+const pick = (o: any) => (o ? (o[locale.value] ?? o['zh']) : '')
+const HOWTO_TEXT: Record<string, Record<string, string>> = {
+  heading: {
+    zh: '操作指南', zhCN: '操作指南', en: 'How-to Guides',
+    fr: 'Guides pratiques', ja: '操作ガイド', es: 'Guías de uso',
+  },
+  sub: {
+    zh: '依功能模組整理的圖文步驟，截圖取自 enGo 3.2.2 實機畫面。',
+    zhCN: '依功能模块整理的图文步骤，截图取自 enGo 3.2.2 实机画面。',
+    en: 'Step-by-step guides by module, with screenshots taken from enGo 3.2.2 on a real device.',
+    fr: 'Guides pas à pas par module, avec des captures réelles d\'enGo 3.2.2.',
+    ja: '機能モジュール別の手順ガイド。スクリーンショットは実機の enGo 3.2.2 から取得。',
+    es: 'Guías paso a paso por módulo, con capturas reales de enGo 3.2.2.',
+  },
+  pending: {
+    zh: '本模組的示範截圖尚未以現行版本重拍。',
+    zhCN: '本模块的示范截图尚未以现行版本重拍。',
+    en: 'Screenshots for this module have not yet been re-taken on the current version.',
+    fr: 'Les captures de ce module n\'ont pas encore été refaites sur la version actuelle.',
+    ja: 'このモジュールのスクリーンショットは現行バージョンで撮り直していません。',
+    es: 'Las capturas de este módulo aún no se han rehecho en la versión actual.',
+  },
+}
+const howtoHeading = computed(() => HOWTO_TEXT.heading[locale.value] || HOWTO_TEXT.heading.zh)
+const howtoSubheading = computed(() => HOWTO_TEXT.sub[locale.value] || HOWTO_TEXT.sub.zh)
+const pendingLabel = computed(() => HOWTO_TEXT.pending[locale.value] || HOWTO_TEXT.pending.zh)
 const { trackEvent } = useAnalytics()
 const { locale } = useI18n()
 const router = useRouter()
@@ -164,6 +235,10 @@ const faqCategoryMap: Record<string, Record<string, string>> = {
   energy: { zh: '節能', zhCN: '节能', en: 'Energy', fr: 'Énergie', ja: '省エネ', es: 'Energía' },
   maintenance: { zh: '維護', zhCN: '维护', en: 'Maintenance', fr: 'Entretien', ja: 'メンテナンス', es: 'Mantenimiento' },
   warranty: { zh: '保固', zhCN: '保固', en: 'Warranty', fr: 'Garantie', ja: '保証', es: 'Garantía' },
+  // 這兩個分類 faqs.json 早就在用，但一直沒有對照，導致它們的篩選鈕不會出現
+  // （只能在「全部」看到）。2026-09-22 補上。
+  tutorials: { zh: '教學', zhCN: '教学', en: 'Tutorials', fr: 'Tutoriels', ja: 'チュートリアル', es: 'Tutoriales' },
+  compatibility: { zh: '相容性', zhCN: '兼容性', en: 'Compatibility', fr: 'Compatibilité', ja: '互換性', es: 'Compatibilidad' },
 }
 
 const faqCategories = computed(() => {
@@ -648,6 +723,43 @@ onUnmounted(() => {
       }
     }
   }
+}
+
+/* ─── 操作指南 ─── */
+.howto-section { max-width: 1100px; margin: 0 auto; padding-inline: 20px; }
+.howto-title { font-size: 32px; font-weight: 700; }
+.howto-sub { color: #666; font-size: 15px; }
+.howto-nav { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.howto-pill {
+  display: inline-block; padding: 6px 14px; border: 1px solid #e3d9cf; border-radius: 999px;
+  font-size: 13px; color: #555; text-decoration: none; background: #fff; transition: .2s;
+}
+.howto-pill:hover { border-color: var(--brand-orange, #f0913a); color: var(--brand-orange, #f0913a); }
+.howto-module { scroll-margin-top: 96px; padding: 32px 0; border-top: 1px solid #efe7de; }
+.howto-module:first-of-type { border-top: 0; }
+.howto-module-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.howto-module-summary { color: #555; line-height: 1.7; margin-bottom: 20px; }
+.howto-steps { list-style: none; counter-reset: howto; padding: 0; margin: 0; }
+.howto-step { counter-increment: howto; position: relative; padding-left: 44px; margin-bottom: 28px; }
+.howto-step::before {
+  content: counter(howto); position: absolute; left: 0; top: 0;
+  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--brand-orange, #f0913a); color: #fff; font-size: 14px; font-weight: 700;
+}
+.howto-step-title { font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
+.howto-step-body { color: #555; line-height: 1.75; margin: 0; }
+.howto-shot { margin: 14px 0 0; }
+.howto-shot img {
+  width: 100%; max-width: 760px; height: auto; display: block;
+  border: 1px solid #ece3d9; border-radius: 10px;
+}
+.howto-tips { margin: 8px 0 0; padding-left: 20px; color: #6b5b4b; font-size: 14px; line-height: 1.8; }
+.howto-pending { margin-top: 12px; font-size: 13px; color: #9a8c7c; font-style: italic; }
+@media (max-width: 767px) {
+  .howto-title { font-size: 24px; }
+  .howto-module-title { font-size: 20px; }
+  .howto-step { padding-left: 36px; }
+  .howto-step::before { width: 26px; height: 26px; font-size: 13px; }
 }
 </style>
 

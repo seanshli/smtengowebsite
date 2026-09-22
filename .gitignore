@@ -35,3 +35,8 @@ vite.config.js.timestamp-*.mjs
 
 # graphify knowledge graph — regenerable, and the obsidian export alone is ~3 MB
 graphify-out/
+
+# 由 scripts/gen-knowledge-md.mjs 從 src/data/*.json 產生（prebuild／predev 自動跑）。
+# 不進版控的理由：Vercel 每次 build 都會重產，repo 裡留一份只會在「改了 JSON
+# 但沒 build 就 commit」時悄悄分岔——而這個 repo 沒有 CI 會抓到。
+public/knowledge-base.md

@@ -133,7 +133,10 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
         expect(f.answer[loc], `#${f.id} answer ${loc}`).toBeTruthy()
         for (const m of String(f.answer[loc]).matchAll(/\]\(([^)\s]+)\)/g)) {
           const href = m[1]
-          const ok = routes.includes(href) || /^https:\/\/(www\.)?youtube\.com\//.test(href)
+          // 錨點（/tutorial#howto-scene）是既有做法——header/footer 的「常見問題」就是
+          // /tutorial#faq。比對路由時先去掉 #fragment，否則每加一個深連結就會誤判。
+          const path = href.split('#')[0] || href
+          const ok = routes.includes(path) || /^https:\/\/(www\.)?youtube\.com\//.test(href)
           expect(ok, `#${f.id} ${loc} links to ${href}`).toBe(true)
         }
       }
