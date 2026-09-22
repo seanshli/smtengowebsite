@@ -39,6 +39,19 @@ describe('AI-SEO entry points exist', () => {
     })
 })
 
+describe('router links are absolute (QA 2026-09-22: a relative to="product?…" 404ed from /cases/:id)', () => {
+    const files = [...readdirSync(resolve(__dirname, '../layout')).map((f) => resolve(__dirname, '../layout', f)), ...pages.map((f) => resolve(views, f))]
+        .filter((f) => f.endsWith('.vue'))
+    it('every static router-link "to" starts with / or #', () => {
+        for (const f of files) {
+            const src = readFileSync(f, 'utf-8')
+            for (const m of src.matchAll(/<router-link[^>]*\sto="([^"{][^"]*)"/g)) {
+                expect(m[1], `${f}: to="${m[1]}"`).toMatch(/^[/#]/)
+            }
+        }
+    })
+})
+
 describe('page templates carry no template tells', () => {
     it('no per-page "brandJournal" eyebrow above the page title', () => {
         for (const f of pages) expect(templateOf(f), f).not.toMatch(/\$t\('brandJournal'\)/)

@@ -29,7 +29,7 @@
         <router-link to="/product" class="dropdown-trigger" data-track="nav:product">{{ $t('productTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
-          <router-link to="product?jump=oxygen">{{ $t('footer.secondLink') }}</router-link>
+          <router-link to="/product?jump=oxygen">{{ $t('footer.secondLink') }}</router-link>
           <router-link to="/enviro">{{ $t('enviroTitle') }}</router-link>
         </div>
       </div>
@@ -97,7 +97,7 @@
 
         <router-link to="/product">{{ $t('productTitle') }}</router-link>
         <router-link to="/product" class="sublink">{{ $t('footer.firstLink') }}</router-link>
-        <router-link to="product?jump=oxygen" class="sublink">{{ $t('footer.secondLink') }}</router-link>
+        <router-link to="/product?jump=oxygen" class="sublink">{{ $t('footer.secondLink') }}</router-link>
         <router-link to="/enviro" class="sublink">{{ $t('enviroTitle') }}</router-link>
         <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
         <a @click="toMall">{{ $t('mallTitle') }}</a>
