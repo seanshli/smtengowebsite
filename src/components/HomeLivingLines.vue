@@ -1,9 +1,6 @@
 <template>
   <section class="living-lines" ref="root" aria-label="enGo smart home ecosystem">
     <header class="ll-head">
-      <p class="ll-kicker">
-        HMS・{{ locale.startsWith('zh') ? '居家管理系統' : 'HOME MANAGEMENT SYSTEM' }}
-      </p>
       <h3 class="ll-title">{{ $t('whyEngoTagline1') }}</h3>
       <p class="ll-sub">{{ $t('whyEngoTagline2') }}</p>
     </header>

@@ -1,7 +1,6 @@
 <template>
   <div class="cases-page">
     <div class="header-section">
-      <p class="page-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="page-title">{{ $t('casesTitle') }}</h1>
       <p class="subtitle">{{ $t('casesSubtitle') }}</p>
       <p class="history-note">{{ $t('casesHistoryNote') }} <router-link to="/product">{{ $t('productTitle') }} →</router-link></p>
@@ -51,7 +50,14 @@
           <!-- view-transition-name pairs with CaseDetail's banner so the
                card image morphs into the detail header on navigation -->
           <div class="image-wrapper" :style="{ viewTransitionName: 'case-' + item.id }">
-            <img :src="item.image" :alt="getLocaleText(item.title)" />
+            <img v-if="hasPhoto(item)" :src="item.image" :alt="getLocaleText(item.title)" />
+            <!-- 18 of 22 cases share one illustration; a plate that names the
+                 project reads as real work, the repeated drawing read as placeholder -->
+            <div v-else class="plate" :class="'plate-' + plateTone(item)" aria-hidden="true">
+              <span class="plate-cat">{{ getLocaleText(item.category) }}</span>
+              <span class="plate-title">{{ getLocaleText(item.title) }}</span>
+              <span class="plate-loc">{{ getLocaleText(item.location) }}</span>
+            </div>
             <div class="overlay">
               <span>{{ $t('viewDetails') || '查看詳情' }}</span>
             </div>
@@ -91,6 +97,9 @@ const types = [
   { key: 'Showroom', labelKey: 'catShowroom' },
   { key: 'Property Development', labelKey: 'catPropertyDevelopment' }
 ]
+
+const hasPhoto = (c: any) => typeof c.image === 'string' && !c.image.endsWith('case-home.jpg')
+const plateTone = (c: any) => ({ 'Showroom': 'gold', 'Property Development': 'orange' } as Record<string, string>)[c.category?.en] ?? 'navy'
 
 const selectedType = ref('All')
 const selectedCountry = ref('All')
@@ -313,6 +322,16 @@ const getLocaleText = (obj: any) => {
       overflow: hidden;
       border-bottom: 1px solid rgba($grey-blue3, 0.25);
       img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+      .plate {
+        height: 100%; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px;
+        color: $warm-bg-light; background: $grey-blue3;
+        background-image: radial-gradient(circle at 85% 15%, rgba($gold, .35), transparent 45%);
+        &.plate-gold { background: darken($gold, 28%); }
+        &.plate-orange { background: $brand-orange-text; }
+        .plate-cat { font-size: .75rem; letter-spacing: .14em; opacity: .8; }
+        .plate-title { font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 1.35rem; line-height: 1.3; }
+        .plate-loc { font-size: .85rem; opacity: .8; }
+      }
       .overlay {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;

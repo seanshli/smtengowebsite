@@ -4,7 +4,6 @@
   <section id="vision" class="vsn-page">
     <!-- Editorial masthead -->
     <header class="vsn-mast">
-      <p class="vsn-kicker">{{ $t('brandJournal') }}</p>
       <h1 class="vsn-title">{{ $t('visionTitle') }}</h1>
       <p class="vsn-sub fade-in">{{ $t('visionIntextLogo') }}</p>
     </header>
