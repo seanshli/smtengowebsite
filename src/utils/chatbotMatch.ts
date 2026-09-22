@@ -111,7 +111,7 @@ export const scoreItem = (query: string, keywords: string[]): number => {
   return score
 }
 
-export const KB_CATEGORIES = ['general', 'catalog', 'products', 'packages', 'tutorials', 'cases', 'youtube', 'faqs'] as const
+export const KB_CATEGORIES = ['general', 'catalog', 'products', 'packages', 'tutorials', 'cases', 'youtube', 'faqs', 'howto'] as const
 
 export interface Scored { item: any; cat: string; score: number }
 

@@ -1598,5 +1598,256 @@
                 "墙挂"
             ]
         }
+    ],
+    "howto": [
+        {
+            "id": "howto-household",
+            "keywords": [
+                "住家",
+                "家庭",
+                "家庭管理",
+                "房間管理",
+                "新增房間",
+                "改房間名",
+                "成員",
+                "邀請",
+                "邀請碼",
+                "權限",
+                "角色",
+                "所有者",
+                "管理員",
+                "切換住家",
+                "多個住家",
+                "創建家庭",
+                "加入家庭",
+                "household",
+                "family",
+                "room",
+                "rooms",
+                "member",
+                "invite",
+                "invite code",
+                "permission",
+                "role",
+                "owner",
+                "admin",
+                "switch home",
+                "怎麼建立住家",
+                "如何新增房間",
+                "房間管理步驟",
+                "家庭管理怎麼用",
+                "how to set up household",
+                "how to add a room"
+            ],
+            "answer": {
+                "zh": "**住家與房間設定（操作步驟）**\n\n建立住家、填好地址與社區、規劃房間，並把家人加進來。這是所有其他功能的基礎 —— 房間名稱之後會直接成為語音指令的一部分。\n\n**1. 切換或新增住家** — 點首頁左上的住家名稱展開清單。目前使用中的住家左側有勾號。清單下方有「創建家庭」與「加入一個新家庭」（用邀請碼加入別人的住家）。一個帳號可以管理多個住家，切換後首頁、工單、公告都會跟著換。\n\n**2. 填寫家庭資訊** — 在住家清單中點該住家右側的鉛筆進入「家庭管理」。依序填家庭名稱、縣市、區鎮、街道（可按右側定位圖示自動帶入）、所在社區、門牌號。改完務必按右上角「保存」。\n\n**3. 規劃房間** — 同一頁往下捲就是房間清單。在輸入框輸入名稱後按「＋」新增；每一列右側可改名（鉛筆）或刪除（垃圾桶）。建議依實際格局建立：客廳、主臥、次臥、廚房、浴室、陽台。\n\n**4. 邀請家人並確認權限** — 再往下是權限資訊與成員資訊。成員可用信箱或電話邀請，角色分所有者／管理員／成員。權限資訊會逐項列出該角色能做什麼：設備、一鍵執行、自動化、管理成員、管理家庭。\n\n**小提醒**\n- 房間名稱請用家人自己的說法（「主臥」而不是「房間 1」）。這個名稱會直接被語音使用，好不好念決定語音好不好用。\n- 🔒 邀請碼請當成密碼看待 —— 任何人拿到就能加入您的住家、看到並控制家中裝置。不要拍照外流或貼在群組；若已外流，按邀請碼右側的重新產生鍵即可讓舊碼失效。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-household)",
+                "en": "**Household & Rooms — step by step**\n\nCreate a household, fill in its address and community, plan the rooms, and invite your family. Everything else builds on this — room names later become part of your voice commands.\n\n**1. Switch or add a household** — Tap the household name at the top left of the home screen. A check mark shows which one is active. Below the list are Create household and Join a household (using an invite code). One account can manage several households; switching also switches the home screen, work orders and announcements.\n\n**2. Fill in household details** — In the household list, tap the pencil on the right to open Household management. Fill in the name, city, district, street (the pin icon can locate it for you), community and unit number. Always press Save at the top right.\n\n**3. Plan the rooms** — Scroll down the same page for the room list. Type a name and press + to add; each row can be renamed (pencil) or deleted (trash). Use your real layout: living room, master bedroom, second bedroom, kitchen, bathroom, balcony.\n\n**4. Invite family and check permissions** — Further down are Permissions and Members. Invite members by email or phone; roles are Owner, Admin and Member. The permissions panel lists exactly what the role can do: devices, one-tap scenes, automations, managing members, managing the household.\n\n**Tips**\n- Name rooms the way your family actually says them (\"master bedroom\", not \"room 1\"). The name becomes part of the voice command, so how easily it is spoken decides how well voice works.\n- 🔒 Treat the invite code like a password — anyone who has it can join your household and control your devices. Never share it in a photo or a group chat; if it leaks, press Regenerate next to the code to invalidate the old one.\n\n🔗 [Illustrated steps](/tutorial#howto-household)"
+            }
+        },
+        {
+            "id": "howto-device",
+            "keywords": [
+                "加入裝置",
+                "添加設備",
+                "設備發現",
+                "子設備",
+                "閘道器",
+                "qr",
+                "ap配網",
+                "5g",
+                "配對模式",
+                "重置鍵",
+                "搜不到",
+                "discovery",
+                "sub-device",
+                "reset button",
+                "cannot connect",
+                "怎麼配網",
+                "配網步驟",
+                "五種配網",
+                "添加設備怎麼用",
+                "how to pair step by step",
+                "pairing steps"
+            ],
+            "answer": {
+                "zh": "**新增裝置（配網）（操作步驟）**\n\n配網是讓裝置連上您家 Wi-Fi 並加入 enGo 的過程。首頁右上「＋」進入「添加設備」，上方有五種方式，先試「設備發現」。\n\n**1. 配網前先確認三件事** — ① 平板或手機連在 2.4GHz Wi-Fi（多數智慧裝置不支援 5GHz，這是最常見的失敗原因）② 裝置已進入配對模式（多為長按重置鍵至指示燈快閃，做法依廠牌而異）③ 裝置與路由器距離不要太遠。\n\n**2. 設備發現（優先使用）** — 適用大多數 Wi-Fi 裝置。讓裝置進入配對模式，畫面會自動列出找到的裝置，選取後指定房間即可。若等約 30 秒仍沒有任何裝置出現，這一頁不會主動告訴您失敗 —— 請改用下面其他方式，或回頭確認上一步的三個條件。\n\n**3. 子設備配網（透過閘道器）** — ZigBee 等裝置需要透過閘道器加入。先確認閘道器已加入且在線，選擇網關設備後按「開始配網」，再讓子裝置進入配網模式。\n\n**4. Matter 配網** — 支援 Matter 標準的裝置。先設定 WiFi，再輸入或掃碼取得裝置的配網碼，然後按「開始配網」。\n\n**5. QR 配網** — 包裝或機身有 enGo QR 碼的裝置。先設定 WiFi，按「生成二維碼」後以裝置掃描該碼完成配網。\n\n**6. AP 配網（備援）** — 上述方式都失敗時使用，共三個步驟。步驟 1：長按裝置配網鍵 3–5 秒，待指示燈快閃、裝置自行開啟 AP 熱點；步驟 2：手動連上該熱點；步驟 3：回到 App 完成。\n\n**小提醒**\n- 配網成功後請立刻改名並指定房間。「白色四鍵123」這種型號名在語音與情境裡都不好用，改成「客廳壁切」才有意義。\n- 同一台裝置重複配網會建立第二筆紀錄。配網前先確認它是不是已經在清單裡。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-device)",
+                "en": "**Adding Devices (Pairing) — step by step**\n\nPairing is how a device joins your Wi-Fi and your enGo home. Tap + at the top right of the home screen to open Add device. Five methods are offered — try Device discovery first.\n\n**1. Three things to check first** — ① Your tablet or phone is on 2.4GHz Wi-Fi (most smart devices do not support 5GHz — this is the most common cause of failure). ② The device is in pairing mode (usually hold its reset button until the LED blinks fast; this varies by brand). ③ The device is not too far from the router.\n\n**2. Device discovery (try this first)** — Works for most Wi-Fi devices. Put the device in pairing mode and it appears in the list; select it and assign a room. If nothing appears after about 30 seconds the page will not tell you it failed — switch to one of the methods below, or re-check the three conditions above.\n\n**3. Sub-device pairing (via a gateway)** — ZigBee and similar devices join through a gateway. Make sure the gateway is already added and online, choose it, press Start pairing, then put the sub-device into pairing mode.\n\n**4. Matter pairing** — For devices that support the Matter standard. Set the Wi-Fi first, then type or scan the device's pairing code, and press Start pairing.\n\n**5. QR pairing** — For devices with an enGo QR code on the box or body. Set the Wi-Fi, press Generate QR code, and let the device scan it.\n\n**6. AP pairing (fallback)** — Use this when the others fail; it has three steps. Step 1: hold the device's pairing button for 3–5 seconds until the LED blinks fast and the device opens its own hotspot. Step 2: connect to that hotspot manually. Step 3: return to the app to finish.\n\n**Tips**\n- Rename the device and assign its room right away. A model name like \"white 4-gang 123\" is useless in voice commands and scenes — \"living-room wall switch\" is not.\n- Pairing the same device twice creates a second entry. Check the list before pairing again.\n\n🔗 [Illustrated steps](/tutorial#howto-device)"
+            }
+        },
+        {
+            "id": "howto-scene",
+            "keywords": [
+                "觸發",
+                "定時",
+                "建立情境",
+                "創建場景",
+                "延時執行",
+                "執行紀錄",
+                "手動執行",
+                "自動執行",
+                "scenes",
+                "one-tap",
+                "trigger",
+                "routine",
+                "怎麼建情境",
+                "情境建立步驟",
+                "創建場景步驟",
+                "how to create a scene",
+                "scene steps"
+            ],
+            "answer": {
+                "zh": "**情境（一鍵模式）（操作步驟）**\n\n情境把多個動作打包成一鍵。分手動執行（您主動點或用語音喊）與自動執行（由條件觸發）。情境名稱會直接被語音使用，所以取名很重要。\n\n**1. 認識三個分頁** — 自動執行：由條件自動觸發，右側開關可啟用／停用。手動執行：需要您主動執行，語音可以直接執行這一類。執行紀錄：查看過去的執行情形。\n\n**2. 步驟 1 — 先選觸發方式** — 情境頁右上「＋」開始建立。第一個畫面決定這是手動還是自動：「選擇控制設備」＝手動；「設備狀態變化時」與「定時」＝自動。\n\n**3. 步驟 2–3 — 選裝置、設定動作** — 依房間分頁挑選裝置，然後勾選要下達的項目。這一層顯示的是裝置本身回報的控制項名稱（例如「開關1」），不是 enGo 另外取的名字，因此會依裝置廠牌而異。\n\n**4. 步驟 4 — 命名並確認任務清單** — 輸入情境名稱，下方表格逐列列出已加入的任務：房間、裝置、任務名稱、任務內容、在線狀態。可按「添加任務」再加一台裝置。\n\n**5. 步驟 5 — 保存** — 按右上「保存」。存檔後回到情境頁，於對應分頁出現新卡片。若卡片顯示「狀態讀取失敗」，按右上重整鍵即可 —— 那是新情境還沒取到裝置狀態，不是設定錯誤。\n\n**6. 修改、暫停與刪除** — 卡片右上「⋯」有三個選項：延時執行（過一段時間後才執行）、編輯、移除。自動情境的卡片右側另有開關，可暫時停用而不刪除 —— 例如出遠門時先關掉自動亮燈。\n\n**小提醒**\n- 「下班模式」比「情境 A」好記也好念。避免兩個情境取相近的名字，否則語音會反問您指的是哪一個。\n- ⚠ 兩個情境同名時，移除的確認視窗只會顯示名稱、不會顯示是哪一個。清單裡有同名情境時，建議先用「編輯」確認內容，或先改名再刪。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-scene)",
+                "en": "**Scenes (One-tap Modes) — step by step**\n\nA scene bundles several actions into one tap. Manual scenes you trigger yourself (by tap or by voice); automatic scenes fire on a condition. The scene name becomes the voice command, so naming matters.\n\n**1. The three tabs** — Automatic: fires on a condition; the switch on the right enables or disables it. Manual: you trigger it yourself, and voice can run these directly. History: shows past runs.\n\n**2. Step 1 — choose the trigger** — Press + at the top right of the Scenes page. The first screen decides manual or automatic: Choose devices to control = manual; When a device's state changes and Schedule = automatic.\n\n**3. Steps 2–3 — pick devices and set actions** — Pick a device from the room tabs, then tick the items to send. This level shows the control names the device itself reports (e.g. \"switch 1\") rather than names enGo assigns, so they vary by brand.\n\n**4. Step 4 — name it and review the task list** — Enter the scene name. The table below lists every task you have added: room, device, task name, task value and online state. Press Add task to include another device.\n\n**5. Step 5 — save** — Press Save at the top right. You return to the Scenes page and the new card appears under the matching tab. If the card says the status could not be read, press the refresh icon — the new scene simply has not fetched device states yet; nothing is wrong with your settings.\n\n**6. Edit, pause and delete** — The ⋯ menu on each card offers three options: Run later, Edit and Remove. Automatic scenes also have a switch on the right so you can pause one without deleting it — handy when you travel and want the auto lights off.\n\n**Tips**\n- \"Leaving-work mode\" beats \"Scene A\" — easier to remember and to say. Avoid near-identical names, or voice will ask which one you meant.\n- ⚠ If two scenes share a name, the delete confirmation shows only the name, not which one. Use Edit to confirm the contents first, or rename before deleting.\n\n🔗 [Illustrated steps](/tutorial#howto-scene)"
+            }
+        },
+        {
+            "id": "howto-home",
+            "keywords": [
+                "首頁",
+                "主畫面",
+                "裝置卡片",
+                "在線",
+                "未分配",
+                "房間分頁",
+                "手動更新",
+                "重整",
+                "搜尋裝置",
+                "home screen",
+                "dashboard",
+                "device card",
+                "online",
+                "unassigned",
+                "refresh",
+                "首頁怎麼用",
+                "首頁操作",
+                "how to use the home screen"
+            ],
+            "answer": {
+                "zh": "**首頁與日常操作（操作步驟）**\n\n首頁是最常用的一頁：上方是住家名稱與天氣，中段是房間分頁，下方依房間分組列出裝置卡片，每張卡片顯示名稱與在線狀態。\n\n**1. 依房間找裝置** — 點上方的房間分頁只看該房間的裝置，或用右側放大鏡直接搜尋名稱。卡片上的綠點代表在線、紅點代表離線。\n\n**2. 把「未分配」清空** — 剛配網還沒指定房間的裝置會落在「未分配」。建議盡快把它們歸進房間 —— 未分配的裝置在平面圖上不會出現，語音也叫不到。\n\n**3. 右上四個按鈕** — 依序為版面切換、用電統計、手動更新、新增裝置。改過裝置或情境而畫面還沒跟上時，按手動更新最快。\n\n**小提醒**\n- 裝置顯示離線時，先看它自己的指示燈與電源，再看家中 Wi-Fi，最後才懷疑 App。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-home)",
+                "en": "**Home Screen & Daily Use — step by step**\n\nThe home screen is the one you use most: household name and weather on top, room tabs in the middle, then device cards grouped by room, each showing its name and online state.\n\n**1. Find devices by room** — Tap a room tab to see only that room's devices, or use the magnifier on the right to search by name. A green dot means online, red means offline.\n\n**2. Clear the Unassigned group** — Devices paired but not yet assigned a room land in Unassigned. Move them into rooms promptly — unassigned devices do not appear on the floor plan and voice cannot reach them.\n\n**3. The four buttons at the top right** — From left to right: layout switch, energy statistics, manual refresh and add device. If you changed a device or scene and the screen has not caught up, manual refresh is the quickest fix.\n\n**Tips**\n- If a device shows offline, check its own LED and power first, then your Wi-Fi, and only then suspect the app.\n\n🔗 [Illustrated steps](/tutorial#howto-home)"
+            }
+        },
+        {
+            "id": "howto-settings",
+            "keywords": [
+                "設定",
+                "設置",
+                "主題",
+                "深色",
+                "淺色",
+                "語系",
+                "語言",
+                "個人信息",
+                "告警",
+                "告警設置",
+                "版本",
+                "當前版本",
+                "後端版本",
+                "帳號註銷",
+                "會員條款",
+                "settings",
+                "theme",
+                "dark mode",
+                "language",
+                "version",
+                "backend version",
+                "terms",
+                "設定怎麼用",
+                "設定頁有什麼",
+                "how to use settings"
+            ],
+            "answer": {
+                "zh": "**設定與帳號（操作步驟）**\n\n主題、語系、個人資料、裝置告警門檻，以及回報問題時要提供的版本號都在這裡。\n\n**1. 設定頁有什麼** — 目前主題（淺色／深色）、目前語系（預設跟隨系統）、個人信息、設備告警設置、當前版本、後端版本、會員條款、帳號註銷。\n\n**2. 回報問題時請附兩組版本號** — 「當前版本」是 App 版本，「後端版本」是雲端服務版本。兩組一起提供，客服才能判斷問題出在哪一端。\n\n**3. 帳號註銷** — 「帳號註銷」會永久刪除帳號與資料，無法復原。若只是想換手機或重新登入，不需要用這個功能。\n\n**小提醒**\n- 裝置告警門檻（例如溫濕度上下限）設得太敏感會一直推播；建議先用預設值住一週再調。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-settings)",
+                "en": "**Settings & Account — step by step**\n\nTheme, language, personal details, device alarm thresholds, and the version numbers to quote when reporting a problem.\n\n**1. What is on the Settings page** — Theme (light/dark), language (follows the system by default), personal information, device alarm settings, app version, backend version, terms of membership, and account deletion.\n\n**2. Quote both version numbers when reporting an issue** — App version and backend version. Provide both so support can tell which side the problem is on.\n\n**3. Deleting your account** — Account deletion permanently removes your account and data and cannot be undone. If you only want to change phones or sign in again, you do not need this.\n\n**Tips**\n- Alarm thresholds that are too sensitive will keep pushing notifications. Live with the defaults for a week before tuning them.\n\n🔗 [Illustrated steps](/tutorial#howto-settings)"
+            }
+        },
+        {
+            "id": "howto-community",
+            "keywords": [
+                "社區公告",
+                "訊息",
+                "消息",
+                "通知",
+                "管理費",
+                "大樓消息",
+                "商城消息",
+                "announcement",
+                "message",
+                "notification",
+                "management fee",
+                "公布欄怎麼看",
+                "公告怎麼看",
+                "how to read announcements"
+            ],
+            "answer": {
+                "zh": "**社區公告與訊息（操作步驟）**\n\n公布欄收社區公告與通知，訊息收系統、社區與商城三類消息。這是 enGo 與一般智慧家庭產品最大的差別 —— 不必為了看社區公告另外裝一支 App。\n\n**1. 看公告** — 左側欄的公布欄列出社區公告與通知，未讀會標記。點進去看完整全文，例如除蟲通知的施作時間、區域與注意事項。\n\n**2. 三類訊息** — 系統消息（維護、版本）、社區／大樓消息（管理費、包裹、公告）、商城消息（優惠、訂單）。可用上方分頁分別檢視。\n\n**小提醒**\n- 包裹通知也走這條管道；若沒收到，先確認設定裡的通知權限。\n\n> 註：本模組的示範截圖尚未以現行版本重拍。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-community)",
+                "en": "**Community Announcements & Messages — step by step**\n\nThe bulletin board carries community announcements and notices; Messages holds system, community and shop messages. This is what sets enGo apart from ordinary smart-home products — you do not need a second app to read community notices.\n\n**1. Read announcements** — The bulletin board in the left rail lists community announcements and notices, with unread ones marked. Open one for the full text — for example a pest-control notice with its time, area and precautions.\n\n**2. Three kinds of messages** — System messages (maintenance, releases), community/building messages (management fees, parcels, announcements) and shop messages (offers, orders). Use the tabs at the top to view each.\n\n**Tips**\n- Parcel notices come through the same channel. If you are not getting them, check notification permission in Settings first.\n\n> Note: screenshots for this module have not yet been re-taken on the current version.\n\n🔗 [Illustrated steps](/tutorial#howto-community)"
+            }
+        },
+        {
+            "id": "howto-service",
+            "keywords": [
+                "工單",
+                "叫修",
+                "保修單",
+                "進度",
+                "維修進度",
+                "work order",
+                "maintenance request",
+                "ticket",
+                "progress",
+                "報修步驟",
+                "how to submit a repair"
+            ],
+            "answer": {
+                "zh": "**報修與工單（操作步驟）**\n\n住家或公設有問題可直接在 App 提出報修，並追蹤處理進度。\n\n**1. 提出報修** — 左側欄的報修 → 新增，填寫維修項目與描述，可附照片。送出後系統產生工單編號。\n\n**2. 追蹤進度** — 工單列表顯示編號、維修項目、狀態與建立時間，右側可查看詳情。狀態變更會推播通知。\n\n**小提醒**\n- 附一張照片通常能省掉一次來回確認。\n\n> 註：本模組的示範截圖尚未以現行版本重拍。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-service)",
+                "en": "**Repairs & Work Orders — step by step**\n\nReport a problem at home or in the shared facilities straight from the app, then follow its progress.\n\n**1. Submit a repair request** — Repairs in the left rail → New. Describe the item and the problem, and attach photos. Submitting creates a work-order number.\n\n**2. Track progress** — The list shows the number, item, status and creation time, with details on the right. Status changes are pushed to you.\n\n**Tips**\n- One photo usually saves a round trip of questions.\n\n> Note: screenshots for this module have not yet been re-taken on the current version.\n\n🔗 [Illustrated steps](/tutorial#howto-service)"
+            }
+        },
+        {
+            "id": "howto-reservation",
+            "keywords": [
+                "公共設施",
+                "健身房",
+                "會議室",
+                "交誼廳",
+                "訂位",
+                "取消預約",
+                "預約紀錄",
+                "reservation",
+                "gym",
+                "meeting room",
+                "cancel booking",
+                "怎麼預約",
+                "預約步驟",
+                "how to book a facility"
+            ],
+            "answer": {
+                "zh": "**公設預約（操作步驟）**\n\n健身房、會議室、交誼廳等公設可直接在 App 預約，並查詢或取消既有預約。\n\n**1. 挑選設施** — 可預約項目頁以卡片列出設施名稱、位置、總人數限制與費率。\n\n**2. 送出預約** — 點進設施看項目資訊、說明、規格與注意事項，右側填預約日期、開始與結束時間、成人與兒童人數，送出即完成。\n\n**3. 查詢與取消** — 預約紀錄分頁列出過去與未來的預約，可在規定時限內取消。\n\n**小提醒**\n- 取消時限依各社區規章而異，請看該設施的「注意事項&限制」分頁。\n\n> 註：本模組的示範截圖尚未以現行版本重拍。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-reservation)",
+                "en": "**Booking Shared Facilities — step by step**\n\nBook the gym, meeting room, lounge and other shared facilities in the app, and review or cancel existing bookings.\n\n**1. Choose a facility** — The facilities page lists each one as a card with its name, location, capacity and rate.\n\n**2. Make the booking** — Open a facility to see its information, description, specifications and rules; on the right choose the date, start and end time, and the number of adults and children, then submit.\n\n**3. Review and cancel** — The history tab lists past and upcoming bookings; you can cancel within the allowed window.\n\n**Tips**\n- Cancellation windows differ by community — check the facility's rules tab.\n\n> Note: screenshots for this module have not yet been re-taken on the current version.\n\n🔗 [Illustrated steps](/tutorial#howto-reservation)"
+            }
+        },
+        {
+            "id": "howto-warehouse",
+            "keywords": [
+                "分類",
+                "備品",
+                "盤點",
+                "異動",
+                "移動物品",
+                "item",
+                "cabinet",
+                "category",
+                "low stock",
+                "spares",
+                "倉儲怎麼用",
+                "庫存怎麼記",
+                "how to use inventory"
+            ],
+            "answer": {
+                "zh": "**倉儲管理（操作步驟）**\n\n記錄家中物品放在哪個房間的哪個櫃位、還有多少，並在低於安全量時提醒。適合濾芯、電池、備品這類「要用時常常找不到」的東西。\n\n**1. 先建櫃位與分類** — 倉儲頁上方有物品、櫃位、分類、記錄、告警五個分頁。先在「櫃位」建立實體收納位置（例如「廚房下櫃」），在「分類」建立類別（例如「濾芯」），再回到「物品」新增。\n\n**2. 新增與查詢物品** — 上方四個數字是物品總數、櫃位總數、分類總數與低庫存數量。可用房間分頁篩選，或用右上放大鏡搜尋。\n\n**3. 異動位置與數量** — 物品卡片可編輯、調整數量、變更位置與查看資訊。「異動位置」對話框會顯示目前存放位置（房間 → 櫃位）與數量，設定搬移數量後即可改房間或改櫃位。\n\n**小提醒**\n- 低庫存提醒要先在物品上設安全量才會作用。濾芯這類有壽命的東西，建議一併記下更換日期。\n\n> 註：本模組的示範截圖尚未以現行版本重拍。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-warehouse)",
+                "en": "**Home Inventory — step by step**\n\nTrack which room and cabinet each item is in and how many are left, with a reminder when stock runs low. Ideal for filters, batteries and spares — the things you can never find when you need them.\n\n**1. Create cabinets and categories first** — The inventory page has five tabs: Items, Cabinets, Categories, History and Alerts. Create your physical storage places under Cabinets (e.g. \"kitchen lower cabinet\") and your categories (e.g. \"filters\") first, then add items.\n\n**2. Add and find items** — The four figures on top are total items, cabinets, categories and low-stock count. Filter by room with the tabs, or search with the magnifier at the top right.\n\n**3. Move items and adjust quantities** — Each item card lets you edit it, adjust the quantity, change its location or view details. The move dialog shows the current location (room → cabinet) and quantity; set how many to move, then choose a new room or cabinet.\n\n**Tips**\n- Low-stock alerts only work once you set a threshold on the item. For things with a service life, such as filters, record the replacement date too.\n\n> Note: screenshots for this module have not yet been re-taken on the current version.\n\n🔗 [Illustrated steps](/tutorial#howto-warehouse)"
+            }
+        }
     ]
 }

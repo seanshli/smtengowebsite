@@ -718,5 +718,105 @@
       "fr": "enGo propose aux promoteurs des solutions de résidence intelligente, souvent sous forme de cadeau de livraison ou de bon : le promoteur n'a ni coordination de chantier ni garantie à assumer, les résidents sont suivis par l'équipe enGo pendant les travaux. Côté résidence, enGo relie avis, réparations, réservations et colis. Voir le parcours promoteur de cette page et nos études de cas, puis contactez-nous.\n\nVoir aussi : [Tutoriels](/tutorial) · [Études de cas](/cases) · [Contactez-nous](/contact)",
       "es": "enGo ofrece a promociones soluciones de vivienda inteligente, a menudo como regalo de entrega o vale: la constructora no coordina obra ni asume garantía, y a los residentes los atiende el equipo enGo durante la reforma. Para la comunidad, enGo conecta avisos, reparaciones, reservas y paquetes. Vea la guía para constructoras de esta página y los casos, y contáctenos.\n\nVer también: [Tutoriales](/tutorial) · [Casos](/cases) · [Contáctenos](/contact)"
     }
+  },
+  {
+    "id": 50,
+    "category": "setup",
+    "question": {
+      "zh": "剛拿到平板，第一次要設定哪些東西？順序是什麼？",
+      "zhCN": "刚拿到平板，第一次要设定哪些东西？顺序是什么？",
+      "en": "I just got the tablet — what do I set up first, and in what order?",
+      "fr": "Je viens de recevoir la tablette — que configurer en premier, et dans quel ordre ?",
+      "ja": "タブレットを受け取りました。最初に何をどの順番で設定しますか？",
+      "es": "Acabo de recibir la tableta: ¿qué configuro primero y en qué orden?"
+    },
+    "answer": {
+      "zh": "建議順序是：① 建立住家並填好地址與社區 ② 規劃房間（用家人自己的說法命名，例如「主臥」而不是「房間 1」）③ 加入裝置並立刻改名、指定房間 ④ 建立常用情境 ⑤ 邀請家人。房間名稱之後會直接成為語音指令的一部分，所以第 ② 步值得多花點時間。\n\n延伸閱讀：[住家與房間設定](/tutorial#howto-household)、[新增裝置](/tutorial#howto-device)",
+      "zhCN": "建议顺序是：① 建立住家并填好地址与社区 ② 规划房间（用家人自己的说法命名，例如“主卧”而不是“房间 1”）③ 加入装置并立刻改名、指定房间 ④ 建立常用情境 ⑤ 邀请家人。房间名称之后会直接成为语音指令的一部分，所以第 ② 步值得多花点时间。\n\n延伸阅读：[住家与房间设定](/tutorial#howto-household)、[新增装置](/tutorial#howto-device)",
+      "en": "Recommended order: ① create the household and fill in its address and community ② plan the rooms (name them the way your family speaks — \"master bedroom\", not \"room 1\") ③ add devices, renaming and assigning a room immediately ④ build the scenes you use daily ⑤ invite family. Room names later become part of your voice commands, so step ② is worth the extra minutes.\n\nSee also: [Household & rooms](/tutorial#howto-household), [Adding devices](/tutorial#howto-device)",
+      "fr": "Ordre recommandé : ① créer le logement avec son adresse et sa résidence ② définir les pièces (nommez-les comme votre famille les appelle) ③ ajouter les appareils en les renommant et en leur attribuant une pièce immédiatement ④ créer vos scènes quotidiennes ⑤ inviter la famille. Les noms de pièces deviennent ensuite une partie de vos commandes vocales.\n\nÀ lire : [Logement et pièces](/tutorial#howto-household), [Ajouter des appareils](/tutorial#howto-device)",
+      "ja": "推奨順序：① 住まいを作成し住所とコミュニティを入力 ② 部屋を設定（「主寝室」のように家族が実際に使う呼び方で）③ 機器を追加し、すぐに名前と部屋を設定 ④ よく使うシーンを作成 ⑤ 家族を招待。部屋名は後に音声コマンドの一部になるため、②に時間をかける価値があります。\n\n参考：[住まいと部屋の設定](/tutorial#howto-household)、[機器の追加](/tutorial#howto-device)",
+      "es": "Orden recomendado: ① crear el hogar con su dirección y comunidad ② planificar las habitaciones (nómbralas como las llama tu familia) ③ añadir dispositivos, renombrándolos y asignándoles habitación de inmediato ④ crear las escenas de uso diario ⑤ invitar a la familia. Los nombres de habitación pasan a formar parte de los comandos de voz.\n\nVer también: [Hogar y habitaciones](/tutorial#howto-household), [Añadir dispositivos](/tutorial#howto-device)"
+    }
+  },
+  {
+    "id": 51,
+    "category": "features",
+    "question": {
+      "zh": "情境要怎麼建？畫面的步驟順序是什麼？",
+      "zhCN": "情境要怎么建？画面的步骤顺序是什么？",
+      "en": "How do I create a scene? What is the on-screen order of steps?",
+      "fr": "Comment créer une scène ? Quel est l'ordre des étapes à l'écran ?",
+      "ja": "シーンはどう作りますか？画面上の手順の順番は？",
+      "es": "¿Cómo creo una escena? ¿Cuál es el orden de los pasos en pantalla?"
+    },
+    "answer": {
+      "zh": "情境頁右上「＋」開始。順序就是畫面順序：**先選觸發方式** →選裝置→設定動作→命名並確認任務清單→按右上「保存」。「選擇控制設備」建立的是手動情境（可用語音執行）；「設備狀態變化時」與「定時」建立的是自動情境。\n\n剛存好時若卡片顯示「狀態讀取失敗」，按右上重整鍵即可，那是還沒取到裝置狀態。\n\n延伸閱讀：[情境（一鍵模式）圖文步驟](/tutorial#howto-scene)",
+      "zhCN": "情境页右上“＋”开始。顺序就是画面顺序：**先选触发方式** →选装置→设定动作→命名并确认任务清单→按右上“保存”。“选择控制设备”建立的是手动情境（可用语音执行）；“设备状态变化时”与“定时”建立的是自动情境。\n\n刚存好时若卡片显示“状态读取失败”，按右上重整键即可，那是还没取到装置状态。\n\n延伸阅读：[情境（一键模式）图文步骤](/tutorial#howto-scene)",
+      "en": "Press + at the top right of the Scenes page. The order is the on-screen order: **choose the trigger first** → pick devices → set actions → name it and review the task list → press Save. \"Choose devices to control\" makes a manual scene (voice can run it); \"When a device's state changes\" and \"Schedule\" make automatic scenes.\n\nIf a freshly saved card says the status could not be read, press refresh — it simply has not fetched device states yet.\n\nSee also: [Scenes, step by step](/tutorial#howto-scene)",
+      "fr": "Appuyez sur + en haut à droite de la page Scènes. L'ordre suit l'écran : **choisissez d'abord le déclencheur** → sélectionnez les appareils → définissez les actions → nommez et vérifiez la liste des tâches → Enregistrer. « Choisir les appareils » crée une scène manuelle (exécutable à la voix) ; « Changement d'état » et « Planification » créent des scènes automatiques.\n\nSi une carte vient d'être enregistrée et indique que l'état n'a pu être lu, appuyez sur rafraîchir.\n\nÀ lire : [Scènes, pas à pas](/tutorial#howto-scene)",
+      "ja": "シーン画面右上の「＋」から開始します。順番は画面どおり：**まずトリガーを選択** →機器を選択→動作を設定→名前を付けてタスク一覧を確認→右上の「保存」。「制御する機器を選択」は手動シーン（音声で実行可）、「機器の状態が変化したとき」と「スケジュール」は自動シーンになります。\n\n保存直後にカードが「状態の読み取りに失敗」と表示された場合は、更新ボタンを押してください。\n\n参考：[シーンの作成手順](/tutorial#howto-scene)",
+      "es": "Pulsa + arriba a la derecha en Escenas. El orden es el de la pantalla: **elige primero el disparador** → selecciona dispositivos → define acciones → ponle nombre y revisa la lista de tareas → Guardar. «Elegir dispositivos» crea una escena manual (ejecutable por voz); «Cuando cambie el estado» y «Programación» crean escenas automáticas.\n\nSi una tarjeta recién guardada indica que no se pudo leer el estado, pulsa actualizar.\n\nVer también: [Escenas paso a paso](/tutorial#howto-scene)"
+    }
+  },
+  {
+    "id": 52,
+    "category": "setup",
+    "question": {
+      "zh": "配網一直失敗，可以怎麼排查？",
+      "zhCN": "配网一直失败，可以怎么排查？",
+      "en": "Pairing keeps failing — how do I troubleshoot it?",
+      "fr": "L'appairage échoue systématiquement — comment diagnostiquer ?",
+      "ja": "ペアリングが失敗し続けます。どう切り分けますか？",
+      "es": "El emparejamiento falla siempre: ¿cómo lo diagnostico?"
+    },
+    "answer": {
+      "zh": "依序確認三件事：① **平板或手機連在 2.4GHz Wi-Fi** —— 多數智慧裝置不支援 5GHz，這是最常見的原因 ② 裝置已進入配對模式（多為長按重置鍵至指示燈快閃）③ 裝置與路由器距離不要太遠。\n\n另外請注意：「設備發現」分頁**不會主動告訴您失敗**，它只會持續顯示「正在搜索附近的設備」。等約 30 秒仍無裝置出現就改用子設備／Matter／QR／AP 其他方式。仍失敗請洽專人 02-27510218。\n\n延伸閱讀：[新增裝置（配網）五種方式](/tutorial#howto-device)",
+      "zhCN": "依序确认三件事：① **平板或手机连在 2.4GHz Wi-Fi** —— 多数智慧装置不支援 5GHz，这是最常见的原因 ② 装置已进入配对模式（多为长按重置键至指示灯快闪）③ 装置与路由器距离不要太远。\n\n另外请注意：“设备发现”分页**不会主动告诉您失败**，它只会持续显示“正在搜索附近的设备”。等约 30 秒仍无装置出现就改用子装置／Matter／QR／AP 其他方式。仍失败请洽专人 02-27510218。\n\n延伸阅读：[新增装置（配网）五种方式](/tutorial#howto-device)",
+      "en": "Check three things in order: ① **your tablet or phone is on 2.4GHz Wi-Fi** — most smart devices do not support 5GHz, and this is by far the most common cause ② the device is in pairing mode (usually hold its reset button until the LED blinks fast) ③ the device is not too far from the router.\n\nAlso note: the Device discovery tab **will not tell you it failed** — it simply keeps showing \"searching for nearby devices\". If nothing appears after about 30 seconds, switch to sub-device, Matter, QR or AP pairing. Still stuck? Call +886-2-27510218.\n\nSee also: [Five ways to pair a device](/tutorial#howto-device)",
+      "fr": "Vérifiez trois points dans l'ordre : ① **votre tablette ou téléphone est en Wi-Fi 2,4 GHz** — la plupart des appareils ne gèrent pas le 5 GHz, c'est la cause la plus fréquente ② l'appareil est en mode appairage (maintenez le bouton de réinitialisation jusqu'au clignotement rapide) ③ l'appareil n'est pas trop loin du routeur.\n\nÀ noter : l'onglet Découverte **ne signale pas l'échec** ; il continue d'afficher « recherche d'appareils ». Au bout de 30 secondes sans résultat, essayez l'appairage sous-appareil, Matter, QR ou AP. Sinon, appelez le +886-2-27510218.\n\nÀ lire : [Cinq méthodes d'appairage](/tutorial#howto-device)",
+      "ja": "順に3点を確認してください：① **タブレットまたはスマートフォンが 2.4GHz Wi-Fi に接続されているか** —— 多くの機器は 5GHz に非対応で、これが最も多い原因です ② 機器がペアリングモードになっているか（通常はリセットボタンを長押しし、LEDが速く点滅するまで）③ 機器とルーターが離れすぎていないか。\n\nなお「機器検出」タブは**失敗を通知しません**。「付近の機器を検索中」と表示され続けるだけです。30秒ほど待っても表示されない場合は、サブ機器／Matter／QR／AP の方法に切り替えてください。解決しない場合は +886-2-27510218 へ。\n\n参考：[機器追加の5つの方法](/tutorial#howto-device)",
+      "es": "Comprueba tres cosas en orden: ① **que la tableta o el móvil estén en Wi-Fi de 2,4 GHz** — la mayoría de dispositivos no admiten 5 GHz y es la causa más habitual ② que el dispositivo esté en modo emparejamiento (normalmente manteniendo el botón de reinicio hasta que el LED parpadee rápido) ③ que no esté demasiado lejos del router.\n\nAdemás: la pestaña Descubrimiento **no avisa de los fallos**; solo sigue mostrando «buscando dispositivos cercanos». Si no aparece nada en unos 30 segundos, prueba subdispositivo, Matter, QR o AP. Si persiste, llama al +886-2-27510218.\n\nVer también: [Cinco formas de emparejar](/tutorial#howto-device)"
+    }
+  },
+  {
+    "id": 53,
+    "category": "safety",
+    "question": {
+      "zh": "家庭邀請碼是什麼？外流了怎麼辦？",
+      "zhCN": "家庭邀请码是什么？外流了怎么办？",
+      "en": "What is the household invite code, and what if it leaks?",
+      "fr": "Qu'est-ce que le code d'invitation du logement, et s'il fuite ?",
+      "ja": "住まいの招待コードとは何ですか？漏れた場合はどうしますか？",
+      "es": "¿Qué es el código de invitación del hogar y qué hago si se filtra?"
+    },
+    "answer": {
+      "zh": "邀請碼是讓別人加入您住家的憑證，**請當成密碼看待** —— 任何人拿到它就能加入您的住家、看到並控制家中裝置。請不要拍照外流或貼在群組。\n\n若已外流：進入家庭管理，按邀請碼右側的**重新產生**鍵，舊碼立刻失效。已加入的成員不受影響，可在成員清單中個別移除。\n\n延伸閱讀：[住家與房間設定](/tutorial#howto-household)",
+      "zhCN": "邀请码是让别人加入您住家的凭证，**请当成密码看待** —— 任何人拿到它就能加入您的住家、看到并控制家中装置。请不要拍照外流或贴在群组。\n\n若已外流：进入家庭管理，按邀请码右侧的**重新产生**键，旧码立刻失效。已加入的成员不受影响，可在成员清单中个别移除。\n\n延伸阅读：[住家与房间设定](/tutorial#howto-household)",
+      "en": "The invite code lets someone join your household. **Treat it like a password** — anyone who has it can join, see and control your devices. Never share it in a photo or a group chat.\n\nIf it leaks: open Household management and press **Regenerate** next to the code; the old one stops working immediately. Members who already joined are unaffected and can be removed individually from the member list.\n\nSee also: [Household & rooms](/tutorial#howto-household)",
+      "fr": "Le code d'invitation permet à quelqu'un de rejoindre votre logement. **Traitez-le comme un mot de passe** : quiconque le possède peut rejoindre, voir et piloter vos appareils. Ne le partagez jamais en photo ni dans un groupe.\n\nEn cas de fuite : ouvrez la gestion du logement et appuyez sur **Régénérer** à côté du code ; l'ancien cesse immédiatement de fonctionner. Les membres déjà présents ne sont pas affectés et peuvent être retirés individuellement.\n\nÀ lire : [Logement et pièces](/tutorial#howto-household)",
+      "ja": "招待コードは他の人があなたの住まいに参加するための資格情報です。**パスワードと同じように扱ってください** —— 入手した人は誰でも参加し、機器を見て操作できます。写真やグループチャットで共有しないでください。\n\n漏れた場合：住まい管理を開き、コード右側の**再生成**を押してください。古いコードは即時無効になります。既に参加しているメンバーには影響せず、メンバー一覧から個別に削除できます。\n\n参考：[住まいと部屋の設定](/tutorial#howto-household)",
+      "es": "El código de invitación permite que alguien se una a tu hogar. **Trátalo como una contraseña**: quien lo tenga puede unirse, ver y controlar tus dispositivos. No lo compartas en fotos ni en grupos.\n\nSi se filtra: abre la gestión del hogar y pulsa **Regenerar** junto al código; el anterior deja de funcionar al instante. Los miembros que ya se unieron no se ven afectados y puedes eliminarlos uno a uno desde la lista.\n\nVer también: [Hogar y habitaciones](/tutorial#howto-household)"
+    }
+  },
+  {
+    "id": 54,
+    "category": "services",
+    "question": {
+      "zh": "回報問題時要提供哪些資訊？",
+      "zhCN": "回报问题时要提供哪些资讯？",
+      "en": "What information should I provide when reporting a problem?",
+      "fr": "Quelles informations fournir pour signaler un problème ?",
+      "ja": "問題を報告するとき、どんな情報を伝えればよいですか？",
+      "es": "¿Qué información debo dar al informar de un problema?"
+    },
+    "answer": {
+      "zh": "請提供三項：① **當前版本**與**後端版本**（設定頁最下方，兩組都要 —— 客服才能判斷問題出在 App 端還是雲端）② 出問題的裝置名稱與所在房間 ③ 問題發生的時間，以及當時是否有網路。\n\n若是某台裝置點了沒反應，也請說明它在首頁顯示在線還是離線。\n\n延伸閱讀：[設定與帳號](/tutorial#howto-settings)、[聯絡我們](/contact)",
+      "zhCN": "请提供三项：① **当前版本**与**后端版本**（设定页最下方，两组都要 —— 客服才能判断问题出在 App 端还是云端）② 出问题的装置名称与所在房间 ③ 问题发生的时间，以及当时是否有网络。\n\n若是某台装置点了没反应，也请说明它在首页显示在线还是离线。\n\n延伸阅读：[设定与帐号](/tutorial#howto-settings)、[联络我们](/contact)",
+      "en": "Three things: ① both the **app version** and the **backend version** (at the bottom of the Settings page — support needs both to tell which side the problem is on) ② the name of the affected device and its room ③ when it happened, and whether you had internet at the time.\n\nIf a device does not respond to taps, also say whether the home screen shows it as online or offline.\n\nSee also: [Settings & account](/tutorial#howto-settings), [Contact us](/contact)",
+      "fr": "Trois éléments : ① la **version de l'application** et la **version du backend** (en bas de la page Réglages — les deux sont nécessaires pour savoir de quel côté vient le problème) ② le nom de l'appareil concerné et sa pièce ③ l'heure de l'incident et si vous aviez Internet.\n\nSi un appareil ne répond pas, précisez aussi s'il apparaît en ligne ou hors ligne sur l'accueil.\n\nÀ lire : [Réglages et compte](/tutorial#howto-settings), [Nous contacter](/contact)",
+      "ja": "3点をお知らせください：① **アプリのバージョン**と**バックエンドのバージョン**（設定画面の下部。どちら側の問題か判断するため両方必要です）② 問題のある機器の名前と部屋 ③ 発生時刻と、その時ネットワークに接続されていたか。\n\n機器をタップしても反応しない場合は、ホーム画面でオンライン表示かオフライン表示かもお知らせください。\n\n参考：[設定とアカウント](/tutorial#howto-settings)、[お問い合わせ](/contact)",
+      "es": "Tres cosas: ① la **versión de la app** y la **versión del backend** (al final de Ajustes; soporte necesita ambas para saber de qué lado está el problema) ② el nombre del dispositivo afectado y su habitación ③ cuándo ocurrió y si tenías internet en ese momento.\n\nSi un dispositivo no responde al pulsarlo, indica también si la pantalla de inicio lo muestra en línea o sin conexión.\n\nVer también: [Ajustes y cuenta](/tutorial#howto-settings), [Contacto](/contact)"
+    }
   }
 ]
