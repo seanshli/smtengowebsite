@@ -16,7 +16,8 @@ describe('palette B holds (design review 2026-09-22, D2): no warm-cream or gold 
     const walk = (dir: string): string[] => readdirSync(dir, { withFileTypes: true }).flatMap((d) =>
         d.isDirectory() ? walk(resolve(dir, d.name)) : /\.(vue|scss|ts)$/.test(d.name) && !d.name.endsWith('.test.ts') ? [resolve(dir, d.name)] : [])
     const files = walk(resolve(__dirname, '..'))
-    const banned = /#(fefbf6|fdf5ec|f9f3eb|fff7ee|efe7de|e3d9cf|ece3d9|c7b763|faf8f5)\b/i
+    // hex form, and the rgb triplets Sass would compile to the same colours (rgba(199,183,99,.x) → #c7b763xx)
+    const banned = /#(fefbf6|fdf5ec|f9f3eb|fff7ee|efe7de|e3d9cf|ece3d9|c7b763|faf8f5)\b|rgba?\(\s*(199,\s*183,\s*99|254,\s*251,\s*246|253,\s*245,\s*236|249,\s*243,\s*235)/i
     it('retired warm hexes are gone', () => {
         for (const f of files) expect(readFileSync(f, 'utf-8'), f).not.toMatch(banned)
     })

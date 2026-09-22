@@ -238,7 +238,7 @@ body {
         pointer-events: none;
         background:
             radial-gradient(38% 30% at 18% 22%, rgba(254, 139, 5, 0.22), transparent 70%),
-            radial-gradient(34% 28% at 84% 70%, rgba(199, 183, 99, 0.18), transparent 70%);
+            radial-gradient(34% 28% at 84% 70%, rgba(18, 181, 168, 0.18), transparent 70%);
         background-repeat: no-repeat;
 
         @media (prefers-reduced-motion: no-preference) {
@@ -451,7 +451,7 @@ body {
 
             thead th,
             thead td {
-                border-bottom: 2px solid rgba(199, 183, 99, 0.6);
+                border-bottom: 2px solid rgba(18, 181, 168, 0.6);
             }
 
             thead th {
@@ -624,7 +624,7 @@ body {
 
             &:hover {
                 background: rgba(255, 255, 255, 0.1);
-                border-color: rgba(199, 183, 99, 0.45);
+                border-color: rgba(18, 181, 168, 0.45);
                 box-shadow: 0 24px 60px rgba(4, 54, 85, 0.35);
             }
 
@@ -680,7 +680,7 @@ body {
             font-size: 12px;
             letter-spacing: 0.12em;
             color: $gold;
-            border: 1px solid rgba(199, 183, 99, 0.6);
+            border: 1px solid rgba(18, 181, 168, 0.6);
         }
 
         .tf-note {

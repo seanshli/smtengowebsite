@@ -1495,8 +1495,8 @@ const targetExpand = ref(false)
   align-items: center;
   gap: 12px;
   padding: 32px 40px;
-  background: linear-gradient(135deg, rgba(59, 190, 255, 0.18), rgba(199, 183, 99, 0.12));
-  border: 1px solid rgba(199, 183, 99, 0.35);
+  background: linear-gradient(135deg, rgba(59, 190, 255, 0.18), rgba(18, 181, 168, 0.12));
+  border: 1px solid rgba(18, 181, 168, 0.35);
   border-radius: 18px;
   max-width: 520px;
   width: 100%;
