@@ -21,12 +21,6 @@
           <div class="hm-plate hm-plate-tablet" data-float>
             <img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="eager" fetchpriority="high" />
           </div>
-          <!-- The only phone capture is the top half of an Android home screen (1080×1130).
-               Shown at its true aspect in a frame that emerges from the section edge; a
-               tall frame with cover-fit turned it into "neither iPhone nor Android". -->
-          <div class="hm-phone hm-phone-hero">
-            <img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="720" loading="eager" />
-          </div>
         </figure>
       </div>
     </section>
@@ -43,19 +37,19 @@
             <div class="hm-plate"><img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="lazy" /></div>
             <div class="hm-if-cap"><strong>{{ T.ifTablet }}</strong><span>{{ T.ifTabletCap }}</span></div>
           </div>
-          <!-- No iOS capture exists yet (WEB-002: never pass an Android screen off as iPhone),
-               so this column carries the store badge instead of a screen. -->
-          <div class="hm-if-item hm-if-ios">
+          <!-- No full-screen phone captures exist yet (only cropped Android shots, and WEB-002 forbids
+               passing an Android screen off as iPhone), so both phone columns carry the store badge. -->
+          <div class="hm-if-item hm-if-store">
             <a class="hm-store" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
               <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" width="120" height="40" loading="lazy" />
             </a>
             <div class="hm-if-cap"><strong>iPhone / iPad</strong><span>{{ T.ifIosCap }}</span></div>
           </div>
-          <div class="hm-if-item">
-            <div class="hm-phone-well">
-              <div class="hm-phone"><img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="720" loading="lazy" /></div>
-            </div>
-            <div class="hm-if-cap"><strong>{{ T.ifAndroid }}</strong><span>{{ T.ifAndroidCap }}</span><a class="hm-store hm-store-inline" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play"><img src="/images/badges/google-play-en.png" alt="Get it on Google Play" height="40" loading="lazy" /></a></div>
+          <div class="hm-if-item hm-if-store">
+            <a class="hm-store hm-store-google" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play">
+              <img src="/images/badges/google-play-en.png" alt="Get it on Google Play" height="40" loading="lazy" />
+            </a>
+            <div class="hm-if-cap"><strong>{{ T.ifAndroid }}</strong><span>{{ T.ifAndroidCap }}</span></div>
           </div>
         </div>
         <p class="hm-if-note" data-reveal>{{ T.ifNote }}</p>
@@ -81,15 +75,13 @@
             <span class="hm-voice-quote">{{ T.capVoiceQuote }}</span>
             <div class="hm-cell-cap"><strong>{{ T.capVoice }}</strong><span>{{ T.capVoiceSub }}</span></div>
           </div>
-          <router-link to="/tutorial#howto-warehouse" class="hm-cell hm-cell-img">
-            <img src="/images/screens/05-warehouse-tablet.png" :alt="T.capWarehouse" width="2000" height="1152" loading="lazy" />
+          <router-link to="/tutorial#howto-warehouse" class="hm-cell hm-cell-text">
+            <div class="hm-cell-chips" aria-hidden="true"><span v-for="c in T.capWarehouseChips" :key="c">{{ c }}</span></div>
             <div class="hm-cell-cap"><strong>{{ T.capWarehouse }}</strong><span>{{ T.capWarehouseSub }}</span></div>
           </router-link>
-          <router-link to="/tutorial#howto-scene" class="hm-cell hm-cell-scenes hm-cell-wide">
-            <div class="hm-scenes-copy"><strong>{{ T.capScenes }}</strong><span>{{ T.capScenesSub }}</span></div>
-            <div class="hm-scenes-chips" aria-hidden="true">
-              <span v-for="(c, i) in T.capSceneChips" :key="c" :class="{ on: i === 2 }">{{ c }}</span>
-            </div>
+          <router-link to="/tutorial#howto-scene" class="hm-cell hm-cell-img hm-cell-wide">
+            <img src="/images/screens/10-scenes-tablet.png" :alt="T.capScenes" width="2000" height="1200" loading="lazy" />
+            <div class="hm-cell-cap"><strong>{{ T.capScenes }}</strong><span>{{ T.capScenesSub }}</span></div>
           </router-link>
         </div>
       </div>
@@ -206,6 +198,7 @@ const COPY: Record<string, Record<string, any>> = {
     capFloorplan: '平面圖即時視圖', capFloorplanSub: '每個房間的裝置狀態，畫在您家的平面圖上。',
     capVoice: '語音操作', capVoiceSub: '牆掛平板專屬。涉及安全的裝置會先向您確認。', capVoiceQuote: '「開客廳燈」',
     capWarehouse: '智慧倉儲管理', capWarehouseSub: '濾芯、電池、備品放哪裡、剩多少。',
+    capWarehouseChips: ['物品', '櫃位', '低庫存提醒'],
     capScenes: '情境（一鍵模式）', capScenesSub: '「離家」等於關全部燈加關空調。手動一鍵執行，或依時間、感測器狀態自動觸發。',
     capSceneChips: ['回家模式', '離家模式', '睡眠模式', '晨曦喚醒'],
     bmsTitle: '一棟大樓，一個大腦。', bmsSub: '住戶不必為了看公告另外裝一支 App。社區服務與家裡的裝置在同一個 App 與同一台平板裡。',
@@ -225,6 +218,7 @@ const COPY: Record<string, Record<string, any>> = {
     capFloorplan: '平面图实时视图', capFloorplanSub: '每个房间的设备状态，画在您家的平面图上。',
     capVoice: '语音操作', capVoiceSub: '壁挂平板专属。涉及安全的设备会先向您确认。', capVoiceQuote: '「开客厅灯」',
     capWarehouse: '智慧仓储管理', capWarehouseSub: '滤芯、电池、备品放哪里、剩多少。',
+    capWarehouseChips: ['物品', '柜位', '低库存提醒'],
     capScenes: '情境（一键模式）', capScenesSub: '「离家」等于关全部灯加关空调。手动一键执行，或依时间、传感器状态自动触发。',
     capSceneChips: ['回家模式', '离家模式', '睡眠模式', '晨曦唤醒'],
     bmsTitle: '一栋大楼，一个大脑。', bmsSub: '住户不必为了看公告另外装一个 App。社区服务与家里的设备在同一个 App 与同一台平板里。',
@@ -244,6 +238,7 @@ const COPY: Record<string, Record<string, any>> = {
     capFloorplan: 'Live floor plan', capFloorplanSub: 'Every room\'s device status, drawn on your own floor plan.',
     capVoice: 'Voice control', capVoiceSub: 'Wall tablet only. Safety-related devices ask for confirmation first.', capVoiceQuote: '"Living room lights on"',
     capWarehouse: 'Smart inventory', capWarehouseSub: 'Where the filters, batteries and spares are, and how many are left.',
+    capWarehouseChips: ['Items', 'Cabinets', 'Low-stock alerts'],
     capScenes: 'Scenes (one tap)', capScenesSub: '"Away" means all lights off and AC off. Run it by tap, or trigger it by time or sensor state.',
     capSceneChips: ['Home', 'Away', 'Sleep', 'Sunrise'],
     bmsTitle: 'One brain. Every building.', bmsSub: 'Residents do not need a second app for notices. Community services live in the same app and tablet as the home.',
@@ -299,18 +294,12 @@ $navy-2: $grey-blue2;
 .hm-plate-tall img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
 .hm-plate-land img { aspect-ratio: 2000 / 1148; object-fit: cover; object-position: top; }
 
-// Phone frame open at the bottom: the capture is the top of the screen, so the frame
-// is cut by its container instead of the image being zoomed to fill a tall frame.
-.hm-phone {
-  background: $navy; border-radius: 34px 34px 0 0; padding: 12px 12px 0; box-shadow: 0 24px 60px rgba($navy, .25); overflow: hidden;
-  img { display: block; width: 100%; height: auto; border-radius: 24px 24px 0 0; }
-}
-.hm-phone-well { height: 300px; overflow: hidden; display: flex; align-items: flex-end; padding: 0 12%; position: relative;
-  &::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 40px; background: linear-gradient(180deg, rgba($warm-bg-section, 0), $warm-bg-section); pointer-events: none; }
-}
 .hm-store { display: inline-block; line-height: 0; img { height: 40px; width: auto; } }
-.hm-store-inline { margin-top: 10px; img { height: 56px; margin: -8px -12px; } }
-.hm-if-ios { justify-content: flex-end; .hm-store { padding-bottom: 8px; } }
+.hm-store-google img { height: 58px; margin: -9px -12px; }
+.hm-if-store {
+  justify-content: flex-end; padding: 22px; border-radius: 20px; background: rgba($navy, .04); border: 1px solid #D8DFE8;
+  .hm-store { align-self: flex-start; padding-bottom: 6px; }
+}
 
 // ─── hero ────────────────────────────────────────────────────────
 .hm-hero { position: relative; overflow: hidden; padding: clamp(72px, 9vh, 104px) 0 clamp(40px, 6vw, 72px); }
@@ -336,10 +325,9 @@ $navy-2: $grey-blue2;
 .hm-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; animation: hmRise .7s cubic-bezier(.22,1,.36,1) .6s both; }
 
 .hm-hero-figure {
-  position: relative; margin: 0; min-height: 440px; animation: hmReveal 1s cubic-bezier(.22,1,.36,1) .4s both;
-  .hm-plate-tablet { position: absolute; right: 0; top: 10px; width: 92%; }
-  .hm-phone-hero { position: absolute; left: 0; bottom: -12px; width: 32%; }
-  @media (max-width: 900px) { min-height: 0; padding-top: 24px; .hm-plate-tablet { position: relative; width: 100%; top: 0; } .hm-phone-hero { display: none; } margin-bottom: 30px; }
+  position: relative; margin: 0; animation: hmReveal 1s cubic-bezier(.22,1,.36,1) .4s both;
+  .hm-plate-tablet { width: 100%; }
+  @media (max-width: 900px) { padding-top: 24px; margin-bottom: 30px; }
 }
 
 // ─── interfaces ──────────────────────────────────────────────────
@@ -370,16 +358,10 @@ a.hm-cell-img:hover img { transform: scale(1.03); }
   background: linear-gradient(180deg, rgba($navy, 0) 0%, rgba($navy, .92) 60%);
   strong { font-size: 1.2rem; } span { font-size: .9rem; color: rgba($warm-bg-light, .8); line-height: 1.5; }
 }
+.hm-cell-text { flex-direction: column; justify-content: space-between; padding: 24px 24px 0; .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; } }
+.hm-cell-chips { display: flex; flex-wrap: wrap; gap: 8px; span { border: 1.5px solid rgba($warm-bg-light, .5); border-radius: 999px; padding: 7px 14px; font-size: .85rem; font-weight: 700; color: $warm-bg-light; } }
 .hm-cell-voice { flex-direction: column; justify-content: space-between; padding: 24px 24px 0; .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; } }
 .hm-voice-quote { font-family: 'Noto Serif TC', serif; font-weight: 700; color: $gold; font-size: clamp(2rem, 3.2vw, 3.1rem); line-height: 1.05; }
-.hm-cell-scenes {
-  background: $warm-bg-section; color: $navy; padding: 26px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;
-  @media (max-width: 900px) { grid-template-columns: 1fr; }
-}
-.hm-scenes-copy { display: flex; flex-direction: column; gap: 8px; strong { font-size: 1.25rem; } span { font-size: .95rem; line-height: 1.65; color: #555; } }
-.hm-scenes-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; @media (max-width: 900px) { justify-content: flex-start; }
-  span { border: 1.5px solid $navy; border-radius: 999px; padding: 9px 16px; font-size: .92rem; font-weight: 700; &.on { background: $brand-orange; border-color: $brand-orange; color: #fff; } }
-}
 
 // ─── HMS × BMS ───────────────────────────────────────────────────
 .hm-bms { padding: clamp(56px, 8vw, 96px) 0; }
@@ -397,7 +379,7 @@ a.hm-cell-img:hover img { transform: scale(1.03); }
 }
 .hm-photo-cap {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 20px; display: flex; flex-direction: column; gap: 2px; color: #fff;
-  strong, span { color: #fff; }
+  strong, span { color: #fff; text-shadow: 0 1px 10px rgba(0, 0, 0, .55); }
   background: linear-gradient(180deg, rgba($navy, 0) 0%, rgba($navy, .9) 100%);
   strong { font-family: 'Noto Serif TC', serif; font-size: 1.15rem; line-height: 1.3; } span { font-size: .78rem; letter-spacing: .1em; opacity: .85; }
 }

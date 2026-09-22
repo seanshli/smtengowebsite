@@ -66,7 +66,8 @@ describe('page templates carry no template tells', () => {
     it('home shows the real product screens and links every primary action to a route', () => {
         const t = templateOf('index.vue')
         expect(t).toContain('/images/screens/01-home-tablet.png')
-        expect(t).toContain('/images/screens/07-home-phone.png')
+        expect(t).toContain('/images/screens/10-scenes-tablet.png')
+        expect(t).not.toMatch(/07-home-phone|hm-phone/)
         expect(t).toContain('to="/contact"')
         expect(t).toContain('to="/product"')
         expect(t).toContain('to="/cases"')
