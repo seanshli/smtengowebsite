@@ -24,6 +24,7 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['iPhone 和平板功能一樣嗎', 'engo-interfaces'],
     ['怎麼報修', 'property-management'],
     ['配網失敗 連不上', 'device-pairing'],
+    ['配網一直在轉 卡住了', 'device-pairing'],
     ['資料存在哪裡 會傳到國外嗎', 'data-privacy'],
     ['搬家要怎麼處理帳號', 'data-privacy'],
     ['支援哪些家電', 'compatibility'],
@@ -73,6 +74,9 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     'com.engo.life', 'id6743929358', 'engo智管家',
     // 2026-09-15: EAP-01 air purifier discontinued — no trace in customer text
     'EAP-01', 'EAP-T01', '空氣清淨機', '空气清净机', 'air purifier', 'Air Purifier',
+    // 2026-09-22 KB-001 A.7/A.8 (app 3.2.2+489): the Settings page no longer has a 語音助理 item,
+    // and scene creation starts with the trigger, not the name — both old scripts are retired.
+    '語音助理', '语音助理', 'Voice Assistant', '命名後儲存', '命名后储存', '選裝置、命名', '选装置、命名',
   ]
   for (const phrase of banned) {
     it(`does not contain "${phrase}"`, () => {
@@ -97,6 +101,23 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     const faq6 = (faqs as any[]).find((f) => f.id === 6).answer.zh as string
     expect(faq6).toMatch(/窗簾、部分感測器與開關類/)
     expect(faq6).toMatch(/米多力.*仍需連網/)
+  })
+  it('pairing help follows KB-001 A.8 §3: three causes in order, the 30-second Device-discovery warning, and the how-to deep link', () => {
+    const e = (kb as any).general.find((x: any) => x.id === 'device-pairing')
+    const zh = e.answer.zh as string
+    expect(zh).toMatch(/5GHz Wi-Fi[\s\S]*配網模式[\s\S]*離路由器太遠/)
+    expect(zh).toMatch(/不會告訴您失敗/)
+    expect(zh).toMatch(/等約 30 秒/)
+    expect(zh).toContain('(/tutorial#howto-device)')
+    for (const loc of ['zhCN', 'en', 'ja', 'fr', 'es']) {
+      expect(e.answer[loc], loc).toMatch(/30/)
+      expect(e.answer[loc], loc).toContain('/tutorial#howto-device')
+    }
+  })
+  it('voice activation is referred to a person (KB-001 A.8 §4): no Settings path is described', () => {
+    const zh = (kb as any).general.find((x: any) => x.id === 'voice-control').answer.zh as string
+    expect(zh).toMatch(/請洽專人/)
+    expect(zh).not.toMatch(/設定\s*[→>]/)
   })
   it('the app is enGo智慧管家 on both stores (verified 2026-09-15): App Store id6680188565, Google Play tw.smtengo.engohome.android', () => {
     for (const s of [(kb as any).general.find((e: any) => e.id === 'app-download').answer.zh, (faqs as any[]).find((f) => f.id === 30).answer.zh]) {
