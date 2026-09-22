@@ -480,7 +480,7 @@ onUnmounted(() => {
     border-radius: 20px;
     border-top: 6px solid #e05a35;
     &:nth-child(2) { border-top-color: #043655; }
-    &:nth-child(3) { border-top-color: #C7B763; }
+    &:nth-child(3) { border-top-color: #12B5A8; }
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -799,19 +799,19 @@ onUnmounted(() => {
 .howto-sub { color: #666; font-size: 15px; }
 .howto-nav { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .howto-pill {
-  display: inline-block; padding: 6px 14px; border: 1px solid #e3d9cf; border-radius: 999px;
+  display: inline-block; padding: 6px 14px; border: 1px solid #D8DFE8; border-radius: 999px;
   font-size: 13px; color: #555; text-decoration: none; background: #fff; transition: .2s;
 }
 .howto-pill:hover, .howto-pill.active { border-color: var(--brand-orange, #f0913a); color: var(--brand-orange, #f0913a); }
-.howto-pill.active { background: #fff7ee; }
-.howto-module { scroll-margin-top: 96px; border-top: 1px solid #efe7de; }
+.howto-pill.active { background: #EEF3F8; }
+.howto-module { scroll-margin-top: 96px; border-top: 1px solid #D8DFE8; }
 .howto-module:first-of-type { border-top: 0; }
 .howto-module-head {
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
   width: 100%; padding: 22px 4px; background: none; border: 0; text-align: left; cursor: pointer;
   font: inherit; color: inherit; border-radius: 10px; transition: background .2s;
 }
-.howto-module-head:hover { background: #fff7ee; }
+.howto-module-head:hover { background: #EEF3F8; }
 .howto-module-head:focus-visible { outline: 2px solid var(--brand-orange, #f0913a); outline-offset: 2px; }
 .howto-module-text { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .howto-module-title { font-size: 22px; font-weight: 700; }
@@ -834,9 +834,9 @@ onUnmounted(() => {
 .howto-shot { margin: 14px 0 0; }
 .howto-shot img {
   width: 100%; max-width: 760px; height: auto; display: block;
-  border: 1px solid #ece3d9; border-radius: 10px;
+  border: 1px solid #D8DFE8; border-radius: 10px;
 }
-.howto-tips { margin: 8px 0 0; padding-left: 20px; color: #6b5b4b; font-size: 14px; line-height: 1.8; }
+.howto-tips { margin: 8px 0 0; padding-left: 20px; color: #5B6470; font-size: 14px; line-height: 1.8; }
 .howto-pending { margin-top: 12px; font-size: 13px; color: #9a8c7c; font-style: italic; }
 @media (max-width: 767px) {
   .howto-title { font-size: 24px; }

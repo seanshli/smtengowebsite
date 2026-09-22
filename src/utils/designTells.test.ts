@@ -12,6 +12,16 @@ const templateOf = (file: string) => {
 }
 const pages = readdirSync(views).filter((f) => f.endsWith('.vue'))
 
+describe('palette B holds (design review 2026-09-22, D2): no warm-cream or gold hex anywhere in src', () => {
+    const walk = (dir: string): string[] => readdirSync(dir, { withFileTypes: true }).flatMap((d) =>
+        d.isDirectory() ? walk(resolve(dir, d.name)) : /\.(vue|scss|ts)$/.test(d.name) && !d.name.endsWith('.test.ts') ? [resolve(dir, d.name)] : [])
+    const files = walk(resolve(__dirname, '..'))
+    const banned = /#(fefbf6|fdf5ec|f9f3eb|fff7ee|efe7de|e3d9cf|ece3d9|c7b763|faf8f5)\b/i
+    it('retired warm hexes are gone', () => {
+        for (const f of files) expect(readFileSync(f, 'utf-8'), f).not.toMatch(banned)
+    })
+})
+
 describe('page templates carry no template tells', () => {
     it('no per-page "brandJournal" eyebrow above the page title', () => {
         for (const f of pages) expect(templateOf(f), f).not.toMatch(/\$t\('brandJournal'\)/)

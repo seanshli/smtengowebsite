@@ -327,8 +327,8 @@ $navy-2: $grey-blue2;
   @media (max-width: 540px) { grid-template-columns: 1fr; }
 }
 .hm-if-item { display: flex; flex-direction: column; gap: 12px; }
-.hm-if-cap { display: flex; flex-direction: column; gap: 2px; strong { color: $navy; font-size: 1.05rem; } span { font-size: .88rem; color: #6b5b4b; line-height: 1.55; } }
-.hm-if-note { margin: 26px 0 0; font-size: .9rem; color: #6b5b4b; }
+.hm-if-cap { display: flex; flex-direction: column; gap: 2px; strong { color: $navy; font-size: 1.05rem; } span { font-size: .88rem; color: #5B6470; line-height: 1.55; } }
+.hm-if-note { margin: 26px 0 0; font-size: .9rem; color: #5B6470; }
 
 // ─── bento ───────────────────────────────────────────────────────
 .hm-bento { background: $navy; padding: clamp(56px, 8vw, 96px) 0; position: relative; }
@@ -363,7 +363,7 @@ a.hm-cell-img:hover img { transform: scale(1.03); }
 .hm-bms-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(28px, 5vw, 64px); align-items: center; @media (max-width: 900px) { grid-template-columns: 1fr; } }
 .hm-bms-list {
   list-style: none; padding: 0; margin: 22px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px;
-  li { border-top: 1px solid #e3d9cf; padding-top: 10px; font-weight: 500; color: $navy; font-size: .98rem; }
+  li { border-top: 1px solid #D8DFE8; padding-top: 10px; font-weight: 500; color: $navy; font-size: .98rem; }
 }
 .hm-bms-media { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; .hm-plate-tall img { aspect-ratio: 4 / 5.2; } }
 .hm-photo {

@@ -273,7 +273,7 @@ onMounted(() => { fetchData(); fetchInsights() })
 .insights-window { font-size: 13px; color: #666; display: flex; gap: 8px; align-items: center; }
 .insights-window select { padding: 4px 8px; border: 1px solid #ddd; border-radius: 6px; }
 .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-.insight-card { background: #faf8f5; border-radius: 10px; padding: 14px 16px; }
+.insight-card { background: #F1F4F7; border-radius: 10px; padding: 14px 16px; }
 .insight-card h3 { font-size: 14px; margin: 0 0 10px; color: #444; }
 .insight-card ol { margin: 0; padding-left: 20px; font-size: 14px; }
 .insight-card li { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px dashed #eee; }

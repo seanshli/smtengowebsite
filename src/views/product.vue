@@ -1510,7 +1510,7 @@ const targetExpand = ref(false)
 }
 .wf-price-flag {
   display: inline-block;
-  background: #C7B763;
+  background: #12B5A8;
   color: #152939;
   padding: 4px 14px;
   border-radius: 12px;

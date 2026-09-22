@@ -113,7 +113,7 @@ export default defineComponent({
 <style scoped lang="scss">
 @import '../css/utils/variables';
 
-$cream: #fefbf6;
+$cream: #F5F7FA;
 
 .ed-footer {
   background: $grey-blue3;
