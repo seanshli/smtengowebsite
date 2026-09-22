@@ -58,6 +58,9 @@ export const SYNONYMS: Record<string, string[]> = {
   '下載': ['app', 'download'],
   '下载': ['app', 'download'],
   '哪裡下載': ['app', 'download'],
+  // how-to (KB-001 §9.2.1) — 「公告在哪」 must reach the community module, not the office address
+  '公告在哪': ['社區公告', '公布欄怎麼看'],
+  '公告哪裡': ['社區公告', '公布欄怎麼看'],
   // KB-001 §8 data — '在哪' alone routes to the address entry, so be specific
   '存在哪': ['資料儲存位置', 'privacy'],
   '國外': ['資料儲存位置', 'privacy'],

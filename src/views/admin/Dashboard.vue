@@ -4,6 +4,45 @@
       <h1>{{ $t('admin.submissions') }}</h1>
     </div>
 
+    <!-- Superuser-only usage insights. The API answers 403 for operators, in which
+         case the whole block stays hidden rather than showing an error. -->
+    <section v-if="insights" class="insights">
+      <div class="insights-header">
+        <h2>{{ L.title }}</h2>
+        <label class="insights-window">{{ L.window }}
+          <select v-model.number="insightDays" @change="fetchInsights">
+            <option :value="7">7</option><option :value="30">30</option><option :value="90">90</option>
+          </select>
+        </label>
+      </div>
+      <div class="insights-grid">
+        <div class="insight-card">
+          <h3>{{ L.howto }}</h3>
+          <ol v-if="insights.howtoOpens.length">
+            <li v-for="r in insights.howtoOpens" :key="'h-' + r.keyword"><span>{{ howtoTitle(r.keyword) }}</span><b>{{ r.count }}</b></li>
+          </ol>
+          <p v-else class="insight-empty">{{ L.empty }}</p>
+        </div>
+        <div class="insight-card">
+          <h3>{{ L.answers }}</h3>
+          <ol v-if="insights.topAnswers.length">
+            <li v-for="r in insights.topAnswers" :key="'a-' + r.keyword"><span>{{ r.keyword }}</span><b>{{ r.count }}</b></li>
+          </ol>
+          <p v-else class="insight-empty">{{ L.empty }}</p>
+        </div>
+        <div class="insight-card">
+          <h3>{{ L.unmatched }}</h3>
+          <ol v-if="insights.topUnmatched.length">
+            <li v-for="r in insights.topUnmatched" :key="'u-' + r.keyword"><span>{{ r.keyword }}</span><b>{{ r.count }}</b></li>
+          </ol>
+          <p v-else class="insight-empty">{{ L.empty }}</p>
+        </div>
+      </div>
+      <p class="insights-foot">
+        {{ L.questions }}: {{ insights.totals.queries }} · {{ L.matchRate }}: {{ Math.round(insights.totals.matchRate * 100) }}%
+      </p>
+    </section>
+
     <div class="tabs-container">
       <button 
         v-for="tab in ['all', 'pending', 'processing', 'completed']" 
@@ -101,10 +140,41 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import howtoData from '@/data/howto.json'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+// ── Usage insights (api/admin/chatbot-analytics) ───────────────────────
+// Labels live here rather than in the six locale files: this is an internal
+// screen, zh with an en fallback is all it needs.
+const INSIGHT_LABELS: Record<string, Record<string, string>> = {
+  zh: { title: '使用洞察', window: '天數', howto: '操作指南：最常被點開的模組', answers: '客服小精靈：最常回答的條目',
+        unmatched: '客服小精靈：最常問但沒答到', empty: '尚無資料', questions: '問答次數', matchRate: '命中率' },
+  en: { title: 'Usage insights', window: 'Days', howto: 'How-to: most opened modules', answers: 'Chatbot: most used answers',
+        unmatched: 'Chatbot: asked but unanswered', empty: 'No data yet', questions: 'Questions', matchRate: 'Match rate' },
+}
+const L = computed(() => INSIGHT_LABELS[locale.value] || INSIGHT_LABELS.zh)
+const insights = ref<any>(null)
+const insightDays = ref(30)
+const howtoTitle = (id: string) => {
+  const m = (howtoData as any).modules.find((x: any) => x.id === id)
+  const title = m?.title
+  return title ? (title[locale.value] ?? title.zh) : id
+}
+const fetchInsights = async () => {
+  try {
+    const token = localStorage.getItem('admin_token')
+    const res = await fetch(`/api/admin/chatbot-analytics?days=${insightDays.value}&limit=1`, {
+      headers: { 'Authorization': `Bearer ${token}` },
+    })
+    if (!res.ok) { insights.value = null; return }   // 403 for operators: hide the block
+    insights.value = await res.json()
+  } catch {
+    insights.value = null
+  }
+}
 const submissions = ref<any[]>([])
 const loading = ref(true)
 const error = ref('')
@@ -113,7 +183,6 @@ const editData = ref({ status: 'pending', notes: '' })
 const saving = ref(false)
 const activeTab = ref('all')
 
-import { computed } from 'vue'
 
 const filteredSubmissions = computed(() => {
   if (activeTab.value === 'all') return submissions.value
@@ -194,10 +263,24 @@ const saveChanges = async () => {
   }
 }
 
-onMounted(fetchData)
+onMounted(() => { fetchData(); fetchInsights() })
 </script>
 
 <style scoped lang="scss">
+.insights { margin: 0 0 28px; padding: 20px 22px; background: #fff; border: 1px solid #eee; border-radius: 12px; }
+.insights-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.insights-header h2 { font-size: 18px; margin: 0; }
+.insights-window { font-size: 13px; color: #666; display: flex; gap: 8px; align-items: center; }
+.insights-window select { padding: 4px 8px; border: 1px solid #ddd; border-radius: 6px; }
+.insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.insight-card { background: #faf8f5; border-radius: 10px; padding: 14px 16px; }
+.insight-card h3 { font-size: 14px; margin: 0 0 10px; color: #444; }
+.insight-card ol { margin: 0; padding-left: 20px; font-size: 14px; }
+.insight-card li { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px dashed #eee; }
+.insight-card li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.insight-card li b { flex-shrink: 0; color: #e05a35; }
+.insight-empty { font-size: 13px; color: #999; margin: 0; }
+.insights-foot { margin: 14px 0 0; font-size: 13px; color: #666; }
 .admin-dashboard {
   h1 { margin-bottom: 2rem; }
 }

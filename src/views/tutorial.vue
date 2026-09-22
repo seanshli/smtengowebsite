@@ -43,20 +43,48 @@
       <p class="howto-sub tac mb-40">{{ howtoSubheading }}</p>
 
       <nav class="howto-nav mb-40" aria-label="module index">
-        <a v-for="m in howtoModules" :key="'nav-' + m.id" class="howto-pill" :href="'#howto-' + m.id">
+        <a
+          v-for="m in howtoModules"
+          :key="'nav-' + m.id"
+          class="howto-pill"
+          :class="{ active: openHowto === m.id }"
+          :href="'#howto-' + m.id"
+          :data-howto="m.id"
+          @click.prevent="openModule(m.id, 'pill')"
+        >
           {{ pick(m.title) }}
         </a>
       </nav>
 
+      <!-- Folded by default: only the header shows until the visitor opens a module.
+           Each open is recorded once per page view (GTM event + howto:<id> row) so we can
+           see which modules people actually reach for. -->
       <section
         v-for="m in howtoModules"
         :key="m.id"
         :id="'howto-' + m.id"
         class="howto-module"
+        :class="{ open: openHowto === m.id }"
       >
-        <h3 class="howto-module-title">{{ pick(m.title) }}</h3>
-        <p class="howto-module-summary">{{ pick(m.summary) }}</p>
+        <button
+          type="button"
+          class="howto-module-head"
+          :aria-expanded="openHowto === m.id ? 'true' : 'false'"
+          :aria-controls="'howto-body-' + m.id"
+          :data-howto="m.id"
+          @click="toggleModule(m.id)"
+        >
+          <span class="howto-module-text">
+            <span class="howto-module-title">{{ pick(m.title) }}</span>
+            <span class="howto-module-summary">{{ pick(m.summary) }}</span>
+          </span>
+          <span class="howto-module-meta">
+            <span class="howto-module-count">{{ m.steps.length }} {{ stepsLabel }}</span>
+            <span class="howto-chevron" aria-hidden="true">&#x25BC;</span>
+          </span>
+        </button>
 
+        <div v-if="openHowto === m.id" :id="'howto-body-' + m.id" class="howto-module-body">
         <ol class="howto-steps">
           <li v-for="(st, i) in m.steps" :key="i" class="howto-step">
             <h4 class="howto-step-title">{{ pick(st.title) }}</h4>
@@ -72,6 +100,7 @@
         </ul>
 
         <p v-if="m.imagesPending" class="howto-pending">{{ pendingLabel }}</p>
+        </div>
       </section>
     </div>
 
@@ -153,10 +182,10 @@ import tutorialsData from '@/data/tutorials.json'
 import faqsData from '@/data/faqs.json'
 import knowledgeBaseData from '@/data/knowledge_base.json'
 import howtoData from '@/data/howto.json'
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 const tutorials = ref(tutorialsData)
 const faqs = ref(faqsData as any[])
@@ -179,6 +208,7 @@ const HOWTO_TEXT: Record<string, Record<string, string>> = {
     ja: '機能モジュール別の手順ガイド。スクリーンショットは実機の enGo 3.2.2 から取得。',
     es: 'Guías paso a paso por módulo, con capturas reales de enGo 3.2.2.',
   },
+  steps: { zh: '個步驟', zhCN: '个步骤', en: 'steps', fr: 'étapes', ja: 'ステップ', es: 'pasos' },
   pending: {
     zh: '本模組的示範截圖尚未以現行版本重拍。',
     zhCN: '本模块的示范截图尚未以现行版本重拍。',
@@ -191,9 +221,46 @@ const HOWTO_TEXT: Record<string, Record<string, string>> = {
 const howtoHeading = computed(() => HOWTO_TEXT.heading[locale.value] || HOWTO_TEXT.heading.zh)
 const howtoSubheading = computed(() => HOWTO_TEXT.sub[locale.value] || HOWTO_TEXT.sub.zh)
 const pendingLabel = computed(() => HOWTO_TEXT.pending[locale.value] || HOWTO_TEXT.pending.zh)
+const stepsLabel = computed(() => HOWTO_TEXT.steps[locale.value] || HOWTO_TEXT.steps.zh)
 const { trackEvent } = useAnalytics()
 const { locale } = useI18n()
 const router = useRouter()
+const route = useRoute()
+
+// ── 操作指南 accordion ─────────────────────────────────────────────
+// One module open at a time. Opening is what we measure: `via` says whether it
+// came from the pill row, the module header, or a deep link (FAQ / chatbot /
+// KB-001 §9.2.1). Each module is recorded once per page view.
+const openHowto = ref<string | null>(null)
+const recordedHowto = new Set<string>()
+const recordHowtoOpen = (id: string, via: 'pill' | 'header' | 'link') => {
+  if (recordedHowto.has(id)) return
+  recordedHowto.add(id)
+  trackEvent('howto_open', { module: id, via, locale: locale.value })
+  fetch('/api/chatbot-query', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ keyword: 'howto:' + id, locale: locale.value, matchFound: true }),
+  }).catch(() => { /* analytics must never break the page */ })
+}
+const openModule = async (id: string, via: 'pill' | 'header' | 'link') => {
+  if (!howtoModules.value.some((m) => m.id === id)) return
+  openHowto.value = id
+  recordHowtoOpen(id, via)
+  await nextTick()
+  document.getElementById('howto-' + id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+const toggleModule = (id: string) => {
+  if (openHowto.value === id) { openHowto.value = null; return }
+  openHowto.value = id
+  recordHowtoOpen(id, 'header')
+}
+const openFromHash = (hash: string | undefined) => {
+  const m = /^#howto-([a-z]+)$/.exec(hash || '')
+  if (m) openModule(m[1], 'link')
+}
+watch(() => route.hash, (h) => openFromHash(h))
+onMounted(() => openFromHash(route.hash || window.location.hash))
 
 // --- Dynamic FAQ ---
 const openFaqId = ref<number | null>(null)
@@ -312,7 +379,9 @@ const handleLinkClick = (e: MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
     const href = target.getAttribute('href')!
-    const [path, query] = href.split('?')
+    // Keep the #fragment: /tutorial#howto-device must land on (and open) that module.
+    const [pathAndQuery, fragment] = href.split('#')
+    const [path, query] = pathAndQuery.split('?')
     const queryObj: any = {}
     if (query) {
       query.split('&').forEach(q => {
@@ -320,7 +389,7 @@ const handleLinkClick = (e: MouseEvent) => {
         queryObj[k] = v
       })
     }
-    router.push({ path, query: queryObj })
+    router.push({ path, query: queryObj, ...(fragment ? { hash: '#' + fragment } : {}) })
   }
 }
 
@@ -734,11 +803,26 @@ onUnmounted(() => {
   display: inline-block; padding: 6px 14px; border: 1px solid #e3d9cf; border-radius: 999px;
   font-size: 13px; color: #555; text-decoration: none; background: #fff; transition: .2s;
 }
-.howto-pill:hover { border-color: var(--brand-orange, #f0913a); color: var(--brand-orange, #f0913a); }
-.howto-module { scroll-margin-top: 96px; padding: 32px 0; border-top: 1px solid #efe7de; }
+.howto-pill:hover, .howto-pill.active { border-color: var(--brand-orange, #f0913a); color: var(--brand-orange, #f0913a); }
+.howto-pill.active { background: #fff7ee; }
+.howto-module { scroll-margin-top: 96px; border-top: 1px solid #efe7de; }
 .howto-module:first-of-type { border-top: 0; }
-.howto-module-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
-.howto-module-summary { color: #555; line-height: 1.7; margin-bottom: 20px; }
+.howto-module-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  width: 100%; padding: 22px 4px; background: none; border: 0; text-align: left; cursor: pointer;
+  font: inherit; color: inherit; border-radius: 10px; transition: background .2s;
+}
+.howto-module-head:hover { background: #fff7ee; }
+.howto-module-head:focus-visible { outline: 2px solid var(--brand-orange, #f0913a); outline-offset: 2px; }
+.howto-module-text { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.howto-module-title { font-size: 22px; font-weight: 700; }
+.howto-module-summary { color: #555; line-height: 1.6; font-size: 15px; }
+.howto-module-meta { display: flex; align-items: center; gap: 14px; flex-shrink: 0; color: #8a7b6b; font-size: 13px; }
+.howto-chevron { display: inline-block; font-size: 12px; transition: transform .25s; }
+.howto-module.open .howto-chevron { transform: rotate(180deg); }
+.howto-module-body { padding: 4px 4px 32px; animation: howtoIn .28s ease-out; }
+@keyframes howtoIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .howto-module-body { animation: none; } .howto-chevron { transition: none; } }
 .howto-steps { list-style: none; counter-reset: howto; padding: 0; margin: 0; }
 .howto-step { counter-increment: howto; position: relative; padding-left: 44px; margin-bottom: 28px; }
 .howto-step::before {
@@ -757,7 +841,10 @@ onUnmounted(() => {
 .howto-pending { margin-top: 12px; font-size: 13px; color: #9a8c7c; font-style: italic; }
 @media (max-width: 767px) {
   .howto-title { font-size: 24px; }
-  .howto-module-title { font-size: 20px; }
+  .howto-module-title { font-size: 18px; }
+  .howto-module-head { padding: 16px 0; gap: 12px; }
+  .howto-module-summary { font-size: 14px; }
+  .howto-module-count { display: none; }
   .howto-step { padding-left: 36px; }
   .howto-step::before { width: 26px; height: 26px; font-size: 13px; }
 }

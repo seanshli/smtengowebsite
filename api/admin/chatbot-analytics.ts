@@ -1,27 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { authenticate } from '../../lib/session.js'
 import { supabaseAdmin as supabase } from '../../lib/supabase-admin.js'
-
-type LogRow = {
-    id?: number
-    keyword: string | null
-    locale: string | null
-    match_found: boolean | null
-    created_at: string
-}
-
-type Counter = Record<string, number>
-
-function bump(counter: Counter, key: string) {
-    counter[key] = (counter[key] || 0) + 1
-}
-
-function topN(counter: Counter, n: number): Array<{ keyword: string; count: number }> {
-    return Object.entries(counter)
-        .map(([keyword, count]) => ({ keyword, count }))
-        .sort((a, b) => b.count - a.count)
-        .slice(0, n)
-}
+import { aggregateChatbotRows, type LogRow } from '../../lib/analytics-events.js'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     const user = await authenticate(req, supabase)
@@ -60,65 +40,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         if (error) throw error
 
         const rows: LogRow[] = (data || []) as LogRow[]
-
-        // --- Aggregations ---------------------------------------------------
-        const total = rows.length
-        let matched = 0
-
-        const byLocale: Record<string, { total: number; matched: number }> = {}
-        const topKeywords: Counter = {}
-        const topUnmatched: Counter = {}
-
-        for (const r of rows) {
-            const kwRaw = (r.keyword || '').trim()
-            const kw = kwRaw.toLowerCase()
-            const loc = r.locale || 'unknown'
-            const hit = !!r.match_found
-
-            if (hit) matched += 1
-
-            if (!byLocale[loc]) byLocale[loc] = { total: 0, matched: 0 }
-            byLocale[loc].total += 1
-            if (hit) byLocale[loc].matched += 1
-
-            if (kw) {
-                bump(topKeywords, kw)
-                if (!hit) bump(topUnmatched, kw)
-            }
-        }
-
-        const matchRate = total > 0 ? matched / total : 0
-
-        const byLocaleOut = Object.entries(byLocale)
-            .map(([locale, v]) => ({
-                locale,
-                total: v.total,
-                matched: v.matched,
-                matchRate: v.total > 0 ? v.matched / v.total : 0,
-            }))
-            .sort((a, b) => b.total - a.total)
-
-        const recent = rows.slice(0, limit).map((r) => ({
-            id: r.id,
-            keyword: r.keyword,
-            locale: r.locale,
-            matchFound: !!r.match_found,
-            createdAt: r.created_at,
-        }))
-
-        return res.status(200).json({
-            window: { days, since },
-            totals: {
-                queries: total,
-                matched,
-                unmatched: total - matched,
-                matchRate,
-            },
-            byLocale: byLocaleOut,
-            topKeywords: topN(topKeywords, 25),
-            topUnmatched: topN(topUnmatched, 25),
-            recent,
-        })
+        // howto:<module> / kb:<entry> event rows are split out inside the aggregator so
+        // the chatbot totals and match rate only count questions visitors typed.
+        return res.status(200).json({ window: { days, since }, ...aggregateChatbotRows(rows, limit) })
     } catch (err: any) {
         console.error('chatbot-analytics error:', err)
         return res.status(500).json({ error: 'Could not load analytics' })

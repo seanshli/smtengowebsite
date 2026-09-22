@@ -291,6 +291,10 @@ const handleSearch = () => {
     }
 
     logQuery(currentQuery, !!bestMatch)
+    // Second row per answered question: which entry answered. Ridden into the same
+    // table behind the kb: prefix (see lib/analytics-events.ts) so the admin report
+    // can rank what visitors actually ask about, not just what they typed.
+    if (bestMatch?.id) logQuery('kb:' + String(bestMatch.id), true)
     scrollToBottom()
   }, 800)
 }
