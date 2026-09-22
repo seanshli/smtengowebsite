@@ -22,6 +22,23 @@ describe('palette B holds (design review 2026-09-22, D2): no warm-cream or gold 
     })
 })
 
+describe('AI-SEO entry points exist', () => {
+    const pub = resolve(__dirname, '../../public')
+    it('llms.txt points AI agents at the knowledge base and the store links', () => {
+        const t = readFileSync(resolve(pub, 'llms.txt'), 'utf-8')
+        expect(t).toContain('https://www.smtengo.com/knowledge-base.md')
+        expect(t).toContain('id6680188565')
+        expect(t).toContain('tw.smtengo.engohome.android')
+        expect(t).not.toMatch(/Tuya|塗鴉|Alexa/)
+    })
+    it('robots.txt welcomes AI crawlers and hides admin + api', () => {
+        const r = readFileSync(resolve(pub, 'robots.txt'), 'utf-8')
+        for (const bot of ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended']) expect(r).toContain(`User-agent: ${bot}`)
+        expect(r).toContain('Disallow: /admin/')
+        expect(r).toContain('Sitemap: https://www.smtengo.com/sitemap.xml')
+    })
+})
+
 describe('page templates carry no template tells', () => {
     it('no per-page "brandJournal" eyebrow above the page title', () => {
         for (const f of pages) expect(templateOf(f), f).not.toMatch(/\$t\('brandJournal'\)/)

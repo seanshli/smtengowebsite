@@ -372,10 +372,10 @@
                Both stores list the app as enGo智慧管家 (iOS tw.smtengo.engohome.ios = id6680188565,
                Android tw.smtengo.engohome.android). An English reader searching "enGo HMS" finds neither. -->
           <p data-reveal class="interfaces-stores mt-12">
-            <a href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener">
+            <a href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="product:app-store">
               <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" height="40" loading="lazy" />
             </a>
-            <a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener">
+            <a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="product:google-play">
               <img class="badge-google" src="/images/badges/google-play-en.png" alt="Get it on Google Play" height="60" loading="lazy" />
             </a>
           </p>

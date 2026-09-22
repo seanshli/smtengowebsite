@@ -1,4 +1,28 @@
+# www.smtengo.com
+# Everything public is crawlable. The admin UI and the serverless API are not
+# content, so they are excluded for every agent.
+
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# AI assistants and answer engines are welcome (AI-SEO / AEO). They are already
+# covered by "*", but naming them makes the intent explicit and survives a
+# future tightening of the default group. Start at /llms.txt.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: CCBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 Sitemap: https://www.smtengo.com/sitemap.xml

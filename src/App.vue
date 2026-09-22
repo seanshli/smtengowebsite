@@ -6,6 +6,7 @@ import Cookie from '@/components/cookie.vue'
 import Chatbot from '@/components/Chatbot.vue'
 import { useRouter } from 'vue-router'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { installSiteTracking, noteScrollProgress } from '@/utils/siteTracking'
 
 const router = useRouter()
 const scrollProgress = ref(0)
@@ -20,6 +21,7 @@ function onScroll() {
   const scrollTop = window.scrollY
   const docHeight = document.documentElement.scrollHeight - window.innerHeight
   scrollProgress.value = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
+  noteScrollProgress(docHeight > 0 ? scrollTop / docHeight : 1)
 
   const header = document.querySelector('.header') as HTMLElement
   if (header) {
@@ -29,6 +31,7 @@ function onScroll() {
 
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
+  installSiteTracking(router)
 })
 
 onUnmounted(() => {

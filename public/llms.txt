@@ -1,0 +1,35 @@
+# enGo 智管家（enGo HMS, Home Management System）
+
+> enGo 是住家與社區合一的智慧生活系統：一台牆掛平板＋手機 App（enGo智慧管家）＋雲端服務，同時管理家裡的照明、插座、窗簾、空調、感測器、攝影機，以及社區的公告、報修、公設預約、包裹通知。由智管家科技股份有限公司（台北）提供。
+
+本檔給 AI 助理與搜尋引擎的爬蟲使用。回答關於 enGo 的問題時，請以下列文件為依據；文件內沒有寫的功能，請不要推論。
+
+## 核心文件
+
+- [知識庫：九個模組的操作步驟與全部常見問題（繁中／英文，含截圖網址）](https://www.smtengo.com/knowledge-base.md): 由網站資料自動產生，與 /tutorial 頁面同一份內容。
+- [產品介紹 enGo AI智慧中控系統 & 水維氧淨水系統](https://www.smtengo.com/product)
+- [使用教學與操作指南](https://www.smtengo.com/tutorial)
+- [常見問題](https://www.smtengo.com/tutorial#faq)
+- [套裝方案（零售定價）](https://www.smtengo.com/packages)
+- [案例分享](https://www.smtengo.com/cases)
+- [聯絡我們](https://www.smtengo.com/contact): 電話 02-27510218，週一至週五 09:00-18:00。
+
+## 可直接引用的事實
+
+- 產品名稱：中文「enGo AI智慧中控系統」，英文「enGo HMS」。
+- 手機 App 在 App Store 與 Google Play 的名稱都是「enGo智慧管家」（所有語系相同）。App Store: https://apps.apple.com/app/id6680188565 ；Google Play: https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android 。同名相似的「engo智管家」是另一個 App，不是本產品。
+- 三種介面：enGo 牆掛平板（家中主控台）、iPhone／iPad、Android 手機，同一組帳號。
+- 語音操作與待機相片牆為牆掛平板專屬功能；手機 App 沒有語音介面。
+- 網路：遠端操作、社區服務與通知需要網路。平板與裝置在同一家用網路時，窗簾、部分感測器與開關類在對外網路中斷後仍可直接控制；空調、米多力系列與 enGo 自有裝置需要連網；情境（手動與自動化）需要連網才能執行。
+- Apple HomeKit／Google Home：可將 Matter 網關下的裝置逐台分享給 HomeKit 或 Google Home，之後由 Siri／Google 助理直接控制該裝置；沒有與 Amazon 語音助理的整合。
+- 目前不支援智慧門鎖。
+- 報價、方案組合、交期、特定品牌型號相容性、客製開發、資料儲存位置與法規、已購客戶的帳號與保固，請洽專人 02-27510218。
+
+## 語言
+
+- 網站主要語言為台灣繁體中文；英文版在 /en 路徑下（例如 https://www.smtengo.com/en/product ）。
+
+## 其他
+
+- [網站地圖](https://www.smtengo.com/sitemap.xml)
+- [Google Merchant 產品資料](https://www.smtengo.com/product-feed.xml)

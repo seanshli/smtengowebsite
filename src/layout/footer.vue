@@ -48,10 +48,10 @@
 
       <div class="ft-bottom">
         <div class="ft-social">
-          <a href="https://www.facebook.com/smtengo" target="_blank" rel="me noopener noreferrer">Facebook</a>
-          <a href="https://lin.ee/THIUSjW" target="_blank" rel="me noopener noreferrer">LINE</a>
-          <a href="https://www.instagram.com/engo_smtengo" target="_blank" rel="me noopener noreferrer">Instagram</a>
-          <a href="https://www.youtube.com/@enGo%E6%99%BA%E6%85%A7%E7%AE%A1%E5%AE%B6" target="_blank" rel="me noopener noreferrer">YouTube</a>
+          <a href="https://www.facebook.com/smtengo" data-track="footer:facebook" target="_blank" rel="me noopener noreferrer">Facebook</a>
+          <a href="https://lin.ee/THIUSjW" data-track="footer:line" target="_blank" rel="me noopener noreferrer">LINE</a>
+          <a href="https://www.instagram.com/engo_smtengo" data-track="footer:instagram" target="_blank" rel="me noopener noreferrer">Instagram</a>
+          <a href="https://www.youtube.com/@enGo%E6%99%BA%E6%85%A7%E7%AE%A1%E5%AE%B6" data-track="footer:youtube" target="_blank" rel="me noopener noreferrer">YouTube</a>
         </div>
 
         <div class="ft-meta">
