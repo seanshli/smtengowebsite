@@ -25,7 +25,7 @@
                Shown at its true aspect in a frame that emerges from the section edge; a
                tall frame with cover-fit turned it into "neither iPhone nor Android". -->
           <div class="hm-phone hm-phone-hero">
-            <img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="1130" loading="eager" />
+            <img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="720" loading="eager" />
           </div>
         </figure>
       </div>
@@ -53,7 +53,7 @@
           </div>
           <div class="hm-if-item">
             <div class="hm-phone-well">
-              <div class="hm-phone"><img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="1130" loading="lazy" /></div>
+              <div class="hm-phone"><img src="/images/screens/07-home-phone.png" :alt="T.altPhone" width="1080" height="720" loading="lazy" /></div>
             </div>
             <div class="hm-if-cap"><strong>{{ T.ifAndroid }}</strong><span>{{ T.ifAndroidCap }}</span><a class="hm-store hm-store-inline" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play"><img src="/images/badges/google-play-en.png" alt="Get it on Google Play" height="40" loading="lazy" /></a></div>
           </div>
@@ -106,7 +106,7 @@
           </ul>
         </div>
         <div class="hm-bms-media" data-reveal-group>
-          <div class="hm-plate hm-plate-land"><img src="/images/screens/08-announcements-phone.png" :alt="T.altAnnounce" width="1080" height="620" loading="lazy" /></div>
+          <div class="hm-plate hm-plate-land"><img src="/images/screens/09-announcement-tablet.png" :alt="T.altAnnounce" width="2000" height="1148" loading="lazy" /></div>
           <router-link :to="'/cases/' + bmsCase.id" class="hm-photo hm-photo-land" v-if="bmsCase">
             <img :src="bmsCase.image" :alt="pick(bmsCase.title)" loading="lazy" />
             <div class="hm-photo-cap"><strong>{{ pick(bmsCase.title) }}</strong><span>{{ pick(bmsCase.category) }}</span></div>
@@ -297,7 +297,7 @@ $navy-2: $grey-blue2;
   img { display: block; width: 100%; height: auto; border-radius: 14px; }
 }
 .hm-plate-tall img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
-.hm-plate-land img { aspect-ratio: 1080 / 620; object-fit: cover; object-position: top; }
+.hm-plate-land img { aspect-ratio: 2000 / 1148; object-fit: cover; object-position: top; }
 
 // Phone frame open at the bottom: the capture is the top of the screen, so the frame
 // is cut by its container instead of the image being zoomed to fill a tall frame.
