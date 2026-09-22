@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "npm run gen:knowledge",
     "dev": "vite",
     "gen:knowledge": "node scripts/gen-knowledge-md.mjs",
     "prebuild": "npm run gen:knowledge",
