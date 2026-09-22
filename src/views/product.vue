@@ -1051,11 +1051,12 @@ export default defineComponent({
       voice: null,
       floorplan: '/images/screens/03-floorplan-tablet-device.png',
       photowall: null,
-      inventory: '/images/screens/05-warehouse-tablet-device.png'
+      // 2026-09-22: the only inventory capture shows third-party product names — text-only until a clean capture exists.
+      inventory: null
     }
     const interfaceImages: Record<'ios' | 'android', string | null> = {
       ios: null,
-      android: '/images/screens/07-home-phone.png'
+      android: null   // only a cropped Android shot exists; the store badges carry the platforms
     }
     const router = useRouter()
     const hasHeader = ref(true)

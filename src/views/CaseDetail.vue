@@ -247,6 +247,8 @@ onMounted(() => {
         }
 
         .title {
+          color: #fff !important; text-shadow: 0 2px 14px rgba(0, 0, 0, .6);
+
           font-family: 'Noto Serif TC', serif;
           font-weight: 900;
           font-size: clamp(2rem, 5vw, 3.2rem);
