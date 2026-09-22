@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { buildHtml } from './prerender-meta.mjs'
+import { buildHtml, jsonLdFor } from './prerender-meta.mjs'
 
 // Minimal stand-in for index.html: the tags the prerenderer rewrites, in the
 // order they appear in the real shell.
@@ -20,6 +20,35 @@ const TEMPLATE = `<!doctype html>
 </html>`
 
 const count = (html: string, re: RegExp) => (html.match(re) ?? []).length
+
+describe('prerender structured data (AI-SEO)', () => {
+  it('/tutorial shells carry a FAQPage and a HowTo list, in the shell language', () => {
+    const zh = buildHtml(TEMPLATE, '/tutorial', 'zh')
+    expect(count(zh, /data-prerender/g)).toBe(2)
+    expect(zh).toContain('"@type":"FAQPage"')
+    expect(zh).toContain('"@type":"HowTo"')
+    expect(zh).toContain('#howto-device')
+    const en = buildHtml(TEMPLATE, '/tutorial', 'en')
+    expect(en).toContain('https://www.smtengo.com/en/tutorial#howto-device')
+    // markdown never leaks into schema text
+    expect(zh).not.toMatch(/data-prerender>[^<]*\]\(/)
+  })
+  it('the app appears as a MobileApplication on / and /product with both store URLs and the listed name', () => {
+    for (const route of ['/', '/product']) {
+      const blocks = jsonLdFor(route, 'en')
+      const app = blocks.find((b: any) => b['@type'] === 'MobileApplication') as any
+      expect(app.name).toBe('enGo智慧管家')
+      expect(app.installUrl).toEqual(expect.arrayContaining(['https://apps.apple.com/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android']))
+    }
+    expect(jsonLdFor('/cases', 'zh')).toEqual([])
+  })
+  it('the postbuild pass does not duplicate structured data', () => {
+    const first = buildHtml(TEMPLATE, '/tutorial', 'zh')
+    const second = buildHtml(first, '/', 'zh')
+    expect(count(second, /data-prerender/g)).toBe(1)   // only the home page's MobileApplication
+    expect(second).not.toContain('FAQPage')
+  })
+})
 
 describe('prerender buildHtml', () => {
   it('adds exactly one twitter:description on a fresh template', () => {

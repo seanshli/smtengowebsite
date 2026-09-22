@@ -78,6 +78,71 @@ const ROUTES = {
   }
 }
 
+const HERE = dirname(fileURLToPath(import.meta.url))
+const readJson = (rel) => JSON.parse(readFileSync(join(HERE, '..', rel), 'utf-8'))
+// Markdown links / bold → plain text for schema.org `text` fields.
+const plain = (s) => String(s || '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\*\*/g, '').replace(/\s*\n+\s*/g, ' ').trim()
+const pickL = (o, L) => (o && (o[L] ?? o.zh ?? o.en)) || ''
+
+/**
+ * Structured data for crawlers and answer engines (AI-SEO). Lives in the static
+ * shells, not the SPA bundle, so it is there before any JavaScript runs.
+ * Claims mirror KB-001 / the site copy; nothing new is asserted here.
+ */
+export function jsonLdFor(route, lang) {
+  const L = lang === 'en' ? 'en' : 'zh'
+  const prefix = lang === 'en' ? EN_PREFIX : ''
+  const blocks = []
+  if (route === '/' || route === '/product') {
+    blocks.push({
+      '@context': 'https://schema.org', '@type': 'MobileApplication',
+      name: 'enGo智慧管家', alternateName: 'enGo HMS',
+      operatingSystem: 'iOS, Android', applicationCategory: 'LifestyleApplication',
+      description: L === 'en'
+        ? 'Companion app for the enGo home management system: device control, scenes, floor plan and community services on iPhone, iPad and Android. Listed on both stores as enGo智慧管家.'
+        : 'enGo AI智慧中控系統的手機 App：家電控制、情境、平面圖與社區服務，iPhone、iPad 與 Android 皆可用，商店名稱為 enGo智慧管家。',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'TWD' },
+      installUrl: ['https://apps.apple.com/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android'],
+      publisher: { '@type': 'Organization', name: '智管家科技股份有限公司', url: BASE },
+    })
+  }
+  if (route === '/tutorial') {
+    const faqs = readJson('src/data/faqs.json')
+    const howto = readJson('src/data/howto.json').modules || []
+    blocks.push({
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: faqs.slice(0, 30).map((f) => ({
+        '@type': 'Question', name: plain(pickL(f.question, L)),
+        acceptedAnswer: { '@type': 'Answer', text: plain(pickL(f.answer, L)) },
+      })),
+    })
+    blocks.push({
+      '@context': 'https://schema.org', '@type': 'ItemList',
+      name: L === 'en' ? 'enGo how-to guides' : 'enGo 操作指南',
+      itemListElement: howto.map((m, i) => {
+        const shot = (m.steps || []).find((s) => s.image)
+        return {
+          '@type': 'ListItem', position: i + 1,
+          item: {
+            '@type': 'HowTo', name: pickL(m.title, L), description: plain(pickL(m.summary, L)),
+            url: `${BASE}${prefix}/tutorial#howto-${m.id}`,
+            ...(shot ? { image: BASE + shot.image } : {}),
+            step: (m.steps || []).map((s, j) => ({
+              '@type': 'HowToStep', position: j + 1, name: pickL(s.title, L), text: plain(pickL(s.body, L)),
+              ...(s.image ? { image: BASE + s.image } : {}),
+            })),
+          },
+        }
+      }),
+    })
+  }
+  return blocks
+}
+
+const ldScripts = (route, lang) => jsonLdFor(route, lang)
+  .map((b) => `  <script type="application/ld+json" data-prerender>${JSON.stringify(b).replace(/</g, '\\u003c')}</script>`)
+  .join('\n')
+
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 /** Real alternates: two distinct URLs, which is what makes hreflang valid. */
@@ -115,6 +180,11 @@ export function buildHtml(template, route, lang) {
   html = html.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${esc(url)}" />\n${hreflangBlock(route)}`)
   // The served document should declare the language it is actually in.
   html = html.replace(/<html lang="[^"]*"/, `<html lang="${lang === 'en' ? 'en' : 'zh-Hant'}"`)
+  // Structured data: strip what a previous pass injected (idempotency, same reason
+  // as the alternates above), then add this route's blocks right before </head>.
+  html = html.replace(/[ \t]*<script type="application\/ld\+json" data-prerender>[\s\S]*?<\/script>\n?/g, '')
+  const ld = ldScripts(route, lang)
+  if (ld) html = html.replace('</head>', `${ld}\n</head>`)
   return html
 }
 

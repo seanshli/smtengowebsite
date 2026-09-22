@@ -8,13 +8,13 @@
     <nav class="menu-container">
       <!-- 最新消息 lives on the home page (#news), so it hangs off 首頁 -->
       <div class="dropdown dropdown-spacing-right">
-        <router-link to="/" class="dropdown-trigger">{{ $t('homeTitle') }}</router-link>
+        <router-link to="/" class="dropdown-trigger" data-track="nav:home">{{ $t('homeTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
         </div>
       </div>
       <div class="dropdown dropdown-spacing-right">
-        <router-link to="/brand" class="dropdown-trigger">{{ $t('aboutTitle') }}</router-link>
+        <router-link to="/brand" class="dropdown-trigger" data-track="nav:about">{{ $t('aboutTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link to="/brand">{{ $t('brand.brandStoryTitle') }}</router-link>
           <router-link to="/core">{{ $t('coreValueTitle') }}</router-link>
@@ -26,25 +26,25 @@
       </div>
 
       <div class="dropdown">
-        <router-link to="/product" class="dropdown-trigger">{{ $t('productTitle') }}</router-link>
+        <router-link to="/product" class="dropdown-trigger" data-track="nav:product">{{ $t('productTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
           <router-link to="product?jump=oxygen">{{ $t('footer.secondLink') }}</router-link>
           <router-link to="/enviro">{{ $t('enviroTitle') }}</router-link>
         </div>
       </div>
-      <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
+      <router-link to="/packages" data-track="nav:packages">{{ $t('product.packages.tag') }}</router-link>
       
-      <a @click="toMall">{{ $t('mallTitle') }}</a>
+      <a @click="toMall" data-track="nav:mall">{{ $t('mallTitle') }}</a>
       <!-- 常見問題 is a section of 使用教學, so it hangs off it -->
       <div class="dropdown">
-        <router-link to="/tutorial" class="dropdown-trigger">{{ $t('tutorialTitle') }}</router-link>
+        <router-link to="/tutorial" class="dropdown-trigger" data-track="nav:tutorial">{{ $t('tutorialTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link :to="{ path: '/tutorial', hash: '#faq' }">{{ $t('faqTitle') }}</router-link>
         </div>
       </div>
-      <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
-      <router-link to="/contact">{{ $t('contactTitle') }}</router-link>
+      <router-link to="/cases" data-track="nav:cases">{{ $t('casesTitle') }}</router-link>
+      <router-link to="/contact" data-track="nav:contact">{{ $t('contactTitle') }}</router-link>
       <select
         v-model="selectedLanguage"
         @change="changeLanguage"

@@ -43,6 +43,32 @@
       </p>
     </section>
 
+    <!-- Site behaviour (site_events): what visitors look at and click. Any admin may read it. -->
+    <section v-if="site" class="insights">
+      <div class="insights-header">
+        <h2>{{ LS.title }}</h2>
+        <label class="insights-window">{{ L.window }}
+          <select v-model.number="siteDays" @change="fetchSite">
+            <option :value="7">7</option><option :value="30">30</option><option :value="90">90</option>
+          </select>
+        </label>
+      </div>
+      <p v-if="site.tableMissing" class="insight-empty">{{ LS.missing }}</p>
+      <template v-else>
+        <p class="insights-foot" style="margin: 0 0 14px">
+          {{ LS.pv }}: {{ site.totals.pageViews }} · {{ LS.events }}: {{ site.totals.events }} ·
+          {{ LS.depth }}: 25% {{ pct(site.scrollDepth['25']) }} / 50% {{ pct(site.scrollDepth['50']) }} / 75% {{ pct(site.scrollDepth['75']) }} / 100% {{ pct(site.scrollDepth['100']) }}
+        </p>
+        <div class="insights-grid">
+          <div class="insight-card" v-for="card in siteCards" :key="card.key">
+            <h3>{{ card.title }}</h3>
+            <ol v-if="card.rows.length"><li v-for="r in card.rows" :key="r.key"><span>{{ r.key }}</span><b>{{ r.count }}</b></li></ol>
+            <p v-else class="insight-empty">{{ L.empty }}</p>
+          </div>
+        </div>
+      </template>
+    </section>
+
     <div class="tabs-container">
       <button 
         v-for="tab in ['all', 'pending', 'processing', 'completed']" 
@@ -163,6 +189,34 @@ const howtoTitle = (id: string) => {
   const title = m?.title
   return title ? (title[locale.value] ?? title.zh) : id
 }
+// ── Site behaviour (api/admin/site-analytics) ──────────────────────────
+const SITE_LABELS: Record<string, Record<string, string>> = {
+  zh: { title: '站內行為：大家看什麼、點什麼', pv: '頁面瀏覽', events: '事件數', depth: '捲動深度（到達比例）',
+        pages: '最多人看的頁面', sections: '最多人看到的區塊', clicks: '最多人點的元素', cta: '預約體驗按鈕（依位置）', outbound: '外部連結',
+        missing: '尚未建立 site_events 資料表。請在 Supabase SQL 編輯器執行 repo 內的 supabase_site_events.sql，之後這裡就會開始有資料。' },
+  en: { title: 'On-site behaviour: what people view and click', pv: 'Page views', events: 'Events', depth: 'Scroll depth (share reaching)',
+        pages: 'Most viewed pages', sections: 'Most seen sections', clicks: 'Most clicked elements', cta: 'Book-a-visit clicks by location', outbound: 'Outbound links',
+        missing: 'The site_events table does not exist yet. Run supabase_site_events.sql in the Supabase SQL editor and data will start to appear here.' },
+}
+const LS = computed(() => SITE_LABELS[locale.value] || SITE_LABELS.zh)
+const site = ref<any>(null)
+const siteDays = ref(30)
+const pct = (v: number) => `${Math.round((v || 0) * 100)}%`
+const siteCards = computed(() => !site.value || site.value.tableMissing ? [] : [
+  { key: 'pages', title: LS.value.pages, rows: site.value.topPages },
+  { key: 'sections', title: LS.value.sections, rows: site.value.topSections },
+  { key: 'clicks', title: LS.value.clicks, rows: site.value.topClicks },
+  { key: 'cta', title: LS.value.cta, rows: site.value.ctaByLocation },
+  { key: 'outbound', title: LS.value.outbound, rows: site.value.topOutbound },
+])
+const fetchSite = async () => {
+  try {
+    const token = localStorage.getItem('admin_token')
+    const res = await fetch(`/api/admin/site-analytics?days=${siteDays.value}`, { headers: { 'Authorization': `Bearer ${token}` } })
+    site.value = res.ok ? await res.json() : null
+  } catch { site.value = null }
+}
+
 const fetchInsights = async () => {
   try {
     const token = localStorage.getItem('admin_token')
@@ -263,7 +317,7 @@ const saveChanges = async () => {
   }
 }
 
-onMounted(() => { fetchData(); fetchInsights() })
+onMounted(() => { fetchData(); fetchInsights(); fetchSite() })
 </script>
 
 <style scoped lang="scss">
