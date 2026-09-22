@@ -310,6 +310,50 @@ export const enLocale = {
   backToHome: 'Return to Homepage',
 
   product: {
+    // Water-system section (水維氧). Until 2026-09-22 these keys existed only in zh,
+    // so /en/product showed the whole section in Chinese. Wording mirrors zh.ts.
+    engo_products: {
+      two: 'Two', twoMachines: 'systems, one home', btn: 'Smart features',
+      info: 'Every stage from intake to tap is watched, and filter status is visible on the hub',
+      title01: 'Shui Wei Yang AI smart water system', title02: 'enGo AI control tablet',
+    },
+    water_filter: {
+      title: 'Shui Wei Yang AI smart water system',
+      subTitle: 'Certified by {quality} and {valid}, with strict checks at every stage.',
+      quality: 'SGS water-quality testing', valid: 'BSMI product inspection',
+      filterCore01: 'Integrated water-circuit board', filterCore02: 'Triple filter cartridges',
+    },
+    filter_strength: {
+      tag: 'Product features', title: 'Tankless design: leak-safe, no bacterial build-up',
+      desc: 'No complex tubing to leak. No storage tank to collect grime or grow bacteria.',
+      water_loop01: 'Fewer pipe joints', water_loop02: 'Full use of the housing space', water_loop03: 'No leak risk', water_loop04: 'Withstands high pressure',
+    },
+    filter_types: { title: 'Multi-stage filtration: good cartridges, water you can drink freely' },
+    filter_levels: {
+      title: 'Imported RO with AI-managed filtration, for peace of mind',
+      subTitle: 'Deep, precise filtration removes sediment, suspended solids, residual chlorine, benzene, formaldehyde, heavy metals, bacteria, viruses and odours, leaving clean mineral water...',
+      detail: 'Read more',
+    },
+    filter_si: {
+      title: '{si}-rich, low-sodium water with molecular mineralisation',
+      si: 'Strontium',
+      desc: 'Our spring-clean molecular mineralisation adds a mineral layer modelled on natural spring sources, binding strontium atoms to water molecules for strontium-rich, low-sodium water that tastes better and supports bone density and calcium metabolism; moderate intake also helps protect teeth and strengthen bone marrow.',
+    },
+    baby_intro: { title: 'Clean, slightly sweet taste', desc: 'Mildly sweet, so children drink more; tea and coffee come out cleaner and brighter.' },
+    advantages: 'Product advantages',
+    filter_list: {
+      title: 'Shui Wei Yang AI smart water system',
+      list01: { title: 'Leak detection with automatic shut-off', desc: 'Smart leak monitoring shuts the water off immediately and alerts you.' },
+      list02: { title: 'Live TDS reading', desc: 'The control hub shows current TDS and consumption in real time, so water quality is visible and drinking is worry-free.' },
+      list03: { title: 'Smart filter reminders', desc: 'When a cartridge drops below 10% of its life, the enGo AI system prompts you to replace it.' },
+      list04: {
+        title: 'Conventional purifiers',
+        desc01: 'No way to know the current state of the drinking water, so quality is hard to assure.',
+        desc02: 'A leak cannot be handled the moment it happens.',
+        desc03: 'Cartridge status is unknown, so replacement timing is guesswork.',
+      },
+    },
+    competitor: { tag: 'Comparison', title: 'Shui Wei Yang AI smart water system' },
     tablet_intro: {
       title: 'The All-in-One AI Home Manager',
       tagline: 'Everything at home, everything in your community — on one wall.',
@@ -361,6 +405,8 @@ export const enLocale = {
       }
     },
     purchase: {
+      tag: 'How to buy', flag: 'Special price', title: 'Early-bird price',
+      desc: '*Includes the enGo AI control tablet, the Shui Wei Yang AI smart water system, three years of filter cartridges and installation',
       btn: 'Buy Now'
     },
     reviews: {

@@ -116,11 +116,36 @@
       </div>
 
       <!-- Popularity badge -->
-      <p class="faq-sort-hint tac mb-20" v-if="activeFaqFilter === 'all'">
+      <p class="faq-sort-hint tac mb-20" v-if="false">
         <span class="sort-icon">&#x1F525;</span> {{ faqSortLabel }}
       </p>
 
-      <div class="faq-container">
+      <!-- "全部" shows the 41 questions grouped by category, each group folded
+           except the first, so the page reads as ten headings instead of one
+           forty-item list (design review 2026-09-22). A category chip shows a flat list. -->
+      <div v-if="activeFaqFilter === 'all'" class="faq-groups">
+        <section v-for="g in faqGroups" :key="g.key" class="faq-group" :class="{ open: openFaqGroups.has(g.key) }">
+          <button type="button" class="faq-group-head" :aria-expanded="openFaqGroups.has(g.key) ? 'true' : 'false'" @click="toggleFaqGroup(g.key)">
+            <span class="faq-group-title">{{ g.label }}</span>
+            <span class="faq-group-meta"><span class="faq-group-count">{{ g.items.length }}</span><span class="faq-group-chevron" aria-hidden="true">&#x25BC;</span></span>
+          </button>
+          <div v-if="openFaqGroups.has(g.key)" class="faq-container">
+            <div v-for="faq in g.items" :key="faq.id" class="faq-item" :class="{ open: openFaqId === faq.id }" @click="toggleFaq(faq)">
+              <div class="faq-header">
+                <h3 class="question">Q: {{ (faq.question as any)[locale] || (faq.question as any)['zh'] }}</h3>
+                <span class="faq-toggle" :class="{ rotated: openFaqId === faq.id }">&#x25BC;</span>
+              </div>
+              <transition name="faq-expand">
+                <div v-if="openFaqId === faq.id" class="faq-body">
+                  <p class="answer" @click="handleLinkClick" v-html="'A: ' + renderStepContent((faq.answer as any)[locale] || (faq.answer as any)['zh'])"></p>
+                </div>
+              </transition>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div v-else class="faq-container">
         <div
           v-for="faq in sortedFaqs"
           :key="faq.id"
@@ -312,6 +337,24 @@ const faqCategories = computed(() => {
   }
   return cats
 })
+
+// Grouped view for "all": category order follows faqCategoryMap, items sorted by
+// popularity inside each group. First group open by default; the rest fold.
+const openFaqGroups = ref<Set<string>>(new Set())
+const faqGroups = computed(() => {
+  const byClicks = (a: any, b: any) => (faqClicks.value[b.id] || 0) - (faqClicks.value[a.id] || 0)
+  return Object.keys(faqCategoryMap)
+    .filter((k) => k !== 'all')
+    .map((key) => ({ key, label: faqCategoryMap[key][locale.value] || key, items: faqs.value.filter((f: any) => f.category === key).sort(byClicks) }))
+    .filter((g) => g.items.length)
+})
+watch(faqGroups, (groups) => { if (!openFaqGroups.value.size && groups.length) openFaqGroups.value = new Set([groups[0].key]) }, { immediate: true })
+const toggleFaqGroup = (key: string) => {
+  const next = new Set(openFaqGroups.value)
+  if (next.has(key)) next.delete(key); else next.add(key)
+  openFaqGroups.value = next
+  trackEvent('faq_group_toggle', { category: key, open: next.has(key) })
+}
 
 // Sorted by popularity (click count) when showing "all"
 const sortedFaqs = computed(() => {
@@ -599,6 +642,23 @@ onUnmounted(() => {
       max-width: 800px;
       margin: 0 auto;
     }
+
+    .faq-groups { max-width: 800px; margin: 0 auto; }
+    .faq-group { border-top: 1px solid #D8DFE8; &:first-child { border-top: 0; } }
+    .faq-group-head {
+      width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 18px 4px; background: none; border: 0; cursor: pointer; font: inherit; color: inherit; text-align: left;
+      border-radius: 10px; transition: background .2s;
+      &:hover { background: #EEF3F8; }
+      &:focus-visible { outline: 2px solid var(--brand-orange, #e05a35); outline-offset: 2px; }
+    }
+    .faq-group-title { font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 1.25rem; color: #152939; }
+    .faq-group-meta { display: flex; align-items: center; gap: 12px; color: #5B6470; font-size: .9rem; }
+    .faq-group-count { min-width: 28px; height: 28px; padding: 0 8px; display: inline-grid; place-items: center; border-radius: 999px; background: #E9EEF4; font-weight: 700; color: #152939; }
+    .faq-group-chevron { font-size: 12px; transition: transform .25s; }
+    .faq-group.open .faq-group-chevron { transform: rotate(180deg); }
+    .faq-group .faq-container { padding: 4px 0 18px; }
+    @media (prefers-reduced-motion: reduce) { .faq-group-chevron { transition: none; } }
 
     .faq-item {
       background: #fff;
