@@ -80,7 +80,7 @@
               <!-- §3.2 shot #8, cropped to the two real notices (違規勸導／社區除蟲通知);
                    the same screen also carried a／b／123／test entries. -->
               <figure class="intro-figure">
-                <img src="/images/screens/08-announcements-phone.png" :alt="$t('product.brand_intro.communityFigure')" loading="lazy" />
+                <img src="/images/screens/09-announcement-tablet.png" :alt="$t('product.brand_intro.communityFigure')" loading="lazy" />
                 <figcaption>{{ $t('product.brand_intro.communityFigure') }}</figcaption>
               </figure>
               <p class="fz-20 lh-34 fz-tab-17 lh-tab-28 fz-mob-15 lh-mob-25">

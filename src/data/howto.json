@@ -7,8 +7,8 @@
     },
     "updated": "2026-09-22",
     "note": {
-      "zh": "截圖取自「模型屋」示範住家，於 enGo 3.2.2（建置 489）正式建置實機擷取。標記 imagesPending 的模組其圖片尚未以現行版本重拍。",
-      "en": "Screenshots were captured on the Model Home demo household running enGo 3.2.2 (build 489) release build. Modules flagged imagesPending do not yet have screenshots re-taken on the current version."
+      "zh": "截圖取自「模型屋」示範住家與智管家實驗社區帳號，於 enGo 3.2.2（建置 489）正式建置實機擷取，僅裁切、未修圖。",
+      "en": "Screenshots were captured on the Model Home demo household and the enGo test-community account running enGo 3.2.2 (build 489) release build; cropped only, never retouched."
     }
   },
   "modules": [
@@ -393,7 +393,7 @@
             "zh": "左側欄的公布欄列出社區公告與通知，未讀會標記。點進去看完整全文，例如除蟲通知的施作時間、區域與注意事項。",
             "en": "The bulletin board in the left rail lists community announcements and notices, with unread ones marked. Open one for the full text — for example a pest-control notice with its time, area and precautions."
           },
-          "image": null
+          "image": "/images/howto/community/03-announce-detail.png"
         },
         {
           "title": {
@@ -413,7 +413,7 @@
           "en": "Parcel notices come through the same channel. If you are not getting them, check notification permission in Settings first."
         }
       ],
-      "imagesPending": true
+      "imagesPending": false
     },
     {
       "id": "service",
@@ -437,7 +437,7 @@
             "zh": "左側欄的報修 → 新增，填寫維修項目與描述，可附照片。送出後系統產生工單編號。",
             "en": "Repairs in the left rail → New. Describe the item and the problem, and attach photos. Submitting creates a work-order number."
           },
-          "image": null
+          "image": "/images/howto/service/02-workorder-new.png"
         },
         {
           "title": {
@@ -448,7 +448,7 @@
             "zh": "工單列表顯示編號、維修項目、狀態與建立時間，右側可查看詳情。狀態變更會推播通知。",
             "en": "The list shows the number, item, status and creation time, with details on the right. Status changes are pushed to you."
           },
-          "image": null
+          "image": "/images/howto/service/01-workorder-list.png"
         }
       ],
       "tips": [
@@ -457,7 +457,7 @@
           "en": "One photo usually saves a round trip of questions."
         }
       ],
-      "imagesPending": true
+      "imagesPending": false
     },
     {
       "id": "reservation",
@@ -481,7 +481,7 @@
             "zh": "可預約項目頁以卡片列出設施名稱、位置、總人數限制與費率。",
             "en": "The facilities page lists each one as a card with its name, location, capacity and rate."
           },
-          "image": null
+          "image": "/images/howto/reservation/01-facilities.png"
         },
         {
           "title": {
@@ -492,7 +492,7 @@
             "zh": "點進設施看項目資訊、說明、規格與注意事項，右側填預約日期、開始與結束時間、成人與兒童人數，送出即完成。",
             "en": "Open a facility to see its information, description, specifications and rules; on the right choose the date, start and end time, and the number of adults and children, then submit."
           },
-          "image": null
+          "image": "/images/howto/reservation/02-book.png"
         },
         {
           "title": {
@@ -503,7 +503,7 @@
             "zh": "預約紀錄分頁列出過去與未來的預約，可在規定時限內取消。",
             "en": "The history tab lists past and upcoming bookings; you can cancel within the allowed window."
           },
-          "image": null
+          "image": "/images/howto/reservation/03-history.png"
         }
       ],
       "tips": [
@@ -512,7 +512,7 @@
           "en": "Cancellation windows differ by community — check the facility's rules tab."
         }
       ],
-      "imagesPending": true
+      "imagesPending": false
     },
     {
       "id": "warehouse",
@@ -547,7 +547,7 @@
             "zh": "上方四個數字是物品總數、櫃位總數、分類總數與低庫存數量。可用房間分頁篩選，或用右上放大鏡搜尋。",
             "en": "The four figures on top are total items, cabinets, categories and low-stock count. Filter by room with the tabs, or search with the magnifier at the top right."
           },
-          "image": null
+          "image": "/images/howto/warehouse/01-overview.png"
         },
         {
           "title": {
@@ -558,7 +558,7 @@
             "zh": "物品卡片可編輯、調整數量、變更位置與查看資訊。「異動位置」對話框會顯示目前存放位置（房間 → 櫃位）與數量，設定搬移數量後即可改房間或改櫃位。",
             "en": "Each item card lets you edit it, adjust the quantity, change its location or view details. The move dialog shows the current location (room → cabinet) and quantity; set how many to move, then choose a new room or cabinet."
           },
-          "image": null
+          "image": "/images/howto/warehouse/02-move-item.png"
         }
       ],
       "tips": [
@@ -567,7 +567,7 @@
           "en": "Low-stock alerts only work once you set a threshold on the item. For things with a service life, such as filters, record the replacement date too."
         }
       ],
-      "imagesPending": true
+      "imagesPending": false
     }
   ]
 }
