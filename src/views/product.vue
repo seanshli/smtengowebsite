@@ -1046,7 +1046,12 @@ export default defineComponent({
     //               and the wake method is unconfirmed. Stays text-only until told.
     //   photowall → shot #4 delivered, but it shows a MEDOLE catalogue page rather
     //               than family photos; kept text-only (2026-09-11 feedback).
-    //   ios       → shot #6 not available. Never substitute the Android shot.
+    //   ios       → 2026-09-23: filled with a REAL enGo iOS capture (iPhone, prd
+    //               3.2.2+489, 智管家工作室 household, 米多力3合1 device page). It is a
+    //               device-control page, NOT the §3.2 shot #6 home screen: the home
+    //               screen carries a live account greeting (a colleague's display
+    //               name), so it stays unpublished until that account is changed.
+    //               Never substitute the Android shot here.
     const featureImages: Record<'voice' | 'floorplan' | 'photowall' | 'inventory', string | null> = {
       voice: null,
       floorplan: '/images/screens/03-floorplan-tablet-device.png',
@@ -1055,7 +1060,7 @@ export default defineComponent({
       inventory: null
     }
     const interfaceImages: Record<'ios' | 'android', string | null> = {
-      ios: null,
+      ios: '/images/screens/06-device-phone.png',
       android: null   // only a cropped Android shot exists; the store badges carry the platforms
     }
     const router = useRouter()
