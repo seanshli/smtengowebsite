@@ -21,6 +21,11 @@
           <div class="hm-plate hm-plate-tablet" data-float>
             <img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="eager" fetchpriority="high" />
           </div>
+          <!-- Full-screen iPhone capture (3.2.2, 模型屋), delivered 2026-09-23. Shown whole, at its
+               own aspect; earlier cropped shots were never framed as a phone. -->
+          <div class="hm-iphone hm-iphone-hero">
+            <img src="/images/screens/12-home-iphone.png" :alt="T.altPhone" width="800" height="1731" loading="eager" />
+          </div>
         </figure>
       </div>
     </section>
@@ -39,11 +44,13 @@
           </div>
           <!-- No full-screen phone captures exist yet (only cropped Android shots, and WEB-002 forbids
                passing an Android screen off as iPhone), so both phone columns carry the store badge. -->
-          <div class="hm-if-item hm-if-store">
-            <a class="hm-store" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
-              <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" width="120" height="40" loading="lazy" />
-            </a>
-            <div class="hm-if-cap"><strong>iPhone / iPad</strong><span>{{ T.ifIosCap }}</span></div>
+          <div class="hm-if-item hm-if-phone">
+            <div class="hm-iphone"><img src="/images/screens/12-home-iphone.png" :alt="T.altPhone" width="800" height="1731" loading="lazy" /></div>
+            <div class="hm-if-cap"><strong>iPhone / iPad</strong><span>{{ T.ifIosCap }}</span>
+              <a class="hm-store hm-store-inline" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
+                <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" width="120" height="40" loading="lazy" />
+              </a>
+            </div>
           </div>
           <div class="hm-if-item hm-if-store">
             <a class="hm-store hm-store-google" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play">
@@ -188,7 +195,7 @@ const trackCta = (location: string) => trackEvent('cta_click', { location, page:
 const COPY: Record<string, Record<string, any>> = {
   zh: {
     cta: '預約體驗', seeProduct: '看產品介紹',
-    altTablet: 'enGo 牆掛平板首頁，依房間分組的裝置卡片', altPhone: 'enGo智慧管家 手機 App 首頁', altAnnounce: '手機上的社區公告',
+    altTablet: 'enGo 牆掛平板首頁，依房間分組的裝置卡片', altPhone: 'iPhone 上的 enGo智慧管家首頁，模型屋示範住家', altAnnounce: '手機上的社區公告',
     ifTitle: '三種介面，一組帳號',
     ifSub: '牆掛平板是家中的主控台；iPhone、iPad 與 Android 手機讓您在外遠端掌握。手機 App「enGo智慧管家」於 App Store 與 Google Play 免費下載。',
     ifTablet: 'enGo 牆掛平板', ifTabletCap: '家電控制、情境、平面圖、社區服務，加上平板專屬的語音操作與待機相片牆',
@@ -208,7 +215,7 @@ const COPY: Record<string, Record<string, any>> = {
   },
   zhCN: {
     cta: '预约体验', seeProduct: '看产品介绍',
-    altTablet: 'enGo 壁挂平板首页，依房间分组的设备卡片', altPhone: 'enGo智慧管家 手机 App 首页', altAnnounce: '手机上的社区公告',
+    altTablet: 'enGo 壁挂平板首页，依房间分组的设备卡片', altPhone: 'iPhone 上的 enGo智慧管家首页，模型屋示范住家', altAnnounce: '手机上的社区公告',
     ifTitle: '三种界面，一组账号',
     ifSub: '壁挂平板是家中的主控台；iPhone、iPad 与 Android 手机让您在外远程掌握。手机 App「enGo智慧管家」于 App Store 与 Google Play 免费下载。',
     ifTablet: 'enGo 壁挂平板', ifTabletCap: '家电控制、情境、平面图、社区服务，加上平板专属的语音操作与待机相片墙',
@@ -228,7 +235,7 @@ const COPY: Record<string, Record<string, any>> = {
   },
   en: {
     cta: 'Book a visit', seeProduct: 'See the product',
-    altTablet: 'enGo wall tablet home screen with device cards grouped by room', altPhone: 'enGo智慧管家 phone app home screen', altAnnounce: 'Community announcements on the phone',
+    altTablet: 'enGo wall tablet home screen with device cards grouped by room', altPhone: 'enGo智慧管家 home screen on iPhone, Model Home demo household', altAnnounce: 'Community announcements on the phone',
     ifTitle: 'Three interfaces, one account',
     ifSub: 'The wall tablet is the control centre at home; iPhone, iPad and Android phones keep you in touch when you are out. The enGo HMS app is free on the App Store and Google Play, listed as enGo智慧管家.',
     ifTablet: 'enGo wall tablet', ifTabletCap: 'Device control, scenes, floor plan, community services, plus tablet-only voice control and the standby photo wall',
@@ -295,6 +302,13 @@ $navy-2: $grey-blue2;
 .hm-plate-land img { aspect-ratio: 2000 / 1148; object-fit: cover; object-position: top; }
 
 .hm-store { display: inline-block; line-height: 0; img { height: 40px; width: auto; } }
+.hm-store-inline { margin-top: 10px; }
+// Real phone frame for a full-screen capture: whole image, own aspect, no cover-fit.
+.hm-iphone {
+  background: $navy; border-radius: 40px; padding: 10px; box-shadow: 0 24px 60px rgba($navy, .28);
+  img { display: block; width: 100%; height: auto; border-radius: 32px; aspect-ratio: 800 / 1731; }
+}
+.hm-if-phone { align-items: stretch; .hm-iphone { width: 62%; margin: 0 auto; } }
 .hm-store-google img { height: 58px; margin: -9px -12px; }
 .hm-if-store {
   justify-content: flex-end; padding: 22px; border-radius: 20px; background: rgba($navy, .04); border: 1px solid #D8DFE8;
@@ -325,9 +339,10 @@ $navy-2: $grey-blue2;
 .hm-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; animation: hmRise .7s cubic-bezier(.22,1,.36,1) .6s both; }
 
 .hm-hero-figure {
-  position: relative; margin: 0; animation: hmReveal 1s cubic-bezier(.22,1,.36,1) .4s both;
-  .hm-plate-tablet { width: 100%; }
-  @media (max-width: 900px) { padding-top: 24px; margin-bottom: 30px; }
+  position: relative; margin: 0; padding-bottom: 8%; animation: hmReveal 1s cubic-bezier(.22,1,.36,1) .4s both;
+  .hm-plate-tablet { width: 88%; margin-left: auto; }
+  .hm-iphone-hero { position: absolute; left: 0; bottom: -6%; width: 27%; }
+  @media (max-width: 900px) { padding-top: 24px; margin-bottom: 30px; .hm-plate-tablet { width: 100%; } .hm-iphone-hero { display: none; } }
 }
 
 // ─── interfaces ──────────────────────────────────────────────────
