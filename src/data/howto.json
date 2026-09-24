@@ -5,7 +5,7 @@
       "zh": "enGo 3.2.2（建置 489）",
       "en": "enGo 3.2.2 (build 489)"
     },
-    "updated": "2026-09-22",
+    "updated": "2026-09-24",
     "note": {
       "zh": "截圖取自「模型屋」示範住家與智管家實驗社區帳號，於 enGo 3.2.2（建置 489）正式建置實機擷取，僅裁切、未修圖。",
       "en": "Screenshots were captured on the Model Home demo household and the enGo test-community account running enGo 3.2.2 (build 489) release build; cropped only, never retouched."
@@ -308,6 +308,17 @@
             "en": "From left to right: layout switch, energy statistics, manual refresh and add device. If you changed a device or scene and the screen has not caught up, manual refresh is the quickest fix."
           },
           "image": null
+        },
+        {
+          "title": {
+            "zh": "點卡片進入裝置控制頁",
+            "en": "Tap a card to open the device page"
+          },
+          "body": {
+            "zh": "點任一張裝置卡片就進入該裝置的控制頁。每一種裝置的控制頁長得不一樣——版面由裝置本身支援的功能決定，常見有即時資訊、開關、檔位／模式、轉盤或滑桿，右上齒輪則是改名與換房間。即時資訊顯示「--」多半是裝置關機或尚未回報，不是故障。",
+            "en": "Tap any device card to open its control page. Every device type looks different — the layout follows what the device actually supports: live readings, switches, presets/modes, dials or sliders, with the gear at the top right for renaming and moving rooms. A reading showing “--” usually means the device is off or has not reported yet, not that it is broken."
+          },
+          "image": "/images/howto/home/04-device-page.png"
         }
       ],
       "tips": [
@@ -318,8 +329,77 @@
       ]
     },
     {
-      "id": "settings",
+      "id": "devicedata",
       "order": 5,
+      "icon": "chart",
+      "title": {
+        "zh": "設備數據（用電與用水）",
+        "en": "Device Data (Energy & Water)"
+      },
+      "summary": {
+        "zh": "設備數據把裝置自己回報的量測值整理成四個分頁：用電趨勢、用電分布、用水量、空氣品質。用途是看趨勢與占比——哪一台耗電、什麼時段耗電——不是台電計費依據。",
+        "en": "Device Data organises the readings your devices report into four tabs: energy trend, energy breakdown, water usage and air quality. It is for spotting trends and shares — which device draws power, and when — not for utility billing."
+      },
+      "steps": [
+        {
+          "title": {
+            "zh": "用電趨勢：看什麼時段在耗電",
+            "en": "Energy trend: when power is being drawn"
+          },
+          "body": {
+            "zh": "四張數值卡分別是日最高、日最低、累計與平均每日用電（單位：度），下方長條圖以小時為刻度。上方可切換要看的裝置，以及日／月／年與日期。",
+            "en": "Four cards show the daily high, daily low, cumulative and average daily consumption (in kWh), with an hourly bar chart below. Above them you can switch device, day/month/year and the date."
+          },
+          "image": "/images/howto/devicedata/01-power.png"
+        },
+        {
+          "title": {
+            "zh": "用電分布：看哪一台在耗電",
+            "en": "Energy breakdown: which device draws it"
+          },
+          "body": {
+            "zh": "環圈圖顯示總用電量，下方逐台列出度數與百分比。想找「電費是誰用掉的」就看這一頁。",
+            "en": "A donut chart shows total consumption, with each device's kWh and share listed below. This is the page for answering “what is using the electricity”."
+          },
+          "image": "/images/howto/devicedata/02-distribution.png"
+        },
+        {
+          "title": {
+            "zh": "用水量：需搭配淨水設備",
+            "en": "Water usage: needs water equipment"
+          },
+          "body": {
+            "zh": "四張數值卡為月最高、月最低、累計與平均每日水量（單位：L），長條圖以日為刻度。家中沒有淨水器或智慧主閥時這一頁不會有數字。",
+            "en": "Four cards show the monthly high, monthly low, cumulative and average daily water volume (in litres), with a daily bar chart. Without a water purifier or smart main valve this tab stays empty."
+          },
+          "image": "/images/howto/devicedata/03-water.png"
+        },
+        {
+          "title": {
+            "zh": "空氣品質：需搭配感測裝置",
+            "en": "Air quality: needs a sensor"
+          },
+          "body": {
+            "zh": "以折線圖呈現，可切換 PM2.5 等指標與日／月／年。同樣地，家中沒有空氣品質感測裝置時這一頁不會有數字。",
+            "en": "Shown as a line chart; you can switch the metric (PM2.5 and others) and day/month/year. Again, without an air-quality sensor this tab stays empty."
+          },
+          "image": "/images/howto/devicedata/04-air.png"
+        }
+      ],
+      "tips": [
+        {
+          "zh": "這裡的度數來自裝置自己回報的量測值，和台電電表不會完全一致。它回答的是「哪一台、什麼時候」，不是「這個月要繳多少」。",
+          "en": "These readings come from the devices themselves and will not match your utility meter exactly. They answer “which device, and when” — not “how much is this month's bill”."
+        },
+        {
+          "zh": "某個分頁一直沒有數字，通常不是故障，而是家中沒有對應的裝置（用水量要淨水設備、空氣品質要感測器）。",
+          "en": "A tab with no numbers is usually not a fault — it means you do not have the matching hardware (water needs water equipment, air quality needs a sensor)."
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "order": 6,
       "icon": "gear",
       "title": {
         "zh": "設定與帳號",
@@ -366,6 +446,10 @@
       ],
       "tips": [
         {
+          "zh": "手機上叫「設置」不叫「設定」，同樣在底部「更多」分頁裡。手機沒有左側導覽列，底部只有家庭、場景、工單、通知、更多五個分頁，其餘功能都收在「更多」。",
+          "en": "On phones it is labelled 設置 rather than 設定, also under the bottom “More” tab. Phones have no left-hand nav: the bottom bar carries only Home, Scenes, Work Orders, Notifications and More, and everything else sits under More."
+        },
+        {
           "zh": "裝置告警門檻（例如溫濕度上下限）設得太敏感會一直推播；建議先用預設值住一週再調。",
           "en": "Alarm thresholds that are too sensitive will keep pushing notifications. Live with the defaults for a week before tuning them."
         }
@@ -373,7 +457,7 @@
     },
     {
       "id": "community",
-      "order": 6,
+      "order": 7,
       "icon": "megaphone",
       "title": {
         "zh": "社區公告與訊息",
@@ -417,7 +501,7 @@
     },
     {
       "id": "service",
-      "order": 7,
+      "order": 8,
       "icon": "wrench",
       "title": {
         "zh": "報修與工單",
@@ -461,7 +545,7 @@
     },
     {
       "id": "reservation",
-      "order": 8,
+      "order": 9,
       "icon": "calendar",
       "title": {
         "zh": "公設預約",
@@ -516,7 +600,7 @@
     },
     {
       "id": "warehouse",
-      "order": 9,
+      "order": 10,
       "icon": "box",
       "title": {
         "zh": "倉儲管理",
@@ -562,6 +646,10 @@
         }
       ],
       "tips": [
+        {
+          "zh": "手機上這個功能叫「庫存」，不叫「倉儲」，而且收在底部「更多」分頁裡；平板才是左側導覽列的「倉儲」。兩邊是同一頁、同一批資料。",
+          "en": "On phones this feature is called 庫存 (Inventory), not 倉儲 (Warehouse), and it lives under the bottom “More” tab; the left-hand 倉儲 entry is the tablet layout. Both are the same page and the same data."
+        },
         {
           "zh": "低庫存提醒要先在物品上設安全量才會作用。濾芯這類有壽命的東西，建議一併記下更換日期。",
           "en": "Low-stock alerts only work once you set a threshold on the item. For things with a service life, such as filters, record the replacement date too."
