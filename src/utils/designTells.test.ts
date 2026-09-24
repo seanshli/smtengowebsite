@@ -72,6 +72,11 @@ describe('page templates carry no template tells', () => {
         expect(t).toContain('to="/product"')
         expect(t).toContain('to="/cases"')
     })
+    it('home names no development project (Sean 2026-09-24): the community photo caption is generic', () => {
+        const t = templateOf('index.vue')
+        expect(t).not.toMatch(/bmsCase\.title/)
+        expect(t).toContain('T.bmsPhotoCap')
+    })
     it('home never renders the shared case illustration as proof', () => {
         const src = readFileSync(resolve(views, 'index.vue'), 'utf-8')
         expect(src).toMatch(/case-home\.jpg/)   // the filter that excludes it must exist

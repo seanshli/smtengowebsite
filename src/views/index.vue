@@ -107,8 +107,9 @@
         <div class="hm-bms-media" data-reveal-group>
           <div class="hm-plate hm-plate-land"><img src="/images/screens/09-announcement-tablet.png" :alt="T.altAnnounce" width="2000" height="1148" loading="lazy" /></div>
           <router-link :to="'/cases/' + bmsCase.id" class="hm-photo hm-photo-land" v-if="bmsCase">
-            <img :src="bmsCase.image" :alt="pick(bmsCase.title)" loading="lazy" />
-            <div class="hm-photo-cap"><strong>{{ pick(bmsCase.title) }}</strong><span>{{ pick(bmsCase.category) }}</span></div>
+            <img :src="bmsCase.image" :alt="T.bmsPhotoCap" loading="lazy" />
+            <!-- Sean 2026-09-24: no development (建案) name on the home page; the photo alone. -->
+            <div class="hm-photo-cap"><strong>{{ T.bmsPhotoCap }}</strong><span>{{ T.bmsPhotoSub }}</span></div>
           </router-link>
         </div>
       </div>
@@ -210,6 +211,7 @@ const COPY: Record<string, Record<string, any>> = {
     capSceneChips: ['回家模式', '離家模式', '睡眠模式', '晨曦喚醒'],
     bmsTitle: '一棟大樓，一個大腦。', bmsSub: '住戶不必為了看公告另外裝一支 App。社區服務與家裡的裝置在同一個 App 與同一台平板裡。',
     bmsItems: ['社區公告與通知', '報修與工單追蹤', '公設預約', '包裹通知與取件'],
+    bmsPhotoCap: '建案導入', bmsPhotoSub: '社區與每一戶，同一套系統',
     proofTitle: '真實住家的實作紀錄', proofAll: '看全部案例', showroomTitle: '兩個展示間，親自走一趟。',
     ctaTitle: '想看看您家會變成什麼樣子？', ctaSub: '留下聯繫資料，專人為您安排展示間體驗與規劃建議。', hours: '週一至週五 09:00-18:00',
   },
@@ -230,6 +232,7 @@ const COPY: Record<string, Record<string, any>> = {
     capSceneChips: ['回家模式', '离家模式', '睡眠模式', '晨曦唤醒'],
     bmsTitle: '一栋大楼，一个大脑。', bmsSub: '住户不必为了看公告另外装一个 App。社区服务与家里的设备在同一个 App 与同一台平板里。',
     bmsItems: ['社区公告与通知', '报修与工单追踪', '公设预约', '包裹通知与取件'],
+    bmsPhotoCap: '建案导入', bmsPhotoSub: '社区与每一户，同一套系统',
     proofTitle: '真实住家的实施记录', proofAll: '看全部案例', showroomTitle: '两个展示间，亲自走一趟。',
     ctaTitle: '想看看您家会变成什么样子？', ctaSub: '留下联系资料，专人为您安排展示间体验与规划建议。', hours: '周一至周五 09:00-18:00',
   },
@@ -250,6 +253,7 @@ const COPY: Record<string, Record<string, any>> = {
     capSceneChips: ['Home', 'Away', 'Sleep', 'Sunrise'],
     bmsTitle: 'One brain. Every building.', bmsSub: 'Residents do not need a second app for notices. Community services live in the same app and tablet as the home.',
     bmsItems: ['Announcements and notices', 'Repair requests and tracking', 'Facility booking', 'Parcel notice and pickup'],
+    bmsPhotoCap: 'Development rollout', bmsPhotoSub: 'The community and every home on one system',
     proofTitle: 'Real homes, real installs', proofAll: 'All cases', showroomTitle: 'Two showrooms. Come and see.',
     ctaTitle: 'Curious what your home would look like?', ctaSub: 'Leave your details and we will arrange a showroom visit and planning advice.', hours: 'Mon to Fri 09:00-18:00',
   },
