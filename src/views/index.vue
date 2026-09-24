@@ -297,11 +297,26 @@ $navy-2: $grey-blue2;
 .hm-btn-ghost { color: $navy; border: 1.5px solid $navy; &:hover { background: rgba($navy, .06); } }
 .hm-btn-light { background: $warm-bg-light; color: $brand-orange-text; &:hover { background: #fff; } }
 
-// device plates: navy frame, cover-fit, never retouched
-.hm-plate {
-  background: $navy; border-radius: 22px; padding: 10px; box-shadow: 0 24px 60px rgba($navy, .22);
-  img { display: block; width: 100%; height: auto; border-radius: 14px; }
+// Device frames (Sean 2026-09-24): brushed titanium body + thin dark glass rim
+// around the screen, instead of the flat navy slab. Cool greys only (palette B).
+@mixin metal-frame($radius, $pad, $glass, $screen-radius) {
+  position: relative; border-radius: $radius; padding: $pad;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, transparent 1px 3px),
+    linear-gradient(135deg, #f4f6f8 0%, #c4cad2 16%, #e6e9ed 34%, #adb5bf 52%, #dde1e6 70%, #b6bdc6 86%, #eef1f4 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -1px 0 rgba(15,23,32,.28),
+    inset 1px 0 0 rgba(255,255,255,.55),
+    inset -1px 0 0 rgba(15,23,32,.16),
+    0 1px 0 #8b939d,
+    0 24px 60px rgba($navy, .22);
+  img {
+    display: block; width: 100%; height: auto; border-radius: $screen-radius;
+    box-shadow: 0 0 0 $glass #0c1219, 0 0 0 ($glass + 1px) rgba(255,255,255,.12);
+  }
 }
+.hm-plate { @include metal-frame(26px, 16px, 7px, 12px); }
 .hm-plate-tall img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
 .hm-plate-land img { aspect-ratio: 2000 / 1148; object-fit: cover; object-position: top; }
 
@@ -309,8 +324,12 @@ $navy-2: $grey-blue2;
 .hm-store-inline { margin-top: 10px; }
 // Real phone frame for a full-screen capture: whole image, own aspect, no cover-fit.
 .hm-iphone {
-  background: $navy; border-radius: 40px; padding: 10px; box-shadow: 0 24px 60px rgba($navy, .28);
-  img { display: block; width: 100%; height: auto; border-radius: 32px; aspect-ratio: 800 / 1731; }
+  @include metal-frame(46px, 12px, 6px, 30px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95), inset 0 -1px 0 rgba(15,23,32,.28),
+    inset 1px 0 0 rgba(255,255,255,.55), inset -1px 0 0 rgba(15,23,32,.16),
+    0 1px 0 #8b939d, 0 24px 60px rgba($navy, .28);
+  img { aspect-ratio: 800 / 1731; }
 }
 .hm-if-phone { align-items: stretch; .hm-iphone { width: 62%; margin: 0 auto; } }
 .hm-store-google img { height: 58px; margin: -9px -12px; }
