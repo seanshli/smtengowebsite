@@ -418,7 +418,8 @@ export const zhLocale = {
       title: '三種介面，一組帳號',
       columns: { tablet: 'enGo 牆掛平板', ios: 'iPhone / iPad', android: 'Android 手機' },
       rows: {
-        control: '家電控制、情境、平面圖',
+        control: '家電控制、情境',
+        floorplan: '平面圖即時視圖、用電統計',
         community: '社區服務、攝影機、倉儲',
         voice: '語音操作',
         photowall: '待機相片牆'

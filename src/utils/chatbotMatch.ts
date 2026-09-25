@@ -15,7 +15,8 @@ export const SYNONYMS: Record<string, string[]> = {
   'cuanto': ['price', 'precio'],
   // Hours
   '幾點': ['hours', '時間', '營業'],
-  '開門': ['營業', 'open', 'hours'],
+  '幾點開門': ['營業', 'open', 'hours'],
+  '開門時間': ['營業', 'open', 'hours'],
   '什麼時候': ['when', 'hours'],
   'when open': ['hours', 'open'],
   // Location

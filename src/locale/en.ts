@@ -383,7 +383,8 @@ export const enLocale = {
       title: 'Three interfaces, one account',
       columns: { tablet: 'enGo wall tablet', ios: 'iPhone / iPad', android: 'Android phone' },
       rows: {
-        control: 'Appliance control, scenes, floor plan',
+        control: 'Appliance control, scenes',
+        floorplan: 'Live floor plan, energy statistics',
         community: 'Community services, cameras, inventory',
         voice: 'Voice control',
         photowall: 'Standby photo wall'
