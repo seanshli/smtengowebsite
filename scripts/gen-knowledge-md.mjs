@@ -69,14 +69,14 @@ export function generateKnowledgeMd() {
   w()
 
   // ── 操作指南
-  w('# Part 1 — 操作指南（依功能模組）/ How-to Guides by Module')
+  w('# Part 1：操作指南（依功能模組）/ How-to Guides by Module')
   w()
   w(`> ${howto.meta.note.zh}`)
   w('>')
   w(`> ${howto.meta.note.en}`)
   w()
   for (const m of howto.modules) {
-    w(`## ${m.id} — ${m.title.zh} / ${m.title.en}`)
+    w(`## ${m.id}：${m.title.zh} / ${m.title.en}`)
     w()
     w(`- 深連結 Deep link: ${SITE}/tutorial#howto-${m.id}`)
     if (m.imagesPending) w('- ⚠ 圖待補 / screenshots pending')
@@ -108,7 +108,7 @@ export function generateKnowledgeMd() {
   }
 
   // ── FAQ
-  w('# Part 2 — 常見問題 / FAQ')
+  w('# Part 2：常見問題 / FAQ')
   w()
   w(`共 ${faqs.length} 題。原始資料含 zh / zhCN / en / fr / ja / es 六語系；本檔僅列繁中與英文，其餘語系請取 \`src/data/faqs.json\`。`)
   w()
@@ -131,7 +131,7 @@ export function generateKnowledgeMd() {
       w()
       w(f.answer.zh)
       w()
-      w(`**EN — ${f.question.en}**`)
+      w(`**EN: ${f.question.en}**`)
       w()
       w(f.answer.en)
       w()
@@ -146,7 +146,7 @@ export function generateKnowledgeMd() {
   w('| 管道 Channel | 資訊 |')
   w('|---|---|')
   w('| 電話 Phone | **02-27510218**（+886-2-27510218） |')
-  w('| 服務時間 Hours | 週一至週五 09:00–18:00（Mon–Fri, UTC+8） |')
+  w('| 服務時間 Hours | 週一至週五 09:00-18:00（Mon-Fri, UTC+8） |')
   w(`| 網站 Web | ${SITE}/contact |`)
   w()
   w('> 產品頁是 `/product`（**單數**）。`/products` 不存在，會 404。')
