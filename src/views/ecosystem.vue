@@ -6,8 +6,8 @@
       <h1 class="eco-title">{{ $t('ecosystemTitle') }}</h1>
       <p class="eco-sub fade-in">
         {{ isZh
-          ? '雲端、設備與生活服務——一個平台，串起整個生態。'
-          : 'Cloud, devices, and everyday services — one platform, one connected ecosystem.' }}
+          ? '雲端、設備與生活服務，一個平台，串起整個生態。'
+          : 'Cloud, devices, and everyday services, one platform, one connected ecosystem.' }}
       </p>
     </header>
 

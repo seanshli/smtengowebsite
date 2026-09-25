@@ -38,7 +38,7 @@ export const esLocale = {
     },
     enviro: {
       title: 'Control ambiental | enGo Smart Home',
-      description: 'Control ambiental de enGo: luz y temperatura dinámicas, purificación del aire, agua inteligente y seguridad en la cocina — un solo sistema conectado.'
+      description: 'Control ambiental de enGo: luz y temperatura dinámicas, purificación del aire, agua inteligente y seguridad en la cocina, un solo sistema conectado.'
     },
     vision: {
       title: 'Nuestra visión | enGo Smart Home',
@@ -162,15 +162,15 @@ export const esLocale = {
     brandStoryTitle: 'La historia de enGo',
     intextLogo: 'La tecnología debe pertenecer a cada hogar',
     paragraph1:
-      'Cada mañana, antes de que salgas de la cama, <font color="e05a35">enGo ya abrió tus cortinas, ajustó las luces y ajustó el aire acondicionado.</font> No porque programaste una alarma — sino porque aprendió tu ritmo. Eso es enGo — de "<font color="e05a35">Energy Go</font>" — haciendo que la energía fluya de forma más inteligente para que la tecnología sea verdaderamente parte de tu hogar. Empezamos con una creencia simple: una mejor calidad de vida no debería ser un lujo. Ya sea el aire, el agua, la iluminación o tus hábitos de energía diarios, enGo usa IA para entender lo que necesitas — y se adelanta un paso para crear un hogar cómodo, seguro y eficiente.',
+      'Cada mañana, antes de que salgas de la cama, <font color="e05a35">enGo ya abrió tus cortinas, ajustó las luces y ajustó el aire acondicionado.</font> No porque programaste una alarma, sino porque aprendió tu ritmo. Eso es enGo, de "<font color="e05a35">Energy Go</font>", haciendo que la energía fluya de forma más inteligente para que la tecnología sea verdaderamente parte de tu hogar. Empezamos con una creencia simple: una mejor calidad de vida no debería ser un lujo. Ya sea el aire, el agua, la iluminación o tus hábitos de energía diarios, enGo usa IA para entender lo que necesitas, y se adelanta un paso para crear un hogar cómodo, seguro y eficiente.',
     paragraph2:
-      'A medida que nuestra sociedad envejece, vemos el lado más humano de la tecnología. <font color="e05a35">enGo no es solo un guardián del hogar inteligente — es un compañero atento para la vida de los adultos mayores.</font> Interfaces con texto grande, control por voz y escenas automatizadas hacen que la vida diaria sea fácil para los mayores, mientras que el monitoreo remoto y las alertas en tiempo real dan tranquilidad a sus familias desde cualquier lugar.',
+      'A medida que nuestra sociedad envejece, vemos el lado más humano de la tecnología. <font color="e05a35">enGo no es solo un guardián del hogar inteligente, es un compañero atento para la vida de los adultos mayores.</font> Interfaces con texto grande, control por voz y escenas automatizadas hacen que la vida diaria sea fácil para los mayores, mientras que el monitoreo remoto y las alertas en tiempo real dan tranquilidad a sus familias desde cualquier lugar.',
     paragraph3:
-      'El camino hasta aquí no fue fácil. El fundador Sean y su equipo empezaron en una vieja oficina con fondos limitados, construyendo durante una pandemia global. ¿Su lema? "¡Los sueños son hermosos — solo empieza!" Esa perseverancia llevó a enGo de cero a una marca de hogar inteligente en crecimiento, de Taiwán al mundo.',
+      'El camino hasta aquí no fue fácil. El fundador Sean y su equipo empezaron en una vieja oficina con fondos limitados, construyendo durante una pandemia global. ¿Su lema? "¡Los sueños son hermosos, solo empieza!" Esa perseverancia llevó a enGo de cero a una marca de hogar inteligente en crecimiento, de Taiwán al mundo.',
     paragraph4:
-      'Hoy, enGo integra los cuatro esenciales de la vida en el hogar — luz solar, aire, agua y alimentos — a través de una sola tableta de control IA que conecta toda tu casa. Nuestros productos no son solo tecnología — <font color="e05a35">son una promesa para la salud y la felicidad de cada familia.</font>',
+      'Hoy, enGo integra los cuatro esenciales de la vida en el hogar, luz solar, aire, agua y alimentos, a través de una sola tableta de control IA que conecta toda tu casa. Nuestros productos no son solo tecnología, <font color="e05a35">son una promesa para la salud y la felicidad de cada familia.</font>',
     paragraph5:
-      'Creemos que el verdadero valor de la tecnología es convertir los días ordinarios en extraordinarios. Para que cada vez que cruces tu puerta, sientas que alguien cuida de ti. <font color="e05a35">Eso es enGo — tu mayordomo inteligente.</font>'
+      'Creemos que el verdadero valor de la tecnología es convertir los días ordinarios en extraordinarios. Para que cada vez que cruces tu puerta, sientas que alguien cuida de ti. <font color="e05a35">Eso es enGo, tu mayordomo inteligente.</font>'
   },
   // about
   coreValueTitle: 'Nuestros Valores Fundamentales',
@@ -187,15 +187,15 @@ export const esLocale = {
   enviroTitle: 'Control ambiental',
   teamSubtitle: 'El equipo fundador y el asesor del consejo: IA, operaciones, diseño y estrategia tecnológica.',
   missionSubtitle:
-    'Llevar la comodidad y seguridad de la vida inteligente a cada familia — sin importar la edad ni el presupuesto. La tecnología debe servir a las personas, no crear barreras.',
-  fiveValues: 'Creemos que la buena tecnología no necesita un manual de instrucciones. enGo convierte la IA en el miembro más atento de tu hogar — uno que conoce tu rutina, cuida tu salud y protege a tu familia.',
-  fiveValues1: '<font color="e05a35">Protección inteligente</font> — Monitoreo de calidad del agua, detección de fugas, corte automático de gas — tranquilidad las 24 horas para toda la familia.',
-  fiveValues2: '<font color="e05a35">Aire saludable</font> — Nuestro sistema de purificación 4 en 1 con filtros HEPA12 de grado médico garantiza que cada respiración sea limpia y segura.',
-  fiveValues3: '<font color="e05a35">Compañía cálida</font> — Escenas con un toque, control por voz, interfaz con letra grande — haciendo la vida inteligente accesible para los adultos mayores y toda la familia.',
+    'Llevar la comodidad y seguridad de la vida inteligente a cada familia, sin importar la edad ni el presupuesto. La tecnología debe servir a las personas, no crear barreras.',
+  fiveValues: 'Creemos que la buena tecnología no necesita un manual de instrucciones. enGo convierte la IA en el miembro más atento de tu hogar, uno que conoce tu rutina, cuida tu salud y protege a tu familia.',
+  fiveValues1: '<font color="e05a35">Protección inteligente</font>Monitoreo de calidad del agua, detección de fugas, corte automático de gas, tranquilidad las 24 horas para toda la familia.',
+  fiveValues2: '<font color="e05a35">Aire saludable</font>Nuestro sistema de purificación 4 en 1 con filtros HEPA12 de grado médico garantiza que cada respiración sea limpia y segura.',
+  fiveValues3: '<font color="e05a35">Compañía cálida</font>Escenas con un toque, control por voz, interfaz con letra grande, haciendo la vida inteligente accesible para los adultos mayores y toda la familia.',
   fiveValues4: 'Democratización de dispositivos inteligentes',
   fiveValues5: 'Ahorro de Energía, Reducción de Carbono y Responsabilidad Social',
   missionConclusion:
-    'Nacida en Taiwán, enGo está redefiniendo el significado de "hogar". No solo vendemos productos — <font color="e05a35">creamos un estilo de vida que hace sonreír a toda la familia.</font>',
+    'Nacida en Taiwán, enGo está redefiniendo el significado de "hogar". No solo vendemos productos, <font color="e05a35">creamos un estilo de vida que hace sonreír a toda la familia.</font>',
   visionTitle: 'Nuestra Visión',
   vision1: 'Expandir Escenarios de Aplicación',
   vision2: 'Inteligencia Tecnológica',
@@ -206,31 +206,31 @@ export const esLocale = {
   vision7: 'Marco de Interacción B2B2C',
 
   visionIntextLogo:
-    'enGo applies advanced AI to weave sunlight, air, water and food into everyday home life — an energy-efficient, healthier, lower-waste home that is kinder to the planet.',
+    'enGo applies advanced AI to weave sunlight, air, water and food into everyday home life, an energy-efficient, healthier, lower-waste home that is kinder to the planet.',
   // TODO: translate — English placeholder so nothing renders blank
   vision: {
     sun: {
-      title: 'Sunlight — living with the natural day',
-      copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home — brighter mornings, calmer evenings, and comfort that follows the sun.'
+      title: 'Sunlight, living with the natural day',
+      copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home, brighter mornings, calmer evenings, and comfort that follows the sun.'
     },
     air: {
-      title: 'Air — breathe without a second thought',
-      copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk — with air quality you can see at a glance.'
+      title: 'Air, breathe without a second thought',
+      copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk, with air quality you can see at a glance.'
     },
     water: {
-      title: 'Water — protection you can see',
-      copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way — every glass is the best it can be.'
+      title: 'Water, protection you can see',
+      copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way. Every glass is the best it can be.'
     },
     food: {
-      title: 'Food safety — health you stay on top of',
+      title: 'Food safety, health you stay on top of',
       copy: 'enGo\'s intelligent management system provides end-to-end food safety assurance, so every meal on your table is one you can trust.'
     },
     safety: {
-      title: 'Security — watching over every moment at home',
-      copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry — and share in the value a connected community creates.'
+      title: 'Security, watching over every moment at home',
+      copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry, and share in the value a connected community creates.'
     },
     closing:
-      'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream — enGo is here to look after your home for the long run.'
+      'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream. enGo is here to look after your home for the long run.'
   },
 
   // ecosystem
@@ -401,7 +401,7 @@ export const esLocale = {
     features: 'Características',
     found_video: 'Encontré un video para ti:',
     found_info: 'Encontré información para ti. Puedes hacer clic aquí para ver:',
-    no_match: 'Lo siento, no estoy seguro de esa respuesta; un especialista podrá ayudarte mejor. Llama al 02-27510218 (lun.–vie. 09:00–18:00) o contáctanos por LINE.',
+    no_match: 'Lo siento, no estoy seguro de esa respuesta; un especialista podrá ayudarte mejor. Llama al 02-27510218 (lun.-vie. 09:00-18:00) o contáctanos por LINE.',
     line_handoff: 'Contactar por LINE',
     replies: {
       product: 'Qué es enGo',

@@ -99,7 +99,7 @@ const MEMBERS: Member[] = [
     role: { zh: '共同創辦人・設計總監', en: 'Co-founder · Design Director' },
     story: {
       zh: '旅法設計家與品牌經營者，現任 Belber 1891（盧森堡）執行董事暨設計總監，將百年工藝品牌的美學語言與藝術品管理視角，帶進 enGo 的產品與空間設計。',
-      en: 'A Paris-trained designer and brand steward, currently Executive Director and Design Director of Belber 1891 (Luxembourg). She brings the aesthetic language of a heritage craft house — and an art-management eye — into enGo\'s product and spatial design.'
+      en: 'A Paris-trained designer and brand steward, currently Executive Director and Design Director of Belber 1891 (Luxembourg). She brings the aesthetic language of a heritage craft house, and an art-management eye, into enGo\'s product and spatial design.'
     },
     creds: {
       zh: [
@@ -116,7 +116,7 @@ const MEMBERS: Member[] = [
         'M.S., ESSEC Business School, France',
         'Innovation advisor, Royal College of Art (RCA), UK',
         'M.A., École supérieure d\'arts appliqués (DSAA), France',
-        'École d\'Art et de Culture, Paris — Sotheby\'s art management certification',
+        'École d\'Art et de Culture, Paris: Sotheby\'s art management certification',
         'EMBA (\'18), Fudan University · Fudan private board',
         'Harvard Business School global executive leadership program'
       ]
