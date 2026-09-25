@@ -26,11 +26,11 @@ const EN_PREFIX = '/en'
 const ROUTES = {
   '/': {
     zh: ['enGo智管家 - 智慧家居第一品牌', 'enGo理家，蝦咪攏嗯驚！智管家用 AI 技術整合雲端倉儲、聯網設備管理與生活採購，打造一站式整合智慧平台。'],
-    en: ['enGo Smart Home — AI for Sunlight, Air, Water & Food', 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.']
+    en: ['enGo Smart Home: AI for Sunlight, Air, Water & Food', 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.']
   },
   '/core': {
     zh: ['核心價值 | enGo智管家的設計理念', 'enGo 以 AI 整合陽光、空氣、水與食物，從健康、安心到便利，打造智慧生活的核心價值。'],
-    en: ['Core Values | The enGo Design Philosophy', 'enGo brings sunlight, air, water and food together with AI — health, safety and ease as the core of smart living.']
+    en: ['Core Values | The enGo Design Philosophy', 'enGo brings sunlight, air, water and food together with AI, with health, safety and ease as the core of smart living.']
   },
   '/brand': {
     zh: ['品牌故事 | enGo「安購」的起源', '了解 enGo「安購」的創立初衷與品牌故事，我們如何用科技讓每個家庭享有高品質的智慧生活。'],
@@ -45,16 +45,16 @@ const ROUTES = {
     en: ['Leadership Team | enGo Smart Home', 'Meet the founders and board advisor behind enGo, spanning AI, operations, design and technology strategy.']
   },
   '/enviro': {
-    zh: ['智慧環控 | enGo智管家', '整合陽光、空氣、水與智慧廚房的全方位環控方案——動態控溫、空氣淨化監測、智慧水務與廚房安全。'],
+    zh: ['智慧環控 | enGo智管家', '整合陽光、空氣、水與智慧廚房的全方位環控方案：動態控溫、空氣淨化監測、智慧水務與廚房安全。'],
     en: ['Environmental Control | enGo Smart Home', 'One system for sunlight and temperature, air quality, water management and kitchen safety.']
   },
   '/vision': {
-    zh: ['未來願景 | enGo智管家', 'enGo 的願景——整合雲端倉儲、聯網設備與生活採購，打造定義未來的一站式智慧生活平台。'],
+    zh: ['未來願景 | enGo智管家', 'enGo 的願景：整合雲端倉儲、聯網設備與生活採購，打造定義未來的一站式智慧生活平台。'],
     en: ['Our Vision | enGo Smart Home', 'Cloud storage, connected devices and everyday purchasing on a single platform for the smart home.']
   },
   '/ecosystem': {
     zh: ['智慧生態系 | enGo AIoT 整合平台', '探索 enGo 智慧生態系，從 AI 中控、智慧淨水到空氣清淨，串連家中每一個智慧裝置。'],
-    en: ['Smart Ecosystem | The enGo AIoT Platform', 'From the AI hub to water purification and air quality — every device in your home, connected.']
+    en: ['Smart Ecosystem | The enGo AIoT Platform', 'From the AI hub to water purification and air quality, every device in your home, connected.']
   },
   '/product': {
     zh: ['產品介紹 | enGo AI智慧中控系統 & 淨水系統', '探索 enGo AI智慧中控平板與水維氧智慧淨水系統，提升家居舒適度與安全性。'],
@@ -70,7 +70,7 @@ const ROUTES = {
   },
   '/cases': {
     zh: ['案例分享 | 智慧家居實作紀錄', '查看我們在住宅、辦公室及各式建築中的智慧家居實作案例，見證生活品質的提升。'],
-    en: ['Case Studies | enGo Installations', 'Real homes, offices and developments running enGo — what was installed and what changed.']
+    en: ['Case Studies | enGo Installations', 'Real homes, offices and developments running enGo, what was installed and what changed.']
   },
   '/contact': {
     zh: ['聯絡我們 | 諮詢 enGo 智慧家居解決方案', '對我們的產品有興趣？立即填寫表單或透過 LINE 聯繫我們，專人將竭誠為您服務。'],

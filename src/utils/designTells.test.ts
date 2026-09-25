@@ -142,6 +142,7 @@ describe('no em-dash or en-dash in user-visible copy (polish/no-dashes, 2026-09-
         ...readdirSync(componentsDir).filter((f) => f.endsWith('.vue')).map((f) => resolve(componentsDir, f)),
         ...dataFiles.map((f) => resolve(dataDir, f)),
         resolve(pub, 'llms.txt'),
+        resolve(process.cwd(), 'scripts/prerender-meta.mjs'),
     ]
 
     it('every target file is free of U+2014 (—) and U+2013 (–) outside comments', () => {

@@ -149,9 +149,9 @@ export const frLocale = {
   missionSubtitle:
     "Offrir à chaque famille le confort et la sérénité d'un foyer intelligent, quel que soit l'âge ou le budget. La technologie doit servir les gens, pas créer des obstacles.",
   fiveValues: "Nous croyons qu'une bonne technologie n'a pas besoin de mode d'emploi. enGo transforme l'IA en le membre le plus attentionné de votre foyer, il connaît vos habitudes, veille sur votre santé et protège votre famille.",
-  fiveValues1: "<font color=\"e05a35\">Protection intelligente</font> : Surveillance de la qualité de l'eau, détection de fuites, coupure automatique du gaz, une tranquillité d'esprit 24h/24.",
-  fiveValues2: "<font color=\"e05a35\">Air pur</font> : Notre système de purification 4-en-1 avec filtres HEPA12 de qualité médicale garantit un air sain à chaque respiration.",
-  fiveValues3: "<font color=\"e05a35\">Accompagnement chaleureux</font> : Scènes en un clic, contrôle vocal, interface en grands caractères, rendre la vie connectée accessible à tous, y compris aux seniors.",
+  fiveValues1: "<font color=\"e05a35\">Protection intelligente</font>Surveillance de la qualité de l'eau, détection de fuites, coupure automatique du gaz, une tranquillité d'esprit 24h/24.",
+  fiveValues2: "<font color=\"e05a35\">Air pur</font>Notre système de purification 4-en-1 avec filtres HEPA12 de qualité médicale garantit un air sain à chaque respiration.",
+  fiveValues3: "<font color=\"e05a35\">Accompagnement chaleureux</font>Scènes en un clic, contrôle vocal, interface en grands caractères, rendre la vie connectée accessible à tous, y compris aux seniors.",
   fiveValues4: "Démocratisation des appareils intelligents",
   fiveValues5: "Économie d'énergie, réduction carbone et responsabilité sociale",
   missionConclusion:

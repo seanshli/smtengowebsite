@@ -189,9 +189,9 @@ export const esLocale = {
   missionSubtitle:
     'Llevar la comodidad y seguridad de la vida inteligente a cada familia, sin importar la edad ni el presupuesto. La tecnología debe servir a las personas, no crear barreras.',
   fiveValues: 'Creemos que la buena tecnología no necesita un manual de instrucciones. enGo convierte la IA en el miembro más atento de tu hogar, uno que conoce tu rutina, cuida tu salud y protege a tu familia.',
-  fiveValues1: '<font color="e05a35">Protección inteligente</font>: Monitoreo de calidad del agua, detección de fugas, corte automático de gas, tranquilidad las 24 horas para toda la familia.',
-  fiveValues2: '<font color="e05a35">Aire saludable</font>: Nuestro sistema de purificación 4 en 1 con filtros HEPA12 de grado médico garantiza que cada respiración sea limpia y segura.',
-  fiveValues3: '<font color="e05a35">Compañía cálida</font>: Escenas con un toque, control por voz, interfaz con letra grande, haciendo la vida inteligente accesible para los adultos mayores y toda la familia.',
+  fiveValues1: '<font color="e05a35">Protección inteligente</font>Monitoreo de calidad del agua, detección de fugas, corte automático de gas, tranquilidad las 24 horas para toda la familia.',
+  fiveValues2: '<font color="e05a35">Aire saludable</font>Nuestro sistema de purificación 4 en 1 con filtros HEPA12 de grado médico garantiza que cada respiración sea limpia y segura.',
+  fiveValues3: '<font color="e05a35">Compañía cálida</font>Escenas con un toque, control por voz, interfaz con letra grande, haciendo la vida inteligente accesible para los adultos mayores y toda la familia.',
   fiveValues4: 'Democratización de dispositivos inteligentes',
   fiveValues5: 'Ahorro de Energía, Reducción de Carbono y Responsabilidad Social',
   missionConclusion:

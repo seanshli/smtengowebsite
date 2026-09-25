@@ -189,9 +189,9 @@ export const enLocale = {
   missionSubtitle:
     'To bring the comfort and security of AI-powered living to every family, regardless of age or budget. Technology should serve people, not create barriers.',
   fiveValues: 'We believe great technology needs no instruction manual. enGo turns AI into the most thoughtful member of your household, one that knows your routine, cares for your health, and keeps your family safe.',
-  fiveValues1: '<font color="e05a35">Smart Protection</font>: Water quality monitoring, leak detection, automatic gas shutoff, 24/7 peace of mind for the whole family.',
-  fiveValues2: '<font color="e05a35">Healthy Breathing</font>: Our 4-in-1 air purification system with medical-grade HEPA12 filters ensures every breath you take is clean and safe.',
-  fiveValues3: '<font color="e05a35">Warm Companionship</font>: One-touch scenes, voice control, large-font interfaces, making smart living effortless for seniors and everyone at home.',
+  fiveValues1: '<font color="e05a35">Smart Protection</font>Water quality monitoring, leak detection, automatic gas shutoff, 24/7 peace of mind for the whole family.',
+  fiveValues2: '<font color="e05a35">Healthy Breathing</font>Our 4-in-1 air purification system with medical-grade HEPA12 filters ensures every breath you take is clean and safe.',
+  fiveValues3: '<font color="e05a35">Warm Companionship</font>One-touch scenes, voice control, large-font interfaces, making smart living effortless for seniors and everyone at home.',
   fiveValues4: 'Universal Smart Devices',
   fiveValues5: 'Energy Saving, Carbon Reduction, and Social Responsibility',
   missionConclusion:
