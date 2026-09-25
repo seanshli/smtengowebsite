@@ -21,11 +21,12 @@
       </figure>
     </div>
 
-    <!-- Three values as mounted plates -->
+    <!-- Three values as ruled columns (same letterpress rule as the masthead),
+         not boxed cards. -->
     <div class="msn-values">
-      <div class="msn-card fade-in" v-html="$t('fiveValues1')"></div>
-      <div class="msn-card fade-in" v-html="$t('fiveValues2')"></div>
-      <div class="msn-card fade-in" v-html="$t('fiveValues3')"></div>
+      <div class="msn-value fade-in" v-html="$t('fiveValues1')"></div>
+      <div class="msn-value fade-in" v-html="$t('fiveValues2')"></div>
+      <div class="msn-value fade-in" v-html="$t('fiveValues3')"></div>
     </div>
 
     <!-- Closing statement: navy band, serif, orange accents -->
@@ -71,7 +72,7 @@ export default defineComponent({
   transform: translateY(0);
 }
 
-// ponytail: no-JS / reduced-motion safety — content must never stay invisible
+// ponytail: no-JS / reduced-motion safety, content must never stay invisible
 @media (prefers-reduced-motion: reduce) {
   .fade-in {
     opacity: 1;
@@ -94,10 +95,6 @@ export default defineComponent({
   max-width: 1100px;
   margin: 0 auto 56px;
   @include masthead-block;
-}
-
-.msn-kicker {
-  @include masthead-kicker;
 }
 
 .msn-title {
@@ -177,57 +174,42 @@ export default defineComponent({
   }
 }
 
-// ─── value plates ───
+// ─── value columns ───
 .msn-values {
   max-width: 1100px;
   margin: 0 auto;
   padding-bottom: 90px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  gap: 0 clamp(28px, 4vw, 56px);
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 0;
     padding-bottom: 56px;
   }
 }
 
-.msn-card {
-  position: relative;
-  background: $warm-bg-light;
-  border: 1px solid rgba($grey-blue3, 0.32);
-  padding: 30px 28px;
-  font-size: 1rem;
+.msn-value {
+  border-top: 3px solid $grey-blue3;
+  padding: 22px 0 8px;
+  font-size: 1.02rem;
   line-height: 1.95;
   color: #4c4c4c;
-  transition: transform 0.3s ease;
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 8px -8px -8px 8px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-    z-index: -1;
+  @media (max-width: 900px) {
+    padding-bottom: 28px;
   }
 
-  &:hover {
-    transform: translate(-3px, -3px);
-
-    &::before {
-      border-color: $brand-orange;
-    }
-  }
-
-  // the locale strings mark card titles with <font color="e05a35">
+  // the locale strings mark the column title with <font color="e05a35">
   :deep(font[color='e05a35']) {
     display: block;
     font-family: 'Noto Serif TC', serif;
     font-weight: 900;
-    font-size: 1.3rem;
-    color: $brand-orange;
-    margin-bottom: 10px;
+    font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+    line-height: 1.3;
+    color: $grey-blue3;
+    margin-bottom: 12px;
   }
 }
 

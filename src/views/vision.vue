@@ -8,15 +8,15 @@
       <p class="vsn-sub fade-in">{{ $t('visionIntextLogo') }}</p>
     </header>
 
-    <!-- The five elements as numbered editorial plates -->
+    <!-- The five elements as a ruled two-column list: title in serif, body
+         below, no boxes and no counters. -->
     <div class="vsn-elements">
-      <article v-for="(id, i) in elements" :key="id" class="vsn-plate fade-in">
-        <span class="vsn-plate-num">{{ String(i + 1).padStart(2, '0') }}</span>
-        <h2 class="vsn-plate-title">
-          <img class="vsn-plate-logo" src="/assets/logo-orange.svg" alt="enGo" />
+      <article v-for="id in elements" :key="id" class="vsn-element fade-in">
+        <h2 class="vsn-element-title">
+          <img class="vsn-element-logo" src="/assets/logo-orange.svg" alt="enGo" />
           {{ $t(`vision.${id}.title`) }}
         </h2>
-        <p class="vsn-plate-copy">{{ $t(`vision.${id}.copy`) }}</p>
+        <p class="vsn-element-copy">{{ $t(`vision.${id}.copy`) }}</p>
       </article>
     </div>
 
@@ -25,14 +25,11 @@
       <p>{{ $t('vision.closing') }}</p>
     </blockquote>
 
-    <!-- Seven strategic directions -->
-    <div class="vsn-blocks">
-      <div v-for="(b, i) in blocks" :key="b.icon" class="vsn-block fade-in">
-        <span class="vsn-block-num">{{ String(i + 1).padStart(2, '0') }}</span>
-        <img class="vsn-block-img" :src="b.icon" :alt="b.alt" />
-        <p class="vsn-block-text">{{ $t('vision' + (i + 1)) }}</p>
-      </div>
-    </div>
+    <!-- Seven strategic directions: a hairline list in two columns. The old
+         grey clip-art icons are gone; the words carry it. -->
+    <ul class="vsn-directions">
+      <li v-for="i in 7" :key="i" class="vsn-direction fade-in">{{ $t('vision' + i) }}</li>
+    </ul>
   </section>
 </template>
 
@@ -40,25 +37,14 @@
 import { defineComponent } from 'vue'
 import { useScrollReveal } from '../composables/useScrollReveal'
 
-// Order drives both the numbering and the locale lookup `vision.<id>.*`.
+// Order drives the locale lookup `vision.<id>.*`.
 const ELEMENTS = ['sun', 'air', 'water', 'food', 'safety'] as const
-
-// Text comes from the existing flat vision1..vision7 keys, by position.
-const BLOCKS = [
-  { icon: '/images/business-model-icon.svg', alt: 'business model icon' },
-  { icon: '/images/artificial-intelligence-ai-icon.svg', alt: 'artificial intelligence ai icon' },
-  { icon: '/images/sharing-icon.svg', alt: 'branding icon' },
-  { icon: '/images/shelf-shelves-icon.svg', alt: 'shelves icon' },
-  { icon: '/images/iot-icon.svg', alt: 'iot icon' },
-  { icon: '/images/engo-coin.svg', alt: 'enGo icon' },
-  { icon: '/images/b2b2c.svg', alt: 'b2b2c framework icon' }
-]
 
 export default defineComponent({
   name: 'Vision',
   setup() {
     useScrollReveal('.fade-in', 'visible')
-    return { elements: ELEMENTS, blocks: BLOCKS }
+    return { elements: ELEMENTS }
   }
 })
 </script>
@@ -101,10 +87,6 @@ export default defineComponent({
   @include masthead-block;
 }
 
-.vsn-kicker {
-  @include masthead-kicker;
-}
-
 .vsn-title {
   @include masthead-title;
 }
@@ -121,52 +103,22 @@ export default defineComponent({
 // ─── five elements ───
 .vsn-elements {
   max-width: 1100px;
-  margin: 0 auto 64px;
+  margin: 0 auto 72px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
+  gap: 0 clamp(32px, 5vw, 72px);
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    gap: 18px;
   }
 }
 
-.vsn-plate {
-  position: relative;
-  background: $warm-bg-cream;
-  border: 1px solid rgba($grey-blue3, 0.32);
-  border-radius: 0;
-  padding: 30px 28px 26px;
-  transition: transform 0.3s ease;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 8px -8px -8px 8px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-    z-index: -1;
-  }
-
-  &:hover {
-    transform: translate(-3px, -3px);
-
-    &::before {
-      border-color: $brand-orange;
-    }
-  }
+.vsn-element {
+  border-top: 3px solid $grey-blue3;
+  padding: 22px 0 30px;
 }
 
-.vsn-plate-num {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: 1.7rem;
-  color: transparent;
-  -webkit-text-stroke: 1.5px $brand-orange;
-}
-
-.vsn-plate-title {
+.vsn-element-title {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -175,19 +127,20 @@ export default defineComponent({
   font-size: clamp(1.3rem, 2.5vw, 1.7rem);
   line-height: 1.45;
   color: $grey-blue3;
-  margin: 10px 0 12px;
+  margin: 0 0 12px;
 }
 
-.vsn-plate-logo {
+.vsn-element-logo {
   flex: none;
   width: auto;
   height: 1em;
 }
 
-.vsn-plate-copy {
+.vsn-element-copy {
   font-size: 1.02rem;
   line-height: 1.95;
   color: #4c4c4c;
+  margin: 0;
 }
 
 // ─── closing pull-quote ───
@@ -208,57 +161,28 @@ export default defineComponent({
 }
 
 // ─── seven strategic directions ───
-.vsn-blocks {
+.vsn-directions {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0;
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 clamp(32px, 5vw, 72px);
+  border-top: 3px solid $grey-blue3;
 
   @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 520px) {
     grid-template-columns: 1fr;
   }
 }
 
-.vsn-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  background: $warm-bg-cream;
-  border: 1px solid rgba($grey-blue3, 0.32);
-  border-radius: 0;
-  padding: 24px 22px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-
-  &:hover {
-    transform: translate(-3px, -3px);
-    border-color: $brand-orange;
-  }
-}
-
-.vsn-block-num {
+.vsn-direction {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba($grey-blue3, 0.22);
   font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  color: transparent;
-  -webkit-text-stroke: 1.3px $brand-orange;
-}
-
-.vsn-block-img {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-}
-
-.vsn-block-text {
-  font-size: 1rem;
-  line-height: 1.8;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.6;
   color: $grey-blue2;
 }
 </style>

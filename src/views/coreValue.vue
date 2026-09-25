@@ -11,11 +11,13 @@
     <!-- The thesis -->
     <div class="cv-lede fade-in" v-html="$t('coreValueDescribe')"></div>
 
-    <!-- Three values as numbered editorial plates -->
+    <!-- Three values as ruled columns: no boxes, no counters. The 3px rule is
+         the same letterpress device as the masthead, so the page reads as one
+         printed sheet rather than a row of cards. -->
     <div class="cv-values">
-      <div v-for="i in 3" :key="i" class="cv-card fade-in">
-        <span class="cv-card-num">{{ String(i).padStart(2, '0') }}</span>
-        <p class="cv-card-text">{{ $t('coreValue' + i) }}</p>
+      <div v-for="v in values" :key="v.title" class="cv-value fade-in">
+        <h2 class="cv-value-title">{{ v.title }}</h2>
+        <p class="cv-value-text">{{ v.body }}</p>
       </div>
     </div>
 
@@ -27,16 +29,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '../composables/useScrollReveal'
 
 export default defineComponent({
   name: 'CoreValue',
   setup() {
-    const { locale } = useI18n()
+    const { t, locale } = useI18n()
     useScrollReveal('.fade-in', 'visible')
-    return { locale }
+    // The locale strings are "title - body"; locales without the separator
+    // (fr) render the whole line as the body under no title.
+    const values = computed(() =>
+      [1, 2, 3].map((i) => {
+        const raw = t('coreValue' + i)
+        const at = raw.indexOf(' - ')
+        return at > 0 ? { title: raw.slice(0, at), body: raw.slice(at + 3) } : { title: '', body: raw }
+      })
+    )
+    return { locale, values }
   }
 })
 </script>
@@ -79,10 +90,6 @@ export default defineComponent({
   @include masthead-block;
 }
 
-.cv-kicker {
-  @include masthead-kicker;
-}
-
 .cv-title {
   @include masthead-title;
 }
@@ -111,55 +118,44 @@ export default defineComponent({
 
 .cv-values {
   max-width: 1100px;
-  margin: 0 auto 72px;
+  margin: 0 auto 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  gap: 0 clamp(28px, 4vw, 56px);
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 0;
   }
 }
 
-.cv-card {
-  position: relative;
-  background: $warm-bg-light;
-  border: 1px solid rgba($grey-blue3, 0.32);
-  padding: 28px 26px;
-  transition: transform 0.3s ease;
+.cv-value {
+  border-top: 3px solid $grey-blue3;
+  padding: 22px 0 8px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 8px -8px -8px 8px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-    z-index: -1;
-  }
-
-  &:hover {
-    transform: translate(-3px, -3px);
-
-    &::before {
-      border-color: $brand-orange;
-    }
+  @media (max-width: 900px) {
+    padding-bottom: 28px;
   }
 }
 
-.cv-card-num {
+.cv-value-title {
   font-family: 'Noto Serif TC', serif;
   font-weight: 900;
-  font-size: 1.7rem;
-  color: transparent;
-  -webkit-text-stroke: 1.5px $brand-orange;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  line-height: 1.3;
+  color: $grey-blue3;
+  margin: 0 0 12px;
+
+  &:empty {
+    display: none;
+  }
 }
 
-.cv-card-text {
-  margin-top: 10px;
-  font-size: 1.02rem;
+.cv-value-text {
+  font-size: 1.05rem;
   line-height: 1.95;
   color: #4c4c4c;
+  margin: 0;
 }
 
 .cv-quote {

@@ -1,115 +1,100 @@
+// Consent card: a small card in the corner, not a banner across the page.
+// Design review 2026-09-25: the old full-width banner covered ~40% of a desktop
+// viewport and sat on top of the hero on every first visit.
 .cookie-container {
-    width: 80vw;
-    max-width: 1440px;
-    padding: 28px;
     position: fixed;
-    bottom: 12px;
-    background-color: white;
-    border-radius: 16px;
+    right: 16px;
+    bottom: 16px;
     z-index: 10;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-    @media (max-width: 1024px) and (min-width: 769px) {
-        width: 80vw;
-    }
+    width: min(440px, calc(100vw - 32px));
+    padding: 20px 22px 18px;
+    background-color: #fff;
+    border: 1px solid rgba(21, 41, 57, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 18px 44px -18px rgba(21, 41, 57, 0.35);
 
     @media (max-width: 768px) {
-        width: 80vw;
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        width: auto;
+        padding: 18px 18px 16px;
     }
 
     .title {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
-    }
-
-    .see-more {
-        display: none;
-
-        @media (max-width: 768px) {
-            display: flex;
-            justify-content: flex-end;
-            font-size: 14px;
-            font-weight: 400;
-            margin: 8px 0;
-        }
+        color: $grey-blue3;
     }
 
     .content {
-        font-size: 14px;
+        margin-top: 8px;
+        font-size: 13px;
         font-weight: 400;
-        margin-top: 16px;
-        line-height: 20.86px;
+        line-height: 1.65;
+        color: #4c4c4c;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        word-break: break-word;
 
-        @media (max-width: 768px) {
-            overflow: hidden;
-            white-space: normal;
-            text-overflow: ellipsis;
-            word-break: break-word;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 4;
-
-            &.is-see-all {
-                display: -webkit-box;
-                -webkit-box-orient: initial;
-                -webkit-line-clamp: 0 !important;
-            }
+        &.is-see-all {
+            display: block;
+            -webkit-line-clamp: unset;
+            overflow: visible;
         }
     }
 
-    .btn-container {
+    .see-more {
         display: flex;
         justify-content: flex-end;
-        margin-top: 12px;
+        margin: 6px 0 0;
+        font-size: 13px;
+        color: $brand-orange-text;
+
+        u { cursor: pointer; }
+    }
+
+    .btn-container {
+        margin-top: 14px;
 
         .inner {
-            width: 40%;
+            width: 100%;
             display: flex;
-
-            @media (max-width: 1024px) and (min-width: 769px) {
-                width: 60%;
-            }
-
-            @media (max-width: 768px) {
-                width: 100%;
-            }
+            gap: 8px;
         }
 
         .btn {
-            margin-left: 12px;
-            padding: 10px 16px;
+            flex: 1;
+            padding: 11px 12px;
+            font-size: 14px;
+            border-radius: 999px;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 14px;
+            transition: background 0.2s ease, transform 0.2s ease;
 
-            @media (max-width: 768px) {
-                padding: 10px 0;
-                margin-left: 0;
-            }
+            &:active { transform: translateY(1px) scale(0.98); }
         }
 
         .accept {
-            background-color: #FE8B05;
-            color: white;
-            border-radius: 6px;
-            font-weight: 800;
-            width: 65%;
+            background-color: $brand-orange;
+            color: #fff;
+            font-weight: 700;
+            border: 1px solid $brand-orange;
+
+            &:hover { background-color: $brand-orange-text; border-color: $brand-orange-text; }
         }
 
         .check {
-            color: #7D939B;
-            border-radius: 6px;
-            font-weight: 400;
-            width: 35%;
-            border: 1px solid #7D939B;
+            background: transparent;
+            color: $grey-blue3;
+            font-weight: 500;
+            border: 1px solid rgba(21, 41, 57, 0.3);
 
-            @media (max-width: 768px) {
-                margin-left: 6px;
-            }
+            &:hover { background: rgba(21, 41, 57, 0.05); }
         }
-
-
     }
 }

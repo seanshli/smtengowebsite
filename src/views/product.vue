@@ -317,10 +317,7 @@
              never mentioned the iOS and Android apps. Solid ground because
              background_2.png is mid-transition here and text colour would be a guess. -->
         <div id="interfaces" class="interfaces px-118 px-tab-50 px-mob-24 pt-72 pb-72 pt-mob-48 pb-mob-40 text-white">
-          <div data-tag class="tag d-flex ai-c py-8 px-16 ml-mob-0">
-            <img class="pr-4" src="/assets/logo_G.svg" alt="" />
-            <div>{{ $t('product.interfaces.title') }}</div>
-          </div>
+          <h2 class="section-title" data-reveal>{{ $t('product.interfaces.title') }}</h2>
           <div class="interfaces-scroll mt-40 mt-mob-28">
             <table class="interfaces-table">
               <thead>
@@ -404,10 +401,7 @@
           id="features"
           class="tablet_function pt-64 pb-96 px-118 px-tab-50 pt-mob-60 pb-mob-48 px-mob-24 pos-r"
         >
-          <div data-tag class="tag text-white d-flex ai-c py-8 px-16 ml-mob-0">
-            <img class="pr-4" src="/assets/joystick.svg" alt="" />
-            <div>{{ $t('product.tablet_function.tag') }}</div>
-          </div>
+          <h2 class="section-title" data-reveal>{{ $t('product.tablet_function.tag') }}</h2>
           <!-- ENGO-WEB-001 §2.4: four text cards. tablet_1.png is deliberately NOT
                reused here — ENGO-WEB-002: 一張正確的圖加四張留白，比五張錯的圖好.
                Each card's figure renders once featureImages carries a path (§3.2 #2–#5). -->
@@ -417,7 +411,6 @@
                 <img :src="featureImages.voice" :alt="$t('product.tablet_function.features.voice.title')" loading="lazy" />
               </figure>
               <div class="tf-card-head">
-                <span class="tf-num">01</span>
                 <span class="tf-badge">{{ $t('product.tablet_function.tabletOnly') }}</span>
               </div>
               <h3>{{ $t('product.tablet_function.features.voice.title') }}</h3>
@@ -428,9 +421,6 @@
               <figure v-if="featureImages.floorplan" class="tf-figure">
                 <img :src="featureImages.floorplan" :alt="$t('product.tablet_function.features.floorplan.title')" loading="lazy" />
               </figure>
-              <div class="tf-card-head">
-                <span class="tf-num">02</span>
-              </div>
               <h3>{{ $t('product.tablet_function.features.floorplan.title') }}</h3>
               <p>{{ $t('product.tablet_function.features.floorplan.body') }}</p>
             </article>
@@ -439,7 +429,6 @@
                 <img :src="featureImages.photowall" :alt="$t('product.tablet_function.features.photowall.title')" loading="lazy" />
               </figure>
               <div class="tf-card-head">
-                <span class="tf-num">03</span>
                 <span class="tf-badge">{{ $t('product.tablet_function.tabletOnly') }}</span>
               </div>
               <h3>{{ $t('product.tablet_function.features.photowall.title') }}</h3>
@@ -449,9 +438,6 @@
               <figure v-if="featureImages.inventory" class="tf-figure">
                 <img :src="featureImages.inventory" :alt="$t('product.tablet_function.features.inventory.title')" loading="lazy" />
               </figure>
-              <div class="tf-card-head">
-                <span class="tf-num">04</span>
-              </div>
               <h3>{{ $t('product.tablet_function.features.inventory.title') }}</h3>
               <p>{{ $t('product.tablet_function.features.inventory.body') }}</p>
             </article>
@@ -473,13 +459,6 @@
                 {{ $t('product.engo_products.twoMachines') }}
               </div>
             </div>
-          </div>
-          <div data-tag class="tag text-white px-16 py-8 mb-30 d-flex">
-            <img src="/assets/glasswater.svg" alt="智慧應用icon" />
-            <span>
-              <!-- 智慧應用 -->
-              {{ $t('product.engo_products.btn') }}
-            </span>
           </div>
           <h4 class="text-gold fz-24 lh-30 fz-tab-16 lh-tab-20 d-mob-none">
             <!-- 從進水到出水層層把關，濾芯狀態看得見 -->
@@ -556,11 +535,6 @@
           </div>
         </div>
         <div class="filter_strength container pt-116 pt-mob-30">
-          <div class="tag mb-18">
-            <img src="/assets/layers.svg" alt="產品特點 icon" />
-            <!-- 產品特點 -->
-            {{ $t('product.filter_strength.tag') }}
-          </div>
           <div class="d-flex fd-column jc-c ai-c mb-112 mb-mob-18 text-white pos-r">
             <div class="bg-text bg-text-l d-none d-mob-block">1</div>
             <h3 class="fz-48 lh-70 fz-mob-20 lh-mob-32 fw-700">
@@ -828,13 +802,6 @@
       </div>
       <!-- 產品優勢 -->
       <div class="productAdvantages pb-32 px-24 d-none d-mob-flex fd-column">
-        <div class="tag as-fs mb-32">
-          <img src="/assets/radar.svg" alt="產品比較 icon" />
-          <span>
-            <!-- 產品優勢 -->
-            {{ $t('product.advantages') }}
-          </span>
-        </div>
         <div class="filter_list mb-12">
           <ul>
             <li class="list_header d-flex ai-c">
@@ -906,13 +873,6 @@
       </div>
       <div class="background_B">
         <div class="competitor container d-flex fd-column ai-c py-80 py-mob-0">
-          <div class="tag as-fs mb-12">
-            <img src="/assets/radar.svg" :alt="$t('product.competitor.tag') + ' icon'" />
-            <span>
-              <!-- 產品比較 -->
-              {{ $t('product.competitor.tag') }}
-            </span>
-          </div>
           <h2 class="text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fw-700 d-mob-none">
             <!-- 水維氧AI智慧淨水系統 -->
             {{ $t('product.competitor.title') }}
@@ -951,12 +911,6 @@
           </div>
         </div>
         <!-- <div class="purchase container d-flex fd-column ai-c pb-80 d-mob-none">
-          <div class="tag as-fs mb-12">
-            <img class="pr-8" src="/assets/shopping_bag.svg" alt="購買方式" />
-            <span>
-              {{ $t('product.purchase.tag') }}
-            </span>
-          </div>
 
           <div class="card_2 flex_horizontal">
             <img src="/images/pack.png" alt="早鳥優惠價" />

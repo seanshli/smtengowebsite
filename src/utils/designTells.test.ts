@@ -77,6 +77,34 @@ describe('page templates carry no template tells', () => {
         expect(t).not.toMatch(/bmsCase\.title/)
         expect(t).toContain('T.bmsPhotoCap')
     })
+    it('no decorative 01/02/03 counters or kicker pills (craft floor, design pass 2026-09-25)', () => {
+        for (const f of ['coreValue.vue', 'mission.vue', 'vision.vue', 'enviro.vue', 'product.vue']) {
+            const tpl = templateOf(f)
+            expect(tpl, f).not.toMatch(/padStart\(2, '0'\)/)
+            expect(tpl, f).not.toMatch(/tf-num|-plate-num|-block-num|-pillar-num|-card-num/)
+            expect(tpl, f).not.toMatch(/class="(?:ev|cv|msn|vsn)-kicker"/)
+        }
+        expect(templateOf('product.vue')).not.toMatch(/class="tag[ "]/)
+        expect(templateOf('vision.vue')).not.toMatch(/business-model-icon|b2b2c\.svg/)
+    })
+    it('browser surfaces are themed and the consent card stays a card', () => {
+        const surfaces = readFileSync(resolve(process.cwd(), 'src/css/base/_surfaces.scss'), 'utf-8')
+        expect(surfaces).toMatch(/::selection/)
+        expect(surfaces).toMatch(/caret-color/)
+        expect(surfaces).toMatch(/:focus-visible/)
+        expect(readFileSync(resolve(process.cwd(), 'src/css/main.scss'), 'utf-8')).toMatch(/base\/surfaces/)
+        const cookie = readFileSync(resolve(process.cwd(), 'src/css/components/_cookie.scss'), 'utf-8')
+        expect(cookie).toMatch(/width: min\(440px/)
+        expect(cookie).not.toMatch(/80vw/)
+    })
+    it('the contact form labels every field (no placeholder-as-label)', () => {
+        const tpl = templateOf('contact.vue')
+        for (const id of ['cf-name', 'cf-phone', 'cf-email', 'cf-city', 'cf-address', 'cf-interest', 'cf-message']) {
+            expect(tpl, id).toContain(`for="${id}"`)
+            expect(tpl, id).toContain(`id="${id}"`)
+        }
+        expect(tpl).not.toMatch(/:placeholder="`\$\{\$t\('name'\)/)
+    })
     it('home never renders the shared case illustration as proof', () => {
         const src = readFileSync(resolve(views, 'index.vue'), 'utf-8')
         expect(src).toMatch(/case-home\.jpg/)   // the filter that excludes it must exist
