@@ -668,13 +668,6 @@ body {
             margin-bottom: 14px;
         }
 
-        .tf-num {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            color: $orange2;
-        }
-
         .tf-badge {
             padding: 3px 10px;
             font-size: 12px;
@@ -1401,4 +1394,15 @@ body {
 @keyframes glowDrift {
     from { transform: translate3d(0, 0, 0) scale(1); }
     to { transform: translate3d(3%, -4%, 0) scale(1.08); }
+}
+
+// Section titles that replaced the tag pills (design pass 2026-09-25): a
+// heading is the section's own voice; the pill above it was a kicker.
+.section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    line-height: 1.25;
+    color: inherit;
+    margin: 0;
 }

@@ -1,0 +1,57 @@
+// ─── Browser surfaces ───
+// The parts of the page nobody draws still carry the design: text selection,
+// the caret, focus rings, link underlines, the scrollbar. Left at browser
+// defaults they belong to no system; themed from the palette they say the
+// page was built, not assembled. Tokens only, no new colours.
+
+::selection {
+  background: rgba($signal, 0.35);
+  color: $grey-blue3;
+}
+
+body {
+  caret-color: $brand-orange;
+  accent-color: $brand-orange;
+}
+
+// One focus ring for everything focusable. `:where()` keeps specificity at
+// zero so components that draw their own ring (header, buttons, contact form)
+// still win; everything else inherits this instead of the UA blue.
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid $signal-text;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a {
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+html {
+  scrollbar-color: rgba($grey-blue3, 0.35) transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($grey-blue3, 0.28);
+  border-radius: 999px;
+  border: 3px solid $warm-bg-light;
+
+  &:hover {
+    background: rgba($grey-blue3, 0.45);
+  }
+}

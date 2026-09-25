@@ -154,6 +154,8 @@
                 border-radius: 8px;
                 border: 1px solid rgba(34, 66, 116, 0.1);
                 color: #333 !important;
+                // unanswered select reads as a prompt, not as a chosen value
+                &.is-empty { color: #7a7a7a !important; }
                 -webkit-appearance: none;
                 appearance: none;
                 transition: all 0.3s;
@@ -168,10 +170,16 @@
             }
 
             label {
-                font-size: 18px;
-                font-weight: 500;
-                margin-bottom: 8px;
-                color: #2c2c2c;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: 0.01em;
+                margin-bottom: 6px;
+                color: $grey-blue3;
+
+                .cf-req {
+                    font-weight: 400;
+                    color: $brand-orange-text;
+                }
             }
 
             input {

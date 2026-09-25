@@ -11,29 +11,23 @@
       </div>
       <div class="contact_inputs flex_vertical">
         <div class="input_label">
-          <input
-            type="text"
-            :placeholder="`${$t('name')}(${$t('required')})`"
-            name="name"
-            v-model="name"
-          />
+          <label for="cf-name">{{ $t('name') }} <span class="cf-req">({{ $t('required') }})</span></label>
+          <input id="cf-name" type="text" name="name" autocomplete="name" v-model="name" />
         </div>
         <div class="input_label">
-          <input
-            type="text"
-            :placeholder="`${$t('phone')}(${$t('required')})`"
-            name="phone"
-            v-model="phone"
-          />
+          <label for="cf-phone">{{ $t('phone') }} <span class="cf-req">({{ $t('required') }})</span></label>
+          <input id="cf-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" v-model="phone" />
         </div>
         <div class="input_label">
-          <input type="text" :placeholder="$t('email')" name="email" v-model="email" />
+          <label for="cf-email">{{ $t('email') }}</label>
+          <input id="cf-email" type="email" name="email" autocomplete="email" inputmode="email" v-model="email" />
         </div>
         <div class="input_wrap">
           <div class="input_label--short">
-            <select class="custom_select" name="city" required v-model="city">
+            <label for="cf-city">{{ $t('city') }} <span class="cf-req">({{ $t('required') }})</span></label>
+            <select id="cf-city" class="custom_select" :class="{ 'is-empty': !city }" name="city" required v-model="city">
               <option value="" selected disabled hidden>
-                {{ `${$t('city')}(${$t('required')})` }}
+                {{ $t('city') }}
               </option>
               <option :value="$t('tpe')">{{ $t('tpe') }}</option>
               <option :value="$t('ntpe')">{{ $t('ntpe') }}</option>
@@ -50,14 +44,16 @@
           </div>
 
           <div class="input_label--long">
-            <input type="text" :placeholder="$t('address')" name="address" v-model="address" />
+            <label for="cf-address">{{ $t('address') }}</label>
+            <input id="cf-address" type="text" name="address" autocomplete="street-address" v-model="address" />
           </div>
         </div>
         <div class="input_label">
           <!-- 我想了解的是 -->
-          <select class="custom_select" name="interest" v-model="interest">
+          <label for="cf-interest">{{ $t('interest') }} <span class="cf-req">({{ $t('required') }})</span></label>
+          <select id="cf-interest" class="custom_select" :class="{ 'is-empty': !interest }" name="interest" v-model="interest">
             <option value="" selected disabled hidden>
-              {{ `${$t('interest')}(${$t('required')})` }}
+              {{ $t('interest') }}
             </option>
             <option value="product">{{ $t('interestType1') }}</option>
             <option value="fix">{{ $t('interestType2') }}</option>
@@ -69,7 +65,8 @@
         <div class="input_wrap" v-if="interest === 'product'">
           <div class="input_label">
             <!-- 選擇產品 -->
-            <select class="custom_select" name="messagetype" v-model="messagetype">
+            <label for="cf-messagetype">{{ $t('messagetypePlaceholder') }} <span class="cf-req">({{ $t('required') }})</span></label>
+            <select id="cf-messagetype" class="custom_select" :class="{ 'is-empty': !messagetype }" name="messagetype" v-model="messagetype">
               <option value="" selected disabled hidden>
                 {{ `${$t('messagetypePlaceholder')}(${$t('required')})` }}
               </option>
@@ -79,7 +76,8 @@
           </div>
           <div class="input_label">
             <!-- 選擇方案 -->
-            <select class="custom_select" name="plan" v-model="plan">
+            <label for="cf-plan">{{ $t('planPlaceholder') }} <span class="cf-req">({{ $t('required') }})</span></label>
+            <select id="cf-plan" class="custom_select" :class="{ 'is-empty': !plan }" name="plan" v-model="plan">
               <option value="" selected disabled hidden>
                 {{ `${$t('planPlaceholder')}(${$t('required')})` }}
               </option>
@@ -90,8 +88,9 @@
           </div>
         </div>
         <div class="textarea_label">
-          <label for="message">{{ $t('message') }}</label>
+          <label for="cf-message">{{ $t('message') }}</label>
           <textarea
+            id="cf-message"
             name="message"
             :placeholder="$t('messagePlaceholder')"
             v-model="message"

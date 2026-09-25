@@ -5,7 +5,6 @@
   <section id="enviro" class="ev-page">
     <!-- Editorial masthead, inverted -->
     <header class="ev-mast">
-      <p class="ev-kicker">{{ isZh ? '全方位環控方案' : 'TOTAL ENVIRONMENTAL CONTROL' }}</p>
       <h1 class="ev-title">{{ $t('enviroTitle') }}</h1>
       <p class="ev-sub fade-in">
         {{ isZh
@@ -33,13 +32,12 @@
     <!-- Four pillars -->
     <div class="ev-pillars">
       <article
-        v-for="(p, i) in pillars"
+        v-for="p in pillars"
         :key="p.id"
         class="ev-pillar fade-in"
         :style="{ '--pc': p.color }"
       >
         <div class="ev-pillar-head">
-          <span class="ev-pillar-num">{{ String(i + 1).padStart(2, '0') }}</span>
           <svg class="ev-pillar-icon" viewBox="-24 -24 48 48" aria-hidden="true" v-html="p.icon"></svg>
         </div>
         <h2 class="ev-pillar-title">{{ isZh ? p.title.zh : p.title.en }}</h2>
@@ -204,10 +202,6 @@ export default defineComponent({
   @include masthead-block($warm-bg-light);
 }
 
-.ev-kicker {
-  @include masthead-kicker($orange2);
-}
-
 .ev-title {
   @include masthead-title($warm-bg-light);
 }
@@ -296,15 +290,6 @@ export default defineComponent({
 .ev-pillar-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.ev-pillar-num {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: 1.7rem;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--pc, $orange2);
 }
 
 .ev-pillar-icon {
