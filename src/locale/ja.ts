@@ -165,15 +165,15 @@ export const jaLocale = {
         brandStoryTitle: 'enGoのストーリー',
         intextLogo: 'テクノロジーは、すべての家庭のために',
         paragraph1:
-            '毎朝、あなたがまだベッドにいる間に、<font color="e05a35">enGoはすでにカーテンを開け、照明を調整し、空調を調整しています。</font>アラームを設定したからではありません — あなたの生活リズムを学んだからです。これがenGo — 「<font color="e05a35">Energy Go</font>」から生まれた名前 — エネルギーをスマートに流し、テクノロジーを本当に家の一部にします。私たちはシンプルな信念から始めました：より良い生活は、贅沢であるべきではない。空気、水、照明、日々のエネルギー習慣。enGoのAIがあなたのニーズを理解し、一歩先を行く快適で安全、省エネな住まいを実現します。',
+            '毎朝、あなたがまだベッドにいる間に、<font color="e05a35">enGoはすでにカーテンを開け、照明を調整し、空調を調整しています。</font>アラームを設定したからではありません、あなたの生活リズムを学んだからです。これがenGo、「<font color="e05a35">Energy Go</font>」から生まれた名前、エネルギーをスマートに流し、テクノロジーを本当に家の一部にします。私たちはシンプルな信念から始めました：より良い生活は、贅沢であるべきではない。空気、水、照明、日々のエネルギー習慣。enGoのAIがあなたのニーズを理解し、一歩先を行く快適で安全、省エネな住まいを実現します。',
         paragraph2:
             '高齢化社会を迎え、私たちはテクノロジーの最も人間的な側面を見出しました。<font color="e05a35">enGoはスマートホームの守護者であるだけでなく、シニアライフの心強いパートナーです。</font>大きな文字のインターフェース、音声操作、自動シーンで毎日を楽に。遠隔モニタリングとリアルタイム通知で、離れて暮らすご家族も安心です。',
         paragraph3:
             'ここまでの道のりは平坦ではありませんでした。創業者のSeanとチームは古いオフィスで限られた資金からスタートし、パンデミックの中でビジョンを形にしました。彼らのモットーは「夢があるなら、まずやってみよう！」この情熱が、enGoを台湾から世界へと成長させました。',
         paragraph4:
-            '現在、enGoは家庭生活の4つの要素 — 日光、空気、水、食 — を一台のAI制御タブレットで統合し、家全体をつなげています。私たちの製品は単なるテクノロジーではありません — <font color="e05a35">すべての家族の健康と幸せへの約束です。</font>',
+            '現在、enGoは家庭生活の4つの要素、日光、空気、水、食、を一台のAI制御タブレットで統合し、家全体をつなげています。私たちの製品は単なるテクノロジーではありません、<font color="e05a35">すべての家族の健康と幸せへの約束です。</font>',
         paragraph5:
-            '私たちは信じています：テクノロジーの本当の価値は、普通の日々を特別なものに変えること。帰宅するたびに、大切にされている温もりを感じられること。<font color="e05a35">それがenGo — あなたのスマートホームバトラーです。</font>'
+            '私たちは信じています：テクノロジーの本当の価値は、普通の日々を特別なものに変えること。帰宅するたびに、大切にされている温もりを感じられること。<font color="e05a35">それがenGo、あなたのスマートホームバトラーです。</font>'
     },
 
     // about
@@ -187,18 +187,18 @@ export const jaLocale = {
     missionTitle: '私たちの使命',
     teamTitle: '経営チーム',
     enviroTitle: '環境コントロール',
-    teamSubtitle: '創業チームと顧問——AI・オペレーション・デザイン・技術戦略のリーダーたち。',
-    missionSubtitle: 'すべての家庭にAIがもたらす快適と安心を届けること——年齢も予算も関係なく、テクノロジーは人に寄り添うべきです。',
+    teamSubtitle: '創業チームと顧問、AI・オペレーション・デザイン・技術戦略のリーダーたち。',
+    missionSubtitle: 'すべての家庭にAIがもたらす快適と安心を届けること、年齢も予算も関係なく、テクノロジーは人に寄り添うべきです。',
     threeCoreValue1: '技術リーダーシップ：AIoTの活用シーンを統合し、市場をリードします。',
     threeCoreValue2: 'サービスリーダーシップ：ユーザーニーズを中心に、安心・健康・スマートなサービスを提供します。',
     threeCoreValue3: 'アプリケーションリーダーシップ：AIとビッグデータを活用したB2B2Cアプリケーション。',
-    fiveValues: '優れたテクノロジーに分厚いマニュアルは必要ありません。enGoはAIをご家庭で最も思いやりのあるメンバーに変えます——あなたの生活リズムを理解し、健康を見守り、家族の安全を守ります。',
-    fiveValues1: '<font color="e05a35">スマート見守り</font>｜水質モニタリング、漏水検知、ガス自動遮断——24時間365日、ご家族の安全を守り続けます。',
+    fiveValues: '優れたテクノロジーに分厚いマニュアルは必要ありません。enGoはAIをご家庭で最も思いやりのあるメンバーに変えます。あなたの生活リズムを理解し、健康を見守り、家族の安全を守ります。',
+    fiveValues1: '<font color="e05a35">スマート見守り</font>｜水質モニタリング、漏水検知、ガス自動遮断、24時間365日、ご家族の安全を守り続けます。',
     fiveValues2: '<font color="e05a35">きれいな空気</font>｜医療グレードHEPA12フィルター搭載の4-in-1空気清浄システムで、一呼吸ごとに安心を。',
-    fiveValues3: '<font color="e05a35">あたたかい寄り添い</font>｜ワンタッチシーン、音声操作、大きな文字の画面——ご高齢の方も気軽にスマートライフを楽しめます。',
+    fiveValues3: '<font color="e05a35">あたたかい寄り添い</font>｜ワンタッチシーン、音声操作、大きな文字の画面、ご高齢の方も気軽にスマートライフを楽しめます。',
     fiveValues4: 'スマートデバイスの普及',
     fiveValues5: '省エネ・脱炭素と社会的責任（ESG）',
-    missionConclusion: '台湾から世界へ、enGoは「家」の意味を再定義しています。私たちは製品を売るだけではありません——<font color="e05a35">家族みんなが笑顔になれるライフスタイルを創り出します。</font>',
+    missionConclusion: '台湾から世界へ、enGoは「家」の意味を再定義しています。私たちは製品を売るだけではありません、<font color="e05a35">家族みんなが笑顔になれるライフスタイルを創り出します。</font>',
     visionTitle: 'ビジョン',
     visionIntextLogo: '「安購」はAI技術を活用し、日光、空気、水、食材をインテリジェントに統合。環境に配慮したスマートホームを実現します。',
     vision1: '利用シーンの拡大',
@@ -212,27 +212,27 @@ export const jaLocale = {
     // TODO: translate — English placeholder so nothing renders blank
     vision: {
       sun: {
-        title: 'Sunlight — living with the natural day',
-        copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home — brighter mornings, calmer evenings, and comfort that follows the sun.'
+        title: 'Sunlight, living with the natural day',
+        copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home, brighter mornings, calmer evenings, and comfort that follows the sun.'
       },
       air: {
-        title: 'Air — breathe without a second thought',
-        copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk — with air quality you can see at a glance.'
+        title: 'Air, breathe without a second thought',
+        copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk, with air quality you can see at a glance.'
       },
       water: {
-        title: 'Water — protection you can see',
-        copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way — every glass is the best it can be.'
+        title: 'Water, protection you can see',
+        copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way. Every glass is the best it can be.'
       },
       food: {
-        title: 'Food safety — health you stay on top of',
+        title: 'Food safety, health you stay on top of',
         copy: 'enGo\'s intelligent management system provides end-to-end food safety assurance, so every meal on your table is one you can trust.'
       },
       safety: {
-        title: 'Security — watching over every moment at home',
-        copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry — and share in the value a connected community creates.'
+        title: 'Security, watching over every moment at home',
+        copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry, and share in the value a connected community creates.'
       },
       closing:
-        'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream — enGo is here to look after your home for the long run.'
+        'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream. enGo is here to look after your home for the long run.'
     },
 
     // product
@@ -246,11 +246,11 @@ export const jaLocale = {
             badge: '製品紹介',
             title: 'AIスマートホーム・コントロールパネル',
             heading: '家の中のあらゆることが、スマート管家の仕事です',
-            lead: '多くのスマートホーム製品は家の中だけを管理します。enGo は家とコミュニティを同時に管理する——それが他のシステムとの最も根本的な違いです。',
+            lead: '多くのスマートホーム製品は家の中だけを管理します。enGo は家とコミュニティを同時に管理する。それが他のシステムとの最も根本的な違いです。',
             homeLabel: '家の中',
             home: '照明、コンセント、カーテン、エアコン、そしてテレビやエアコンなどの赤外線家電。温湿度、空気質、人の在室、ガス、水漏れ、煙のリアルタイム検知。カメラ映像、ドアインターホン、回路ごとの電力モニタリング。',
             communityLabel: 'コミュニティ',
-            communityFigure: 'コミュニティのお知らせ——スマホアプリ画面',
+            communityFigure: 'コミュニティのお知らせ、スマホアプリ画面',
             community: 'お知らせを見逃さず、修理依頼の進捗を追跡し、共用施設をオンラインで予約。宅配物がスマートロッカーに届いたら、アプリでコードを入力してそのまま開けられます。',
             scenes: 'よく使う組み合わせはワンタップの「シーン」として保存できます。「外出」を押せば、照明はすべて消え、エアコンは停止し、セキュリティモードがオンになります。時間やセンサーの状態に応じて自動で実行するオートメーションも設定できます。',
             countCard: {
@@ -293,9 +293,9 @@ export const jaLocale = {
             tag: '機能紹介',
             tabletOnly: 'タブレット専用',
             features: {
-                voice: { title: '音声操作', body: '壁まで歩けば、ひと言で完了。「リビングの照明をつけて」「エアコンを26度に」「会議室の照明を全部消して」「退勤モード」——スマホを取り出す必要も、画面でボタンを探す必要もありません。安全に関わる機器は先に確認を求め、名前が似ている場合は推測せずに聞き返します。', note: 'システムが常時聞き取ることはなく、バックグラウンドで録音することもありません。' },
+                voice: { title: '音声操作', body: '壁まで歩けば、ひと言で完了。「リビングの照明をつけて」「エアコンを26度に」「会議室の照明を全部消して」「退勤モード」、スマホを取り出す必要も、画面でボタンを探す必要もありません。安全に関わる機器は先に確認を求め、名前が似ている場合は推測せずに聞き返します。', note: 'システムが常時聞き取ることはなく、バックグラウンドで録音することもありません。' },
                 floorplan: { title: 'リアルタイム・フロアプラン', body: 'ご自宅の実際の間取りから生成されたフロアプランで、どの部屋に人がいるか、どの照明がついたままか、どのエアコンが稼働中かが一目でわかります。機器をひとつずつ開く必要はありません。' },
-                photowall: { title: '待機フォトウォール', body: '使っていないときは、タブレットが自動で家族の写真に切り替わり、時刻・天気・最新のコミュニティのお知らせを重ねて表示できます。周囲の明るさに応じて輝度を自動調整——深夜にまぶしくなることはなく、廊下の照明がついたときにだけ明るくなります。ひと触れで元の画面に戻ります。' },
+                photowall: { title: '待機フォトウォール', body: '使っていないときは、タブレットが自動で家族の写真に切り替わり、時刻・天気・最新のコミュニティのお知らせを重ねて表示できます。周囲の明るさに応じて輝度を自動調整、深夜にまぶしくなることはなく、廊下の照明がついたときにだけ明るくなります。ひと触れで元の画面に戻ります。' },
                 inventory: { title: 'スマート在庫管理', body: '家庭の収納、店舗や事務所の在庫まで管理できます。品目、棚の位置、分類、在庫不足の通知に対応し、ショップの注文・配送通知と連携します。' }
             }
         },
@@ -532,7 +532,7 @@ export const jaLocale = {
         features: '特長',
         found_video: '動画が見つかりました：',
         found_info: '情報が見つかりました。こちらをクリックしてご確認ください：',
-        no_match: '申し訳ありません、この質問には確実にお答えできません。担当者にご確認いただくのが確実です。02-27510218（月〜金 09:00–18:00）へお電話いただくか、LINE でお問い合わせください。',
+        no_match: '申し訳ありません、この質問には確実にお答えできません。担当者にご確認いただくのが確実です。02-27510218（月〜金 09:00-18:00）へお電話いただくか、LINE でお問い合わせください。',
         line_handoff: 'LINEで問い合わせる',
         replies: {
             product: 'enGo とは',

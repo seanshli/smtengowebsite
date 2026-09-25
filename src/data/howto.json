@@ -21,8 +21,8 @@
         "en": "Household & Rooms"
       },
       "summary": {
-        "zh": "建立住家、填好地址與社區、規劃房間，並把家人加進來。這是所有其他功能的基礎 —— 房間名稱之後會直接成為語音指令的一部分。",
-        "en": "Create a household, fill in its address and community, plan the rooms, and invite your family. Everything else builds on this — room names later become part of your voice commands."
+        "zh": "建立住家、填好地址與社區、規劃房間，並把家人加進來。這是所有其他功能的基礎。房間名稱之後會直接成為語音指令的一部分。",
+        "en": "Create a household, fill in its address and community, plan the rooms, and invite your family. Everything else builds on this. Room names later become part of your voice commands."
       },
       "steps": [
         {
@@ -76,8 +76,8 @@
           "en": "Name rooms the way your family actually says them (\"master bedroom\", not \"room 1\"). The name becomes part of the voice command, so how easily it is spoken decides how well voice works."
         },
         {
-          "zh": "🔒 邀請碼請當成密碼看待 —— 任何人拿到就能加入您的住家、看到並控制家中裝置。不要拍照外流或貼在群組；若已外流，按邀請碼右側的重新產生鍵即可讓舊碼失效。",
-          "en": "🔒 Treat the invite code like a password — anyone who has it can join your household and control your devices. Never share it in a photo or a group chat; if it leaks, press Regenerate next to the code to invalidate the old one."
+          "zh": "🔒 邀請碼請當成密碼看待。任何人拿到就能加入您的住家、看到並控制家中裝置。不要拍照外流或貼在群組；若已外流，按邀請碼右側的重新產生鍵即可讓舊碼失效。",
+          "en": "🔒 Treat the invite code like a password. Anyone who has it can join your household and control your devices. Never share it in a photo or a group chat; if it leaks, press Regenerate next to the code to invalidate the old one."
         }
       ]
     },
@@ -91,7 +91,7 @@
       },
       "summary": {
         "zh": "配網是讓裝置連上您家 Wi-Fi 並加入 enGo 的過程。首頁右上「＋」進入「添加設備」，上方有五種方式，先試「設備發現」。",
-        "en": "Pairing is how a device joins your Wi-Fi and your enGo home. Tap + at the top right of the home screen to open Add device. Five methods are offered — try Device discovery first."
+        "en": "Pairing is how a device joins your Wi-Fi and your enGo home. Tap + at the top right of the home screen to open Add device. Five methods are offered: try Device discovery first."
       },
       "steps": [
         {
@@ -101,7 +101,7 @@
           },
           "body": {
             "zh": "① 平板或手機連在 2.4GHz Wi-Fi（多數智慧裝置不支援 5GHz，這是最常見的失敗原因）② 裝置已進入配對模式（多為長按重置鍵至指示燈快閃，做法依廠牌而異）③ 裝置與路由器距離不要太遠。",
-            "en": "① Your tablet or phone is on 2.4GHz Wi-Fi (most smart devices do not support 5GHz — this is the most common cause of failure). ② The device is in pairing mode (usually hold its reset button until the LED blinks fast; this varies by brand). ③ The device is not too far from the router."
+            "en": "① Your tablet or phone is on 2.4GHz Wi-Fi (most smart devices do not support 5GHz, this is the most common cause of failure). ② The device is in pairing mode (usually hold its reset button until the LED blinks fast; this varies by brand). ③ The device is not too far from the router."
           },
           "image": null
         },
@@ -111,8 +111,8 @@
             "en": "Device discovery (try this first)"
           },
           "body": {
-            "zh": "適用大多數 Wi-Fi 裝置。讓裝置進入配對模式，畫面會自動列出找到的裝置，選取後指定房間即可。若等約 30 秒仍沒有任何裝置出現，這一頁不會主動告訴您失敗 —— 請改用下面其他方式，或回頭確認上一步的三個條件。",
-            "en": "Works for most Wi-Fi devices. Put the device in pairing mode and it appears in the list; select it and assign a room. If nothing appears after about 30 seconds the page will not tell you it failed — switch to one of the methods below, or re-check the three conditions above."
+            "zh": "適用大多數 Wi-Fi 裝置。讓裝置進入配對模式，畫面會自動列出找到的裝置，選取後指定房間即可。若等約 30 秒仍沒有任何裝置出現，這一頁不會主動告訴您失敗。請改用下面其他方式，或回頭確認上一步的三個條件。",
+            "en": "Works for most Wi-Fi devices. Put the device in pairing mode and it appears in the list; select it and assign a room. If nothing appears after about 30 seconds the page will not tell you it failed. Switch to one of the methods below, or re-check the three conditions above."
           },
           "image": null
         },
@@ -155,8 +155,8 @@
             "en": "AP pairing (fallback)"
           },
           "body": {
-            "zh": "上述方式都失敗時使用，共三個步驟。步驟 1：長按裝置配網鍵 3–5 秒，待指示燈快閃、裝置自行開啟 AP 熱點；步驟 2：手動連上該熱點；步驟 3：回到 App 完成。",
-            "en": "Use this when the others fail; it has three steps. Step 1: hold the device's pairing button for 3–5 seconds until the LED blinks fast and the device opens its own hotspot. Step 2: connect to that hotspot manually. Step 3: return to the app to finish."
+            "zh": "上述方式都失敗時使用，共三個步驟。步驟 1：長按裝置配網鍵 3-5 秒，待指示燈快閃、裝置自行開啟 AP 熱點；步驟 2：手動連上該熱點；步驟 3：回到 App 完成。",
+            "en": "Use this when the others fail; it has three steps. Step 1: hold the device's pairing button for 3-5 seconds until the LED blinks fast and the device opens its own hotspot. Step 2: connect to that hotspot manually. Step 3: return to the app to finish."
           },
           "image": "/images/howto/device/24-pair-ap.png"
         }
@@ -164,7 +164,7 @@
       "tips": [
         {
           "zh": "配網成功後請立刻改名並指定房間。「白色四鍵123」這種型號名在語音與情境裡都不好用，改成「客廳壁切」才有意義。",
-          "en": "Rename the device and assign its room right away. A model name like \"white 4-gang 123\" is useless in voice commands and scenes — \"living-room wall switch\" is not."
+          "en": "Rename the device and assign its room right away. A model name like \"white 4-gang 123\" is useless in voice commands and scenes, \"living-room wall switch\" is not."
         },
         {
           "zh": "同一台裝置重複配網會建立第二筆紀錄。配網前先確認它是不是已經在清單裡。",
@@ -198,8 +198,8 @@
         },
         {
           "title": {
-            "zh": "步驟 1 — 先選觸發方式",
-            "en": "Step 1 — choose the trigger"
+            "zh": "步驟 1：先選觸發方式",
+            "en": "Step 1: choose the trigger"
           },
           "body": {
             "zh": "情境頁右上「＋」開始建立。第一個畫面決定這是手動還是自動：「選擇控制設備」＝手動；「設備狀態變化時」與「定時」＝自動。",
@@ -209,8 +209,8 @@
         },
         {
           "title": {
-            "zh": "步驟 2–3 — 選裝置、設定動作",
-            "en": "Steps 2–3 — pick devices and set actions"
+            "zh": "步驟 2-3：選裝置、設定動作",
+            "en": "Steps 2-3: pick devices and set actions"
           },
           "body": {
             "zh": "依房間分頁挑選裝置，然後勾選要下達的項目。這一層顯示的是裝置本身回報的控制項名稱（例如「開關1」），不是 enGo 另外取的名字，因此會依裝置廠牌而異。",
@@ -220,8 +220,8 @@
         },
         {
           "title": {
-            "zh": "步驟 4 — 命名並確認任務清單",
-            "en": "Step 4 — name it and review the task list"
+            "zh": "步驟 4：命名並確認任務清單",
+            "en": "Step 4: name it and review the task list"
           },
           "body": {
             "zh": "輸入情境名稱，下方表格逐列列出已加入的任務：房間、裝置、任務名稱、任務內容、在線狀態。可按「添加任務」再加一台裝置。",
@@ -231,12 +231,12 @@
         },
         {
           "title": {
-            "zh": "步驟 5 — 保存",
-            "en": "Step 5 — save"
+            "zh": "步驟 5：保存",
+            "en": "Step 5: save"
           },
           "body": {
-            "zh": "按右上「保存」。存檔後回到情境頁，於對應分頁出現新卡片。若卡片顯示「狀態讀取失敗」，按右上重整鍵即可 —— 那是新情境還沒取到裝置狀態，不是設定錯誤。",
-            "en": "Press Save at the top right. You return to the Scenes page and the new card appears under the matching tab. If the card says the status could not be read, press the refresh icon — the new scene simply has not fetched device states yet; nothing is wrong with your settings."
+            "zh": "按右上「保存」。存檔後回到情境頁，於對應分頁出現新卡片。若卡片顯示「狀態讀取失敗」，按右上重整鍵即可。那是新情境還沒取到裝置狀態，不是設定錯誤。",
+            "en": "Press Save at the top right. You return to the Scenes page and the new card appears under the matching tab. If the card says the status could not be read, press the refresh icon. The new scene simply has not fetched device states yet; nothing is wrong with your settings."
           },
           "image": "/images/howto/scene/34-manual-list.png"
         },
@@ -246,8 +246,8 @@
             "en": "Edit, pause and delete"
           },
           "body": {
-            "zh": "卡片右上「⋯」有三個選項：延時執行（過一段時間後才執行）、編輯、移除。自動情境的卡片右側另有開關，可暫時停用而不刪除 —— 例如出遠門時先關掉自動亮燈。",
-            "en": "The ⋯ menu on each card offers three options: Run later, Edit and Remove. Automatic scenes also have a switch on the right so you can pause one without deleting it — handy when you travel and want the auto lights off."
+            "zh": "卡片右上「⋯」有三個選項：延時執行（過一段時間後才執行）、編輯、移除。自動情境的卡片右側另有開關，可暫時停用而不刪除，例如出遠門時先關掉自動亮燈。",
+            "en": "The ⋯ menu on each card offers three options: Run later, Edit and Remove. Automatic scenes also have a switch on the right so you can pause one without deleting it, handy when you travel and want the auto lights off."
           },
           "image": "/images/howto/scene/35-card-menu.png"
         }
@@ -255,7 +255,7 @@
       "tips": [
         {
           "zh": "「下班模式」比「情境 A」好記也好念。避免兩個情境取相近的名字，否則語音會反問您指的是哪一個。",
-          "en": "\"Leaving-work mode\" beats \"Scene A\" — easier to remember and to say. Avoid near-identical names, or voice will ask which one you meant."
+          "en": "\"Leaving-work mode\" beats \"Scene A\", easier to remember and to say. Avoid near-identical names, or voice will ask which one you meant."
         },
         {
           "zh": "⚠ 兩個情境同名時，移除的確認視窗只會顯示名稱、不會顯示是哪一個。清單裡有同名情境時，建議先用「編輯」確認內容，或先改名再刪。",
@@ -293,8 +293,8 @@
             "en": "Clear the Unassigned group"
           },
           "body": {
-            "zh": "剛配網還沒指定房間的裝置會落在「未分配」。建議盡快把它們歸進房間 —— 未分配的裝置在平面圖上不會出現，語音也叫不到。",
-            "en": "Devices paired but not yet assigned a room land in Unassigned. Move them into rooms promptly — unassigned devices do not appear on the floor plan and voice cannot reach them."
+            "zh": "剛配網還沒指定房間的裝置會落在「未分配」。建議盡快把它們歸進房間。未分配的裝置在平面圖上不會出現，語音也叫不到。",
+            "en": "Devices paired but not yet assigned a room land in Unassigned. Move them into rooms promptly. Unassigned devices do not appear on the floor plan and voice cannot reach them."
           },
           "image": null
         },
@@ -315,8 +315,8 @@
             "en": "Tap a card to open the device page"
           },
           "body": {
-            "zh": "點任一張裝置卡片就進入該裝置的控制頁。每一種裝置的控制頁長得不一樣——版面由裝置本身支援的功能決定，常見有即時資訊、開關、檔位／模式、轉盤或滑桿，右上齒輪則是改名與換房間。即時資訊顯示「--」多半是裝置關機或尚未回報，不是故障。",
-            "en": "Tap any device card to open its control page. Every device type looks different — the layout follows what the device actually supports: live readings, switches, presets/modes, dials or sliders, with the gear at the top right for renaming and moving rooms. A reading showing “--” usually means the device is off or has not reported yet, not that it is broken."
+            "zh": "點任一張裝置卡片就進入該裝置的控制頁。每一種裝置的控制頁長得不一樣：版面由裝置本身支援的功能決定，常見有即時資訊、開關、檔位／模式、轉盤或滑桿，右上齒輪則是改名與換房間。即時資訊顯示「--」多半是裝置關機或尚未回報，不是故障。",
+            "en": "Tap any device card to open its control page. Every device type looks different, the layout follows what the device actually supports: live readings, switches, presets/modes, dials or sliders, with the gear at the top right for renaming and moving rooms. A reading showing “--” usually means the device is off or has not reported yet, not that it is broken."
           },
           "image": "/images/howto/home/04-device-page.png"
         }
@@ -337,8 +337,8 @@
         "en": "Device Data (Energy & Water)"
       },
       "summary": {
-        "zh": "設備數據把裝置自己回報的量測值整理成四個分頁：用電趨勢、用電分布、用水量、空氣品質。用途是看趨勢與占比——哪一台耗電、什麼時段耗電——不是台電計費依據。",
-        "en": "Device Data organises the readings your devices report into four tabs: energy trend, energy breakdown, water usage and air quality. It is for spotting trends and shares — which device draws power, and when — not for utility billing."
+        "zh": "設備數據把裝置自己回報的量測值整理成四個分頁：用電趨勢、用電分布、用水量、空氣品質。用途是看趨勢與占比，哪一台耗電、什麼時段耗電，不是台電計費依據。",
+        "en": "Device Data organises the readings your devices report into four tabs: energy trend, energy breakdown, water usage and air quality. It is for spotting trends and shares, which device draws power, and when, not for utility billing."
       },
       "steps": [
         {
@@ -389,11 +389,11 @@
       "tips": [
         {
           "zh": "這裡的度數來自裝置自己回報的量測值，和台電電表不會完全一致。它回答的是「哪一台、什麼時候」，不是「這個月要繳多少」。",
-          "en": "These readings come from the devices themselves and will not match your utility meter exactly. They answer “which device, and when” — not “how much is this month's bill”."
+          "en": "These readings come from the devices themselves and will not match your utility meter exactly. They answer “which device, and when”, not “how much is this month's bill”."
         },
         {
           "zh": "某個分頁一直沒有數字，通常不是故障，而是家中沒有對應的裝置（用水量要淨水設備、空氣品質要感測器）。",
-          "en": "A tab with no numbers is usually not a fault — it means you do not have the matching hardware (water needs water equipment, air quality needs a sensor)."
+          "en": "A tab with no numbers is usually not a fault: it means you do not have the matching hardware (water needs water equipment, air quality needs a sensor)."
         }
       ]
     },
@@ -464,8 +464,8 @@
         "en": "Community Announcements & Messages"
       },
       "summary": {
-        "zh": "公布欄收社區公告與通知，訊息收系統、社區與商城三類消息。這是 enGo 與一般智慧家庭產品最大的差別 —— 不必為了看社區公告另外裝一支 App。",
-        "en": "The bulletin board carries community announcements and notices; Messages holds system, community and shop messages. This is what sets enGo apart from ordinary smart-home products — you do not need a second app to read community notices."
+        "zh": "公布欄收社區公告與通知，訊息收系統、社區與商城三類消息。這是 enGo 與一般智慧家庭產品最大的差別。不必為了看社區公告另外裝一支 App。",
+        "en": "The bulletin board carries community announcements and notices; Messages holds system, community and shop messages. This is what sets enGo apart from ordinary smart-home products. You do not need a second app to read community notices."
       },
       "steps": [
         {
@@ -475,7 +475,7 @@
           },
           "body": {
             "zh": "左側欄的公布欄列出社區公告與通知，未讀會標記。點進去看完整全文，例如除蟲通知的施作時間、區域與注意事項。",
-            "en": "The bulletin board in the left rail lists community announcements and notices, with unread ones marked. Open one for the full text — for example a pest-control notice with its time, area and precautions."
+            "en": "The bulletin board in the left rail lists community announcements and notices, with unread ones marked. Open one for the full text, for example a pest-control notice with its time, area and precautions."
           },
           "image": "/images/howto/community/03-announce-detail.png"
         },
@@ -593,7 +593,7 @@
       "tips": [
         {
           "zh": "取消時限依各社區規章而異，請看該設施的「注意事項&限制」分頁。",
-          "en": "Cancellation windows differ by community — check the facility's rules tab."
+          "en": "Cancellation windows differ by community: check the facility's rules tab."
         }
       ],
       "imagesPending": false
@@ -608,7 +608,7 @@
       },
       "summary": {
         "zh": "記錄家中物品放在哪個房間的哪個櫃位、還有多少，並在低於安全量時提醒。適合濾芯、電池、備品這類「要用時常常找不到」的東西。",
-        "en": "Track which room and cabinet each item is in and how many are left, with a reminder when stock runs low. Ideal for filters, batteries and spares — the things you can never find when you need them."
+        "en": "Track which room and cabinet each item is in and how many are left, with a reminder when stock runs low. Ideal for filters, batteries and spares, the things you can never find when you need them."
       },
       "steps": [
         {

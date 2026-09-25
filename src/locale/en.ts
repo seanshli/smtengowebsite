@@ -22,7 +22,7 @@ export const enLocale = {
     },
     core: {
       title: 'Core Values | The Philosophy Behind enGo',
-      description: 'Discover the core values of enGo — using AI to integrate sunlight, air, water and food into a healthier, safer smart-living experience.'
+      description: 'Discover the core values of enGo: using AI to integrate sunlight, air, water and food into a healthier, safer smart-living experience.'
     },
     brand: {
       title: 'Brand Story | The Origin of enGo',
@@ -34,19 +34,19 @@ export const enLocale = {
     },
     team: {
       title: 'Leadership Team | enGo Smart Home',
-      description: 'Meet the founding team and board advisor of enGo — leadership across AI, operations, design, and technology strategy.'
+      description: 'Meet the founding team and board advisor of enGo, leadership across AI, operations, design, and technology strategy.'
     },
     enviro: {
       title: 'Environmental Control | enGo Smart Home',
-      description: 'enGo environmental control: dynamic daylight and temperature, air purification monitoring, smart water, and kitchen safety — one connected system.'
+      description: 'enGo environmental control: dynamic daylight and temperature, air purification monitoring, smart water, and kitchen safety, one connected system.'
     },
     vision: {
       title: 'Our Vision | enGo Smart Home',
-      description: 'The vision of enGo — a one-stop smart-living platform uniting cloud storage, connected devices and daily provisioning to define the home of the future.'
+      description: 'The vision of enGo: a one-stop smart-living platform uniting cloud storage, connected devices and daily provisioning to define the home of the future.'
     },
     ecosystem: {
       title: 'Smart Ecosystem | enGo AIoT Platform',
-      description: 'Explore the enGo ecosystem — from AI control to smart water purification and air care, connecting every smart device in your home.'
+      description: 'Explore the enGo ecosystem: from AI control to smart water purification and air care, connecting every smart device in your home.'
     },
     default: {
       title: 'enGo Smart Home - Leading AIot Solutions',
@@ -162,15 +162,15 @@ export const enLocale = {
     brandStoryTitle: 'The enGo Story',
     intextLogo: 'Technology should belong to every home',
     paragraph1:
-      'Every morning, before you even get out of bed, <font color="e05a35">enGo has already opened your curtains, adjusted the lights, and set the air conditioning.</font> Not because you set an alarm — but because it learned your rhythm. That\'s enGo — short for "<font color="e05a35">Energy Go</font>" — making energy flow smarter so technology truly becomes part of your home. We started with a simple belief: a better quality of life shouldn\'t be a luxury. Whether it\'s air, water, lighting, or your daily energy habits, enGo uses AI to understand what you need — and stays one step ahead to create a comfortable, safe, and energy-efficient home.',
+      'Every morning, before you even get out of bed, <font color="e05a35">enGo has already opened your curtains, adjusted the lights, and set the air conditioning.</font> Not because you set an alarm, but because it learned your rhythm. That\'s enGo, short for "<font color="e05a35">Energy Go</font>", making energy flow smarter so technology truly becomes part of your home. We started with a simple belief: a better quality of life shouldn\'t be a luxury. Whether it\'s air, water, lighting, or your daily energy habits, enGo uses AI to understand what you need, and stays one step ahead to create a comfortable, safe, and energy-efficient home.',
     paragraph2:
-      'As our society ages, we see technology\'s most human side. <font color="e05a35">enGo isn\'t just a smart home guardian — it\'s a caring companion for senior living.</font> Large-font interfaces, voice control, and automated scenes make daily life effortless for elderly users, while remote monitoring and real-time alerts give their families peace of mind from anywhere.',
+      'As our society ages, we see technology\'s most human side. <font color="e05a35">enGo isn\'t just a smart home guardian, it\'s a caring companion for senior living.</font> Large-font interfaces, voice control, and automated scenes make daily life effortless for elderly users, while remote monitoring and real-time alerts give their families peace of mind from anywhere.',
     paragraph3:
-      'The road here wasn\'t easy. Founder Sean and his team started in a cramped old office with limited funds, building through a global pandemic. Their motto? "Dreams are beautiful — just start!" That persistence took enGo from zero to a growing smart home brand, from Taiwan to the world.',
+      'The road here wasn\'t easy. Founder Sean and his team started in a cramped old office with limited funds, building through a global pandemic. Their motto? "Dreams are beautiful, just start!" That persistence took enGo from zero to a growing smart home brand, from Taiwan to the world.',
     paragraph4:
-      'Today, enGo integrates the four essentials of home life — sunlight, air, water, and food — through a single AI control tablet that connects your entire home. Our products aren\'t just technology — <font color="e05a35">they\'re a promise to every family\'s health and happiness.</font>',
+      'Today, enGo integrates the four essentials of home life, sunlight, air, water, and food, through a single AI control tablet that connects your entire home. Our products aren\'t just technology, <font color="e05a35">they\'re a promise to every family\'s health and happiness.</font>',
     paragraph5:
-      'We believe the true value of technology is turning ordinary days into extraordinary ones. So that every time you walk through your door, you feel taken care of. <font color="e05a35">That\'s enGo — your smart home butler.</font>'
+      'We believe the true value of technology is turning ordinary days into extraordinary ones. So that every time you walk through your door, you feel taken care of. <font color="e05a35">That\'s enGo, your smart home butler.</font>'
   },
   // about
   coreValueTitle: 'Our Core Values',
@@ -185,17 +185,17 @@ export const enLocale = {
   missionTitle: 'Our Mission',
   teamTitle: 'Leadership Team',
   enviroTitle: 'Environmental Control',
-  teamSubtitle: 'The founding team and board advisor — leadership across AI, operations, design, and technology strategy.',
+  teamSubtitle: 'The founding team and board advisor, leadership across AI, operations, design, and technology strategy.',
   missionSubtitle:
-    'To bring the comfort and security of AI-powered living to every family — regardless of age or budget. Technology should serve people, not create barriers.',
-  fiveValues: 'We believe great technology needs no instruction manual. enGo turns AI into the most thoughtful member of your household — one that knows your routine, cares for your health, and keeps your family safe.',
-  fiveValues1: '<font color="e05a35">Smart Protection</font> — Water quality monitoring, leak detection, automatic gas shutoff — 24/7 peace of mind for the whole family.',
-  fiveValues2: '<font color="e05a35">Healthy Breathing</font> — Our 4-in-1 air purification system with medical-grade HEPA12 filters ensures every breath you take is clean and safe.',
-  fiveValues3: '<font color="e05a35">Warm Companionship</font> — One-touch scenes, voice control, large-font interfaces — making smart living effortless for seniors and everyone at home.',
+    'To bring the comfort and security of AI-powered living to every family, regardless of age or budget. Technology should serve people, not create barriers.',
+  fiveValues: 'We believe great technology needs no instruction manual. enGo turns AI into the most thoughtful member of your household, one that knows your routine, cares for your health, and keeps your family safe.',
+  fiveValues1: '<font color="e05a35">Smart Protection</font>: Water quality monitoring, leak detection, automatic gas shutoff, 24/7 peace of mind for the whole family.',
+  fiveValues2: '<font color="e05a35">Healthy Breathing</font>: Our 4-in-1 air purification system with medical-grade HEPA12 filters ensures every breath you take is clean and safe.',
+  fiveValues3: '<font color="e05a35">Warm Companionship</font>: One-touch scenes, voice control, large-font interfaces, making smart living effortless for seniors and everyone at home.',
   fiveValues4: 'Universal Smart Devices',
   fiveValues5: 'Energy Saving, Carbon Reduction, and Social Responsibility',
   missionConclusion:
-    'Born in Taiwan, enGo is redefining what "home" means. We don\'t just sell products — <font color="e05a35">we create a lifestyle that makes the whole family smile.</font>',
+    'Born in Taiwan, enGo is redefining what "home" means. We don\'t just sell products, <font color="e05a35">we create a lifestyle that makes the whole family smile.</font>',
   visionTitle: 'Our Vision',
   vision1: 'Expand Application Scenarios',
   vision2: 'Technological Intelligence',
@@ -206,31 +206,31 @@ export const enLocale = {
   vision7: 'B2B2C Interaction Framework',
 
   visionIntextLogo:
-    'enGo applies advanced AI to weave sunlight, air, water and food into everyday home life — an energy-efficient, healthier, lower-waste home that is kinder to the planet.',
+    'enGo applies advanced AI to weave sunlight, air, water and food into everyday home life, an energy-efficient, healthier, lower-waste home that is kinder to the planet.',
   // vision page body copy
   vision: {
     sun: {
-      title: 'Sunlight — living with the natural day',
-      copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home — brighter mornings, calmer evenings, and comfort that follows the sun.'
+      title: 'Sunlight, living with the natural day',
+      copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home, brighter mornings, calmer evenings, and comfort that follows the sun.'
     },
     air: {
-      title: 'Air — breathe without a second thought',
-      copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk — with air quality you can see at a glance.'
+      title: 'Air, breathe without a second thought',
+      copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk, with air quality you can see at a glance.'
     },
     water: {
-      title: 'Water — protection you can see',
-      copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way — every glass is the best it can be.'
+      title: 'Water, protection you can see',
+      copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way. Every glass is the best it can be.'
     },
     food: {
-      title: 'Food safety — health you stay on top of',
+      title: 'Food safety, health you stay on top of',
       copy: 'enGo\'s intelligent management system provides end-to-end food safety assurance, so every meal on your table is one you can trust.'
     },
     safety: {
-      title: 'Security — watching over every moment at home',
-      copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry — and share in the value a connected community creates.'
+      title: 'Security, watching over every moment at home',
+      copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry, and share in the value a connected community creates.'
     },
     closing:
-      'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream — enGo is here to look after your home for the long run.'
+      'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream. enGo is here to look after your home for the long run.'
   },
 
   // ecosystem
@@ -356,20 +356,20 @@ export const enLocale = {
     competitor: { tag: 'Comparison', title: 'Shui Wei Yang AI smart water system' },
     tablet_intro: {
       title: 'The All-in-One AI Home Manager',
-      tagline: 'Everything at home, everything in your community — on one wall.',
-      info: 'enGo HMS (Home Management System) brings together appliance control, environmental sensing and security monitoring, plus community notices, repair requests, facility bookings and parcel notifications — on the wall tablet at home, and in the mobile app when you are away.'
+      tagline: 'Everything at home, everything in your community, on one wall.',
+      info: 'enGo HMS (Home Management System) brings together appliance control, environmental sensing and security monitoring, plus community notices, repair requests, facility bookings and parcel notifications, on the wall tablet at home, and in the mobile app when you are away.'
     },
     brand_intro: {
       badge: 'Product',
       title: 'AI Smart Home Control Tablet',
       heading: 'Whatever needs doing at home, your smart butler handles it.',
-      lead: 'Most smart home products only look after the home. enGo looks after the home and the community together — that is the most fundamental way it differs from other systems.',
+      lead: 'Most smart home products only look after the home. enGo looks after the home and the community together. That is the most fundamental way it differs from other systems.',
       homeLabel: 'At home',
       home: 'Lighting, sockets, curtains and air conditioning, plus infrared appliances such as TVs and air conditioners. Real-time sensing of temperature and humidity, air quality, presence, gas, water leaks and smoke. Camera feeds, door intercom and circuit-level power monitoring.',
       communityLabel: 'In the community',
       communityFigure: 'Community notices in the enGo HMS app',
       community: 'Never miss a notice, track repair requests, book facilities online, and when a parcel reaches the smart locker, open it by entering the code in the app.',
-      scenes: 'Save your everyday combinations as one-tap scenes — press “Leaving home” and every light goes off, the air conditioning shuts down and security mode switches on. Or set up automations that run on a schedule or on sensor status.',
+      scenes: 'Save your everyday combinations as one-tap scenes: press “Leaving home” and every light goes off, the air conditioning shuts down and security mode switches on. Or set up automations that run on a schedule or on sensor status.',
       countCard: {
         card01: { unit: '', info: 'Patented designs' },
         card02: { unit: '', info: 'AI features' },
@@ -399,9 +399,9 @@ export const enLocale = {
       tag: 'Features',
       tabletOnly: 'Tablet only',
       features: {
-        voice: { title: 'Voice control', body: 'Walk up to the wall — one sentence gets it done. “Turn on the living room light.” “Set the AC to 26 degrees.” “Turn off all the lights in the meeting room.” “After-work mode.” No reaching for your phone, no hunting for the button on screen. Safety-related devices ask you to confirm first, and when two names sound alike the system asks which you mean rather than guessing.', note: 'The system does not listen continuously and never records in the background.' },
-        floorplan: { title: 'Live floor plan', body: 'A floor plan generated from the actual room layout of your home shows at a glance which rooms are occupied, which lights are still on and which air conditioners are running — no need to open devices one by one.' },
-        photowall: { title: 'Standby photo wall', body: 'When no one is using it, the tablet switches to your family photos, with the time, weather and latest community notices overlaid. Brightness follows the ambient light — never glaring at night, lighting up only when the hallway lights come on. One touch brings the screen back.' },
+        voice: { title: 'Voice control', body: 'Walk up to the wall, one sentence gets it done. “Turn on the living room light.” “Set the AC to 26 degrees.” “Turn off all the lights in the meeting room.” “After-work mode.” No reaching for your phone, no hunting for the button on screen. Safety-related devices ask you to confirm first, and when two names sound alike the system asks which you mean rather than guessing.', note: 'The system does not listen continuously and never records in the background.' },
+        floorplan: { title: 'Live floor plan', body: 'A floor plan generated from the actual room layout of your home shows at a glance which rooms are occupied, which lights are still on and which air conditioners are running, no need to open devices one by one.' },
+        photowall: { title: 'Standby photo wall', body: 'When no one is using it, the tablet switches to your family photos, with the time, weather and latest community notices overlaid. Brightness follows the ambient light, never glaring at night, lighting up only when the hallway lights come on. One touch brings the screen back.' },
         inventory: { title: 'Smart inventory', body: 'Manage household storage, shop stock and office supplies alike: items, shelf locations, categories and low-stock alerts, linked to your shop orders and delivery notifications.' }
       }
     },
@@ -494,7 +494,7 @@ export const enLocale = {
     features: 'Features',
     found_video: 'I found a video for you:',
     found_info: 'I found some information for you. You can click here to view:',
-    no_match: "Sorry, I'm not certain about that one — a specialist can answer it properly. Call 02-27510218 (Mon–Fri 09:00–18:00) or reach our live support via LINE.",
+    no_match: "Sorry, I'm not certain about that one, a specialist can answer it properly. Call 02-27510218 (Mon-Fri 09:00-18:00) or reach our live support via LINE.",
     line_handoff: 'Contact via LINE',
     replies: {
       product: 'What is enGo',

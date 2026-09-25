@@ -9,8 +9,8 @@
       </h3>
       <p class="bms-sub">
         {{ isZh
-          ? '每一戶的 HMS——公布欄、物業管理、家居系統、通訊警報、AIoT——與大樓的智能櫃、監控、智能信箱、能源管理，透過樓中央的 enGo 中樞即時雙向連動。'
-          : 'Every unit\'s HMS — bulletin, property services, home systems, alerts, AIoT — links live and both ways with the building\'s smart lockers, surveillance, smart mailboxes, and energy management, through the enGo hub at the building\'s core.' }}
+          ? '每一戶的 HMS，公布欄、物業管理、家居系統、通訊警報、AIoT，與大樓的智能櫃、監控、智能信箱、能源管理，透過樓中央的 enGo 中樞即時雙向連動。'
+          : 'Every unit\'s HMS, bulletin, property services, home systems, alerts, AIoT, links live and both ways with the building\'s smart lockers, surveillance, smart mailboxes, and energy management, through the enGo hub at the building\'s core.' }}
       </p>
     </header>
 

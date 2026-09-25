@@ -111,3 +111,57 @@ describe('page templates carry no template tells', () => {
         expect(templateOf('index.vue')).not.toMatch(/case-home\.jpg/)
     })
 })
+
+describe('no em-dash or en-dash in user-visible copy (polish/no-dashes, 2026-09-25)', () => {
+    // Blank out a matched span while preserving every '\n' inside it, so line
+    // numbers computed from the cleaned string still line up with the original file.
+    const blank = (m: string) => m.replace(/[^\n]/g, ' ')
+
+    const stripComments = (src: string, isVue: boolean) => {
+        let s = src
+        if (isVue) s = s.replace(/<!--[\s\S]*?-->/g, blank)
+        s = s.replace(/\/\*[\s\S]*?\*\//g, blank)
+        // strip // line comments, but not the "//" inside "http://" or "https://"
+        s = s.replace(/(?<!:)\/\/.*$/gm, blank)
+        return s
+    }
+
+    const root = resolve(__dirname, '../..')
+    const localeDir = resolve(__dirname, '../locale')
+    const componentsDir = resolve(__dirname, '../components')
+    const dataDir = resolve(__dirname, '../data')
+    const pub = resolve(root, 'public')
+
+    // Only the data files in the polish/no-dashes scope; other src/data/*.json
+    // files (packages.json, tutorials.json) were never part of the cleanup.
+    const dataFiles = ['faqs.json', 'knowledge_base.json', 'howto.json', 'news.json', 'cases.json']
+
+    const targets: string[] = [
+        ...readdirSync(localeDir).filter((f) => f.endsWith('.ts')).map((f) => resolve(localeDir, f)),
+        ...pages.map((f) => resolve(views, f)),
+        ...readdirSync(componentsDir).filter((f) => f.endsWith('.vue')).map((f) => resolve(componentsDir, f)),
+        ...dataFiles.map((f) => resolve(dataDir, f)),
+        resolve(pub, 'llms.txt'),
+    ]
+
+    it('every target file is free of U+2014 (—) and U+2013 (–) outside comments', () => {
+        const failures: string[] = []
+        for (const f of targets) {
+            const raw = readFileSync(f, 'utf-8')
+            const isVue = f.endsWith('.vue')
+            const isJsonOrTxt = f.endsWith('.json') || f.endsWith('.txt')
+            // JSON/plain-text files have no comment syntax; stripping "//" there
+            // would corrupt URLs inside string values, so only strip for .ts/.vue.
+            let cleaned = isJsonOrTxt ? raw : stripComments(raw, isVue)
+            if (f.endsWith('product.vue')) {
+                // the "not supported" table-cell glyph is allowed to keep its em-dash
+                cleaned = cleaned.replace(/>[—–]</g, '> <')
+            }
+            for (const m of cleaned.matchAll(/[—–]/g)) {
+                const line = cleaned.slice(0, m.index).split('\n').length
+                failures.push(`${f.replace(root + '/', '')}:${line}`)
+            }
+        }
+        expect(failures, failures.join('\n')).toEqual([])
+    })
+})

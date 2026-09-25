@@ -4030,8 +4030,8 @@
             "en": "New Taipei"
         },
         "description": {
-            "zh": "宏盛建設｜新北汐止　地上21層/地下3層，314戶，20–39坪（1–3房）",
-            "en": "Hong Sheng Construction | Xizhi, New Taipei — 21F/B3, 314 units, 20–39 pings (1–3BR)"
+            "zh": "宏盛建設｜新北汐止　地上21層/地下3層，314戶，20-39坪（1-3房）",
+            "en": "Hong Sheng Construction | Xizhi, New Taipei: 21F/B3, 314 units, 20-39 pings (1-3BR)"
         },
         "image": "/images/news/hongshengxin.jpg"
     },
@@ -4057,7 +4057,7 @@
         },
         "description": {
             "zh": "昌益建設｜台南　建案智慧宅整合",
-            "en": "Chang Yi Construction | Tainan — smart home integration"
+            "en": "Chang Yi Construction | Tainan: smart home integration"
         },
         "image": "/images/news/nanqingshan.jpg"
     }
