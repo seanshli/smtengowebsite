@@ -62,15 +62,23 @@
                 "登入",
                 "login",
                 "同時登入",
-                "平板跟手機"
+                "平板跟手機",
+                "找不到功能",
+                "手機找不到",
+                "更多分頁",
+                "底部分頁",
+                "找不到",
+                "五個分頁",
+                "more tab",
+                "cannot find"
             ],
             "answer": {
-                "zh": "**三種介面，一組帳號**\n\n同一組帳號可在三種介面登入，功能**不完全相同**：\n\n📺 **enGo 牆掛平板** — 家中主控台，隨系統安裝\n📱 **iPhone / iPad** — 在外遠端掌握，App Store 下載\n🤖 **Android 手機** — 在外遠端掌握，Google Play 下載\n\n三種介面都有：家電控制、情境、平面圖即時視圖、社區服務（公告／報修／預約／包裹）、攝影機即時畫面、倉儲管理。\n\n⭐ **僅平板**：語音操作、待機相片牆。\n\n手機 App 免費下載；同一住家的成員各自用自己的帳號登入，登入裝置數不限。\n\n🔗 [了解三種介面](/product)",
-                "en": "**Three interfaces, one account**\n\nOne account signs in on three interfaces, which **do not have identical features**:\n\n📺 **enGo wall tablet** — the control hub at home, installed with the system\n📱 **iPhone / iPad** — remote control when out, from the App Store\n🤖 **Android phone** — remote control when out, from Google Play\n\nOn all three: appliance control, scenes, live floor plan, community services (notices/repairs/bookings/parcels), live camera view, inventory.\n\n⭐ **Tablet only**: voice control and the standby photo wall.\n\nThe mobile app is free; each household member signs in with their own account, on any number of devices.\n\n🔗 [See the three interfaces](/product)",
-                "ja": "**3つのインターフェース、1つのアカウント**\n\n同じアカウントで3つの画面にログインできますが、機能は**同一ではありません**：\n\n📺 **enGo 壁掛けタブレット** — 家の司令塔、システムと一緒に設置\n📱 **iPhone / iPad** — 外出先から操作、App Store\n🤖 **Android** — 外出先から操作、Google Play\n\n3つ共通：家電操作・シーン・フロアプラン・コミュニティサービス（お知らせ/修理/予約/宅配）・カメラ・在庫管理。\n\n⭐ **タブレットのみ**：音声操作・待機フォトウォール。\n\nアプリは無料。家族それぞれのアカウントでログインでき、台数制限はありません。\n\n🔗 [3つの画面を見る](/product)",
-                "fr": "**Trois interfaces, un seul compte**\n\nUn même compte se connecte sur trois interfaces, dont les fonctions **ne sont pas identiques** :\n\n📺 **Tablette murale enGo** — le poste de commande à la maison, installée avec le système\n📱 **iPhone / iPad** — commande à distance, sur l'App Store\n🤖 **Android** — commande à distance, sur Google Play\n\nSur les trois : appareils, scènes, plan en direct, services de la résidence (avis/réparations/réservations/colis), caméras, inventaire.\n\n⭐ **Tablette uniquement** : commande vocale et mur de photos en veille.\n\nL'appli est gratuite ; chaque membre du foyer se connecte avec son propre compte, sans limite d'appareils.\n\n🔗 [Voir les trois interfaces](/product)",
-                "es": "**Tres interfaces, una cuenta**\n\nUna misma cuenta entra en tres interfaces, cuyas funciones **no son idénticas**:\n\n📺 **Tableta de pared enGo** — el centro de control en casa, instalada con el sistema\n📱 **iPhone / iPad** — control remoto fuera de casa, en el App Store\n🤖 **Android** — control remoto fuera de casa, en Google Play\n\nEn las tres: electrodomésticos, escenas, plano en tiempo real, servicios de la comunidad (avisos/reparaciones/reservas/paquetes), cámaras, inventario.\n\n⭐ **Solo tableta**: control por voz y muro de fotos en reposo.\n\nLa app es gratuita; cada miembro del hogar entra con su propia cuenta, sin límite de dispositivos.\n\n🔗 [Ver las tres interfaces](/product)",
-                "zhCN": "**三种界面，一组账号**\n\n同一组账号可在三种界面登入，功能**不完全相同**：\n\n📺 **enGo 墙挂平板** — 家中主控台，随系统安装\n📱 **iPhone / iPad** — 在外远端掌握，App Store 下载\n🤖 **Android 手机** — 在外远端掌握，Google Play 下载\n\n三种界面都有：家电控制、情境、平面图即时视图、社区服务（公告／报修／预约／包裹）、摄影机即时画面、仓储管理。\n\n⭐ **仅平板**：语音操作、待机相片墙。\n\n手机 App 免费下载；同一住家的成员各自用自己的账号登入，登入装置数不限。\n\n🔗 [了解三种界面](/product)"
+                "zh": "**三種介面，一組帳號**\n\n同一組帳號可在三種介面登入，功能**不完全相同**：\n\n📺 **enGo 牆掛平板** — 家中主控台，隨系統安裝\n📱 **iPhone / iPad** — 在外遠端掌握，App Store 下載\n🤖 **Android 手機** — 在外遠端掌握，Google Play 下載\n\n三種介面都有：家電控制、情境、社區服務（公告／報修／預約／包裹）、攝影機即時畫面、倉儲管理。\n\n⭐ **僅平板**：語音操作、待機相片牆、平面圖即時視圖、用電統計。\n\n📱 **手機上找不到功能時**：手機底部只有「家庭／場景／工單／通知／更多」五個分頁，其餘都在「更多」裡——庫存（＝平板的「倉儲」）、預約、訊息、設置（＝平板的「設定」）、登出。\n\n手機 App 免費下載；同一住家的成員各自用自己的帳號登入，登入裝置數不限。\n\n🔗 [了解三種介面](/product)",
+                "zhCN": "**三种介面，一组账号**\n\n同一组账号可在三种介面登入，功能**不完全相同**：\n\n📺 **enGo 墙挂平板** — 家中主控台，随系统安装\n📱 **iPhone / iPad** — 在外远端掌握，App Store 下载\n🤖 **Android 手机** — 在外远端掌握，Google Play 下载\n\n三种介面都有：家电控制、情境、社区服务（公告／报修／预约／包裹）、摄影机即时画面、仓储管理。\n\n⭐ **仅平板**：语音操作、待机相片墙、平面图即时视图、用电统计。\n\n📱 **手机上找不到功能时**：手机底部只有「家庭／场景／工单／通知／更多」五个分页，其余都在「更多」里——库存（＝平板的「仓储」）、预约、讯息、设置（＝平板的「设定」）、登出。\n\n手机 App 免费下载；同一住家的成员各自用自己的账号登入，登入装置数不限。\n\n🔗 [了解三种介面](/product)",
+                "en": "**Three interfaces, one account**\n\nOne account signs in on all three interfaces; the features are **not identical**:\n\n📺 **enGo wall tablet** — the control hub at home, installed with the system\n📱 **iPhone / iPad** — remote control when you are out, on the App Store\n🤖 **Android phone** — remote control when you are out, on Google Play\n\nOn all three: appliance control, scenes, community services (announcements / repairs / reservations / parcels), live camera view, inventory.\n\n⭐ **Tablet only**: voice control, standby photo wall, live floor plan, energy statistics.\n\n📱 **If you cannot find a feature on the phone**: the phone app has five bottom tabs (家庭 Home / 場景 Scenes / 工單 Work orders / 通知 Notifications / 更多 More); everything else is under More — 庫存 Inventory (the tablet's 倉儲 Warehouse), 預約 Reservations, 訊息 Messages, 設置 Settings (the tablet's 設定) and Sign out.\n\nThe mobile app is free; each household member signs in with their own account, on any number of devices.\n\n🔗 [About the three interfaces](/product)",
+                "ja": "**3 つのインターフェース、1 つのアカウント**\n\n同じアカウントで 3 つのインターフェースにログインできますが、機能は**同一ではありません**：\n\n📺 **enGo 壁掛けタブレット** — 家の管理ハブ、システムと一緒に設置\n📱 **iPhone / iPad** — 外出先からの遠隔操作、App Store\n🤖 **Android** — 外出先からの遠隔操作、Google Play\n\n3 つ共通：家電操作、シーン、コミュニティサービス（お知らせ／修理依頼／予約／宅配）、カメラのライブ映像、在庫管理。\n\n⭐ **タブレット専用**：音声操作、待機フォトウォール、フロアプランのライブ表示、電力統計。\n\n📱 **スマホで機能が見つからないとき**：下部タブは「家庭／場景／工單／通知／更多（もっと見る）」の 5 つだけで、それ以外は「更多」の中にあります——庫存（在庫＝タブレットの「倉儲」）、預約（予約）、訊息（メッセージ）、設置（設定）、ログアウト。\n\nアプリは無料。同じ住居のメンバーはそれぞれ自分のアカウントでログインでき、端末数に制限はありません。\n\n🔗 [3 つのインターフェースについて](/product)",
+                "fr": "**Trois interfaces, un seul compte**\n\nUn même compte se connecte sur les trois interfaces ; les fonctions ne sont **pas identiques** :\n\n📺 **Tablette murale enGo** — le centre de contrôle de la maison, installée avec le système\n📱 **iPhone / iPad** — commande à distance, sur l'App Store\n🤖 **Android** — commande à distance, sur Google Play\n\nSur les trois : commande des appareils, scènes, services de résidence (annonces / réparations / réservations / colis), vue caméra en direct, inventaire.\n\n⭐ **Tablette uniquement** : commande vocale, mur de photos en veille, plan en direct, statistiques d'énergie.\n\n📱 **Si une fonction est introuvable sur le téléphone** : l'appli a cinq onglets en bas (家庭 Accueil / 場景 Scènes / 工單 Demandes / 通知 Notifications / 更多 Plus) ; tout le reste est sous Plus — 庫存 Inventaire (l'« Entrepôt » 倉儲 de la tablette), 預約 Réservations, 訊息 Messages, 設置 Réglages (le 設定 de la tablette) et Déconnexion.\n\nL'appli est gratuite ; chaque membre du foyer se connecte avec son propre compte, sans limite d'appareils.\n\n🔗 [Les trois interfaces](/product)",
+                "es": "**Tres interfaces, una sola cuenta**\n\nUna misma cuenta inicia sesión en las tres interfaces; las funciones **no son idénticas**:\n\n📺 **Tableta de pared enGo** — el centro de control de la casa, instalada con el sistema\n📱 **iPhone / iPad** — control remoto fuera de casa, en la App Store\n🤖 **Android** — control remoto fuera de casa, en Google Play\n\nEn las tres: control de aparatos, escenas, servicios de la comunidad (avisos / reparaciones / reservas / paquetes), cámara en vivo, inventario.\n\n⭐ **Solo tableta**: control por voz, muro de fotos en reposo, plano en vivo, estadísticas de energía.\n\n📱 **Si no encuentras una función en el móvil**: la app tiene cinco pestañas inferiores (家庭 Inicio / 場景 Escenas / 工單 Órdenes / 通知 Notificaciones / 更多 Más); todo lo demás está bajo Más — 庫存 Inventario (el «Almacén» 倉儲 de la tableta), 預約 Reservas, 訊息 Mensajes, 設置 Ajustes (el 設定 de la tableta) y Cerrar sesión.\n\nLa app es gratuita; cada miembro del hogar inicia sesión con su propia cuenta, sin límite de dispositivos.\n\n🔗 [Las tres interfaces](/product)"
             }
         },
         {
@@ -225,15 +233,26 @@
                 "米多力",
                 "medole",
                 "情境離線",
-                "scene offline"
+                "scene offline",
+                "485",
+                "485 轉換器",
+                "485 转换器",
+                "485 converter",
+                "紅外",
+                "红外",
+                "遙控器",
+                "遥控器",
+                "在家",
+                "空調斷網",
+                "空调断网"
             ],
             "answer": {
-                "zh": "**需要網路嗎？**\n\n遠端操作（在外用手機 App）、社區服務與通知需要網路連線。\n\n🏠 **同一家用網路時**：平板與裝置連在同一個家用網路時，**窗簾、部分感測器與開關類裝置**在對外網路中斷時仍可直接控制。\n\n⚠️ **米多力系列與 enGo 自有裝置目前仍需連網**才能控制；區網直控功能正在開發中，上線後會另行公告。\n\n⚠️ **情境（一鍵模式）目前需要連網才能執行。**\n\n📶 配對智慧裝置時，手機或平板需連上家中的 **2.4GHz Wi-Fi**。",
-                "en": "**Does enGo need the internet?**\n\nRemote control from the mobile app, community services and notifications need an internet connection.\n\n🏠 **On the same home network**: when the tablet and your devices are on the same home network, **curtains and some sensors and switches** can still be controlled directly if the internet goes down.\n\n⚠️ **MEDOLE products and enGo's own devices still need the internet** to be controlled; local direct control is in development and will be announced when available.\n\n⚠️ **Scenes (one-tap modes) currently need the internet to run.**\n\n📶 To pair a device, the phone or tablet must be on your home's **2.4GHz Wi-Fi**.",
-                "ja": "**インターネットは必要ですか？**\n\nスマホアプリからの遠隔操作、コミュニティサービス、通知にはインターネット接続が必要です。\n\n🏠 **同じ家庭内ネットワークの場合**：タブレットと機器が同じ家庭内ネットワークにあれば、**カーテン、一部のセンサー・スイッチ類**は外部回線が切れても直接操作できます。\n\n⚠️ **MEDOLE 製品と enGo 独自機器は現在もインターネット接続が必要**です。ローカル直接制御は開発中で、提供開始時に別途お知らせします。\n\n⚠️ **シーン（ワンタップモード）の実行には現在インターネットが必要です。**\n\n📶 機器のペアリング時は、スマホまたはタブレットをご家庭の **2.4GHz Wi-Fi** に接続してください。",
-                "fr": "**enGo a-t-il besoin d'Internet ?**\n\nLe contrôle à distance depuis l'appli, les services de résidence et les notifications nécessitent une connexion Internet.\n\n🏠 **Sur le même réseau domestique** : lorsque la tablette et les appareils sont sur le même réseau domestique, **les rideaux et certains capteurs et interrupteurs** restent contrôlables directement si Internet est coupé.\n\n⚠️ **Les produits MEDOLE et les appareils propres à enGo nécessitent encore Internet** ; le contrôle local direct est en développement et sera annoncé à sa mise en service.\n\n⚠️ **Les scènes (modes en un geste) nécessitent actuellement Internet pour s'exécuter.**\n\n📶 Pour l'appairage, le téléphone ou la tablette doit être sur le **Wi-Fi 2,4 GHz** du domicile.",
-                "es": "**¿enGo necesita Internet?**\n\nEl control remoto desde la app, los servicios de la comunidad y las notificaciones necesitan conexión a Internet.\n\n🏠 **En la misma red doméstica**: cuando la tableta y los dispositivos están en la misma red doméstica, **las cortinas y algunos sensores e interruptores** pueden seguir controlándose directamente si se corta Internet.\n\n⚠️ **Los productos MEDOLE y los dispositivos propios de enGo todavía necesitan Internet** para controlarse; el control local directo está en desarrollo y se anunciará cuando esté disponible.\n\n⚠️ **Las escenas (modos de un toque) actualmente necesitan Internet para ejecutarse.**\n\n📶 Para emparejar un dispositivo, el teléfono o la tableta debe estar en el **Wi-Fi de 2,4 GHz** de su hogar.",
-                "zhCN": "**需要网络吗？**\n\n远程操作（在外用手机 App）、社区服务与通知需要网络连接。\n\n🏠 **同一家用网络时**：平板与设备连在同一个家用网络时，**窗帘、部分传感器与开关类设备**在对外网络中断时仍可直接控制。\n\n⚠️ **米多力系列与 enGo 自有设备目前仍需联网**才能控制；局域网直控功能正在开发中，上线后会另行公告。\n\n⚠️ **情境（一键模式）目前需要联网才能执行。**\n\n📶 配对智能设备时，手机或平板需连上家中的 **2.4GHz Wi-Fi**。"
+                "zh": "**需要網路嗎？**\n\n遠端操作（在外用手機 App）、社區服務與通知需要網路連線。\n\n🏠 **人在家、平板與裝置連在同一個家用網路時**，對外網路中斷後：\n✅ **窗簾、部分感測器與開關類**仍可直接控制\n✅ **485 轉換器**（含米多力系列新風／3合1／清風機，以及空調）仍可直接控制\n❌ **紅外遙控器按鍵**仍需連網（面板看得到，按下去要網路）\n❌ **情境（一鍵模式，含手動與自動化）**需要連網才能執行\n\n⚠️ 前提是您人在家中、平板與裝置在同一個家用網路內；人在外面（不在同一網路）時，斷網期間完全無法操作。\n\n您家的裝置屬於哪一類，請洽專人確認：📞 02-27510218（週一至週五 09:00–18:00）。\n\n📶 配對智慧裝置時，手機或平板需連上家中的 **2.4GHz Wi-Fi**。",
+                "zhCN": "**需要网络吗？**\n\n远端操作（在外用手机 App）、社区服务与通知需要网络连线。\n\n🏠 **人在家、平板与装置连在同一个家用网络时**，对外网络中断后：\n✅ **窗帘、部分感测器与开关类**仍可直接控制\n✅ **485 转换器**（含米多力系列新风／3合1／清风机，以及空调）仍可直接控制\n❌ **红外遥控器按键**仍需连网（面板看得到，按下去要网络）\n❌ **情境（一键模式，含手动与自动化）**需要连网才能执行\n\n⚠️ 前提是您人在家中、平板与装置在同一个家用网络内；人在外面（不在同一网络）时，断网期间完全无法操作。\n\n您家的装置属于哪一类，请洽专人确认：📞 02-27510218（周一至周五 09:00–18:00）。\n\n📶 配对智慧装置时，手机或平板需连上家中的 **2.4GHz Wi-Fi**。",
+                "en": "**Does enGo need the internet?**\n\nRemote control from the mobile app, community services and notifications need an internet connection.\n\n🏠 **When you are at home and the tablet and devices are on the same home network**, after the internet goes down:\n✅ **Curtains and some sensors and switches** can still be controlled directly\n✅ **The 485 converter** (MEDOLE fresh-air / 3-in-1 / purifier units, and air conditioners) can still be controlled directly\n❌ **Infrared remote buttons** still need the internet (the panel shows, but a press needs the network)\n❌ **Scenes (one-tap modes, manual and automated)** need the internet to run\n\n⚠️ This only applies at home, with the tablet and devices on the same home network; when you are away, nothing can be operated while the internet is down.\n\nTo find out which group your devices belong to, ask our team: 📞 02-27510218 (Mon–Fri 09:00–18:00).\n\n📶 To pair a device, the phone or tablet must be on your home's **2.4GHz Wi-Fi**.",
+                "ja": "**インターネットは必要ですか？**\n\nスマホアプリからの遠隔操作、コミュニティサービス、通知にはインターネット接続が必要です。\n\n🏠 **ご在宅で、タブレットと機器が同じ家庭内ネットワークにある場合**、外部回線が切れても：\n✅ **カーテン、一部のセンサー・スイッチ類**は直接操作できます\n✅ **485 コンバーター**（MEDOLE の換気／3in1／空気清浄ユニット、およびエアコン）は直接操作できます\n❌ **赤外線リモコンのボタン**は引き続きインターネットが必要です（パネルは表示されますが、操作には回線が必要）\n❌ **シーン（ワンタップモード、手動・自動とも）**の実行にはインターネットが必要です\n\n⚠️ 前提はご在宅で、タブレットと機器が同じ家庭内ネットワークにあること。外出中（同じネットワークにいない）は、回線断の間は一切操作できません。\n\nお使いの機器がどのグループかは担当者にご確認ください：📞 02-27510218（月〜金 09:00–18:00）。\n\n📶 機器のペアリング時は、スマホまたはタブレットをご家庭の **2.4GHz Wi-Fi** に接続してください。",
+                "fr": "**enGo a-t-il besoin d'Internet ?**\n\nLe contrôle à distance depuis l'appli, les services de résidence et les notifications nécessitent une connexion Internet.\n\n🏠 **Lorsque vous êtes chez vous et que la tablette et les appareils sont sur le même réseau domestique**, en cas de coupure d'Internet :\n✅ **Les rideaux et certains capteurs et interrupteurs** restent commandables directement\n✅ **Le convertisseur 485** (appareils MEDOLE de ventilation / 3-en-1 / purification, et climatiseurs) reste commandable directement\n❌ **Les touches de télécommande infrarouge** nécessitent toujours Internet (le panneau s'affiche, mais l'appui passe par le réseau)\n❌ **Les scènes (modes en un geste, manuels et automatisés)** nécessitent Internet pour s'exécuter\n\n⚠️ Cela ne vaut que chez vous, avec la tablette et les appareils sur le même réseau domestique ; hors de ce réseau, rien ne peut être commandé pendant la coupure.\n\nPour savoir à quel groupe appartiennent vos appareils, demandez à notre équipe : 📞 02-27510218 (lun.–ven. 09:00–18:00).\n\n📶 Pour l'appairage, le téléphone ou la tablette doit être sur le **Wi-Fi 2,4 GHz** du domicile.",
+                "es": "**¿enGo necesita Internet?**\n\nEl control remoto desde la app, los servicios de la comunidad y las notificaciones necesitan conexión a Internet.\n\n🏠 **Cuando estás en casa y la tableta y los dispositivos están en la misma red doméstica**, si se corta Internet:\n✅ **Las cortinas y algunos sensores e interruptores** pueden seguir controlándose directamente\n✅ **El convertidor 485** (equipos MEDOLE de ventilación / 3 en 1 / purificación, y aires acondicionados) puede seguir controlándose directamente\n❌ **Los botones de mando infrarrojo** siguen necesitando Internet (el panel se ve, pero pulsar requiere red)\n❌ **Las escenas (modos de un toque, manuales y automatizados)** necesitan Internet para ejecutarse\n\n⚠️ Esto solo aplica en casa, con la tableta y los dispositivos en la misma red doméstica; fuera de ella, no se puede operar nada durante el corte.\n\nPara saber a qué grupo pertenecen tus dispositivos, pregunta a nuestro equipo: 📞 02-27510218 (lun.–vie. 09:00–18:00).\n\n📶 Para el emparejamiento, el teléfono o la tableta debe estar en el **Wi-Fi de 2,4 GHz** de casa."
             }
         },
         {
@@ -260,6 +279,32 @@
                 "fr": "**Peut-on commander une serrure ?**\n\nLes serrures ne font pas partie des appareils pris en charge par enGo actuellement.\n\nSont pris en charge : éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone.\n\nPour un besoin de contrôle d'accès ou de serrure, notre équipe peut l'étudier : 📞 02-27510218 (lun.–ven. 09:00–18:00), ou via [Contact](/contact).",
                 "es": "**¿Puede controlar una cerradura?**\n\nLas cerraduras no están actualmente entre los dispositivos compatibles con enGo.\n\nHoy son compatibles: iluminación, enchufes, cortinas, aire acondicionado, electrodomésticos por infrarrojos, sensores, cámaras y portero.\n\nSi necesitas control de accesos o cerraduras, nuestro equipo puede valorarlo: 📞 02-27510218 (lun.–vie. 09:00–18:00), o en [Contacto](/contact).",
                 "zhCN": "**可以控制门锁吗？**\n\n门锁目前不在 enGo 支援的装置范围内。\n\n我们目前支援的是照明、插座、窗帘、空调、红外线家电、各类感测器、摄影机与门口对讲。\n\n如果您有门禁或门锁的需求，我可以帮您转给专人评估：📞 02-27510218（周一至周五 09:00–18:00），或在 [联络我们](/contact) 留下联络方式。"
+            }
+        },
+        {
+            "id": "unlock-door-button",
+            "keywords": [
+                "解鎖開門",
+                "解锁开门",
+                "開門按鈕",
+                "开门按钮",
+                "解鎖",
+                "解锁",
+                "開門功能",
+                "开门功能",
+                "通知頁開門",
+                "unlock door",
+                "door unlock",
+                "unlock button",
+                "unlock"
+            ],
+            "answer": {
+                "zh": "**通知頁的「解鎖開門」**\n\n這項功能可正常使用。它開的是哪一道門、有沒有權限限制，依各社區的設備配置而定，我這裡無法替您判斷。\n\n請洽專人依您所在社區的實際建置回覆：📞 02-27510218（週一至週五 09:00–18:00），或在 [聯絡我們](/contact) 留下聯絡方式。",
+                "zhCN": "**通知页的「解锁开门」**\n\n这项功能可正常使用。它开的是哪一道门、有没有权限限制，依各社区的设备配置而定，我这里无法替您判断。\n\n请洽专人依您所在社区的实际建置回复：📞 02-27510218（周一至周五 09:00–18:00），或在 [联络我们](/contact) 留下联络方式。",
+                "en": "**\"Unlock door\" on the notifications page**\n\nThis feature works as intended. Which door it opens, and whether it is restricted, depends on how your community's equipment is set up, so I cannot answer that here.\n\nPlease ask our team, who will answer based on your community's actual installation: 📞 02-27510218 (Mon–Fri 09:00–18:00), or leave your details on [Contact us](/contact).",
+                "ja": "**通知ページの「解鎖開門（ドア解錠）」**\n\nこの機能は正常に使えます。どのドアが開くか、権限の制限があるかは各コミュニティの設備構成によって異なるため、ここではお答えできません。\n\nお住まいのコミュニティの実際の設置に基づいて担当者がお答えします：📞 02-27510218（月〜金 09:00–18:00）、または [お問い合わせ](/contact) へ。",
+                "fr": "**« Déverrouiller la porte » sur la page des notifications**\n\nCette fonction fonctionne normalement. Quelle porte elle ouvre, et avec quelles restrictions, dépend de l'équipement de votre résidence ; je ne peux pas y répondre ici.\n\nNotre équipe vous répondra selon l'installation réelle de votre résidence : 📞 02-27510218 (lun.–ven. 09:00–18:00), ou via [Contact](/contact).",
+                "es": "**«Desbloquear puerta» en la página de notificaciones**\n\nEsta función funciona con normalidad. Qué puerta abre, y con qué restricciones, depende de la configuración del equipamiento de tu comunidad, así que no puedo responderlo aquí.\n\nNuestro equipo te responderá según la instalación real de tu comunidad: 📞 02-27510218 (lun.–vie. 09:00–18:00), o en [Contacto](/contact)."
             }
         },
         {
@@ -389,15 +434,21 @@
                 "warehouse",
                 "stock",
                 "哪間房有人",
-                "哪盞燈"
+                "哪盞燈",
+                "手機找不到倉儲",
+                "找不到倉儲",
+                "用電統計",
+                "用电统计",
+                "手機有平面圖",
+                "energy statistics"
             ],
             "answer": {
-                "zh": "**平面圖即時視圖與倉儲管理**\n\n🗺️ **平面圖即時視圖** — 依您家實際房間格局生成的平面圖，一眼看出哪間房有人、哪盞燈還亮著、哪台空調在運轉，不必逐一點開裝置。\n\n📦 **倉儲管理** — 家中儲物、門市與辦公室庫存都能管：物品、櫃位、分類、低庫存提醒。\n\n兩項功能在平板、iPhone／iPad、Android 手機都有。\n\n🔗 [功能介紹](/product)",
-                "en": "**Live floor plan and inventory**\n\n🗺️ **Live floor plan** — a plan generated from your home's actual room layout shows at a glance which rooms are occupied, which lights are still on and which ACs are running, without opening devices one by one.\n\n📦 **Inventory** — for household storage, shop stock and office supplies alike: items, shelf locations, categories and low-stock alerts.\n\nBoth are on the tablet, iPhone/iPad and Android.\n\n🔗 [Features](/product)",
-                "ja": "**リアルタイム・フロアプランと在庫管理**\n\n🗺️ **フロアプラン** — 実際の間取りから生成した平面図で、どの部屋に人がいるか、どの照明がついているか、どのエアコンが動いているかが一目でわかります。\n\n📦 **在庫管理** — 家庭の収納、店舗や事務所の在庫まで：品目・棚位置・分類・在庫少通知。\n\nタブレット・iPhone/iPad・Android すべてで利用できます。\n\n🔗 [機能紹介](/product)",
-                "fr": "**Plan en direct et inventaire**\n\n🗺️ **Plan en direct** — un plan généré d'après la disposition réelle de vos pièces montre d'un coup d'œil les pièces occupées, les lumières encore allumées et les climatiseurs en marche.\n\n📦 **Inventaire** — rangements de la maison, stock de boutique ou fournitures de bureau : articles, emplacements, catégories, alertes de stock bas.\n\nDisponibles sur tablette, iPhone/iPad et Android.\n\n🔗 [Fonctionnalités](/product)",
-                "es": "**Plano en tiempo real e inventario**\n\n🗺️ **Plano en tiempo real** — un plano generado a partir de la distribución real de tu casa muestra de un vistazo qué habitaciones están ocupadas, qué luces siguen encendidas y qué aires funcionan.\n\n📦 **Inventario** — almacenaje del hogar, stock de tienda o material de oficina: artículos, ubicaciones, categorías y avisos de stock bajo.\n\nDisponibles en tableta, iPhone/iPad y Android.\n\n🔗 [Funciones](/product)",
-                "zhCN": "**平面图即时视图与仓储管理**\n\n🗺️ **平面图即时视图** — 依您家实际房间格局生成的平面图，一眼看出哪间房有人、哪盏灯还亮着、哪台空调在运转，不必逐一点开装置。\n\n📦 **仓储管理** — 家中储物、门市与办公室库存都能管：物品、柜位、分类、低库存提醒。\n\n两项功能在平板、iPhone／iPad、Android 手机都有。\n\n🔗 [功能介绍](/product)"
+                "zh": "**平面圖即時視圖與倉儲管理**\n\n🗺️ **平面圖即時視圖** — 依您家實際房間格局生成的平面圖，一眼看出哪間房有人、哪盞燈還亮著、哪台空調在運轉，不必逐一點開裝置。**牆掛平板專屬**，手機 App 沒有這個視圖（用電統計也是平板專屬）。\n\n📦 **倉儲管理** — 家中儲物、門市與辦公室庫存都能管：物品、櫃位、分類、低庫存提醒。平板、iPhone／iPad、Android 手機都有；手機上叫「**庫存**」，收在底部「更多」分頁裡，平板左側導覽列叫「倉儲」，兩邊是同一頁、同一批資料。\n\n🔗 [功能介紹](/product)、[倉儲管理操作](/tutorial#howto-warehouse)",
+                "zhCN": "**平面图即时视图与仓储管理**\n\n🗺️ **平面图即时视图** — 依您家实际房间格局生成的平面图，一眼看出哪间房有人、哪盏灯还亮着、哪台空调在运转，不必逐一点开装置。**墙挂平板专属**，手机 App 没有这个视图（用电统计也是平板专属）。\n\n📦 **仓储管理** — 家中储物、门市与办公室库存都能管：物品、柜位、分类、低库存提醒。平板、iPhone／iPad、Android 手机都有；手机上叫「**库存**」，收在底部「更多」分页里，平板左侧导览列叫「仓储」，两边是同一页、同一批资料。\n\n🔗 [功能介绍](/product)、[仓储管理操作](/tutorial#howto-warehouse)",
+                "en": "**Live floor plan and inventory**\n\n🗺️ **Live floor plan** — a plan drawn from your home's actual room layout that shows at a glance which room is occupied, which light is still on and which AC is running, without opening each device. **Wall-tablet only**; the phone app does not have this view (energy statistics are tablet-only too).\n\n📦 **Inventory** — track what is stored at home, in a shop or an office: items, cabinet locations, categories, low-stock reminders. On the tablet, iPhone/iPad and Android; on the phone it is called 庫存 Inventory under the bottom More tab, on the tablet it is 倉儲 Warehouse in the left-hand menu. Same page, same data.\n\n🔗 [Features](/product) · [Inventory how-to](/tutorial#howto-warehouse)",
+                "ja": "**フロアプランのライブ表示と在庫管理**\n\n🗺️ **フロアプランのライブ表示** — ご自宅の実際の間取りから作られたフロアプランで、どの部屋に人がいるか、どの照明が点いたままか、どのエアコンが動いているかが一目でわかります。**壁掛けタブレット専用**で、スマホアプリにはありません（電力統計もタブレット専用）。\n\n📦 **在庫管理** — 自宅の収納、店舗、オフィスの在庫を管理：品目、棚位置、分類、在庫僅少の通知。タブレット・iPhone／iPad・Android で使えます。スマホでは下部「更多（もっと見る）」タブの中の「庫存（在庫）」、タブレットでは左メニューの「倉儲（倉庫）」。同じページ、同じデータです。\n\n🔗 [機能紹介](/product)・[在庫管理の使い方](/tutorial#howto-warehouse)",
+                "fr": "**Plan en direct et inventaire**\n\n🗺️ **Plan en direct** — un plan dessiné d'après l'agencement réel de votre logement, qui montre d'un coup d'œil quelle pièce est occupée, quelle lumière est encore allumée et quel climatiseur fonctionne, sans ouvrir chaque appareil. **Tablette murale uniquement** ; l'appli mobile ne propose pas cette vue (les statistiques d'énergie non plus).\n\n📦 **Inventaire** — gérez ce qui est rangé chez vous, en boutique ou au bureau : articles, emplacements, catégories, alertes de stock bas. Sur la tablette, iPhone/iPad et Android ; sur le téléphone, c'est « 庫存 Inventaire » sous l'onglet Plus, sur la tablette « 倉儲 Entrepôt » dans le menu de gauche. Même page, mêmes données.\n\n🔗 [Fonctions](/product) · [Guide inventaire](/tutorial#howto-warehouse)",
+                "es": "**Plano en vivo e inventario**\n\n🗺️ **Plano en vivo** — un plano dibujado a partir de la distribución real de tu casa que muestra de un vistazo qué habitación está ocupada, qué luz sigue encendida y qué aire acondicionado está funcionando, sin abrir cada dispositivo. **Solo en la tableta de pared**; la app del móvil no tiene esta vista (las estadísticas de energía también son solo de tableta).\n\n📦 **Inventario** — gestiona lo que guardas en casa, en la tienda o en la oficina: artículos, ubicaciones, categorías, avisos de stock bajo. En la tableta, iPhone/iPad y Android; en el móvil se llama «庫存 Inventario» bajo la pestaña Más, en la tableta «倉儲 Almacén» en el menú izquierdo. Misma página, mismos datos.\n\n🔗 [Funciones](/product) · [Guía de inventario](/tutorial#howto-warehouse)"
             }
         },
         {
@@ -530,6 +581,67 @@
                 "fr": "**Processus d'installation enGo**\n\n1️⃣ Consultation gratuite\n2️⃣ Visite sur site\n3️⃣ Design personnalisé\n4️⃣ Installation professionnelle\n5️⃣ Configuration système\n6️⃣ Formation et remise\n\n🔗 [Prendre rendez-vous](/contact)",
                 "es": "**Proceso de instalación enGo**\n\n1️⃣ **Consulta Gratuita** — En línea o en tienda\n2️⃣ **Encuesta en Sitio** — Evaluación profesional del hogar\n3️⃣ **Diseño Personalizado** — Adaptado a tus necesidades\n4️⃣ **Instalación Profesional** — Coordinada con la renovación\n5️⃣ **Configuración del Sistema** — Configuración de tableta y emparejamiento de dispositivos\n6️⃣ **Capacitación y Entrega** — Capacitación de uso y aceptación\n\n💡 ¡Funciona para construcciones nuevas y renovaciones! Lo mejor es consultar temprano durante la renovación.\n\n🔗 [Reservar consulta](/contact)\n🔗 [Guía de instalación](/tutorial)",
                 "zhCN": "**enGo 安装流程**\n\n1️⃣ **免费咨询** — 在线或到店了解需求\n2️⃣ **现场丈量** — 专人到府规划配置\n3️⃣ **方案设计** — 依据需求制定客制化方案\n4️⃣ **专业施工** — 配合装潢进度布线安装\n5️⃣ **系统设定** — 平板设定、设备联网\n6️⃣ **教学验收** — 使用教学与功能验收\n\n💡 新屋装潢或旧屋翻新都适用！建议在装潢初期即咨询，可以最佳化布线方案。\n\n🔗 [预约咨询](/contact)\n🔗 [查看安装教学](/tutorial)"
+            }
+        },
+        {
+            "id": "tablet-hardware",
+            "keywords": [
+                "電池",
+                "电池",
+                "充電",
+                "充电",
+                "電源鍵",
+                "电源键",
+                "平板按鍵",
+                "平板按键",
+                "開不了機",
+                "开不了机",
+                "平板沒反應",
+                "畫面沒反應",
+                "螢幕沒反應",
+                "平板没反应",
+                "画面没反应",
+                "當機",
+                "死機",
+                "当机",
+                "死机",
+                "type-c",
+                "平板硬體",
+                "平板硬件",
+                "sim",
+                "打電話",
+                "打电话",
+                "平板重開",
+                "重新啟動",
+                "重启",
+                "battery",
+                "charging",
+                "power button",
+                "frozen",
+                "won't turn on",
+                "wont turn on",
+                "tablet hardware",
+                "restart",
+                "平板電池",
+                "平板电池",
+                "電池充電",
+                "电池充电",
+                "充不進",
+                "充不进",
+                "充不了電",
+                "充不了电",
+                "沒電",
+                "没电",
+                "平板充電",
+                "平板充电"
+            ],
+            "answer": {
+                "zh": "**牆掛平板的硬體問題**\n\n平板本體的按鍵、供電與電池、Wi-Fi 訊號、畫面沒反應或開不了機等硬體問題，請直接洽專人處理，我們會依您的機型提供對應的說明：📞 02-27510218（週一至週五 09:00–18:00），或在 [聯絡我們](/contact) 留下聯絡方式。\n\nApp 內的登入、裝置離線、情境沒執行等問題，請看 [設定與帳號](/tutorial#howto-settings) 或直接問我。",
+                "zhCN": "**墙挂平板的硬件问题**\n\n平板本体的按键、供电与电池、Wi-Fi 讯号、画面没反应或开不了机等硬件问题，请直接洽专人处理，我们会依您的机型提供对应的说明：📞 02-27510218（周一至周五 09:00–18:00），或在 [联络我们](/contact) 留下联络方式。\n\nApp 内的登入、装置离线、情境没执行等问题，请看 [设定与账号](/tutorial#howto-settings) 或直接问我。",
+                "en": "**Wall tablet hardware questions**\n\nFor the tablet itself — buttons, power and battery, Wi-Fi signal, an unresponsive screen or a tablet that will not turn on — please contact our team directly; they will give you the instructions for your model: 📞 02-27510218 (Mon–Fri 09:00–18:00), or leave your details on [Contact us](/contact).\n\nFor in-app issues (sign-in, offline devices, scenes not running) see [Settings & account](/tutorial#howto-settings) or just ask me.",
+                "ja": "**壁掛けタブレット本体の質問**\n\nタブレット本体（ボタン、給電とバッテリー、Wi-Fi の電波、画面が反応しない、電源が入らない）については担当者に直接ご相談ください。機種に応じた案内をいたします：📞 02-27510218（月〜金 09:00–18:00）、または [お問い合わせ](/contact) へ。\n\nアプリ内の問題（ログイン、機器のオフライン、シーンが動かない）は [設定とアカウント](/tutorial#howto-settings) をご覧いただくか、私にお尋ねください。",
+                "fr": "**Questions sur la tablette murale elle-même**\n\nPour la tablette en tant qu'appareil — boutons, alimentation et batterie, signal Wi-Fi, écran qui ne répond plus ou tablette qui ne s'allume pas — contactez directement notre équipe, qui vous donnera la marche à suivre pour votre modèle : 📞 02-27510218 (lun.–ven. 09:00–18:00), ou via [Contact](/contact).\n\nPour les questions liées à l'appli (connexion, appareils hors ligne, scènes non exécutées), voir [Réglages et compte](/tutorial#howto-settings) ou demandez-moi.",
+                "es": "**Preguntas sobre la tableta de pared en sí**\n\nPara la tableta como aparato — botones, alimentación y batería, señal Wi-Fi, pantalla que no responde o tableta que no enciende — contacta directamente con nuestro equipo, que te dará las indicaciones para tu modelo: 📞 02-27510218 (lun.–vie. 09:00–18:00), o en [Contacto](/contact).\n\nPara problemas dentro de la app (inicio de sesión, dispositivos sin conexión, escenas que no se ejecutan), consulta [Ajustes y cuenta](/tutorial#howto-settings) o pregúntame."
             }
         },
         {

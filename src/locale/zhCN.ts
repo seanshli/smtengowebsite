@@ -418,7 +418,8 @@ export const zhCNLocale = {
       title: '三种界面，一组账号',
       columns: { tablet: 'enGo 墙挂平板', ios: 'iPhone / iPad', android: 'Android 手机' },
       rows: {
-        control: '家电控制、情境、平面图',
+        control: '家电控制、情境',
+        floorplan: '平面图即时视图、用电统计',
         community: '社区服务、摄影机、仓储',
         voice: '语音操作',
         photowall: '待机相片墙'

@@ -344,6 +344,14 @@
                   <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
                   <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
                 </tr>
+                <!-- KB-001 A.12 (2026-09-23 iPhone check): the floor plan view and energy
+                     statistics exist on the tablet only; the phone app has neither. -->
+                <tr>
+                  <th scope="row">{{ $t('product.interfaces.rows.floorplan') }}</th>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span><small class="if-only">{{ $t('product.interfaces.tabletOnly') }}</small></td>
+                  <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
+                  <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
+                </tr>
                 <tr>
                   <th scope="row">{{ $t('product.interfaces.rows.voice') }}</th>
                   <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span><small class="if-only">{{ $t('product.interfaces.tabletOnly') }}</small></td>

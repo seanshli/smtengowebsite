@@ -46,6 +46,14 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['支援哪些裝置', 'compatibility'],
     ['語音操作', 'voice-control'],
     ['斷網怎麼辦', 'network-required'],
+    ['解鎖開門是什麼', 'unlock-door-button'],
+    ['通知頁的解鎖開門按鈕', 'unlock-door-button'],
+    ['手機上找不到倉儲', 'floorplan-inventory'],
+    ['手機有平面圖嗎', 'floorplan-inventory'],
+    ['手機找不到設定', 'engo-interfaces'],
+    ['平板電池充不進去', 'tablet-hardware'],
+    ['平板開不了機', 'tablet-hardware'],
+    ['485轉換器斷網還能用嗎', 'network-required'],
   ]
   for (const [q, id] of cases) {
     it(`"${q}" → ${id}`, () => {
@@ -102,14 +110,50 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
       if (f.answer.zh.includes('門鎖')) expect(f.answer.zh, String(f.id)).toMatch(/不在.*支援|不支援|不在支援範圍/)
     }
   })
-  it('the offline answer is split by device type (curtains/sensors/switches vs MEDOLE / enGo-native), per the 2026-09-11 code check', () => {
+  it('the offline answer follows KB-001 A.10 (2026-09-22 product test): 485 converter now works on the same home network, IR remote keys and scenes do not, and the at-home premise is stated', () => {
     const zh = (kb as any).general.find((e: any) => e.id === 'network-required').answer.zh as string
     expect(zh).toMatch(/窗簾、部分感測器與開關類/)
-    expect(zh).toMatch(/米多力.*仍需連網/)
-    expect(zh).toMatch(/情境（一鍵模式）目前需要連網/)
+    expect(zh).toMatch(/485 轉換器[\s\S]*仍可直接控制/)
+    expect(zh).toMatch(/紅外遙控器按鍵[\s\S]*仍需連網/)
+    expect(zh).toMatch(/情境（一鍵模式，含手動與自動化）[\s\S]*需要連網/)
+    expect(zh).toMatch(/同一個家用網路/)
+    expect(zh).not.toMatch(/開發中|米多力.*仍需連網/)
     const faq6 = (faqs as any[]).find((f) => f.id === 6).answer.zh as string
     expect(faq6).toMatch(/窗簾、部分感測器與開關類/)
-    expect(faq6).toMatch(/米多力.*仍需連網/)
+    expect(faq6).toMatch(/485 轉換器/)
+    expect(faq6).toMatch(/紅外遙控器按鍵/)
+    expect(faq6).not.toMatch(/開發中|仍需連網才能控制/)
+    // nothing on the site may still say MEDOLE needs the internet (retired by A.10)
+    for (const f of faqs as any[]) expect(f.answer.zh, String(f.id)).not.toMatch(/米多力系列目前需連網/)
+    const llms = readFileSync(resolve(process.cwd(), 'public/llms.txt'), 'utf-8')
+    expect(llms).toMatch(/485 轉換器/)
+    expect(llms).not.toMatch(/米多力系列與 enGo 自有裝置需要連網/)
+  })
+  it('KB-001 A.12 (2026-09-23 iPhone check): floor plan and energy statistics are tablet-only; the phone names 倉儲 as 庫存 under 更多', () => {
+    const g = (kb as any).general
+    for (const id of ['engo-interfaces', 'floorplan-inventory']) {
+      const zh = g.find((e: any) => e.id === id).answer.zh as string
+      expect(zh, id).toMatch(/庫存/)
+      expect(zh, id).toMatch(/更多/)
+      expect(zh, id).toMatch(/用電統計/)
+    }
+    expect(g.find((e: any) => e.id === 'floorplan-inventory').answer.zh).toMatch(/平板專屬/)
+    expect((faqs as any[]).find((f) => f.id === 29).answer.zh).toMatch(/平面圖即時視圖與用電統計為平板專屬/)
+    expect((faqs as any[]).find((f) => f.id === 38).answer.zh).toMatch(/平板專屬功能，手機 App 沒有/)
+    expect((faqs as any[]).find((f) => f.id === 39).answer.zh).toMatch(/「庫存」/)
+    const vue = readFileSync(resolve(process.cwd(), 'src/views/product.vue'), 'utf-8')
+    expect(vue).toContain("product.interfaces.rows.floorplan")
+  })
+  it('KB-001 A.13 §10.1 #11: the 解鎖開門 button is never explained by the bot, only handed to a person; tablet hardware questions are handed off too', () => {
+    const g = (kb as any).general
+    const u = g.find((e: any) => e.id === 'unlock-door-button')
+    for (const loc of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) {
+      expect(u.answer[loc], loc).toContain('02-27510218')
+      expect(u.answer[loc], loc).toContain('/contact')
+    }
+    expect(u.answer.zh).not.toMatch(/社區大門|門鎖|大門|門口機/)
+    const h = g.find((e: any) => e.id === 'tablet-hardware')
+    for (const loc of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) expect(h.answer[loc], loc).toContain('02-27510218')
   })
   it('pairing help follows KB-001 A.8 §3: three causes in order, the 30-second Device-discovery warning, and the how-to deep link', () => {
     const e = (kb as any).general.find((x: any) => x.id === 'device-pairing')
