@@ -278,12 +278,14 @@ export const jaLocale = {
             columns: { tablet: 'enGo 壁掛けタブレット', ios: 'iPhone / iPad', android: 'Android スマートフォン' },
             rows: {
                 control: '家電操作・シーン',
-                floorplan: 'フロアプラン・電力統計',
+                floorplan: 'フロアプラン',
+        deviceData: 'デバイスデータ（電力・水量・空気質）',
                 community: 'コミュニティサービス・カメラ・在庫管理',
                 voice: '音声操作',
                 photowall: '待機フォトウォール'
             },
             tabletOnly: 'タブレット専用',
+      comingSoon: '開発中',
             yes: '対応',
             no: '非対応',
             scrollHint: '左右にスワイプして他のプラットフォームを表示 →',

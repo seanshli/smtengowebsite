@@ -676,6 +676,14 @@ body {
             border: 1px solid rgba(18, 181, 168, 0.6);
         }
 
+        // 「開發中」要和「平板專屬」分得出來——同一張卡上兩個徽章並排，
+        // 只差文字的話讀者會以為是同一類標籤。刻意用中性灰而非品牌色，
+        // 避免尚未提供的功能看起來像重點特色。
+        .tf-badge-soon {
+            color: rgba(255, 255, 255, 0.72);
+            border-color: rgba(255, 255, 255, 0.38);
+        }
+
         .tf-note {
             margin-top: 14px !important;
             padding-top: 12px;

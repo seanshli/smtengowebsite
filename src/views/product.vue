@@ -341,11 +341,22 @@
                   <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
                   <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
                 </tr>
-                <!-- KB-001 A.12 (2026-09-23 iPhone check): the floor plan view and energy
-                     statistics exist on the tablet only; the phone app has neither. -->
+                <!-- 2026-09-27 實機＋程式碼複查，更正這一區兩處：
+                     (1) 舊註解寫「平面圖與用電統計都只有平板有」，那是 2026-09-23 我方查核的
+                         錯誤結論。設備數據（用電／用水／空氣品質）在 iPhone 上實測可用，
+                         UM-001 §6.3 就是四張 iPhone 實機截圖 —— 另立一列標三平台皆有。
+                     (2) 平面圖在出貨版 3.2.2(489) 並未提供（右上第一顆圖示只切換欄數；
+                         floorplan 程式碼在 develop／release/v3.2.x／main 皆為 0 檔），
+                         因此標示為「開發中」而非可用。規劃中亦僅做平板（手機螢幕太小）。 -->
+                <tr>
+                  <th scope="row">{{ $t('product.interfaces.rows.deviceData') }}</th>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span></td>
+                </tr>
                 <tr>
                   <th scope="row">{{ $t('product.interfaces.rows.floorplan') }}</th>
-                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span><small class="if-only">{{ $t('product.interfaces.tabletOnly') }}</small></td>
+                  <td><small class="if-only">{{ $t('product.interfaces.comingSoon') }}</small></td>
                   <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
                   <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
                 </tr>
@@ -421,6 +432,10 @@
               <figure v-if="featureImages.floorplan" class="tf-figure">
                 <img :src="featureImages.floorplan" :alt="$t('product.tablet_function.features.floorplan.title')" loading="lazy" />
               </figure>
+              <div class="tf-card-head">
+                <span class="tf-badge">{{ $t('product.tablet_function.tabletOnly') }}</span>
+                <span class="tf-badge tf-badge-soon">{{ $t('product.interfaces.comingSoon') }}</span>
+              </div>
               <h3>{{ $t('product.tablet_function.features.floorplan.title') }}</h3>
               <p>{{ $t('product.tablet_function.features.floorplan.body') }}</p>
             </article>

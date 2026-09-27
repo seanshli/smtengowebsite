@@ -384,12 +384,14 @@ export const enLocale = {
       columns: { tablet: 'enGo wall tablet', ios: 'iPhone / iPad', android: 'Android phone' },
       rows: {
         control: 'Appliance control, scenes',
-        floorplan: 'Live floor plan, energy statistics',
+        floorplan: 'Live floor plan',
+        deviceData: 'Device data (energy, water, air quality)',
         community: 'Community services, cameras, inventory',
         voice: 'Voice control',
         photowall: 'Standby photo wall'
       },
       tabletOnly: 'Tablet only',
+      comingSoon: 'In development',
       yes: 'Supported',
       no: 'Not available',
       scrollHint: 'Swipe to compare all three platforms →',
