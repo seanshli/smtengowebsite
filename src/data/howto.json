@@ -293,8 +293,8 @@
             "en": "Clear the Unassigned group"
           },
           "body": {
-            "zh": "剛配網還沒指定房間的裝置會落在「未分配」。建議盡快把它們歸進房間。未分配的裝置在平面圖上不會出現，語音也叫不到。",
-            "en": "Devices paired but not yet assigned a room land in Unassigned. Move them into rooms promptly. Unassigned devices do not appear on the floor plan and voice cannot reach them."
+            "zh": "剛配網還沒指定房間的裝置會落在「未分配」。建議盡快把它們歸進房間。未分配的裝置語音叫不到。",
+            "en": "Devices paired but not yet assigned a room land in Unassigned. Move them into rooms promptly. Unassigned devices cannot be reached by voice."
           },
           "image": null
         },

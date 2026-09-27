@@ -1032,7 +1032,8 @@ export default defineComponent({
     //               Never substitute the Android shot here.
     const featureImages: Record<'voice' | 'floorplan' | 'photowall' | 'inventory', string | null> = {
       voice: null,
-      floorplan: '/images/screens/03-floorplan-tablet-device.png',
+      // 2026-09-27: the floor plan is not in 3.2.2 (開發中); the old capture was a dev build, so no figure.
+      floorplan: null,
       photowall: null,
       // 2026-09-22: the only inventory capture shows third-party product names — text-only until a clean capture exists.
       inventory: null

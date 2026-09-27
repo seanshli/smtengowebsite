@@ -74,9 +74,15 @@
           <p class="hm-sub hm-on-navy-sub">{{ T.capSub }}</p>
         </header>
         <div class="hm-bento-grid" data-reveal-group>
-          <router-link to="/product#features" class="hm-cell hm-cell-img hm-cell-wide">
-            <img src="/images/screens/03-floorplan-tablet.png" :alt="T.capFloorplan" width="2000" height="1200" loading="lazy" />
-            <div class="hm-cell-cap"><strong>{{ T.capFloorplan }}</strong><span>{{ T.capFloorplanSub }}</span></div>
+          <!-- 2026-09-27: was the floor-plan cell. The floor plan is not in 3.2.2 (開發中)
+               and that capture came from a dev build, so the cell now shows 設備數據 with
+               a real iPhone screen (the whole phone, never cropped). -->
+          <router-link to="/tutorial#howto-devicedata" class="hm-cell hm-cell-data hm-cell-wide">
+            <div class="hm-cell-data-copy">
+              <div class="hm-cell-chips" aria-hidden="true"><span v-for="c in T.capDataChips" :key="c">{{ c }}</span></div>
+              <div class="hm-cell-cap"><strong>{{ T.capData }}</strong><span>{{ T.capDataSub }}</span></div>
+            </div>
+            <div class="hm-iphone hm-iphone-data"><img src="/images/howto/devicedata/01-power.png" :alt="T.capData" width="800" height="1731" loading="lazy" /></div>
           </router-link>
           <div class="hm-cell hm-cell-voice">
             <span class="hm-voice-quote">{{ T.capVoiceQuote }}</span>
@@ -199,11 +205,11 @@ const COPY: Record<string, Record<string, any>> = {
     altTablet: 'enGo 牆掛平板首頁，依房間分組的裝置卡片', altPhone: 'iPhone 上的 enGo智慧管家首頁，模型屋示範住家', altAnnounce: '手機上的社區公告',
     ifTitle: '三種介面，一組帳號',
     ifSub: '牆掛平板是家中的主控台；iPhone、iPad 與 Android 手機讓您在外遠端掌握。手機 App「enGo智慧管家」於 App Store 與 Google Play 免費下載。',
-    ifTablet: 'enGo 牆掛平板', ifTabletCap: '家電控制、情境、平面圖、社區服務，加上平板專屬的語音操作與待機相片牆',
+    ifTablet: 'enGo 牆掛平板', ifTabletCap: '家電控制、情境、設備數據、社區服務，加上平板專屬的語音操作與待機相片牆',
     ifIosCap: '在外遠端掌握，同一組帳號', ifAndroid: 'Android 手機', ifAndroidCap: '社區公告、報修、預約隨時看',
     ifNote: '語音操作與待機相片牆為牆掛平板專屬功能。',
     capTitle: '每天都會用到的四件事', capSub: '照明、插座、窗簾、空調、感測器與攝影機，在同一台平板上看見、控制、自動化。',
-    capFloorplan: '平面圖即時視圖', capFloorplanSub: '每個房間的裝置狀態，畫在您家的平面圖上。',
+    capData: '設備數據', capDataSub: '用電趨勢、用電分布、用水量、空氣品質，平板與手機都看得到。', capDataChips: ['用電趨勢', '用電分布', '用水量', '空氣品質'],
     capVoice: '語音操作', capVoiceSub: '牆掛平板專屬。涉及安全的裝置會先向您確認。', capVoiceQuote: '「開客廳燈」',
     capWarehouse: '智慧倉儲管理', capWarehouseSub: '濾芯、電池、備品放哪裡、剩多少。',
     capWarehouseChips: ['物品', '櫃位', '低庫存提醒'],
@@ -220,11 +226,11 @@ const COPY: Record<string, Record<string, any>> = {
     altTablet: 'enGo 壁挂平板首页，依房间分组的设备卡片', altPhone: 'iPhone 上的 enGo智慧管家首页，模型屋示范住家', altAnnounce: '手机上的社区公告',
     ifTitle: '三种界面，一组账号',
     ifSub: '壁挂平板是家中的主控台；iPhone、iPad 与 Android 手机让您在外远程掌握。手机 App「enGo智慧管家」于 App Store 与 Google Play 免费下载。',
-    ifTablet: 'enGo 壁挂平板', ifTabletCap: '家电控制、情境、平面图、社区服务，加上平板专属的语音操作与待机相片墙',
+    ifTablet: 'enGo 壁挂平板', ifTabletCap: '家电控制、情境、设备数据、社区服务，加上平板专属的语音操作与待机相片墙',
     ifIosCap: '在外远程掌握，同一组账号', ifAndroid: 'Android 手机', ifAndroidCap: '社区公告、报修、预约随时看',
     ifNote: '语音操作与待机相片墙为壁挂平板专属功能。',
     capTitle: '每天都会用到的四件事', capSub: '照明、插座、窗帘、空调、传感器与摄像头，在同一台平板上看见、控制、自动化。',
-    capFloorplan: '平面图实时视图', capFloorplanSub: '每个房间的设备状态，画在您家的平面图上。',
+    capData: '设备数据', capDataSub: '用电趋势、用电分布、用水量、空气质量，平板与手机都看得到。', capDataChips: ['用电趋势', '用电分布', '用水量', '空气质量'],
     capVoice: '语音操作', capVoiceSub: '壁挂平板专属。涉及安全的设备会先向您确认。', capVoiceQuote: '「开客厅灯」',
     capWarehouse: '智慧仓储管理', capWarehouseSub: '滤芯、电池、备品放哪里、剩多少。',
     capWarehouseChips: ['物品', '柜位', '低库存提醒'],
@@ -241,11 +247,11 @@ const COPY: Record<string, Record<string, any>> = {
     altTablet: 'enGo wall tablet home screen with device cards grouped by room', altPhone: 'enGo智慧管家 home screen on iPhone, Model Home demo household', altAnnounce: 'Community announcements on the phone',
     ifTitle: 'Three interfaces, one account',
     ifSub: 'The wall tablet is the control centre at home; iPhone, iPad and Android phones keep you in touch when you are out. The enGo HMS app is free on the App Store and Google Play, listed as enGo智慧管家.',
-    ifTablet: 'enGo wall tablet', ifTabletCap: 'Device control, scenes, floor plan, community services, plus tablet-only voice control and the standby photo wall',
+    ifTablet: 'enGo wall tablet', ifTabletCap: 'Device control, scenes, device data, community services, plus tablet-only voice control and the standby photo wall',
     ifIosCap: 'Remote control on the go, same account', ifAndroid: 'Android phone', ifAndroidCap: 'Announcements, repairs and bookings anytime',
     ifNote: 'Voice control and the standby photo wall are wall-tablet-only features.',
     capTitle: 'Four things you will use every day', capSub: 'Lighting, outlets, curtains, air conditioning, sensors and cameras, seen, controlled and automated on one tablet.',
-    capFloorplan: 'Live floor plan', capFloorplanSub: 'Every room\'s device status, drawn on your own floor plan.',
+    capData: 'Device data', capDataSub: 'Energy trend and share, water use and air quality, on the tablet and in the app.', capDataChips: ['Energy trend', 'Energy share', 'Water', 'Air quality'],
     capVoice: 'Voice control', capVoiceSub: 'Wall tablet only. Safety-related devices ask for confirmation first.', capVoiceQuote: '"Living room lights on"',
     capWarehouse: 'Smart inventory', capWarehouseSub: 'Where the filters, batteries and spares are, and how many are left.',
     capWarehouseChips: ['Items', 'Cabinets', 'Low-stock alerts'],
@@ -399,6 +405,14 @@ a.hm-cell-img:hover img { transform: scale(1.03); }
 .hm-cell-text { flex-direction: column; justify-content: space-between; padding: 24px 24px 0; .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; } }
 .hm-cell-chips { display: flex; flex-wrap: wrap; gap: 8px; span { border: 1.5px solid rgba($warm-bg-light, .5); border-radius: 999px; padding: 7px 14px; font-size: .85rem; font-weight: 700; color: $warm-bg-light; } }
 .hm-cell-voice { flex-direction: column; justify-content: space-between; padding: 24px 24px 0; .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; } }
+// device data: chips + caption on the left, one whole iPhone (real 3.2.2 screen) on the right
+.hm-cell-data {
+  flex-direction: row; align-items: stretch; gap: 20px; padding: 24px 24px 0; min-height: 320px;
+  .hm-cell-data-copy { flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
+  .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; }
+  .hm-iphone-data { align-self: center; width: 30%; max-width: 148px; margin: 0 0 24px; flex: none; }
+  @media (max-width: 540px) { .hm-iphone-data { width: 34%; } }
+}
 .hm-voice-quote { font-family: 'Noto Serif TC', serif; font-weight: 700; color: $gold; font-size: clamp(2rem, 3.2vw, 3.1rem); line-height: 1.05; }
 
 // ─── HMS × BMS ───────────────────────────────────────────────────

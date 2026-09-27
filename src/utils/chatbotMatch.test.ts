@@ -130,20 +130,35 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(llms).toMatch(/485 轉換器/)
     expect(llms).not.toMatch(/米多力系列與 enGo 自有裝置需要連網/)
   })
-  it('KB-001 A.12 (2026-09-23 iPhone check): floor plan and energy statistics are tablet-only; the phone names 倉儲 as 庫存 under 更多', () => {
+  it('2026-09-27 (PR #44 / UM-001 A.15): the floor plan is 開發中 (not in 3.2.2, planned tablet-only), device data is on all three, the phone names 倉儲 as 庫存 under 更多', () => {
     const g = (kb as any).general
     for (const id of ['engo-interfaces', 'floorplan-inventory']) {
       const zh = g.find((e: any) => e.id === id).answer.zh as string
       expect(zh, id).toMatch(/庫存/)
       expect(zh, id).toMatch(/更多/)
-      expect(zh, id).toMatch(/用電統計/)
+      expect(zh, id).toMatch(/設備數據/)
+      expect(zh, id).toMatch(/開發中/)
+      expect(zh, id).not.toMatch(/用電統計也是平板專屬|平面圖即時視圖、用電統計/)
     }
-    expect(g.find((e: any) => e.id === 'floorplan-inventory').answer.zh).toMatch(/平板專屬/)
-    expect((faqs as any[]).find((f) => f.id === 29).answer.zh).toMatch(/平面圖即時視圖與用電統計為平板專屬/)
-    expect((faqs as any[]).find((f) => f.id === 38).answer.zh).toMatch(/平板專屬功能，手機 App 沒有/)
-    expect((faqs as any[]).find((f) => f.id === 39).answer.zh).toMatch(/「庫存」/)
+    expect(g.find((e: any) => e.id === 'floorplan-inventory').answer.zh).toMatch(/版面切換/)
+    const faq29 = (faqs as any[]).find((f) => f.id === 29).answer.zh as string
+    expect(faq29).toMatch(/設備數據/)
+    expect(faq29).toMatch(/平面圖即時視圖開發中/)
+    const faq38 = (faqs as any[]).find((f) => f.id === 38).answer.zh as string
+    expect(faq38).toMatch(/開發中/)
+    expect(faq38).not.toMatch(/平板專屬功能，手機 App 沒有/)
+    // nothing on the site may present the floor plan as a shipped feature
+    const texts: Array<[string, string]> = [
+      ...g.map((e: any) => [e.id, e.answer?.zh ?? ''] as [string, string]),
+      ...(kb as any).products.map((e: any) => [e.id, e.features?.zh ?? ''] as [string, string]),
+      ...(faqs as any[]).map((f) => [String(f.id), f.answer.zh] as [string, string]),
+      ['llms.txt', readFileSync(resolve(process.cwd(), 'public/llms.txt'), 'utf-8')],
+    ]
+    for (const [id, zh] of texts) if (zh.includes('平面圖即時視圖')) expect(zh, id).toMatch(/開發中/)
     const vue = readFileSync(resolve(process.cwd(), 'src/views/product.vue'), 'utf-8')
     expect(vue).toContain("product.interfaces.rows.floorplan")
+    expect(vue).toContain("product.interfaces.rows.deviceData")
+    expect(vue).toMatch(/floorplan: null/)
   })
   it('KB-001 A.13 §10.1 #11: the 解鎖開門 button is never explained by the bot, only handed to a person; tablet hardware questions are handed off too', () => {
     const g = (kb as any).general
