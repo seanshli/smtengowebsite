@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 // Design review 2026-09-22 (taste skill, redesign-preserve). These are the
@@ -110,12 +110,22 @@ describe('page templates carry no template tells', () => {
     it('every store link goes through utils/shopUrl (Sean 2026-09-27: new storefront shoph5.smtengo.com, front page only)', () => {
         const layout = readdirSync(resolve(__dirname, '../layout')).map((f) => readFileSync(resolve(__dirname, '../layout', f), 'utf-8'))
         for (const src of [...layout, ...pages.map((f) => readFileSync(resolve(views, f), 'utf-8'))]) {
-            expect(src).not.toMatch(/h5\.smtengo\.com|smtengoh5\.com/)
+            expect(src).not.toMatch(/(^|[^p])h5\.smtengo\.com|smtengoh5\.com/)   // the old mall; shoph5.smtengo.com is fine
         }
         const mod = readFileSync(resolve(__dirname, 'shopUrl.ts'), 'utf-8')
         expect(mod).toContain("SHOP_URL = 'https://shoph5.smtengo.com/'")
         expect(mod).not.toMatch(/smtengoh5|h5\.smtengo\.com\/pages/)
         expect(templateOf('packages.vue')).not.toMatch(/product-reviews|submitReview/)
+    })
+    it('智管家商城 is a product line: /product has the #shop section with a real store screenshot, nav and footer link it', () => {
+        const tpl = templateOf('product.vue')
+        expect(tpl).toContain('id="shop"')
+        expect(tpl).toContain('/images/screens/13-shop-home.jpg')
+        expect(tpl).toContain(':href="SHOP_URL"')
+        for (const f of ['header.vue', 'footer.vue']) {
+            expect(readFileSync(resolve(__dirname, '../layout', f), 'utf-8'), f).toContain('to="/product#shop"')
+        }
+        expect(existsSync(resolve(process.cwd(), 'public/images/screens/13-shop-home.jpg'))).toBe(true)
     })
     it('home never renders the shared case illustration as proof', () => {
         const src = readFileSync(resolve(views, 'index.vue'), 'utf-8')

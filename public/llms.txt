@@ -7,7 +7,7 @@
 ## 核心文件
 
 - [知識庫：九個模組的操作步驟與全部常見問題（繁中／英文，含截圖網址）](https://www.smtengo.com/knowledge-base.md): 由網站資料自動產生，與 /tutorial 頁面同一份內容。
-- [產品介紹 enGo AI智慧中控系統 & 水維氧淨水系統](https://www.smtengo.com/product)
+- [產品介紹 enGo AI智慧中控系統、水維氧淨水系統、智管家商城](https://www.smtengo.com/product)
 - [使用教學與操作指南](https://www.smtengo.com/tutorial)
 - [常見問題](https://www.smtengo.com/tutorial#faq)
 - [套裝方案（零售定價）](https://www.smtengo.com/packages)

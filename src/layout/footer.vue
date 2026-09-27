@@ -19,6 +19,7 @@
             <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
             <span class="ft-link" @click="jumpToProduct">{{ $t('footer.secondLink') }}</span>
             <router-link to="/enviro">{{ $t('enviroTitle') }}</router-link>
+            <router-link to="/product#shop">{{ $t('product.shop.title') }}</router-link>
             <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
           </div>
 

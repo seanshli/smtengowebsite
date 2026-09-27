@@ -969,6 +969,35 @@
       </div>
     </div>
 
+    <!-- 智管家商城: the fifth product line (Sean 2026-09-27). A separate site
+         (shoph5.smtengo.com), so this section describes and links, never sells here.
+         Copy follows KB-001 A.15: same store as the former 安購商城, new version. -->
+    <div id="shop" class="shop-line">
+      <div class="shop-line-inner">
+        <div class="shop-line-copy" data-reveal>
+          <h2 class="section-title shop-line-title">{{ $t('product.shop.title') }}</h2>
+          <p class="shop-line-lede">{{ $t('product.shop.lede') }}</p>
+          <ul class="shop-line-points">
+            <li v-for="i in 3" :key="i">
+              <strong>{{ $t(`product.shop.points.p${i}.title`) }}</strong>
+              <span>{{ $t(`product.shop.points.p${i}.body`) }}</span>
+            </li>
+          </ul>
+          <p class="shop-line-note">{{ $t('product.shop.note') }}</p>
+          <div class="shop-line-ctas">
+            <a :href="SHOP_URL" target="_blank" rel="noopener" class="shop-line-btn" data-track="product:shop">{{ $t('product.shop.cta') }} →</a>
+            <a :href="SHOP_URL + 'subscriptions'" target="_blank" rel="noopener" class="shop-line-link" data-track="product:shop-plans">{{ $t('product.shop.ctaPlans') }} →</a>
+          </div>
+        </div>
+        <figure class="shop-line-figure" data-reveal>
+          <div class="shop-line-frame">
+            <img src="/images/screens/13-shop-home.jpg" :alt="$t('product.shop.alt')" width="1280" height="720" loading="lazy" />
+          </div>
+          <figcaption>{{ $t('product.shop.caption') }}</figcaption>
+        </figure>
+      </div>
+    </div>
+
     <CatalogMenu
       v-if="isCatalogMenuOpen"
       :isOpen="isCatalogMenuOpen"
@@ -987,7 +1016,7 @@
 </template>
 <script lang="ts">
 import { useIntersectionObserver } from '@vueuse/core'
-import { openShop } from '@/utils/shopUrl'
+import { openShop, SHOP_URL } from '@/utils/shopUrl'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -1054,7 +1083,8 @@ export default defineComponent({
       { id: 'intro', label: t('product.brand_intro.title') },
       { id: 'interfaces', label: t('product.interfaces.title') },
       { id: 'features', label: t('product.tablet_function.tag') },
-      { id: 'oxygen', label: t('product.water_filter.title') }
+      { id: 'oxygen', label: t('product.water_filter.title') },
+      { id: 'shop', label: t('product.shop.title') }
     ])
 
     // Product JSON-LD schema injection for SEO rich results — re-inject on locale change
@@ -1176,6 +1206,7 @@ const targetExpand = ref(false)
     return {
       motionRoot,
       sectionDots,
+      SHOP_URL,
       buyNow,
       targetIsVisible,
       observeTarget,
@@ -1207,6 +1238,7 @@ const targetExpand = ref(false)
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
 // --- Air Purifier (#oxygen1) section styles ---
 .op-80 { opacity: 0.8; }
 
@@ -1601,5 +1633,53 @@ h3,
 .wf-price-flag,
 .wf-buy-btn-card {
   border-radius: 0;
+}
+
+// ─── 智管家商城 product line (light section after the dark water block) ───
+.shop-line {
+  background: $warm-bg-light;
+  color: $grey-blue3;
+  padding: clamp(64px, 8vw, 112px) clamp(24px, 6vw, 118px);
+}
+.shop-line-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+.shop-line-title { color: $grey-blue3; margin-bottom: 14px; }
+.shop-line-lede { font-size: clamp(1.05rem, 1.7vw, 1.2rem); line-height: 1.9; color: $grey-blue2; margin: 0 0 24px; }
+.shop-line-points {
+  list-style: none; padding: 0; margin: 0 0 22px; border-top: 3px solid $grey-blue3;
+  li { display: grid; gap: 4px; padding: 14px 0; border-bottom: 1px solid rgba($grey-blue3, .22); }
+  strong { font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 1.08rem; color: $grey-blue3; }
+  span { font-size: .96rem; line-height: 1.8; color: #4c4c4c; }
+}
+.shop-line-note { font-size: .9rem; line-height: 1.7; color: #4c4c4c; margin: 0 0 26px; }
+.shop-line-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+.shop-line-btn {
+  display: inline-flex; align-items: center; white-space: nowrap; font-weight: 700; font-size: 1rem;
+  padding: 14px 26px; border-radius: 999px; background: $brand-orange; color: #fff; text-decoration: none;
+  box-shadow: 0 10px 30px rgba($brand-orange, .28); transition: transform .2s ease, background .2s ease;
+  &:hover { background: $brand-orange-text; color: #fff; }
+  &:active { transform: translateY(1px) scale(.98); }
+}
+.shop-line-link {
+  font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 1.02rem; color: $grey-blue3; text-decoration: none;
+  border-bottom: 2px solid $brand-orange; padding-bottom: 3px; transition: color .25s ease;
+  &:hover { color: $brand-orange; }
+}
+.shop-line-figure {
+  position: relative; margin: 0;
+  &::before { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 2px solid $brand-orange; z-index: 0; }
+  figcaption { position: relative; z-index: 1; margin-top: 12px; font-size: .85rem; letter-spacing: .04em; color: #4c4c4c; }
+}
+.shop-line-frame {
+  position: relative; z-index: 1; border-radius: 12px; overflow: hidden; background: #fff;
+  border: 1px solid rgba($grey-blue3, .5); box-shadow: 0 18px 38px -22px rgba(21, 41, 57, .55);
+  img { display: block; width: 100%; height: auto; }
 }
 </style>

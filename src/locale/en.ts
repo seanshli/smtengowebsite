@@ -424,6 +424,20 @@ export const enLocale = {
         comment: 'Water quality improved noticeably, the Sr water tastes sweet.'
       }
     },
+    shop: {
+      title: 'enGo Store (智管家商城)',
+      lede: 'Community subscriptions and a neighbourhood marketplace, delivered to your door. Order fresh food, daily essentials and smart-home add-ons from merchants your community trusts; when the parcel reaches the lobby, the system tells you to pick it up.',
+      points: {
+        p1: { title: 'Neighbourhood marketplace', body: 'Merchants trusted by your community list fresh produce, household goods, health foods and smart-home accessories; search or browse, add to cart, check out, delivered within the community.' },
+        p2: { title: 'Subscription plans', body: 'Silver, Gold and Platinum: weekly fresh produce, monthly household essentials and store-wide discounts. Pause or change any time, no lock-in.' },
+        p3: { title: 'Updates in the enGo app', body: 'Order, promotion and delivery updates arrive as 商城消息 and 商城快遞 notifications in the enGo app; shopping itself happens on the store site.' }
+      },
+      note: 'The enGo Store is the new version of the former 安購商城: the same store on a new platform with a new name. For orders, returns and delivery, contact the store\'s own support.',
+      cta: 'Open the enGo Store',
+      ctaPlans: 'See the plans',
+      alt: 'enGo Store home page',
+      caption: 'shoph5.smtengo.com, the new storefront launched in September 2026.'
+    },
     packages: {
       tag: 'Package Plans',
       title: 'Choose the Best Plan for Your Smart Home',

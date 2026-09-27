@@ -31,6 +31,7 @@
           <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
           <router-link to="/product?jump=oxygen">{{ $t('footer.secondLink') }}</router-link>
           <router-link to="/enviro">{{ $t('enviroTitle') }}</router-link>
+          <router-link to="/product#shop">{{ $t('product.shop.title') }}</router-link>
         </div>
       </div>
       <router-link to="/packages" data-track="nav:packages">{{ $t('product.packages.tag') }}</router-link>
@@ -99,6 +100,7 @@
         <router-link to="/product" class="sublink">{{ $t('footer.firstLink') }}</router-link>
         <router-link to="/product?jump=oxygen" class="sublink">{{ $t('footer.secondLink') }}</router-link>
         <router-link to="/enviro" class="sublink">{{ $t('enviroTitle') }}</router-link>
+        <router-link to="/product#shop" class="sublink">{{ $t('product.shop.title') }}</router-link>
         <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
         <a @click="toMall">{{ $t('mallTitle') }}</a>
         <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>

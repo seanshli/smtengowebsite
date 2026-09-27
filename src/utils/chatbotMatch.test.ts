@@ -55,6 +55,9 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['平板電池充不進去', 'tablet-hardware'],
     ['平板開不了機', 'tablet-hardware'],
     ['485轉換器斷網還能用嗎', 'network-required'],
+    ['智管家商城是什麼', 'shop-platform'],
+    ['要去哪裡買東西', 'shop-platform'],
+    ['商城網址', 'shop-platform'],
   ]
   for (const [q, id] of cases) {
     it(`"${q}" → ${id}`, () => {
@@ -159,6 +162,18 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(vue).toContain("product.interfaces.rows.floorplan")
     expect(vue).toContain("product.interfaces.rows.deviceData")
     expect(vue).toMatch(/floorplan: null/)
+  })
+  it('the store entry follows KB-001 A.15: same store, new version, never 合併/轉移/收購; orders go to the store; five product lines', () => {
+    const e = (kb as any).general.find((x: any) => x.id === 'shop-platform')
+    for (const loc of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) {
+      expect(e.answer[loc], loc).toContain('https://shoph5.smtengo.com/')
+      expect(e.answer[loc], loc).toContain('/product#shop')
+    }
+    expect(e.answer.zh).toMatch(/新版本/)
+    expect(e.answer.zh).not.toMatch(/合併|轉移|收購|\/\/h5\.smtengo\.com/)
+    const faq45 = (faqs as any[]).find((f) => f.id === 45).answer.zh as string
+    expect(faq45).toMatch(/^五條/)
+    expect(faq45).toMatch(/智管家商城/)
   })
   it('KB-001 A.13 §10.1 #11: the 解鎖開門 button is never explained by the bot, only handed to a person; tablet hardware questions are handed off too', () => {
     const g = (kb as any).general
