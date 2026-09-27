@@ -419,12 +419,14 @@ export const zhLocale = {
       columns: { tablet: 'enGo 牆掛平板', ios: 'iPhone / iPad', android: 'Android 手機' },
       rows: {
         control: '家電控制、情境',
-        floorplan: '平面圖即時視圖、用電統計',
+        floorplan: '平面圖即時視圖',
+        deviceData: '設備數據（用電／用水／空氣品質）',
         community: '社區服務、攝影機、倉儲',
         voice: '語音操作',
         photowall: '待機相片牆'
       },
       tabletOnly: '平板專屬',
+      comingSoon: '開發中',
       yes: '支援',
       no: '不提供',
       scrollHint: '左右滑動可查看其他平台 →',

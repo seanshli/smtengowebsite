@@ -419,12 +419,14 @@ export const zhCNLocale = {
       columns: { tablet: 'enGo 墙挂平板', ios: 'iPhone / iPad', android: 'Android 手机' },
       rows: {
         control: '家电控制、情境',
-        floorplan: '平面图即时视图、用电统计',
+        floorplan: '平面图即时视图',
+        deviceData: '设备数据（用电／用水／空气质量）',
         community: '社区服务、摄影机、仓储',
         voice: '语音操作',
         photowall: '待机相片墙'
       },
       tabletOnly: '平板专属',
+      comingSoon: '开发中',
       yes: '支持',
       no: '不提供',
       scrollHint: '左右滑动可查看其他平台 →',
