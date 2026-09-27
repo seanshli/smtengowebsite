@@ -69,45 +69,9 @@
         </div>
       </div>
 
-      <!-- 產品評論區 (RWD layout) -->
-      <div class="product-reviews container py-80 py-mob-40">
-        <h2 class="fz-48 fw-700 text-grey-blue mb-40 tac">{{ $t('product.reviews.title') || '用戶評價' }}</h2>
-        
-        <div class="reviews-container">
-          <!-- 評論列表區塊 -->
-          <div class="reviews-list-wrapper">
-            <div class="reviews-list mb-60">
-              <div v-for="(review, index) in reviews" :key="index" class="review-item p-24 mb-20 bg-white shadow-sm border-radius-15 scroll-reveal">
-                <div class="d-flex jc-sb ai-c mb-12">
-                  <span class="user-name fw-700">{{ review.name }}</span>
-                  <span class="review-date fz-14 text-grey">{{ review.date }}</span>
-                </div>
-                <p class="review-text fz-16 lh-24">{{ review.comment }}</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- 發表評論區塊 -->
-          <div class="add-review-wrapper">
-            <div class="add-review p-32 bg-grey-blue2 text-white border-radius-20">
-              <h3 class="fz-24 mb-20">{{ $t('product.reviews.add') || '發表評論' }}</h3>
-              <form @submit.prevent="submitReview">
-                <div class="mb-16">
-                  <input v-model="newReview.name" type="text" :placeholder="$t('reviewNamePlaceholder')" class="w-100 p-12 border-radius-8 border-none" required />
-                </div>
-                <div class="mb-16">
-                  <textarea v-model="newReview.comment" :placeholder="$t('reviewCommentPlaceholder')" class="w-100 p-12 border-radius-8 border-none" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="bg-orange2 text-white border-none py-12 px-32 border-radius-30 fw-500 cursor-pointer hover-scale">
-                  {{ $t('submitForm') }}
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
     
+
     <CatalogMenu
       v-if="isCatalogMenuOpen"
       :isOpen="isCatalogMenuOpen"
@@ -130,6 +94,7 @@ import { useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '@/composables/useScrollReveal'
+import { openShop } from '@/utils/shopUrl'
 import packagesData from '@/data/packages.json'
 
 export default defineComponent({
@@ -139,7 +104,7 @@ export default defineComponent({
     CatalogMenu: defineAsyncComponent(() => import('@/components/CatalogMenu.vue'))
   },
   setup() {
-    const { t, locale } = useI18n()
+    const { locale } = useI18n()
     const packages = ref(packagesData)
     const router = useRouter()
     const { trackEvent } = useAnalytics()
@@ -154,7 +119,7 @@ export default defineComponent({
         platform: 'h5_smtengo',
         locale: locale.value
       })
-      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=435&dtid=0')
+      openShop()
     }
 
     const isCatalogOpen = ref(false)
@@ -182,25 +147,8 @@ export default defineComponent({
       selectedCatalogItem.value = null
     }
 
-    const reviews = ref([
-      { name: t('product.reviews.sample1.name'), date: '2024-05-20', comment: t('product.reviews.sample1.comment') },
-      { name: t('product.reviews.sample2.name'), date: '2024-06-15', comment: t('product.reviews.sample2.comment') }
-    ])
-    const newReview = ref({ name: '', comment: '' })
-
-    const submitReview = () => {
-      const today = new Date().toISOString().split('T')[0]
-      reviews.value.unshift({ ...newReview.value, date: today })
-      trackEvent('submit_product_review', { name: newReview.value.name })
-      newReview.value = { name: '', comment: '' }
-      alert(t('reviewThanks'))
-    }
-
     return {
       buyNow,
-      reviews,
-      newReview,
-      submitReview,
       packages,
       locale,
       isCatalogOpen,
@@ -410,48 +358,6 @@ export default defineComponent({
   }
 }
 
-.product-reviews {
-  .reviews-container {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    
-    @media (max-width: 1024px) {
-      flex-direction: column;
-    }
-  }
-  
-  .reviews-list-wrapper {
-    flex: 1;
-    width: 100%;
-  }
-
-  .add-review-wrapper {
-    flex: 1;
-    width: 100%;
-    position: sticky;
-    top: 100px;
-    
-    @media (max-width: 1024px) {
-      position: static;
-    }
-  }
-
-  .review-item {
-    transition: transform 0.2s;
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
-
-  .add-review form {
-    input, textarea {
-      width: 100%;
-      box-sizing: border-box;
-      font-family: inherit;
-    }
-  }
-}
 </style>
 
 <style scoped lang="scss">
