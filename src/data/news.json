@@ -3,21 +3,22 @@
     "id": 10,
     "date": "2026-09-27",
     "title": {
-      "zh": "安購商城平台升級：新版商城即將上線",
-      "zhCN": "安购商城平台升级：新版商城即将上线",
-      "en": "The enGo Store Is Moving to a New Platform",
-      "ja": "enGo ストアが新プラットフォームへ移行します",
-      "fr": "La boutique enGo migre vers une nouvelle plateforme",
-      "es": "La tienda enGo se traslada a una nueva plataforma"
+      "zh": "全新「智管家商城」上線：安購商城搬到新平台",
+      "zhCN": "全新「智管家商城」上线：安购商城搬到新平台",
+      "en": "The New enGo Store Is Live: a New Platform for Shopping",
+      "ja": "新しい「智管家商城」がオープン：ストアが新プラットフォームへ",
+      "fr": "La nouvelle boutique enGo est en ligne : une nouvelle plateforme d’achat",
+      "es": "La nueva tienda enGo ya está en línea: una nueva plataforma de compra"
     },
     "summary": {
-      "zh": "安購商城正在搬到全新的購物平台，新網址為 www.smtengoh5.com。升級期間，網站上的「安購商城」與「立即購買」會先帶您到現行商城；新平台開通後會自動改連到新首頁，不必更換書籤。套裝方案與淨水系統仍可透過官網洽詢與選購。<a href=\"/packages\">看套裝方案</a>",
-      "zhCN": "安购商城正在搬到全新的购物平台，新网址为 www.smtengoh5.com。升级期间，网站上的「安购商城」与「立即购买」会先带您到现行商城；新平台开通后会自动改连到新首页，不必更换书签。套装方案与净水系统仍可通过官网洽询与选购。<a href=\"/packages\">看套装方案</a>",
-      "en": "The enGo Store is moving to a brand-new shopping platform at www.smtengoh5.com. During the switch, the “enGo Store” and “Buy Now” links on this site take you to the current store; once the new platform is open they will point to its front page automatically, so there is nothing to re-bookmark. Packages and the water system can still be enquired about and ordered through this site. <a href=\"/packages\">See the packages</a>",
-      "ja": "enGo ストアは新しいショッピングプラットフォーム www.smtengoh5.com へ移行中です。移行期間中、サイト内の「enGo Store」と「今すぐ購入」は現行ストアへつながり、新プラットフォームの公開後は自動的に新しいトップページへ切り替わります。ブックマークの変更は不要です。パッケージと浄水システムは引き続き本サイトからお問い合わせ・ご注文いただけます。<a href=\"/packages\">パッケージを見る</a>",
-      "fr": "La boutique enGo migre vers une toute nouvelle plateforme d’achat : www.smtengoh5.com. Pendant la transition, les liens « enGo Store » et « Acheter » de ce site mènent à la boutique actuelle ; dès l’ouverture de la nouvelle plateforme, ils pointeront automatiquement vers sa page d’accueil, sans rien à modifier de votre côté. Les formules et le système de filtration restent disponibles via ce site. <a href=\"/packages\">Voir les formules</a>",
-      "es": "La tienda enGo se traslada a una plataforma de compra completamente nueva: www.smtengoh5.com. Durante el cambio, los enlaces «enGo Store» y «Comprar ahora» de este sitio llevan a la tienda actual; en cuanto la nueva plataforma abra, apuntarán automáticamente a su página principal, sin cambiar marcadores. Los paquetes y el sistema de agua siguen disponibles a través de este sitio. <a href=\"/packages\">Ver los paquetes</a>"
-    }
+      "zh": "安購商城已搬到全新的購物平台「智管家商城」，網址是 shoph5.smtengo.com。網站上的「安購商城」與各處的「立即購買」現在都會帶您到新商城首頁，可以直接搜尋、瀏覽商品與訂閱方案、加入購物車結帳。套裝方案與淨水系統仍可透過官網洽詢。<a href=\"https://shoph5.smtengo.com/\" target=\"_blank\" rel=\"noopener\">前往智管家商城</a>",
+      "zhCN": "安购商城已搬到全新的购物平台「智管家商城」，网址是 shoph5.smtengo.com。网站上的「安购商城」与各处的「立即购买」现在都会带您到新商城首页，可以直接搜索、浏览商品与订阅方案、加入购物车结账。套装方案与净水系统仍可通过官网洽询。<a href=\"https://shoph5.smtengo.com/\" target=\"_blank\" rel=\"noopener\">前往智管家商城</a>",
+      "en": "The enGo Store has moved to a brand-new shopping platform at shoph5.smtengo.com. The “enGo Store” link and every “Buy Now” button on this site now open the new storefront, where you can search and browse products and subscription plans, add to cart and check out. Packages and the water system can still be enquired about through this site. <a href=\"https://shoph5.smtengo.com/\" target=\"_blank\" rel=\"noopener\">Open the enGo Store</a>",
+      "ja": "enGo ストアは新しいショッピングプラットフォーム「智管家商城」（shoph5.smtengo.com）へ移行しました。本サイトの「enGo Store」と各所の「今すぐ購入」は新ストアのトップページにつながり、商品やサブスクリプションプランの検索・閲覧、カート、決済までそのまま行えます。パッケージと浄水システムは引き続き本サイトからお問い合わせいただけます。<a href=\"https://shoph5.smtengo.com/\" target=\"_blank\" rel=\"noopener\">ストアを開く</a>",
+      "fr": "La boutique enGo a migré vers une toute nouvelle plateforme d’achat : shoph5.smtengo.com. Le lien « enGo Store » et chaque bouton « Acheter » de ce site ouvrent désormais la nouvelle boutique, où vous pouvez rechercher et parcourir les produits et les abonnements, remplir votre panier et régler. Les formules et le système de filtration restent disponibles via ce site. <a href=\"https://shoph5.smtengo.com/\" target=\"_blank\" rel=\"noopener\">Ouvrir la boutique</a>",
+      "es": "La tienda enGo se ha trasladado a una plataforma de compra completamente nueva: shoph5.smtengo.com. El enlace «enGo Store» y cada botón «Comprar ahora» de este sitio abren ahora la nueva tienda, donde puedes buscar y ver productos y planes de suscripción, añadir al carrito y pagar. Los paquetes y el sistema de agua siguen disponibles a través de este sitio. <a href=\"https://shoph5.smtengo.com/\" target=\"_blank\" rel=\"noopener\">Abrir la tienda</a>"
+    },
+    "image": "/images/news/shop-h5.jpg"
   },
   {
     "id": 9,
