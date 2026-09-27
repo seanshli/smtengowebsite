@@ -56,7 +56,7 @@
         </div>
         <h3>{{ $t('mallTitle') }}</h3>
         <p>{{ isZh ? '套裝方案、淨水系統與生活選品，線上選購後由專人安排安裝與服務。' : 'Packages, the water system and everyday products, ordered online and installed and serviced by our team.' }}</p>
-        <a :href="shopUrl" target="_blank" rel="noopener" class="eco-link" data-track="ecosystem:store">{{ isZh ? '前往安購商城' : 'Open the enGo Store' }} →</a>
+        <a :href="SHOP_URL" target="_blank" rel="noopener" class="eco-link" data-track="ecosystem:store">{{ isZh ? '前往安購商城' : 'Open the enGo Store' }} →</a>
       </article>
     </div>
 
@@ -96,7 +96,7 @@
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '../composables/useScrollReveal'
-import { shopUrl } from '@/utils/shopUrl'
+import { SHOP_URL } from '@/utils/shopUrl'
 
 const LINES = [
   { to: '/product', zh: 'enGo AI 智慧中控系統', en: 'enGo AI home control', zhBody: '牆掛平板、手機 App 與雲端服務，家與社區同一套系統。', enBody: 'Wall tablet, phone app and cloud service, one system for the home and the community.' },
@@ -121,7 +121,7 @@ export default defineComponent({
     const { locale } = useI18n()
     useScrollReveal('.fade-in', 'visible')
     const isZh = computed(() => locale.value.startsWith('zh'))
-    return { isZh, shopUrl, lines: LINES, partners: PARTNERS }
+    return { isZh, SHOP_URL, lines: LINES, partners: PARTNERS }
   }
 })
 </script>

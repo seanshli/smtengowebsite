@@ -105,14 +105,14 @@ describe('page templates carry no template tells', () => {
         }
         expect(tpl).not.toMatch(/:placeholder="`\$\{\$t\('name'\)/)
     })
-    it('every store link goes through utils/shopUrl (Sean 2026-09-27: new platform front page, auto-switch once live)', () => {
+    it('every store link goes through utils/shopUrl (Sean 2026-09-27: new storefront shoph5.smtengo.com, front page only)', () => {
         const layout = readdirSync(resolve(__dirname, '../layout')).map((f) => readFileSync(resolve(__dirname, '../layout', f), 'utf-8'))
         for (const src of [...layout, ...pages.map((f) => readFileSync(resolve(views, f), 'utf-8'))]) {
             expect(src).not.toMatch(/h5\.smtengo\.com|smtengoh5\.com/)
         }
         const mod = readFileSync(resolve(__dirname, 'shopUrl.ts'), 'utf-8')
-        expect(mod).toContain("SHOP_NEXT_URL = 'https://www.smtengoh5.com/'")
-        expect(mod).toMatch(/mode: 'no-cors'/)
+        expect(mod).toContain("SHOP_URL = 'https://shoph5.smtengo.com/'")
+        expect(mod).not.toMatch(/smtengoh5|h5\.smtengo\.com\/pages/)
         expect(templateOf('packages.vue')).not.toMatch(/product-reviews|submitReview/)
     })
     it('home never renders the shared case illustration as proof', () => {

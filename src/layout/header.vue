@@ -165,7 +165,7 @@ export default defineComponent({
       changeLocale(lang)
     }
 
-    // 安購商城: front page of the store (see utils/shopUrl for the platform switch)
+    // 安購商城: front page of the new storefront (utils/shopUrl)
     const toMall = () => {
       openShop()
     }
