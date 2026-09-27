@@ -61,7 +61,7 @@
     </div>
 
     <!-- Four product lines -->
-    <h2 class="eco-h2 fade-in">{{ isZh ? '四條產品線' : 'Four product lines' }}</h2>
+    <h2 class="eco-h2 fade-in">{{ isZh ? '五條產品線' : 'Five product lines' }}</h2>
     <ul class="eco-lines">
       <li v-for="l in lines" :key="l.to" class="eco-line fade-in">
         <router-link :to="l.to" class="eco-line-link">
@@ -102,7 +102,8 @@ const LINES = [
   { to: '/product', zh: 'enGo AI 智慧中控系統', en: 'enGo AI home control', zhBody: '牆掛平板、手機 App 與雲端服務，家與社區同一套系統。', enBody: 'Wall tablet, phone app and cloud service, one system for the home and the community.' },
   { to: '/product?jump=oxygen', zh: '水維氧 AI 智慧淨水系統', en: 'AI water purification', zhBody: '三道濾心、濾芯壽命與 TDS 監測，在平板與 App 上看得見。', enBody: 'Three-stage filtration with filter life and TDS readings on the tablet and the app.' },
   { to: '/enviro', zh: '智慧環控', en: 'Environmental control', zhBody: '陽光控溫、空氣淨化監測、智慧水務與廚房安全。', enBody: 'Daylight and temperature, air quality, water and kitchen safety.' },
-  { to: '/packages', zh: '套裝方案', en: 'Packages', zhBody: '基礎、進階、豪華三種組合，依坪數與需求選配。', enBody: 'Three bundles, sized to the home and what it needs.' }
+  { to: '/packages', zh: '套裝方案', en: 'Packages', zhBody: '基礎、進階、豪華三種組合，依坪數與需求選配。', enBody: 'Three bundles, sized to the home and what it needs.' },
+  { to: '/product#shop', zh: '智管家商城', en: 'enGo Store', zhBody: '社區訂閱與鄰里市集，生鮮、日用與智慧家居送到家門口。', enBody: 'Community subscriptions and a neighbourhood marketplace, delivered to your door.' }
 ]
 
 // Same list the chatbot and FAQ 27 already give out; no component vendors.

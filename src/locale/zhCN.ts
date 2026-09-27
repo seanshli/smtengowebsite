@@ -3,7 +3,7 @@ export const zhCNLocale = {
   homeTitle: '首页',
   aboutTitle: '关于enGo',
   productTitle: 'enGo产品',
-  mallTitle: '安购商城',
+  mallTitle: '智管家商城',
   contactTitle: '联络我们',
   contactOnLine: '用 LINE 联系我们',
   tutorialTitle: '使用教学',
@@ -529,6 +529,20 @@ export const zhCNLocale = {
         name: 'Li Hua',
         comment: '水质明显改善了，锶水喝起来甜甜的。'
       }
+    },
+    shop: {
+      title: '智管家商城',
+      lede: '社区订阅与邻里市集，送到您家门口。向社区信赖的商家订购生鲜、日用与智慧家居，商品送达社区大厅后，系统会通知您取货。',
+      points: {
+        p1: { title: '邻里市集', body: '社区信赖的商家上架生鲜、日用品、保健食品与智慧家居配件；搜索或浏览后加入购物车结账，社区内配送。' },
+        p2: { title: '订阅方案', body: '银卡、金卡、白金卡三种方案：每周生鲜直送、每月日用补给、全站专属折扣，可随时暂停或变更，没有绑约。' },
+        p3: { title: '通知在 enGo App', body: '订单、优惠与配送进度以「商城消息」与「商城快递」推播到 enGo App 的讯息页；购物本身在商城网站进行。' }
+      },
+      note: '智管家商城是原「安购商城」的新版本：同一个商城、新的平台与名称。商城订单、退换货与物流问题请洽商城客服。',
+      cta: '前往智管家商城',
+      ctaPlans: '看订阅方案',
+      alt: '智管家商城首页',
+      caption: '智管家商城 shoph5.smtengo.com，2026 年 9 月上线的新版商城。'
     },
     packages: {
       tag: '套装方案',
