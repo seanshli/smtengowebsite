@@ -818,5 +818,25 @@
       "ja": "3点をお知らせください：① **アプリのバージョン**と**バックエンドのバージョン**（設定画面の下部。どちら側の問題か判断するため両方必要です）② 問題のある機器の名前と部屋 ③ 発生時刻と、その時ネットワークに接続されていたか。\n\n機器をタップしても反応しない場合は、ホーム画面でオンライン表示かオフライン表示かもお知らせください。\n\n参考：[設定とアカウント](/tutorial#howto-settings)、[お問い合わせ](/contact)",
       "es": "Tres cosas: ① la **versión de la app** y la **versión del backend** (al final de Ajustes; soporte necesita ambas para saber de qué lado está el problema) ② el nombre del dispositivo afectado y su habitación ③ cuándo ocurrió y si tenías internet en ese momento.\n\nSi un dispositivo no responde al pulsarlo, indica también si la pantalla de inicio lo muestra en línea o sin conexión.\n\nVer también: [Ajustes y cuenta](/tutorial#howto-settings), [Contacto](/contact)"
     }
+  },
+  {
+    "id": 55,
+    "category": "products",
+    "question": {
+      "zh": "「智管家商城」和我以前用的「安購商城」是同一家嗎？",
+      "zhCN": "「智管家商城」和我以前用的「安购商城」是同一家吗？",
+      "en": "Is the new 智管家商城 store the same as the 安購商城 I used before?",
+      "fr": "La nouvelle boutique 智管家商城 est-elle la même que 安購商城 ?",
+      "ja": "新しい「智管家商城」は、以前の「安購商城」と同じお店ですか？",
+      "es": "¿La tienda 智管家商城 es la misma que 安購商城?"
+    },
+    "answer": {
+      "zh": "**是同一家，同一個商城的新版本。** 就像 App 從 enGo1 升級到 enGo3 一樣，商城也換成新版，網址是 [shoph5.smtengo.com](https://shoph5.smtengo.com/)，名稱顯示為「智管家商城」。\n\n不是換公司、也不是不同的店，您原本的會員與訂單都是同一邊的。舊網址已不是現行入口，請改用上面這個。\n\n商城本身的訂單、退換貨與物流問題，請直接洽商城客服。",
+      "zhCN": "**是同一家，同一个商城的新版本。** 就像 App 从 enGo1 升级到 enGo3 一样，商城也换成新版，网址是 [shoph5.smtengo.com](https://shoph5.smtengo.com/)，名称显示为「智管家商城」。\n\n不是换公司、也不是不同的店，您原本的会员与订单都是同一边的。旧网址已不是现行入口，请改用上面这个。\n\n商城本身的订单、退换货与物流问题，请直接洽商城客服。",
+      "en": "**Same company, same store, just a newer version.** Exactly like the app going from enGo1 to enGo3, the store moved to a new build at [shoph5.smtengo.com](https://shoph5.smtengo.com/), shown as 智管家商城.\n\nIt is not a different company or a different shop: your membership and past orders are on the same side. The old address is no longer the entry point, so please use the one above.\n\nFor order, return and delivery questions, contact the store's own support.",
+      "fr": "**Même société, même boutique, simplement une nouvelle version.** Comme l'application passée de enGo1 à enGo3, la boutique a migré vers [shoph5.smtengo.com](https://shoph5.smtengo.com/), affichée sous le nom 智管家商城.\n\nCe n'est ni une autre société ni une autre boutique : votre compte et vos commandes sont inchangés. L'ancienne adresse n'est plus le point d'entrée.\n\nPour les commandes, retours et livraisons, contactez le service client de la boutique.",
+      "ja": "**同じ会社の、同じストアの新しいバージョンです。** アプリが enGo1 から enGo3 になったのと同じで、ストアも [shoph5.smtengo.com](https://shoph5.smtengo.com/) に移り、「智管家商城」と表示されます。\n\n別会社でも別店舗でもなく、会員情報とこれまでのご注文はそのままです。旧アドレスは現在の入口ではありません。\n\nご注文・返品・配送については、ストアのサポートへ直接お問い合わせください。",
+      "es": "**La misma empresa y la misma tienda, solo una versión más reciente.** Igual que la app pasó de enGo1 a enGo3, la tienda se trasladó a [shoph5.smtengo.com](https://shoph5.smtengo.com/), mostrada como 智管家商城.\n\nNo es otra empresa ni otra tienda: su cuenta y sus pedidos siguen siendo los mismos. La dirección antigua ya no es el acceso.\n\nPara pedidos, devoluciones y envíos, contacte con el soporte de la tienda."
+    }
   }
 ]

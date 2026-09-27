@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest'
+import { SHOP_URL } from './shopUrl'
 import kb from '../data/knowledge_base.json'
 import faqs from '../data/faqs.json'
 import news from '../data/news.json'
@@ -210,7 +211,13 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
           // 錨點（/tutorial#howto-scene）是既有做法——header/footer 的「常見問題」就是
           // /tutorial#faq。比對路由時先去掉 #fragment，否則每加一個深連結就會誤判。
           const path = href.split('#')[0] || href
-          const ok = routes.includes(path) || /^https:\/\/(www\.)?youtube\.com\//.test(href)
+          // 外部連結只准兩個去處：我們自己的 YouTube 頻道，以及自家商城。
+          // 商城網址一律取自 SHOP_URL 這個唯一來源——2026-09-27 商城換站
+          // （h5.smtengo.com → shoph5.smtengo.com）時，硬編在測試裡的網址
+          // 會變成第二個真相，改一邊漏一邊。
+          const ok = routes.includes(path)
+            || /^https:\/\/(www\.)?youtube\.com\//.test(href)
+            || href === SHOP_URL
           expect(ok, `#${f.id} ${loc} links to ${href}`).toBe(true)
         }
       }
