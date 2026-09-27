@@ -99,8 +99,8 @@ export function jsonLdFor(route, lang) {
       name: 'enGo智慧管家', alternateName: 'enGo HMS',
       operatingSystem: 'iOS, Android', applicationCategory: 'LifestyleApplication',
       description: L === 'en'
-        ? 'Companion app for the enGo home management system: device control, scenes, floor plan and community services on iPhone, iPad and Android. Listed on both stores as enGo智慧管家.'
-        : 'enGo AI智慧中控系統的手機 App：家電控制、情境、平面圖與社區服務，iPhone、iPad 與 Android 皆可用，商店名稱為 enGo智慧管家。',
+        ? 'Companion app for the enGo home management system: device control, scenes, device data and community services on iPhone, iPad and Android. Listed on both stores as enGo智慧管家.'
+        : 'enGo AI智慧中控系統的手機 App：家電控制、情境、設備數據與社區服務，iPhone、iPad 與 Android 皆可用，商店名稱為 enGo智慧管家。',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'TWD' },
       installUrl: ['https://apps.apple.com/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android'],
       publisher: { '@type': 'Organization', name: '智管家科技股份有限公司', url: BASE },

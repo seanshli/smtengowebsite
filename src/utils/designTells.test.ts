@@ -68,6 +68,8 @@ describe('page templates carry no template tells', () => {
         expect(t).toContain('/images/screens/01-home-tablet.png')
         expect(t).toContain('/images/screens/10-scenes-tablet.png')
         expect(t).not.toMatch(/07-home-phone|hm-phone/)
+        expect(t).toContain('/images/howto/devicedata/01-power.png')   // the bento's data cell shows a real 3.2.2 phone screen
+        expect(t).not.toMatch(/03-floorplan/)                            // the floor plan is not in 3.2.2 (開發中)
         expect(t).toContain('to="/contact"')
         expect(t).toContain('to="/product"')
         expect(t).toContain('to="/cases"')
