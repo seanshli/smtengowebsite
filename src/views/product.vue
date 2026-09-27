@@ -972,6 +972,7 @@
 </template>
 <script lang="ts">
 import { useIntersectionObserver } from '@vueuse/core'
+import { openShop } from '@/utils/shopUrl'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -1110,7 +1111,7 @@ export default defineComponent({
         price_twd: 18000,
         locale: locale.value
       })
-      window.open('https://h5.smtengo.com/pages/item/espier-detail?id=428&dtid=0')
+      openShop()
     }
 
 const targetExpand = ref(false)

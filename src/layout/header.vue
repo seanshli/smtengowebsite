@@ -118,6 +118,7 @@
 import { defineComponent, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { changeLocale, type LanguageType, i18n } from '../main'
+import { openShop } from '@/utils/shopUrl'
 
 export default defineComponent({
   name: 'Header',
@@ -164,8 +165,9 @@ export default defineComponent({
       changeLocale(lang)
     }
 
+    // 安購商城: front page of the store (see utils/shopUrl for the platform switch)
     const toMall = () => {
-      window.open('https://h5.smtengo.com')
+      openShop()
     }
 
     return {

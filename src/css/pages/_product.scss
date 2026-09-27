@@ -1352,39 +1352,6 @@ body {
     }
 }
 
-.product-reviews {
-    .review-item {
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: translateX(10px);
-
-            @media (max-width: 1024px) {
-                transform: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            padding: 16px;
-        }
-    }
-
-    .add-review {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-
-        @media (max-width: 768px) {
-            padding: 24px 16px;
-            max-width: 100%;
-
-            h3 {
-                font-size: 1.25rem;
-            }
-        }
-    }
-}
-
 // --- editorial motion keyframes (CSS side; scripted reveals live in useEditorialMotion) ---
 @keyframes heroSettle {
     from { transform: scale(1.06); }
