@@ -25,7 +25,7 @@ const EN_PREFIX = '/en'
 // route -> { zh: [title, desc], en: [title, desc] }
 const ROUTES = {
   '/': {
-    zh: ['enGo智管家 - 智慧家居第一品牌', 'enGo理家，蝦咪攏嗯驚！智管家用 AI 技術整合雲端倉儲、聯網設備管理與生活採購，打造一站式整合智慧平台。'],
+    zh: ['enGo智管家 - 智慧家居第一品牌', 'enGo 是住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務，管理家中照明、空調、窗簾與感測器，以及社區公告、報修、公設預約；智管家商城提供社區訂閱與鄰里市集。'],
     en: ['enGo Smart Home: AI for Sunlight, Air, Water & Food', 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.']
   },
   '/core': {
@@ -53,12 +53,12 @@ const ROUTES = {
     en: ['Our Vision | enGo Smart Home', 'Cloud storage, connected devices and everyday purchasing on a single platform for the smart home.']
   },
   '/ecosystem': {
-    zh: ['智慧生態系 | enGo AIoT 整合平台', '探索 enGo 智慧生態系，從 AI 中控、智慧淨水到空氣清淨，串連家中每一個智慧裝置。'],
-    en: ['Smart Ecosystem | The enGo AIoT Platform', 'From the AI hub to water purification and air quality, every device in your home, connected.']
+    zh: ['智慧生態系 | enGo AIoT 整合平台', '探索 enGo 智慧生態系：牆掛平板、手機 App 與智管家商城三個入口，五條產品線與合作夥伴，串連家中每一個智慧裝置。'],
+    en: ['Smart Ecosystem | The enGo AIoT Platform', 'The wall tablet, the phone app and the enGo Store as three doors into one system, five product lines, and the partners behind them.']
   },
   '/product': {
-    zh: ['產品介紹 | enGo AI智慧中控系統 & 淨水系統', '探索 enGo AI智慧中控平板與水維氧智慧淨水系統，提升家居舒適度與安全性。'],
-    en: ['Products | enGo AI Control Hub & Water System', 'The enGo AI control tablet and the Shui Wei Yang smart water system, for a safer and more comfortable home.']
+    zh: ['產品介紹 | enGo AI智慧中控系統、淨水系統與智管家商城', '探索 enGo AI智慧中控平板、水維氧智慧淨水系統與智慧環控，以及智管家商城的社區訂閱與鄰里市集。'],
+    en: ['Products | enGo AI Hub, Water System & enGo Store', 'The enGo AI control tablet, the Shui Wei Yang smart water system, environmental control, and the enGo Store for community subscriptions and a neighbourhood marketplace.']
   },
   '/packages': {
     zh: ['套裝方案 | enGo智管家 - 智慧家居第一品牌', '挑選最適合您的智慧家庭套裝方案，提升家居舒適度與安全性。'],
@@ -104,6 +104,19 @@ export function jsonLdFor(route, lang) {
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'TWD' },
       installUrl: ['https://apps.apple.com/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android'],
       publisher: { '@type': 'Organization', name: '智管家科技股份有限公司', url: BASE },
+    })
+    // 智管家商城: the fifth product line (2026-09-27). Its own site, so it is an
+    // OnlineStore entity owned by the company, not a Product sold on this site.
+    blocks.push({
+      '@context': 'https://schema.org', '@type': 'OnlineStore',
+      name: '智管家商城', alternateName: ['enGo Store', '安購商城'],
+      url: 'https://shoph5.smtengo.com/',
+      description: L === 'en'
+        ? 'Community subscriptions and a neighbourhood marketplace for enGo residents: fresh food, daily essentials and smart-home add-ons, delivered to the community lobby. The new version of the former 安購商城.'
+        : '給 enGo 社區住戶的社區訂閱與鄰里市集：生鮮、日用與智慧家居配件，送到社區大廳。原「安購商城」的新版本。',
+      areaServed: 'TW', inLanguage: 'zh-Hant',
+      parentOrganization: { '@type': 'Organization', name: '智管家科技股份有限公司', url: BASE },
+      sameAs: [`${BASE}${prefix}/product#shop`],
     })
   }
   if (route === '/tutorial') {
