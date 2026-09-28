@@ -1,0 +1,14 @@
+{
+  "name": "enGo智管家",
+  "short_name": "enGo",
+  "description": "住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務。",
+  "start_url": "/",
+  "display": "browser",
+  "lang": "zh-Hant",
+  "background_color": "#F5F7FA",
+  "theme_color": "#152939",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
