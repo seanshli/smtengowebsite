@@ -32,6 +32,22 @@ describe('AI-SEO entry points exist', () => {
         expect(t).toContain('tw.smtengo.engohome.android')
         expect(t).not.toMatch(/Tuya|塗鴉|Alexa/)
     })
+    it('the shell head carries icons, manifest, theme-color and explicit robots directives (Meta / Google readiness 2026-09-28)', () => {
+        const html = readFileSync(resolve(process.cwd(), 'index.html'), 'utf-8')
+        expect(html).toMatch(/<link rel="apple-touch-icon" sizes="180x180" href="\/apple-touch-icon\.png"/)
+        expect(html).toMatch(/<link rel="manifest" href="\/site\.webmanifest"/)
+        expect(html).toMatch(/<meta name="theme-color" content="#152939"/)
+        expect(html).toMatch(/<meta name="robots" content="index, follow, max-image-preview:large/)
+        expect(html).toMatch(/og:image:width" content="1200"/)
+        expect(html).toMatch(/twitter:card" content="summary_large_image"/)
+        expect(html).toMatch(/GTM-PBH3CKR5/)
+        expect(html).toMatch(/gtag\('consent', 'default'/)
+        for (const f of ['apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'favicon-32.png', 'site.webmanifest', 'og-image-1200x630.jpg', 'logo.png']) {
+            expect(existsSync(resolve(pub, f)), f).toBe(true)
+        }
+        const manifest = JSON.parse(readFileSync(resolve(pub, 'site.webmanifest'), 'utf-8'))
+        expect(manifest.icons.map((i: any) => i.sizes)).toEqual(['192x192', '512x512'])
+    })
     it('robots.txt welcomes AI crawlers and hides admin + api', () => {
         const r = readFileSync(resolve(pub, 'robots.txt'), 'utf-8')
         for (const bot of ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended']) expect(r).toContain(`User-agent: ${bot}`)
