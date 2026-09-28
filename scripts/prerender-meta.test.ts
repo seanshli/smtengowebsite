@@ -42,10 +42,23 @@ describe('prerender structured data (AI-SEO)', () => {
     }
     expect(jsonLdFor('/cases', 'zh')).toEqual([])
   })
+  it('智管家商城 appears as an OnlineStore on / and /product (own site, owned by the company), and the product meta names it', () => {
+    for (const route of ['/', '/product']) for (const lang of ['zh', 'en']) {
+      const store = jsonLdFor(route, lang).find((b: any) => b['@type'] === 'OnlineStore') as any
+      expect(store.url).toBe('https://shoph5.smtengo.com/')
+      expect(store.name).toBe('智管家商城')
+      expect(store.parentOrganization.name).toBe('智管家科技股份有限公司')
+      expect(store.description).not.toMatch(/合併|轉移|收購/)
+    }
+    expect(jsonLdFor('/cases', 'zh').find((b: any) => b['@type'] === 'OnlineStore')).toBeUndefined()
+    const html = buildHtml(TEMPLATE, '/product', 'zh')
+    expect(html).toMatch(/<title>[^<]*智管家商城/)
+    expect(count(html, /"@type":"OnlineStore"/g)).toBe(1)
+  })
   it('the postbuild pass does not duplicate structured data', () => {
     const first = buildHtml(TEMPLATE, '/tutorial', 'zh')
     const second = buildHtml(first, '/', 'zh')
-    expect(count(second, /data-prerender/g)).toBe(1)   // only the home page's MobileApplication
+    expect(count(second, /data-prerender/g)).toBe(2)   // only the home page's MobileApplication + OnlineStore
     expect(second).not.toContain('FAQPage')
   })
 })
