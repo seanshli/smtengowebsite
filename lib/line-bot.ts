@@ -2,9 +2,16 @@
 // tested with fake reply/log functions. api/line/webhook.ts only verifies the
 // signature and wires the real LINE API and Supabase in.
 
-import knowledgeBase from '../src/data/knowledge_base.json'
+import { createRequire } from 'node:module'
 import { composeAnswer, type AnswerStrings } from './chatbot-answer.js'
 import { detectLocale, toLineText, type LineLocale } from './line.js'
+
+// Vercel runs api/ as native ESM on Node 20, where a bare JSON import needs an
+// import attribute and crashes the function at load. require() through
+// createRequire works in that runtime, in vitest, and is still traced into the
+// bundle because the path is a literal.
+const require = createRequire(import.meta.url)
+const knowledgeBase: Record<string, any[]> = require('../src/data/knowledge_base.json')
 
 /** Same wording as the website chatbot (src/locale/*.ts → chatbot.*). */
 export const LINE_STRINGS: Record<LineLocale, AnswerStrings & { welcome: string; group_hint: string }> = {
