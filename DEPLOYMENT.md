@@ -31,7 +31,7 @@ value. Add those two to `.env.local` by hand from the Vercel dashboard.
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` | `api/contact.ts` (nodemailer) | contact-form notification mail |
 | `NOTIFICATION_EMAIL` | `api/contact.ts` | recipient of contact notifications |
 | `LINE_CHANNEL_SECRET` | `api/line/webhook.ts` (signature check) | **sensitive**; from LINE Developers → channel Basic settings |
-| `LINE_CHANNEL_ACCESS_TOKEN` | `api/line/webhook.ts` (reply API) | **sensitive**; long-lived token from the Messaging API tab. Both missing → endpoint answers 503 |
+| `LINE_CHANNEL_ACCESS_TOKEN` | `api/line/webhook.ts` (reply API) | **sensitive**; long-lived token from the Messaging API tab. Both missing → endpoint answers 503 Lowercase spellings (`line_channel_secret` / `line_channel_access_token`) are accepted too, because Vercel cannot rename a sensitive variable once created |
 
 The browser bundle contains **no** Supabase client and no keys; everything above is read only inside
 `api/` at request time.

@@ -40,8 +40,10 @@ const logQuery = async (keyword: string, locale: string, matchFound: boolean) =>
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    const secret = process.env.LINE_CHANNEL_SECRET || ''
-    const token = process.env.LINE_CHANNEL_ACCESS_TOKEN || ''
+    // Vercel stores "sensitive" variables under the exact name typed in and will
+    // not rename them afterwards, so accept the lowercase spelling as well.
+    const secret = process.env.LINE_CHANNEL_SECRET || process.env.line_channel_secret || ''
+    const token = process.env.LINE_CHANNEL_ACCESS_TOKEN || process.env.line_channel_access_token || ''
     const configured = secret.length > 0 && token.length > 0
 
     // Health check for deploy verification; says whether the secrets are in place
