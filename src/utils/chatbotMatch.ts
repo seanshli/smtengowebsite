@@ -27,6 +27,10 @@ export const SYNONYMS: Record<string, string[]> = {
   '加好友': ['line', 'add'],
   '加line': ['line', 'add', '好友'],
   '加入line': ['line'],
+  // Shop (KB-001 A.15) — 「商城在哪」 must reach the store entry, not the office address
+  '商城在哪': ['智管家商城', '商城網址', '安購商城', '線上購物', '買東西', '網購', '商城', '購物'],
+  '商城哪裡': ['智管家商城', '商城網址', '安購商城', '線上購物', '買東西', '網購', '商城', '購物'],
+  '哪裡買': ['智管家商城', '商城網址', '安購商城', '線上購物', '買東西', '網購', '商城', '購物'],
   // Product discovery
   '買什麼': ['product', 'packages'],
   '有什麼產品': ['product', 'catalog'],

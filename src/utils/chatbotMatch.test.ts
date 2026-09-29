@@ -34,6 +34,10 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['公設怎麼預約', 'howto-reservation'],
     ['公告在哪裡看', 'howto-community'],
     ['倉儲怎麼用', 'howto-warehouse'],
+    // KB-001 A.15 shop — 「在哪」 alone routes to the office address, so the store phrasings are pinned
+    ['商城在哪裡買', 'shop-platform'],
+    ['安購商城在哪裡', 'shop-platform'],
+    ['智管家商城是什麼', 'shop-platform'],
     ['App 主題怎麼改深色', 'howto-settings'],
     ['資料存在哪裡 會傳到國外嗎', 'data-privacy'],
     ['搬家要怎麼處理帳號', 'data-privacy'],
