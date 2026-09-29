@@ -30,6 +30,8 @@ value. Add those two to `.env.local` by hand from the Vercel dashboard.
 | `AUTH_SECRET` | `lib/session.ts` (signed admin session tokens) | **sensitive** |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` | `api/contact.ts` (nodemailer) | contact-form notification mail |
 | `NOTIFICATION_EMAIL` | `api/contact.ts` | recipient of contact notifications |
+| `LINE_CHANNEL_SECRET` | `api/line/webhook.ts` (signature check) | **sensitive**; from LINE Developers → channel Basic settings |
+| `LINE_CHANNEL_ACCESS_TOKEN` | `api/line/webhook.ts` (reply API) | **sensitive**; long-lived token from the Messaging API tab. Both missing → endpoint answers 503 |
 
 The browser bundle contains **no** Supabase client and no keys; everything above is read only inside
 `api/` at request time.
@@ -52,6 +54,7 @@ the bcrypt hash) and paste the hash into the `backend_members` row. Cost 10 matc
 |---|---|---|
 | `POST /api/contact` | store a contact submission, send SMTP notification | anon key + SMTP |
 | `POST /api/chatbot-query` | log chatbot questions for analytics | anon key |
+| `POST /api/line/webhook` | LINE official-account bot: answers from the chatbot knowledge base, logs to `chatbot_analytics` as `line-<lang>` | LINE channel secret + access token, anon key for the log |
 | `/api/admin/auth` | admin login → signed session cookie | service role + `AUTH_SECRET` |
 | `/api/admin/members`, `/profile`, `/submissions`, `/chatbot-analytics` | admin back office (`/admin` in the SPA) | service role, session-gated |
 
