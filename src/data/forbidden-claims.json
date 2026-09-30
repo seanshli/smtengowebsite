@@ -1,0 +1,184 @@
+{
+  "$comment": "ENGO-KB-001 §0.2「絕對不可說的話」的機器可讀版本。這是三個 surface（網站問答、LINE、後端語音知識庫）唯一的禁句來源：改禁句先改這一份，不要各自在程式碼裡硬寫。公開網址 https://www.smtengo.com/forbidden-claims.json 供後端取用。",
+  "version": "1.0.0",
+  "updated": "2026-09-30",
+  "source": "ENGO-KB-001-網站客服知識庫 §0.2",
+  "kinds": {
+    "banned_phrase": "這些字串不得出現在任何對外文字（答案、規格、說明、新聞標題）。keywords 不受限——那是路由用詞。",
+    "requires_denial": "提到這個主題時，同一段文字必須同時出現否定說法。禁的是宣稱，不是這個詞。"
+  },
+  "rules": [
+    {
+      "id": "siri-whole-home",
+      "kind": "banned_phrase",
+      "kb001": "§0.2 / §3",
+      "why": "enGo 的語音是牆掛平板內建，與 Siri 無關；HomeKit 是逐台分享不是整合",
+      "say_instead": "見 §3「可以接 Apple HomeKit／Google Home 嗎？」",
+      "ruling": "2026-09-11 專案查證",
+      "phrases": [
+        "嘿 Siri",
+        "嘿！Siri",
+        "Hey Siri",
+        "Dis Siri",
+        "一鍵控制全家",
+        "一句話就能控制全家"
+      ]
+    },
+    {
+      "id": "homekit-integrated",
+      "kind": "banned_phrase",
+      "kb001": "§0.2 / §3",
+      "why": "實際是把 Matter 網關下的裝置逐台分享，由對方平台直接控制，不經 enGo",
+      "say_instead": "「可把 Matter 網關下的裝置逐台分享給 HomeKit／Google Home」",
+      "ruling": "2026-09-11 專案查證",
+      "phrases": [
+        "已整合 Apple HomeKit",
+        "integrates with Apple HomeKit",
+        "已整合 HomeKit",
+        "透過 Matter 網關接入"
+      ]
+    },
+    {
+      "id": "alexa",
+      "kind": "requires_denial",
+      "kb001": "§0.2",
+      "why": "沒有 Alexa 整合。2026-09-30 查到 homekit-siri 把 alexa 收在 keywords 卻整段沒提，使用者問了等於沒被回答",
+      "say_instead": "明講「沒有 Alexa 整合」",
+      "ruling": "2026-09-11 專案查證",
+      "mention": "alexa",
+      "deny": "沒有 Alexa|没有 Alexa|no Alexa integration|Alexa との連携はありません|pas d'intégration Alexa|No hay integración con Alexa"
+    },
+    {
+      "id": "offline-blanket",
+      "kind": "banned_phrase",
+      "kb001": "§0.2 / §8",
+      "why": "窗簾、部分感測器與開關類、485 轉換器在同一家用網路下可離線控制，但情境一律不可、紅外遙控需連網、人不在家完全不可控",
+      "say_instead": "照 §8 分裝置類型回答，並主動補上「前提是人在家、同一家用網路內」",
+      "ruling": "2026-09-22 產品部實測",
+      "phrases": [
+        "離線時仍可運作",
+        "continue to work offline",
+        "無法完全支援",
+        "not yet fully supported"
+      ]
+    },
+    {
+      "id": "wake-word",
+      "kind": "banned_phrase",
+      "kb001": "§0.2 / §4",
+      "why": "喚醒詞目前未啟用，且喚醒方式仍在確認",
+      "say_instead": "「語音操作方式請洽專人說明，因機型設定而異」",
+      "ruling": "2026-08-29",
+      "phrases": [
+        "喚醒詞",
+        "wake word,"
+      ]
+    },
+    {
+      "id": "smart-lock",
+      "kind": "requires_denial",
+      "kb001": "§0.2 / §3",
+      "why": "現階段不支援門鎖",
+      "say_instead": "見 §3「可以控制門鎖嗎？」",
+      "ruling": "2026-09-09 產品裁決",
+      "mention": "門鎖",
+      "deny": "不在.*支援|不支援|不在支援範圍"
+    },
+    {
+      "id": "retired-features",
+      "kind": "banned_phrase",
+      "kb001": "§0.2",
+      "why": "App 內無食譜功能；音響系統與門鎖已於 2026-09 自產品頁、型錄與問答機器人移除",
+      "say_instead": "不提",
+      "ruling": "2026-09-10 ~ 09-15",
+      "phrases": [
+        "食譜",
+        "音響系統",
+        "門鎖及",
+        "locks, and water"
+      ]
+    },
+    {
+      "id": "vendor-names",
+      "kind": "banned_phrase",
+      "kb001": "§0.2",
+      "why": "對外文案一律不提零組件或平台供應商名稱",
+      "say_instead": "用裝置類型描述（「窗簾、感測器、開關類」）；485 轉換器對外用這個名字",
+      "ruling": "2026-09-15 產品裁決",
+      "phrases": [
+        "Tuya",
+        "TUYA",
+        "塗鴉",
+        "涂鸦"
+      ]
+    },
+    {
+      "id": "wrong-app-identity",
+      "kind": "banned_phrase",
+      "kb001": "§1",
+      "why": "com.engo.life / id6743929358（engo智管家）是另一支 App；我們是 tw.smtengo.engohome.* ，兩店均名為 enGo智慧管家",
+      "say_instead": "用正確的 App id 與名稱",
+      "ruling": "2026-09-15",
+      "phrases": [
+        "com.engo.life",
+        "id6743929358",
+        "engo智管家"
+      ]
+    },
+    {
+      "id": "discontinued-eap01",
+      "kind": "banned_phrase",
+      "kb001": "§3",
+      "why": "EAP-01 空氣清淨機已下架，對外文字不應留痕",
+      "say_instead": "不提",
+      "ruling": "2026-09-15",
+      "phrases": [
+        "EAP-01",
+        "EAP-T01",
+        "空氣清淨機",
+        "空气清净机",
+        "air purifier",
+        "Air Purifier"
+      ]
+    },
+    {
+      "id": "retired-ui-paths",
+      "kind": "banned_phrase",
+      "kb001": "§4 / §7",
+      "why": "3.2.2 的設定頁已無「語音助理」項目；情境建立第一步是選觸發方式不是命名",
+      "say_instead": "§4 與 §7 的現行步驟",
+      "ruling": "2026-09-22 實機（3.2.2+489）",
+      "phrases": [
+        "語音助理",
+        "语音助理",
+        "Voice Assistant",
+        "命名後儲存",
+        "命名后储存",
+        "選裝置、命名",
+        "选装置、命名"
+      ]
+    },
+    {
+      "id": "tablet-spec",
+      "kind": "banned_phrase",
+      "kb001": "UM-002",
+      "why": "型號與尺寸以 UM-002 出貨規格為準，舊文案的 T1／10.1吋不正確",
+      "say_instead": "見 ENGO-UM-002",
+      "ruling": "2026-09-16",
+      "phrases": [
+        "T1 平板",
+        "10.1吋"
+      ]
+    },
+    {
+      "id": "floorplan-available",
+      "kind": "requires_denial",
+      "kb001": "§0.2",
+      "why": "3.2.2（489）沒有平面圖（2026-09-25 實機連點四次＋程式碼查核 floorplan 0 檔）；首頁右上第一顆是版面切換",
+      "say_instead": "「平面圖即時視圖目前開發中，尚未提供；上線時程請洽專人」，不承諾日期",
+      "ruling": "2026-09-25 實機＋程式碼查核",
+      "mention": "平面圖|平面图|floor ?plan|フロアプラン|plan en direct|plano en vivo|vista de plano",
+      "deny": "開發中|开发中|尚未提供|未提供|規劃中|规划中|in development|planned feature|not yet|開発中|計画中|prévue|en développement|prevista|en desarrollo"
+    }
+  ]
+}
