@@ -40,3 +40,4 @@ graphify-out/
 # 不進版控的理由：Vercel 每次 build 都會重產，repo 裡留一份只會在「改了 JSON
 # 但沒 build 就 commit」時悄悄分岔——而這個 repo 沒有 CI 會抓到。
 public/knowledge-base.md
+public/forbidden-claims.json

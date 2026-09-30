@@ -16,6 +16,11 @@ function knowledgeBase() {
     async buildStart() {
       const { generateKnowledgeMd } = await import('./scripts/gen-knowledge-md.mjs')
       generateKnowledgeMd()
+      // 禁句清單也對外提供：後端的語音知識庫在另一個 repo（engo-services-mesh），
+      // 沒辦法 import 這支檔，只能抓 https://www.smtengo.com/forbidden-claims.json。
+      // 從 src/data 複製而非另存一份，才不會又變成兩個真相。
+      const { copyFileSync } = await import('node:fs')
+      copyFileSync('src/data/forbidden-claims.json', 'public/forbidden-claims.json')
     }
   }
 }

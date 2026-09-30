@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { SHOP_URL } from './shopUrl'
 import kb from '../data/knowledge_base.json'
 import faqs from '../data/faqs.json'
+import forbidden from '../data/forbidden-claims.json'
 import news from '../data/news.json'
 import packages from '../data/packages.json'
 import { readFileSync, existsSync } from 'node:fs'
@@ -81,60 +82,32 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
       .join('\n')
   const newsText = (news as any[]).map((n) => [n.title, n.summary].flatMap((o) => Object.values(o ?? {})).join('\n')).join('\n')
   const text = [...Object.values(kb as any).flat(), ...(faqs as any[])].map(textOf).join('\n') + '\n' + newsText
-  const banned = [
-    '嘿 Siri', '嘿！Siri', 'Hey Siri', 'Hey Siri', 'Dis Siri',
-    '已整合 Apple HomeKit', 'integrates with Apple HomeKit',
-    '離線時仍可運作', 'continue to work offline',
-    '食譜', '音響系統', '門鎖及', 'locks, and water',
-    '喚醒詞', 'wake word,', 'T1 平板', '10.1吋',
-    // 2026-09-11 project-side verification: no Alexa integration exists; HomeKit is
-    // per-device Matter sharing, not "enGo integrates HomeKit"; scenes are fully
-    // online-only ("not fully supported" reads as "partly works").
-    // 'Alexa' 不列在這裡：KB-001 §0.2 要求的正確答法是「**沒有** Alexa 整合」，
-    // 整串禁字會連那句必要的否定一起擋掉。改用下面與「門鎖」同形的規則：
-    // 提到了就必須否定。禁的是宣稱，不是這個字。
-    '一鍵控制全家', '一句話就能控制全家', '透過 Matter 網關接入', '已整合 HomeKit',
-    '無法完全支援', 'not yet fully supported',
-    // 2026-09-15 owner ruling: no component/platform vendor names in customer text.
-    'Tuya', 'TUYA', '塗鴉', '涂鸦',
-    // 2026-09-15: com.engo.life / App Store id6743929358 ("engo智管家") is a different app;
-    // ours is tw.smtengo.engohome.android / id6680188565, named enGo智慧管家 on both stores.
-    'com.engo.life', 'id6743929358', 'engo智管家',
-    // 2026-09-15: EAP-01 air purifier discontinued — no trace in customer text
-    'EAP-01', 'EAP-T01', '空氣清淨機', '空气清净机', 'air purifier', 'Air Purifier',
-    // 2026-09-22 KB-001 A.7/A.8 (app 3.2.2+489): the Settings page no longer has a 語音助理 item,
-    // and scene creation starts with the trigger, not the name — both old scripts are retired.
-    '語音助理', '语音助理', 'Voice Assistant', '命名後儲存', '命名后储存', '選裝置、命名', '选装置、命名',
-  ]
+  // 禁句清單不再硬寫在這裡——三個 surface（網站問答、LINE、後端語音知識庫）
+  // 共用 src/data/forbidden-claims.json，並以 /forbidden-claims.json 對外提供。
+  // 改禁句改那一份，這裡只負責執行。來源：ENGO-KB-001 §0.2。
+  const rules = (forbidden as any).rules as Array<any>
+  const banned = rules.filter((r) => r.kind === 'banned_phrase').flatMap((r) => r.phrases as string[])
+
   for (const phrase of banned) {
     it(`does not contain "${phrase}"`, () => {
       expect(text.includes(phrase)).toBe(false)
     })
   }
-  it('every entry that mentions Alexa also denies the integration', () => {
-    // KB-001 §0.2：「支援 Alexa」是禁句，正解是明講沒有整合。
-    // 2026-09-30 查到的實況：homekit-siri 把 alexa 收在 keywords 裡（所以問得到），
-    // 答案卻整段沒提 Alexa —— 使用者問了得到 HomeKit 的答案，問題等於沒被回答。
-    const deny = /沒有 Alexa|没有 Alexa|no Alexa integration|Alexa との連携はありません|pas d'intégration Alexa|No hay integración con Alexa/i
-    const all = [...(kb as any).general, ...(kb as any).products, ...(kb as any).catalog]
-    for (const e of all) {
-      for (const loc of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) {
-        const t = e.answer?.[loc] ?? ''
-        if (/alexa/i.test(t)) expect(t, `${e.id}/${loc}`).toMatch(deny)
+  for (const rule of rules.filter((r: any) => r.kind === 'requires_denial')) {
+    it(`every entry that mentions ${rule.id} also carries the denial`, () => {
+      const mention = new RegExp(rule.mention, 'i')
+      const deny = new RegExp(rule.deny, 'i')
+      const all = [...(kb as any).general, ...(kb as any).products, ...(kb as any).catalog, ...(faqs as any[])]
+      for (const e of all) {
+        for (const loc of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) {
+          const t = e.answer?.[loc] ?? e.features?.[loc] ?? e.description?.[loc] ?? ''
+          if (typeof t === 'string' && mention.test(t)) {
+            expect(t, `${rule.id} · ${e.id ?? e.category}/${loc}`).toMatch(deny)
+          }
+        }
       }
-    }
-  })
-
-  it('every entry that says 門鎖 also says it is not supported', () => {
-    const all = [...(kb as any).general, ...(kb as any).products, ...(kb as any).catalog]
-    for (const e of all) {
-      const zh = e.answer?.zh ?? e.features?.zh ?? e.description?.zh ?? ''
-      if (zh.includes('門鎖')) expect(zh, e.id).toMatch(/不在.*支援|不支援|不在支援範圍/)
-    }
-    for (const f of faqs as any[]) {
-      if (f.answer.zh.includes('門鎖')) expect(f.answer.zh, String(f.id)).toMatch(/不在.*支援|不支援|不在支援範圍/)
-    }
-  })
+    })
+  }
   it('the offline answer follows KB-001 A.10 (2026-09-22 product test): 485 converter now works on the same home network, IR remote keys and scenes do not, and the at-home premise is stated', () => {
     const zh = (kb as any).general.find((e: any) => e.id === 'network-required').answer.zh as string
     expect(zh).toMatch(/窗簾、部分感測器與開關類/)
