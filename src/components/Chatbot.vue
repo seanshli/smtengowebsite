@@ -78,6 +78,7 @@ import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import knowledgeBase from '@/data/knowledge_base.json'
 import { normalizeQuery, expandQuery, rankKnowledge } from '@/utils/chatbotMatch'
+import { askShopKnowledge } from '../../lib/shop-knowledge'
 
 const isOpen = ref(false)
 const userQuery = ref('')
@@ -282,12 +283,22 @@ const handleSearch = () => {
         messages.value.push({ role: 'assistant', text: response })
       }
     } else {
-      response = t('chatbot.no_match')
-      messages.value.push({
-        role: 'assistant',
-        text: response,
-        type: 'handover'
-      })
+      // 本地沒命中先問商城：退貨、七日鑑賞期、運費、訂閱、付款的真相在 Shop，
+      // 我們這邊一個字都沒有。Shop 的 /api/knowledge/ask 是公開免金鑰、
+      // CORS 開放，正是為官網準備的（見 Shop/docs/KNOWLEDGE_API.md），
+      // 所以直接從瀏覽器問，不複製內容過來。
+      const placeholder = { role: 'assistant', text: t('chatbot.no_match'), type: 'handover' }
+      messages.value.push(placeholder as any)
+      askShopKnowledge(currentQuery, { locale: locale.value })
+        .then((shop) => {
+          if (!shop) return
+          placeholder.text = shop.text
+          placeholder.type = undefined as any
+          logQuery('shop:' + shop.slugs.join(','), true)
+          scrollToBottom()
+        })
+        .catch(() => { /* 問不到就維持原本的「找不到」，不影響對話 */ })
+      response = placeholder.text
     }
 
     logQuery(currentQuery, !!bestMatch)

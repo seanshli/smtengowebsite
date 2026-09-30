@@ -4,6 +4,7 @@
 
 import { createRequire } from 'node:module'
 import { composeAnswer, type AnswerStrings } from './chatbot-answer.js'
+import { askShopKnowledge } from './shop-knowledge.js'
 import { detectLocale, toLineText, type LineLocale } from './line.js'
 
 // Vercel runs api/ as native ESM on Node 20, where a bare JSON import needs an
@@ -101,18 +102,32 @@ export async function processLineEvents(events: LineEvent[], deps: BotDeps): Pro
       const locale = detectLocale(question)
       const strings = LINE_STRINGS[locale]
       const answer = composeAnswer(knowledgeBase as any, question, locale, strings)
-      const text = toLineText(answer.text, locale)
+
+      // 本地知識庫沒命中時改問商城：退貨、鑑賞期、運費、訂閱、付款這些
+      // 題目的真相在 Shop，我們這邊一個字都沒有（2026-09-30 實測全數落空）。
+      // 失敗回 null，維持原本的「找不到」回覆，不讓對話因為別的服務掛掉而中斷。
+      let shopSlugs: string[] | null = null
+      let replyText = answer.text
+      if (!answer.matched) {
+        const shop = await askShopKnowledge(question, { locale })
+        if (shop) {
+          replyText = shop.text
+          shopSlugs = shop.slugs
+        }
+      }
+      const text = toLineText(replyText, locale)
 
       await deps.reply(ev.replyToken!, [text])
       if (deps.log) {
         try {
-          await deps.log(question.slice(0, 500), `line-${locale}`, answer.matched)
+          await deps.log(question.slice(0, 500), `line-${locale}`, answer.matched || !!shopSlugs)
           if (answer.matched && answer.id) await deps.log('kb:' + String(answer.id), `line-${locale}`, true)
+          if (shopSlugs) await deps.log('shop:' + shopSlugs.join(','), `line-${locale}`, true)
         } catch (err) {
           console.error('line log failed', err)
         }
       }
-      out.push({ event: 'message', locale, matched: answer.matched, id: answer.id, replied: true })
+      out.push({ event: 'message', locale, matched: answer.matched || !!shopSlugs, id: answer.id, shop: shopSlugs ?? undefined, replied: true })
     } catch (err) {
       console.error('line event failed', ev?.type, err)
       out.push({ event: ev?.type || 'unknown', replied: false })
