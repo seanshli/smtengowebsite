@@ -90,7 +90,10 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     // 2026-09-11 project-side verification: no Alexa integration exists; HomeKit is
     // per-device Matter sharing, not "enGo integrates HomeKit"; scenes are fully
     // online-only ("not fully supported" reads as "partly works").
-    'Alexa', '一鍵控制全家', '一句話就能控制全家', '透過 Matter 網關接入', '已整合 HomeKit',
+    // 'Alexa' 不列在這裡：KB-001 §0.2 要求的正確答法是「**沒有** Alexa 整合」，
+    // 整串禁字會連那句必要的否定一起擋掉。改用下面與「門鎖」同形的規則：
+    // 提到了就必須否定。禁的是宣稱，不是這個字。
+    '一鍵控制全家', '一句話就能控制全家', '透過 Matter 網關接入', '已整合 HomeKit',
     '無法完全支援', 'not yet fully supported',
     // 2026-09-15 owner ruling: no component/platform vendor names in customer text.
     'Tuya', 'TUYA', '塗鴉', '涂鸦',
@@ -108,6 +111,20 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
       expect(text.includes(phrase)).toBe(false)
     })
   }
+  it('every entry that mentions Alexa also denies the integration', () => {
+    // KB-001 §0.2：「支援 Alexa」是禁句，正解是明講沒有整合。
+    // 2026-09-30 查到的實況：homekit-siri 把 alexa 收在 keywords 裡（所以問得到），
+    // 答案卻整段沒提 Alexa —— 使用者問了得到 HomeKit 的答案，問題等於沒被回答。
+    const deny = /沒有 Alexa|没有 Alexa|no Alexa integration|Alexa との連携はありません|pas d'intégration Alexa|No hay integración con Alexa/i
+    const all = [...(kb as any).general, ...(kb as any).products, ...(kb as any).catalog]
+    for (const e of all) {
+      for (const loc of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) {
+        const t = e.answer?.[loc] ?? ''
+        if (/alexa/i.test(t)) expect(t, `${e.id}/${loc}`).toMatch(deny)
+      }
+    }
+  })
+
   it('every entry that says 門鎖 also says it is not supported', () => {
     const all = [...(kb as any).general, ...(kb as any).products, ...(kb as any).catalog]
     for (const e of all) {
