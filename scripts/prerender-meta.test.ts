@@ -16,15 +16,53 @@ const TEMPLATE = `<!doctype html>
   <meta name="twitter:title" content="x" />
   <meta name="twitter:image" content="x" />
 </head>
-<body></body>
+<body><div id="app"></div></body>
 </html>`
 
 const count = (html: string, re: RegExp) => (html.match(re) ?? []).length
 
+describe('prerender crawlable fallback content', () => {
+  it('zh /product shell has exactly one h1 and a nav to every route', () => {
+    const html = buildHtml(TEMPLATE, '/product', 'zh')
+    expect(count(html, /<h1>/g)).toBe(1)
+    expect(html).toContain('<h1>產品介紹</h1>')
+    expect(html).toContain('href="/tutorial"')
+    expect(html).toContain('<div id="app"><!--prerender:fallback-->')
+    expect(html).toContain('href="https://apps.apple.com/app/id6680188565"')
+    expect(html).toContain('href="https://shoph5.smtengo.com/"')
+    expect(html).toContain('href="/knowledge-base.md"')
+  })
+  it('en /product shell prefixes nav hrefs with /en and links the root as /en', () => {
+    const html = buildHtml(TEMPLATE, '/product', 'en')
+    expect(html).toContain('href="/en/tutorial"')
+    expect(html).toContain('<a href="/en">')
+    expect(html).not.toContain('href="/tutorial"')
+    expect(html).toContain('<h1>Products</h1>')
+  })
+  it('is idempotent: a second pass over a generated shell leaves one fallback block and one style', () => {
+    const first = buildHtml(TEMPLATE, '/product', 'zh')
+    const second = buildHtml(first, '/contact', 'en')
+    expect(count(second, /<!--prerender:fallback-->/g)).toBe(1)
+    expect(count(second, /<!--\/prerender:fallback-->/g)).toBe(1)
+    expect(count(second, /<style data-prerender>/g)).toBe(1)
+    expect(count(second, /<h1>/g)).toBe(1)
+    expect(second).toContain('<h1>Contact Us</h1>')
+    expect(second).not.toContain('<h1>產品介紹</h1>')
+  })
+  it('never mentions Tuya, 塗鴉 or Alexa', () => {
+    for (const lang of ['zh', 'en']) {
+      const html = buildHtml(TEMPLATE, '/', lang)
+      const block = html.slice(html.indexOf('<!--prerender:fallback-->'), html.indexOf('<!--/prerender:fallback-->'))
+      expect(block.length).toBeGreaterThan(100)
+      expect(block).not.toMatch(/Tuya|塗鴉|Alexa/i)
+    }
+  })
+})
+
 describe('prerender structured data (AI-SEO)', () => {
   it('/tutorial shells carry a FAQPage and a HowTo list, in the shell language', () => {
     const zh = buildHtml(TEMPLATE, '/tutorial', 'zh')
-    expect(count(zh, /data-prerender/g)).toBe(2)
+    expect(count(zh, /<script[^>]*data-prerender/g)).toBe(2)
     expect(zh).toContain('"@type":"FAQPage"')
     expect(zh).toContain('"@type":"HowTo"')
     expect(zh).toContain('#howto-device')
@@ -58,7 +96,7 @@ describe('prerender structured data (AI-SEO)', () => {
   it('the postbuild pass does not duplicate structured data', () => {
     const first = buildHtml(TEMPLATE, '/tutorial', 'zh')
     const second = buildHtml(first, '/', 'zh')
-    expect(count(second, /data-prerender/g)).toBe(2)   // only the home page's MobileApplication + OnlineStore
+    expect(count(second, /<script[^>]*data-prerender/g)).toBe(2)   // only the home page's MobileApplication + OnlineStore
     expect(second).not.toContain('FAQPage')
   })
 })
