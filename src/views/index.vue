@@ -14,10 +14,18 @@
           <div class="hm-cta-row">
             <router-link to="/contact" class="hm-btn hm-btn-primary" @click="trackCta('hero')">{{ T.cta }}</router-link>
             <router-link to="/product" class="hm-btn hm-btn-ghost">{{ T.seeProduct }}</router-link>
+            <a href="https://lin.ee/THIUSjW" class="hm-btn hm-btn-line" target="_blank" rel="noopener" data-track="home:line" @click="trackCta('line')">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.2 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.2 1c0 .3-.2 1.1 1 .6 1.2-.5 6.3-3.7 8.6-6.4C21.8 14 22 12.6 22 11c0-4.4-4.5-8-10-8Zm-3.6 10.4H6.3a.5.5 0 0 1-.5-.5V9a.5.5 0 1 1 1 0v3.4h1.6a.5.5 0 1 1 0 1Zm1.6-.5a.5.5 0 1 1-1 0V9a.5.5 0 1 1 1 0v3.9Zm4.4 0a.5.5 0 0 1-.9.3l-2-2.7v2.4a.5.5 0 1 1-1 0V9a.5.5 0 0 1 .9-.3l2 2.7V9a.5.5 0 1 1 1 0v3.9Zm3.3-2.4a.5.5 0 1 1 0 1h-1.6v1h1.6a.5.5 0 1 1 0 1h-2.1a.5.5 0 0 1-.5-.5V9a.5.5 0 0 1 .5-.5h2.1a.5.5 0 1 1 0 1h-1.6v1h1.6Z"/></svg>
+              {{ T.lineCta }}
+            </a>
           </div>
         </div>
 
         <figure class="hm-hero-figure" aria-label="enGo 牆掛平板與手機 App">
+          <div class="hm-hero-glow" aria-hidden="true"></div>
+          <ul class="hm-live" aria-hidden="true">
+            <li v-for="(c, i) in T.liveChips" :key="c" :style="{ '--i': i }"><i></i>{{ c }}</li>
+          </ul>
           <div class="hm-plate hm-plate-tablet" data-float>
             <img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="eager" fetchpriority="high" />
           </div>
@@ -29,6 +37,13 @@
         </figure>
       </div>
     </section>
+
+    <!-- ─── MARQUEE: everything the one tablet sees (device + community vocabulary from KB-001) -->
+    <div class="hm-marquee" aria-hidden="true">
+      <div class="hm-marquee-track">
+        <span v-for="n in 2" :key="n" class="hm-marquee-run"><span v-for="w in T.marquee" :key="w">{{ w }}<i>·</i></span></span>
+      </div>
+    </div>
 
     <!-- ─── THREE INTERFACES, ONE ACCOUNT (copy mirrors /product §2.3) ── -->
     <section id="interfaces" class="hm-interfaces">
@@ -60,6 +75,30 @@
           </div>
         </div>
         <p class="hm-if-note" data-reveal>{{ T.ifNote }}</p>
+      </div>
+    </section>
+
+    <!-- ─── A DAY WITH ENGO: four scenes from the 模型屋 demo home (names as on the real
+         場景 screen, 10-scenes-tablet.png). Scenes run by tap or by time/sensor (KB-001 §1);
+         nothing here claims a device the system does not control. -->
+    <section id="day" class="hm-day">
+      <div class="hm-wrap">
+        <header class="hm-head hm-head-row" data-reveal>
+          <div>
+            <h2 class="hm-h2">{{ T.dayTitle }}</h2>
+            <p class="hm-sub">{{ T.daySub }}</p>
+          </div>
+          <router-link to="/tutorial#howto-scene" class="hm-link">{{ T.dayLink }}</router-link>
+        </header>
+        <div class="hm-day-grid" data-reveal-group>
+          <router-link v-for="m in T.dayMoments" :key="m.time" to="/tutorial#howto-scene" :class="['hm-moment', 'hm-moment-' + m.kind]">
+            <span v-if="m.kind === 'morning' || m.kind === 'home'" class="hm-moment-sun" aria-hidden="true"></span>
+            <span class="hm-moment-time">{{ m.time }}</span>
+            <span class="hm-moment-name">{{ m.name }}</span>
+            <p class="hm-moment-body">{{ m.body }}</p>
+            <span class="hm-moment-chips"><span v-for="c in m.chips" :key="c">{{ c }}</span></span>
+          </router-link>
+        </div>
       </div>
     </section>
 
@@ -161,7 +200,10 @@
           <p class="hm-cta-sub">{{ T.ctaSub }}</p>
         </div>
         <div class="hm-cta-actions">
-          <router-link to="/contact" class="hm-btn hm-btn-light" @click="trackCta('band')">{{ T.cta }}</router-link>
+          <div class="hm-cta-btns">
+            <router-link to="/contact" class="hm-btn hm-btn-light" @click="trackCta('band')">{{ T.cta }}</router-link>
+            <a href="https://lin.ee/THIUSjW" class="hm-btn hm-btn-line" target="_blank" rel="noopener" data-track="home:line-band" @click="trackCta('line-band')">{{ T.lineCta }}</a>
+          </div>
           <span class="hm-cta-phone">02-27510218　{{ T.hours }}</span>
         </div>
       </div>
@@ -201,7 +243,18 @@ const trackCta = (location: string) => trackEvent('cta_click', { location, page:
 // zh, zhCN and en are written out; the other locales fall back to en.
 const COPY: Record<string, Record<string, any>> = {
   zh: {
-    cta: '預約體驗', seeProduct: '看產品介紹',
+    cta: '預約體驗', seeProduct: '看產品介紹', lineCta: 'LINE 詢問',
+    liveChips: ['早安模式', '用電趨勢', '社區公告'],
+    marquee: ['照明', '插座', '窗簾', '空調', '感測器', '攝影機', '情境', '設備數據', '社區公告', '報修', '公設預約', '包裹通知'],
+    dayTitle: '跟著 enGo 過一天',
+    daySub: '情境可以一鍵執行，也能依時間或感測器狀態自動觸發。這是示範住家的四個情境，名稱與內容都由您自己決定。',
+    dayLink: '看情境怎麼設定',
+    dayMoments: [
+      { kind: 'morning', time: '07:00', name: '早安模式', body: '依時間自動觸發，窗簾與燈光跟著你起床；今天的用電趨勢，平板和手機都看得到。', chips: ['窗簾', '照明', '用電趨勢'] },
+      { kind: 'away', time: '08:10', name: '離家模式', body: '一鍵等於關全部燈加關空調，出門不用再回頭檢查。', chips: ['全部燈', '空調', '感測器'] },
+      { kind: 'home', time: '18:40', name: '回家模式', body: '包裹到了、公告更新了，都在同一支 App；進門一鍵，燈先亮好。', chips: ['包裹通知', '社區公告', '照明'] },
+      { kind: 'night', time: '23:00', name: '晚安模式', body: '一鍵關燈。牆掛平板待機時變成相片牆，陪你到明天早上。', chips: ['照明', '待機相片牆', '牆掛平板'] },
+    ],
     altTablet: 'enGo 牆掛平板首頁，依房間分組的裝置卡片', altPhone: 'iPhone 上的 enGo智慧管家首頁，模型屋示範住家', altAnnounce: '手機上的社區公告',
     ifTitle: '三種介面，一組帳號',
     ifSub: '牆掛平板是家中的主控台；iPhone、iPad 與 Android 手機讓您在外遠端掌握。手機 App「enGo智慧管家」於 App Store 與 Google Play 免費下載。',
@@ -222,7 +275,18 @@ const COPY: Record<string, Record<string, any>> = {
     ctaTitle: '想看看您家會變成什麼樣子？', ctaSub: '留下聯繫資料，專人為您安排展示間體驗與規劃建議。', hours: '週一至週五 09:00-18:00',
   },
   zhCN: {
-    cta: '预约体验', seeProduct: '看产品介绍',
+    cta: '预约体验', seeProduct: '看产品介绍', lineCta: 'LINE 咨询',
+    liveChips: ['早安模式', '用电趋势', '社区公告'],
+    marquee: ['照明', '插座', '窗帘', '空调', '传感器', '摄像头', '情境', '设备数据', '社区公告', '报修', '公设预约', '包裹通知'],
+    dayTitle: '跟着 enGo 过一天',
+    daySub: '情境可以一键执行，也能依时间或传感器状态自动触发。这是示范住家的四个情境，名称与内容都由您自己决定。',
+    dayLink: '看情境怎么设定',
+    dayMoments: [
+      { kind: 'morning', time: '07:00', name: '早安模式', body: '依时间自动触发，窗帘与灯光跟着你起床；今天的用电趋势，平板和手机都看得到。', chips: ['窗帘', '照明', '用电趋势'] },
+      { kind: 'away', time: '08:10', name: '离家模式', body: '一键等于关全部灯加关空调，出门不用再回头检查。', chips: ['全部灯', '空调', '传感器'] },
+      { kind: 'home', time: '18:40', name: '回家模式', body: '包裹到了、公告更新了，都在同一个 App；进门一键，灯先亮好。', chips: ['包裹通知', '社区公告', '照明'] },
+      { kind: 'night', time: '23:00', name: '晚安模式', body: '一键关灯。壁挂平板待机时变成相片墙，陪你到明天早上。', chips: ['照明', '待机相片墙', '壁挂平板'] },
+    ],
     altTablet: 'enGo 壁挂平板首页，依房间分组的设备卡片', altPhone: 'iPhone 上的 enGo智慧管家首页，模型屋示范住家', altAnnounce: '手机上的社区公告',
     ifTitle: '三种界面，一组账号',
     ifSub: '壁挂平板是家中的主控台；iPhone、iPad 与 Android 手机让您在外远程掌握。手机 App「enGo智慧管家」于 App Store 与 Google Play 免费下载。',
@@ -243,7 +307,18 @@ const COPY: Record<string, Record<string, any>> = {
     ctaTitle: '想看看您家会变成什么样子？', ctaSub: '留下联系资料，专人为您安排展示间体验与规划建议。', hours: '周一至周五 09:00-18:00',
   },
   en: {
-    cta: 'Book a visit', seeProduct: 'See the product',
+    cta: 'Book a visit', seeProduct: 'See the product', lineCta: 'Ask on LINE',
+    liveChips: ['Good morning scene', 'Energy trend', 'Announcements'],
+    marquee: ['Lighting', 'Outlets', 'Curtains', 'Air conditioning', 'Sensors', 'Cameras', 'Scenes', 'Device data', 'Announcements', 'Repairs', 'Facility booking', 'Parcel notices'],
+    dayTitle: 'A day with enGo',
+    daySub: 'Scenes run with one tap, or trigger themselves by time or sensor state. These are the four scenes of the demo home; the names and what they do are yours to decide.',
+    dayLink: 'How scenes are set up',
+    dayMoments: [
+      { kind: 'morning', time: '07:00', name: 'Good morning', body: 'Fires by schedule: curtains and lights wake up with you, and today\'s energy trend is on the tablet and the phone.', chips: ['Curtains', 'Lighting', 'Energy trend'] },
+      { kind: 'away', time: '08:10', name: 'Away', body: 'One tap means all lights off and the AC off. No walking back to check.', chips: ['All lights', 'AC', 'Sensors'] },
+      { kind: 'home', time: '18:40', name: 'Home', body: 'A parcel arrived and a notice went up, both in the same app. One tap at the door and the lights are already on.', chips: ['Parcel notice', 'Announcements', 'Lighting'] },
+      { kind: 'night', time: '23:00', name: 'Good night', body: 'One tap, lights off. The wall tablet turns into a photo wall on standby until morning.', chips: ['Lighting', 'Photo wall', 'Wall tablet'] },
+    ],
     altTablet: 'enGo wall tablet home screen with device cards grouped by room', altPhone: 'enGo智慧管家 home screen on iPhone, Model Home demo household', altAnnounce: 'Community announcements on the phone',
     ifTitle: 'Three interfaces, one account',
     ifSub: 'The wall tablet is the control centre at home; iPhone, iPad and Android phones keep you in touch when you are out. The enGo HMS app is free on the App Store and Google Play, listed as enGo智慧管家.',
@@ -302,6 +377,8 @@ $navy-2: $grey-blue2;
 .hm-btn-primary { background: $brand-orange; color: #fff; box-shadow: 0 10px 30px rgba($brand-orange, .28); &:hover { background: darken($brand-orange, 6%); } }
 .hm-btn-ghost { color: $navy; border: 1.5px solid $navy; &:hover { background: rgba($navy, .06); } }
 .hm-btn-light { background: $warm-bg-light; color: $brand-orange-text; &:hover { background: #fff; } }
+// LINE's own green, used only on the LINE button (brand guideline colour, not a palette token).
+.hm-btn-line { gap: 8px; background: #06C755; color: #fff; box-shadow: 0 10px 30px rgba(6, 199, 85, .24); &:hover { background: #05B04B; } }
 
 // Device frames (Sean 2026-09-24): brushed titanium body + thin dark glass rim
 // around the screen, instead of the flat navy slab. Cool greys only (palette B).
@@ -345,7 +422,30 @@ $navy-2: $grey-blue2;
 }
 
 // ─── hero ────────────────────────────────────────────────────────
-.hm-hero { position: relative; overflow: hidden; padding: clamp(72px, 9vh, 104px) 0 clamp(40px, 6vw, 72px); }
+.hm-hero {
+  position: relative; overflow: hidden; padding: clamp(72px, 9vh, 104px) 0 clamp(40px, 6vw, 72px);
+  // Sunrise wash: a peach pool top-left, a signal-teal pool bottom-right, on the porcelain ground.
+  background:
+    radial-gradient(60% 55% at 6% 0%, rgba($orange2, .26), transparent 62%),
+    radial-gradient(48% 46% at 100% 96%, rgba($signal, .18), transparent 62%);
+}
+.hm-hero-glow {
+  position: absolute; left: 18%; right: -6%; top: 6%; bottom: 6%; pointer-events: none; z-index: 0;
+  background: radial-gradient(closest-side, rgba($signal, .26), rgba($orange2, .12) 55%, transparent 75%);
+  filter: blur(34px);
+}
+.hm-live {
+  list-style: none; margin: 0; padding: 0; position: absolute; right: -3%; top: -4%; z-index: 2;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+  li {
+    display: inline-flex; align-items: center; gap: 8px; background: #fff; color: $navy; font-weight: 700; font-size: .86rem;
+    padding: 8px 14px; border-radius: 999px; box-shadow: 0 10px 30px rgba($navy, .14);
+    animation: hmRise .7s cubic-bezier(.22,1,.36,1) calc(.9s + var(--i) * .16s) both;
+    &:nth-child(2) { margin-right: 28px; } &:nth-child(3) { margin-right: 8px; }
+    i { width: 8px; height: 8px; border-radius: 50%; background: $signal; animation: hmPulse 2.4s ease-out infinite; animation-delay: calc(var(--i) * .5s); }
+  }
+  @media (max-width: 900px) { display: none; }
+}
 .hm-grain {
   position: absolute; inset: 0; pointer-events: none; opacity: .05;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -369,9 +469,51 @@ $navy-2: $grey-blue2;
 
 .hm-hero-figure {
   position: relative; margin: 0; padding-bottom: 8%; animation: hmReveal 1s cubic-bezier(.22,1,.36,1) .4s both;
-  .hm-plate-tablet { width: 88%; margin-left: auto; }
-  .hm-iphone-hero { position: absolute; left: 0; bottom: -6%; width: 27%; }
+  .hm-plate-tablet { width: 88%; margin-left: auto; position: relative; z-index: 1; }
+  .hm-iphone-hero { position: absolute; left: 0; bottom: -6%; width: 27%; z-index: 1; }
   @media (max-width: 900px) { padding-top: 24px; margin-bottom: 30px; .hm-plate-tablet { width: 100%; } .hm-iphone-hero { display: none; } }
+}
+
+// ─── marquee ─────────────────────────────────────────────────────
+.hm-marquee { overflow: hidden; background: #fff; border-block: 1px solid #D8DFE8; padding: 14px 0; }
+.hm-marquee-track { display: flex; width: max-content; animation: hmMarquee 42s linear infinite; }
+.hm-marquee-run { display: flex; }
+.hm-marquee-run > span {
+  font-family: 'Noto Serif TC', serif; font-weight: 700; color: $navy; white-space: nowrap;
+  font-size: clamp(1rem, 1.5vw, 1.3rem); padding-inline: 10px;
+  i { font-style: normal; color: $brand-orange; margin-left: 20px; }
+}
+.hm-marquee:hover .hm-marquee-track { animation-play-state: paused; }
+
+// ─── a day with enGo ─────────────────────────────────────────────
+.hm-day { background: #fff; padding: clamp(56px, 8vw, 96px) 0; }
+.hm-day-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px;
+  @media (max-width: 900px) {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding-bottom: 10px;
+    margin-inline: calc(-1 * clamp(20px, 5vw, 64px)); padding-inline: clamp(20px, 5vw, 64px);
+    scrollbar-width: none; &::-webkit-scrollbar { display: none; }
+  }
+}
+.hm-moment {
+  position: relative; overflow: hidden; border-radius: 24px; padding: 26px 22px 22px; min-height: 340px;
+  display: flex; flex-direction: column; gap: 10px; color: $navy; text-decoration: none;
+  transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s;
+  &:hover { transform: translateY(-4px); box-shadow: $warm-shadow-hover; }
+  @media (max-width: 900px) { flex: 0 0 76vw; max-width: 340px; scroll-snap-align: start; }
+}
+.hm-moment-sun { position: absolute; right: -36px; top: -36px; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle, rgba($orange2, .6), rgba($orange2, 0) 70%); }
+.hm-moment-time { position: relative; font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: clamp(2.4rem, 3.6vw, 3.4rem); line-height: 1; letter-spacing: -.02em; }
+.hm-moment-name { position: relative; font-weight: 700; font-size: 1.15rem; }
+.hm-moment-body { position: relative; margin: 0; flex: 1; font-size: .95rem; line-height: 1.7; opacity: .86; }
+.hm-moment-chips { position: relative; display: flex; flex-wrap: wrap; gap: 6px; span { font-size: .78rem; font-weight: 700; padding: 5px 11px; border-radius: 999px; background: rgba(255, 255, 255, .7); } }
+.hm-moment-morning { background: linear-gradient(165deg, rgba($orange2, .36) 0%, rgba($orange2, .10) 55%, rgba($signal, .12) 100%), $warm-bg-light; }
+.hm-moment-away { background: linear-gradient(165deg, rgba($signal, .30) 0%, rgba($light-blue, .22) 100%), $warm-bg-light; }
+.hm-moment-home { background: linear-gradient(165deg, rgba($brand-orange, .32) 0%, rgba($orange2, .16) 100%), $warm-bg-light; }
+.hm-moment-night {
+  color: $warm-bg-light;
+  background: radial-gradient(120% 80% at 100% 0%, rgba($signal, .28), transparent 55%), linear-gradient(165deg, $navy-2, $navy);
+  .hm-moment-chips span { background: rgba(255, 255, 255, .14); }
 }
 
 // ─── interfaces ──────────────────────────────────────────────────
@@ -402,18 +544,29 @@ a.hm-cell-img:hover img { transform: scale(1.03); }
   background: linear-gradient(180deg, rgba($navy, 0) 0%, rgba($navy, .92) 60%);
   strong { font-size: 1.2rem; } span { font-size: .9rem; color: rgba($warm-bg-light, .8); line-height: 1.5; }
 }
-.hm-cell-text { flex-direction: column; justify-content: space-between; padding: 24px 24px 0; .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; } }
+.hm-cell-text {
+  flex-direction: column; justify-content: space-between; padding: 24px 24px 0;
+  // The inventory cell is the one light card in the navy grid: porcelain ground, navy type.
+  background: $warm-bg-light; color: $navy;
+  .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; strong { color: $navy; } span { color: #5B6470; } }
+  .hm-cell-chips span { color: $navy; border-color: rgba($navy, .45); }
+}
 .hm-cell-chips { display: flex; flex-wrap: wrap; gap: 8px; span { border: 1.5px solid rgba($warm-bg-light, .5); border-radius: 999px; padding: 7px 14px; font-size: .85rem; font-weight: 700; color: $warm-bg-light; } }
-.hm-cell-voice { flex-direction: column; justify-content: space-between; padding: 24px 24px 0; .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; } }
+.hm-cell-voice {
+  flex-direction: column; justify-content: space-between; padding: 24px 24px 0;
+  background: linear-gradient(160deg, $brand-orange 0%, $orange2 100%);
+  .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; span { color: rgba(255, 255, 255, .88); } }
+}
 // device data: chips + caption on the left, one whole iPhone (real 3.2.2 screen) on the right
 .hm-cell-data {
   flex-direction: row; align-items: stretch; gap: 20px; padding: 24px 24px 0; min-height: 320px;
+  background: radial-gradient(90% 90% at 0% 0%, rgba($signal, .34), transparent 60%), $navy-2;
   .hm-cell-data-copy { flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
   .hm-cell-cap { margin: 0 -24px; padding-top: 12px; background: none; }
   .hm-iphone-data { align-self: center; width: 30%; max-width: 148px; margin: 0 0 24px; flex: none; }
   @media (max-width: 540px) { .hm-iphone-data { width: 34%; } }
 }
-.hm-voice-quote { font-family: 'Noto Serif TC', serif; font-weight: 700; color: $gold; font-size: clamp(2rem, 3.2vw, 3.1rem); line-height: 1.05; }
+.hm-voice-quote { font-family: 'Noto Serif TC', serif; font-weight: 700; color: #fff; font-size: clamp(2rem, 3.2vw, 3.1rem); line-height: 1.05; }
 
 // ─── HMS × BMS ───────────────────────────────────────────────────
 .hm-bms { padding: clamp(56px, 8vw, 96px) 0; }
@@ -462,13 +615,18 @@ a.hm-cell-img:hover img { transform: scale(1.03); }
 .hm-cta-title { font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: clamp(1.5rem, 2.6vw, 2.2rem); line-height: 1.25; margin: 0 0 8px; }
 .hm-cta-sub { margin: 0; opacity: .92; line-height: 1.6; }
 .hm-cta-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; @media (min-width: 901px) { align-items: flex-end; } }
+.hm-cta-btns { display: flex; gap: 10px; flex-wrap: wrap; @media (min-width: 901px) { justify-content: flex-end; } }
 .hm-cta-phone { font-size: .95rem; opacity: .92; }
 
 // ─── keyframes ───────────────────────────────────────────────────
 @keyframes hmRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
 @keyframes hmReveal { from { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(10px); } to { opacity: 1; clip-path: inset(0 0 0 0); transform: none; } }
+@keyframes hmPulse { 0% { box-shadow: 0 0 0 0 rgba($signal, .55); } 70% { box-shadow: 0 0 0 9px rgba($signal, 0); } 100% { box-shadow: 0 0 0 0 rgba($signal, 0); } }
+@keyframes hmMarquee { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
-  .hm-kicker, .hm-title, .hm-lede, .hm-cta-row, .hm-hero-figure { animation: none; }
-  .hm-cell, .hm-photo img, .hm-cell-img img { transition: none; }
+  .hm-kicker, .hm-title, .hm-lede, .hm-cta-row, .hm-hero-figure, .hm-live li, .hm-live li i { animation: none; }
+  .hm-marquee-track { animation: none; width: auto; flex-wrap: wrap; }
+  .hm-marquee-run:last-child { display: none; }
+  .hm-cell, .hm-photo img, .hm-cell-img img, .hm-moment { transition: none; }
 }
 </style>
