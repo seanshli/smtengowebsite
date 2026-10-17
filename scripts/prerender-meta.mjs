@@ -158,6 +158,33 @@ const ldScripts = (route, lang) => jsonLdFor(route, lang)
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
+// ---- Crawlable fallback content ------------------------------------------------
+// AI crawlers and link scrapers mostly do not run JavaScript, so a shell whose
+// <body> is an empty #app shows them nothing. We ship real, visible text inside
+// #app; Vue's app.mount('#app') clears the container, so it is replaced on
+// hydration with no runtime code. Deliberately NOT display:none: hidden duplicate
+// text can be read as cloaking.
+const shortTitle = (t) => t.split(/ [|-] /)[0].trim()
+const PF_STYLE = `  <style data-prerender>.pf{max-width:60ch;margin:0 auto;padding:24px;font-family:'Noto Sans TC',system-ui,sans-serif;color:#152939}.pf ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px 16px}</style>`
+const PF_LINKS = {
+  zh: { nav: '網站導覽', app: 'enGo智慧管家 App', shop: '智管家商城', phone: '電話 02-27510218，週一至週五 09:00-18:00', kb: '知識庫' },
+  en: { nav: 'Site navigation', app: 'enGo智慧管家 App', shop: 'enGo Store', phone: 'Phone 02-27510218, Mon to Fri 09:00-18:00', kb: 'Knowledge base' }
+}
+
+function fallbackBlock(route, lang) {
+  const t = PF_LINKS[lang]
+  const [title, desc] = ROUTES[route][lang]
+  const prefix = lang === 'en' ? EN_PREFIX : ''
+  const href = (r) => (r === '/' ? prefix || '/' : prefix + r)
+  const items = Object.keys(ROUTES).map((r) => `<li><a href="${esc(href(r))}">${esc(shortTitle(ROUTES[r][lang][0]))}</a></li>`)
+  items.push(
+    `<li><a href="https://apps.apple.com/app/id6680188565">${esc(t.app)} (App Store)</a></li>`,
+    `<li><a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android">${esc(t.app)} (Google Play)</a></li>`,
+    `<li><a href="https://shoph5.smtengo.com/">${esc(t.shop)}</a></li>`
+  )
+  return `<!--prerender:fallback--><main class="pf" lang="${lang === 'en' ? 'en' : 'zh-Hant'}"><h1>${esc(shortTitle(title))}</h1><p>${esc(desc)}</p><nav aria-label="${esc(t.nav)}"><ul>${items.join('')}</ul></nav><p class="pf-contact">${esc(t.phone)} <a href="/knowledge-base.md">${esc(t.kb)}</a></p></main><!--/prerender:fallback-->`
+}
+
 /** Real alternates: two distinct URLs, which is what makes hreflang valid. */
 function hreflangBlock(route) {
   const zhUrl = BASE + route
@@ -198,6 +225,12 @@ export function buildHtml(template, route, lang) {
   html = html.replace(/[ \t]*<script type="application\/ld\+json" data-prerender>[\s\S]*?<\/script>\n?/g, '')
   const ld = ldScripts(route, lang)
   if (ld) html = html.replace('</head>', `${ld}\n</head>`)
+  // Crawlable fallback content (see fallbackBlock). Strip first: the postbuild
+  // pass reads dist/index.html, which already carries the home shell's block.
+  html = html.replace(/<!--prerender:fallback-->[\s\S]*?<!--\/prerender:fallback-->/g, '')
+  html = html.replace(/[ \t]*<style data-prerender>[\s\S]*?<\/style>\n?/g, '')
+  html = html.replace('</head>', `${PF_STYLE}\n</head>`)
+  html = html.replace(/<div id="app">\s*<\/div>/, () => `<div id="app">${fallbackBlock(route, lang)}</div>`)
   return html
 }
 
