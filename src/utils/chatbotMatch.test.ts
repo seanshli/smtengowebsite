@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { SHOP_URL } from './shopUrl'
 import kb from '../data/knowledge_base.json'
 import faqs from '../data/faqs.json'
+import howto from '../data/howto.json'
 import forbidden from '../data/forbidden-claims.json'
 import news from '../data/news.json'
 import packages from '../data/packages.json'
@@ -63,6 +64,12 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['智管家商城是什麼', 'shop-platform'],
     ['要去哪裡買東西', 'shop-platform'],
     ['商城網址', 'shop-platform'],
+    // KB-001 A.17 / UM-001 A.16 sync: the device-data steps, the product lines and the terms-still-say-安購 question must be reachable
+    ['設備數據怎麼看', 'howto-devicedata'],
+    ['哪一台耗電', 'howto-devicedata'],
+    ['有哪些產品線', 'product-lines'],
+    ['服務條款為什麼寫安購商城', 'shop-platform'],
+    ['為什麼手機沒有語音', 'voice-control'],
   ]
   for (const [q, id] of cases) {
     it(`"${q}" → ${id}`, () => {
@@ -168,6 +175,35 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     const faq45 = (faqs as any[]).find((f) => f.id === 45).answer.zh as string
     expect(faq45).toMatch(/^五條/)
     expect(faq45).toMatch(/智管家商城/)
+  })
+  it('UM-001 A.16 / KB-001 A.17 sync (2026-09-29): account deletion is 請洽客服確認 everywhere (KB-001 §10.1 #7 undecided); low-stock threshold lives in the 告警 tab; top-right icons are 設備數據 not 用電統計; device data has an entry path and a bot entry', () => {
+    const locs = ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']
+    const g = (kb as any).general
+    // §10.1 #7: no source confirms a grace period, so no surface may promise one or call deletion unrecoverable
+    const deletion = [g.find((e: any) => e.id === 'data-privacy').answer, (faqs as any[]).find((f) => f.id === 35).answer]
+    for (const a of deletion) {
+      expect(a.zh).toMatch(/請洽客服確認/)
+      for (const loc of locs) expect(a[loc], loc).not.toMatch(/還原帳號|还原账号|取消、還原|restored within|restaurable|restaurar durante|復元できます/)
+    }
+    const howtoText = JSON.stringify(howto)
+    expect(howtoText).not.toMatch(/永久刪除帳號|無法復原|安全量|用電統計/)
+    const wh = (howto as any).modules.find((m: any) => m.id === 'warehouse')
+    expect(wh.tips.map((t: any) => t.zh).join('')).toMatch(/「告警」分頁[\s\S]*「庫存不足」/)
+    const home3 = (howto as any).modules.find((m: any) => m.id === 'home').steps[2]
+    expect(home3.body.zh).toMatch(/版面切換、設備數據、手動更新、新增裝置/)
+    expect(home3.body.zh).toMatch(/手機[\s\S]*☰/)
+    const dd = (howto as any).modules.find((m: any) => m.id === 'devicedata')
+    expect(dd.steps[0].body.zh).toMatch(/平板：首頁右上角的第二顆圖示[\s\S]*手機：從裝置頁進入/)
+    expect((howto as any).meta.updated).toBe('2026-09-29')
+    const bot = (kb as any).howto.find((e: any) => e.id === 'howto-devicedata')
+    expect(bot.answer.zh).toContain('(/tutorial#howto-devicedata)')
+    expect(bot.answer.zh).toMatch(/第二顆圖示/)
+    // every howto module has a bot entry whose steps mirror howto.json (the two must move together)
+    for (const m of (howto as any).modules) {
+      const e = (kb as any).howto.find((x: any) => x.id === `howto-${m.id}`)
+      expect(e, m.id).toBeDefined()
+      for (const st of m.steps) expect(e.answer.zh, `${m.id}/${st.title.zh}`).toContain(st.body.zh)
+    }
   })
   it('KB-001 A.13 §10.1 #11: the 解鎖開門 button is never explained by the bot, only handed to a person; tablet hardware questions are handed off too', () => {
     const g = (kb as any).general

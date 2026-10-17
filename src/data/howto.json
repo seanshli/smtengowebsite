@@ -5,7 +5,7 @@
       "zh": "enGo 3.2.2（建置 489）",
       "en": "enGo 3.2.2 (build 489)"
     },
-    "updated": "2026-09-24",
+    "updated": "2026-09-29",
     "note": {
       "zh": "截圖取自「模型屋」示範住家與智管家實驗社區帳號，於 enGo 3.2.2（建置 489）正式建置實機擷取，僅裁切、未修圖。",
       "en": "Screenshots were captured on the Model Home demo household and the enGo test-community account running enGo 3.2.2 (build 489) release build; cropped only, never retouched."
@@ -300,12 +300,12 @@
         },
         {
           "title": {
-            "zh": "右上四個按鈕",
-            "en": "The four buttons at the top right"
+            "zh": "右上四個按鈕（平板版面）",
+            "en": "The four buttons at the top right (tablet layout)"
           },
           "body": {
-            "zh": "依序為版面切換、用電統計、手動更新、新增裝置。改過裝置或情境而畫面還沒跟上時，按手動更新最快。",
-            "en": "From left to right: layout switch, energy statistics, manual refresh and add device. If you changed a device or scene and the screen has not caught up, manual refresh is the quickest fix."
+            "zh": "平板首頁右上角的四個圖示，依序為版面切換、設備數據、手動更新、新增裝置。手機沒有這四顆按鈕，右上角是一個 ☰ 選單。改過裝置或情境而畫面還沒跟上時，按手動更新最快。",
+            "en": "On the tablet layout, the four icons at the top right are, from left to right: layout switch, device data, manual refresh and add device. The phone does not show these four buttons; it has a single ☰ menu at the top right instead. If you changed a device or scene and the screen has not caught up, manual refresh is the quickest fix."
           },
           "image": null
         },
@@ -341,6 +341,17 @@
         "en": "Device Data organises the readings your devices report into four tabs: energy trend, energy breakdown, water usage and air quality. It is for spotting trends and shares, which device draws power, and when, not for utility billing."
       },
       "steps": [
+        {
+          "title": {
+            "zh": "從哪裡進入設備數據",
+            "en": "Where to open Device Data"
+          },
+          "body": {
+            "zh": "平板：首頁右上角的第二顆圖示（數據報表）。手機：從裝置頁進入。進去之後共有用電趨勢、用電分布、用水量、空氣品質四個分頁。",
+            "en": "Tablet: the second icon at the top right of the home screen (the data-report button). Phone: open it from the device page. Inside there are four tabs: energy trend, energy breakdown, water usage and air quality."
+          },
+          "image": null
+        },
         {
           "title": {
             "zh": "用電趨勢：看什麼時段在耗電",
@@ -438,8 +449,8 @@
             "en": "Deleting your account"
           },
           "body": {
-            "zh": "「帳號註銷」會永久刪除帳號與資料，無法復原。若只是想換手機或重新登入，不需要用這個功能。",
-            "en": "Account deletion permanently removes your account and data and cannot be undone. If you only want to change phones or sign in again, you do not need this."
+            "zh": "「帳號註銷」是刪除帳號的入口，在設定頁申請。是否有可取消的緩衝期，請洽客服確認。若只是想換手機或重新登入，不需要用這個功能。",
+            "en": "“Account deletion” (帳號註銷) in Settings is where you request deleting your account. Whether there is a grace period in which it can be cancelled, please confirm with customer service. If you only want to change phones or sign in again, you do not need this."
           },
           "image": null
         }
@@ -607,8 +618,8 @@
         "en": "Home Inventory"
       },
       "summary": {
-        "zh": "記錄家中物品放在哪個房間的哪個櫃位、還有多少，並在低於安全量時提醒。適合濾芯、電池、備品這類「要用時常常找不到」的東西。",
-        "en": "Track which room and cabinet each item is in and how many are left, with a reminder when stock runs low. Ideal for filters, batteries and spares, the things you can never find when you need them."
+        "zh": "記錄家中物品放在哪個房間的哪個櫃位、還有多少，並在低於告警門檻時提醒。適合濾芯、電池、備品這類「要用時常常找不到」的東西。",
+        "en": "Track which room and cabinet each item is in and how many are left, with a reminder when stock falls below your alert threshold. Ideal for filters, batteries and spares, the things you can never find when you need them."
       },
       "steps": [
         {
@@ -651,8 +662,8 @@
           "en": "On phones this feature is called 庫存 (Inventory), not 倉儲 (Warehouse), and it lives under the bottom “More” tab; the left-hand 倉儲 entry is the tablet layout. Both are the same page and the same data."
         },
         {
-          "zh": "低庫存提醒要先在物品上設安全量才會作用。濾芯這類有壽命的東西，建議一併記下更換日期。",
-          "en": "Low-stock alerts only work once you set a threshold on the item. For things with a service life, such as filters, record the replacement date too."
+          "zh": "低庫存門檻在倉儲頁的「告警」分頁設定；數量低於門檻的物品，卡片上會出現紅色「庫存不足」標籤，上方的「低庫存」數字就是目前低於門檻的品項數。濾芯這類有壽命的東西，建議一併記下更換日期。",
+          "en": "Set the low-stock threshold in the Alerts (告警) tab. Any item below it shows a red 庫存不足 (low stock) tag on its card, and the Low stock figure at the top counts those items. For things with a service life, such as filters, record the replacement date too."
         }
       ],
       "imagesPending": false
