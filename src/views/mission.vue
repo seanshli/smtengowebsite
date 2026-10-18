@@ -1,38 +1,46 @@
 <template>
   <!-- msn- namespace: the old class names collided with _about.scss's global
-       .mission-section (display:flex row), which crushed this page into three
-       side-by-side columns. The About page keeps those globals untouched. -->
-  <section id="mission" class="msn-page">
-    <!-- Editorial masthead -->
-    <header class="msn-mast">
-      <h1 class="msn-title">{{ $t('missionTitle') }}</h1>
-      <p class="msn-sub fade-in">{{ $t('missionSubtitle') }}</p>
-    </header>
-
-    <!-- Mission statement as a pull-quote beside the family plate -->
-    <div class="msn-feature">
-      <blockquote class="msn-quote fade-in">
-        <p>{{ $t('fiveValues') }}</p>
-      </blockquote>
-      <figure class="msn-figure fade-in">
-        <!-- ponytail: NOT lazy. This is the page's primary editorial plate and sits
-             near the fold; lazy-loading it is what left the frame empty. -->
-        <img src="/images/mission-family.jpg" :alt="$t('missionTitle')" decoding="async" />
-      </figure>
+       .mission-section (display:flex row), so this page owns its layout. -->
+  <section id="mission" class="ap-page msn-page">
+    <!-- tile 1, white: title and subtitle -->
+    <div class="ap-tile ap-tile-first ap-white">
+      <div class="ap-wrap ap-wrap-text">
+        <h1 class="ap-title">{{ $t('missionTitle') }}</h1>
+        <p class="ap-lead fade-in">{{ $t('missionSubtitle') }}</p>
+      </div>
     </div>
 
-    <!-- Three values as ruled columns (same letterpress rule as the masthead),
-         not boxed cards. -->
-    <div class="msn-values">
-      <div class="msn-value fade-in" v-html="$t('fiveValues1')"></div>
-      <div class="msn-value fade-in" v-html="$t('fiveValues2')"></div>
-      <div class="msn-value fade-in" v-html="$t('fiveValues3')"></div>
+    <!-- tile 2, parchment: mission statement beside the family photo -->
+    <div class="ap-tile ap-parchment">
+      <div class="ap-wrap">
+        <div class="msn-feature">
+          <blockquote class="msn-quote fade-in">
+            <p>{{ $t('fiveValues') }}</p>
+          </blockquote>
+          <figure class="ap-photo msn-figure fade-in">
+            <!-- ponytail: NOT lazy. This is the page's primary plate and sits
+                 near the fold; lazy-loading it is what left the frame empty. -->
+            <img src="/images/mission-family.jpg" :alt="$t('missionTitle')" decoding="async" />
+          </figure>
+        </div>
+      </div>
     </div>
 
-    <!-- Closing statement: navy band, serif, orange accents -->
-    <div class="msn-closing">
-      <div class="msn-closing-inner fade-in">
-        <p v-html="$t('missionConclusion')"></p>
+    <!-- tile 3, white: the three values as cards -->
+    <div class="ap-tile ap-white">
+      <div class="ap-wrap">
+        <div class="ap-grid ap-grid-3">
+          <div class="ap-card msn-value fade-in" v-html="$t('fiveValues1')"></div>
+          <div class="ap-card msn-value fade-in" v-html="$t('fiveValues2')"></div>
+          <div class="ap-card msn-value fade-in" v-html="$t('fiveValues3')"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tile 4, dark: closing statement -->
+    <div class="ap-tile ap-dark">
+      <div class="ap-wrap ap-wrap-text ap-center">
+        <p class="msn-closing fade-in" v-html="$t('missionConclusion')"></p>
       </div>
     </div>
   </section>
@@ -59,183 +67,73 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
-@import '../css/utils/masthead';
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-// ponytail: no-JS / reduced-motion safety, content must never stay invisible
-@media (prefers-reduced-motion: reduce) {
-  .fade-in {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-.msn-page {
-  background: $warm-bg-light;
-  padding: 110px 5vw 0;
-
-  @media (max-width: 768px) {
-    padding-top: 96px;
-  }
-}
-
-// ─── masthead ───
-.msn-mast {
-  max-width: 1100px;
-  margin: 0 auto 56px;
-  @include masthead-block;
-}
-
-.msn-title {
-  @include masthead-title;
-}
-
-// letterpress: body ink is navy, not grey. Grey-on-cream is what read as washed out.
-.msn-sub {
-  font-size: clamp(1.16rem, 2vw, 1.42rem);
-  font-weight: 500;
-  line-height: 1.95;
-  color: $grey-blue2;
-  max-width: 34em;
-}
-
-// ─── pull-quote + family plate ───
 .msn-feature {
-  max-width: 1100px;
-  margin: 0 auto 72px;
   display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: clamp(28px, 5vw, 72px);
+  gap: clamp(32px, 5vw, 72px);
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 834px) {
     grid-template-columns: 1fr;
   }
 }
 
 .msn-quote {
   margin: 0;
-  border-left: 3px solid $brand-orange;
-  padding-left: clamp(20px, 3vw, 36px);
 
   p {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 700;
-    font-size: clamp(1.3rem, 2.8vw, 2rem);
-    line-height: 1.9;
-    color: $grey-blue2;
+    margin: 0;
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3.4vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: $ink;
   }
 }
 
-// mounted plate, same device as the homepage hero and /cases cards
-.msn-figure {
-  position: relative;
-  margin: 0;
+.msn-figure img {
+  aspect-ratio: 4 / 5;
 
-  img {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    // letterpress plate: a printed photo sits ON the page, it doesn't float.
-    border: 1px solid rgba($grey-blue3, 0.5);
-    box-shadow: 0 18px 38px -22px rgba(21, 41, 57, 0.55);
-    // warms the dated stock photo into the cream/navy story
-    filter: saturate(0.92) contrast(1.06);
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 14px -14px -14px 14px;
-    border: 2px solid $brand-orange;
-    z-index: 0;
-  }
-
-  @media (max-width: 900px) {
-    max-width: 440px;
-
-    img {
-      aspect-ratio: 16 / 10;
-    }
-  }
-}
-
-// ─── value columns ───
-.msn-values {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-bottom: 90px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0 clamp(28px, 4vw, 56px);
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding-bottom: 56px;
+  @media (max-width: 834px) {
+    aspect-ratio: 16 / 10;
   }
 }
 
 .msn-value {
-  border-top: 3px solid $grey-blue3;
-  padding: 22px 0 8px;
-  font-size: 1.02rem;
-  line-height: 1.95;
-  color: #4c4c4c;
+  padding: 32px;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  letter-spacing: -0.022em;
+  color: $ink-80;
 
-  @media (max-width: 900px) {
-    padding-bottom: 28px;
+  @media (max-width: 640px) {
+    padding: 24px;
   }
 
-  // the locale strings mark the column title with <font color="e05a35">
-  :deep(font[color='e05a35']) {
+  // the locale strings mark the card title with <font color="e05a35">
+  :deep(font[color]) {
     display: block;
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 900;
-    font-size: clamp(1.35rem, 2.4vw, 1.7rem);
-    line-height: 1.3;
-    color: $grey-blue3;
+    font-weight: 600;
+    font-size: 1.3125rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: $ink;
     margin-bottom: 12px;
   }
 }
 
-// ─── closing band ───
 .msn-closing {
-  background: $grey-blue3;
-  margin: 0 -5vw;
-  padding: 84px 5vw;
-  text-align: center;
-}
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.2vw, 2.5rem);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #fff;
 
-.msn-closing-inner {
-  max-width: 760px;
-  margin: 0 auto;
-
-  p {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 700;
-    font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-    line-height: 2.1;
-    color: $warm-bg-light;
-  }
-
-  :deep(font[color='e05a35']) {
-    color: $orange2;
-    font-weight: 900;
+  :deep(font[color]) {
+    color: #fff;
+    font-weight: 600;
   }
 }
 </style>

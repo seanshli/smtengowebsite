@@ -1,40 +1,33 @@
 <template>
-  <section id="mission" class="mission-section">
-    <div class="mission-section-image-container">
-      <img
-        class="mission-section-image"
-        src="/images/technology.jpeg"
-        alt="mission background technology"
-      />
-      <div class="image-gradient-overlay"></div>
-    </div>
-    <div class="mission-text">
-      <h2 class="section-title with-vertical-strip-white text-color-white">
-        {{ $t('missionTitle') }}
-      </h2>
-      <div class="text-container section-text text-color-white">
-        <p>
-          {{ $t('missionSubtitle') }}
-        </p>
-        <p v-if="locale == 'zh'">{{ $t('fiveValues') }}</p>
+  <section id="mission" class="ap-page">
+    <div class="ap-tile ap-tile-first ap-dark">
+      <div class="ap-wrap ap-wrap-text">
+        <h2 class="ap-h2">{{ $t('missionTitle') }}</h2>
+        <p class="ap-lead">{{ $t('missionSubtitle') }}</p>
+        <div class="ap-prose mo-prose">
+          <p v-if="locale == 'zh'">{{ $t('fiveValues') }}</p>
 
-        <ul class="mission-section-list">
-          <li><span class="mission-first-letter2">A</span>loT {{ $t('fiveValues1') }}</li>
-          <li>
-            <span class="mission-first-letter2">B</span>ig Data
-            {{ $t('fiveValues2') }}
-          </li>
-          <li>
-            <span class="mission-first-letter2">C</span>loud
-            {{ $t('fiveValues3') }}
-          </li>
-          <li><span class="mission-first-letter2">D</span>evice enGo {{ $t('fiveValues4') }}</li>
-          <li>
-            <span class="mission-first-letter2">E</span>SG
-            {{ $t('fiveValues5') }}
-          </li>
-        </ul>
-        <p v-html="$t('missionConclusion')"></p>
+          <ul class="ap-rows mo-list">
+            <li><span class="mo-letter">A</span>loT {{ $t('fiveValues1') }}</li>
+            <li>
+              <span class="mo-letter">B</span>ig Data
+              {{ $t('fiveValues2') }}
+            </li>
+            <li>
+              <span class="mo-letter">C</span>loud
+              {{ $t('fiveValues3') }}
+            </li>
+            <li><span class="mo-letter">D</span>evice enGo {{ $t('fiveValues4') }}</li>
+            <li>
+              <span class="mo-letter">E</span>SG
+              {{ $t('fiveValues5') }}
+            </li>
+          </ul>
+          <p v-html="$t('missionConclusion')"></p>
+        </div>
+        <figure class="ap-photo mo-photo">
+          <img src="/images/technology.jpeg" alt="mission background technology" />
+        </figure>
       </div>
     </div>
   </section>
@@ -55,3 +48,24 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped lang="scss">
+@import '../css/utils/variables';
+
+.mo-prose {
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+.mo-list li {
+  color: $on-dark-muted;
+}
+
+.mo-letter {
+  font-weight: 600;
+  color: #fff;
+}
+
+.mo-photo {
+  margin-top: clamp(32px, 4vw, 56px);
+}
+</style>

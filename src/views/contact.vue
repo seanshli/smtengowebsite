@@ -1,14 +1,23 @@
 <template>
-  <div class="contact">
-    <div class="contact_wrap">
-      <div class="contact_title">
-        <h1 class="fz-48 lh-70 fw-500">{{ $t('contactUsTitle') }}</h1>
-        <p class="fz-24 lh-34 web">{{ $t('contactUsSubtitle') }}</p>
-        <div class="phone container">
-          <div class="phone">{{ $t('contactUsSubtitle1') }}</div>
-          <div class="phone">{{ $t('contactUsSubtitle2') }}</div>
+  <div class="contact ap-page">
+    <!-- tile 1, white: title, subtitle, phone lines -->
+    <div class="ap-tile ap-tile-first ap-white contact-head">
+      <div class="ap-wrap ap-wrap-text">
+        <div class="contact_title">
+          <h1 class="ap-title">{{ $t('contactUsTitle') }}</h1>
+          <p class="ap-lead web">{{ $t('contactUsSubtitle') }}</p>
+          <div class="phone container">
+            <div class="phone">{{ $t('contactUsSubtitle1') }}</div>
+            <div class="phone">{{ $t('contactUsSubtitle2') }}</div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <!-- tile 2, parchment: the form (fields, ids and handlers unchanged) -->
+    <div class="ap-tile ap-parchment contact-form-tile">
+      <div class="ap-wrap ap-wrap-text">
+        <div class="contact_wrap">
       <div class="contact_inputs flex_vertical">
         <div class="input_label">
           <label for="cf-name">{{ $t('name') }} <span class="cf-req">({{ $t('required') }})</span></label>
@@ -97,14 +106,16 @@
           ></textarea>
         </div>
       <div class="line-btn-container mt-4">
-        <button class="contact-form-line" @click="jumpToLine">
+        <button class="contact-form-line ap-pill ap-pill-ghost" @click="jumpToLine">
           <img src="/images/link_Line.png" alt="LINE" class="line-icon" />
           {{ $t('contactOnLine') }}
         </button>
       </div>
-      
+
       <div id="form-error-message" class="mt-12">{{ errorMessage }}</div>
-      <button class="contact-form-submit" @click="submitForm">{{ $t('submitForm') }}</button>
+      <button class="contact-form-submit ap-pill ap-pill-primary" @click="submitForm">{{ $t('submitForm') }}</button>
+      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -304,183 +315,4 @@ const jumpToLine = () => {
 <style scoped lang="scss">
 @import '@/css/utils/_variables.scss';
 @import '@/css/pages/_contact.scss';
-
-.voucher-banner {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  background: linear-gradient(135deg, #fff5f0 0%, #ffe7d9 100%);
-  border: 1px solid #f5c4ad;
-  border-left: 5px solid #e05a35;
-  border-radius: 14px;
-  padding: 22px 26px;
-  margin: 0 0 28px;
-  box-shadow: 0 4px 18px rgba(224, 90, 53, 0.12);
-  position: relative;
-
-  // Pulse the border-left when user landed via the voucher link itself —
-  // they're warmest, so emphasize the "you got it" vibe.
-  &--prefilled {
-    border-left-width: 7px;
-    background: linear-gradient(135deg, #ffefe5 0%, #ffd6bd 100%);
-
-    &::before {
-      content: '已啟用';
-      position: absolute;
-      top: -10px;
-      right: 18px;
-      background: #e05a35;
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 999px;
-      letter-spacing: 0.5px;
-    }
-  }
-
-  .voucher-banner-icon {
-    font-size: 2.4rem;
-    line-height: 1;
-    flex-shrink: 0;
-  }
-
-  .voucher-banner-text {
-    flex: 1;
-
-    strong {
-      display: block;
-      color: #224274;
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    p {
-      margin: 0;
-      color: #4a4a4a;
-      font-size: 0.95rem;
-      line-height: 1.6;
-
-      strong {
-        display: inline;
-        color: #e05a35;
-        font-weight: 600;
-        font-size: inherit;
-        margin: 0;
-      }
-    }
-  }
-
-  .voucher-banner-cta {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    background: #e05a35;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 999px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: all 0.25s ease;
-    box-shadow: 0 2px 8px rgba(224, 90, 53, 0.25);
-
-    &:hover {
-      background: #c64a28;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(224, 90, 53, 0.35);
-    }
-  }
-
-  @media (max-width: 700px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 18px 18px;
-
-    .voucher-banner-icon {
-      font-size: 2rem;
-    }
-
-    .voucher-banner-text strong {
-      font-size: 1.05rem;
-    }
-
-    .voucher-banner-text p {
-      font-size: 0.9rem;
-    }
-
-    .voucher-banner-cta {
-      width: 100%;
-      justify-content: center;
-      padding: 12px 20px;
-    }
-
-    &--prefilled::before {
-      top: -8px;
-      right: 14px;
-      font-size: 0.68rem;
-    }
-  }
-}
-
-.line-btn-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.contact-form-line {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: #06c755;
-  color: white;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  max-width: 300px;
-  
-  &:hover {
-    background-color: #05a546;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
-  }
-
-  .line-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
-}
-</style>
-
-<style scoped lang="scss">
-@import '../css/utils/variables';
-@import '../css/utils/masthead';
-
-// ─── Editorial pass (design/editorial-phase2) ───
-.contact :is(h1, h2, h3) {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  color: $grey-blue3;
-}
-
-.ed-mast-kicker {
-  @include masthead-kicker;
-}
-
-// squared inputs and plates, matching the mounted-plate system
-.contact :is(input, select, textarea, button, div[class*="banner"]) {
-  border-radius: 0 !important;
-}
 </style>

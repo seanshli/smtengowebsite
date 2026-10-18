@@ -1,21 +1,24 @@
 <template>
-  <section class="nf">
-    <div class="nf-inner">
-      <p class="nf-kicker">404</p>
-      <h1 class="nf-title">
-        {{ isZh ? '這個頁面不存在。' : 'This page does not exist.' }}
-      </h1>
-      <p class="nf-sub">
-        {{ isZh
-          ? '連結可能已經變更或失效。以下是幾個常去的地方：'
-          : 'The link may have changed or expired. Here are some places to go instead:' }}
-      </p>
+  <section class="ap-page nf">
+    <div class="ap-tile ap-tile-first ap-white nf-tile">
+      <div class="ap-wrap ap-wrap-text">
+        <h1 class="ap-title">
+          {{ isZh ? '這個頁面不存在。' : 'This page does not exist.' }}
+        </h1>
+        <p class="ap-lead">
+          {{ isZh
+            ? '連結可能已經變更或失效。以下是幾個常去的地方：'
+            : 'The link may have changed or expired. Here are some places to go instead:' }}
+        </p>
 
-      <div class="nf-links">
-        <router-link :to="localePath('/')">{{ $t('homeTitle') }} →</router-link>
-        <router-link :to="localePath('/product')">{{ $t('productTitle') }} →</router-link>
-        <router-link :to="localePath('/cases')">{{ $t('casesTitle') }} →</router-link>
-        <router-link :to="localePath('/contact')">{{ $t('contactTitle') }} →</router-link>
+        <div class="ap-links nf-links">
+          <router-link class="ap-link" :to="localePath('/')">{{ $t('homeTitle') }}</router-link>
+          <router-link class="ap-link" :to="localePath('/product')">{{ $t('productTitle') }}</router-link>
+          <router-link class="ap-link" :to="localePath('/cases')">{{ $t('casesTitle') }}</router-link>
+          <router-link class="ap-link" :to="localePath('/contact')">{{ $t('contactTitle') }}</router-link>
+        </div>
+
+        <p class="ap-fine nf-code">404</p>
       </div>
     </div>
   </section>
@@ -83,66 +86,21 @@ export default defineComponent({
 <style scoped lang="scss">
 @import '../css/utils/variables';
 
-.nf {
-  background: $warm-bg-light;
+.nf-tile {
   min-height: 68vh;
   display: flex;
   align-items: center;
-  padding: 140px 5vw 110px;
-}
 
-.nf-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
-  border-top: 3px solid $grey-blue3;
-  padding-top: 22px;
-}
-
-.nf-kicker {
-  font-size: 1.02rem;
-  font-weight: 800;
-  letter-spacing: 0.28em;
-  color: $brand-orange-text;
-  margin-bottom: 8px;
-}
-
-.nf-title {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: clamp(2.2rem, 6vw, 4.2rem);
-  line-height: 1.1;
-  color: $grey-blue3;
-  margin-bottom: 14px;
-}
-
-.nf-sub {
-  font-size: clamp(1.05rem, 2vw, 1.3rem);
-  line-height: 1.9;
-  color: $grey-blue2;
-  max-width: 34em;
+  .ap-wrap {
+    width: 100%;
+  }
 }
 
 .nf-links {
-  margin-top: 34px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 34px;
+  margin-top: 36px;
+}
 
-  a {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: $grey-blue3;
-    text-decoration: none;
-    border-bottom: 2px solid $brand-orange;
-    padding-bottom: 3px;
-    transition: color 0.25s ease;
-
-    &:hover,
-    &:focus-visible {
-      color: $brand-orange;
-    }
-  }
+.nf-code {
+  margin: 48px 0 0;
 }
 </style>
