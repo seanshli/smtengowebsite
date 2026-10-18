@@ -74,78 +74,90 @@ const handleLogin = async () => {
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
+
 .login-page {
   min-height: 100vh;
   padding: 40px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  
+  background: $parchment;
+  font-family: $display-font;
+  color: $ink;
+
   .login-container {
     width: 100%;
     max-width: 400px;
     padding: 0;
   }
-  
+
   .login-card {
-    background: white;
+    background: #fff;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 1px solid $hairline;
+    border-radius: 18px;
     text-align: center;
-    
+
     @media (max-width: 480px) {
       padding: 30px 20px;
     }
-    
+
     .logo { width: 120px; margin-bottom: 20px; }
-    h2 { color: #333; margin-bottom: 10px; font-size: 1.5rem; }
-    .subtitle { color: #888; margin-bottom: 30px; font-size: 0.9rem; }
-    
+    h2 { color: $ink; margin-bottom: 10px; font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; }
+    .subtitle { color: $ink-80; margin-bottom: 30px; font-size: 0.9rem; }
+
     .input-group {
       margin-bottom: 15px;
       input {
         width: 100%;
-        padding: 12px 15px;
-        border: 1px solid #ddd;
+        height: 44px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        background: #fff;
+        color: $ink;
+        border: 1px solid $hairline;
         border-radius: 8px;
-        font-size: 1rem;
-        transition: border-color 0.3s;
-        &:focus-visible { border-color: #c46043; outline: 2px solid #c46043; outline-offset: 2px; }
+        font-size: 1.0625rem;
+        letter-spacing: -0.022em;
+        &:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 2px; }
       }
     }
-    
+
     .login-btn {
       width: 100%;
-      padding: 12px;
-      background: #c46043;
-      color: white;
+      min-height: 44px;
+      padding: 11px 22px;
+      background: $brand-orange-text;
+      color: #fff;
       border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 600;
+      border-radius: 9999px;
+      font-size: 1.0625rem;
+      font-weight: 400;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: transform 0.15s ease, background 0.2s ease;
       margin-top: 10px;
-      &:hover { background: #ab5138; }
+      &:hover { background: darken($brand-orange-text, 6%); }
+      &:active { transform: scale(0.95); }
+      &:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 2px; }
     }
-    
+
     .switch-mode {
       margin-top: 20px;
       button {
         background: transparent;
         border: none;
-        color: #c46043;
+        color: $brand-orange-text;
         cursor: pointer;
         font-size: 0.9rem;
         text-decoration: underline;
+        &:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 2px; }
       }
     }
-    
+
     .back-home {
       margin-top: 30px;
-      a { color: #888; text-decoration: none; font-size: 0.9rem; &:hover { color: #333; } }
+      a { color: $ink-80; text-decoration: none; font-size: 0.9rem; &:hover { color: $ink; } }
     }
   }
 }

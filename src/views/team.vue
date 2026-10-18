@@ -1,38 +1,37 @@
 <template>
-  <section id="team" class="tm-page">
-    <!-- Editorial masthead -->
-    <header class="tm-mast">
-      <h1 class="tm-title">{{ $t('teamTitle') }}</h1>
-      <p class="tm-sub fade-in">{{ $t('teamSubtitle') }}</p>
-    </header>
+  <section id="team" class="ap-page tm-page">
+    <div class="ap-tile ap-tile-first ap-white">
+      <div class="ap-wrap">
+        <header class="ap-head">
+          <h1 class="ap-title">{{ $t('teamTitle') }}</h1>
+          <p class="ap-lead fade-in">{{ $t('teamSubtitle') }}</p>
+        </header>
 
-    <!-- Profiles: alternating editorial spreads -->
-    <article
-      v-for="(m, i) in members"
-      :key="m.id"
-      class="tm-profile fade-in"
-      :class="{ 'tm-profile--flip': i % 2 === 1 }"
-    >
-      <figure class="tm-plate">
-        <img :src="m.photo" :alt="pick(m.name)" decoding="async" :loading="i === 0 ? 'eager' : 'lazy'" />
-        <figcaption>
-          <span class="tm-plate-num">{{ String(i + 1).padStart(2, '0') }}</span>
-          <span v-if="m.advisor" class="tm-advisor-tag">{{ isZh ? '顧問' : 'Advisor' }}</span>
-        </figcaption>
-      </figure>
+        <!-- Profiles: parchment cards, the portrait in a radius-18 frame, the bio below -->
+        <div class="ap-grid ap-grid-2 tm-grid">
+          <article v-for="(m, i) in members" :key="m.id" class="ap-card tm-card fade-in">
+            <figure class="ap-photo tm-plate">
+              <img :src="m.photo" :alt="pick(m.name)" decoding="async" :loading="i === 0 ? 'eager' : 'lazy'" />
+              <figcaption v-if="m.advisor">
+                <span class="tm-advisor-tag">{{ isZh ? '顧問' : 'Advisor' }}</span>
+              </figcaption>
+            </figure>
 
-      <div class="tm-bio">
-        <p class="tm-role">{{ pick(m.role) }}</p>
-        <h2 class="tm-name">
-          {{ pick(m.name) }}
-          <span class="tm-name-en">{{ m.nameEn }}</span>
-        </h2>
-        <p class="tm-story">{{ pick(m.story) }}</p>
-        <ul class="tm-creds">
-          <li v-for="(c, j) in pick(m.creds)" :key="j">{{ c }}</li>
-        </ul>
+            <div class="tm-bio">
+              <p class="tm-role">{{ pick(m.role) }}</p>
+              <h2 class="ap-h2 tm-name">
+                {{ pick(m.name) }}
+                <span class="tm-name-en">{{ m.nameEn }}</span>
+              </h2>
+              <p class="ap-body tm-story">{{ pick(m.story) }}</p>
+              <ul class="ap-rows tm-creds">
+                <li v-for="(c, j) in pick(m.creds)" :key="j">{{ c }}</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
-    </article>
+    </div>
   </section>
 </template>
 
@@ -204,205 +203,72 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
-@import '../css/utils/masthead';
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-in {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-.tm-page {
-  background: $warm-bg-light;
-  padding: 110px 5vw 100px;
-
-  @media (max-width: 768px) {
-    padding-top: 96px;
-  }
-}
-
-// ─── masthead ───
-.tm-mast {
-  max-width: 1100px;
-  margin: 0 auto 64px;
-  @include masthead-block;
-}
-
-.tm-kicker {
-  @include masthead-kicker;
-}
-
-.tm-title {
-  @include masthead-title;
-}
-
-.tm-sub {
-  font-size: clamp(1.16rem, 2vw, 1.42rem);
-  font-weight: 500;
-  line-height: 1.95;
-  color: $grey-blue2;
-  max-width: 34em;
-}
-
-// ─── profile spreads ───
-.tm-profile {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 56px 0;
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: clamp(28px, 5vw, 72px);
+.tm-grid {
+  gap: clamp(20px, 2.5vw, 32px);
   align-items: start;
-  border-top: 1px solid rgba($grey-blue3, 0.22);
-
-  &--flip {
-    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-
-    .tm-plate {
-      order: 2;
-    }
-
-    .tm-bio {
-      order: 1;
-    }
-  }
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    padding: 40px 0;
-
-    &--flip .tm-plate {
-      order: 0;
-    }
-
-    &--flip .tm-bio {
-      order: 1;
-    }
-  }
 }
 
-// mounted plate, matching the site's editorial system
+.tm-card {
+  padding: clamp(20px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .tm-plate {
-  position: relative;
-  margin: 0;
-  max-width: 400px;
+  max-width: 320px;
 
   img {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
     aspect-ratio: 4 / 5;
-    object-fit: cover;
-    border: 1px solid rgba($grey-blue3, 0.5);
-    box-shadow: 0 18px 38px -22px rgba(21, 41, 57, 0.55);
   }
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 14px -14px -14px 14px;
-    border: 2px solid $brand-orange;
-    z-index: 0;
-  }
-
-  figcaption {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-top: 12px;
-  }
-
-  .tm-plate-num {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 900;
-    font-size: 1.6rem;
-    color: transparent;
-    -webkit-text-stroke: 1.5px $brand-orange;
-  }
-
-  .tm-advisor-tag {
-    background: $grey-blue3;
-    color: $warm-bg-light;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    padding: 4px 12px;
-  }
-
-  @media (max-width: 900px) {
-    max-width: 320px;
-  }
+.tm-advisor-tag {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid $hairline;
+  color: $ink;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.43;
+  padding: 2px 12px;
+  border-radius: 9999px;
 }
 
 .tm-role {
-  font-size: 0.92rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: $brand-orange;
-  margin-bottom: 8px;
+  margin: 0 0 6px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  color: $ink-80;
 }
 
 .tm-name {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: clamp(1.9rem, 4.5vw, 3rem);
-  line-height: 1.2;
-  color: $grey-blue3;
-  margin-bottom: 16px;
+  font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+  line-height: 1.15;
+  margin-bottom: 14px;
 
   .tm-name-en {
-    font-size: 0.5em;
-    font-weight: 700;
-    color: rgba($grey-blue3, 0.55);
-    margin-left: 10px;
-    letter-spacing: 0.04em;
+    display: block;
+    margin-top: 4px;
+    font-size: 1.0625rem;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    color: $ink-80;
   }
 }
 
 .tm-story {
-  font-size: 1.05rem;
-  line-height: 2;
-  color: $grey-blue2;
-  margin-bottom: 22px;
-  max-width: 38em;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
-.tm-creds {
-  list-style: none;
-  padding: 0;
-  border-top: 1px solid rgba($grey-blue3, 0.22);
-
-  li {
-    padding: 9px 0 9px 18px;
-    border-bottom: 1px solid rgba($grey-blue3, 0.14);
-    font-size: 0.93rem;
-    line-height: 1.7;
-    color: #4c4c4c;
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 1.05em;
-      width: 8px;
-      height: 2px;
-      background: $brand-orange;
-    }
-  }
+.tm-creds li {
+  padding: 10px 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: $ink-80;
+  border-color: $hairline;
 }
 </style>
