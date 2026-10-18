@@ -15,7 +15,7 @@
     @media (max-width: 768px) {
         right: 12px;
         left: 12px;
-        bottom: 12px;
+        bottom: 100px; // clear the floating chat button that sits bottom-left on phones
         width: auto;
         padding: 18px 18px 16px;
     }

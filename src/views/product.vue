@@ -840,7 +840,7 @@ const targetExpand = ref(false)
 // ─── type: 600 display with negative tracking, 400 body 17px / 1.47 / -.022em ──
 .pd-title {
   font-family: $display-font; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; color: $ink; margin: 0;
-  font-size: clamp(2.6rem, 6.4vw, 5rem);
+  font-size: clamp(2.1rem, 8.7vw, 5rem); // 10 CJK glyphs fit one line at 390px, no orphan
 }
 .pd-tagline {
   font-size: clamp(1.2rem, 1.9vw, 1.75rem); font-weight: 300; line-height: 1.4; letter-spacing: -.005em;
