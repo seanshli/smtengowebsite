@@ -1,76 +1,89 @@
 <template>
-  <div class="cases-page">
-    <div class="header-section">
-      <h1 class="page-title">{{ $t('casesTitle') }}</h1>
-      <p class="subtitle">{{ $t('casesSubtitle') }}</p>
-      <p class="history-note">{{ $t('casesHistoryNote') }} <router-link to="/product">{{ $t('productTitle') }} →</router-link></p>
-    </div>
+  <div class="cs">
+    <!-- tile 1 (parchment): page title, lead, filters -->
+    <section class="cs-tile cs-tile-parchment cs-head">
+      <div class="cs-wrap cs-center">
+        <h1 class="cs-title">{{ $t('casesTitle') }}</h1>
+        <p class="cs-lead">{{ $t('casesSubtitle') }}</p>
+        <p class="cs-note">{{ $t('casesHistoryNote') }} <router-link to="/product" class="cs-link">{{ $t('productTitle') }}<span class="cs-chev" aria-hidden="true">›</span></router-link></p>
 
-    <div class="filters-container">
-      <div class="filter-group">
-        <label>{{ $t('filterCategory') }}</label>
-        <div class="filters">
-          <button 
-            v-for="type in types" 
-            :key="type.key" 
-            @click="setType(type.key)" 
-            :class="{ active: selectedType === type.key }"
-          >
-            {{ $t(type.labelKey) }}
-          </button>
-        </div>
-      </div>
-
-      <div class="filter-group select-filters">
-        <div class="select-wrapper">
-          <label>{{ $t('filterCountry') }}</label>
-          <select v-model="selectedCountry">
-            <option value="All">{{ $t('catAll') }}</option>
-            <option v-for="country in countries" :key="country" :value="country">
-              {{ country }}
-            </option>
-          </select>
-        </div>
-
-        <div class="select-wrapper">
-          <label>{{ $t('filterCity') }}</label>
-          <select v-model="selectedCity">
-            <option value="All">{{ $t('catAll') }}</option>
-            <option v-for="city in cities" :key="city" :value="city">
-              {{ city }}
-            </option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="cases-grid">
-      <transition-group name="fade">
-        <div v-for="item in filteredCases" :key="item.id" class="case-card card-hover scroll-reveal" @click="handleCaseClick(item)">
-          <!-- view-transition-name pairs with CaseDetail's banner so the
-               card image morphs into the detail header on navigation -->
-          <div class="image-wrapper" :style="{ viewTransitionName: 'case-' + item.id }">
-            <img v-if="hasPhoto(item)" :src="item.image" :alt="getLocaleText(item.title)" />
-            <!-- 18 of 22 cases share one illustration; a plate that names the
-                 project reads as real work, the repeated drawing read as placeholder -->
-            <div v-else class="plate" :class="'plate-' + plateTone(item)" aria-hidden="true">
-              <span class="plate-cat">{{ getLocaleText(item.category) }}</span>
-              <span class="plate-title">{{ getLocaleText(item.title) }}</span>
-              <span class="plate-loc">{{ getLocaleText(item.location) }}</span>
-            </div>
-            <div class="overlay">
-              <span>{{ $t('viewDetails') || '查看詳情' }}</span>
+        <div class="cs-filters">
+          <div class="cs-filter-group">
+            <label class="cs-label">{{ $t('filterCategory') }}</label>
+            <div class="cs-chips">
+              <button
+                v-for="type in types"
+                :key="type.key"
+                type="button"
+                class="cs-chip"
+                @click="setType(type.key)"
+                :class="{ active: selectedType === type.key }"
+              >
+                {{ $t(type.labelKey) }}
+              </button>
             </div>
           </div>
-          <div class="card-content">
-            <span class="category">{{ getLocaleText(item.category) }}</span>
-            <h3 class="title">{{ getLocaleText(item.title) }}</h3>
-            <p class="location"><i class="icon-location"></i> {{ getLocaleText(item.location) }}</p>
-            <p class="desc">{{ getLocaleText(item.description) }}</p>
+
+          <div class="cs-filter-group cs-selects">
+            <div class="cs-select">
+              <label class="cs-label">{{ $t('filterCountry') }}</label>
+              <select v-model="selectedCountry">
+                <option value="All">{{ $t('catAll') }}</option>
+                <option v-for="country in countries" :key="country" :value="country">
+                  {{ country }}
+                </option>
+              </select>
+            </div>
+
+            <div class="cs-select">
+              <label class="cs-label">{{ $t('filterCity') }}</label>
+              <select v-model="selectedCity">
+                <option value="All">{{ $t('catAll') }}</option>
+                <option v-for="city in cities" :key="city" :value="city">
+                  {{ city }}
+                </option>
+              </select>
+            </div>
           </div>
         </div>
-      </transition-group>
-    </div>
+      </div>
+    </section>
+
+    <!-- tile 2 (white): photo cards, caption below the image -->
+    <section class="cs-tile cs-tile-white">
+      <div class="cs-wrap">
+        <div class="cs-grid">
+          <transition-group name="fade">
+            <article
+              v-for="item in filteredCases"
+              :key="item.id"
+              class="cs-card scroll-reveal"
+              role="link"
+              tabindex="0"
+              @click="handleCaseClick(item)"
+              @keydown.enter="handleCaseClick(item)"
+            >
+              <!-- view-transition-name pairs with CaseDetail's cover figure so the
+                   card image morphs into the detail page on navigation -->
+              <div class="cs-photo" :style="{ viewTransitionName: 'case-' + item.id }">
+                <img v-if="hasPhoto(item)" :src="item.image" :alt="getLocaleText(item.title)" loading="lazy" />
+                <!-- 18 of 22 cases share one illustration; a plate that names the
+                     project reads as real work, the repeated drawing read as placeholder -->
+                <div v-else class="cs-plate" aria-hidden="true">
+                  <span class="cs-plate-title">{{ getLocaleText(item.title) }}</span>
+                </div>
+              </div>
+              <div class="cs-cap">
+                <h3 class="cs-name">{{ getLocaleText(item.title) }}</h3>
+                <p class="cs-meta">{{ getLocaleText(item.location) }}, {{ getLocaleText(item.category) }}</p>
+                <p class="cs-desc">{{ getLocaleText(item.description) }}</p>
+                <span class="cs-more">{{ $t('viewDetails') || '查看詳情' }}<span class="cs-chev" aria-hidden="true">›</span></span>
+              </div>
+            </article>
+          </transition-group>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -99,7 +112,6 @@ const types = [
 ]
 
 const hasPhoto = (c: any) => typeof c.image === 'string' && !c.image.endsWith('case-home.jpg')
-const plateTone = (c: any) => ({ 'Showroom': 'gold', 'Property Development': 'orange' } as Record<string, string>)[c.category?.en] ?? 'navy'
 
 const selectedType = ref('All')
 const selectedCountry = ref('All')
@@ -153,227 +165,76 @@ const getLocaleText = (obj: any) => {
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
-@import '../css/utils/masthead';
 
-.cases-page {
-  padding: 110px 5vw 100px;
-  max-width: 1200px;
-  margin: 0 auto;
+// Apple-profile tiles (DESIGN.md enGo addendum; reference: src/views/index.vue)
+.cs { background: #fff; color: $ink; font-family: $display-font; }
+.cs a:focus-visible, .cs button:focus-visible, .cs select:focus-visible, .cs-card:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 3px; }
+.cs-wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
+.cs-center { text-align: center; }
+.cs-tile { padding: clamp(64px, 9vw, 112px) 0; }
+.cs-tile-white { background: #fff; }
+.cs-tile-parchment { background: $parchment; }
+.cs-head { padding-top: clamp(84px, 9vw, 104px); padding-bottom: clamp(40px, 5vw, 64px); }
 
-  // editorial masthead, matching the homepage sections
-  .header-section {
-    text-align: left;
-    @include masthead-block;
-    margin-bottom: 44px;
+.cs-title {
+  font-family: $display-font; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; color: $ink; margin: 0;
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+}
+.cs-lead { font-size: clamp(1.2rem, 1.9vw, 1.6rem); font-weight: 300; line-height: 1.4; letter-spacing: -.005em; color: $ink; max-width: 30em; margin: 18px auto 0; }
+.cs-note { margin: 14px auto 0; max-width: 60ch; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; }
+.cs-link { color: $brand-orange-text; text-decoration: none; white-space: nowrap; &:hover { text-decoration: underline; } }
+.cs-chev { margin-left: .25em; }
 
-    .page-kicker {
-      @include masthead-kicker;
-    }
-
-    .page-title {
-      @include masthead-title;
-    }
-
-    .subtitle {
-      color: $dark-grey;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-    }
-    .history-note {
-      margin: 0.75rem auto 0;
-      max-width: 60ch;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      color: $dark-grey;
-      a { color: inherit; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
-    }
+// ─── filters: ghost pills, the active one filled ─────────────────────────
+.cs-filters { margin-top: clamp(28px, 4vw, 44px); display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.cs-filter-group { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.cs-label { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; color: $ink; }
+.cs-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.cs-chip {
+  min-height: 44px; padding: 10px 20px; border-radius: 9999px; cursor: pointer;
+  background: transparent; border: 1px solid $brand-orange-text; color: $brand-orange-text;
+  font: inherit; font-size: 1.0625rem; font-weight: 400; letter-spacing: -.022em;
+  transition: transform .15s ease, background .2s ease;
+  &:active { transform: scale(.95); }
+  &:hover { background: rgba($brand-orange, .06); }
+  &.active { background: $brand-orange-text; color: #fff; &:hover { background: darken($brand-orange-text, 6%); } }
+}
+.cs-selects { gap: 16px 32px; }
+.cs-select {
+  display: flex; align-items: center; gap: 12px;
+  select {
+    min-height: 44px; min-width: 160px; padding: 10px 18px; border-radius: 9999px; cursor: pointer;
+    border: 1px solid $hairline; background: #fff; color: $ink; font: inherit; font-size: 1.0625rem; letter-spacing: -.022em;
   }
-
-  // filters as an editorial rule-bounded strip, not a card
-  .filters-container {
-    border-top: 1px solid rgba($grey-blue3, 0.25);
-    border-bottom: 1px solid rgba($grey-blue3, 0.25);
-    padding: 20px 0;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-
-    .filter-group {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      label {
-        font-weight: 700;
-        color: $grey-blue3;
-        min-width: 64px;
-        font-size: 0.88rem;
-        letter-spacing: 0.12em;
-      }
-    }
-
-    // underline tabs instead of pills
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px 22px;
-
-      button {
-        padding: 4px 2px 6px;
-        border: none;
-        border-bottom: 2px solid transparent;
-        background: none;
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 0.95rem;
-        color: $dark-grey;
-        transition: color 0.25s ease, border-color 0.25s ease;
-
-        &:hover { color: $brand-orange; }
-
-        &.active {
-          font-family: 'Noto Serif TC', serif;
-          font-weight: 700;
-          color: $grey-blue3;
-          border-bottom-color: $brand-orange;
-        }
-      }
-    }
-
-    .select-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-
-      @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .select-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-
-        @media (max-width: 768px) {
-          width: 100%;
-          justify-content: space-between;
-        }
-
-        select {
-          padding: 6px 12px;
-          border: 1px solid rgba($grey-blue3, 0.35);
-          border-radius: 0;
-          background: $warm-bg-light;
-          color: $grey-blue2;
-          font-size: 0.9rem;
-          min-width: 150px;
-          cursor: pointer;
-          &:focus-visible { border-color: $brand-orange; outline: 2px solid $brand-orange; outline-offset: 2px; }
-          @media (max-width: 768px) { min-width: 120px; flex: 1; }
-        }
-      }
-    }
-  }
-
-  .cases-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-  }
-
-  // mounted plates, matching the hero figure: hard edges, hairline border,
-  // orange offset frame on hover instead of a soft shadow lift
-  .case-card {
-    position: relative;
-    background: $warm-bg-light;
-    border: 1px solid rgba($grey-blue3, 0.32);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 8px -8px -8px 8px;
-      border: 2px solid transparent;
-      transition: border-color 0.3s ease;
-      z-index: -1;
-    }
-
-    &:hover {
-      transform: translate(-3px, -3px);
-      &::before { border-color: $brand-orange; }
-      .image-wrapper .overlay { opacity: 1; }
-    }
-
-    .image-wrapper {
-      position: relative;
-      height: 250px;
-      overflow: hidden;
-      border-bottom: 1px solid rgba($grey-blue3, 0.25);
-      img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-      .plate {
-        height: 100%; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px;
-        color: $warm-bg-light; background: $grey-blue3;
-        background-image: radial-gradient(circle at 85% 15%, rgba($gold, .35), transparent 45%);
-        &.plate-gold { background: darken($gold, 28%); }
-        &.plate-orange { background: $brand-orange-text; }
-        .plate-cat { font-size: .75rem; letter-spacing: .14em; opacity: .8; }
-        .plate-title { font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 1.35rem; line-height: 1.3; }
-        .plate-loc { font-size: .85rem; opacity: .8; }
-      }
-      .overlay {
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba($brand-orange, 0.82);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        span {
-          color: white;
-          font-family: 'Noto Serif TC', serif;
-          font-weight: 700;
-          border: 1px solid white;
-          padding: 8px 22px;
-        }
-      }
-    }
-
-    .card-content {
-      padding: 22px 24px 24px;
-      .category {
-        color: $brand-orange;
-        font-size: 0.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.18em;
-      }
-      .title {
-        margin: 8px 0 4px;
-        font-family: 'Noto Serif TC', serif;
-        font-weight: 700;
-        font-size: 1.3rem;
-        line-height: 1.45;
-        color: $grey-blue3;
-      }
-      .location { color: $dark-grey; font-size: 0.88rem; margin-bottom: 12px; }
-      .desc { color: #5a5a5a; font-size: 0.94rem; line-height: 1.7; }
-    }
-  }
+  @media (max-width: 640px) { width: 100%; justify-content: space-between; select { flex: 1; min-width: 0; } }
 }
 
-.fade-enter-active, .fade-leave-active { transition: opacity 0.5s, transform 0.5s; }
-.fade-enter-from, .fade-leave-to { opacity: 0; transform: scale(0.9); }
+// ─── photo cards: image radius 18, caption below, no shadow, no overlay ───
+.cs-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(32px, 4vw, 48px) 28px;
+  @media (max-width: 1068px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+.cs-card { display: flex; flex-direction: column; cursor: pointer; color: $ink; }
+.cs-photo {
+  aspect-ratio: 4 / 3; border-radius: 18px; overflow: hidden; background: $parchment;
+  img { width: 100%; height: 100%; object-fit: cover; display: block; }
+}
+.cs-plate {
+  height: 100%; padding: clamp(20px, 3vw, 32px); box-sizing: border-box; display: flex; align-items: flex-end;
+  background: $tile-dark; color: #fff;
+}
+.cs-plate-title { font-family: $display-font; font-weight: 600; font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.15; letter-spacing: -.02em; }
+.cs-cap { display: flex; flex-direction: column; gap: 4px; padding-top: 16px; }
+.cs-name { margin: 0; font-family: $display-font; font-weight: 600; font-size: 1.3125rem; line-height: 1.25; letter-spacing: -.01em; color: $ink; }
+.cs-meta { margin: 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; }
+.cs-desc { margin: 8px 0 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink; }
+.cs-more { margin-top: 10px; font-size: 1.0625rem; letter-spacing: -.022em; color: $brand-orange-text; }
+.cs-card:hover .cs-more { text-decoration: underline; }
+.cs-card:active .cs-photo { transform: scale(.99); }
+.cs-photo { transition: transform .15s ease; }
+
+.fade-enter-active, .fade-leave-active { transition: opacity 0.5s; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .cs-chip, .cs-photo, .fade-enter-active, .fade-leave-active { transition: none; } }
 </style>
