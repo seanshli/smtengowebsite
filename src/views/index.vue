@@ -15,7 +15,7 @@
         </div>
         <a href="https://lin.ee/THIUSjW" class="hm-link" target="_blank" rel="noopener" data-track="home:line" @click="trackCta('line')">{{ T.lineCta }}<span class="hm-chev" aria-hidden="true">›</span></a>
       </div>
-      <figure class="hm-hero-figure" aria-label="enGo 牆掛平板與手機 App">
+      <figure class="hm-hero-figure" :aria-label="T.figureLabel">
         <div class="hm-plate hm-plate-tablet">
           <img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="eager" fetchpriority="high" />
         </div>
@@ -41,13 +41,13 @@
             <div class="hm-iphone"><img src="/images/screens/12-home-iphone.png" :alt="T.altPhone" width="800" height="1731" loading="lazy" /></div>
             <p class="hm-cap"><strong>iPhone / iPad</strong>{{ T.ifIosCap }}</p>
             <a class="hm-store" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
-              <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" width="120" height="40" loading="lazy" />
+              <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="T.altAppStore" width="120" height="40" loading="lazy" />
             </a>
           </div>
           <div class="hm-if-item">
             <div class="hm-if-android">
               <a class="hm-store hm-store-google" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play">
-                <img src="/images/badges/google-play-en.png" alt="Get it on Google Play" height="40" loading="lazy" />
+                <img src="/images/badges/google-play-en.png" :alt="T.altGooglePlay" height="40" loading="lazy" />
               </a>
             </div>
             <p class="hm-cap"><strong>{{ T.ifAndroid }}</strong>{{ T.ifAndroidCap }}</p>
@@ -141,9 +141,11 @@
           <router-link to="/cases" class="hm-link">{{ T.proofAll }}<span class="hm-chev" aria-hidden="true">›</span></router-link>
         </header>
         <div class="hm-proof-grid" data-reveal-group>
+          <!-- Captions carry location + room layout only: case titles can name a development
+               (建案), which never appears on the home page (Sean 2026-09-24). -->
           <router-link v-for="c in proofCases" :key="c.id" :to="'/cases/' + c.id" class="hm-photo" @click="trackEvent('case_click', { case_id: c.id, title: c.title.en })">
-            <img :src="c.image" :alt="pick(c.title)" loading="lazy" />
-            <p class="hm-cap"><strong>{{ pick(c.title) }}</strong>{{ pick(c.category) }}</p>
+            <img :src="c.image" :alt="caseLabel(c)" loading="lazy" />
+            <p class="hm-cap"><strong>{{ caseLabel(c) }}</strong>{{ pick(c.category) }}</p>
           </router-link>
           <div class="hm-showroom">
             <p class="hm-showroom-title">{{ T.showroomTitle }}</p>
@@ -208,6 +210,12 @@ const bmsCase = computed(() => cases.find((c) => hasPhoto(c) && c.category?.en =
 const showrooms = computed(() => cases.filter((c) => c.category?.en === 'Showroom'))
 
 const trackCta = (location: string) => trackEvent('cta_click', { location, page: 'home' })
+// "新北，兩房兩廳一衛": the room layout is lifted out of the title so the caption never
+// carries a development name.
+const caseLabel = (c: any) => {
+  const layout = (String(pick(c.title)).match(/[一二三四五六\d]+房\S*/) || [''])[0]
+  return [pick(c.location), layout].filter(Boolean).join(locale.value === 'en' ? ', ' : '，')
+}
 
 // Copy: short, concrete, benefit-first. Every claim below is lifted from KB-001 A.17 /
 // the existing site; scene names are the ones on the real 場景 screen.
@@ -215,6 +223,7 @@ const trackCta = (location: string) => trackEvent('cta_click', { location, page:
 const COPY: Record<string, Record<string, any>> = {
   zh: {
     cta: '預約體驗', seeProduct: '看產品介紹', lineCta: '用 LINE 問我們',
+    figureLabel: 'enGo 牆掛平板與手機 App', altAppStore: '在 App Store 下載', altGooglePlay: '在 Google Play 取得',
     altTablet: 'enGo 牆掛平板首頁，依房間分組的裝置卡片', altPhone: 'iPhone 上的 enGo智慧管家首頁，模型屋示範住家', altAnnounce: '平板上的社區公告',
     ifTitle: '三種介面，一組帳號。',
     ifSub: '牆掛平板在家裡當主控台，手機在外面接手。',
@@ -243,6 +252,7 @@ const COPY: Record<string, Record<string, any>> = {
   },
   zhCN: {
     cta: '预约体验', seeProduct: '看产品介绍', lineCta: '用 LINE 问我们',
+    figureLabel: 'enGo 壁挂平板与手机 App', altAppStore: '在 App Store 下载', altGooglePlay: '在 Google Play 获取',
     altTablet: 'enGo 壁挂平板首页，依房间分组的设备卡片', altPhone: 'iPhone 上的 enGo智慧管家首页，模型屋示范住家', altAnnounce: '平板上的社区公告',
     ifTitle: '三种界面，一组账号。',
     ifSub: '壁挂平板在家里当主控台，手机在外面接手。',
@@ -271,6 +281,7 @@ const COPY: Record<string, Record<string, any>> = {
   },
   en: {
     cta: 'Book a visit', seeProduct: 'See the product', lineCta: 'Ask us on LINE',
+    figureLabel: 'enGo wall tablet and phone app', altAppStore: 'Download on the App Store', altGooglePlay: 'Get it on Google Play',
     altTablet: 'enGo wall tablet home screen with device cards grouped by room', altPhone: 'enGo智慧管家 home screen on iPhone, Model Home demo household', altAnnounce: 'Community announcements on the tablet',
     ifTitle: 'Three interfaces. One account.',
     ifSub: 'The wall tablet runs the home. Your phone takes over when you are out.',
@@ -320,6 +331,8 @@ $product-shadow: rgba(0, 0, 0, .22) 3px 5px 30px 0;
 $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 
 .hm { background: #fff; color: $ink; font-family: $display; }
+.hm a:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 3px; }
+.hm-tile-dark a:focus-visible { outline-color: $orange2; }
 .hm-wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
 .hm-center { text-align: center; }
 
@@ -347,7 +360,8 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
   font-size: 1.0625rem; font-weight: 400; letter-spacing: -.022em; padding: 11px 22px; min-height: 44px; border-radius: 9999px;
   transition: transform .15s ease, background .2s ease; &:active { transform: scale(.95); }
 }
-.hm-pill-primary { background: $brand-orange; color: #fff; &:hover { background: darken($brand-orange, 5%); } }
+// $brand-orange-text as the fill: white label reaches 5.27:1 (AA); $brand-orange itself is only 3.7:1.
+.hm-pill-primary { background: $brand-orange-text; color: #fff; &:hover { background: darken($brand-orange-text, 6%); } }
 .hm-pill-ghost { color: $brand-orange-text; border: 1px solid $brand-orange-text; &:hover { background: rgba($brand-orange, .06); } }
 .hm-pill-ghost-dark { color: #fff; border-color: rgba(255, 255, 255, .55); &:hover { background: rgba(255, 255, 255, .08); } }
 .hm-link { color: $brand-orange-text; text-decoration: none; font-size: 1.0625rem; letter-spacing: -.022em; &:hover { text-decoration: underline; } }

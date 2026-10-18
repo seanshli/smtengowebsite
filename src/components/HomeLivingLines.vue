@@ -1,7 +1,7 @@
 <template>
   <section class="living-lines" ref="root" aria-label="enGo smart home ecosystem">
     <header class="ll-head">
-      <h3 class="ll-title">{{ $t('whyEngoTagline1') }}</h3>
+      <h2 class="ll-title">{{ $t('whyEngoTagline1') }}</h2>
       <p class="ll-sub">{{ $t('whyEngoTagline2') }}</p>
     </header>
 
