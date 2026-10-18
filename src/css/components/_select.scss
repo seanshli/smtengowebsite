@@ -1,1 +1,22 @@
-/**客製 select */
+@import '../utils/variables';
+
+// Selects share the field language of inputs: white, hairline, radius 8, 44px.
+// :where() keeps specificity at zero so the header's compact language switcher
+// (and any component-level select) still wins.
+:where(select) {
+  background-color: #fff;
+  color: $ink;
+  border: 1px solid $hairline;
+  border-radius: 8px;
+  font: inherit;
+  min-height: 44px;
+  padding: 0 12px;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid $brand-orange-text;
+    outline-offset: 0;
+    border-color: $brand-orange-text;
+  }
+}

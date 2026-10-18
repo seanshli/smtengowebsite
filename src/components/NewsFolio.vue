@@ -8,9 +8,8 @@
     @keydown.left.prevent="prev"
     @keydown.right.prevent="next"
   >
-    <!-- perspective stage: the book lies tilted on the desk -->
+    <!-- perspective stage for the page turn -->
     <div class="folio-scene">
-      <div class="folio-desk" aria-hidden="true"></div>
       <div class="folio-book" ref="book">
       <!-- Left leaf. Was a decorative watermark over half the book; now it carries
            the current article's plate, which frees the whole right leaf for text.
@@ -33,15 +32,13 @@
         </figcaption>
       </div>
 
-      <!-- unread page-stack edge, right side -->
-      <div class="folio-stack" aria-hidden="true"></div>
-
       <article
         v-for="(item, i) in items"
         :key="item.id"
         ref="pageEls"
         class="folio-page"
         :aria-hidden="i !== page"
+        :inert="i !== page ? true : undefined"
       >
         <div class="folio-face" @click="onPageClick">
           <header class="folio-mast">
@@ -79,12 +76,22 @@
     </div>
 
     <div class="folio-controls">
-      <button class="folio-btn" :disabled="page === 0 || flipping" @click="prev">
-        ← {{ locale.startsWith('zh') ? '上一頁' : 'Prev' }}
+      <button
+        class="folio-btn"
+        :disabled="page === 0 || flipping"
+        :aria-label="locale.startsWith('zh') ? '上一頁' : 'Prev'"
+        @click="prev"
+      >
+        <span aria-hidden="true">←</span>
       </button>
       <span class="folio-count">{{ page + 1 }} / {{ items.length }}</span>
-      <button class="folio-btn" :disabled="page === items.length - 1 || flipping" @click="next">
-        {{ locale.startsWith('zh') ? '下一頁' : 'Next' }} →
+      <button
+        class="folio-btn"
+        :disabled="page === items.length - 1 || flipping"
+        :aria-label="locale.startsWith('zh') ? '下一頁' : 'Next'"
+        @click="next"
+      >
+        <span aria-hidden="true">→</span>
       </button>
     </div>
   </div>
@@ -221,74 +228,45 @@ export default defineComponent({
 
 .folio {
   outline: none;
-  // breathing room so the tilt + desk shadow don't clip
   padding: 14px 0 34px;
 
+  // a ring, never a shadow
   &:focus-visible .folio-book {
-    box-shadow: 0 0 0 3px rgba($brand-orange, 0.35);
+    outline: 2px solid $brand-orange-text;
+    outline-offset: 4px;
+    border-radius: 18px;
   }
 }
 
 // Perspective stage. The perspective must live on an ancestor with NO filter
-// (a filter flattens 3D descendants), so shadows are separate elements.
+// (a filter flattens 3D descendants), so nothing here carries one.
 .folio-scene {
   position: relative;
   perspective: 1500px;
   perspective-origin: 50% 30%;
 }
 
-// Soft desk shadow under the tilted book — a gradient, not a filter,
-// to keep the 3D rendering context intact.
-.folio-desk {
-  position: absolute;
-  left: 4%;
-  right: 4%;
-  bottom: -30px;
-  height: 54px;
-  background: radial-gradient(50% 100% at 50% 0, rgba(21, 41, 57, 0.3), transparent 72%);
-  pointer-events: none;
-}
-
-// The open spread, lying on the desk: left half read pile, right half live page.
+// The open spread: left half is the plate, right half the live page.
 .folio-book {
   position: relative;
-  transform: rotateX(8deg);
   transform-style: preserve-3d;
-  // 1.05 -> 1.28: the leaf height, not the line-clamp, was what truncated
-  // stories. A deeper book buys ~160px of copy per page at 1100px wide.
+  // the leaf height, not the line-clamp, was what truncated stories
   aspect-ratio: 2 / 1.28;
   max-width: 1100px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
     aspect-ratio: 4 / 5;
-    transform: rotateX(4deg);
-  }
-}
-
-// Unread page-stack: stacked paper edges peeking out right + bottom.
-.folio-stack {
-  position: absolute;
-  inset: 3px -7px -7px calc(50% + 6px);
-  background:
-    repeating-linear-gradient(to right, rgba($grey-blue3, 0.35) 0 1px, $warm-bg-light 1px 3px);
-  border: 1px solid rgba($grey-blue3, 0.3);
-
-  @media (max-width: 768px) {
-    left: 6px;
   }
 }
 
 .folio-leftbase {
   position: absolute;
   inset: 0 50% 0 0;
-  background:
-    linear-gradient(to right, rgba(21, 41, 57, 0.05), rgba(21, 41, 57, 0) 12%),
-    $warm-bg-light;
-  border: 1px solid rgba($grey-blue3, 0.28);
+  background: $parchment;
+  border: 1px solid $hairline;
   border-right: none;
-  // spine gutter: the left page darkens toward the fold
-  box-shadow: inset -16px 0 26px -18px rgba(21, 41, 57, 0.4);
+  border-radius: 18px 0 0 18px;
   // column so the plate can fill the leaf with its caption beneath;
   // padding mirrors .folio-face so both leaves share one margin.
   display: flex;
@@ -297,10 +275,11 @@ export default defineComponent({
   padding: clamp(18px, 3vw, 34px);
 
   .folio-watermark {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 900;
+    font-family: $display-font;
+    font-weight: 600;
     font-size: clamp(3rem, 8vw, 6rem);
-    color: rgba($grey-blue3, 0.06);
+    letter-spacing: -0.02em;
+    color: rgba($ink, 0.06);
     user-select: none;
   }
 
@@ -324,10 +303,8 @@ export default defineComponent({
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
-  border: 1px solid rgba($grey-blue3, 0.32);
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
-    $warm-bg-light;
+  border: 1px solid $hairline;
+  background: $parchment;
 }
 
 .folio-face {
@@ -335,8 +312,11 @@ export default defineComponent({
   flex-direction: column;
   padding: clamp(18px, 3vw, 34px);
   cursor: pointer;
-  // spine shading: the page darkens slightly toward the fold
-  box-shadow: inset 14px 0 24px -18px rgba(21, 41, 57, 0.35);
+  border-radius: 0 18px 18px 0;
+
+  @media (max-width: 768px) {
+    border-radius: 18px;
+  }
 }
 
 .folio-verso {
@@ -344,11 +324,12 @@ export default defineComponent({
   display: flex;
   align-items: flex-end;
   padding: 22px;
+  border-radius: 18px 0 0 18px;
 
   .folio-verso-ghost {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 0.8rem;
-    color: rgba($grey-blue3, 0.28);
+    font-size: 14px;
+    color: $ink-80;
+    opacity: 0.4;
   }
 }
 
@@ -356,39 +337,36 @@ export default defineComponent({
   display: flex;
   align-items: baseline;
   gap: 14px;
-  border-bottom: 3px double rgba($grey-blue3, 0.55);
-  padding-bottom: 10px;
   margin-bottom: clamp(10px, 2vw, 20px);
 
   .folio-brand {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 900;
-    font-size: clamp(0.95rem, 1.6vw, 1.2rem);
-    color: $grey-blue3;
+    font-family: $display-font;
+    font-weight: 600;
+    font-size: 14px;
+    color: $ink;
   }
 
   .folio-issue {
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    color: $brand-orange-text; // AA on the folio paper (brand orange is 3.4:1)
+    font-size: 14px;
+    font-weight: 600;
+    color: $ink-80;
   }
 
   .folio-date {
     margin-left: auto;
-    font-size: 0.78rem;
-    color: $dark-grey;
+    font-size: 14px;
+    color: $ink-80;
     white-space: nowrap;
   }
 }
 
 .folio-headline {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
+  font-family: $display-font;
+  font-weight: 600;
   font-size: clamp(1.5rem, 3.1vw, 2.45rem);
-  line-height: 1.32;
-  letter-spacing: 0.01em;
-  color: $grey-blue3;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: $ink;
   margin-bottom: clamp(10px, 2vw, 18px);
 }
 
@@ -413,11 +391,11 @@ export default defineComponent({
 
   @media (max-width: 768px) {
     display: block;
-    // auto, not a fixed 38% of the body: the art is landscape, so a fixed
-    // band cropped it the same way the desktop plate did
+    // auto, not a fixed 38% of the body: the art is landscape
     flex: 0 0 auto;
     margin: 0;
-    border: 1px solid rgba($grey-blue3, 0.3);
+    border: 1px solid $hairline;
+    border-radius: 12px;
     overflow: hidden;
 
     img {
@@ -440,8 +418,8 @@ export default defineComponent({
   min-height: 0;
   margin: 0;
   overflow: hidden;
-  border: 1px solid rgba($grey-blue3, 0.42);
-  box-shadow: 0 16px 34px -24px rgba(21, 41, 57, 0.6);
+  border: 1px solid $hairline;
+  border-radius: 12px;
 
   img {
     width: 100%;
@@ -449,7 +427,6 @@ export default defineComponent({
     max-height: 100%;
     object-fit: contain;
     display: block;
-    filter: saturate(0.94) contrast(1.05);
   }
 }
 
@@ -457,7 +434,6 @@ export default defineComponent({
   display: grid;
   place-items: center;
   border-style: dashed;
-  border-color: rgba($grey-blue3, 0.28);
 }
 
 .folio-plate-cap {
@@ -466,31 +442,29 @@ export default defineComponent({
   justify-content: space-between;
   gap: 12px;
   margin-top: 12px;
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: rgba($grey-blue3, 0.75);
+  font-size: 14px;
+  font-weight: 600;
+  color: $ink-80;
 }
 
 .folio-plate-brand {
-  color: $brand-orange;
-  letter-spacing: 0.16em;
+  color: $ink-80;
 }
 
 .folio-plate-note {
   margin-right: auto;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  color: rgba($grey-blue3, 0.45);
+  font-size: 14px;
+  font-weight: 400;
+  color: $ink-80;
 }
 
-// letterpress: navy ink at reading size. #4c4c4c on cream is what read as faint.
-// The whole right leaf is text now, so the clamp goes from 7 lines to 14.
+// Reading size: 17px ink on parchment. The whole right leaf is text,
+// so the clamp goes from 7 lines to 14.
 .folio-summary {
-  font-size: clamp(1.02rem, 1.32vw, 1.2rem);
-  font-weight: 500;
-  line-height: 1.92;
-  color: $grey-blue2;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $ink;
   display: -webkit-box;
   -webkit-line-clamp: 14;
   -webkit-box-orient: vertical;
@@ -501,13 +475,13 @@ export default defineComponent({
   }
 
   :deep(a) {
-    color: $brand-orange-text; // AA; was $brand-orange at 3.4:1
+    color: $brand-orange-text;
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 2px;
 
     &:hover {
-      color: $orange2;
+      color: $ink;
     }
   }
 }
@@ -516,32 +490,32 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba($grey-blue3, 0.25);
   padding-top: 10px;
   margin-top: clamp(10px, 2vw, 16px);
 
   .folio-pageno {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 0.82rem;
-    color: $dark-grey;
-    letter-spacing: 0.12em;
+    font-size: 14px;
+    color: $ink-80;
   }
 
-  // dog-eared corner inviting the turn
+  // small orange corner inviting the turn
   .folio-corner {
-    width: 26px;
-    height: 26px;
-    background: linear-gradient(135deg, transparent 50%, rgba($brand-orange, 0.55) 50%);
+    width: 20px;
+    height: 20px;
+    background: $brand-orange-text;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
     animation: folioPeek 2.6s ease-in-out infinite;
   }
 }
 
+// paper shade during the turn: a flat veil, no gradient
 .folio-shade {
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   pointer-events: none;
   opacity: 0;
-  background: linear-gradient(100deg, rgba(21, 41, 57, 0.42), rgba(21, 41, 57, 0) 55%);
+  background: rgba($ink, 0.4);
 }
 
 .folio-controls {
@@ -552,19 +526,32 @@ export default defineComponent({
   margin-top: 26px;
 
   .folio-btn {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 700;
-    font-size: 0.98rem;
-    color: $grey-blue3;
-    background: none;
-    border: none;
-    border-bottom: 2px solid $brand-orange;
-    padding: 2px 4px 4px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 1;
+    color: $ink;
+    background: $parchment;
+    border: 1px solid $hairline;
+    border-radius: 50%;
+    padding: 0;
     cursor: pointer;
-    transition: color 0.25s ease, opacity 0.25s ease;
+    transition: color 0.25s ease, opacity 0.25s ease, transform 0.15s ease;
 
     &:hover:not(:disabled) {
-      color: $brand-orange;
+      color: $brand-orange-text;
+    }
+
+    &:active:not(:disabled) {
+      transform: scale(0.95);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $brand-orange-text;
+      outline-offset: 2px;
     }
 
     &:disabled {
@@ -574,9 +561,8 @@ export default defineComponent({
   }
 
   .folio-count {
-    font-size: 0.85rem;
-    color: $dark-grey;
-    letter-spacing: 0.15em;
+    font-size: 14px;
+    color: $ink-80;
     min-width: 56px;
     text-align: center;
   }

@@ -5,20 +5,20 @@
 // page was built, not assembled. Tokens only, no new colours.
 
 ::selection {
-  background: rgba($signal, 0.35);
-  color: $grey-blue3;
+  background: rgba(184, 67, 31, 0.2);
+  color: $ink;
 }
 
 body {
-  caret-color: $brand-orange;
-  accent-color: $brand-orange;
+  caret-color: $brand-orange-text;
+  accent-color: $brand-orange-text;
 }
 
 // One focus ring for everything focusable. `:where()` keeps specificity at
 // zero so components that draw their own ring (header, buttons, contact form)
 // still win; everything else inherits this instead of the UA blue.
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
-  outline: 2px solid $signal-text;
+  outline: 2px solid $brand-orange-text;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -33,7 +33,7 @@ a {
 }
 
 html {
-  scrollbar-color: rgba($grey-blue3, 0.35) transparent;
+  scrollbar-color: rgba($ink, 0.35) transparent;
   scrollbar-width: thin;
 }
 
@@ -47,11 +47,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba($grey-blue3, 0.28);
+  background: rgba($ink, 0.28);
   border-radius: 999px;
-  border: 3px solid $warm-bg-light;
+  border: 3px solid transparent;
+  background-clip: padding-box;
 
   &:hover {
-    background: rgba($grey-blue3, 0.45);
+    background: rgba($ink, 0.45);
   }
 }

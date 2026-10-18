@@ -1,12 +1,10 @@
 <template>
-  <!-- ed-footer: the magazine's back cover. Flat navy, orange masthead rule,
-       serif wordmark, text social links. Replaces the old gradient footer
-       (_footer.scss removed with it). -->
+  <!-- ed-footer: Apple dense-link footer on parchment. Plain-text columns,
+       display-font wordmark, text social links, no rules. -->
   <footer class="ed-footer">
     <div class="ft-inner">
       <div class="ft-top">
         <div class="ft-brand">
-          <p class="ft-kicker">{{ $t('brandJournal') }}</p>
           <p class="ft-word">enGo</p>
           <p class="ft-tag">
             {{ isZh ? '把智慧生活，寫進每一天。' : 'Smart living, written into every day.' }}
@@ -114,11 +112,9 @@ export default defineComponent({
 <style scoped lang="scss">
 @import '../css/utils/variables';
 
-$cream: #F5F7FA;
-
 .ed-footer {
-  background: $grey-blue3;
-  border-top: 3px solid $brand-orange;
+  background: $parchment;
+  color: $ink-80;
   padding: 72px 5vw 40px;
 }
 
@@ -135,48 +131,21 @@ $cream: #F5F7FA;
   flex-wrap: wrap;
 }
 
-.ft-kicker {
-  font-size: 0.92rem;
-  font-weight: 800;
-  letter-spacing: 0.28em;
-  color: $orange2;
-  margin-bottom: 10px;
-}
-
 .ft-word {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
+  font-family: $display-font;
+  font-weight: 600;
   font-size: clamp(3rem, 7vw, 5rem);
   line-height: 1;
-  color: $orange2;
+  letter-spacing: -0.02em;
+  color: $ink;
 }
 
 .ft-tag {
   margin-top: 14px;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 500;
-  font-size: 1.02rem;
-  letter-spacing: 0.06em;
-  color: rgba($cream, 0.75);
-}
-
-.ft-news {
-  display: inline-block;
-  margin-top: 18px;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: 1.02rem;
-  letter-spacing: 0.06em;
-  color: $orange2;
-  text-decoration: none;
-  border-bottom: 2px solid $brand-orange;
-  padding-bottom: 3px;
-  transition: color 0.2s ease;
-
-  &:hover,
-  &:focus-visible {
-    color: $warm-bg-light;
-  }
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.47;
+  color: $ink-80;
 }
 
 .ft-cols {
@@ -188,39 +157,36 @@ $cream: #F5F7FA;
 .ft-col {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 
   a,
   .ft-link {
     margin: 0; // a global rule gives <a> side margins; keep column edges flush
-    color: rgba($cream, 0.72);
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
+    color: $ink-80;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 2.4;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.2s ease;
 
     &:hover,
     &:focus-visible {
-      color: $orange2;
+      color: $brand-orange-text;
     }
   }
 }
 
 .ft-col-title {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: $cream;
-  padding-bottom: 8px;
-  margin-bottom: 6px;
-  border-bottom: 2px solid $brand-orange;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.43;
+  color: $ink;
+  margin-bottom: 8px;
 }
 
 .ft-bottom {
   margin-top: 56px;
   padding-top: 22px;
-  border-top: 1px solid rgba($cream, 0.18);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -232,19 +198,16 @@ $cream: #F5F7FA;
   gap: 26px;
 
   a {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 700;
-    font-size: 0.92rem;
-    letter-spacing: 0.08em;
-    color: $cream;
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: $ink;
     text-decoration: none;
-    border-bottom: 2px solid $brand-orange;
-    padding-bottom: 2px;
     transition: color 0.2s ease;
 
     &:hover,
     &:focus-visible {
-      color: $orange2;
+      color: $brand-orange-text;
     }
   }
 }
@@ -253,17 +216,18 @@ $cream: #F5F7FA;
   display: flex;
   flex-wrap: wrap;
   gap: 6px 20px;
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  color: rgba($cream, 0.55);
+  font-size: 12px;
+  line-height: 1.5;
+  color: $ink-80;
 
   a {
+    margin: 0;
     color: inherit;
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
-      color: $orange2;
+      color: $brand-orange-text;
     }
   }
 }
@@ -271,7 +235,7 @@ $cream: #F5F7FA;
 .ft-legal i {
   font-style: normal;
   margin: 0 6px;
-  color: rgba($cream, 0.3);
+  color: $ink-80;
 }
 
 @media (max-width: 768px) {
