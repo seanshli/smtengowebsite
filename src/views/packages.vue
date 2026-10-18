@@ -1,76 +1,82 @@
 <template>
-  <section class="packages-page w-100 pt-70">
+  <section class="packages-page">
     <div id="packages-wrapper">
-      <!-- 套裝方案 -->
-      <div id="packages" class="package-section container py-100 py-mob-60">
-        <header class="ed-mast-block">
-          <h1 class="ed-mast-title">{{ $t('product.packages.tag') || '套裝方案' }}</h1>
-          <p class="ed-mast-sub">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</p>
-        </header>
-        
-        <div class="package-grid">
-          <div v-for="(pkg, idx) in packages.main_packages" :key="pkg.id" class="package-card card-hover scroll-reveal" :class="{ featured: idx === 1 }">
-            <div class="p-card-header">
-              <h3 class="pkg-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h3>
-              <p class="pkg-usage">{{ (pkg.suggested_usage as any)[locale] || pkg.suggested_usage['zh'] }}</p>
-              <div class="pkg-price">{{ pkg.price }}</div>
-            </div>
-            
-            <div class="p-card-body">
-              <div class="spec-group">
-                <h4>{{ $t('product.packages.functions') || '核心功能' }}</h4>
-                <ul>
-                  <li v-for="f in ((pkg.functions as any)[locale] || pkg.functions['zh'])" :key="f">{{ f }}</li>
-                </ul>
-              </div>
-              
-              <div class="spec-group">
-                <h4>{{ $t('product.packages.scenarios') || '情境控制' }}</h4>
-                <ul>
-                  <li v-for="s in ((pkg.scenarios as any)[locale] || pkg.scenarios['zh'])" :key="s">{{ s }}</li>
-                </ul>
-              </div>
-              
-              <div class="spec-group">
-                <h4>{{ $t('product.packages.components') || '套裝組件' }}</h4>
-                <ul>
-                  <li v-for="c in ((pkg.components as any)[locale] || pkg.components['zh'])" :key="c">{{ c }}</li>
-                </ul>
-              </div>
-            </div>
+      <!-- 套裝方案 (white tile): centered head, then the three package cards -->
+      <section id="packages" class="pk-tile pk-white package-section">
+        <div class="pk-wrap">
+          <header class="pk-head">
+            <h1 class="pk-title">{{ $t('product.packages.tag') || '套裝方案' }}</h1>
+            <p class="pk-lead">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</p>
+          </header>
 
-            <div class="p-card-footer">
-              <button class="buy-pkg-btn" @click="buyNow">{{ $t('product.purchase.btn') }}</button>
+          <div class="package-grid">
+            <div v-for="(pkg, idx) in packages.main_packages" :key="pkg.id" class="package-card scroll-reveal" :class="{ featured: idx === 1 }">
+              <div class="p-card-header">
+                <h3 class="pkg-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h3>
+                <p class="pkg-usage">{{ (pkg.suggested_usage as any)[locale] || pkg.suggested_usage['zh'] }}</p>
+                <div class="pkg-price">{{ pkg.price }}</div>
+              </div>
+
+              <div class="p-card-body">
+                <div class="spec-group">
+                  <h4>{{ $t('product.packages.functions') || '核心功能' }}</h4>
+                  <ul>
+                    <li v-for="f in ((pkg.functions as any)[locale] || pkg.functions['zh'])" :key="f">{{ f }}</li>
+                  </ul>
+                </div>
+
+                <div class="spec-group">
+                  <h4>{{ $t('product.packages.scenarios') || '情境控制' }}</h4>
+                  <ul>
+                    <li v-for="s in ((pkg.scenarios as any)[locale] || pkg.scenarios['zh'])" :key="s">{{ s }}</li>
+                  </ul>
+                </div>
+
+                <div class="spec-group">
+                  <h4>{{ $t('product.packages.components') || '套裝組件' }}</h4>
+                  <ul>
+                    <li v-for="c in ((pkg.components as any)[locale] || pkg.components['zh'])" :key="c">{{ c }}</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="p-card-footer">
+                <button class="buy-pkg-btn" @click="buyNow">{{ $t('product.purchase.btn') }}</button>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- 可增選套裝方案 -->
-        <h3 class="fz-32 fw-700 text-grey-blue mt-100 mb-48 tac">{{ $t('product.packages.addOns') }}</h3>
-        <div class="addon-grid">
-           <div v-for="pkg in packages.add_on_packages" :key="pkg.id" class="addon-card scroll-reveal">
-            <h4 class="addon-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h4>
-            <ul class="addon-specs">
-              <li v-for="item in ((pkg.components as any)[locale] || pkg.components['zh'])" :key="item">{{ item }}</li>
-            </ul>
-            <div class="addon-footer">
-               <button class="buy-addon-btn" @click="buyNow">{{ $t('product.purchase.btn') }}</button>
+      <!-- 可增選套裝方案 (parchment tile) -->
+      <section id="addons" class="pk-tile pk-parchment package-section">
+        <div class="pk-wrap">
+          <header class="pk-head">
+            <h2 class="pk-h2">{{ $t('product.packages.addOns') }}</h2>
+          </header>
+          <div class="addon-grid">
+            <div v-for="pkg in packages.add_on_packages" :key="pkg.id" class="addon-card scroll-reveal">
+              <h3 class="addon-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h3>
+              <ul class="addon-specs">
+                <li v-for="item in ((pkg.components as any)[locale] || pkg.components['zh'])" :key="item">{{ item }}</li>
+              </ul>
+              <div class="addon-footer">
+                <button class="buy-addon-btn" @click="buyNow">{{ $t('product.purchase.btn') }}</button>
+              </div>
             </div>
-          </div>
-          
-          <!-- Catalog Menu Trigger -->
-          <div class="addon-card other-link" @click="openCatalogMenu">
-            <h4 class="addon-name">{{ $t('product.packages.otherOptions') }}</h4>
-            <div class="catalog-icon">
-              <img src="/assets/file-badge.svg" alt="Catalog" />
+
+            <!-- Catalog Menu Trigger -->
+            <div class="addon-card other-link" @click="openCatalogMenu">
+              <h3 class="addon-name">{{ $t('product.packages.otherOptions') }}</h3>
+              <div class="catalog-icon">
+                <img src="/assets/file-badge.svg" alt="Catalog" />
+              </div>
+              <p class="catalog-hint">{{ $t('product.viewDetails') || '查看所有產品' }}</p>
             </div>
-            <p class="tac text-grey-666 fz-14 px-20">{{ $t('product.viewDetails') || '查看所有產品' }}</p>
           </div>
         </div>
-      </div>
-
-</div>
-    
+      </section>
+    </div>
 
     <CatalogMenu
       v-if="isCatalogMenuOpen"
@@ -79,11 +85,11 @@
       @select="selectCatalogProduct"
     />
 
-    <ProductCatalog 
-      v-if="isCatalogOpen" 
-      :isOpen="isCatalogOpen" 
-      :product="selectedCatalogItem" 
-      @close="closeCatalog" 
+    <ProductCatalog
+      v-if="isCatalogOpen"
+      :isOpen="isCatalogOpen"
+      :product="selectedCatalogItem"
+      @close="closeCatalog"
     />
   </section>
 </template>
@@ -164,86 +170,60 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
+
+// Apple-profile tiles (DESIGN.md + src/views/index.vue): white then parchment, edge to edge,
+// parchment hairline cards (white on the parchment tile so the card edge still reads), no shadow.
+.packages-page { background: #fff; color: $ink; font-family: $display-font; }
+.packages-page a:focus-visible, .packages-page button:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 3px; }
+
+.pk-wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
+.pk-tile { padding: clamp(64px, 9vw, 112px) 0; }
+.pk-white { background: #fff; }
+.pk-parchment { background: $parchment; }
+// the first tile sits under the fixed header
+#packages { padding-top: clamp(104px, 11vw, 136px); }
+
+.pk-head { text-align: center; margin-bottom: clamp(36px, 5vw, 64px); }
+.pk-title {
+  font-family: $display-font; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; color: $ink; margin: 0;
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+}
+.pk-h2 {
+  font-family: $display-font; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; color: $ink; margin: 0;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+}
+.pk-lead { font-size: clamp(1.15rem, 1.7vw, 1.5rem); font-weight: 400; line-height: 1.4; letter-spacing: -.005em; color: $ink; margin: 14px auto 0; max-width: 34em; }
+
 .package-section {
   .package-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(1, 1fr);
-      max-width: 500px;
-      margin: 0 auto;
-    }
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
+    @media (max-width: 1024px) { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
   }
 
   .package-card {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    border-radius: 24px;
-    padding: 40px;
-    height: 100%;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-
-    &:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-      border-color: #043655;
-      background: #043655;
-      color: white;
-      .p-card-header {
-        .pkg-name { color: #c46043; }
-        .pkg-usage { color: #fff; }
-      }
-      .p-card-body {
-        .spec-group ul li { color: #fff; }
-      }
-      .buy-pkg-btn { background: #c46043; color: #fff; }
-    }
-
-    &.featured {
-      border-color: #043655;
-      .p-card-header { background: #043655; margin: -40px -40px 30px; padding: 32px 40px 28px; border-radius: 24px 24px 0 0; .pkg-name, .pkg-usage { color: #fff; } .pkg-price { color: #12B5A8; } }
-      &:hover .p-card-header { background: #032a43; }
-    }
+    display: flex; flex-direction: column; height: 100%; padding: 36px;
+    background: $parchment; border: 1px solid $hairline; border-radius: 18px; color: $ink;
+    &.featured { border-color: $ink; }
+    @media (max-width: 480px) { padding: 28px 22px; }
 
     .p-card-header {
-      margin-bottom: 30px;
-      text-align: center;
-      .pkg-name { font-size: 1.8rem; font-weight: 700; color: #043655; margin-bottom: 8px; }
-      .pkg-usage { font-size: 1rem; margin-bottom: 16px; font-weight: 500; color: #666; }
-      .pkg-price { font-size: 2rem; font-weight: 800; color: #c46043; }
+      margin-bottom: 28px; text-align: center;
+      .pkg-name { font-family: $display-font; font-size: 1.75rem; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; color: $ink; margin: 0 0 8px; }
+      .pkg-usage { font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; margin: 0 0 16px; }
+      .pkg-price { font-family: $display-font; font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 600; letter-spacing: -.03em; line-height: 1.1; color: $ink; }
     }
 
     .p-card-body {
       flex: 1;
       .spec-group {
         margin-bottom: 24px;
-        h4 { 
-          font-size: 1.1rem; 
-          font-weight: 700; 
-          margin-bottom: 12px; 
-          color: #c46043;
-          border-bottom: 1px solid #eee;
-          padding-bottom: 8px;
-        }
+        h4 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; margin: 0 0 10px; padding-bottom: 8px; color: $ink; border-bottom: 1px solid $hairline; }
         ul {
-          list-style: none;
-          padding: 0;
+          list-style: none; padding: 0; margin: 0;
           li {
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-            color: #555;
-            &::before {
-              content: '✓';
-              position: absolute;
-              left: 0;
-              color: #c46043;
-            }
+            position: relative; padding-left: 22px; margin-bottom: 8px; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80;
+            &::before { content: '✓'; position: absolute; left: 0; color: $ink; }
           }
         }
       }
@@ -252,157 +232,54 @@ export default defineComponent({
     .p-card-footer {
       margin-top: 20px;
       .buy-pkg-btn {
-        width: 100%;
-        padding: 16px;
-        border-radius: 30px;
-        border: none;
-        background: #c46043;
-        color: white;
-        font-weight: 700;
-        font-size: 1.1rem;
-        cursor: pointer;
-        transition: opacity 0.3s;
-        &:hover { opacity: 0.9; }
+        width: 100%; min-height: 44px; padding: 11px 22px; border-radius: 9999px; border: 1px solid transparent; cursor: pointer;
+        background: $brand-orange-text; color: #fff; font-family: inherit; font-size: 1.0625rem; font-weight: 400; letter-spacing: -.022em;
+        transition: transform .15s ease, background .2s ease;
+        &:hover { background: darken($brand-orange-text, 6%); }
+        &:active { transform: scale(.95); }
       }
     }
   }
 
   .addon-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    @media (max-width: 1024px) {
-      grid-template-columns: 1fr;
-      max-width: 500px;
-      margin: 0 auto;
-    }
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
+    @media (max-width: 1024px) { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
 
     .addon-card {
-      background: #fff8f5;
-      border: 1px solid #f9e1d8;
-      border-radius: 20px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s ease;
+      display: flex; flex-direction: column; padding: 32px; background: #fff; border: 1px solid $hairline; border-radius: 18px; color: $ink;
 
       &.other-link {
-        border-style: dashed;
-        cursor: pointer;
-        background: #fdfdfd;
-        justify-content: center;
-        align-items: center;
-        &:hover { background: #fff; transform: scale(1.02); }
-        .catalog-icon {
-          width: 50px;
-          margin: 15px 0;
-          opacity: 0.7;
-          img { width: 100%; }
-        }
+        cursor: pointer; justify-content: center; align-items: center; transition: transform .15s ease;
+        &:active { transform: scale(.98); }
+        .catalog-icon { width: 44px; margin: 14px 0; img { width: 100%; filter: brightness(0); opacity: .85; } }
+        .catalog-hint { margin: 0; text-align: center; font-size: 1.0625rem; letter-spacing: -.022em; color: $brand-orange-text; }
       }
 
-      &:hover:not(.other-link) {
-        border-color: #c46043;
-        box-shadow: 0 8px 24px rgba(196, 96, 67, 0.1);
-      }
-
-      .addon-name {
-        color: #c46043;
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        text-align: center;
-      }
+      .addon-name { font-family: $display-font; font-size: 1.3125rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.25; color: $ink; margin: 0 0 20px; text-align: center; }
 
       .addon-specs {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex: 1;
+        list-style: none; padding: 0; margin: 0; flex: 1;
         li {
-          font-size: 0.9rem;
-          color: #666;
-          margin-bottom: 10px;
-          position: relative;
-          padding-left: 18px;
-          line-height: 1.4;
-          &::before {
-            content: '+';
-            position: absolute;
-            left: 0;
-            color: #d4a753;
-            font-weight: bold;
-          }
+          position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80;
+          &::before { content: '+'; position: absolute; left: 0; color: $ink; font-weight: 600; }
         }
       }
 
       .addon-footer {
         margin-top: 24px;
         .buy-addon-btn {
-          width: 100%;
-          padding: 12px;
-          border-radius: 25px;
-          border: 1px solid #c46043;
-          background: transparent;
-          color: #c46043;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s;
-          &:hover {
-            background: #c46043;
-            color: white;
-          }
+          width: 100%; min-height: 44px; padding: 11px 22px; border-radius: 9999px; border: 1px solid $brand-orange-text; cursor: pointer;
+          background: transparent; color: $brand-orange-text; font-family: inherit; font-size: 1.0625rem; font-weight: 400; letter-spacing: -.022em;
+          transition: transform .15s ease, background .2s ease;
+          &:hover { background: rgba($brand-orange, .06); }
+          &:active { transform: scale(.95); }
         }
       }
     }
   }
 }
 
-</style>
-
-<style scoped lang="scss">
-@import '../css/utils/variables';
-@import '../css/utils/masthead';
-
-// ─── Editorial pass (design/editorial-phase2) ───
-.packages-page {
-  background: $warm-bg-light;
-}
-
-#packages-wrapper {
-  background: $warm-bg-light;
-  width: 100%;
-  border-top: none;
-}
-
-.packages-page :is(h1, h2, h3, h4) {
-  font-family: 'Noto Serif TC', serif;
-}
-
-.ed-mast-block {
-  @include masthead-block;
-  margin-bottom: 48px;
-  text-align: left;
-}
-
-.ed-mast-kicker {
-  @include masthead-kicker;
-}
-
-.ed-mast-title {
-  @include masthead-title;
-}
-
-.ed-mast-sub {
-  font-size: clamp(1.16rem, 2vw, 1.42rem);
-  font-weight: 500;
-  line-height: 1.95;
-  color: $grey-blue2;
-  max-width: 34em;
-}
-
-// mounted-plate system: squared corners page-wide
-.packages-page :is(div[class*="card"], table, th, td, button, a[class*="btn"]) {
-  border-radius: 0 !important;
+@media (prefers-reduced-motion: reduce) {
+  .package-card, .addon-card, .buy-pkg-btn, .buy-addon-btn { transition: none; }
 }
 </style>

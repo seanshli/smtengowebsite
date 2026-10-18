@@ -1,64 +1,64 @@
 <template>
-  <!-- 夜間版 night edition: the one dark page in the 生活誌 system. Ground is
-       brand navy (not black), type is cream, wires are orange — the same
-       tokens as the light pages, roles inverted. -->
-  <section id="enviro" class="ev-page">
-    <!-- Editorial masthead, inverted -->
-    <header class="ev-mast">
-      <h1 class="ev-title">{{ $t('enviroTitle') }}</h1>
-      <p class="ev-sub fade-in">
-        {{ isZh
-          ? '整合陽光、空氣、水與智慧廚房，一套系統，讓整個空間的環境彼此連動。'
-          : 'Sunlight, air, water, and the smart kitchen, one system where the whole environment moves together.' }}
-      </p>
-      <router-link to="/contact" class="ev-cta fade-in">
-        {{ isZh ? '免費預約諮詢' : 'Book a free consultation' }} →
-      </router-link>
-    </header>
-
-    <!-- Network scene: Gemini-rendered illustration in the night-edition
-         palette (generated via the ai-studio-image skill, text-free edit of
-         v1). Replaces the earlier hand-built SVG — one diagram, the richer
-         one; the SVG lives in git history if ever needed again. -->
-    <figure class="ev-scene-wrap fade-in">
-      <img
-        class="ev-scene-img"
-        src="/images/enviro/enviro-network.jpg"
-        :alt="isZh ? 'enGo 智慧環控網絡示意圖' : 'enGo environmental control network illustration'"
-        decoding="async"
-      />
-    </figure>
-
-    <!-- Four pillars -->
-    <div class="ev-pillars">
-      <article
-        v-for="p in pillars"
-        :key="p.id"
-        class="ev-pillar fade-in"
-        :style="{ '--pc': p.color }"
-      >
-        <div class="ev-pillar-head">
-          <svg class="ev-pillar-icon" viewBox="-24 -24 48 48" aria-hidden="true" v-html="p.icon"></svg>
+  <section id="enviro" class="ap-page ev-page">
+    <!-- tile 1, white: title, subtitle, consultation pill -->
+    <div class="ap-tile ap-tile-first ap-white">
+      <div class="ap-wrap ap-center">
+        <h1 class="ap-title">{{ $t('enviroTitle') }}</h1>
+        <p class="ap-lead fade-in">
+          {{ isZh
+            ? '整合陽光、空氣、水與智慧廚房，一套系統，讓整個空間的環境彼此連動。'
+            : 'Sunlight, air, water, and the smart kitchen, one system where the whole environment moves together.' }}
+        </p>
+        <div class="ap-cta-row fade-in">
+          <router-link to="/contact" class="ap-pill ap-pill-primary">
+            {{ isZh ? '免費預約諮詢' : 'Book a free consultation' }}
+          </router-link>
         </div>
-        <h2 class="ev-pillar-title">{{ isZh ? p.title.zh : p.title.en }}</h2>
-        <p class="ev-pillar-copy">{{ isZh ? p.copy.zh : p.copy.en }}</p>
-        <ul class="ev-pillar-points">
-          <li v-for="(pt, j) in (isZh ? p.points.zh : p.points.en)" :key="j">{{ pt }}</li>
-        </ul>
-      </article>
+      </div>
     </div>
 
-    <!-- Closing: inverted back to cream — the daylight returns -->
-    <div class="ev-closing">
-      <div class="ev-closing-inner fade-in">
+    <!-- tile 2, parchment: the network illustration (text-free render in the site palette) -->
+    <div class="ap-tile ap-parchment">
+      <div class="ap-wrap">
+        <figure class="ap-photo ev-scene fade-in">
+          <img
+            src="/images/enviro/enviro-network.jpg"
+            :alt="isZh ? 'enGo 智慧環控網絡示意圖' : 'enGo environmental control network illustration'"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </div>
+
+    <!-- tile 3, white: four pillars as cards -->
+    <div class="ap-tile ap-white">
+      <div class="ap-wrap">
+        <div class="ap-grid ap-grid-2 ev-pillars">
+          <article v-for="p in pillars" :key="p.id" class="ap-card ev-pillar fade-in">
+            <svg class="ev-pillar-icon" viewBox="-24 -24 48 48" aria-hidden="true" v-html="p.icon"></svg>
+            <h2 class="ap-h2 ev-pillar-title">{{ isZh ? p.title.zh : p.title.en }}</h2>
+            <p class="ap-body ev-pillar-copy">{{ isZh ? p.copy.zh : p.copy.en }}</p>
+            <ul class="ap-rows ev-pillar-points">
+              <li v-for="(pt, j) in (isZh ? p.points.zh : p.points.en)" :key="j">{{ pt }}</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- tile 4, dark: closing -->
+    <div class="ap-tile ap-dark">
+      <div class="ap-wrap ap-wrap-text ap-center fade-in">
         <p class="ev-closing-line">
           {{ isZh
             ? '陽光、空氣、水，加上一顆懂家的大腦。'
             : 'Sunlight, air, water, and one brain that understands your home.' }}
         </p>
-        <router-link to="/contact" class="ev-closing-cta">
-          {{ isZh ? '與我們聊聊您的空間' : 'Talk to us about your space' }} →
-        </router-link>
+        <div class="ap-cta-row">
+          <router-link to="/contact" class="ap-link">
+            {{ isZh ? '與我們聊聊您的空間' : 'Talk to us about your space' }}
+          </router-link>
+        </div>
       </div>
     </div>
   </section>
@@ -76,7 +76,6 @@ interface Bi {
 
 interface Pillar {
   id: string
-  color: string // pillar accent — matches its card color in the illustration
   icon: string // inline SVG fragment, stroke via currentColor
   title: Bi
   copy: Bi
@@ -94,7 +93,6 @@ const ICONS: Record<string, string> = {
 const PILLARS: Pillar[] = [
   {
     id: 'sun',
-    color: '#FE8B05',
     icon: ICONS.sun,
     title: { zh: '智慧陽光控溫', en: 'Smart daylight & temperature' },
     copy: {
@@ -108,7 +106,6 @@ const PILLARS: Pillar[] = [
   },
   {
     id: 'air',
-    color: '#34c98e',
     icon: ICONS.air,
     title: { zh: '空氣淨化監測', en: 'Air purification & monitoring' },
     copy: {
@@ -122,7 +119,6 @@ const PILLARS: Pillar[] = [
   },
   {
     id: 'water',
-    color: '#3bbeff',
     icon: ICONS.water,
     title: { zh: '智慧水務管理', en: 'Smart water management' },
     copy: {
@@ -136,7 +132,6 @@ const PILLARS: Pillar[] = [
   },
   {
     id: 'kitchen',
-    color: '#ff5a5a',
     icon: ICONS.kitchen,
     title: { zh: '智慧廚房安全', en: 'Smart kitchen safety' },
     copy: {
@@ -163,215 +158,53 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
-@import '../css/utils/masthead';
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-in {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-}
-
-// ─── night ground ───
-.ev-page {
-  background: $grey-blue3;
-  padding: 110px 5vw 0;
-  color: $warm-bg-light;
-
-  @media (max-width: 768px) {
-    padding-top: 96px;
-  }
-}
-
-.ev-mast {
-  max-width: 1100px;
-  margin: 0 auto 20px;
-  @include masthead-block($warm-bg-light);
-}
-
-.ev-title {
-  @include masthead-title($warm-bg-light);
-}
-
-.ev-sub {
-  font-size: clamp(1.12rem, 2vw, 1.4rem);
-  font-weight: 500;
-  line-height: 1.95;
-  color: rgba($warm-bg-light, 0.82);
-  max-width: 32em;
-}
-
-.ev-cta {
-  display: inline-block;
-  margin-top: 26px;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: 1.08rem;
-  color: $grey-blue3;
-  background: $brand-orange;
-  padding: 13px 26px;
-  text-decoration: none;
-  transition: background 0.25s ease, transform 0.25s ease;
-
-  &:hover {
-    background: $orange2;
-    transform: translate(-2px, -2px);
-  }
-}
-
-// ─── network scene (rendered illustration) ───
-.ev-scene-wrap {
-  max-width: 900px;
-  margin: 8px auto 48px;
-}
-
-.ev-scene-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid rgba($warm-bg-light, 0.28);
-  box-shadow: 0 22px 44px -24px rgba(0, 0, 0, 0.65);
-}
-
-// ─── pillars ───
-.ev-pillars {
-  max-width: 1100px;
+.ev-scene {
+  max-width: 980px;
   margin: 0 auto;
-  padding-bottom: 90px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
 
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding-bottom: 56px;
+  img {
+    aspect-ratio: 1400 / 764;
   }
+}
+
+.ev-pillars {
+  gap: clamp(20px, 2.5vw, 32px);
 }
 
 .ev-pillar {
-  position: relative;
-  background: #1d3346;
-  border: 1px solid rgba($warm-bg-light, 0.28);
-  padding: 30px 30px 26px;
-  transition: transform 0.3s ease;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 8px -8px -8px 8px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-    z-index: -1;
-  }
-
-  &:hover {
-    transform: translate(-3px, -3px);
-
-    &::before {
-      border-color: var(--pc, $brand-orange);
-    }
-  }
-}
-
-.ev-pillar-head {
-  display: flex;
-  align-items: center;
+  padding: clamp(24px, 3vw, 36px);
 }
 
 .ev-pillar-icon {
+  display: block;
   width: 44px;
   height: 44px;
-  color: var(--pc, $orange2);
+  color: $ink;
 }
 
 .ev-pillar-title {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
-  color: var(--pc, $warm-bg-light);
-  margin: 10px 0 12px;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  margin: 16px 0 12px;
 }
 
 .ev-pillar-copy {
-  font-size: 1rem;
-  line-height: 1.95;
-  color: rgba($warm-bg-light, 0.8);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
-.ev-pillar-points {
-  list-style: none;
-  padding: 0;
-  border-top: 1px solid rgba($warm-bg-light, 0.22);
-
-  li {
-    padding: 8px 0 8px 18px;
-    border-bottom: 1px solid rgba($warm-bg-light, 0.12);
-    font-size: 0.92rem;
-    color: rgba($warm-bg-light, 0.85);
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 1em;
-      width: 8px;
-      height: 2px;
-      background: var(--pc, $orange2);
-    }
-  }
-}
-
-// ─── closing: back to daylight ───
-.ev-closing {
-  background: $warm-bg-light;
-  margin: 0 -5vw;
-  padding: 84px 5vw;
-  text-align: center;
-}
-
-.ev-closing-inner {
-  max-width: 720px;
-  margin: 0 auto;
+.ev-pillar-points li {
+  font-size: 1.0625rem;
+  letter-spacing: -0.022em;
+  padding: 10px 0;
 }
 
 .ev-closing-line {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
-  line-height: 1.9;
-  color: $grey-blue3;
-  margin-bottom: 24px;
-}
-
-.ev-closing-cta {
-  display: inline-block;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: $grey-blue3;
-  text-decoration: none;
-  border-bottom: 2px solid $brand-orange;
-  padding-bottom: 3px;
-  transition: color 0.25s ease;
-
-  &:hover {
-    color: $brand-orange;
-  }
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.2vw, 2.5rem);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #fff;
 }
 </style>

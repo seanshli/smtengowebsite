@@ -6,18 +6,16 @@
     align-items: center;
     padding: 12px 20px;
     background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     position: fixed;
     width: 100%;
     z-index: 3;
-    box-shadow: 0 2px 20px rgba(34, 66, 116, 0.08);
-    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    border-bottom: 1px solid $hairline;
+    transition: padding 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 
     &.scrolled {
         padding: 8px 20px;
-        box-shadow: 0 4px 30px rgba(34, 66, 116, 0.12);
-        background: rgba(255, 255, 255, 0.97);
     }
 }
 
@@ -28,6 +26,18 @@
 .language-dropdown {
     align-self: flex-start;
     margin: 0 10px;
+    font-size: 14px;
+    color: $ink;
+    background: #fff;
+    border: 1px solid $hairline;
+    border-radius: 8px;
+    padding: 4px 8px;
+    min-height: 0;
+
+    &:focus-visible {
+        outline: 2px solid $brand-orange-text;
+        outline-offset: 2px;
+    }
 }
 
 .logo {
@@ -53,32 +63,21 @@
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #444;
+    color: $ink;
     cursor: pointer;
-    font-weight: 500;
-    font-size: 0.92rem;
-    position: relative;
-    transition: color 0.3s;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 50%;
-        width: 0;
-        height: 2.5px;
-        background: $warm-gradient;
-        border-radius: 2px;
-        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-        transform: translateX(-50%);
-    }
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.016em;
+    transition: color 0.2s;
 
     &:hover {
-        color: $brand-orange;
+        color: $brand-orange-text;
     }
 
-    &:hover::after {
-        width: 100%;
+    &:focus-visible {
+        outline: 2px solid $brand-orange-text;
+        outline-offset: 3px;
+        border-radius: 4px;
     }
 }
 
@@ -92,7 +91,7 @@ nav a {
     background: white;
     height: 100%;
     padding: 20px 20px 20px 40px;
-    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid $hairline;
     transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     z-index: 150;
 
@@ -130,7 +129,7 @@ nav a {
     }
 
     &:focus-visible {
-        outline: 2px solid $brand-orange;
+        outline: 2px solid $brand-orange-text;
         outline-offset: 2px;
     }
 }
@@ -154,7 +153,7 @@ nav a {
     }
 
     &:focus-visible {
-        outline: 2px solid $brand-orange;
+        outline: 2px solid $brand-orange-text;
         outline-offset: 2px;
     }
 }
@@ -168,7 +167,7 @@ nav a {
     width: 25px;
     height: 2.5px;
     margin: 3px 0;
-    background: $brand-orange;
+    background: $ink;
     border-radius: 2px;
     transition: all 0.3s;
 }
@@ -191,7 +190,7 @@ nav a {
 
         &:hover {
             padding-left: 8px;
-            color: $brand-orange;
+            color: $brand-orange-text;
         }
     }
 }
@@ -235,32 +234,27 @@ nav a {
     transform: translateX(-50%);
     background: white;
     min-width: 190px;
-    border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(34, 66, 116, 0.15);
+    border-radius: 8px;
     z-index: 10;
     padding: 8px 0;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid $hairline;
     animation: fadeInUp 0.25s ease-out;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: #444 !important;
+    color: $ink !important;
     padding: 10px 20px;
     text-decoration: none;
     display: block;
     cursor: pointer;
-    transition: all 0.25s;
-    font-size: 0.9rem;
-
-    &::after {
-        display: none !important; // remove the nav underline effect inside dropdowns
-    }
+    transition: color 0.2s, background 0.2s;
+    font-size: 14px;
+    letter-spacing: -0.016em;
 
     &:hover {
-        background: $warm-bg-cream;
-        color: $brand-orange !important;
-        padding-left: 24px;
+        background: $parchment;
+        color: $brand-orange-text !important;
     }
 }
 

@@ -1,1 +1,33 @@
-/**客製 input */
+@import '../utils/variables';
+
+// Text fields: white, 1px hairline, radius 8, 44px tall, orange focus ring.
+// Scoped to un-classed controls via :where() so component-level styles still win.
+:where(input:not([type='checkbox'], [type='radio'], [type='range'], [type='file'], [type='submit'], [type='button'], [type='hidden']), textarea) {
+  background: #fff;
+  color: $ink;
+  border: 1px solid $hairline;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 17px;
+  box-shadow: none;
+  transition: border-color 0.2s ease;
+
+  &::placeholder {
+    color: $ink-48;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand-orange-text;
+    outline-offset: 0;
+    border-color: $brand-orange-text;
+  }
+}
+
+:where(input:not([type='checkbox'], [type='radio'], [type='range'], [type='file'], [type='submit'], [type='button'], [type='hidden'])) {
+  min-height: 44px;
+  padding: 0 14px;
+}
+
+:where(textarea) {
+  padding: 10px 14px;
+}

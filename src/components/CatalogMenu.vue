@@ -55,6 +55,9 @@ const getImageUrl = (name: string) => {
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
+
+// Apple-profile utility modal: white sheet on a scrim, parchment hairline cards (radius 18), no shadows.
 .catalog-menu-overlay {
   position: fixed;
   top: 0;
@@ -70,15 +73,16 @@ const getImageUrl = (name: string) => {
 }
 
 .catalog-menu-modal {
-  background: white;
-  border-radius: 20px;
+  background: #fff;
+  border-radius: 18px;
   width: 100%;
   max-width: 800px;
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
   padding: 40px;
+  font-family: $display-font;
+  color: $ink;
 
   @media (max-width: 768px) {
     padding: 24px;
@@ -86,17 +90,23 @@ const getImageUrl = (name: string) => {
 
   .close-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.75rem;
     background: none;
     border: none;
+    border-radius: 9999px;
     cursor: pointer;
-    color: #666;
+    color: $ink-80;
     z-index: 10;
     line-height: 1;
-    
-    &:hover { color: #c46043; }
+    transition: transform 0.15s ease;
+
+    &:hover { color: $ink; }
+    &:active { transform: scale(0.95); }
+    &:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 2px; }
   }
 }
 
@@ -104,16 +114,18 @@ const getImageUrl = (name: string) => {
   text-align: center;
   margin-bottom: 30px;
   h2 {
-    font-size: 1.8rem;
-    color: #043655;
-    font-weight: 700;
+    margin: 0;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    letter-spacing: -0.02em;
+    color: $ink;
+    font-weight: 600;
   }
 }
 
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -124,27 +136,18 @@ const getImageUrl = (name: string) => {
 }
 
 .menu-item {
-  background: #f8f9fa;
-  border: 1px solid #eee;
-  border-radius: 12px;
+  background: $parchment;
+  border: 1px solid $hairline;
+  border-radius: 18px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform 0.15s ease;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-color: #c46043;
-    
-    .view-details {
-      color: #c46043;
-      opacity: 1;
-    }
-  }
+  &:active { transform: scale(0.95); }
 
   .icon-wrapper {
     width: 60px;
@@ -153,7 +156,7 @@ const getImageUrl = (name: string) => {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     img {
       max-width: 100%;
       max-height: 100%;
@@ -162,18 +165,22 @@ const getImageUrl = (name: string) => {
   }
 
   .item-name {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     font-weight: 600;
-    color: #333;
-    margin-bottom: 12px;
+    letter-spacing: -0.022em;
+    color: $ink;
+    margin: 0 0 12px;
     line-height: 1.4;
   }
 
   .view-details {
-    font-size: 0.85rem;
-    color: #888;
-    opacity: 0.7;
-    transition: all 0.2s;
+    font-size: 1.0625rem;
+    letter-spacing: -0.022em;
+    color: $brand-orange-text;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-item, .close-btn { transition: none; }
 }
 </style>

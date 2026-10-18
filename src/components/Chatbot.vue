@@ -150,7 +150,7 @@ const formatMessage = (text: string) => {
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (whole: string, label: string, href: string) =>
       /^(https?:\/\/|\/)/.test(href)
-        ? `<a href="${href}" target="_blank" rel="noopener noreferrer" style="color: #e05a35; font-weight: bold; text-decoration: underline;">${label}</a>`
+        ? `<a href="${href}" target="_blank" rel="noopener noreferrer" style="color: #b8431f; font-weight: bold; text-decoration: underline;">${label}</a>`
         : whole
     )
 }
@@ -324,6 +324,8 @@ const getImageUrl = (name: string) => {
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
+
 .chatbot-container {
   position: fixed;
   bottom: 30px;
@@ -333,21 +335,17 @@ const getImageUrl = (name: string) => {
   .chatbot-bubble {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, #e05a35 0%, #FE8B05 100%);
+    background: $brand-orange-text;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 8px 30px rgba(224, 90, 53, 0.45), 0 0 0 0 rgba(224, 90, 53, 0.3);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: bubblePulse 3s ease-in-out infinite;
+    transition: transform 0.2s ease;
     img { width: 35px; height: 35px; filter: brightness(0) invert(1); }
     span { color: white; font-size: 24px; font-weight: bold; }
-    &:hover {
-      transform: scale(1.12);
-      box-shadow: 0 12px 40px rgba(224, 90, 53, 0.55);
-    }
+    &:hover { transform: scale(1.08); }
+    &:active { transform: scale(0.95); }
   }
 
   .chat-window {
@@ -357,8 +355,8 @@ const getImageUrl = (name: string) => {
     width: 360px;
     height: 520px;
     background: white;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(34, 66, 116, 0.18), 0 0 0 1px rgba(224, 90, 53, 0.08);
+    border-radius: 18px;
+    border: 1px solid $hairline;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -366,23 +364,11 @@ const getImageUrl = (name: string) => {
   }
 
   .chat-header {
-    background: linear-gradient(135deg, #e05a35 0%, #FE8B05 60%, #eb9f0c 100%);
+    background: $brand-orange-text;
     padding: 16px 20px;
     color: white;
     position: relative;
     overflow: hidden;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1), rgba(255,255,255,0.4));
-      background-size: 200% 100%;
-      animation: shimmerBar 3s linear infinite;
-    }
 
     .chat-header-content {
       display: flex;
@@ -398,7 +384,6 @@ const getImageUrl = (name: string) => {
       display: flex;
       align-items: center;
       justify-content: center;
-      backdrop-filter: blur(8px);
       img { width: 24px; height: 24px; filter: brightness(0) invert(1); }
     }
 
@@ -413,10 +398,9 @@ const getImageUrl = (name: string) => {
         content: '';
         width: 7px;
         height: 7px;
-        background: #4ade80;
+        background: #fff;
         border-radius: 50%;
         display: inline-block;
-        animation: statusPulse 2s ease-in-out infinite;
       }
     }
   }
@@ -425,14 +409,14 @@ const getImageUrl = (name: string) => {
     flex: 1;
     padding: 16px;
     overflow-y: auto;
-    background: linear-gradient(180deg, #fdf8f5 0%, #f8f9fa 100%);
+    background: $parchment;
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
       width: 4px;
     }
     &::-webkit-scrollbar-thumb {
-      background: rgba(224, 90, 53, 0.2);
+      background: rgba($ink, 0.2);
       border-radius: 4px;
     }
 
@@ -448,23 +432,21 @@ const getImageUrl = (name: string) => {
         max-width: 85%;
         line-height: 1.6;
         white-space: pre-wrap;
-        color: #333;
+        color: $ink;
       }
       &.assistant .text {
-        background: white;
-        color: #333;
+        background: #fff;
+        color: $ink;
         border-bottom-left-radius: 4px;
-        box-shadow: 0 2px 12px rgba(34, 66, 116, 0.08);
-        border: 1px solid rgba(224, 90, 53, 0.06);
+        border: 1px solid $hairline;
       }
 
       .catalog-card {
         background: white;
         border-radius: 16px;
         padding: 14px;
-        box-shadow: 0 4px 20px rgba(34, 66, 116, 0.1);
         max-width: 90%;
-        border: 1px solid rgba(224, 90, 53, 0.08);
+        border: 1px solid $hairline;
 
         .product-img {
           width: 100%;
@@ -475,19 +457,19 @@ const getImageUrl = (name: string) => {
         h3 {
           margin: 0 0 8px 0;
           font-size: 1rem;
-          color: #e05a35;
-          font-weight: 700;
+          color: $brand-orange-text;
+          font-weight: 600;
         }
 
         .description {
           font-size: 0.85rem;
           margin-bottom: 12px;
           line-height: 1.5;
-          color: #555;
+          color: $ink-80;
         }
 
         .specs-table {
-          background: linear-gradient(135deg, #fdf8f5, #f8f9fa);
+          background: $parchment;
           border-radius: 10px;
           padding: 10px;
           margin-bottom: 8px;
@@ -497,12 +479,12 @@ const getImageUrl = (name: string) => {
             justify-content: space-between;
             font-size: 0.8rem;
             padding: 5px 0;
-            border-bottom: 1px solid rgba(224, 90, 53, 0.06);
+            border-bottom: 1px solid $hairline;
 
             &:last-child { border-bottom: none; }
 
-            .spec-key { color: #888; flex: 1; }
-            .spec-val { color: #333; flex: 2; text-align: right; font-weight: 500; }
+            .spec-key { color: $ink-80; flex: 1; }
+            .spec-val { color: $ink; flex: 2; text-align: right; font-weight: 500; }
           }
         }
 
@@ -516,10 +498,9 @@ const getImageUrl = (name: string) => {
       &.user {
         justify-content: flex-end;
         .text {
-          background: linear-gradient(135deg, #e05a35, #FE8B05);
+          background: $brand-orange-text;
           color: white;
           border-bottom-right-radius: 4px;
-          box-shadow: 0 2px 12px rgba(224, 90, 53, 0.25);
         }
       }
 
@@ -542,14 +523,10 @@ const getImageUrl = (name: string) => {
           font-weight: 600;
           cursor: pointer;
           margin-top: 10px;
-          transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-          box-shadow: 0 4px 12px rgba(6, 199, 85, 0.25);
+          transition: background 0.2s ease, transform 0.15s ease;
 
-          &:hover {
-            background: #05a546;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(6, 199, 85, 0.35);
-          }
+          &:hover { background: #05a546; }
+          &:active { transform: scale(0.95); }
 
           img {
             width: 20px;
@@ -563,15 +540,15 @@ const getImageUrl = (name: string) => {
         align-items: center;
         gap: 4px;
         padding: 14px 20px;
-        background: white;
+        background: #fff;
+        border: 1px solid $hairline;
         border-radius: 18px;
         border-bottom-left-radius: 4px;
-        box-shadow: 0 2px 12px rgba(34, 66, 116, 0.08);
 
         span {
           width: 8px;
           height: 8px;
-          background: #e05a35;
+          background: $brand-orange-text;
           border-radius: 50%;
           opacity: 0.4;
           animation: typingDot 1.4s infinite;
@@ -586,7 +563,7 @@ const getImageUrl = (name: string) => {
   .chat-footer {
     padding: 14px 16px;
     background: white;
-    border-top: 1px solid rgba(224, 90, 53, 0.08);
+    border-top: 1px solid $hairline;
 
     .chat-input-area {
       display: flex;
@@ -596,22 +573,23 @@ const getImageUrl = (name: string) => {
       .chat-input {
         flex: 1;
         padding: 10px 16px;
-        border: 2px solid #eee;
+        border: 1px solid $hairline;
         border-radius: 24px;
         font-size: 0.9rem;
         outline: none;
-        color: #333;
+        color: $ink;
         background: white;
-        transition: all 0.3s;
-        &::placeholder { color: #aaa; }
-        &:focus {
-          border-color: #e05a35;
-          box-shadow: 0 0 0 3px rgba(224, 90, 53, 0.1);
+        transition: border-color 0.2s ease;
+        &::placeholder { color: $ink-48; }
+        &:focus-visible {
+          border-color: $brand-orange-text;
+          outline: 2px solid $brand-orange-text;
+          outline-offset: 0;
         }
       }
 
       .send-btn {
-        background: linear-gradient(135deg, #e05a35, #FE8B05);
+        background: $brand-orange-text;
         color: white;
         border: none;
         width: 38px;
@@ -621,12 +599,9 @@ const getImageUrl = (name: string) => {
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-        box-shadow: 0 2px 8px rgba(224, 90, 53, 0.3);
-        &:hover {
-          transform: scale(1.08);
-          box-shadow: 0 4px 15px rgba(224, 90, 53, 0.4);
-        }
+        transition: transform 0.15s ease;
+        &:hover { transform: scale(1.08); }
+        &:active { transform: scale(0.95); }
       }
     }
 
@@ -636,20 +611,17 @@ const getImageUrl = (name: string) => {
       gap: 6px;
       button {
         padding: 6px 14px;
-        border: 1.5px solid #e05a35;
+        border: 1px solid $brand-orange-text;
         background: transparent;
-        color: #e05a35;
+        color: $brand-orange-text;
         border-radius: 20px;
         font-size: 0.78rem;
         font-weight: 500;
         cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        transition: background 0.2s ease, color 0.2s ease;
         &:hover {
-          background: linear-gradient(135deg, #e05a35, #FE8B05);
+          background: $brand-orange-text;
           color: white;
-          border-color: transparent;
-          transform: translateY(-1px);
-          box-shadow: 0 3px 10px rgba(224, 90, 53, 0.25);
         }
       }
     }
@@ -659,21 +631,6 @@ const getImageUrl = (name: string) => {
 @keyframes chatSlideUp {
   from { transform: translateY(30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes bubblePulse {
-  0%, 100% { box-shadow: 0 8px 30px rgba(224, 90, 53, 0.45), 0 0 0 0 rgba(224, 90, 53, 0.3); }
-  50% { box-shadow: 0 8px 30px rgba(224, 90, 53, 0.45), 0 0 0 12px rgba(224, 90, 53, 0); }
-}
-
-@keyframes shimmerBar {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes statusPulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.8); }
 }
 
 @keyframes msgFadeIn {

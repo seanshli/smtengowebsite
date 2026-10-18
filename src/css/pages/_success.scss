@@ -1,124 +1,33 @@
 @import '../utils/variables';
 
+// Form submitted: one white tile, centred. Built on the shared .ap-* system.
 .success-container {
-    margin: 0;
-    padding: 0;
     width: 100%;
-    min-height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $warm-bg-light;
-    position: relative;
-    overflow: hidden;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(224, 90, 53, 0.06), transparent 70%);
-        animation: floatOrb 12s ease-in-out infinite;
-        pointer-events: none;
+    .success-tile {
+        min-height: 72vh;
+        display: flex;
+        align-items: center;
     }
 
-    .container {
-        background-color: transparent;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        z-index: 1;
+    .ap-wrap {
+        width: 100%;
+    }
 
-        img {
-            width: 30%;
-            animation: bounceSubtle 2s ease-in-out infinite;
-        }
+    .checkbox {
+        width: 72px;
+        height: 72px;
+        color: $brand-orange-text;
+        margin-bottom: 28px;
+    }
 
-        .message-container {
-            display: flex;
-            flex-direction: column;
-            padding: 32px;
-            border-radius: 20px;
-            background: white;
-            max-width: 375px;
-            box-shadow: $warm-shadow;
-            animation: fadeInUp 0.6s ease-out;
-            overflow: hidden;
-            position: relative;
+    .content {
+        font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+        color: $ink-80;
+        margin-top: 16px;
+    }
 
-            // Top accent bar
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 4px;
-                background: $warm-gradient;
-            }
-
-            @media (max-width: 768px) {
-                width: 80%;
-            }
-
-            .title {
-                font-size: 20px;
-                font-weight: 700;
-                color: #2c2c2c;
-            }
-
-            .content {
-                font-size: 14px;
-                font-weight: 400;
-                margin-top: 16px;
-                line-height: 20px;
-                color: #666;
-            }
-
-            .btn {
-                text-decoration: none;
-                background: $warm-gradient;
-                color: white;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 50px;
-                margin: 0 auto;
-                margin-top: 16px;
-                width: 100%;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 4px 15px $warm-glow;
-                transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-                position: relative;
-                overflow: hidden;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 100%;
-                    height: 100%;
-                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-                    transition: left 0.5s;
-                }
-
-                &:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 8px 30px $warm-glow;
-
-                    &::after {
-                        left: 100%;
-                    }
-                }
-            }
-        }
+    .ap-cta-row {
+        justify-content: center;
     }
 }

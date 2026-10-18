@@ -1,217 +1,374 @@
 @import '../utils/variables';
 
-.in-text-logo-engo {
-    width: 60px;
-    color: $brand-orange;
+// ─── Apple-profile page system for the about / utility pages (DESIGN.md) ───
+// Shared by brandStory, coreValue, mission, vision, team, enviro, ecosystem,
+// contact, about, NotFound, success. Edge-to-edge tiles alternate white /
+// parchment / dark; one accent (orange); the only shadow is $product-shadow.
+// Everything hangs off .ap-page so nothing leaks into other routes.
+
+.ap-page {
+    background: #fff;
+    color: $ink;
+    font-family: $display-font;
+    font-size: 1.0625rem;
+    line-height: 1.47;
+    letter-spacing: -0.022em;
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid $brand-orange-text;
+        outline-offset: 2px;
+    }
+
+    .ap-dark a:focus-visible,
+    .ap-dark button:focus-visible {
+        outline-color: $orange2;
+    }
+
+    // reveal on scroll (useScrollReveal adds .visible); never leave content hidden
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+
+        &.visible {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .fade-in {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+    }
 }
 
+// ─── tiles ───
+.ap-tile {
+    padding: clamp(64px, 9vw, 112px) 0;
+}
+
+.ap-tile-first {
+    padding-top: clamp(112px, 13vw, 156px);
+}
+
+.ap-white {
+    background: #fff;
+    color: $ink;
+}
+
+.ap-parchment {
+    background: $parchment;
+    color: $ink;
+}
+
+.ap-dark {
+    background: $tile-dark;
+    color: #fff;
+
+    .ap-title,
+    .ap-h2,
+    .ap-h3 {
+        color: #fff;
+    }
+
+    .ap-lead,
+    .ap-body,
+    .ap-prose p,
+    .ap-fine {
+        color: $on-dark-muted;
+    }
+
+    .ap-link {
+        color: $orange2;
+    }
+}
+
+.ap-wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-inline: clamp(20px, 5vw, 64px);
+}
+
+.ap-wrap-text {
+    max-width: 980px;
+}
+
+.ap-center {
+    text-align: center;
+}
+
+// ─── type ladder: 600 display with negative tracking, 400 body ───
+.ap-title {
+    font-family: $display-font;
+    font-weight: 600;
+    font-size: clamp(2.25rem, 6.4vw, 4.5rem);
+    line-height: 1.07;
+    letter-spacing: -0.03em;
+    color: $ink;
+    margin: 0;
+    padding: 0;
+}
+
+.ap-h2 {
+    font-family: $display-font;
+    font-weight: 600;
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: $ink;
+    margin: 0;
+    padding: 0;
+}
+
+.ap-h3 {
+    font-family: $display-font;
+    font-weight: 600;
+    font-size: 1.3125rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: $ink;
+    margin: 0;
+    padding: 0;
+}
+
+.ap-lead {
+    font-size: clamp(1.25rem, 1.9vw, 1.75rem);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: $ink;
+    margin: 20px 0 0;
+    max-width: 34em;
+
+    .ap-center & {
+        margin-inline: auto;
+    }
+}
+
+.ap-body {
+    font-size: 1.0625rem;
+    line-height: 1.47;
+    letter-spacing: -0.022em;
+    color: $ink-80;
+    margin: 0;
+}
+
+.ap-fine {
+    font-size: 0.875rem;
+    line-height: 1.43;
+    color: $ink-80;
+}
+
+.ap-head {
+    margin-bottom: clamp(36px, 5vw, 64px);
+}
+
+// story prose: comfortable reading measure, legacy <font color> accents become 600 weight
+.ap-prose {
+    p {
+        font-size: 1.0625rem;
+        line-height: 1.75;
+        letter-spacing: -0.022em;
+        color: $ink-80;
+        margin: 0 0 24px;
+        max-width: 38em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    font[color],
+    strong {
+        color: inherit;
+        font-weight: 600;
+    }
+}
+
+.ap-dark .ap-prose font[color],
+.ap-dark .ap-prose strong {
+    color: #fff;
+}
+
+// ─── the one accent: pills and links ───
+.ap-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    text-decoration: none;
+    font-family: $display-font;
+    font-size: 1.0625rem;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    padding: 11px 22px;
+    min-height: 44px;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.2s ease;
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.ap-pill-primary {
+    background: $brand-orange-text;
+    color: #fff;
+
+    &:hover {
+        background: darken($brand-orange-text, 6%);
+    }
+}
+
+.ap-pill-ghost {
+    background: transparent;
+    color: $brand-orange-text;
+    border-color: $brand-orange-text;
+
+    &:hover {
+        background: rgba($brand-orange, 0.06);
+    }
+}
+
+.ap-link {
+    color: $brand-orange-text;
+    text-decoration: none;
+    font-size: 1.0625rem;
+    letter-spacing: -0.022em;
+
+    &::after {
+        content: '\203A';
+        margin-left: 0.25em;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.ap-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 32px;
+}
+
+.ap-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+
+    .ap-center & {
+        justify-content: center;
+    }
+}
+
+// ─── cards: parchment, 1px hairline, radius 18, no shadow ───
+.ap-card {
+    background: $parchment;
+    border: 1px solid $hairline;
+    border-radius: 18px;
+    color: $ink;
+}
+
+.ap-parchment .ap-card {
+    background: #fff;
+}
+
+.ap-dark .ap-card {
+    background: $tile-dark-2;
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+.ap-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.ap-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @media (max-width: 834px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ap-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// photos: radius 18, caption below
+.ap-photo {
+    margin: 0;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        object-fit: cover;
+    }
+
+    figcaption {
+        margin-top: 14px;
+        font-size: 0.875rem;
+        line-height: 1.43;
+        color: $ink-80;
+    }
+}
+
+// ruled lists: hairline rows, no bullets
+.ap-rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        padding: 14px 0;
+        border-top: 1px solid $hairline;
+
+        &:last-child {
+            border-bottom: 1px solid $hairline;
+        }
+    }
+}
+
+.ap-dark .ap-rows li {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+// ─── legacy shared classes still used by other routes (tokens only) ───
 .page-title {
     font-size: 2.5rem;
-    font-weight: 700;
-    font-family: "Noto Sans TC", serif;
-    color: #2c2c2c;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    font-family: $display-font;
+    color: $ink;
 }
 
 .section-title {
     font-size: 2.2rem;
-    font-weight: 700;
-    font-family: "Noto Sans TC", serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    font-family: $display-font;
     margin: 10px 0px;
-    color: #2c2c2c;
+    color: $ink;
     position: relative;
-}
-
-.section-second-title {
-    color: $brand-orange;
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
-}
-
-.section-text {
-    font-size: 1rem;
-    line-height: 1.8;
-    width: 80%;
-    color: #333;
-}
-
-.section-text2 {
-    font-size: 0.91rem;
-    line-height: 1.3;
-    width: 90%;
-    color: #333;
-}
-
-.section-text-en {
-    font-size: 1rem;
-    line-height: 1.5;
-    width: 80%;
-    color: #333;
-}
-
-.text-color-white {
-    color: white;
-}
-
-.text-color-dark-grey {
-    color: $dark-grey;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.brand-blue {
-    color: $brand-blue;
-}
-
-// ─── Core Value Section — Blue background with card ───
-.core-value-section {
-    position: relative;
-    width: 100%;
-    padding: 60px 0px 0px 0px;
-    margin-top: 1.5em;
-    background: linear-gradient(135deg, #224274 0%, #1B3A5C 60%, #0f2440 100%);
-    height: 80vh;
-    overflow: hidden;
-
-    // Large vivid decorative orb
-    &::before {
-        content: '';
-        position: absolute;
-        top: -10%;
-        left: -10%;
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(224, 90, 53, 0.2), transparent 60%);
-        animation: floatOrb 12s ease-in-out infinite;
-        pointer-events: none;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -5%;
-        right: -8%;
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(254, 139, 5, 0.15), transparent 60%);
-        animation: floatOrb 16s ease-in-out infinite reverse;
-        pointer-events: none;
-    }
-
-    @media (max-width: 1024px) and (min-width: 769px) {
-        height: 60vh;
-    }
-
-    @media (max-width: 768px) {
-        height: auto;
-    }
-}
-
-.blue-block-bg {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 30vh;
-    background: linear-gradient(180deg, transparent, $brand-blue);
-}
-
-.grey-block-bg {
-    position: relative;
-    max-width: 1100px;
-    background: rgba(255, 255, 255, 0.97);
-    padding: 32px 40px 40px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 20px;
-    border-radius: 20px;
-    box-shadow: 0 12px 50px rgba(0,0,0,0.15);
-    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    overflow: hidden;
-
-    // Animated gradient left border
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 5px;
-        height: 100%;
-        background: linear-gradient(180deg, #e05a35, #FE8B05, #eb9f0c);
-        background-size: 100% 200%;
-        animation: gradientSlide 4s ease-in-out infinite alternate;
-    }
-
-    &:hover {
-        box-shadow: 0 20px 70px rgba(0,0,0,0.2);
-        transform: translateY(-4px);
-    }
-
-    @media (max-width: 1024px) and (min-width: 769px) {
-        width: 90%;
-    }
-}
-
-@keyframes gradientSlide {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 0% 100%; }
-}
-
-.core-value-section-bg-container {
-    position: relative;
-    width: 20%;
-    height: 360px;
-    display: none;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.core-value-section-bg {
-    position: relative;
-    width: 250%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-
-.with-vertical-strip-orange {
-    position: relative;
-}
-
-.with-vertical-strip-orange::before {
-    content: "";
-    position: absolute;
-    top: -55px;
-    left: 12px;
-    width: 5px;
-    height: 45px;
-    background: $warm-gradient;
-    border-radius: 3px;
-}
-
-.with-vertical-strip-white {
-    position: relative;
-}
-
-.with-vertical-strip-white::before {
-    content: "";
-    position: absolute;
-    top: -180%;
-    left: 12px;
-    width: 5px;
-    height: 45px;
-    background-color: white;
-    border-radius: 3px;
 }
 
 .text-container {
@@ -221,311 +378,6 @@
     max-width: 600px;
 }
 
-.core-value-section-list {
-    list-style: decimal inside none;
-
-    li {
-        line-height: 1.8;
-        padding: 4px 8px;
-        border-radius: 6px;
-        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-
-        &:hover {
-            padding-left: 16px;
-            color: $brand-orange;
-            background: rgba(224, 90, 53, 0.06);
-        }
-    }
-}
-
-// ─── Mission Section — Deep blue with vivid accents ───
-.mission-section {
-    position: relative;
-    background: linear-gradient(135deg, $brand-blue 0%, #1B3A5C 50%, #0f2440 100%);
-    display: flex;
-    padding-top: 60px;
-    overflow: hidden;
-
-    // Large floating orb
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: 5%;
-        left: -8%;
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(18, 181, 168, 0.15), transparent 60%);
-        animation: floatOrb 14s ease-in-out infinite;
-        pointer-events: none;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 10%;
-        right: -5%;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(224, 90, 53, 0.12), transparent 60%);
-        animation: floatOrb 20s ease-in-out infinite reverse;
-        pointer-events: none;
-    }
-}
-
-.mission-section-image-container {
-    position: relative;
-    width: 250px;
-    height: 800px;
-    overflow: hidden;
-}
-
-.mission-section-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-    filter: saturate(1.3) brightness(1.08) contrast(1.05);
-
-    &:hover {
-        transform: scale(1.06);
-    }
-}
-
-.image-gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%);
-}
-
-.mission-three-core-value-list {
-    line-height: 36px;
-}
-
-.mission-section-list {
-    list-style: none;
-    padding-left: 20px;
-
-    li {
-        padding: 6px 0;
-        transition: all 0.3s;
-        border-radius: 6px;
-
-        &:hover {
-            padding-left: 10px;
-            background: rgba(255, 255, 255, 0.05);
-        }
-    }
-}
-
-.mission-text {
-    padding: 20px 40px 40px 40px;
-
-    @media (max-width: 768px) {
-        padding: 16px;
-    }
-}
-
-.mission-first-letter {
-    font-size: 1.5rem;
-    color: $brand-orange;
-    font-weight: 700;
-    text-shadow: 0 0 20px rgba(224, 90, 53, 0.3);
-}
-
-.mission-first-letter2 {
-    font-size: 1.5rem;
-    color: $brand-orange;
-    font-weight: 700;
-    text-shadow: 0 0 20px rgba(224, 90, 53, 0.3);
-}
-
-.with-horizontal-strip-orange {
-    position: relative;
-}
-
-.with-horizontal-strip-orange::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 5px;
-    width: 60px;
-    height: 5px;
-    background: $warm-gradient;
-    border-radius: 3px;
-}
-
-// ─── Vision Section — Warm cream with vivid cards ───
-.vision-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10vh 0 8vh;
-    background: linear-gradient(180deg, $warm-bg-light, $warm-bg-cream);
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: -5%;
-        right: -5%;
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(224, 90, 53, 0.1), transparent 60%);
-        animation: floatOrb 16s ease-in-out infinite;
-        pointer-events: none;
-    }
-}
-
-.vision-section-container {
-    width: 100%;
-    max-width: 800px;
-    position: relative;
-    z-index: 1;
-}
-
-.vision-blocks-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
-    padding: 20px 0px;
-
-    @media (max-width: 768px) {
-        gap: 0;
-        justify-content: space-between;
-    }
-}
-
-.vision-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-    width: 130px;
-    border-radius: 16px;
-    background: white;
-    box-shadow: 0 4px 20px rgba(34, 66, 116, 0.06);
-    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    cursor: default;
-    position: relative;
-    overflow: hidden;
-
-    // Top accent bar that slides in on hover
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: $warm-gradient;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    &:hover {
-        transform: translateY(-10px) scale(1.03);
-        box-shadow: 0 16px 45px rgba(224, 90, 53, 0.15);
-
-        &::before {
-            transform: scaleX(1);
-        }
-
-        .vision-image {
-            transform: scale(1.15) rotate(3deg);
-        }
-
-        .vision-number {
-            color: $brand-orange;
-            border-color: $brand-orange;
-        }
-    }
-}
-
-.vision-image {
-    width: 60px;
-    height: 60px;
-    color: $dark-grey;
-    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.vision-number {
-    border-top: 3px solid $dark-grey;
-    align-self: flex-start;
-    font-weight: 700;
-    transition: all 0.3s;
-}
-
-.vision-number-red {
-    color: $brand-orange;
-    border-color: $brand-orange;
-}
-
-.vision-number-light-blue {
-    color: $light-blue;
-    border-color: $light-blue;
-}
-
-.vision-number-blue {
-    color: $brand-blue;
-    border-color: $brand-blue;
-}
-
-.vision-number-green {
-    color: $green;
-    border-color: $green;
-}
-
-.vision-number-yellow {
-    color: $yellow;
-    border-color: $yellow;
-}
-
-.vision-text {
-    color: $dark-grey;
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-
-@media (min-width: 768px) {
-    .core-value-section-bg-container {
-        display: block;
-    }
-
-    .vision-image {
-        width: 80px;
-        height: 80px;
-    }
-
-    .vision-number {
-        font-size: 1.6rem;
-        border-width: 3px;
-    }
-
-    .vision-block {
-        margin: 20px;
-    }
-
-    .mission-section {
-        padding-top: 70px;
-        padding-left: 80px;
-        gap: 120px;
-    }
-
-    .core-value-content-container {
-        padding: 0 40px;
-    }
+.bold {
+    font-weight: bold;
 }
