@@ -1,79 +1,49 @@
 <template>
-  <section ref="motionRoot">
+  <section ref="motionRoot" class="pd">
     <div class="product-container">
-      <!-- 【桌機】立即購買 -->
-      <!-- 
-      <button class="buy-now-btn" @click="buyNow">
-        {{ $t('product.purchase.btn') }}
-      </button>
-      -->
-      <!-- 【平板】立即購買 -->
-      <!-- 
-      <div class="buy-now-tab-btn" @click="buyNow">
-        <img src="/images/shopping-cart.png" alt="Shopping cart" />
-      </div>
-      -->
-      <!-- 【桌機】滑到最上icon -->
       <div class="scroll-top-btn" @click="scrollToTop">
         <img src="/images/scroll-top.png" alt="scroll to top" />
       </div>
-      <div id="hero" class="tablet_intro mt-mob-56 pb-44 pb-tab-20" :class="{ 'mt-70': hasHeader }">
-        <div data-reveal-group class="container title_wrap d-flex fd-column ai-c text-white tac mt-54 mb-24 mt-mob-40">
-          <h1 class="h2-title fz-48 lh-70 fz-mob-24 lh-mob-34 fw-600">
-            {{ $t('product.tablet_intro.title') }}
-          </h1>
-          <!-- A tagline, not a section: as an h2 it sat at 28px beside the 72px
-               h2 product name below and broke the heading scale. -->
-          <p class="tagline fz-28 lh-42 fz-tab-24 lh-tab-36 fz-mob-16 lh-mob-26 fw-500 mt-4 mb-20 mb-mob-12">
-            {{ $t('product.tablet_intro.tagline') }}
-          </p>
-          <p class="subtitle fz-20 lh-34 fz-tab-18 lh-tab-30 fz-mob-14 lh-mob-22 fw-500">
-            <img class="engo-white" src="/images/footer_logo_white.png" alt="enGo" />
+
+      <!-- ─── HERO TILE (white): one headline, one tagline, the product ─────────
+           Apple-profile grammar, same as the homepage: centered stack, the device is
+           the only thing on the page that carries a shadow. -->
+      <section id="hero" class="pd-tile pd-white pd-hero">
+        <div data-reveal-group class="pd-wrap pd-center">
+          <h1 class="pd-title">{{ $t('product.tablet_intro.title') }}</h1>
+          <!-- A tagline, not a section heading. -->
+          <p class="pd-tagline">{{ $t('product.tablet_intro.tagline') }}</p>
+          <p class="pd-sub">
+            <img class="pd-mark" src="/images/logo_darkblue.svg" alt="enGo" />
             {{ $t('product.tablet_intro.info') }}
           </p>
         </div>
-        <!-- ENGO-WEB-001 §3.2 shot #1 composited onto the enGo tablet render (the old
-             hero's device body, its 2023 screen replaced by the real 3.0.64 home
-             screenshot — screen pixels untouched, cover-fit into the 1755×1054 panel). -->
-        <img data-reveal data-parallax="36" data-float class="hero-device" src="/images/screens/01-home-tablet-device.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
-      </div>
-      <div class="gradient_container_i">
-        <div id="intro" class="brand_intro pt-88 pb-72 pt-tab-80 pb-tab-86 py-mob-0">
-          <div class="title_wrap">
-            <div
-              class="badge text-white bg-grey-blue2 fz-mob-18 lh-mob-26 fw-mob-500 py-10 px-20 py-mob-12 px-mob-18"
-            >
-              <img class="pr-8" src="/assets/logo_G.svg" alt="" />
-              {{ $t('product.brand_intro.badge') }}
-            </div>
-            <h2
-              class="product-describe fz-72 fw-700 text-grey-blue tac mt-36 mb-56 d-tab-none d-mob-none"
-            >
-              <img src="/images/logo_darkblue.svg" alt="enGo" />
+        <!-- ENGO-WEB-001 §3.2 shot #1 composited onto the enGo tablet render (screen
+             pixels untouched, cover-fit into the 1755×1054 panel). -->
+        <img data-reveal class="pd-hero-device" src="/images/screens/01-home-tablet-device.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
+      </section>
+
+      <!-- ─── INTRO TILE (parchment): ENGO-WEB-001 §2.2. One copy for every breakpoint. -->
+      <section id="intro" class="pd-tile pd-parchment">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">
+              <img class="pd-h2-logo" src="/images/logo_darkblue.svg" alt="enGo" />
               {{ $t('product.brand_intro.title') }}
             </h2>
-          </div>
-          <!-- ENGO-WEB-001 §2.2. One copy for every breakpoint: the old page kept
-               three device-specific variants of this paragraph, which is how
-               食譜／音響系統／門鎖 could sit in three places at once. -->
-          <div data-reveal-group class="brand_desc d-flex">
-            <div class="brand_desc_img d-mob-none">
+          </header>
+          <div data-reveal-group class="pd-intro-grid">
+            <div class="pd-intro-img">
               <img src="/images/Frame74.png" :alt="$t('product.brand_intro.title')" loading="lazy" />
             </div>
-            <div
-              class="brand_desc_info pl-72 pr-100 pr-tab-74 px-mob-24 pb-mob-40 text-grey-blue text-mob-white fw-500"
-            >
-              <h3 class="fw-700 fz-36 lh-52 fz-tab-28 lh-tab-40 fz-mob-22 lh-mob-32 pt-30 pt-mob-28 mb-20">
-                {{ $t('product.brand_intro.heading') }}
-              </h3>
-              <p class="fz-22 lh-36 fz-tab-18 lh-tab-30 fz-mob-15 lh-mob-25 mb-24 mb-mob-16">
-                {{ $t('product.brand_intro.lead') }}
-              </p>
-              <p class="fz-20 lh-34 fz-tab-17 lh-tab-28 fz-mob-15 lh-mob-25 mb-16">
+            <div class="pd-intro-copy">
+              <h3 class="pd-h3">{{ $t('product.brand_intro.heading') }}</h3>
+              <p class="pd-lead pd-lead-left">{{ $t('product.brand_intro.lead') }}</p>
+              <p class="pd-body">
                 <strong class="intro-label">{{ $t('product.brand_intro.homeLabel') }}</strong>
                 {{ $t('product.brand_intro.home') }}
               </p>
-              <p class="fz-20 lh-34 fz-tab-17 lh-tab-28 fz-mob-15 lh-mob-25 mb-16">
+              <p class="pd-body">
                 <strong class="intro-label">{{ $t('product.brand_intro.communityLabel') }}</strong>
                 {{ $t('product.brand_intro.community') }}
               </p>
@@ -83,242 +53,59 @@
                 <img src="/images/screens/09-announcement-tablet.png" :alt="$t('product.brand_intro.communityFigure')" loading="lazy" />
                 <figcaption>{{ $t('product.brand_intro.communityFigure') }}</figcaption>
               </figure>
-              <p class="fz-20 lh-34 fz-tab-17 lh-tab-28 fz-mob-15 lh-mob-25">
-                {{ $t('product.brand_intro.scenes') }}
-              </p>
+              <p class="pd-body">{{ $t('product.brand_intro.scenes') }}</p>
             </div>
           </div>
         </div>
-        <!-- 以下數字使用 CountUp.js 套件 -->
-        <!-- 【桌機/平板】 -->
-        <div data-reveal-group class="d-flex jc-se p-40 px-tab-20 py-tab-24 d-mob-none">
-          <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
-            <div class="d-flex fd-column jc-sb">
-              <div class="count_card_number">
-                <span class="fz-72 fz-tab-58 fw-500 pr-8">
-                  <count-up
-                    :end-val="24"
-                    :duration="2.5"
-                    :options="options"
-                    @init="onInit"
-                  ></count-up>
-                </span>
-                <span class="fz-32 fz-tab-20 fw-500">
-                  <!-- 項 -->
-                  {{ $t('product.brand_intro.countCard.card01.unit') }}
-                </span>
+      </section>
+
+      <!-- ─── NUMBERS TILE (white). CountUp.js. One markup for every breakpoint. -->
+      <section class="pd-tile pd-white pd-counts">
+        <div class="pd-wrap">
+          <div data-reveal-group class="pd-count-grid">
+            <div class="pd-count">
+              <img class="pd-count-icon" src="/assets/file-badge.svg" alt="專利icon" />
+              <div class="pd-count-num">
+                <count-up :end-val="24" :duration="2.5" :options="options" @init="onInit"></count-up>
+                <span class="pd-count-unit">{{ $t('product.brand_intro.countCard.card01.unit') }}</span>
               </div>
-              <div>
-                <span class="fz-24 fw-500">
-                  <!-- 專利設計 -->
-                  {{ $t('product.brand_intro.countCard.card01.info') }}
-                </span>
-              </div>
+              <p class="pd-count-info">{{ $t('product.brand_intro.countCard.card01.info') }}</p>
             </div>
-            <div>
-              <img src="/assets/file-badge.svg" alt="專利icon" />
-            </div>
-          </div>
-          <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
-            <div class="d-flex fd-column jc-sb">
-              <div class="count_card_number">
-                <span class="fz-72 fz-tab-58 fw-500 pr-8">
-                  <count-up
-                    :end-val="30"
-                    :duration="3"
-                    :options="options"
-                    @init="onInit"
-                  ></count-up>
-                </span>
-                <span class="fz-32 fz-tab-20 fw-500">
-                  <!-- 種 -->
-                  {{ $t('product.brand_intro.countCard.card02.unit') }}
-                </span>
+            <div class="pd-count">
+              <img class="pd-count-icon" src="/assets/brain__circuit.svg" alt="AI功能 icon" />
+              <div class="pd-count-num">
+                <count-up :end-val="30" :duration="3" :options="options" @init="onInit"></count-up>
+                <span class="pd-count-unit">{{ $t('product.brand_intro.countCard.card02.unit') }}</span>
               </div>
-              <div>
-                <span class="fz-24 fw-500">
-                  <!-- AI 功能 -->
-                  {{ $t('product.brand_intro.countCard.card02.info') }}
-                </span>
-              </div>
+              <p class="pd-count-info">{{ $t('product.brand_intro.countCard.card02.info') }}</p>
             </div>
-            <div>
-              <img src="/assets/brain__circuit.svg" alt="AI功能 icon" />
-            </div>
-          </div>
-          <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
-            <div class="d-flex fd-column jc-sb">
-              <div class="count_card_number">
-                <span class="fz-72 fz-tab-58 fw-500 pr-8">
-                  <count-up
-                    :end-val="10"
-                    :duration="2.5"
-                    :options="options"
-                    @init="onInit"
-                  ></count-up>
-                </span>
-                <span class="fz-32 fz-tab-20 fw-500">
-                  <!-- 萬次 -->
-                  {{ $t('product.brand_intro.countCard.card04.tenThousand') }}{{ $t('product.brand_intro.countCard.card04.unit') }}
-                </span>
+            <div class="pd-count">
+              <img class="pd-count-icon" src="/assets/test_tubes.svg" alt="驗證測試 icon" />
+              <div class="pd-count-num">
+                <count-up :end-val="10" :duration="2.5" :options="options" @init="onInit"></count-up>
+                <span class="pd-count-unit">{{ $t('product.brand_intro.countCard.card04.tenThousand') }}{{ $t('product.brand_intro.countCard.card04.unit') }}</span>
               </div>
-              <div>
-                <span class="fz-24 fw-500">
-                  <!-- 驗證測試 -->
-                  {{ $t('product.brand_intro.countCard.card04.info') }}
-                </span>
-              </div>
+              <p class="pd-count-info">{{ $t('product.brand_intro.countCard.card04.info') }}</p>
             </div>
-            <div>
-              <img src="/assets/test_tubes.svg" alt="驗證測試 icon" />
-            </div>
-          </div>
-          <div class="count_card text-grey-blue2 d-flex jc-sb p-32 p-tab-20">
-            <div class="d-flex fd-column jc-sb">
-              <div class="count_card_number">
-                <span class="fz-72 fz-tab-58 fw-500 pr-8">
-                  <count-up :end-val="5" :duration="2" :options="options" @init="onInit"></count-up>
-                </span>
-                <span class="fz-32 fz-tab-20 fw-500">
-                  <!-- 年 -->
-                  {{ $t('product.brand_intro.countCard.card03.unit') }}
-                </span>
+            <div class="pd-count">
+              <img class="pd-count-icon" src="/assets/lightbulb.svg" alt="研發 icon" />
+              <div class="pd-count-num">
+                <count-up :end-val="5" :duration="2" :options="options" @init="onInit"></count-up>
+                <span class="pd-count-unit">{{ $t('product.brand_intro.countCard.card03.unit') }}</span>
               </div>
-              <div>
-                <span class="fz-24 fw-500">
-                  <!-- 研發時間 -->
-                  {{ $t('product.brand_intro.countCard.card03.info') }}
-                </span>
-              </div>
-            </div>
-            <div>
-              <img src="/assets/lightbulb.svg" alt="研發 icon" />
+              <p class="pd-count-info">{{ $t('product.brand_intro.countCard.card03.info') }}</p>
             </div>
           </div>
         </div>
-        <!-- 【手機】 -->
-        <div data-reveal-group class="d-mob-flex jc-se px-20 py-24 d-none d-tab-none">
-          <div class="count_card text-grey-blue2 px-8 py-10">
-            <div class="d-flex jc-fs">
-              <img src="/assets/file-badge.svg" alt="專利icon" />
-            </div>
-            <div class="pos-r tac">
-              <div class="fz-72 fw-500 mb-12 d-flex jc-c ai-fs">
-                <div class="pos-r">
-                  <count-up
-                    :end-val="24"
-                    :duration="2.5"
-                    :options="options"
-                    @init="onInit"
-                  ></count-up>
-                  <div class="fz-20 lh-28 fw-700 pos-a" style="right: -20px; top: 0">
-                    <!-- 項 -->
-                    {{ $t('product.brand_intro.countCard.card01.unit') }}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tac">
-              <span class="fz-20 lh-28 fw-500">
-                <!-- 專利設計 -->
-                {{ $t('product.brand_intro.countCard.card01.info') }}
-              </span>
-            </div>
-          </div>
-          <div class="count_card text-grey-blue2 px-8 py-10">
-            <div class="d-flex jc-fs">
-              <img src="/assets/brain__circuit.svg" alt="AI功能 icon" />
-            </div>
-            <div class="pos-r tac">
-              <div class="fz-72 fw-500 mb-12 d-flex jc-c ai-fs">
-                <div class="pos-r">
-                  <count-up
-                    :end-val="30"
-                    :duration="3"
-                    :options="options"
-                    @init="onInit"
-                  ></count-up>
-                  <div class="fz-20 lh-28 fw-700 pos-a" style="right: -20px; top: 0">
-                    <!-- 種 -->
-                    {{ $t('product.brand_intro.countCard.card02.unit') }}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tac">
-              <span class="fz-20 lh-28 fw-500">
-                <!-- AI 功能 -->
-                {{ $t('product.brand_intro.countCard.card02.info') }}
-              </span>
-            </div>
-          </div>
-        </div>
-        <div data-reveal-group class="d-mob-flex jc-se px-20 mb-24 d-none d-tab-none">
-          <div class="count_card text-grey-blue2 px-8 py-10">
-            <div class="d-flex jc-fs">
-              <img src="/assets/test_tubes.svg" alt="驗證測試 icon" />
-            </div>
-            <div class="pos-r tac">
-              <div class="fz-72 fw-500 mb-12 d-flex jc-c ai-fs">
-                <div class="pos-r">
-                  <count-up
-                    :end-val="10"
-                    :duration="2.5"
-                    :options="options"
-                    @init="onInit"
-                  ></count-up>
-                  <div
-                    class="fz-20 lh-28 fw-700 pos-a d-flex fd-column jc-sb"
-                    style="height: 70px; width: 20px; right: -20px; top: 0"
-                  >
-                    <div>
-                      <!-- 萬 -->
-                      {{ $t('product.brand_intro.countCard.card04.tenThousand') }}
-                    </div>
-                    <div>
-                      <!-- 次 -->
-                      {{ $t('product.brand_intro.countCard.card04.unit') }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tac">
-              <span class="fz-20 lh-28 fw-500">
-                <!-- 驗證測試 -->
-                {{ $t('product.brand_intro.countCard.card04.info') }}
-              </span>
-            </div>
-          </div>
-          <div class="count_card text-grey-blue2 px-8 py-10">
-            <div class="d-flex jc-fs">
-              <img src="/assets/lightbulb.svg" alt="研發 icon" />
-            </div>
-            <div class="pos-r tac">
-              <div class="fz-72 fw-500 mb-12 d-flex jc-c ai-fs">
-                <div class="pos-r">
-                  <count-up :end-val="5" :duration="2" :options="options" @init="onInit"></count-up>
-                  <div class="fz-20 lh-28 fw-700 pos-a" style="right: -20px; top: 0">
-                    <!-- 年 -->
-                    {{ $t('product.brand_intro.countCard.card03.unit') }}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tac">
-              <span class="fz-20 lh-28 fw-500">
-                <!-- 研發時間 -->
-                {{ $t('product.brand_intro.countCard.card03.info') }}
-              </span>
-            </div>
-          </div>
-        </div>
-        <!-- 三種介面，一組帳號 — ENGO-WEB-001 §2.3. New to this page: the old one
-             never mentioned the iOS and Android apps. Solid ground because
-             background_2.png is mid-transition here and text colour would be a guess. -->
-        <div id="interfaces" class="interfaces px-118 px-tab-50 px-mob-24 pt-72 pb-72 pt-mob-48 pb-mob-40 text-white">
-          <h2 class="section-title" data-reveal>{{ $t('product.interfaces.title') }}</h2>
-          <div class="interfaces-scroll mt-40 mt-mob-28">
+      </section>
+
+      <!-- ─── 三種介面，一組帳號 (dark tile) — ENGO-WEB-001 §2.3. -->
+      <section id="interfaces" class="pd-tile pd-dark interfaces">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">{{ $t('product.interfaces.title') }}</h2>
+          </header>
+          <div class="interfaces-scroll">
             <table class="interfaces-table">
               <thead>
                 <tr>
@@ -376,18 +163,14 @@
             </table>
           </div>
           <!-- Phones see one platform column at a time; the second column peeks in
-               (min-width in _product.scss) and this line says the rest is a swipe away. -->
-          <p class="interfaces-hint fz-mob-13 lh-mob-20 d-none d-mob-block mt-mob-8">
-            {{ $t('product.interfaces.scrollHint') }}
-          </p>
-          <p data-reveal class="interfaces-note fz-16 lh-28 fz-mob-14 lh-mob-24 mt-24">
-            {{ $t('product.interfaces.footnote') }}
-          </p>
+               and this line says the rest is a swipe away. -->
+          <p class="interfaces-hint pd-mob">{{ $t('product.interfaces.scrollHint') }}</p>
+          <p data-reveal class="interfaces-note">{{ $t('product.interfaces.footnote') }}</p>
           <!-- Official store badges. Apple: badge API SVG, zh-TW for the Chinese locales,
                en-US otherwise. Google: generic English badge (no zh-TW asset is published).
                Both stores list the app as enGo智慧管家 (iOS tw.smtengo.engohome.ios = id6680188565,
-               Android tw.smtengo.engohome.android). An English reader searching "enGo HMS" finds neither. -->
-          <p data-reveal class="interfaces-stores mt-12">
+               Android tw.smtengo.engohome.android). -->
+          <p data-reveal class="interfaces-stores">
             <a href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="product:app-store">
               <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" height="40" loading="lazy" />
             </a>
@@ -396,27 +179,28 @@
             </a>
           </p>
           <!-- Phase 2: ENGO-WEB-001 §3.2 shots #6 (iPhone home) and #7 (Android home). -->
-          <div v-if="interfaceImages.ios || interfaceImages.android" class="interfaces-figures mt-40">
+          <div v-if="interfaceImages.ios || interfaceImages.android" class="interfaces-figures">
             <figure v-if="interfaceImages.ios">
-              <img :src="interfaceImages.ios" :alt="$t('product.interfaces.columns.ios')" loading="lazy" />
+              <div class="pd-iphone"><img :src="interfaceImages.ios" :alt="$t('product.interfaces.columns.ios')" loading="lazy" /></div>
               <figcaption>{{ $t('product.interfaces.columns.ios') }}</figcaption>
             </figure>
             <figure v-if="interfaceImages.android">
-              <img :src="interfaceImages.android" :alt="$t('product.interfaces.columns.android')" loading="lazy" />
+              <div class="pd-iphone"><img :src="interfaceImages.android" :alt="$t('product.interfaces.columns.android')" loading="lazy" /></div>
               <figcaption>{{ $t('product.interfaces.columns.android') }}</figcaption>
             </figure>
           </div>
         </div>
-        <div
-          ref="observeTarget"
-          id="features"
-          class="tablet_function pt-64 pb-96 px-118 px-tab-50 pt-mob-60 pb-mob-48 px-mob-24 pos-r"
-        >
-          <h2 class="section-title" data-reveal>{{ $t('product.tablet_function.tag') }}</h2>
-          <!-- ENGO-WEB-001 §2.4: four text cards. tablet_1.png is deliberately NOT
-               reused here — ENGO-WEB-002: 一張正確的圖加四張留白，比五張錯的圖好.
-               Each card's figure renders once featureImages carries a path (§3.2 #2–#5). -->
-          <div data-reveal-group data-tilt class="tf-features mt-48 mt-mob-32" :class="{ 'is-visible': targetIsVisible }">
+      </section>
+
+      <!-- ─── 功能介紹 (parchment): ENGO-WEB-001 §2.4, four text cards. tablet_1.png is
+           deliberately NOT reused: 一張正確的圖加四張留白，比五張錯的圖好.
+           Each card's figure renders once featureImages carries a path (§3.2 #2–#5). -->
+      <section ref="observeTarget" id="features" class="pd-tile pd-parchment">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">{{ $t('product.tablet_function.tag') }}</h2>
+          </header>
+          <div data-reveal-group class="tf-features" :class="{ 'is-visible': targetIsVisible }">
             <article class="tf-card">
               <figure v-if="featureImages.voice" class="tf-figure">
                 <img :src="featureImages.voice" :alt="$t('product.tablet_function.features.voice.title')" loading="lazy" />
@@ -458,150 +242,123 @@
             </article>
           </div>
         </div>
-      </div>
-      <div class="gradient_container_ii text-white">
-        <div
-          id="oxygen"
-          class="engo_products px-142 px-tab-80 px-mob-36 pt-106 pb-124 pb-tab-0 pt-mob-140 pb-mob-20 pos-r"
-        >
-          <!-- 兩機一體 -->
-          <div class="two-machines fz-32 fz-mob-20 fw-400">
-            <div style="display: flex; align-items: flex-end">
-              <div class="two-machines-txt text-white fz-32 fz-mob-16">
-                {{ $t('product.engo_products.two') }}
-              </div>
-              <div class="two-machines-txt-lines fz-32 fz-mob-16">
-                {{ $t('product.engo_products.twoMachines') }}
-              </div>
-            </div>
-          </div>
-          <h4 class="text-gold fz-24 lh-30 fz-tab-16 lh-tab-20 d-mob-none">
+      </section>
+
+      <!-- ─── 水維氧 product line. #oxygen is the ?jump=oxygen target: it stays a direct
+           child of .product-container with no positioned ancestor (offsetTop). -->
+      <section id="oxygen" class="pd-tile pd-white pd-oxygen">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <!-- 兩機一體 -->
+            <p class="pd-lead pd-two">{{ $t('product.engo_products.two') }}{{ locale.startsWith('zh') ? '' : ' ' }}{{ $t('product.engo_products.twoMachines') }}</p>
+            <h2 class="pd-h2">
+              <!-- 水維氧AI智慧淨水系統 + -->
+              <span class="pd-h2-line">{{ $t('product.engo_products.title01') }}</span>
+              <span class="pd-h2-line"><span class="pd-amp">&amp;</span> {{ $t('product.engo_products.title02') }}</span>
+            </h2>
             <!-- 從進水到出水層層把關，濾芯狀態看得見 -->
-            {{ $t('product.engo_products.info') }}
-          </h4>
-          <h3 class="fz-48 lh-60 fz-tab-32 lh-tab-40 d-mob-none">
-            <!-- 水維氧AI智慧淨水系統 + -->
-            {{ $t('product.engo_products.title01') }}
-          </h3>
-          <h3 class="fz-48 lh-60 fz-tab-32 lh-tab-40 d-mob-none">
-            <span class="pr-12">&</span>
-            <!-- AI 智慧管家中控平板 -->
-            {{ $t('product.engo_products.title02') }}
-          </h3>
-          <div class="two-machines-bg pos-r d-none d-tab-block d-mob-block mt-0 mt-tab-60 mt-mob-0">
-            <div class="machine01 pos-a">
-              <img src="/assets/two-machines01.png" alt="兩機一體" />
-            </div>
-            <div class="machine02 pos-a d-flex fd-column ai-fe">
-              <img class="mb-40" src="/assets/two-machines02.png" alt="兩機一體" />
-              <h4 class="fz-16 lh-20 tar d-tab-none">
-                <!-- 從進水到出水層層把關，濾芯狀態看得見 -->
-                {{ $t('product.engo_products.info') }}
-              </h4>
-            </div>
+            <p class="pd-lead">{{ $t('product.engo_products.info') }}</p>
+          </header>
+          <img data-reveal class="pd-oxygen-photo pd-desk-lg" src="/images/filterwtablet.png" :alt="$t('product.engo_products.title01')" loading="lazy" />
+          <div class="pd-two-machines pd-mob-lg">
+            <img class="pd-m01" src="/assets/two-machines01.png" alt="兩機一體" loading="lazy" />
+            <img class="pd-m02" src="/assets/two-machines02.png" alt="兩機一體" loading="lazy" />
           </div>
         </div>
-        <div class="water_filter pos-r pt-70 pt-mob-0">
-          <div class="container ai-c mb-80 mb-mob-30">
-            <h2 data-reveal class="fz-72 fz-tab-64 fz-mob-30 lh-104 lh-tab-92 lh-mob-48 fw-700 tac">
+      </section>
+
+      <section class="pd-tile pd-parchment pd-water">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">
               <!-- 水維氧AI智慧淨水系統 -->
               {{ $t('product.water_filter.title') }}
             </h2>
-            <i18n-t
-              keypath="product.water_filter.subTitle"
-              tag="h3"
-              class="fz-24 lh-30 fz-mob-18 lh-mob-24 fw-500"
-            >
+            <i18n-t keypath="product.water_filter.subTitle" tag="p" class="pd-lead">
               <template v-slot:quality>
-                <a
-                  class="text-gold"
-                  href="https://oss.smtengo.com/engo-bucket-prod/device/WechatIMG87.pdf"
-                  target="_blank"
-                >
+                <a class="pd-inline-link" href="https://oss.smtengo.com/engo-bucket-prod/device/WechatIMG87.pdf" target="_blank">
                   <!-- SGS水質檢測 -->
                   {{ $t('product.water_filter.quality') }}
                 </a>
               </template>
               <template v-slot:valid>
-                <a
-                  class="text-gold"
-                  href="https://oss.smtengo.com/engo-bucket-prod/device/20240719132511.pdf"
-                  target="_blank"
-                >
+                <a class="pd-inline-link" href="https://oss.smtengo.com/engo-bucket-prod/device/20240719132511.pdf" target="_blank">
                   <!-- BSMI商品檢驗 -->
                   {{ $t('product.water_filter.valid') }}
                 </a>
               </template>
             </i18n-t>
-          </div>
-          <div class="filter-core container px-mob-24">
+          </header>
+          <!-- The three renders below carry white callout text baked into the PNG, so
+               each sits on a dark stage inside the light tile. -->
+          <div data-reveal class="pd-stage filter-core">
+            <img class="pd-desk" src="/images/filter_side.png" alt="濾芯" loading="lazy" />
+            <img class="pd-mob pd-stage-small" src="/images/filter_core.png" alt="濾芯" loading="lazy" />
+            <ol class="pd-mob pd-stage-list">
+              <!-- 1. 一體式水路板 -->
+              <li>{{ $t('product.water_filter.filterCore01') }}</li>
+              <!-- 2. 三重濾心過濾 -->
+              <li>{{ $t('product.water_filter.filterCore02') }}</li>
+            </ol>
             <div class="qr-code-container">
               <img src="/images/qr-code.png" alt="Insurance certificate QR code" />
-              <div class="">投保證書</div>
-            </div>
-            <img class="d-mob-none" src="/images/filter_side.png" alt="濾芯" loading="lazy" />
-            <img class="d-none d-mob-block" src="/images/filter_core.png" alt="濾芯" loading="lazy" />
-            <div class="d-none d-mob-flex fd-column ai-fe fz-16 lh-20 fw-700">
-              <!-- 1. 一體式水路板 -->
-              1. {{ $t('product.water_filter.filterCore01') }}<br />
-              <!-- 2. 三重濾心過濾 -->
-              2. {{ $t('product.water_filter.filterCore02') }}
+              <div>投保證書</div>
             </div>
           </div>
         </div>
-        <div class="filter_strength container pt-116 pt-mob-30">
-          <div class="d-flex fd-column jc-c ai-c mb-112 mb-mob-18 text-white pos-r">
-            <div class="bg-text bg-text-l d-none d-mob-block">1</div>
-            <h3 class="fz-48 lh-70 fz-mob-20 lh-mob-32 fw-700">
+      </section>
+
+      <section class="pd-tile pd-white pd-water">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">
               <!-- 無儲水桶設計，安心防漏不滋菌 -->
               {{ $t('product.filter_strength.title') }}
-            </h3>
-            <h5 class="fz-24 lh-34 fz-mob-14 lh-mob-20 fw-500">
+            </h2>
+            <p class="pd-lead">
               <!-- 避免複雜管線產生漏水風險。免儲水桶儲水，杜絕藏污納垢與細菌滋生。 -->
               {{ $t('product.filter_strength.desc') }}
-            </h5>
-            <div class="d-none d-mob-flex fd-column as-fe fz-14 lh-20 fw-700">
+            </p>
+          </header>
+          <div data-reveal class="pd-stage water-loop">
+            <img class="pd-desk" src="/images/water_loop.png" alt="強效過濾濾芯" loading="lazy" />
+            <img class="pd-mob pd-stage-small" src="/images/water_loop_mob.png" alt="強效過濾濾芯" loading="lazy" />
+            <ol class="pd-mob pd-stage-list">
               <!-- 1. 減少管路連接 -->
-              1. {{ $t('product.filter_strength.water_loop01') }}<br />
+              <li>{{ $t('product.filter_strength.water_loop01') }}</li>
               <!-- 2. 充分利用產品空間 -->
-              2. {{ $t('product.filter_strength.water_loop02') }}<br />
+              <li>{{ $t('product.filter_strength.water_loop02') }}</li>
               <!-- 3. 杜絕漏水風險 -->
-              3. {{ $t('product.filter_strength.water_loop03') }}<br />
+              <li>{{ $t('product.filter_strength.water_loop03') }}</li>
               <!-- 4. 可承受強壓 -->
-              4. {{ $t('product.filter_strength.water_loop04') }}<br />
-            </div>
-          </div>
-          <div class="water-loop container px-mob-24">
-            <img class="d-mob-none" src="/images/water_loop.png" alt="強效過濾濾芯" />
-            <img
-              class="d-none d-mob-block"
-              src="/images/water_loop_mob.png"
-              alt="強效過濾濾芯"
-            />
+              <li>{{ $t('product.filter_strength.water_loop04') }}</li>
+            </ol>
           </div>
         </div>
-        <div class="filter_types container d-flex fd-column ai-c pt-160 pt-mob-30 text-white pos-r">
-          <div class="bg-text bg-text-r d-none d-mob-block">2</div>
-          <h3 class="fz-48 lh-70 fz-mob-20 lh-mob-32 fw-700 mb-38 mb-mob-24">
-            <!-- 多重強效過濾，好濾芯大口喝水 -->
-            {{ $t('product.filter_types.title') }}
-          </h3>
-          <div class="img_wrap d-mob-none">
-            <img src="/images/filter_types.png" alt="強效過濾濾心" />
+      </section>
+
+      <section class="pd-tile pd-parchment pd-water">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">
+              <!-- 多重強效過濾，好濾芯大口喝水 -->
+              {{ $t('product.filter_types.title') }}
+            </h2>
+          </header>
+          <div data-reveal class="pd-stage pd-desk">
+            <img src="/images/filter_types.png" alt="強效過濾濾心" loading="lazy" />
           </div>
-          <div class="img_wrap d-none d-mob-block">
+          <div class="pd-swipe pd-mob">
             <swiper
               :slidesPerView="1"
               :spaceBetween="30"
               :loop="true"
-              :pagination="{
-                clickable: true
-              }"
+              :pagination="{ clickable: true }"
               :navigation="true"
               :modules="modules"
               :style="{
-                '--swiper-navigation-color': '#333',
-                '--swiper-pagination-color': '#fff',
+                '--swiper-navigation-color': '#1d1d1f',
+                '--swiper-pagination-color': '#b8431f',
                 '--swiper-navigation-size': '15px'
               }"
             >
@@ -617,298 +374,135 @@
             </swiper>
           </div>
         </div>
-        <div class="d-none d-mob-flex fd-column ai-c pt-80 pb-50 px-24 pos-r">
-          <div class="bg-text bg-text-r">3</div>
-          <h2 class="title text-white fz-mob-20 lh-mob-32 fw-700 mb-12">
-            <!-- 進口RO，AI智慧淨濾，只為安心 -->
-            {{ $t('product.filter_levels.title') }}
-          </h2>
-          <div class="subtitle">
-            <h5 class="text-white fz-mob-16 lh-mob-24 fw-400">
+      </section>
+
+      <!-- 進口RO：the layered render carries its own callouts, so it sits in a dark tile. -->
+      <section class="pd-tile pd-dark pd-levels">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">
+              <!-- 進口RO，AI智慧淨濾，只為安心 -->
+              {{ $t('product.filter_levels.title') }}
+            </h2>
+            <p class="pd-lead">
               <!-- 深度精確過濾有效過濾和除原水中的泥沙、懸浮物、餘氯、苯、甲醛、重金屬、細菌、病毒、異味等所有雜質。
               將原水過濾為帶有礦物質的極淨礦泉水。 -->
               {{ $t('product.filter_levels.subTitle') }}
-            </h5>
-          </div>
-          <div
-            @click="expandImg()"
-            class="filter_detail_btn ai-c mt-32 py-10 px-24 text-grey-blue2 bg-white"
-            :class="{ 'd-none': targetExpand, 'd-flex': !targetExpand }"
-          >
-            <!-- 查看更多 -->
-            {{ $t('product.filter_levels.detail') }}
-            <img class="pl-4" src="/assets/arrow_down.svg" alt="arrow_down icon" />
-          </div>
-        </div>
-      </div>
-      <div
-        :class="{ expand: targetExpand, close: !targetExpand }"
-        class="filter_levels_mob d-none d-mob-block bg-grey-blue2"
-      >
-        <img src="/images/filter_level_mob.png" alt="Water filtration levels diagram" loading="lazy" />
-      </div>
-      <div class="filter_levels d-flex fd-column ai-c d-mob-none">
-        <img src="/images/filter_level.png" alt="Water filtration levels diagram" loading="lazy" />
-        <div class="container filter-text-container">
-          <h2 class="title text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fw-700 mb-46 mb-tab-24">
-            <!-- 進口RO，AI智慧淨濾，只為安心 -->
-            {{ $t('product.filter_levels.title') }}
-          </h2>
-          <div class="subtitle d-mob-none">
-            <h5 class="text-white fz-32 lh-46 fz-tab-24 lh-tab-36 fw-400">
-              <!-- 深度精確過濾有效過濾和除原水中的泥沙、懸浮物、餘氯、苯、甲醛、重金屬、細菌、病毒、異味等所有雜質。
-              將原水過濾為帶有礦物質的極淨礦泉水。 -->
-              {{ $t('product.filter_levels.subTitle') }}
-            </h5>
-          </div>
-        </div>
-      </div>
-      <div
-        class="filter_si text-white pt-92 px-168 px-tab-100 pb-mob-54 px-mob-0"
-        :class="{ 'pt-mob-44': !targetExpand, 'pt-mob-12': targetExpand }"
-      >
-        <div class="d-none d-mob-flex jc-c">
-          <div
-            @click="closeImg()"
-            class="close_img_btn jc-c ai-c py-10 px-10 text-grey-blue2 bg-white"
-            :class="{ 'd-none': !targetExpand, 'd-flex': targetExpand }"
-          >
-            <img src="/assets/arrow_up.svg" alt="arrow_down icon" />
-          </div>
-        </div>
-        <div class="d-none d-mob-block pos-r">
-          <img class="pos-a pl-24" src="/assets/water_drop.svg" alt="水滴icon" />
-          <div class="p-mob-24">
-            <!-- 好 {鍶} 低鈉，分子礦化~固骨髓 -->
-            <i18n-t
-              keypath="product.filter_si.title"
-              tag="h3"
-              class="fz-20 lh-32 tac mb-12 d-none-d-mob-block"
+            </p>
+            <button
+              type="button"
+              class="pd-pill pd-pill-ghost-dark filter_detail_btn pd-mob"
+              :class="{ 'is-hidden': targetExpand }"
+              @click="expandImg()"
             >
-              <template v-slot:si>
-                <span class="text-orange fz-28 lh-40">
-                  <!-- 鍶 -->
-                  {{ $t('product.filter_si.si') }}
-                </span>
-              </template>
-            </i18n-t>
-            <h6 class="fz-14 lh-20 fw-500">
-              <!-- 運用泉感極淨科技，創研分子礦化技術，增加以原始礦源為標準研發的泉感極淨礦層，將鍶原子與水分子有機結合，打造分子級富鍶低鈉好水，不僅提升口感，更能幫助提升骨質密度，增進鈣質代謝，適量補充還能預防蛀牙、強化骨髓。 -->
-              {{ $t('product.filter_si.desc') }}
-            </h6>
-            <div class="bg-text bg-text-lb">4</div>
+              <!-- 查看更多 -->
+              {{ $t('product.filter_levels.detail') }}
+              <img class="pd-btn-arrow" src="/assets/arrow_down.svg" alt="arrow_down icon" />
+            </button>
+          </header>
+          <img data-reveal class="pd-levels-img pd-desk" src="/images/filter_level.png" alt="Water filtration levels diagram" loading="lazy" />
+          <div :class="{ expand: targetExpand, close: !targetExpand }" class="filter_levels_mob pd-mob">
+            <img src="/images/filter_level_mob.png" alt="Water filtration levels diagram" loading="lazy" />
+          </div>
+          <div class="pd-mob pd-center">
+            <button
+              type="button"
+              class="pd-pill pd-pill-ghost-dark close_img_btn"
+              :class="{ 'is-hidden': !targetExpand }"
+              @click="closeImg()"
+            >
+              <img class="pd-btn-arrow" src="/assets/arrow_up.svg" alt="arrow_down icon" />
+            </button>
           </div>
         </div>
-        <!-- 好 {鍶} 低鈉，分子礦化~固骨髓 -->
-        <i18n-t
-          keypath="product.filter_si.title"
-          tag="h3"
-          class="fz-48 lh-70 fz-tab-32 lh-tab-50 fw-500 pl-58 pl-tab-32 mb-12 d-mob-none"
-        >
-          <template v-slot:si>
-            <span class="text-orange fz-64 lh-92">
-              <!-- 鍶 -->
-              {{ $t('product.filter_si.si') }}
-            </span>
-          </template>
-        </i18n-t>
-        <div class="si_wrap p-32 d-flex ai-fs d-mob-none">
-          <img class="pr-20" src="/assets/water_drop.svg" alt="水滴icon" />
-          <h6 class="fz-32 lh-48 fw-500">
+      </section>
+
+      <section class="pd-tile pd-white pd-si">
+        <div class="pd-wrap pd-center">
+          <!-- 好 {鍶} 低鈉，分子礦化~固骨髓 -->
+          <i18n-t keypath="product.filter_si.title" tag="h2" class="pd-h2">
+            <template v-slot:si>
+              <span class="pd-si">
+                <!-- 鍶 -->
+                {{ $t('product.filter_si.si') }}
+              </span>
+            </template>
+          </i18n-t>
+          <p data-reveal class="pd-lead pd-si-desc">
             <!-- 運用泉感極淨科技，創研分子礦化技術，增加以原始礦源為標準研發的泉感極淨礦層，將鍶原子與水分子有機結合，打造分子級富鍶低鈉好水，不僅提升口感，更能幫助提升骨質密度，增進鈣質代謝，適量補充還能預防蛀牙、強化骨髓。 -->
             {{ $t('product.filter_si.desc') }}
-          </h6>
+          </p>
         </div>
-      </div>
-      <div class="baby_intro d-flex">
-        <div class="baby_intro_img"></div>
-        <div class="baby_intro_info">
-          <div class="intro_wrap py-200 px-160 py-tab-100 px-tab-60 py-mob-60 px-mob-24">
-            <img class="mb-8" src="/assets/water_drop.svg" alt="水滴 icon" />
-            <h6 class="text-white fz-40 lh-58 fz-tab-28 lh-tab-36 fz-mob-22 lh-mob-30 fw-700 mb-8">
-              <!-- 口感清甜，淨飲更有味 -->
-              {{ $t('product.baby_intro.title') }}
-            </h6>
-            <h6 class="text-white fz-32 lh-46 fz-tab-20 lh-tab-32 fz-mob-15 lh-mob-22 fw-400">
-              <!-- 口感微甘，寶寶愛喝水，泡茶、泡咖啡更顯清甜風味 -->
-              {{ $t('product.baby_intro.desc') }}
-            </h6>
+      </section>
+
+      <section class="pd-tile pd-parchment pd-baby">
+        <div class="pd-wrap">
+          <div data-reveal-group class="pd-baby-grid">
+            <img class="pd-baby-img" src="/images/babywwater_2.png" :alt="$t('product.baby_intro.title')" loading="lazy" />
+            <div class="pd-baby-copy">
+              <h2 class="pd-h2">
+                <!-- 口感清甜，淨飲更有味 -->
+                {{ $t('product.baby_intro.title') }}
+              </h2>
+              <p class="pd-lead pd-lead-left">
+                <!-- 口感微甘，寶寶愛喝水，泡茶、泡咖啡更顯清甜風味 -->
+                {{ $t('product.baby_intro.desc') }}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="gradient_container_iii">
-        <div class="background_i">
-          <div class="d-flex jc-fe ai-c">
-            <h3 class="fz-32 lh-46 fw-500 mr-22">
+      </section>
+
+      <!-- 產品優勢: one list for every breakpoint (the old page kept a desktop and a mobile copy). -->
+      <section class="pd-tile pd-dark pd-advantages">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">
               <!-- 水維氧AI智慧淨水系統 -->
               {{ $t('product.filter_list.title') }}
-            </h3>
-            <img src="/assets/water_drop.svg" alt="水滴 icon" />
-          </div>
-          <div class="filter_list">
-            <ul class="text_0">
-              <li class="list_header fz-40 lh-58 fz-tab-32 lh-tab-46">
-                <img src="/assets/check.svg" alt="斷水設計" />
-                <span>
-                  <!-- 漏水監控斷水設計 -->
-                  {{ $t('product.filter_list.list01.title') }}
-                </span>
-              </li>
-              <li class="fz-32 lh-44 fz-tab-24 lh-tab-32">
-                <!-- 智能漏水監控，立即自動斷水並即時提示。 -->
-                {{ $t('product.filter_list.list01.desc') }}
-              </li>
-            </ul>
-          </div>
-          <div class="filter_list">
-            <ul class="text_0">
-              <li class="list_header fz-40 lh-58 fz-tab-32 lh-tab-46">
-                <img src="/assets/check.svg" alt="即時掌控水值" />
-                <span>
-                  <!-- 即時掌控TDS水值 -->
-                  {{ $t('product.filter_list.list02.title') }}
-                </span>
-              </li>
-              <li class="fz-32 lh-44 fz-tab-24 lh-tab-32">
-                <!-- 中控系統即時顯示目前TDS水值與飲用量，好水看得見、飲用最放心！ -->
-                {{ $t('product.filter_list.list02.desc') }}
-              </li>
-            </ul>
-          </div>
-          <div class="filter_list">
-            <ul class="text_0">
-              <li class="list_header fz-40 lh-58 fz-tab-32 lh-tab-46">
-                <img src="/assets/check.svg" alt="濾芯狀態智慧提醒" />
-                <span>
-                  <!-- 濾芯狀態智慧提醒 -->
-                  {{ $t('product.filter_list.list03.title') }}
-                </span>
-              </li>
-              <li class="fz-32 lh-44 fz-tab-24 lh-tab-32">
-                <!-- 當濾芯使用壽命低於10%，智管家智慧AI系統自動提示更換。 -->
-                {{ $t('product.filter_list.list03.desc') }}
-              </li>
-            </ul>
-          </div>
-          <div class="filter_list">
-            <ul class="text_0">
-              <li class="list_header fz-40 lh-58 fz-tab-32 lh-tab-46">
-                <img src="/assets/fault.svg" alt="傳統淨水器" />
-                <span>
-                  <!-- 傳統淨水器 -->
-                  {{ $t('product.filter_list.list04.title') }}
-                </span>
-              </li>
-              <li class="fz-32 lh-44 fz-tab-24 lh-tab-32">
-                <!-- 無法掌握當前飲用水狀態，飲水品質難以確保。 -->
-                {{ $t('product.filter_list.list04.desc01') }}
-              </li>
-              <li class="fz-32 lh-44 fz-tab-24 lh-tab-32">
-                <!-- 漏水發生無法即時應變。 -->
-                {{ $t('product.filter_list.list04.desc02') }}
-              </li>
-              <li class="fz-32 lh-44 fz-tab-24 lh-tab-32">
-                <!-- 濾心狀態無法即時掌握更換時機。 -->
-                {{ $t('product.filter_list.list04.desc03') }}
-              </li>
-            </ul>
+            </h2>
+          </header>
+          <div data-reveal-group class="pd-adv-grid">
+            <div v-for="n in 3" :key="n" class="filter_list">
+              <img class="pd-adv-icon" src="/assets/check.svg" :alt="$t(`product.filter_list.list0${n}.title`)" />
+              <h3>{{ $t(`product.filter_list.list0${n}.title`) }}</h3>
+              <p>{{ $t(`product.filter_list.list0${n}.desc`) }}</p>
+            </div>
+            <div class="filter_list filter_list-fault">
+              <img class="pd-adv-icon" src="/assets/fault.svg" alt="傳統淨水器" />
+              <h3>{{ $t('product.filter_list.list04.title') }}</h3>
+              <ul>
+                <li>{{ $t('product.filter_list.list04.desc01') }}</li>
+                <li>{{ $t('product.filter_list.list04.desc02') }}</li>
+                <li>{{ $t('product.filter_list.list04.desc03') }}</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- 產品優勢 -->
-      <div class="productAdvantages pb-32 px-24 d-none d-mob-flex fd-column">
-        <div class="filter_list mb-12">
-          <ul>
-            <li class="list_header d-flex ai-c">
-              <img class="mr-8" src="/assets/check.svg" alt="斷水設計" />
-              <span class="fz-24 lh-30 fw-900 text-grey-blue2">
-                <!-- 漏水監控斷水設計 -->
-                {{ $t('product.filter_list.list01.title') }}
-              </span>
-            </li>
-            <li class="fz-18 lh-24 fw-500 text-grey-blue2 ml-64">
-              <!-- 智能漏水監控，立即自動斷水並即時提示。 -->
-              {{ $t('product.filter_list.list01.desc') }}
-            </li>
-          </ul>
-        </div>
-        <div class="filter_list mb-12">
-          <ul>
-            <li class="list_header d-flex ai-c">
-              <img class="mr-8" src="/assets/check.svg" alt="即時掌控水值" />
-              <span class="fz-24 lh-30 fw-900 text-grey-blue2">
-                <!-- 即時掌控TDS水值 -->
-                {{ $t('product.filter_list.list02.title') }}
-              </span>
-            </li>
-            <li class="fz-18 lh-24 fw-500 text-grey-blue2 ml-64">
-              <!-- 中控系統即時顯示目前TDS水值與飲用量，好水看得見、飲用最放心！ -->
-              {{ $t('product.filter_list.list02.desc') }}
-            </li>
-          </ul>
-        </div>
-        <div class="filter_list mb-12">
-          <ul>
-            <li class="list_header d-flex ai-c">
-              <img class="mr-8" src="/assets/check.svg" alt="濾芯狀態智慧提醒" />
-              <span class="fz-24 lh-30 fw-900 text-grey-blue2">
-                <!-- 濾芯狀態智慧提醒 -->
-                {{ $t('product.filter_list.list03.title') }}
-              </span>
-            </li>
-            <li class="fz-18 lh-24 fw-500 text-grey-blue2 ml-64">
-              <!-- 當濾芯使用壽命低於10%，智管家智慧AI系統自動提示更換。 -->
-              {{ $t('product.filter_list.list03.desc') }}
-            </li>
-          </ul>
-        </div>
-        <div class="filter_list">
-          <ul>
-            <li class="list_header d-flex ai-c">
-              <img class="mr-8" src="/assets/fault.svg" alt="傳統淨水器" />
-              <span class="fz-24 lh-30 fw-900 text-grey-blue2">
-                <!-- 傳統淨水器 -->
-                {{ $t('product.filter_list.list04.title') }}
-              </span>
-            </li>
-            <li class="fz-18 lh-24 fw-500 text-grey-blue2 ml-64">
-              <!-- 無法掌握當前飲用水狀態，飲水品質難以確保。 -->
-              {{ $t('product.filter_list.list04.desc01') }}
-            </li>
-            <li class="fz-18 lh-24 fw-500 text-grey-blue2 ml-64">
-              <!-- 漏水發生無法即時應變。 -->
-              {{ $t('product.filter_list.list04.desc02') }}
-            </li>
-            <li class="fz-18 lh-24 fw-500 text-grey-blue2 ml-64">
-              <!-- 濾心狀態無法即時掌握更換時機。 -->
-              {{ $t('product.filter_list.list04.desc03') }}
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="background_B">
-        <div class="competitor container d-flex fd-column ai-c py-80 py-mob-0">
-          <h2 class="text-white fz-72 lh-104 fz-tab-48 lh-tab-70 fw-700 d-mob-none">
-            <!-- 水維氧AI智慧淨水系統 -->
-            {{ $t('product.competitor.title') }}
-          </h2>
-          <div class="competitor_img d-mob-none">
-            <img src="/images/competitors.png" alt="" />
+      </section>
+
+      <section class="pd-tile pd-white pd-competitor">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">
+              <!-- 水維氧AI智慧淨水系統 -->
+              {{ $t('product.competitor.title') }}
+            </h2>
+          </header>
+          <div class="competitor_img pd-desk">
+            <img src="/images/competitors.png" alt="" loading="lazy" />
           </div>
-          <div class="competitor_img d-none d-mob-block">
+          <div class="competitor_img pd-swipe pd-mob">
             <swiper
               :slidesPerView="1"
               :spaceBetween="30"
               :loop="true"
-              :pagination="{
-                clickable: true
-              }"
+              :pagination="{ clickable: true }"
               :navigation="true"
               :modules="modules"
-              class="d-none d-mob-block"
               :style="{
-                '--swiper-navigation-color': '#333',
-                '--swiper-pagination-color': '#fff',
+                '--swiper-navigation-color': '#1d1d1f',
+                '--swiper-pagination-color': '#b8431f',
                 '--swiper-navigation-size': '15px'
               }"
               :lazy="true"
@@ -925,59 +519,44 @@
             </swiper>
           </div>
         </div>
-        <!-- <div class="purchase container d-flex fd-column ai-c pb-80 d-mob-none">
+      </section>
 
-          <div class="card_2 flex_horizontal">
-            <img src="/images/pack.png" alt="早鳥優惠價" />
-            <div class="d-flex fd-column jc-sa p-24 pos-r">
-              <div class="btn_wrap">
-                <span class="flag">
-                  {{ $t('product.purchase.flag') }}
-                </span>
-                <div></div>
-                <button @click="buyNow">
-                  {{ $t('product.purchase.btn') }}
-                </button>
-              </div>
-              <span class="fz-32 lh-46 fw-500 text-grey-blue3">
-                {{ $t('product.purchase.title') }}
+      <!-- 水維氧 enGoW-601 pricing card -->
+      <section class="pd-tile pd-parchment wf-price-section">
+        <div class="pd-wrap">
+          <div data-reveal class="wf-price-card">
+            <div class="wf-price-flag">早鳥優惠</div>
+            <div class="wf-price-amounts">
+              <span class="wf-price-msrp">
+                <span class="wf-price-msrp-label">MSRP</span>
+                <s>NT$21,000</s>
               </span>
-              <span class="subtitle fz-20 lh-28 fw-400">
-                {{ $t('product.purchase.desc') }}
-              </span>
-              <div class="price tar fz-48 fw-500">＄18,000</div>
+              <span class="wf-price-promo">NT$18,000</span>
             </div>
+            <div class="wf-price-bonus">★ 通過 SGS 水質檢測 · BSMI 商品檢驗 雙重認證</div>
+            <button class="pd-pill pd-pill-primary wf-buy-btn-card" @click="buyNow">
+              {{ $t('product.purchase.btn') }} →
+            </button>
           </div>
-        </div>-->
-      </div>
-      <!-- 水維氧 enGoW-601 pricing card (.ap-price-card pattern) -->
-      <div class="wf-price-section">
-        <div class="wf-price-card">
-          <div class="wf-price-flag">早鳥優惠</div>
-          <div class="wf-price-amounts">
-            <span class="wf-price-msrp">
-              <span class="wf-price-msrp-label">MSRP</span>
-              <s>NT$21,000</s>
-            </span>
-            <span class="wf-price-promo">NT$18,000</span>
-          </div>
-          <div class="wf-price-bonus">★ 通過 SGS 水質檢測 · BSMI 商品檢驗 雙重認證</div>
-          <button class="wf-buy-btn-card" @click="buyNow">
-            {{ $t('product.purchase.btn') }} →
-          </button>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- 智管家商城: the fifth product line (Sean 2026-09-27). A separate site
-         (shoph5.smtengo.com), so this section describes and links, never sells here.
-         Copy follows KB-001 A.15: same store as the former 安購商城, new version. -->
-    <div id="shop" class="shop-line">
-      <div class="shop-line-inner">
-        <div class="shop-line-copy" data-reveal>
-          <h2 class="section-title shop-line-title">{{ $t('product.shop.title') }}</h2>
-          <p class="shop-line-lede">{{ $t('product.shop.lede') }}</p>
-          <ul class="shop-line-points">
+      <!-- 智管家商城: the fifth product line (Sean 2026-09-27). A separate site
+           (shoph5.smtengo.com), so this section describes and links, never sells here.
+           Copy follows KB-001 A.15: same store as the former 安購商城, new version. -->
+      <section id="shop" class="pd-tile pd-white shop-line">
+        <div class="pd-wrap">
+          <header class="pd-head pd-center" data-reveal>
+            <h2 class="pd-h2">{{ $t('product.shop.title') }}</h2>
+            <p class="pd-lead">{{ $t('product.shop.lede') }}</p>
+          </header>
+          <figure class="shop-line-figure" data-reveal>
+            <div class="shop-line-frame">
+              <img src="/images/screens/13-shop-home.jpg" :alt="$t('product.shop.alt')" width="1280" height="720" loading="lazy" />
+            </div>
+            <figcaption>{{ $t('product.shop.caption') }}</figcaption>
+          </figure>
+          <ul data-reveal-group class="shop-line-points">
             <li v-for="i in 3" :key="i">
               <strong>{{ $t(`product.shop.points.p${i}.title`) }}</strong>
               <span>{{ $t(`product.shop.points.p${i}.body`) }}</span>
@@ -985,17 +564,11 @@
           </ul>
           <p class="shop-line-note">{{ $t('product.shop.note') }}</p>
           <div class="shop-line-ctas">
-            <a :href="SHOP_URL" target="_blank" rel="noopener" class="shop-line-btn" data-track="product:shop">{{ $t('product.shop.cta') }} →</a>
-            <a :href="SHOP_URL + 'subscriptions'" target="_blank" rel="noopener" class="shop-line-link" data-track="product:shop-plans">{{ $t('product.shop.ctaPlans') }} →</a>
+            <a :href="SHOP_URL" target="_blank" rel="noopener" class="pd-pill pd-pill-primary shop-line-btn" data-track="product:shop">{{ $t('product.shop.cta') }}</a>
+            <a :href="SHOP_URL + 'subscriptions'" target="_blank" rel="noopener" class="pd-link shop-line-link" data-track="product:shop-plans">{{ $t('product.shop.ctaPlans') }}<span class="pd-chev" aria-hidden="true">›</span></a>
           </div>
         </div>
-        <figure class="shop-line-figure" data-reveal>
-          <div class="shop-line-frame">
-            <img src="/images/screens/13-shop-home.jpg" :alt="$t('product.shop.alt')" width="1280" height="720" loading="lazy" />
-          </div>
-          <figcaption>{{ $t('product.shop.caption') }}</figcaption>
-        </figure>
-      </div>
+      </section>
     </div>
 
     <CatalogMenu
@@ -1005,11 +578,11 @@
       @select="selectCatalogProduct"
     />
 
-    <ProductCatalog 
-      v-if="isCatalogOpen" 
-      :isOpen="isCatalogOpen" 
-      :product="selectedCatalogItem" 
-      @close="closeCatalog" 
+    <ProductCatalog
+      v-if="isCatalogOpen"
+      :isOpen="isCatalogOpen"
+      :product="selectedCatalogItem"
+      @close="closeCatalog"
     />
     <SectionDots :items="sectionDots" :aria-label="$t('product.tablet_intro.title')" />
   </section>
@@ -1239,447 +812,322 @@ const targetExpand = ref(false)
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
-// --- Air Purifier (#oxygen1) section styles ---
-.op-80 { opacity: 0.8; }
 
-.ap-model-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  letter-spacing: 0.02em;
-}
-.ap-model-label {
-  opacity: 0.7;
-}
-.ap-model-pill {
-  padding: 4px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 16px;
-  font-size: 0.85rem;
-  backdrop-filter: blur(2px);
-}
+// ─── Apple-profile page grammar (DESIGN.md + src/views/index.vue) ─────────
+// Tokens ($ink, $ink-80, $parchment, $tile-dark, $tile-dark-2, $hairline, $on-dark-muted,
+// $product-shadow, $display-font) come from utils/variables. Tiles run edge to edge and
+// alternate white / parchment / dark; the colour change is the divider.
+//
+// Tile order: hero W · intro P · numbers W · interfaces D · features P · oxygen W ·
+// filter P · strength W · types P · levels D · strontium W · baby P · advantages D ·
+// competitor W · price P · shop W.
 
-.ap-features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 1100px;
-  margin: 40px auto 60px;
+.pd { background: #fff; color: $ink; font-family: $display-font; }
+.pd a:focus-visible, .pd button:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 3px; }
+.pd-dark a:focus-visible, .pd-dark button:focus-visible { outline-color: $orange2; }
+.pd-wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
+.pd-center { text-align: center; }
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 560px) {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin: 28px auto 40px;
-  }
-}
-.ap-feature-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  padding: 24px 20px;
-  color: #fff;
-  transition: transform 0.3s ease, background 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .ap-feature-num {
-    font-size: 0.78rem;
-    letter-spacing: 0.16em;
-    color: #FE8B05;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  h4 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin: 0 0 8px;
-    line-height: 1.4;
-  }
-  p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    opacity: 0.82;
-    margin: 0;
-  }
+.pd-tile { padding: clamp(64px, 9vw, 112px) 0; overflow-x: clip; }
+.pd-white { background: #fff; color: $ink; }
+.pd-parchment { background: $parchment; color: $ink; }
+.pd-dark {
+  background: $tile-dark; color: #fff;
+  .pd-h2, .pd-h3 { color: #fff; }
+  .pd-lead, .pd-body { color: $on-dark-muted; }
 }
 
-.ap-specs-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto 48px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
+// ─── type: 600 display with negative tracking, 400 body 17px / 1.47 / -.022em ──
+.pd-title {
+  font-family: $display-font; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; color: $ink; margin: 0;
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+}
+.pd-tagline {
+  font-size: clamp(1.2rem, 1.9vw, 1.75rem); font-weight: 300; line-height: 1.4; letter-spacing: -.005em;
+  color: $ink; max-width: 30em; margin: 18px auto 0; text-wrap: balance;
+}
+.pd-sub {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px;
+  margin: 20px 0 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80;
+}
+.pd-mark { height: 22px; width: auto; }
+.pd-h2 {
+  font-family: $display-font; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0; color: inherit;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+}
+.pd-h2-logo { height: .9em; width: auto; vertical-align: -.08em; margin-right: .2em; }
+.pd-h2-line { display: block; }
+.pd-amp { font-weight: 400; }
+.pd-h3 {
+  font-family: $display-font; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 14px; color: $ink;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+.pd-lead {
+  font-size: clamp(1.15rem, 1.7vw, 1.5rem); font-weight: 400; line-height: 1.4; letter-spacing: -.005em;
+  color: $ink; margin: 14px auto 0; max-width: 34em;
+}
+.pd-lead-left { margin-left: 0; margin-right: 0; }
+.pd-body { margin: 14px 0 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink; }
+.pd-head { margin-bottom: clamp(36px, 5vw, 64px); }
+.pd-head .pd-lead + .pd-h2, .pd-two { margin-top: 0; }
+.pd-head .pd-two { margin-bottom: 10px; }
+.pd-head .pd-h2 + .pd-lead { margin-top: 14px; }
+.pd-inline-link { color: $brand-orange-text; text-decoration: none; &:hover { text-decoration: underline; } }
+.pd-dark .pd-inline-link { color: $orange2; }
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+// ─── the one accent: pills and links ──────────────────────────────────────
+.pd-pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; text-decoration: none; cursor: pointer;
+  font-family: inherit; font-size: 1.0625rem; font-weight: 400; letter-spacing: -.022em; padding: 11px 22px; min-height: 44px; border-radius: 9999px; border: 1px solid transparent;
+  transition: transform .15s ease, background .2s ease; &:active { transform: scale(.95); }
+}
+.pd-pill-primary { background: $brand-orange-text; color: #fff; &:hover { background: darken($brand-orange-text, 6%); color: #fff; } }
+.pd-pill-ghost-dark { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .55); &:hover { background: rgba(255, 255, 255, .08); } }
+.pd-btn-arrow { width: 17px; height: 17px; filter: brightness(0) invert(1); }
+.pd-link { color: $brand-orange-text; text-decoration: none; font-size: 1.0625rem; letter-spacing: -.022em; &:hover { text-decoration: underline; } }
+.pd-chev { margin-left: .25em; }
+
+// ─── responsive show / hide pairs ──────────────────────────────────────────
+// !important: the stage/figure rules below set display on the same elements.
+.pd-mob, .pd-mob-lg { display: none !important; }
+@media (max-width: 768px) {
+  .pd-desk { display: none !important; }
+  .pd-mob { display: block !important; }
+  .pd-mob.pd-pill { display: inline-flex !important; }
+}
+@media (max-width: 1024px) {
+  .pd-desk-lg { display: none !important; }
+  .pd-mob-lg { display: block !important; }
+  .pd-two-machines.pd-mob-lg { display: flex !important; }
+}
+.pd-pill.is-hidden { display: none !important; }
+
+// ─── fixed scroll-to-top control (utility button, no shadow) ──────────────
+.scroll-top-btn {
+  position: fixed; right: 24px; bottom: 24px; z-index: 100; width: 44px; height: 44px; border-radius: 9999px;
+  background: $parchment; border: 1px solid $hairline; display: flex; align-items: center; justify-content: center; cursor: pointer;
+  transition: transform .15s ease; &:active { transform: scale(.95); }
+  img { width: 20px; height: 20px; }
+  @media (max-width: 768px) { display: none; }
+}
+
+// ─── device frames: brushed titanium body + the single product shadow (copied from the homepage) ───
+@mixin metal-frame($radius, $pad, $glass, $screen-radius) {
+  position: relative; border-radius: $radius; padding: $pad;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, transparent 1px 3px),
+    linear-gradient(135deg, #f4f6f8 0%, #c4cad2 16%, #e6e9ed 34%, #adb5bf 52%, #dde1e6 70%, #b6bdc6 86%, #eef1f4 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), inset 0 -1px 0 rgba(15,23,32,.28), $product-shadow;
+  img { display: block; width: 100%; height: auto; border-radius: $screen-radius; box-shadow: 0 0 0 $glass #0c1219, 0 0 0 ($glass + 1px) rgba(255,255,255,.12); }
+}
+.pd-iphone { @include metal-frame(34px, 9px, 5px, 22px); }
+
+// ─── hero ─────────────────────────────────────────────────────────────────
+.pd-hero { padding-top: clamp(96px, 10vw, 120px); padding-bottom: clamp(48px, 7vw, 88px); }
+.pd-hero-device {
+  display: block; width: min(960px, 92vw); height: auto; margin: clamp(28px, 5vw, 56px) auto 0;
+  // the device PNG is transparent around the body, so the product shadow follows its outline
+  filter: drop-shadow(rgba(0, 0, 0, .22) 3px 5px 30px);
+}
+
+// ─── intro ────────────────────────────────────────────────────────────────
+.pd-intro-grid {
+  display: grid; grid-template-columns: 5fr 6fr; gap: clamp(32px, 5vw, 72px); align-items: start;
+  @media (max-width: 834px) { grid-template-columns: 1fr; }
+}
+.pd-intro-img img { display: block; width: 100%; height: auto; border-radius: 18px; }
+.pd-intro-copy {
+  .pd-h3 { margin-top: 0; }
+  .pd-lead { margin-top: 0; }
+  .intro-label { font-weight: 600; margin-right: .5em; }
+  .intro-figure {
+    margin: 24px 0 8px; max-width: 440px;
+    img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid $hairline; }
+    figcaption { margin-top: 10px; font-size: .875rem; line-height: 1.43; color: $ink-80; }
   }
 }
-.ap-spec-cell {
-  padding: 18px 16px;
-  text-align: center;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-  color: #fff;
 
-  &:last-child {
-    border-right: none;
-  }
-
-  @media (max-width: 768px) {
-    &:nth-child(2n) { border-right: none; }
-    &:nth-child(-n+2) { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-  }
-
-  .ap-spec-label {
-    font-size: 0.78rem;
-    opacity: 0.65;
-    letter-spacing: 0.08em;
-    margin-bottom: 6px;
-  }
-  .ap-spec-value {
-    font-size: 0.98rem;
-    font-weight: 600;
-  }
+// ─── numbers ──────────────────────────────────────────────────────────────
+.pd-count-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;
+  @media (max-width: 1024px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 480px) { grid-template-columns: 1fr; }
 }
-
-.ap-price-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 32px 40px;
-  background: linear-gradient(135deg, rgba(224, 90, 53, 0.18), rgba(254, 139, 5, 0.12));
-  border: 1px solid rgba(254, 139, 5, 0.35);
-  border-radius: 18px;
-  margin: 0 auto 56px;
-  max-width: 520px;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  box-shadow: 0 6px 28px rgba(224, 90, 53, 0.15);
-
-  @media (max-width: 560px) {
-    padding: 24px 20px;
-    margin-bottom: 36px;
-  }
+.pd-count {
+  display: flex; flex-direction: column; gap: 6px; padding: 28px; background: $parchment; border: 1px solid $hairline; border-radius: 18px;
 }
-.ap-price-flag {
-  display: inline-block;
-  background: #e05a35;
-  color: #fff;
-  padding: 4px 14px;
-  border-radius: 12px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+.pd-count-icon { width: 36px; height: 36px; filter: brightness(0); opacity: .85; margin-bottom: 14px; }
+.pd-count-num {
+  display: flex; align-items: baseline; gap: 8px; font-family: $display-font; font-weight: 600; letter-spacing: -.03em; line-height: 1;
+  font-size: clamp(2.6rem, 4.4vw, 4rem); font-variant-numeric: tabular-nums; color: $ink;
 }
-.ap-price-amounts {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.ap-price-msrp {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1rem;
-  opacity: 0.6;
+.pd-count-unit { font-size: clamp(1.15rem, 1.7vw, 1.5rem); font-weight: 400; letter-spacing: -.01em; color: $ink-80; }
+.pd-count-info { margin: 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; }
 
-  .ap-price-msrp-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    margin-bottom: 2px;
-  }
-  s { font-size: 1.05rem; }
-}
-.ap-price-promo {
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: #FE8B05;
-  letter-spacing: 0.01em;
-
-  @media (max-width: 560px) {
-    font-size: 2rem;
-  }
-}
-.ap-price-bonus {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #ffd9a8;
-  letter-spacing: 0.02em;
-}
-.ap-buy-btn {
-  margin-top: 6px;
-  padding: 12px 48px;
-  background: linear-gradient(90deg, #e05a35, #FE8B05);
-  color: #fff;
-  border: none;
-  border-radius: 999px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 18px rgba(224, 90, 53, 0.35);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(224, 90, 53, 0.5);
-  }
-  &:active {
-    transform: translateY(0);
-  }
-
-  // "Coming soon" placeholder retained for future use (e.g., between presale
-  // windows or for other product launches). Currently unused while 嘖嘖 is live.
-  &--placeholder {
-    background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.85);
-    border: 1px dashed rgba(255, 217, 168, 0.55);
-    box-shadow: none;
-    cursor: default;
-    text-align: center;
-    font-size: 0.95rem;
-    letter-spacing: 0.06em;
-
-    &:hover, &:active {
-      transform: none;
-      box-shadow: none;
+// ─── 三種介面，一組帳號 (dark tile; .interfaces-table classes are GSAP targets) ───
+.interfaces {
+  &-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  &-table {
+    width: 100%; min-width: 640px; border-collapse: collapse; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em;
+    th, td { padding: 18px 16px; border-bottom: 1px solid rgba(255, 255, 255, .18); text-align: center; vertical-align: middle; }
+    thead th, thead td { border-bottom: 1px solid rgba(255, 255, 255, .5); }
+    thead th { font-family: $display-font; font-weight: 600; font-size: 1.3125rem; color: #fff; letter-spacing: -.01em; }
+    tbody th { text-align: left; font-weight: 400; width: 34%; color: #fff; }
+    @media (max-width: 768px) {
+      // 480 in a ~330px box leaves the second column half visible: that is the cue the table scrolls.
+      font-size: .9375rem; min-width: 480px;
+      th, td { padding: 14px 10px; }
+      thead th { font-size: 1rem; }
     }
   }
-}
-
-// Voucher offer line inside the EAP-01 price card — sits between the buy
-// button and the presale note. Light divider + soft accent so it reads as a
-// secondary path (lead capture for a discount code), not competing with the
-// primary buy CTA.
-.ap-voucher-offer {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px dashed rgba(255, 255, 255, 0.18);
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.78);
-  text-align: center;
-  line-height: 1.55;
-  letter-spacing: 0.01em;
-}
-.ap-voucher-link {
-  display: inline-block;
-  margin-left: 4px;
-  color: #FE8B05;
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(254, 139, 5, 0.5);
-  transition: color 0.2s ease, border-color 0.2s ease;
-
-  &:hover {
-    color: #ffd9a8;
-    border-bottom-color: #ffd9a8;
+  .if-yes { color: #fff; font-size: 1.1em; }
+  .if-no { color: $on-dark-muted; opacity: .6; }
+  .if-only { display: block; margin-top: 4px; font-size: .75rem; line-height: 1.3; color: $on-dark-muted; }
+  &-hint { margin: 10px 0 0; font-size: .875rem; color: $on-dark-muted; }
+  &-note { max-width: 42em; margin: 28px auto 0; text-align: center; font-size: 1.0625rem; line-height: 1.47; color: $on-dark-muted; }
+  &-stores {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; margin: 20px 0 0;
+    a { display: inline-flex; line-height: 0; border: 0; padding: 0; background: none; transition: transform .15s ease; &:active { transform: scale(.95); } }
+    img { display: block; width: auto; }
+    .badge-apple { height: 40px; }
+    // Google's generic badge ships with transparent padding (~20%); oversize it so the visible badge
+    // matches the Apple one, and pull the padding back with margins.
+    .badge-google { height: 60px; margin: -10px -14px; }
+  }
+  &-figures {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; margin-top: clamp(36px, 5vw, 56px);
+    figure { margin: 0; flex: 0 1 240px; }
+    figcaption { margin-top: 14px; text-align: center; font-size: .875rem; color: $on-dark-muted; }
   }
 }
 
-// Water filter pricing card — mirrors .ap-price-card pattern.
-// Sits at the very end of the water filter section (after gradient_container_iii feature list,
-// before EAP-01 #oxygen1 starts). Provides MSRP/sale + buy CTA for enGoW-601.
-.wf-price-section {
-  background: linear-gradient(to bottom, #1B2944, #152939);
-  padding: 64px 24px 80px;
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: 768px) {
-    padding: 40px 20px 56px;
-  }
+// ─── 功能介紹 ─────────────────────────────────────────────────────────────
+.tf-features {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 0 auto;
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
 }
+.tf-card {
+  background: #fff; border: 1px solid $hairline; border-radius: 18px; padding: 32px; color: $ink;
+  h3 { margin: 0 0 12px; font-size: 1.5rem; line-height: 1.25; font-weight: 600; letter-spacing: -.02em; color: $ink; }
+  p { margin: 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; }
+  .tf-note { margin-top: 14px; padding-top: 12px; border-top: 1px solid $hairline; font-weight: 600; color: $ink; }
+  @media (max-width: 768px) { padding: 24px 20px; }
+}
+.tf-card-head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+// status chips, not kickers: plain sentence-case text in a hairline pill
+.tf-badge { padding: 2px 12px; font-size: .875rem; line-height: 1.5; color: $ink-80; border: 1px solid $hairline; border-radius: 9999px; background: $parchment; }
+.tf-figure {
+  margin: 0 0 18px; aspect-ratio: 1920 / 1236; overflow: hidden;
+  img { display: block; width: 100%; height: 100%; object-fit: contain; }
+}
+
+// ─── 水維氧 ───────────────────────────────────────────────────────────────
+.pd-oxygen-photo { display: block; width: 100%; max-width: 1100px; height: auto; margin: 0 auto; border-radius: 18px; box-shadow: $product-shadow; }
+.pd-two-machines {
+  position: relative; display: flex; align-items: flex-end; justify-content: center; gap: 24px;
+  .pd-m01 { width: 22%; max-width: 123px; height: auto; border-radius: 18px; }
+  .pd-m02 { width: 70%; max-width: 498px; height: auto; border-radius: 18px; box-shadow: $product-shadow; }
+}
+.pd-water .pd-head { margin-bottom: clamp(28px, 4vw, 48px); }
+
+// dark stages for renders whose callouts are white text baked into the PNG
+.pd-stage {
+  position: relative; background: $tile-dark; border-radius: 18px; padding: clamp(24px, 4vw, 56px); margin: 0 auto; max-width: 1100px;
+  img { display: block; width: 100%; height: auto; margin: 0 auto; }
+}
+.filter-core img.pd-desk { max-width: 720px; }
+.filter-core .qr-code-container {
+  position: absolute; left: clamp(20px, 3vw, 40px); bottom: clamp(16px, 3vw, 32px); display: flex; flex-direction: column; align-items: center; gap: 8px;
+  font-size: .875rem; color: $on-dark-muted;
+  img { width: 72px; }
+  @media (max-width: 768px) { position: static; margin: 20px auto 0; }
+}
+.water-loop img.pd-desk { max-width: 950px; }
+.pd-stage-small { max-width: 320px !important; border-radius: 12px; }
+.pd-stage-list {
+  list-style: decimal; margin: 20px 0 0; padding: 0 0 0 1.4em; text-align: left; color: #fff; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em;
+  li { margin-top: 6px; }
+}
+.pd-swipe {
+  max-width: 420px; margin: 0 auto;
+  img { display: block; width: 100%; height: auto; border-radius: 18px; }
+  :deep(.swiper-button-prev), :deep(.swiper-button-next) { width: 30px !important; height: 30px !important; border: 1px solid $hairline; border-radius: 9999px; background: #fff; }
+}
+.pd-water .pd-stage.pd-desk img[src$='filter_types.png'] { max-width: 1000px; }
+
+// 進口RO
+.pd-levels-img { display: block; width: 100%; max-width: 640px; height: auto; margin: 0 auto; border-radius: 18px; }
+.filter_levels_mob {
+  max-width: 360px; margin: 24px auto 0; max-height: 0; overflow: hidden; transition: max-height .4s ease;
+  &.expand { max-height: 9999px; }
+  &.close { max-height: 0; }
+  img { display: block; width: 100%; height: auto; border-radius: 18px; }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+.close_img_btn { margin-top: 20px; min-width: 44px; padding: 11px; }
+
+// 鍶
+.pd-si-desc { max-width: 38em; }
+.pd-baby-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center;
+  @media (max-width: 834px) { grid-template-columns: 1fr; }
+}
+.pd-baby-img { display: block; width: 100%; height: auto; border-radius: 18px; }
+
+// 產品優勢
+.pd-adv-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
+}
+.filter_list {
+  background: $tile-dark-2; border: 1px solid rgba(255, 255, 255, .18); border-radius: 18px; padding: 32px; color: #fff;
+  h3 { margin: 14px 0 10px; font-size: 1.5rem; line-height: 1.25; font-weight: 600; letter-spacing: -.02em; color: #fff; }
+  p, li { margin: 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $on-dark-muted; }
+  ul { margin: 0; padding-left: 1.2em; li { margin-top: 6px; } }
+  // the check / cross glyphs ship as green / red strokes; render them neutral white
+  .pd-adv-icon { width: 36px; height: 36px; filter: grayscale(1) brightness(10); }
+  &-fault .pd-adv-icon { opacity: .6; }
+}
+
+// 比較表 (the PNG carries its own table colours)
+.competitor_img img { display: block; width: 100%; max-width: 1000px; height: auto; margin: 0 auto; }
+
+// ─── 價格 ─────────────────────────────────────────────────────────────────
 .wf-price-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 32px 40px;
-  background: linear-gradient(135deg, rgba(59, 190, 255, 0.18), rgba(18, 181, 168, 0.12));
-  border: 1px solid rgba(18, 181, 168, 0.35);
-  border-radius: 18px;
-  max-width: 520px;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  box-shadow: 0 6px 28px rgba(59, 190, 255, 0.15);
-
-  @media (max-width: 560px) {
-    padding: 24px 20px;
-  }
+  display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: 520px; margin: 0 auto; padding: 40px;
+  background: #fff; border: 1px solid $hairline; border-radius: 18px; color: $ink; text-align: center;
+  @media (max-width: 560px) { padding: 28px 20px; }
 }
-.wf-price-flag {
-  display: inline-block;
-  background: #12B5A8;
-  color: #152939;
-  padding: 4px 14px;
-  border-radius: 12px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-.wf-price-amounts {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+.wf-price-flag { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; color: $ink-80; }
+.wf-price-amounts { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 16px; }
 .wf-price-msrp {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1rem;
-  opacity: 0.6;
+  display: inline-flex; flex-direction: column; align-items: center; font-size: 1.0625rem; color: $ink-80;
+  .wf-price-msrp-label { font-size: .875rem; margin-bottom: 2px; }
+}
+.wf-price-promo { font-family: $display-font; font-weight: 600; font-size: clamp(2.2rem, 4vw, 3rem); letter-spacing: -.03em; color: $ink; }
+.wf-price-bonus { font-size: 1.0625rem; line-height: 1.47; color: $ink-80; }
+.wf-buy-btn-card { margin-top: 6px; padding-inline: 36px; }
 
-  .wf-price-msrp-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    margin-bottom: 2px;
-  }
-  s { font-size: 1.05rem; }
-}
-.wf-price-promo {
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: #3bbeff;
-  letter-spacing: 0.01em;
-
-  @media (max-width: 560px) {
-    font-size: 2rem;
-  }
-}
-.wf-price-bonus {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
-  letter-spacing: 0.02em;
-}
-.wf-buy-btn-card {
-  margin-top: 6px;
-  padding: 12px 48px;
-  background: linear-gradient(90deg, #e05a35, #FE8B05);
-  color: #fff;
-  border: none;
-  border-radius: 999px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 18px rgba(224, 90, 53, 0.35);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(224, 90, 53, 0.5);
-  }
-  &:active {
-    transform: translateY(0);
-  }
-}
-.ap-price-presale-note {
-  margin-top: 14px;
-  max-width: 520px;
-  font-size: 0.78rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.72);
-  text-align: center;
-  letter-spacing: 0.01em;
-}
-
-// ─── Editorial pass (design/live-redesign) ─────────────────────────────
-// Two levers, applied at the end so they win the cascade:
-// 1. every heading on this page speaks the site's serif voice;
-// 2. rounded plates/pills square off to match the mounted-plate system
-//    used on the homepage and /cases.
-h1,
-h2,
-h3,
-.tagline {
-  font-family: 'Noto Serif TC', serif;
-  letter-spacing: 0.02em;
-}
-
-// The tagline broke as 都在同／一面牆上 on phones; balance splits it evenly.
-.tagline {
-  text-wrap: balance;
-}
-
-.ap-model-pill,
-.ap-feature-card,
-.ap-specs-strip,
-.ap-spec-cell,
-.ap-price-card,
-.ap-price-flag,
-.ap-buy-btn,
-.wf-price-card,
-.wf-price-flag,
-.wf-buy-btn-card {
-  border-radius: 0;
-}
-
-// ─── 智管家商城 product line (light section after the dark water block) ───
-.shop-line {
-  background: $warm-bg-light;
-  color: $grey-blue3;
-  padding: clamp(64px, 8vw, 112px) clamp(24px, 6vw, 118px);
-}
-.shop-line-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
-  @media (max-width: 900px) { grid-template-columns: 1fr; }
-}
-.shop-line-title { color: $grey-blue3; margin-bottom: 14px; }
-.shop-line-lede { font-size: clamp(1.05rem, 1.7vw, 1.2rem); line-height: 1.9; color: $grey-blue2; margin: 0 0 24px; }
-.shop-line-points {
-  list-style: none; padding: 0; margin: 0 0 22px; border-top: 3px solid $grey-blue3;
-  li { display: grid; gap: 4px; padding: 14px 0; border-bottom: 1px solid rgba($grey-blue3, .22); }
-  strong { font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 1.08rem; color: $grey-blue3; }
-  span { font-size: .96rem; line-height: 1.8; color: #4c4c4c; }
-}
-.shop-line-note { font-size: .9rem; line-height: 1.7; color: #4c4c4c; margin: 0 0 26px; }
-.shop-line-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
-.shop-line-btn {
-  display: inline-flex; align-items: center; white-space: nowrap; font-weight: 700; font-size: 1rem;
-  padding: 14px 26px; border-radius: 999px; background: $brand-orange; color: #fff; text-decoration: none;
-  box-shadow: 0 10px 30px rgba($brand-orange, .28); transition: transform .2s ease, background .2s ease;
-  &:hover { background: $brand-orange-text; color: #fff; }
-  &:active { transform: translateY(1px) scale(.98); }
-}
-.shop-line-link {
-  font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 1.02rem; color: $grey-blue3; text-decoration: none;
-  border-bottom: 2px solid $brand-orange; padding-bottom: 3px; transition: color .25s ease;
-  &:hover { color: $brand-orange; }
-}
+// ─── 智管家商城 ───────────────────────────────────────────────────────────
 .shop-line-figure {
-  position: relative; margin: 0;
-  &::before { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 2px solid $brand-orange; z-index: 0; }
-  figcaption { position: relative; z-index: 1; margin-top: 12px; font-size: .85rem; letter-spacing: .04em; color: #4c4c4c; }
+  margin: 0 auto; max-width: 1000px;
+  figcaption { margin-top: 18px; text-align: center; font-size: .875rem; line-height: 1.43; color: $ink-80; }
 }
 .shop-line-frame {
-  position: relative; z-index: 1; border-radius: 12px; overflow: hidden; background: #fff;
-  border: 1px solid rgba($grey-blue3, .5); box-shadow: 0 18px 38px -22px rgba(21, 41, 57, .55);
+  border-radius: 18px; overflow: hidden; background: #fff; box-shadow: $product-shadow;
   img { display: block; width: 100%; height: auto; }
+}
+.shop-line-points {
+  list-style: none; padding: 0; margin: clamp(36px, 5vw, 64px) 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
+  @media (max-width: 834px) { grid-template-columns: 1fr; }
+  li { display: flex; flex-direction: column; gap: 8px; padding: 28px; background: $parchment; border: 1px solid $hairline; border-radius: 18px; }
+  strong { font-size: 1.3125rem; font-weight: 600; letter-spacing: -.01em; color: $ink; }
+  span { font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; }
+}
+.shop-line-note { max-width: 42em; margin: 32px auto 0; text-align: center; font-size: 1.0625rem; line-height: 1.47; color: $ink-80; }
+.shop-line-ctas { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 28px; margin-top: 28px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pd-pill, .scroll-top-btn, .interfaces-stores a { transition: none; }
 }
 </style>
