@@ -1,7 +1,7 @@
 {
   "$comment": "ENGO-KB-001 §0.2「絕對不可說的話」的機器可讀版本。這是三個 surface（網站問答、LINE、後端語音知識庫）唯一的禁句來源：改禁句先改這一份，不要各自在程式碼裡硬寫。公開網址 https://www.smtengo.com/forbidden-claims.json 供後端取用。",
   "version": "1.1.0",
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "source": "ENGO-KB-001-網站客服知識庫 §0.2",
   "kinds": {
     "banned_phrase": "這些字串不得出現在任何對外文字（答案、規格、說明、新聞標題）。keywords 不受限——那是路由用詞。",
@@ -275,6 +275,16 @@
       "ruling": "2026-09-25 實機＋程式碼查核",
       "mention": "平面圖|平面图|floor ?plan|フロアプラン|plan en direct|plano en vivo|vista de plano",
       "deny": "開發中|开发中|尚未提供|未提供|規劃中|规划中|in development|planned feature|not yet|開発中|計画中|prévue|en développement|prevista|en desarrollo"
+    },
+    {
+      "id": "package-pickup-code",
+      "kind": "requires_denial",
+      "kb001": "§6.4",
+      "why": "3.6.x 起住戶端已移除取件碼的顯示與輸入，改按「開櫃取件」自動帶碼（2026-10-18 對出貨碼 main 3.6.3+505 查證：communicationPackageCode* 的 ARB 鍵與 UI 皆為 0）。提到取件碼而不否定，客戶會去找一個不存在的輸入欄。用整串禁字會把必要的否定一起擋掉，故為 requires_denial",
+      "say_instead": "智能櫃按「開櫃取件」即可開啟，明講不需輸入取件碼；人工櫃向管理中心領取",
+      "ruling": "2026-10-18 出貨碼查證",
+      "mention": "取件碼|取件码|pickup code|受取コード|code de retrait|código de recogida",
+      "deny": "不需輸入取件碼|无需输入取件码|no pickup code|受取コードの入力は不要|aucun code à saisir|sin introducir ningún código"
     }
   ]
 }
