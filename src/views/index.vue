@@ -213,7 +213,7 @@ const trackCta = (location: string) => trackEvent('cta_click', { location, page:
 // "新北，兩房兩廳一衛": the room layout is lifted out of the title so the caption never
 // carries a development name.
 const caseLabel = (c: any) => {
-  const layout = (String(pick(c.title)).match(/[一二三四五六\d]+房\S*/) || [''])[0]
+  const layout = (String(pick(c.title)).match(/[一二三四五六兩\d]+房\S*/) || [''])[0]
   return [pick(c.location), layout].filter(Boolean).join(locale.value === 'en' ? ', ' : '，')
 }
 
