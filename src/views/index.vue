@@ -309,7 +309,8 @@ const T = computed(() => COPY[locale.value] ?? COPY.en)
 // body-muted-on-dark #cccccc · ink-muted-48 #7a7a7a · product shadow rgba(0,0,0,.22) 3px 5px 30px
 // Accent is enGo orange ($brand-orange / $brand-orange-text), the one interactive colour.
 $ink: #1d1d1f;
-$ink-48: #7a7a7a;
+$ink-48: #7a7a7a; // profile: disabled / micro legal only
+$ink-80: #333333; // profile: ink-muted-80, AA on white and parchment
 $parchment: #f5f5f7;
 $tile-dark: #272729;
 $tile-dark-2: #2a2a2c;
@@ -326,18 +327,18 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 .hm-tile { padding: clamp(64px, 9vw, 112px) 0; }
 .hm-tile-white { background: #fff; color: $ink; }
 .hm-tile-parchment { background: $parchment; color: $ink; }
-.hm-tile-dark { background: $tile-dark; color: #fff; .hm-lead, .hm-moment-body { color: $on-dark-muted; } }
+.hm-tile-dark { background: $tile-dark; color: #fff; .hm-h2 { color: #fff; } .hm-lead, .hm-moment-body { color: $on-dark-muted; } }
 
 // ─── type ladder: 600 / 400 / 300, negative tracking at display sizes ─────
 .hm-h2 {
-  font-family: $display; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0;
+  font-family: $display; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0; color: inherit;
   font-size: clamp(2rem, 3.6vw, 3rem);
 }
 .hm-lead { font-size: clamp(1.15rem, 1.7vw, 1.5rem); font-weight: 400; line-height: 1.4; letter-spacing: -.005em; color: $ink; margin: 14px auto 0; max-width: 34em; }
 .hm-head { margin-bottom: clamp(36px, 5vw, 64px); }
 .hm-head-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; }
-.hm-cap { margin: 14px 0 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-48; strong { display: block; color: $ink; font-weight: 600; } }
-.hm-fine { margin: 40px 0 0; font-size: .875rem; line-height: 1.43; color: $ink-48; }
+.hm-cap { margin: 14px 0 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; strong { display: block; color: $ink; font-weight: 600; } }
+.hm-fine { margin: 40px 0 0; font-size: .875rem; line-height: 1.43; color: $ink-80; }
 .hm-fine-on-dark { color: $on-dark-muted; margin-top: 22px; }
 
 // ─── the one accent: pills and links ──────────────────────────────────────
@@ -373,8 +374,8 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 .hm-store-google img { height: 58px; margin: -9px -12px; }
 
 // ─── hero ─────────────────────────────────────────────────────────────────
-.hm-hero { padding-top: clamp(56px, 8vw, 96px); padding-bottom: 0; overflow: hidden; }
-.hm-kicker { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; color: $ink-48; margin: 0 0 10px; animation: hmRise .7s cubic-bezier(.22,1,.36,1) .05s both; }
+.hm-hero { padding-top: clamp(84px, 9vw, 104px); padding-bottom: 0; overflow: hidden; }
+.hm-kicker { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; color: $ink-80; margin: 0 0 10px; animation: hmRise .7s cubic-bezier(.22,1,.36,1) .05s both; }
 .hm-title {
   font-family: $display; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; color: $ink; margin: 0;
   font-size: clamp(2.6rem, 6.4vw, 5rem); animation: hmRise .8s cubic-bezier(.22,1,.36,1) .15s both;
@@ -427,7 +428,7 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
   list-style: none; margin: 0; padding: 0; width: 100%; max-width: 360px;
   li { padding: 16px 0; border-top: 1px solid $hairline; font-size: 1.3125rem; font-weight: 600; letter-spacing: -.01em; &:last-child { border-bottom: 1px solid $hairline; } }
 }
-.hm-card-text { padding: 0 32px 32px; display: flex; flex-direction: column; gap: 4px; strong { font-size: 1.3125rem; font-weight: 600; letter-spacing: -.01em; } span { font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-48; } }
+.hm-card-text { padding: 0 32px 32px; display: flex; flex-direction: column; gap: 4px; strong { font-size: 1.3125rem; font-weight: 600; letter-spacing: -.01em; } span { font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; } }
 
 // ─── HMS × BMS ────────────────────────────────────────────────────────────
 .hm-bms-grid { display: grid; grid-template-columns: 6fr 6fr; gap: clamp(32px, 5vw, 72px); align-items: center; @media (max-width: 834px) { grid-template-columns: 1fr; } }
@@ -450,9 +451,9 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
   @media (max-width: 640px) { grid-template-columns: 1fr; }
 }
 .hm-showroom {
-  border: 1px solid $hairline; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 22px; min-height: 100%;
+  border: 1px solid $hairline; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 22px;
   ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
-  li { display: flex; flex-direction: column; padding: 12px 0; border-top: 1px solid $hairline; a { color: $ink; font-weight: 600; text-decoration: none; letter-spacing: -.01em; &:hover { color: $brand-orange-text; } } span { font-size: .875rem; color: $ink-48; } }
+  li { display: flex; flex-direction: column; padding: 12px 0; border-top: 1px solid $hairline; a { color: $ink; font-weight: 600; text-decoration: none; letter-spacing: -.01em; &:hover { color: $brand-orange-text; } } span { font-size: .875rem; color: $ink-80; } }
 }
 .hm-showroom-title { font-family: $display; font-weight: 600; font-size: 1.3125rem; letter-spacing: -.01em; line-height: 1.25; margin: 0; }
 
