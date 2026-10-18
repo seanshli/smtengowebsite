@@ -199,7 +199,9 @@ const newsItems = ref(newsData as any)
 const motionRoot = ref<HTMLElement | null>(null)
 useEditorialMotion(motionRoot)
 
-const pick = (o: any) => (o ? (o[locale.value] ?? o.zh ?? o.en ?? '') : '')
+// Locales without their own copy (fr/ja/es) fall back to English, like COPY below; zh variants fall back to zh.
+const isZh = () => locale.value.startsWith('zh')
+const pick = (o: any) => (o ? (o[locale.value] ?? (isZh() ? o.zh : o.en) ?? o.zh ?? o.en ?? '') : '')
 
 // Proof uses only cases that carry a real photograph (the shared illustration
 // is `case-home.jpg`); the two showrooms are linked by name, not shown as photos.
@@ -213,8 +215,8 @@ const trackCta = (location: string) => trackEvent('cta_click', { location, page:
 // "新北，兩房兩廳一衛": the room layout is lifted out of the title so the caption never
 // carries a development name.
 const caseLabel = (c: any) => {
-  const layout = (String(pick(c.title)).match(/[一二三四五六兩\d]+房\S*/) || [''])[0]
-  return [pick(c.location), layout].filter(Boolean).join(locale.value === 'en' ? ', ' : '，')
+  const layout = (String(pick(c.title)).match(/[一二三四五六兩\d]+房\S*|\d+\s?BR\S*/i) || [''])[0]
+  return [pick(c.location), layout].filter(Boolean).join(isZh() ? '，' : ', ')
 }
 
 // Copy: short, concrete, benefit-first. Every claim below is lifted from KB-001 A.17 /

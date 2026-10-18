@@ -371,7 +371,7 @@ export default defineComponent({
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.18em;
-    color: $brand-orange;
+    color: $brand-orange-text; // AA on the folio paper (brand orange is 3.4:1)
   }
 
   .folio-date {
@@ -501,7 +501,7 @@ export default defineComponent({
   }
 
   :deep(a) {
-    color: $brand-orange;
+    color: $brand-orange-text; // AA; was $brand-orange at 3.4:1
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 2px;
