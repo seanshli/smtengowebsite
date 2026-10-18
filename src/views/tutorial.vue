@@ -1,189 +1,206 @@
 <template>
-  <div class="tutorial-page">
-    <div class="header-section ed-mast-block">
-      <h1 class="page-title">{{ $t('tutorialTitle') }}</h1>
-      <p class="subtitle">{{ $t('tutorialSubtitle') }}</p>
-    </div>
-    
-    <div class="tutorial-grid">
-      <div v-for="item in tutorials" :key="item.id" class="tutorial-card" @click="handleCardClick(item)">
-        <h2>{{ (item.title as any)[locale] || item.title['zh'] }}</h2>
-        <p>{{ (item.description as any)[locale] || item.description['zh'] }}</p>
-        <ul v-if="item.steps" class="steps">
-          <li v-for="(step, index) in item.steps" :key="index">
-            <strong>{{ (step.title as any)[locale] || (step.title as any)['zh'] }}</strong>: 
-            <span v-html="renderStepContent((step.content as any)[locale] || (step.content as any)['zh'])" @click="handleLinkClick"></span>
-          </li>
-        </ul>
+  <div class="tt">
+    <!-- tile 1 (white): page title, lead, the three persona cards -->
+    <section class="tt-tile tt-tile-white tt-head">
+      <div class="tt-wrap">
+        <header class="tt-masthead tt-center">
+          <h1 class="tt-title">{{ $t('tutorialTitle') }}</h1>
+          <p class="tt-lede">{{ $t('tutorialSubtitle') }}</p>
+        </header>
 
-        <div v-if="item.partners && item.partners.length > 0" class="partners-section mt-24">
-          <h4 class="partners-title fz-14 fw-700 text-brand-orange mb-12">{{ $t('ourPartners') }}</h4>
-          <ul class="partners-list">
-            <li v-for="(partner, pIdx) in item.partners" :key="pIdx" class="partner-item mb-8">
-              <span class="partner-category fz-12 fw-600 text-grey-666">{{ (partner.category as any)[locale] || (partner.category as any)['zh'] }}: </span>
-              <a :href="partner.url" target="_blank" class="partner-name fz-12 text-brand-orange hover-underline" @click.stop>
-                {{ (partner.name as any)[locale] || (partner.name as any)['zh'] }}
-              </a>
-            </li>
-          </ul>
+        <div class="tutorial-grid">
+          <div v-for="item in tutorials" :key="item.id" class="tutorial-card" @click="handleCardClick(item)">
+            <h2 class="tutorial-card-title">{{ (item.title as any)[locale] || item.title['zh'] }}</h2>
+            <p class="tutorial-card-desc">{{ (item.description as any)[locale] || item.description['zh'] }}</p>
+            <ul v-if="item.steps" class="steps">
+              <li v-for="(step, index) in item.steps" :key="index">
+                <strong>{{ (step.title as any)[locale] || (step.title as any)['zh'] }}</strong>:
+                <span v-html="renderStepContent((step.content as any)[locale] || (step.content as any)['zh'])" @click="handleLinkClick"></span>
+              </li>
+            </ul>
+
+            <div v-if="item.partners && item.partners.length > 0" class="partners-section">
+              <h3 class="partners-title">{{ $t('ourPartners') }}</h3>
+              <ul class="partners-list">
+                <li v-for="(partner, pIdx) in item.partners" :key="pIdx" class="partner-item">
+                  <span class="partner-category">{{ (partner.category as any)[locale] || (partner.category as any)['zh'] }}: </span>
+                  <a :href="partner.url" target="_blank" rel="noopener" class="partner-name" @click.stop>
+                    {{ (partner.name as any)[locale] || (partner.name as any)['zh'] }}<span class="tt-chev" aria-hidden="true">›</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- ─── 操作指南（依功能模組）───
+    </section>
+
+    <!-- ─── 操作指南（依功能模組）(tile 2, parchment) ───
          每個模組帶 id="howto-<模組>"，供 FAQ 與 chatbot 的 /tutorial#howto-xxx 深連結落點。
          內容來自 src/data/howto.json，截圖為 enGo 3.2.2（489）實機擷取。 -->
-    <div id="howto" class="howto-section py-80 py-mob-40">
-      <h2 class="howto-title tac mb-12">{{ howtoHeading }}</h2>
-      <p class="howto-sub tac mb-40">{{ howtoSubheading }}</p>
+    <section id="howto" class="tt-tile tt-tile-parchment howto-section">
+      <div class="tt-wrap">
+        <header class="tt-head-block tt-center">
+          <h2 class="tt-h2">{{ howtoHeading }}</h2>
+          <p class="tt-lead">{{ howtoSubheading }}</p>
+        </header>
 
-      <nav class="howto-nav mb-40" aria-label="module index">
-        <a
-          v-for="m in howtoModules"
-          :key="'nav-' + m.id"
-          class="howto-pill"
-          :class="{ active: openHowto === m.id }"
-          :href="'#howto-' + m.id"
-          :data-howto="m.id"
-          @click.prevent="openModule(m.id, 'pill')"
-        >
-          {{ pick(m.title) }}
-        </a>
-      </nav>
+        <nav class="howto-nav" aria-label="module index">
+          <a
+            v-for="m in howtoModules"
+            :key="'nav-' + m.id"
+            class="howto-pill"
+            :class="{ active: openHowto === m.id }"
+            :href="'#howto-' + m.id"
+            :data-howto="m.id"
+            @click.prevent="openModule(m.id, 'pill')"
+          >
+            {{ pick(m.title) }}
+          </a>
+        </nav>
 
-      <!-- Folded by default: only the header shows until the visitor opens a module.
-           Each open is recorded once per page view (GTM event + howto:<id> row) so we can
-           see which modules people actually reach for. -->
-      <section
-        v-for="m in howtoModules"
-        :key="m.id"
-        :id="'howto-' + m.id"
-        class="howto-module"
-        :class="{ open: openHowto === m.id }"
-      >
-        <button
-          type="button"
-          class="howto-module-head"
-          :aria-expanded="openHowto === m.id ? 'true' : 'false'"
-          :aria-controls="'howto-body-' + m.id"
-          :data-howto="m.id"
-          @click="toggleModule(m.id)"
-        >
-          <span class="howto-module-text">
-            <span class="howto-module-title">{{ pick(m.title) }}</span>
-            <span class="howto-module-summary">{{ pick(m.summary) }}</span>
-          </span>
-          <span class="howto-module-meta">
-            <span class="howto-module-count">{{ m.steps.length }} {{ stepsLabel }}</span>
-            <span class="howto-chevron" aria-hidden="true">&#x25BC;</span>
-          </span>
-        </button>
+        <!-- Folded by default: only the header shows until the visitor opens a module.
+             Each open is recorded once per page view (GTM event + howto:<id> row) so we can
+             see which modules people actually reach for. -->
+        <div class="howto-list">
+          <section
+            v-for="m in howtoModules"
+            :key="m.id"
+            :id="'howto-' + m.id"
+            class="howto-module"
+            :class="{ open: openHowto === m.id }"
+          >
+            <button
+              type="button"
+              class="howto-module-head"
+              :aria-expanded="openHowto === m.id ? 'true' : 'false'"
+              :aria-controls="'howto-body-' + m.id"
+              :data-howto="m.id"
+              @click="toggleModule(m.id)"
+            >
+              <span class="howto-module-text">
+                <span class="howto-module-title">{{ pick(m.title) }}</span>
+                <span class="howto-module-summary">{{ pick(m.summary) }}</span>
+              </span>
+              <span class="howto-module-meta">
+                <span class="howto-module-count">{{ m.steps.length }} {{ stepsLabel }}</span>
+                <span class="howto-chevron" aria-hidden="true">&#x25BC;</span>
+              </span>
+            </button>
 
-        <div v-if="openHowto === m.id" :id="'howto-body-' + m.id" class="howto-module-body">
-        <ol class="howto-steps">
-          <li v-for="(st, i) in m.steps" :key="i" class="howto-step">
-            <h4 class="howto-step-title">{{ pick(st.title) }}</h4>
-            <p class="howto-step-body">{{ pick(st.body) }}</p>
-            <figure v-if="st.image" class="howto-shot">
-              <img :src="st.image" :alt="pick(st.title)" loading="lazy" decoding="async" />
-            </figure>
-          </li>
-        </ol>
+            <div v-if="openHowto === m.id" :id="'howto-body-' + m.id" class="howto-module-body">
+              <ol class="howto-steps">
+                <li v-for="(st, i) in m.steps" :key="i" class="howto-step">
+                  <h3 class="howto-step-title">{{ pick(st.title) }}</h3>
+                  <p class="howto-step-body">{{ pick(st.body) }}</p>
+                  <figure v-if="st.image" class="howto-shot" :class="isPhoneShot(st.image) ? 'howto-shot-phone' : 'howto-shot-tablet'">
+                    <img :src="st.image" :alt="pick(st.title)" loading="lazy" decoding="async" />
+                  </figure>
+                </li>
+              </ol>
 
-        <ul v-if="m.tips && m.tips.length" class="howto-tips">
-          <li v-for="(t, i) in m.tips" :key="'tip-' + i">{{ pick(t) }}</li>
-        </ul>
+              <ul v-if="m.tips && m.tips.length" class="howto-tips">
+                <li v-for="(t, i) in m.tips" :key="'tip-' + i">{{ pick(t) }}</li>
+              </ul>
 
-        <p v-if="m.imagesPending" class="howto-pending">{{ pendingLabel }}</p>
+              <p v-if="m.imagesPending" class="howto-pending">{{ pendingLabel }}</p>
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
-
-    <!-- anchor target for the 常見問題 links in the header and footer -->
-    <div id="faq" class="faq-section py-80 py-mob-40">
-      <h2 class="faq-title tac mb-50">{{ $t('faqTitle') }}</h2>
-
-      <!-- Category filter pills -->
-      <div class="faq-filters tac mb-30">
-        <button
-          v-for="cat in faqCategories"
-          :key="cat.key"
-          class="filter-pill"
-          :class="{ active: activeFaqFilter === cat.key }"
-          @click="activeFaqFilter = cat.key"
-        >
-          {{ cat.label }}
-        </button>
       </div>
+    </section>
 
-      <!-- Popularity badge -->
-      <p class="faq-sort-hint tac mb-20" v-if="false">
-        <span class="sort-icon">&#x1F525;</span> {{ faqSortLabel }}
-      </p>
+    <!-- anchor target for the 常見問題 links in the header and footer (tile 3, white) -->
+    <section id="faq" class="tt-tile tt-tile-white faq-section">
+      <div class="tt-wrap">
+        <header class="tt-head-block tt-center">
+          <h2 class="tt-h2">{{ $t('faqTitle') }}</h2>
+        </header>
 
-      <!-- "全部" shows the 41 questions grouped by category, each group folded
-           except the first, so the page reads as ten headings instead of one
-           forty-item list (design review 2026-09-22). A category chip shows a flat list. -->
-      <div v-if="activeFaqFilter === 'all'" class="faq-groups">
-        <section v-for="g in faqGroups" :key="g.key" class="faq-group" :class="{ open: openFaqGroups.has(g.key) }">
-          <button type="button" class="faq-group-head" :aria-expanded="openFaqGroups.has(g.key) ? 'true' : 'false'" @click="toggleFaqGroup(g.key)">
-            <span class="faq-group-title">{{ g.label }}</span>
-            <span class="faq-group-meta"><span class="faq-group-count">{{ g.items.length }}</span><span class="faq-group-chevron" aria-hidden="true">&#x25BC;</span></span>
+        <!-- Category filter pills -->
+        <div class="faq-filters">
+          <button
+            v-for="cat in faqCategories"
+            :key="cat.key"
+            type="button"
+            class="filter-pill"
+            :class="{ active: activeFaqFilter === cat.key }"
+            @click="activeFaqFilter = cat.key"
+          >
+            {{ cat.label }}
           </button>
-          <div v-if="openFaqGroups.has(g.key)" class="faq-container">
-            <div v-for="faq in g.items" :key="faq.id" class="faq-item" :class="{ open: openFaqId === faq.id }" @click="toggleFaq(faq)">
-              <div class="faq-header">
-                <h3 class="question">Q: {{ (faq.question as any)[locale] || (faq.question as any)['zh'] }}</h3>
-                <span class="faq-toggle" :class="{ rotated: openFaqId === faq.id }">&#x25BC;</span>
-              </div>
-              <transition name="faq-expand">
-                <div v-if="openFaqId === faq.id" class="faq-body">
-                  <p class="answer" @click="handleLinkClick" v-html="'A: ' + renderStepContent((faq.answer as any)[locale] || (faq.answer as any)['zh'])"></p>
-                </div>
-              </transition>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
 
-      <div v-else class="faq-container">
-        <div
-          v-for="faq in sortedFaqs"
-          :key="faq.id"
-          class="faq-item"
-          :class="{ open: openFaqId === faq.id }"
-          @click="toggleFaq(faq)"
-        >
-          <div class="faq-header">
-            <h3 class="question">Q: {{ (faq.question as any)[locale] || (faq.question as any)['zh'] }}</h3>
-            <span class="faq-toggle" :class="{ rotated: openFaqId === faq.id }">&#x25BC;</span>
-          </div>
-          <transition name="faq-expand">
-            <div v-if="openFaqId === faq.id" class="faq-body">
-              <p class="answer" @click="handleLinkClick" v-html="'A: ' + renderStepContent((faq.answer as any)[locale] || (faq.answer as any)['zh'])"></p>
-              <span class="faq-helpful" v-if="faqClicks[faq.id]">{{ faqClicks[faq.id] }} {{ locale === 'zh' || locale === 'zhCN' ? '人瀏覽' : locale === 'ja' ? '回閲覧' : locale === 'fr' ? 'vues' : locale === 'es' ? 'vistas' : 'views' }}</span>
+        <!-- Popularity badge -->
+        <p class="faq-sort-hint" v-if="false">
+          <span class="sort-icon">&#x1F525;</span> {{ faqSortLabel }}
+        </p>
+
+        <!-- "全部" shows the 41 questions grouped by category, each group folded
+             except the first, so the page reads as ten headings instead of one
+             forty-item list (design review 2026-09-22). A category chip shows a flat list. -->
+        <div v-if="activeFaqFilter === 'all'" class="faq-groups">
+          <section v-for="g in faqGroups" :key="g.key" class="faq-group" :class="{ open: openFaqGroups.has(g.key) }">
+            <button type="button" class="faq-group-head" :aria-expanded="openFaqGroups.has(g.key) ? 'true' : 'false'" @click="toggleFaqGroup(g.key)">
+              <span class="faq-group-title">{{ g.label }}</span>
+              <span class="faq-group-meta"><span class="faq-group-count">{{ g.items.length }}</span><span class="faq-group-chevron" aria-hidden="true">&#x25BC;</span></span>
+            </button>
+            <div v-if="openFaqGroups.has(g.key)" class="faq-container">
+              <div v-for="faq in g.items" :key="faq.id" class="faq-item" :class="{ open: openFaqId === faq.id }" @click="toggleFaq(faq)">
+                <div class="faq-header">
+                  <h3 class="question">Q: {{ (faq.question as any)[locale] || (faq.question as any)['zh'] }}</h3>
+                  <span class="faq-toggle" :class="{ rotated: openFaqId === faq.id }">&#x25BC;</span>
+                </div>
+                <transition name="faq-expand">
+                  <div v-if="openFaqId === faq.id" class="faq-body">
+                    <p class="answer" @click="handleLinkClick" v-html="'A: ' + renderStepContent((faq.answer as any)[locale] || (faq.answer as any)['zh'])"></p>
+                  </div>
+                </transition>
+              </div>
             </div>
-          </transition>
+          </section>
+        </div>
+
+        <div v-else class="faq-container">
+          <div
+            v-for="faq in sortedFaqs"
+            :key="faq.id"
+            class="faq-item"
+            :class="{ open: openFaqId === faq.id }"
+            @click="toggleFaq(faq)"
+          >
+            <div class="faq-header">
+              <h3 class="question">Q: {{ (faq.question as any)[locale] || (faq.question as any)['zh'] }}</h3>
+              <span class="faq-toggle" :class="{ rotated: openFaqId === faq.id }">&#x25BC;</span>
+            </div>
+            <transition name="faq-expand">
+              <div v-if="openFaqId === faq.id" class="faq-body">
+                <p class="answer" @click="handleLinkClick" v-html="'A: ' + renderStepContent((faq.answer as any)[locale] || (faq.answer as any)['zh'])"></p>
+                <span class="faq-helpful" v-if="faqClicks[faq.id]">{{ faqClicks[faq.id] }} {{ locale === 'zh' || locale === 'zhCN' ? '人瀏覽' : locale === 'ja' ? '回閲覧' : locale === 'fr' ? 'vues' : locale === 'es' ? 'vistas' : 'views' }}</span>
+              </div>
+            </transition>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- tile 4 (dark): video guides -->
+    <section class="tt-tile tt-tile-dark video-cta-section">
+      <div class="tt-wrap tt-center">
+        <h2 class="tt-h2">{{ $t('watchTutorials') }}</h2>
+        <p class="tt-lead">{{ $t('videoGuideDesc') }}</p>
 
-
-    <div class="video-cta-section p-40 mt-50 bg-light-grey border-radius-20 tac">
-      <div class="cta-content">
-        <h3 class="fz-24 fw-700 text-brand-orange mb-12">{{ $t('watchTutorials') }}</h3>
-        <p class="fz-16 text-grey-666 mb-32">{{ $t('videoGuideDesc') }}</p>
-        
         <div class="video-grid">
-          <a 
+          <a
             v-for="(video, idx) in youtubeVideos"
             :key="idx"
-            :href="video.url" 
-            target="_blank" 
+            :href="video.url"
+            target="_blank"
+            rel="noopener"
             class="video-card"
           >
             <div class="thumbnail-wrapper">
-              <img :src="getYoutubeThumbnail(video.url)" :alt="video.title" class="thumbnail" />
+              <img :src="getYoutubeThumbnail(video.url)" :alt="video.title" class="thumbnail" loading="lazy" />
               <div class="play-overlay">
                 <i class="icon-play"></i>
               </div>
@@ -192,7 +209,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -380,6 +397,9 @@ const faqSortLabel = computed(() => {
   return labels[locale.value] || labels.en
 })
 
+// Phone captures (800x1731) sit in a phone body, the 2000x1200 tablet captures in a tablet body.
+const isPhoneShot = (src: string) => /\/devicedata\/|\/04-device-page\./.test(src)
+
 const handleCardClick = (item: any) => {
   trackEvent('tutorial_card_click', { tutorial_id: item.id, title: item.title['en'] })
 }
@@ -474,477 +494,178 @@ onUnmounted(() => {
 </script>
 
 <style scoped lang="scss">
-.tutorial-page {
-  padding: 100px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  
-  :deep(.step-link) {
-    color: #c46043;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+@import '../css/utils/variables';
 
-  .header-section {
-    text-align: center;
-    margin-bottom: 60px;
-    .page-title { 
-      font-size: 2.5rem; 
-      color: #333; 
-      margin-bottom: 10px;
-      @media (max-width: 768px) { font-size: 1.8rem; }
-    }
-    .subtitle { 
-      color: #666; 
-      font-size: 1.1rem;
-      @media (max-width: 768px) { font-size: 1rem; padding: 0 10px; }
-    }
-  }
+// Apple-profile tiles (DESIGN.md enGo addendum; reference: src/views/index.vue)
+.tt { background: #fff; color: $ink; font-family: $display-font; }
+.tt a:focus-visible, .tt button:focus-visible, .tt .tutorial-card:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 3px; }
+.tt-tile-dark a:focus-visible, .tt-tile-dark button:focus-visible { outline-color: $orange2; }
+.tt-wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
+.tt-center { text-align: center; }
+.tt-tile { padding: clamp(64px, 9vw, 112px) 0; }
+.tt-tile-white { background: #fff; color: $ink; }
+.tt-tile-parchment { background: $parchment; color: $ink; }
+.tt-tile-dark { background: $tile-dark; color: #fff; .tt-h2 { color: #fff; } .tt-lead { color: $on-dark-muted; } }
+.tt-chev { margin-left: .25em; }
 
-  .tutorial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    // three personas, three weights: the owner card leads (design review 2026-09-22)
-    @media (min-width: 1024px) { grid-template-columns: 1.35fr 1fr 1fr; align-items: start; }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-  }
+// ─── type ladder ──────────────────────────────────────────────────────────
+.tt-head { padding-top: clamp(84px, 9vw, 104px); }
+.tt-masthead { margin-bottom: clamp(40px, 6vw, 72px); }
+.tt-title {
+  font-family: $display-font; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; color: $ink; margin: 0;
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+}
+.tt-lede { font-size: clamp(1.2rem, 1.9vw, 1.6rem); font-weight: 300; line-height: 1.4; color: $ink; max-width: 30em; margin: 18px auto 0; }
+.tt-h2 { font-family: $display-font; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0; color: inherit; font-size: clamp(2rem, 3.6vw, 3rem); }
+.tt-lead { font-size: clamp(1.15rem, 1.7vw, 1.5rem); font-weight: 400; line-height: 1.4; letter-spacing: -.005em; color: $ink; margin: 14px auto 0; max-width: 34em; }
+.tt-head-block { margin-bottom: clamp(28px, 4vw, 48px); }
 
-  .tutorial-card {
-    background: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    border-top: 6px solid #e05a35;
-    &:nth-child(2) { border-top-color: #043655; }
-    &:nth-child(3) { border-top-color: #12B5A8; }
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    border: 1px solid #f0f0f0;
-
-    @media (max-width: 768px) {
-      padding: 30px 20px;
-    }
-
-    &:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      border-color: #c46043;
-    }
-
-    .card-icon {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 20px;
-      img { width: 100%; height: 100%; object-fit: contain; }
-    }
-
-    h2 { color: #c46043; margin-bottom: 15px; font-size: 1.5rem; }
-    p { color: #666; margin-bottom: 20px; line-height: 1.6; }
-
-    .steps {
-      list-style: none;
-      padding: 0;
-      li {
-        margin-bottom: 12px;
-        font-size: 0.9rem;
-        color: #444;
-        position: relative;
-        padding-left: 20px;
-        &::before {
-          content: '→';
-          position: absolute;
-          left: 0;
-          color: #c46043;
-        }
-      }
-    }
-
-    .partners-section {
-      border-top: 1px dashed #eee;
-      padding-top: 20px;
-
-      .partners-list {
-        list-style: none;
-        padding: 0;
-        
-        .partner-item {
-          display: flex;
-          align-items: baseline;
-          gap: 8px;
-          
-          .partner-category {
-            white-space: nowrap;
-          }
-          
-          .partner-name {
-            color: #c46043;
-            text-decoration: none;
-            word-break: break-all;
-            
-            &.hover-underline:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // --- FAQ Section ---
-  .faq-section {
-    .faq-filters {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-
-      .filter-pill {
-        background: #f5f5f5;
-        border: 1.5px solid #e0e0e0;
-        border-radius: 24px;
-        padding: 8px 20px;
-        font-size: 0.88rem;
-        color: #555;
-        cursor: pointer;
-        transition: all 0.25s;
-        font-weight: 500;
-
-        &:hover {
-          border-color: #e05a35;
-          color: #e05a35;
-          background: #fff5f2;
-        }
-
-        &.active {
-          background: linear-gradient(135deg, #e05a35, #FE8B05);
-          color: white;
-          border-color: transparent;
-          box-shadow: 0 4px 12px rgba(224, 90, 53, 0.3);
-        }
-      }
-    }
-
-    .faq-sort-hint {
-      font-size: 0.85rem;
-      color: #999;
-      .sort-icon { margin-right: 4px; }
-    }
-
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-groups { max-width: 800px; margin: 0 auto; }
-    .faq-group { border-top: 1px solid #D8DFE8; &:first-child { border-top: 0; } }
-    .faq-group-head {
-      width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px;
-      padding: 18px 4px; background: none; border: 0; cursor: pointer; font: inherit; color: inherit; text-align: left;
-      border-radius: 10px; transition: background .2s;
-      &:hover { background: #EEF3F8; }
-      &:focus-visible { outline: 2px solid var(--brand-orange, #e05a35); outline-offset: 2px; }
-    }
-    .faq-group-title { font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 1.25rem; color: #152939; }
-    .faq-group-meta { display: flex; align-items: center; gap: 12px; color: #5B6470; font-size: .9rem; }
-    .faq-group-count { min-width: 28px; height: 28px; padding: 0 8px; display: inline-grid; place-items: center; border-radius: 999px; background: #E9EEF4; font-weight: 700; color: #152939; }
-    .faq-group-chevron { font-size: 12px; transition: transform .25s; }
-    .faq-group.open .faq-group-chevron { transform: rotate(180deg); }
-    .faq-group .faq-container { padding: 4px 0 18px; }
-    @media (prefers-reduced-motion: reduce) { .faq-group-chevron { transition: none; } }
-
-    .faq-item {
-      background: #fff;
-      border: 1.5px solid #f0f0f0;
-      border-radius: 16px;
-      margin-bottom: 16px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      overflow: hidden;
-
-      &:hover {
-        border-color: #e05a35;
-        box-shadow: 0 6px 20px rgba(224, 90, 53, 0.08);
-      }
-
-      &.open {
-        border-color: #e05a35;
-        box-shadow: 0 8px 30px rgba(224, 90, 53, 0.12);
-      }
-
-      .faq-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 24px 28px;
-        gap: 16px;
-
-        .question {
-          color: #333;
-          font-size: 1.05rem;
-          font-weight: 600;
-          margin: 0;
-          flex: 1;
-          transition: color 0.25s;
-        }
-
-        .faq-toggle {
-          color: #ccc;
-          font-size: 0.75rem;
-          transition: transform 0.3s, color 0.3s;
-          flex-shrink: 0;
-
-          &.rotated {
-            transform: rotate(180deg);
-            color: #e05a35;
-          }
-        }
-      }
-
-      &:hover .question,
-      &.open .question {
-        color: #e05a35;
-      }
-
-      .faq-body {
-        padding: 0 28px 24px;
-
-        .answer {
-          color: #555;
-          font-size: 0.95rem;
-          line-height: 1.7;
-          margin: 0 0 8px;
-        }
-
-        .faq-helpful {
-          display: inline-block;
-          background: #f8f4f2;
-          color: #e05a35;
-          font-size: 0.78rem;
-          font-weight: 600;
-          padding: 3px 10px;
-          border-radius: 12px;
-        }
-      }
-    }
-  }
-
-  // FAQ expand transition
-  .faq-expand-enter-active,
-  .faq-expand-leave-active {
-    transition: all 0.3s ease;
-    max-height: 300px;
-    overflow: hidden;
-  }
-  .faq-expand-enter-from,
-  .faq-expand-leave-to {
-    max-height: 0;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .video-cta-section {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    border-radius: 30px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-    
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      width: 100%;
-
-      @media (max-width: 1024px) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      @media (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @media (max-width: 480px) {
-        grid-template-columns: 1fr;
-      }
-      
-      .video-card {
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: translateY(-5px);
-          .thumbnail-wrapper .play-overlay {
-            opacity: 1;
-          }
-          .video-title {
-            color: #c46043;
-          }
-        }
-
-        .thumbnail-wrapper {
-          position: relative;
-          width: 100%;
-          aspect-ratio: 1 / 1;
-          border-radius: 12px;
-          overflow: hidden;
-          background: #eee;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-          .thumbnail {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-
-          .play-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-
-            &::before {
-              content: '';
-              width: 50px;
-              height: 50px;
-              background: #c46043;
-              border-radius: 50%;
-              position: absolute;
-            }
-
-            // Play Icon Triangle
-            &::after {
-              content: '';
-              width: 0;
-              height: 0;
-              border-top: 10px solid transparent;
-              border-bottom: 10px solid transparent;
-              border-left: 15px solid white;
-              position: absolute;
-              margin-left: 4px;
-            }
-          }
-        }
-
-        .video-title {
-          font-size: 1rem;
-          font-weight: 600;
-          color: #333;
-          line-height: 1.4;
-          transition: color 0.3s ease;
-        }
-      }
-    }
-  }
+:deep(.step-link) {
+  color: $brand-orange-text; text-decoration: none; cursor: pointer;
+  &:hover { text-decoration: underline; }
 }
 
-/* ─── 操作指南 ─── */
-.howto-section { max-width: 1100px; margin: 0 auto; padding-inline: 20px; }
-.howto-title { font-size: 32px; font-weight: 700; }
-.howto-sub { color: #666; font-size: 15px; }
-.howto-nav { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+// ─── persona cards: parchment, hairline, radius 18, no shadow ─────────────
+.tutorial-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start;
+  // three personas, three weights: the owner card leads (design review 2026-09-22)
+  @media (min-width: 1069px) { grid-template-columns: 1.35fr 1fr 1fr; }
+  @media (max-width: 1068px) { grid-template-columns: 1fr 1fr; .tutorial-card:first-child { grid-column: 1 / -1; } }
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+.tutorial-card {
+  background: $parchment; border: 1px solid $hairline; border-radius: 18px; padding: clamp(24px, 3vw, 36px); cursor: pointer;
+}
+.tutorial-card-title { margin: 0 0 12px; font-family: $display-font; font-weight: 600; font-size: 1.75rem; line-height: 1.15; letter-spacing: -.02em; color: $ink; }
+.tutorial-card-desc { margin: 0 0 20px; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; }
+.steps {
+  list-style: none; padding: 0; margin: 0;
+  li { padding: 12px 0; border-top: 1px solid $hairline; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink; strong { font-weight: 600; } }
+}
+.partners-section { margin-top: 24px; padding-top: 20px; border-top: 1px solid $hairline; }
+.partners-title { margin: 0 0 12px; font-family: $display-font; font-weight: 600; font-size: 1.3125rem; letter-spacing: -.01em; color: $ink; }
+.partners-list {
+  list-style: none; padding: 0; margin: 0;
+  .partner-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; padding: 8px 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; }
+  .partner-category { color: $ink-80; white-space: nowrap; }
+  .partner-name { color: $brand-orange-text; text-decoration: none; word-break: break-all; &:hover { text-decoration: underline; } }
+}
+
+// ─── 操作指南 ─────────────────────────────────────────────────────────────
+.howto-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: clamp(32px, 5vw, 56px); }
 .howto-pill {
-  display: inline-block; padding: 6px 14px; border: 1px solid #D8DFE8; border-radius: 999px;
-  font-size: 13px; color: #555; text-decoration: none; background: #fff; transition: .2s;
+  display: inline-flex; align-items: center; min-height: 44px; padding: 10px 20px; border: 1px solid $brand-orange-text; border-radius: 9999px;
+  font-size: 1.0625rem; letter-spacing: -.022em; color: $brand-orange-text; text-decoration: none; background: transparent;
+  transition: transform .15s ease, background .2s ease;
+  &:active { transform: scale(.95); }
+  &:hover { background: rgba($brand-orange, .06); }
+  &.active { background: $brand-orange-text; color: #fff; }
 }
-.howto-pill:hover, .howto-pill.active { border-color: var(--brand-orange, #f0913a); color: var(--brand-orange, #f0913a); }
-.howto-pill.active { background: #EEF3F8; }
-.howto-module { scroll-margin-top: 96px; border-top: 1px solid #D8DFE8; }
-.howto-module:first-of-type { border-top: 0; }
+.howto-list { max-width: 980px; margin: 0 auto; }
+.howto-module { scroll-margin-top: 96px; border-top: 1px solid $hairline; &:first-of-type { border-top: 0; } &:last-of-type { border-bottom: 1px solid $hairline; } }
 .howto-module-head {
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  width: 100%; padding: 22px 4px; background: none; border: 0; text-align: left; cursor: pointer;
-  font: inherit; color: inherit; border-radius: 10px; transition: background .2s;
+  width: 100%; padding: 24px 0; background: none; border: 0; text-align: left; cursor: pointer;
+  font: inherit; color: inherit; border-radius: 18px;
 }
-.howto-module-head:hover { background: #EEF3F8; }
-.howto-module-head:focus-visible { outline: 2px solid var(--brand-orange, #f0913a); outline-offset: 2px; }
 .howto-module-text { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-.howto-module-title { font-size: 22px; font-weight: 700; }
-.howto-module-summary { color: #555; line-height: 1.6; font-size: 15px; }
-.howto-module-meta { display: flex; align-items: center; gap: 14px; flex-shrink: 0; color: #8a7b6b; font-size: 13px; }
-.howto-chevron { display: inline-block; font-size: 12px; transition: transform .25s; }
+.howto-module-title { font-size: 1.5rem; font-weight: 600; line-height: 1.2; letter-spacing: -.02em; color: $ink; }
+.howto-module-summary { color: $ink-80; line-height: 1.47; font-size: 1.0625rem; letter-spacing: -.022em; }
+.howto-module-meta { display: flex; align-items: center; gap: 14px; flex-shrink: 0; color: $ink-80; font-size: .875rem; }
+.howto-chevron { display: inline-block; font-size: 12px; color: $brand-orange-text; transition: transform .25s; }
 .howto-module.open .howto-chevron { transform: rotate(180deg); }
-.howto-module-body { padding: 4px 4px 32px; animation: howtoIn .28s ease-out; }
+.howto-module-body { padding: 4px 0 40px; animation: howtoIn .28s ease-out; }
 @keyframes howtoIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .howto-module-body { animation: none; } .howto-chevron { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .howto-module-body { animation: none; } .howto-chevron, .howto-pill, .filter-pill { transition: none; } }
 .howto-steps { list-style: none; counter-reset: howto; padding: 0; margin: 0; }
-.howto-step { counter-increment: howto; position: relative; padding-left: 44px; margin-bottom: 28px; }
-.howto-step::before {
-  content: counter(howto); position: absolute; left: 0; top: 0;
-  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--brand-orange, #f0913a); color: #fff; font-size: 14px; font-weight: 700;
+.howto-step { counter-increment: howto; margin-bottom: clamp(32px, 5vw, 48px); }
+.howto-step-title { margin: 0 0 6px; font-family: $display-font; font-size: 1.3125rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.25; color: $ink; &::before { content: counter(howto) '.'; margin-right: .5em; color: $ink-80; } }
+.howto-step-body { color: $ink; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; margin: 0; }
+
+// device frames: brushed titanium body (same mixin as the homepage) + the single product shadow
+@mixin metal-frame($radius, $pad, $glass, $screen-radius) {
+  position: relative; border-radius: $radius; padding: $pad;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, transparent 1px 3px),
+    linear-gradient(135deg, #f4f6f8 0%, #c4cad2 16%, #e6e9ed 34%, #adb5bf 52%, #dde1e6 70%, #b6bdc6 86%, #eef1f4 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95), inset 0 -1px 0 rgba(15,23,32,.28), $product-shadow;
+  img { display: block; width: 100%; height: auto; border-radius: $screen-radius; box-shadow: 0 0 0 $glass #0c1219, 0 0 0 ($glass + 1px) rgba(255,255,255,.12); }
 }
-.howto-step-title { font-size: 17px; font-weight: 600; margin: 4px 0 6px; }
-.howto-step-body { color: #555; line-height: 1.75; margin: 0; }
-.howto-shot { margin: 14px 0 0; }
-.howto-shot img {
-  width: 100%; max-width: 760px; height: auto; display: block;
-  border: 1px solid #D8DFE8; border-radius: 10px;
-}
-.howto-tips { margin: 8px 0 0; padding-left: 20px; color: #5B6470; font-size: 14px; line-height: 1.8; }
-.howto-pending { margin-top: 12px; font-size: 13px; color: #9a8c7c; font-style: italic; }
-@media (max-width: 767px) {
-  .howto-title { font-size: 24px; }
-  .howto-module-title { font-size: 18px; }
-  .howto-module-head { padding: 16px 0; gap: 12px; }
-  .howto-module-summary { font-size: 14px; }
+.howto-shot { margin: 18px 0 0; }
+.howto-shot-tablet { @include metal-frame(22px, 12px, 6px, 10px); max-width: 760px; img { aspect-ratio: 2000 / 1200; object-fit: cover; object-position: top; } }
+.howto-shot-phone { @include metal-frame(40px, 10px, 5px, 28px); width: min(260px, 70%); img { aspect-ratio: 800 / 1731; } }
+.howto-tips { margin: 8px 0 0; padding-left: 20px; color: $ink-80; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; }
+.howto-pending { margin-top: 12px; font-size: .875rem; color: $ink-80; }
+@media (max-width: 640px) {
+  .howto-module-title { font-size: 1.25rem; }
+  .howto-module-head { padding: 18px 0; gap: 12px; }
   .howto-module-count { display: none; }
-  .howto-step { padding-left: 36px; }
-  .howto-step::before { width: 26px; height: 26px; font-size: 13px; }
-}
-</style>
-
-<style scoped lang="scss">
-@import '../css/utils/variables';
-@import '../css/utils/masthead';
-
-// ─── Editorial pass (design/editorial-phase2) ───
-.tutorial-page {
-  background: $warm-bg-light;
 }
 
-.tutorial-page :is(h1, h2, h3, h4) {
-  font-family: 'Noto Serif TC', serif;
+// ─── FAQ ──────────────────────────────────────────────────────────────────
+.faq-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: clamp(28px, 4vw, 44px); }
+.filter-pill {
+  min-height: 44px; background: transparent; border: 1px solid $brand-orange-text; border-radius: 9999px; padding: 10px 20px;
+  font: inherit; font-size: 1.0625rem; letter-spacing: -.022em; color: $brand-orange-text; cursor: pointer;
+  transition: transform .15s ease, background .2s ease;
+  &:active { transform: scale(.95); }
+  &:hover { background: rgba($brand-orange, .06); }
+  &.active { background: $brand-orange-text; color: #fff; }
 }
+.faq-sort-hint { text-align: center; font-size: .875rem; color: $ink-80; .sort-icon { margin-right: 4px; } }
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-groups { max-width: 800px; margin: 0 auto; }
+.faq-group { border-top: 1px solid $hairline; &:first-child { border-top: 0; } }
+.faq-group-head {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 20px 0; background: none; border: 0; cursor: pointer; font: inherit; color: inherit; text-align: left;
+  border-radius: 18px;
+}
+.faq-group-title { font-family: $display-font; font-weight: 600; font-size: 1.5rem; letter-spacing: -.02em; color: $ink; }
+.faq-group-meta { display: flex; align-items: center; gap: 12px; color: $ink-80; font-size: .875rem; }
+.faq-group-count { min-width: 28px; height: 28px; padding: 0 8px; display: inline-grid; place-items: center; border-radius: 9999px; background: $parchment; font-weight: 600; color: $ink; }
+.faq-group-chevron { font-size: 12px; color: $brand-orange-text; transition: transform .25s; }
+.faq-group.open .faq-group-chevron { transform: rotate(180deg); }
+.faq-group .faq-container { padding: 4px 0 20px; }
+@media (prefers-reduced-motion: reduce) { .faq-group-chevron { transition: none; } }
 
-.header-section.ed-mast-block {
-  text-align: left;
-  @include masthead-block;
-  margin-bottom: 44px;
-
-  .ed-mast-kicker {
-    @include masthead-kicker;
+.faq-item {
+  background: $parchment; border: 1px solid $hairline; border-radius: 18px; margin-bottom: 12px; cursor: pointer; overflow: hidden;
+  .faq-header {
+    display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; gap: 16px;
+    .question { color: $ink; font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; line-height: 1.47; margin: 0; flex: 1; }
+    .faq-toggle { color: $ink-80; font-size: .75rem; transition: transform .3s; flex-shrink: 0; &.rotated { transform: rotate(180deg); color: $brand-orange-text; } }
   }
-
-  .page-title {
-    @include masthead-title;
-  }
-
-  .subtitle {
-    font-size: clamp(1.16rem, 2vw, 1.42rem);
-    font-weight: 500;
-    line-height: 1.95;
-    color: $grey-blue2;
-    max-width: 34em;
+  .faq-body {
+    padding: 0 24px 22px;
+    .answer { color: $ink; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; margin: 0 0 8px; }
+    .faq-helpful { display: inline-block; color: $ink-80; font-size: .875rem; }
   }
 }
+// FAQ expand transition
+.faq-expand-enter-active, .faq-expand-leave-active { transition: max-height .3s ease, opacity .3s ease; max-height: 300px; overflow: hidden; }
+.faq-expand-enter-from, .faq-expand-leave-to { max-height: 0; opacity: 0; }
 
-.tutorial-page :is(div[class*="card"], div[class*="faq"], button) {
-  border-radius: 0 !important;
+// ─── video guides (dark tile) ─────────────────────────────────────────────
+.video-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; width: 100%; margin-top: clamp(32px, 5vw, 56px); text-align: left;
+  @media (max-width: 1068px) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 834px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 480px) { grid-template-columns: 1fr; }
 }
+.video-card {
+  text-decoration: none; display: flex; flex-direction: column; gap: 12px; color: #fff;
+  &:hover { .play-overlay { opacity: 1; } .video-title { color: $orange2; } }
+  .thumbnail-wrapper {
+    position: relative; width: 100%; aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; background: $tile-dark-2;
+    .thumbnail { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .play-overlay {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .2s ease;
+      &::before { content: ''; width: 56px; height: 56px; background: #fff; border-radius: 50%; position: absolute; }
+      &::after { content: ''; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 15px solid $ink; position: absolute; margin-left: 4px; }
+    }
+  }
+  .video-title { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; color: #fff; line-height: 1.4; transition: color .2s ease; }
+}
+@media (prefers-reduced-motion: reduce) { .video-card .play-overlay, .video-card .video-title { transition: none; } }
 </style>
