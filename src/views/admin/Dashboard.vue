@@ -425,7 +425,7 @@ onMounted(() => { fetchData(); fetchInsights(); fetchSite(); fetchLegal() })
 .insight-card li b { flex-shrink: 0; color: #e05a35; }
 .insight-empty { font-size: 13px; color: #999; margin: 0; }
 .legal-tools { display: flex; gap: 12px; align-items: center; }
-.legal-csv { padding: 6px 14px; border: 1px solid #0066cc; border-radius: 980px; background: transparent; color: #0066cc; font-size: 13px; cursor: pointer; }
+.legal-csv { padding: 6px 14px; border: 1px solid #b8431f; border-radius: 9999px; background: transparent; color: #b8431f; font-size: 13px; cursor: pointer; }
 .legal-csv:disabled { opacity: 0.4; cursor: default; }
 .legal-scroll { overflow-x: auto; }
 .legal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
