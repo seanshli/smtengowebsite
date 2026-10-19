@@ -13,8 +13,9 @@ handful of Vercel serverless functions (contact form, chatbot, admin back office
 ```
 index.html            SPA shell: meta, GTM + Consent Mode v2, fonts
 src/                  Vue app — views/, components/, layout/, router/, locale/, data/*.json, css/
-api/                  Vercel serverless functions (Node): contact, chatbot-query, line/webhook, admin/*
-lib/                  server-side helpers shared by api/: session, ratelimit, redact, supabase-admin, chatbot-answer, line, line-bot
+api/                  Vercel serverless functions (Node): contact, chatbot-query, legal/acknowledge, line/webhook, admin/*
+lib/                  server-side helpers shared by api/: session, ratelimit, redact, supabase-admin, chatbot-answer, line, line-bot, legal-ack
+legal Center          `src/views/legal.vue` (public /legal) → `api/legal/acknowledge.ts`, validated by `lib/legal-ack.ts`
 scripts/              prerender-meta.mjs (per-route <head> shells), hash-password.mjs (admin passwords)
 public/               static assets, sitemap.xml, robots.txt, policy pages, product-feed.xml
 supabase_setup.sql    one-time schema; supabase_add_member_contact.sql is the follow-up migration
