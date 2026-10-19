@@ -137,11 +137,11 @@ export const renderRegister = (reg) => {
   lines.push(`文件編號規則：\`${reg.register.scheme}\`。版次規則：${reg.register.revisionRule}`)
   lines.push(`審查週期：${reg.register.reviewCycleMonths} 個月。以繁體中文版為準（\`governingLanguage: ${reg.register.governingLanguage}\`）。`)
   lines.push(`歷史版次封存：${reg.register.archive}`, '')
-  lines.push('| 文件編號 | 文件名稱 | 版次 | 發行日期 | 生效日 | 下次審查 | 文件所有人 | 核准 | 機密等級 | 適用對象 | 繁中 | 英文 |')
+  lines.push('| 文件編號 | 文件名稱 | 版次 | 發行日期 | 生效日 | 下次審查 | 文件所有人 | 核准（日期） | 機密等級 | 適用對象 | 繁中 | 英文 |')
   lines.push('|---|---|---|---|---|---|---|---|---|---|---|---|')
   const aud = Object.fromEntries(reg.audiences.map((a) => [a.id, a.label.zh]))
   for (const d of reg.documents) {
-    lines.push(`| ${d.docNo} | ${d.title.zh}（${d.title.en}） | ${d.revision} | ${d.issued} | ${d.effective} | ${d.nextReview} | ${d.owner ?? '[待確認]'} | ${d.approvedBy ?? '[待確認]'} | ${d.classification} | ${d.audiences.map((a) => aud[a]).join('、')} | \`${d.href.zh}\` | \`${d.href.en}\` |`)
+    lines.push(`| ${d.docNo} | ${d.title.zh}（${d.title.en}） | ${d.revision} | ${d.issued} | ${d.effective} | ${d.nextReview} | ${d.owner ?? '[待確認]'} | ${d.approvedBy ? `${d.approvedBy}（${d.approvedOn ?? '[待確認]'}）` : '[待確認]'} | ${d.classification} | ${d.audiences.map((a) => aud[a]).join('、')} | \`${d.href.zh}\` | \`${d.href.en}\` |`)
   }
   lines.push('', '## 版次歷史 Revision history', '')
   for (const d of reg.documents) {

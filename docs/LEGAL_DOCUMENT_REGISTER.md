@@ -6,11 +6,11 @@
 審查週期：12 個月。以繁體中文版為準（`governingLanguage: zh`）。
 歷史版次封存：Dropbox EE/enGo/SW/文件-正式發行/<docNo>_<revision>/ (copy of the published HTML + register extract)
 
-| 文件編號 | 文件名稱 | 版次 | 發行日期 | 生效日 | 下次審查 | 文件所有人 | 核准 | 機密等級 | 適用對象 | 繁中 | 英文 |
+| 文件編號 | 文件名稱 | 版次 | 發行日期 | 生效日 | 下次審查 | 文件所有人 | 核准（日期） | 機密等級 | 適用對象 | 繁中 | 英文 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ENGO-LG-001 | 服務條款（Terms of Service） | A.1 | 2026-10-19 | 2024-01-15 | 2027-10-19 | [待確認] | [待確認] | 可對外 | 商城買家、住戶、建案與社區、合作夥伴 | `/terms.html` | `/terms-en.html` |
-| ENGO-LG-002 | 隱私權政策（Privacy Policy） | A.1 | 2026-10-19 | 2026-04 | 2027-10-19 | [待確認] | [待確認] | 可對外 | 商城買家、住戶、建案與社區、合作夥伴 | `/privacy.html` | `/privacy-en.html` |
-| ENGO-LG-003 | 退貨與保固政策（Return & Warranty Policy） | A.1 | 2026-10-19 | 2026-04 | 2027-10-19 | [待確認] | [待確認] | 可對外 | 商城買家、合作夥伴 | `/return-policy.html` | `/return-policy-en.html` |
+| ENGO-LG-001 | 服務條款（Terms of Service） | A.1 | 2026-10-19 | 2024-01-15 | 2027-10-19 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、住戶、建案與社區、合作夥伴 | `/terms.html` | `/terms-en.html` |
+| ENGO-LG-002 | 隱私權政策（Privacy Policy） | A.1 | 2026-10-19 | 2026-04 | 2027-10-19 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、住戶、建案與社區、合作夥伴 | `/privacy.html` | `/privacy-en.html` |
+| ENGO-LG-003 | 退貨與保固政策（Return & Warranty Policy） | A.1 | 2026-10-19 | 2026-04 | 2027-10-19 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、合作夥伴 | `/return-policy.html` | `/return-policy-en.html` |
 
 ## 版次歷史 Revision history
 

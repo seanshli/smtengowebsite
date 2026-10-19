@@ -1,5 +1,5 @@
 {
-  "_comment": "Legal Center (/legal) document register. Controlled documents per ISO 27001 7.5 (documented information): each document carries a document number (ENGO-LG-NNN, same scheme as ENGO-KB-001), a revision (A.n), issue date, owner/approver, classification and a change history whose sha256 is the hash of the published HTML (zh + en). `scripts/legal-register.mjs check` (run by the test suite) fails when a document's text changes without a revision bump; bump with `npm run legal:bump -- <id> <A.n> \"<change>\"`. Only documents that exist under public/ are listed; nothing here invents legal text. The server records docNo + revision + sha256 of the revision in force on every acknowledgement.",
+  "_comment": "Legal Center (/legal) document register. Controlled documents per ISO 27001 7.5 (documented information): each document carries a document number (ENGO-LG-NNN, same scheme as ENGO-KB-001), a revision (A.n), issue date, owner/approver, classification and a change history whose sha256 is the hash of the published HTML (zh + en). `scripts/legal-register.mjs check` (run by the test suite) fails when a document's text changes without a revision bump; bump with `npm run legal:bump -- <id> <A.n> \"<change>\"`. Only documents that exist under public/ are listed; nothing here invents legal text. The server records docNo + revision + sha256 of the revision in force on every acknowledgement. owner/approvedBy are names only: this file ships in the public bundle, contact e-mails are kept in the private 文件-正式發行 archive (CONTROL.txt).",
   "register": {
     "scheme": "ENGO-LG-NNN",
     "revisionRule": "A.n — n increments on every published text change; a new letter only when the document is rewritten. Dates are ISO 8601 (YYYY-MM-DD).",
@@ -15,8 +15,9 @@
       "issued": "2026-10-19",
       "effective": "2024-01-15",
       "nextReview": "2027-10-19",
-      "owner": null,
-      "approvedBy": null,
+      "owner": "Van Lee",
+      "approvedBy": "Sean Li",
+      "approvedOn": "2026-10-19",
       "classification": "可對外",
       "title": {
         "zh": "服務條款",
@@ -55,8 +56,9 @@
       "issued": "2026-10-19",
       "effective": "2026-04",
       "nextReview": "2027-10-19",
-      "owner": null,
-      "approvedBy": null,
+      "owner": "Van Lee",
+      "approvedBy": "Sean Li",
+      "approvedOn": "2026-10-19",
       "classification": "可對外",
       "title": {
         "zh": "隱私權政策",
@@ -95,8 +97,9 @@
       "issued": "2026-10-19",
       "effective": "2026-04",
       "nextReview": "2027-10-19",
-      "owner": null,
-      "approvedBy": null,
+      "owner": "Van Lee",
+      "approvedBy": "Sean Li",
+      "approvedOn": "2026-10-19",
       "classification": "可對外",
       "title": {
         "zh": "退貨與保固政策",
