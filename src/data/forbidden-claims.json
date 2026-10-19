@@ -50,7 +50,7 @@
       "say_instead": "明講「沒有 Alexa 整合」",
       "ruling": "2026-09-11 專案查證",
       "mention": "alexa",
-      "deny": "沒有 Alexa|没有 Alexa|no Alexa integration|Alexa との連携はありません|pas d'intégration Alexa|No hay integración con Alexa"
+      "deny": "沒有\\s*(Amazon\\s*)?Alexa|没有\\s*(Amazon\\s*)?Alexa|無 Alexa|不支援 Alexa|no Alexa integration|Alexa との連携はありません|pas d'intégration Alexa|No hay integración con Alexa"
     },
     {
       "id": "offline-blanket",
@@ -88,7 +88,7 @@
       "say_instead": "見 §3「可以控制門鎖嗎？」",
       "ruling": "2026-09-09 產品裁決",
       "mention": "門鎖",
-      "deny": "不在.*支援|不支援|不在支援範圍"
+      "deny": "不在.*支援|尚未支援|未支援|不支援|不在支援範圍|不提供[^。\\n]{0,8}門鎖|無法[^。\\n]{0,8}門鎖"
     },
     {
       "id": "retired-features",
@@ -274,7 +274,7 @@
       "say_instead": "「平面圖即時視圖目前開發中，尚未提供；上線時程請洽專人」，不承諾日期",
       "ruling": "2026-09-25 實機＋程式碼查核",
       "mention": "平面圖|平面图|floor ?plan|フロアプラン|plan en direct|plano en vivo|vista de plano",
-      "deny": "開發中|开发中|尚未提供|未提供|規劃中|规划中|in development|planned feature|not yet|開発中|計画中|prévue|en développement|prevista|en desarrollo"
+      "deny": "開發中|开发中|尚未提供|未提供|未上線|尚未上線|還沒有|規劃中|规划中|in development|planned feature|not yet|開発中|計画中|prévue|en développement|prevista|en desarrollo"
     }
   ]
 }
