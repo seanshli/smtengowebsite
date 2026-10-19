@@ -614,7 +614,7 @@
       "order": 10,
       "icon": "box",
       "title": {
-        "zh": "倉儲管理",
+        "zh": "庫存管理",
         "en": "Home Inventory"
       },
       "summary": {
@@ -628,7 +628,7 @@
             "en": "Create cabinets and categories first"
           },
           "body": {
-            "zh": "倉儲頁上方有物品、櫃位、分類、記錄、告警五個分頁。先在「櫃位」建立實體收納位置（例如「廚房下櫃」），在「分類」建立類別（例如「濾芯」），再回到「物品」新增。",
+            "zh": "庫存頁上方有物品、櫃位、分類、記錄、告警五個分頁。先在「櫃位」建立實體收納位置（例如「廚房下櫃」），在「分類」建立類別（例如「濾芯」），再回到「物品」新增。",
             "en": "The inventory page has five tabs: Items, Cabinets, Categories, History and Alerts. Create your physical storage places under Cabinets (e.g. \"kitchen lower cabinet\") and your categories (e.g. \"filters\") first, then add items."
           },
           "image": null
@@ -658,11 +658,11 @@
       ],
       "tips": [
         {
-          "zh": "手機上這個功能叫「庫存」，不叫「倉儲」，而且收在底部「更多」分頁裡；平板才是左側導覽列的「倉儲」。兩邊是同一頁、同一批資料。",
-          "en": "On phones this feature is called 庫存 (Inventory), not 倉儲 (Warehouse), and it lives under the bottom “More” tab; the left-hand 倉儲 entry is the tablet layout. Both are the same page and the same data."
+          "zh": "平板與手機都叫「庫存」：平板在左側導覽列，手機收在底部「更多」分頁裡。兩邊是同一頁、同一批資料。（3.2.2 的平板曾顯示「倉儲」，3.6.x 起已統一為「庫存」。）",
+          "en": "Both the tablet and the phone call this 庫存 (Inventory): on the tablet it is in the left navigation rail, on the phone it sits under the bottom “More” tab. Same page, same data. (Tablets on 3.2.2 showed 倉儲; this was unified to 庫存 in 3.6.x.)"
         },
         {
-          "zh": "低庫存門檻在倉儲頁的「告警」分頁設定；數量低於門檻的物品，卡片上會出現紅色「庫存不足」標籤，上方的「低庫存」數字就是目前低於門檻的品項數。濾芯這類有壽命的東西，建議一併記下更換日期。",
+          "zh": "低庫存門檻在庫存頁的「告警」分頁設定；數量低於門檻的物品，卡片上會出現紅色「庫存不足」標籤，上方的「低庫存」數字就是目前低於門檻的品項數。濾芯這類有壽命的東西，建議一併記下更換日期。",
           "en": "Set the low-stock threshold in the Alerts (告警) tab. Any item below it shows a red 庫存不足 (low stock) tag on its card, and the Low stock figure at the top counts those items. For things with a service life, such as filters, record the replacement date too."
         }
       ],
