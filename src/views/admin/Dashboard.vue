@@ -87,11 +87,20 @@
         共 {{ legal.total }} 筆<template v-for="a in LEGAL_AUDIENCES" :key="a.id"> · {{ a.label }}: {{ legalCounts[a.id] || 0 }}</template>
         <template v-if="legal.total >= 200">（僅顯示最新 200 筆）</template>
       </p>
+      <table class="legal-table legal-register">
+        <caption>文件登錄（src/data/legal.json；完整版次歷史見 docs/LEGAL_DOCUMENT_REGISTER.md）</caption>
+        <thead><tr><th>文件編號</th><th>文件</th><th>版次</th><th>發行日期</th><th>下次審查</th><th>SHA-256（繁中，前 12 碼）</th></tr></thead>
+        <tbody>
+          <tr v-for="d in legalRegister" :key="d.docNo">
+            <td>{{ d.docNo }}</td><td>{{ d.title }}</td><td>{{ d.revision }}</td><td>{{ d.issued }}</td><td>{{ d.nextReview }}</td><td><code>{{ d.sha }}</code></td>
+          </tr>
+        </tbody>
+      </table>
       <p v-if="!legal.rows.length" class="insight-empty">尚無簽核紀錄</p>
       <div v-else class="legal-scroll">
         <table class="legal-table">
           <thead>
-            <tr><th>日期</th><th>對象</th><th>姓名</th><th>公司／單位</th><th>Email</th><th>電話</th><th>文件（版本）</th><th>備註</th></tr>
+            <tr><th>日期</th><th>對象</th><th>姓名</th><th>公司／單位</th><th>Email</th><th>電話</th><th>文件（文件編號 版次）</th><th>備註</th></tr>
           </thead>
           <tbody>
             <tr v-for="r in legal.rows" :key="r.id">
@@ -206,6 +215,7 @@
 </template>
 
 <script setup lang="ts">
+import legalData from '@/data/legal.json'
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import howtoData from '@/data/howto.json'
@@ -284,8 +294,15 @@ const legalCounts = computed<Record<string, number>>(() => {
   for (const r of legal.value?.rows ?? []) out[r.audience] = (out[r.audience] || 0) + 1
   return out
 })
+// versions[d] is the server-recorded revision in force at submission: { docNo, revision, issued, sha256 }.
 const legalDocs = (r: any) =>
-  (r.documents || []).map((d: string) => (r.versions?.[d] ? `${d}（${r.versions[d]}）` : d)).join('、')
+  (r.documents || []).map((d: string) => {
+    const v = r.versions?.[d]
+    return v && typeof v === 'object' ? `${v.docNo} ${v.revision}` : v ? `${d}（${v}）` : d
+  }).join('、')
+const legalRegister = (legalData.documents as any[]).map((d) => ({
+  docNo: d.docNo, title: d.title.zh, revision: d.revision, issued: d.issued, nextReview: d.nextReview, sha: d.history?.[d.history.length - 1]?.sha256?.zh?.slice(0, 12) ?? ''
+}))
 const fetchLegal = async () => {
   try {
     const token = localStorage.getItem('admin_token')
@@ -428,6 +445,8 @@ onMounted(() => { fetchData(); fetchInsights(); fetchSite(); fetchLegal() })
 .legal-csv { padding: 6px 14px; border: 1px solid #b8431f; border-radius: 9999px; background: transparent; color: #b8431f; font-size: 13px; cursor: pointer; }
 .legal-csv:disabled { opacity: 0.4; cursor: default; }
 .legal-scroll { overflow-x: auto; }
+.legal-register { margin: 0 0 16px; }
+.legal-register caption { text-align: left; color: #6e6e73; font-size: 12px; padding: 0 0 6px; }
 .legal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .legal-table th, .legal-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e0e0e0; vertical-align: top; white-space: nowrap; }
 .legal-table th { color: #6e6e73; font-weight: 500; }

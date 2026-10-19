@@ -58,6 +58,7 @@ the bcrypt hash) and paste the hash into the `backend_members` row. Cost 10 matc
 |---|---|---|
 | `POST /api/contact` | store a contact submission, send SMTP notification | anon key + SMTP |
 | `/legal` (SPA page, `src/views/legal.vue`) | 法務文件中心: lists every legal document by audience and posts acknowledgements to `POST /api/legal/acknowledge` | none (public page) |
+| Legal document register (`src/data/legal.json`, `docs/LEGAL_DOCUMENT_REGISTER.md`) | controlled documents ENGO-LG-001 服務條款 / ENGO-LG-002 隱私權政策 / ENGO-LG-003 退貨與保固政策 with revision `A.n`, issue date, owner/approver, SHA-256 of each published HTML; `npm run legal:check` (also in `test:unit`) fails when `public/<doc>.html` changes without `npm run legal:bump -- <id> <A.n> "<change>"` | none |
 | `POST /api/legal/acknowledge` | store a legal-document acknowledgement (`legal_acknowledgements`), rate-limited 5 / 10 min / IP, optional SMTP notification | anon key (+ SMTP if configured) |
 | `POST /api/chatbot-query` | log chatbot questions for analytics | anon key |
 | `POST /api/line/webhook` | LINE official-account bot: answers from the chatbot knowledge base, logs to `chatbot_analytics` as `line-<lang>` | LINE channel secret + access token, anon key for the log |

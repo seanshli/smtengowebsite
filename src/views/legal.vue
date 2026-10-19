@@ -23,7 +23,7 @@
             <ul class="lg-list">
               <li v-for="d in docsFor(a)" :key="d.id">
                 <a :href="pick(d.href)" class="lg-link" :data-track="'legal:' + a.id + ':' + d.id">{{ pick(d.title) }}<span class="lg-chev" aria-hidden="true">›</span></a>
-                <span class="lg-meta">{{ T.updated }} {{ d.updated }}</span>
+                <span class="lg-meta">{{ d.docNo }} · {{ T.rev }} {{ d.revision }} · {{ d.issued }}</span>
               </li>
             </ul>
             <button type="button" class="lg-pill lg-pill-ghost" @click="startAck(a.id)">{{ T.ackFor }}</button>
@@ -44,7 +44,7 @@
             <div class="lg-doc-main">
               <h3 class="lg-h3">{{ pick(d.title) }}</h3>
               <p class="lg-body">{{ pick(d.summary) }}</p>
-              <p class="lg-meta">{{ T.updated }} {{ d.updated }} · {{ T.appliesTo }} {{ d.audiences.map(audienceLabel).join('、') }}</p>
+              <p class="lg-meta">{{ d.docNo }} · {{ T.rev }} {{ d.revision }} · {{ T.issued }} {{ d.issued }} · {{ T.appliesTo }} {{ d.audiences.map(audienceLabel).join('、') }}</p>
             </div>
             <div class="lg-doc-actions">
               <a :href="d.href.zh" class="lg-pill lg-pill-primary" :data-track="'legal:open:' + d.id + ':zh'">繁體中文</a>
@@ -95,7 +95,7 @@
             <legend>{{ T.fDocs }} <span class="lg-req">({{ T.required }})</span></legend>
             <label v-for="d in docsForId(form.audience)" :key="d.id" class="lg-check">
               <input type="checkbox" :value="d.id" v-model="form.documents" />
-              <span>{{ pick(d.title) }} <em>{{ d.updated }}</em></span>
+              <span>{{ pick(d.title) }} <em>{{ d.docNo }} {{ d.revision }}</em></span>
             </label>
           </fieldset>
           <div class="lg-field">
@@ -131,7 +131,7 @@ import legal from '@/data/legal.json'
 import { useAnalytics } from '@/utils/analytics'
 
 type Localized = Record<string, string>
-type Doc = { id: string; updated: string; title: Localized; summary: Localized; href: Localized; audiences: string[] }
+type Doc = { id: string; docNo: string; revision: string; issued: string; title: Localized; summary: Localized; href: Localized; audiences: string[] }
 type Audience = { id: string; label: Localized; who: Localized; documents: string[] }
 
 const { locale } = useI18n()
@@ -167,7 +167,7 @@ const submit = async () => {
   submitting.value = true
   try {
     const versions: Record<string, string> = {}
-    for (const id of form.documents) versions[id] = documents.find((d) => d.id === id)?.updated ?? ''
+    for (const id of form.documents) versions[id] = documents.find((d) => d.id === id)?.revision ?? ''
     const res = await fetch('/api/legal/acknowledge', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -175,7 +175,7 @@ const submit = async () => {
     })
     const data = await res.json().catch(() => ({}))
     if (!res.ok) {
-      error.value = res.status === 429 ? T.value.errRate : (data?.error || T.value.errServer)
+      error.value = res.status === 429 ? T.value.errRate : res.status === 409 ? T.value.errStale : (data?.error || T.value.errServer)
       return
     }
     doneId.value = String(data?.id ?? '')
@@ -200,7 +200,7 @@ const COPY: Record<string, Record<string, string>> = {
   zh: {
     title: '法務文件中心', lead: '商城買家、住戶、建案與社區、合作夥伴適用的全部法律文件，集中在這一頁。看完可以在下方留下審閱確認，我們的專人會據此聯繫後續簽署。',
     updatedNote: '所有文件以繁體中文版為準，英文版為方便閱讀的翻譯。', byAudience: '依對象查看', byAudienceSub: '先找到您的身分，再看適用的文件。',
-    allDocs: '全部文件', allDocsSub: '每份文件都有繁體中文與英文版本，連結直接開啟全文。', updated: '最後更新', appliesTo: '適用對象：',
+    allDocs: '全部文件', allDocsSub: '每份文件都有繁體中文與英文版本，連結直接開啟全文。', rev: '版次', issued: '發行', appliesTo: '適用對象：', errStale: '文件已更新版次，請重新整理頁面後再審閱一次。',
     languageNote: '文件以繁體中文版為準；英文版為方便閱讀的翻譯，條文解釋以中文為準。', ackFor: '審閱確認',
     ackTitle: '審閱確認', ackSub: '填寫後我們會記錄您已審閱的文件與版本，並由專人安排後續合作或簽署事宜。這不是電子簽章。',
     fAudience: '我的身分', fName: '姓名', fOrg: '公司／單位', fEmail: 'Email', fPhone: '電話', fDocs: '已審閱的文件', fNote: '備註或問題',
@@ -212,7 +212,7 @@ const COPY: Record<string, Record<string, string>> = {
   zhCN: {
     title: '法务文件中心', lead: '商城买家、住户、建案与社区、合作伙伴适用的全部法律文件，集中在这一页。看完可以在下方留下审阅确认，我们的专人会据此联系后续签署。',
     updatedNote: '所有文件以繁体中文版为准，英文版为方便阅读的翻译。', byAudience: '依对象查看', byAudienceSub: '先找到您的身份，再看适用的文件。',
-    allDocs: '全部文件', allDocsSub: '每份文件都有繁体中文与英文版本，链接直接打开全文。', updated: '最后更新', appliesTo: '适用对象：',
+    allDocs: '全部文件', allDocsSub: '每份文件都有繁体中文与英文版本，链接直接打开全文。', rev: '版次', issued: '发行', appliesTo: '适用对象：', errStale: '文件已更新版次，请刷新页面后再审阅一次。',
     languageNote: '文件以繁体中文版为准；英文版为方便阅读的翻译，条文解释以中文为准。', ackFor: '审阅确认',
     ackTitle: '审阅确认', ackSub: '填写后我们会记录您已审阅的文件与版本，并由专人安排后续合作或签署事宜。这不是电子签章。',
     fAudience: '我的身份', fName: '姓名', fOrg: '公司／单位', fEmail: 'Email', fPhone: '电话', fDocs: '已审阅的文件', fNote: '备注或问题',
@@ -224,7 +224,7 @@ const COPY: Record<string, Record<string, string>> = {
   en: {
     title: 'Legal Center', lead: 'Every legal document that applies to store customers, households, developments and communities, and partners, on one page. Once you have read them, leave a review acknowledgement below and our team will follow up on any signing.',
     updatedNote: 'The Traditional Chinese text governs; English versions are convenience translations.', byAudience: 'By audience', byAudienceSub: 'Find who you are, then the documents that apply.',
-    allDocs: 'All documents', allDocsSub: 'Each document is available in Traditional Chinese and English; links open the full text.', updated: 'Last updated', appliesTo: 'Applies to:',
+    allDocs: 'All documents', allDocsSub: 'Each document is available in Traditional Chinese and English; links open the full text.', rev: 'Rev.', issued: 'Issued', appliesTo: 'Applies to:', errStale: 'A document has a newer revision. Reload the page and review it again.',
     languageNote: 'The Traditional Chinese text governs; English versions are convenience translations.', ackFor: 'Acknowledge review',
     ackTitle: 'Review acknowledgement', ackSub: 'We record which documents and versions you reviewed, and our team arranges any follow-up or signing. This is not an electronic signature.',
     fAudience: 'I am a', fName: 'Name', fOrg: 'Company / organisation', fEmail: 'Email', fPhone: 'Phone', fDocs: 'Documents reviewed', fNote: 'Notes or questions',

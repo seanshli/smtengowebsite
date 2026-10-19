@@ -40,7 +40,7 @@ const notify = async (row: AckRow): Promise<void> => {
     // CR/LF in a header value would let a submitter forge extra mail headers.
     const oneLine = (s: string) => s.replace(/[\r\n]+/g, ' ').slice(0, 100)
     const versions = row.documents
-        .map((d) => `${d}${row.versions[d] ? ` (${row.versions[d]})` : ''}`)
+        .map((d) => (row.versions[d] ? `${row.versions[d].docNo} ${row.versions[d].revision}` : d))
         .join(', ')
     await transporter.sendMail({
         from: `"enGo Website" <${user}>`,
@@ -53,7 +53,7 @@ const notify = async (row: AckRow): Promise<void> => {
         <p><strong>公司／單位：</strong> ${esc(row.organization)}</p>
         <p><strong>Email：</strong> ${esc(row.email)}</p>
         <p><strong>電話：</strong> ${esc(row.phone)}</p>
-        <p><strong>文件（版本）：</strong> ${esc(versions)}</p>
+        <p><strong>文件（文件編號 版次）：</strong> ${esc(versions)}</p>
         <p><strong>語系：</strong> ${esc(row.locale)}</p>
         <p><strong>備註：</strong></p>
         <p style="white-space: pre-wrap;">${esc(row.note)}</p>
@@ -75,7 +75,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const result = validateAcknowledgement(req.body)
     if (!result.ok) {
-        return res.status(400).json({ error: result.error })
+        // 409: the page showed an older revision than the one now in force.
+        return res.status(result.code === 'stale' ? 409 : 400).json({ error: result.error, code: result.code })
     }
     const row = result.row
 

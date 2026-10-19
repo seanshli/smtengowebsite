@@ -6,7 +6,7 @@ const base = {
   name: '  王小明 ',
   email: 'ming@example.com',
   documents: ['terms', 'privacy'],
-  versions: { terms: '2026-10-01' },
+  versions: { terms: 'A.1' },
   accepted: true
 }
 
@@ -19,7 +19,8 @@ describe('validateAcknowledgement', () => {
       expect(r.row.organization).toBeNull()
       expect(r.row.phone).toBeNull()
       expect(r.row.note).toBeNull()
-      expect(r.row.versions).toEqual({ terms: '2026-10-01' })
+      expect(r.row.versions.terms).toMatchObject({ docNo: 'ENGO-LG-001', revision: 'A.1' })
+      expect(r.row.versions.terms.sha256.zh).toMatch(/^[0-9a-f]{64}$/)
     }
   })
 
@@ -56,5 +57,17 @@ describe('hashIp', () => {
     expect(hashIp('1.2.3.4', 's')).not.toBe(hashIp('1.2.3.4', 't'))
     expect(hashIp('1.2.3.4', 's')).toMatch(/^[0-9a-f]{64}$/)
     expect(hashIp(undefined, 's')).toBeNull()
+  })
+
+  it('records the revision in force even when the client sends none', () => {
+    const r = validateAcknowledgement({ ...base, documents: ['terms', 'privacy'], versions: undefined })
+    expect(r.ok).toBe(true)
+    if (r.ok) expect(Object.keys(r.row.versions).sort()).toEqual(['privacy', 'terms'])
+  })
+
+  it('refuses with code "stale" when the client saw an older revision', () => {
+    const r = validateAcknowledgement({ ...base, versions: { terms: 'A.0' } })
+    expect(r.ok).toBe(false)
+    if (!r.ok) expect(r.code).toBe('stale')
   })
 })

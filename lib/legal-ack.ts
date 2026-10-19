@@ -1,10 +1,31 @@
 import { createHash } from 'node:crypto'
+import legal from '../src/data/legal.json'
 
 // Legal Center acknowledgements. Pure validation lives here so it can be unit
 // tested without a request object; api/legal/acknowledge.ts only adds I/O.
 
 export const AUDIENCES = ['shop_buyer', 'household', 'building', 'partner'] as const
 export const DOCUMENT_IDS = ['terms', 'privacy', 'return-policy'] as const
+
+/** The revision in force for a document, as recorded by the server on every acknowledgement. */
+export interface DocVersion {
+  docNo: string
+  revision: string
+  issued: string
+  sha256: { zh: string; en: string }
+}
+
+type RegisterDoc = { id: string; docNo: string; revision: string; issued: string; history: { revision: string; sha256: { zh: string; en: string } }[] }
+
+/** Current revision per document id, from the controlled register (src/data/legal.json). */
+export const currentVersions = (): Record<DocumentId, DocVersion> => {
+  const out = {} as Record<DocumentId, DocVersion>
+  for (const d of legal.documents as RegisterDoc[]) {
+    const last = d.history[d.history.length - 1]
+    out[d.id as DocumentId] = { docNo: d.docNo, revision: d.revision, issued: d.issued, sha256: last?.sha256 ?? { zh: '', en: '' } }
+  }
+  return out
+}
 
 export type Audience = (typeof AUDIENCES)[number]
 export type DocumentId = (typeof DOCUMENT_IDS)[number]
@@ -16,13 +37,13 @@ export interface AckRow {
   email: string
   phone: string | null
   documents: DocumentId[]
-  versions: Record<string, string>
+  versions: Record<string, DocVersion>
   note: string | null
   locale: string | null
   accepted: true
 }
 
-export type AckResult = { ok: true; row: AckRow } | { ok: false; error: string }
+export type AckResult = { ok: true; row: AckRow } | { ok: false; error: string; code?: 'stale' }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const ORG_REQUIRED: readonly Audience[] = ['building', 'partner']
@@ -82,15 +103,22 @@ export function validateAcknowledgement(body: unknown): AckResult {
   if (new Set(b.documents).size !== b.documents.length) return fail('Duplicate documents')
   const documents = b.documents as DocumentId[]
 
-  const versions: Record<string, string> = {}
+  // The browser may say which revision it showed; the server records the revision in
+  // force from the register regardless. A mismatch means the page is stale: refuse, so
+  // nobody acknowledges text they did not read.
+  const current = currentVersions()
   if (b.versions !== undefined && b.versions !== null) {
     if (typeof b.versions !== 'object' || Array.isArray(b.versions)) return fail('Invalid versions')
     for (const [key, value] of Object.entries(b.versions as Record<string, unknown>)) {
       if (!(documents as string[]).includes(key)) return fail('Version for a document that was not acknowledged')
       if (typeof value !== 'string' || value.length > 32) return fail('Invalid version')
-      versions[key] = value
+      if (value !== current[key as DocumentId].revision) {
+        return { ok: false, code: 'stale', error: 'Document revision has changed; reload the page and review again' }
+      }
     }
   }
+  const versions: Record<string, DocVersion> = {}
+  for (const d of documents) versions[d] = current[d]
 
   return {
     ok: true,

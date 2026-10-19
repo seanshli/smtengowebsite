@@ -1,64 +1,194 @@
 {
-  "_comment": "Legal Center (/legal). Only documents that exist under public/ are listed; nothing here invents legal text. `updated` is the 最後更新 line inside each document and doubles as the version an acknowledgement records. Audiences: shop_buyer 商城買家 / household 住戶 / building 建案與社區 / partner 合作夥伴.",
+  "_comment": "Legal Center (/legal) document register. Controlled documents per ISO 27001 7.5 (documented information): each document carries a document number (ENGO-LG-NNN, same scheme as ENGO-KB-001), a revision (A.n), issue date, owner/approver, classification and a change history whose sha256 is the hash of the published HTML (zh + en). `scripts/legal-register.mjs check` (run by the test suite) fails when a document's text changes without a revision bump; bump with `npm run legal:bump -- <id> <A.n> \"<change>\"`. Only documents that exist under public/ are listed; nothing here invents legal text. The server records docNo + revision + sha256 of the revision in force on every acknowledgement.",
+  "register": {
+    "scheme": "ENGO-LG-NNN",
+    "revisionRule": "A.n — n increments on every published text change; a new letter only when the document is rewritten. Dates are ISO 8601 (YYYY-MM-DD).",
+    "archive": "Dropbox EE/enGo/SW/文件-正式發行/<docNo>_<revision>/ (copy of the published HTML + register extract)",
+    "reviewCycleMonths": 12,
+    "governingLanguage": "zh"
+  },
   "documents": [
     {
       "id": "terms",
-      "updated": "2026-04",
-      "title": { "zh": "服務條款", "en": "Terms of Service" },
+      "docNo": "ENGO-LG-001",
+      "revision": "A.1",
+      "issued": "2026-10-19",
+      "effective": "2024-01-15",
+      "nextReview": "2027-10-19",
+      "owner": null,
+      "approvedBy": null,
+      "classification": "可對外",
+      "title": {
+        "zh": "服務條款",
+        "en": "Terms of Service"
+      },
       "summary": {
         "zh": "使用 enGo 智慧管家 App、牆掛平板、社區服務與智管家商城的共同約定：帳號、服務範圍、社區守則、智慧財產與準據法。",
         "en": "The shared agreement for the enGo app, wall tablet, community services and the enGo Store: accounts, scope of service, community conduct, intellectual property and governing law."
       },
-      "href": { "zh": "/terms.html", "en": "/terms-en.html" },
-      "audiences": ["shop_buyer", "household", "building", "partner"]
+      "href": {
+        "zh": "/terms.html",
+        "en": "/terms-en.html"
+      },
+      "audiences": [
+        "shop_buyer",
+        "household",
+        "building",
+        "partner"
+      ],
+      "history": [
+        {
+          "revision": "A.1",
+          "date": "2026-10-19",
+          "change": "納入文件管制：賦予文件編號、版次與內容雜湊；條文內容同 2026-04 版，未變更。",
+          "sha256": {
+            "zh": "d4ab656fb0af1181f6fe4e612c3d1cda53920ff5dd2b53dd0ad8653c797c1d25",
+            "en": "604129fae75b430c040898490f75ef7b48b67eb26ef9570cc18ab78ce48654dd"
+          }
+        }
+      ]
     },
     {
       "id": "privacy",
-      "updated": "2026-04",
-      "title": { "zh": "隱私權政策", "en": "Privacy Policy" },
+      "docNo": "ENGO-LG-002",
+      "revision": "A.1",
+      "issued": "2026-10-19",
+      "effective": "2026-04",
+      "nextReview": "2027-10-19",
+      "owner": null,
+      "approvedBy": null,
+      "classification": "可對外",
+      "title": {
+        "zh": "隱私權政策",
+        "en": "Privacy Policy"
+      },
       "summary": {
         "zh": "我們蒐集哪些個人資料、為了什麼目的、與哪些第三方（金流、物流）分享、Cookie 的使用，以及您依個資法享有的權利。",
         "en": "What personal data we collect and why, which third parties (payment, logistics) receive it, how cookies are used, and your rights under Taiwan's Personal Data Protection Act."
       },
-      "href": { "zh": "/privacy.html", "en": "/privacy-en.html" },
-      "audiences": ["shop_buyer", "household", "building", "partner"]
+      "href": {
+        "zh": "/privacy.html",
+        "en": "/privacy-en.html"
+      },
+      "audiences": [
+        "shop_buyer",
+        "household",
+        "building",
+        "partner"
+      ],
+      "history": [
+        {
+          "revision": "A.1",
+          "date": "2026-10-19",
+          "change": "納入文件管制：賦予文件編號、版次與內容雜湊；條文內容同 2026-04 版，未變更。",
+          "sha256": {
+            "zh": "8324cb9014ad5fb88c99ca28f09ec2b0503a1a358798ed945059cab5a56d20ec",
+            "en": "b524d74f75d1401d5b7f36a61b837159324e183cb757f6b671a5c7b1941230cd"
+          }
+        }
+      ]
     },
     {
       "id": "return-policy",
-      "updated": "2026-04",
-      "title": { "zh": "退貨與保固政策", "en": "Return & Warranty Policy" },
+      "docNo": "ENGO-LG-003",
+      "revision": "A.1",
+      "issued": "2026-10-19",
+      "effective": "2026-04",
+      "nextReview": "2027-10-19",
+      "owner": null,
+      "approvedBy": null,
+      "classification": "可對外",
+      "title": {
+        "zh": "退貨與保固政策",
+        "en": "Return & Warranty Policy"
+      },
       "summary": {
         "zh": "透過 smtengo.com 或智管家商城直接向本公司購買的商品：七日鑑賞期、一年保固、生鮮與耗材的例外、退款流程與設備損壞條款。",
         "en": "For goods bought directly from the company via smtengo.com or the enGo Store: the 7-day inspection period, one-year warranty, perishable and consumable exceptions, refund process and equipment damage clause."
       },
-      "href": { "zh": "/return-policy.html", "en": "/return-policy-en.html" },
-      "audiences": ["shop_buyer", "partner"]
+      "href": {
+        "zh": "/return-policy.html",
+        "en": "/return-policy-en.html"
+      },
+      "audiences": [
+        "shop_buyer",
+        "partner"
+      ],
+      "history": [
+        {
+          "revision": "A.1",
+          "date": "2026-10-19",
+          "change": "納入文件管制：賦予文件編號、版次與內容雜湊；條文內容同 2026-04 版，未變更。",
+          "sha256": {
+            "zh": "41ab3158c4c3e565b33661fe8a282ff6cb621986bbdd0be95e27f0023b1cadea",
+            "en": "c2eb52cdd9fe1d252a00c595663c009710ae606ec52cfdc845e07a23702fe54b"
+          }
+        }
+      ]
     }
   ],
   "audiences": [
     {
       "id": "shop_buyer",
-      "label": { "zh": "商城買家", "en": "Store customers" },
-      "who": { "zh": "在智管家商城購買商品、訂閱社區服務的消費者。", "en": "Consumers buying goods or community subscriptions in the enGo Store." },
-      "documents": ["terms", "privacy", "return-policy"]
+      "label": {
+        "zh": "商城買家",
+        "en": "Store customers"
+      },
+      "who": {
+        "zh": "在智管家商城購買商品、訂閱社區服務的消費者。",
+        "en": "Consumers buying goods or community subscriptions in the enGo Store."
+      },
+      "documents": [
+        "terms",
+        "privacy",
+        "return-policy"
+      ]
     },
     {
       "id": "household",
-      "label": { "zh": "住戶", "en": "Households" },
-      "who": { "zh": "使用 enGo 牆掛平板與 enGo智慧管家 App 的家庭用戶。", "en": "Households using the enGo wall tablet and the enGo智慧管家 app." },
-      "documents": ["terms", "privacy"]
+      "label": {
+        "zh": "住戶",
+        "en": "Households"
+      },
+      "who": {
+        "zh": "使用 enGo 牆掛平板與 enGo智慧管家 App 的家庭用戶。",
+        "en": "Households using the enGo wall tablet and the enGo智慧管家 app."
+      },
+      "documents": [
+        "terms",
+        "privacy"
+      ]
     },
     {
       "id": "building",
-      "label": { "zh": "建案與社區", "en": "Developments & communities" },
-      "who": { "zh": "導入 enGo 社區服務的建商、管委會與物業管理單位。", "en": "Developers, management committees and property managers running enGo community services." },
-      "documents": ["terms", "privacy"]
+      "label": {
+        "zh": "建案與社區",
+        "en": "Developments & communities"
+      },
+      "who": {
+        "zh": "導入 enGo 社區服務的建商、管委會與物業管理單位。",
+        "en": "Developers, management committees and property managers running enGo community services."
+      },
+      "documents": [
+        "terms",
+        "privacy"
+      ]
     },
     {
       "id": "partner",
-      "label": { "zh": "合作夥伴", "en": "Partners & merchants" },
-      "who": { "zh": "裝修、廚具、設備與商城上架的合作廠商。個別合作協議由專人另行提供。", "en": "Renovation, kitchen, equipment and marketplace partners. Individual partner agreements are provided separately by our team." },
-      "documents": ["terms", "privacy", "return-policy"]
+      "label": {
+        "zh": "合作夥伴",
+        "en": "Partners & merchants"
+      },
+      "who": {
+        "zh": "裝修、廚具、設備與商城上架的合作廠商。個別合作協議由專人另行提供。",
+        "en": "Renovation, kitchen, equipment and marketplace partners. Individual partner agreements are provided separately by our team."
+      },
+      "documents": [
+        "terms",
+        "privacy",
+        "return-policy"
+      ]
     }
   ]
 }
