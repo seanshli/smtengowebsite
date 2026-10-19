@@ -1,0 +1,64 @@
+{
+  "_comment": "Legal Center (/legal). Only documents that exist under public/ are listed; nothing here invents legal text. `updated` is the 最後更新 line inside each document and doubles as the version an acknowledgement records. Audiences: shop_buyer 商城買家 / household 住戶 / building 建案與社區 / partner 合作夥伴.",
+  "documents": [
+    {
+      "id": "terms",
+      "updated": "2026-04",
+      "title": { "zh": "服務條款", "en": "Terms of Service" },
+      "summary": {
+        "zh": "使用 enGo 智慧管家 App、牆掛平板、社區服務與智管家商城的共同約定：帳號、服務範圍、社區守則、智慧財產與準據法。",
+        "en": "The shared agreement for the enGo app, wall tablet, community services and the enGo Store: accounts, scope of service, community conduct, intellectual property and governing law."
+      },
+      "href": { "zh": "/terms.html", "en": "/terms-en.html" },
+      "audiences": ["shop_buyer", "household", "building", "partner"]
+    },
+    {
+      "id": "privacy",
+      "updated": "2026-04",
+      "title": { "zh": "隱私權政策", "en": "Privacy Policy" },
+      "summary": {
+        "zh": "我們蒐集哪些個人資料、為了什麼目的、與哪些第三方（金流、物流）分享、Cookie 的使用，以及您依個資法享有的權利。",
+        "en": "What personal data we collect and why, which third parties (payment, logistics) receive it, how cookies are used, and your rights under Taiwan's Personal Data Protection Act."
+      },
+      "href": { "zh": "/privacy.html", "en": "/privacy-en.html" },
+      "audiences": ["shop_buyer", "household", "building", "partner"]
+    },
+    {
+      "id": "return-policy",
+      "updated": "2026-04",
+      "title": { "zh": "退貨與保固政策", "en": "Return & Warranty Policy" },
+      "summary": {
+        "zh": "透過 smtengo.com 或智管家商城直接向本公司購買的商品：七日鑑賞期、一年保固、生鮮與耗材的例外、退款流程與設備損壞條款。",
+        "en": "For goods bought directly from the company via smtengo.com or the enGo Store: the 7-day inspection period, one-year warranty, perishable and consumable exceptions, refund process and equipment damage clause."
+      },
+      "href": { "zh": "/return-policy.html", "en": "/return-policy-en.html" },
+      "audiences": ["shop_buyer", "partner"]
+    }
+  ],
+  "audiences": [
+    {
+      "id": "shop_buyer",
+      "label": { "zh": "商城買家", "en": "Store customers" },
+      "who": { "zh": "在智管家商城購買商品、訂閱社區服務的消費者。", "en": "Consumers buying goods or community subscriptions in the enGo Store." },
+      "documents": ["terms", "privacy", "return-policy"]
+    },
+    {
+      "id": "household",
+      "label": { "zh": "住戶", "en": "Households" },
+      "who": { "zh": "使用 enGo 牆掛平板與 enGo智慧管家 App 的家庭用戶。", "en": "Households using the enGo wall tablet and the enGo智慧管家 app." },
+      "documents": ["terms", "privacy"]
+    },
+    {
+      "id": "building",
+      "label": { "zh": "建案與社區", "en": "Developments & communities" },
+      "who": { "zh": "導入 enGo 社區服務的建商、管委會與物業管理單位。", "en": "Developers, management committees and property managers running enGo community services." },
+      "documents": ["terms", "privacy"]
+    },
+    {
+      "id": "partner",
+      "label": { "zh": "合作夥伴", "en": "Partners & merchants" },
+      "who": { "zh": "裝修、廚具、設備與商城上架的合作廠商。個別合作協議由專人另行提供。", "en": "Renovation, kitchen, equipment and marketplace partners. Individual partner agreements are provided separately by our team." },
+      "documents": ["terms", "privacy", "return-policy"]
+    }
+  ]
+}

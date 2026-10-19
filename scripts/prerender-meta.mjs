@@ -72,6 +72,10 @@ const ROUTES = {
     zh: ['案例分享 | 智慧家居實作紀錄', '查看我們在住宅、辦公室及各式建築中的智慧家居實作案例，見證生活品質的提升。'],
     en: ['Case Studies | enGo Installations', 'Real homes, offices and developments running enGo, what was installed and what changed.']
   },
+  '/legal': {
+    zh: ['法務文件中心 | 服務條款、隱私權政策、退貨與保固政策', '商城買家、住戶、建案與社區、合作夥伴適用的全部法律文件，繁體中文與英文版本，並可留下審閱確認。'],
+    en: ['Legal Center | Terms, Privacy, Returns & Warranty', 'Every legal document for store customers, households, developments and partners, in Traditional Chinese and English, with a review acknowledgement form.']
+  },
   '/contact': {
     zh: ['聯絡我們 | 諮詢 enGo 智慧家居解決方案', '對我們的產品有興趣？立即填寫表單或透過 LINE 聯繫我們，專人將竭誠為您服務。'],
     en: ['Contact Us | Talk to enGo', 'Interested in enGo? Send us a message or reach us on LINE and a specialist will get back to you.']
@@ -96,7 +100,7 @@ export function jsonLdFor(route, lang) {
   if (route === '/' || route === '/product') {
     blocks.push({
       '@context': 'https://schema.org', '@type': 'MobileApplication',
-      name: 'enGo智慧管家', alternateName: 'enGo HMS',
+      name: 'enGo智慧管家',
       operatingSystem: 'iOS, Android', applicationCategory: 'LifestyleApplication',
       description: L === 'en'
         ? 'Companion app for the enGo home management system: device control, scenes, device data and community services on iPhone, iPad and Android. Listed on both stores as enGo智慧管家.'

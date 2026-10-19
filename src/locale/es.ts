@@ -73,6 +73,10 @@ export const esLocale = {
       title: 'Acerca de | Nuestra Visión y Misión',
       description: 'Aprende sobre la historia de la marca enGo y nuestro compromiso con la vida inteligente de alta calidad para todos.'
     },
+    legal: {
+      title: 'Centro legal | Términos, privacidad, devoluciones y garantía',
+      description: 'Todos los documentos legales para clientes de la tienda, hogares, promotores y socios, en chino tradicional e inglés.'
+    },
     contact: {
       title: 'Contacto | Consulta Soluciones enGo',
       description: 'Interesado en enGo? Contáctenos por formulario o LINE para soluciones de hogar inteligente personalizadas.'

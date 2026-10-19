@@ -85,6 +85,10 @@ export const frLocale = {
       title: 'À propos | Notre Vision & Mission',
       description: 'Découvrez l\'histoire d\'enGo et notre engagement pour une vie intelligente de qualité.'
     },
+    legal: {
+      title: 'Centre juridique | Conditions, confidentialité, retours et garantie',
+      description: 'Tous les documents juridiques pour les clients de la boutique, les foyers, les promoteurs et les partenaires, en chinois traditionnel et en anglais.'
+    },
     contact: {
       title: 'Contact | Solutions enGo',
       description: 'Intéressé par enGo ? Contactez-nous pour des solutions personnalisées.'
