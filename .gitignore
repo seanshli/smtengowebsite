@@ -41,3 +41,7 @@ graphify-out/
 # 但沒 build 就 commit」時悄悄分岔——而這個 repo 沒有 CI 會抓到。
 public/knowledge-base.md
 public/forbidden-claims.json
+
+# Google service-account keys never belong in the repo
+*service-account*.json
+engo-build-*.json
