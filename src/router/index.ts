@@ -109,6 +109,15 @@ const baseRoutes: any[] = [
       }
     },
     {
+      path: '/legal',
+      name: 'legal',
+      component: () => import('@/views/legal.vue'),
+      meta: {
+        titleKey: 'seo.legal.title',
+        descKey: 'seo.legal.description'
+      }
+    },
+    {
       path: '/packages',
       name: 'packages',
       component: () => import('@/views/packages.vue'),

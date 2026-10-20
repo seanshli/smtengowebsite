@@ -66,6 +66,8 @@
             <a :href="legalDoc('privacy')">{{ $t('footer.privacyPolicy') }}</a>
             <i>·</i>
             <a :href="legalDoc('terms')">{{ $t('footer.termsOfService') }}</a>
+            <i>·</i>
+            <router-link to="/legal" data-track="footer:legal">{{ isZh ? '法務文件中心' : 'Legal Center' }}</router-link>
           </span>
         </div>
       </div>

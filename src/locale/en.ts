@@ -73,6 +73,10 @@ export const enLocale = {
       title: 'About | Our Vision & Mission',
       description: 'Learn about enGo brand story and our commitment to high-quality smart living for everyone.'
     },
+    legal: {
+      title: 'Legal Center | Terms, Privacy, Returns & Warranty',
+      description: 'Every legal document for store customers, households, developments and partners, in Traditional Chinese and English, with a review acknowledgement form.'
+    },
     contact: {
       title: 'Contact | Inquire enGo Solutions',
       description: 'Interested in enGo? Contact us via form or LINE for personalized smart home solutions.'

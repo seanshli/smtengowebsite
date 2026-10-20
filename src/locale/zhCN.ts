@@ -74,6 +74,10 @@ export const zhCNLocale = {
       title: '关于 enGo | 公司理念与愿景',
       description: '了解 enGo 的 brand 故事、公司宗旨与未来愿景，我们致力于让每个人都能享有高品质的智慧生活。'
     },
+    legal: {
+      title: '法务文件中心 | 服务条款、隐私权政策、退货与保固政策',
+      description: '商城买家、住户、建案与社区、合作伙伴适用的全部法律文件，繁体中文与英文版本，并可留下审阅确认。'
+    },
     contact: {
       title: '联络我们 | 咨询 enGo 智慧家居解决方案',
       description: '对我们的产品有兴趣？立即填写表单或透过 LINE 联系我们，专人将竭诚为您服务。'
