@@ -47,7 +47,7 @@
             <time class="folio-date">{{ formatDate(item.date) }}</time>
           </header>
 
-          <h4 class="folio-headline">{{ tr(item.title) }}</h4>
+          <h3 class="folio-headline">{{ tr(item.title) }}</h3>
 
           <div class="folio-body" :class="{ 'has-image': !!item.image }">
             <!-- mobile only: the page covers the left leaf below 768px, so the

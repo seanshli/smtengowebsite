@@ -386,7 +386,7 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 .hm-plate-land img { aspect-ratio: 2000 / 1148; object-fit: cover; object-position: top; }
 .hm-iphone { @include metal-frame(46px, 12px, 6px, 30px); img { aspect-ratio: 800 / 1731; } }
 .hm-iphone-sm { @include metal-frame(34px, 9px, 5px, 22px); }
-.hm-store { display: inline-block; line-height: 0; margin-top: 14px; img { height: 40px; width: auto; } }
+.hm-store { display: inline-block; flex: none; line-height: 0; margin-top: 14px; img { height: 40px; width: auto; max-width: none; } }
 .hm-store-google img { height: 58px; margin: -9px -12px; }
 
 // ─── hero ─────────────────────────────────────────────────────────────────

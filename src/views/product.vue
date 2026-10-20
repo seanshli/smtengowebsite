@@ -1,5 +1,5 @@
 <template>
-  <section ref="motionRoot" class="pd">
+  <main ref="motionRoot" class="pd">
     <div class="product-container">
       <div class="scroll-top-btn" @click="scrollToTop">
         <img src="/images/scroll-top.png" alt="scroll to top" />
@@ -585,7 +585,7 @@
       @close="closeCatalog"
     />
     <SectionDots :items="sectionDots" :aria-label="$t('product.tablet_intro.title')" />
-  </section>
+  </main>
 </template>
 <script lang="ts">
 import { useIntersectionObserver } from '@vueuse/core'
@@ -987,8 +987,8 @@ const targetExpand = ref(false)
   &-note { max-width: 42em; margin: 28px auto 0; text-align: center; font-size: 1.0625rem; line-height: 1.47; color: $on-dark-muted; }
   &-stores {
     display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; margin: 20px 0 0;
-    a { display: inline-flex; line-height: 0; border: 0; padding: 0; background: none; transition: transform .15s ease; &:active { transform: scale(.95); } }
-    img { display: block; width: auto; }
+    a { display: inline-flex; flex: none; line-height: 0; border: 0; padding: 0; background: none; transition: transform .15s ease; &:active { transform: scale(.95); } }
+    img { display: block; width: auto; max-width: none; }
     .badge-apple { height: 40px; }
     // Google's generic badge ships with transparent padding (~20%); oversize it so the visible badge
     // matches the Apple one, and pull the padding back with margins.
