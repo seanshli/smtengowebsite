@@ -1,8 +1,16 @@
 import { createHash } from 'node:crypto'
-import legal from '../src/data/legal.json'
+import { createRequire } from 'node:module'
 
 // Legal Center acknowledgements. Pure validation lives here so it can be unit
 // tested without a request object; api/legal/acknowledge.ts only adds I/O.
+
+type RegisterDoc = { id: string; docNo: string; revision: string; issued: string; history: { revision: string; sha256: { zh: string; en: string } }[] }
+
+// package.json is "type": "module": a bare JSON import has no import attribute and makes the
+// Vercel function fail at load (FUNCTION_INVOCATION_FAILED, seen 2026-10-20). Load it the way
+// lib/line-bot.ts loads knowledge_base.json, which is proven in production.
+const require = createRequire(import.meta.url)
+const legal: { documents: RegisterDoc[] } = require('../src/data/legal.json')
 
 export const AUDIENCES = ['shop_buyer', 'household', 'building', 'partner'] as const
 export const DOCUMENT_IDS = ['terms', 'privacy', 'return-policy'] as const
@@ -15,12 +23,11 @@ export interface DocVersion {
   sha256: { zh: string; en: string }
 }
 
-type RegisterDoc = { id: string; docNo: string; revision: string; issued: string; history: { revision: string; sha256: { zh: string; en: string } }[] }
 
 /** Current revision per document id, from the controlled register (src/data/legal.json). */
 export const currentVersions = (): Record<DocumentId, DocVersion> => {
   const out = {} as Record<DocumentId, DocVersion>
-  for (const d of legal.documents as RegisterDoc[]) {
+  for (const d of legal.documents) {
     const last = d.history[d.history.length - 1]
     out[d.id as DocumentId] = { docNo: d.docNo, revision: d.revision, issued: d.issued, sha256: last?.sha256 ?? { zh: '', en: '' } }
   }
