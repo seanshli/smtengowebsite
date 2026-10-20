@@ -72,8 +72,17 @@
       });
     })();
   </script>
-  <!-- Google Tag Manager -->
+  <!-- Google Tag Manager. Not loaded for internal/automated sessions (navigator.webdriver,
+       localStorage smtengo_qa=1 via ?qa=1, cleared with ?qa=0) so our own QA runs never
+       reach GA4 / Ads / Meta. Mirrors src/utils/siteTracking.ts isInternalTraffic(). -->
   <script>(function (w, d, s, l, i) {
+      try {
+        var qa = new URLSearchParams(w.location.search).get('qa');
+        if (qa === '1') localStorage.setItem('smtengo_qa', '1');
+        if (qa === '0') localStorage.removeItem('smtengo_qa');
+        if (qa === '1' || localStorage.getItem('smtengo_qa') === '1') return;
+      } catch (e) { /* storage blocked: only the webdriver signal applies */ }
+      if (w.navigator && w.navigator.webdriver === true) return;
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
           new Date().getTime(), event: 'gtm.js'

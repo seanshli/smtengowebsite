@@ -163,4 +163,55 @@ describe('useAnalytics', () => {
 
         expect(recordSiteEvent).toHaveBeenCalledWith('cta_click', { label: 'contact' })
     })
+
+  describe('internal traffic exclusion', () => {
+    let fetchMock: ReturnType<typeof vi.fn>
+    beforeEach(() => {
+        vi.resetModules()
+        fetchMock = vi.fn().mockResolvedValue({ status: 200, json: vi.fn().mockResolvedValue({}) })
+        vi.stubGlobal('fetch', fetchMock)
+        window.history.replaceState({}, '', '/')
+        delete (window as any).dataLayer
+    })
+    afterEach(() => {
+        localStorage.removeItem('smtengo_qa')
+        delete (navigator as any).webdriver
+        vi.unstubAllGlobals()
+    })
+
+    it('drops events when navigator.webdriver is set (Lighthouse, Playwright, devtools automation)', async () => {
+        Object.defineProperty(navigator, 'webdriver', { configurable: true, value: true })
+        const { flush, recordSiteEvent, isInternalTraffic } = await import('./siteTracking')
+        expect(isInternalTraffic()).toBe(true)
+        recordSiteEvent('cta_click')
+        flush(false)
+        expect(fetchMock).not.toHaveBeenCalled()
+    })
+
+    it('?qa=1 marks the browser as internal and persists it; ?qa=0 clears it', async () => {
+        window.history.replaceState({}, '', '/?qa=1')
+        const { isInternalTraffic } = await import('./siteTracking')
+        expect(isInternalTraffic()).toBe(true)
+        window.history.replaceState({}, '', '/product')
+        expect(isInternalTraffic()).toBe(true)
+        expect(localStorage.getItem('smtengo_qa')).toBe('1')
+        window.history.replaceState({}, '', '/?qa=0')
+        expect(isInternalTraffic()).toBe(false)
+        expect(localStorage.getItem('smtengo_qa')).toBeNull()
+    })
+
+    it('keeps GTM clean too: trackEvent skips dataLayer for internal sessions', async () => {
+        localStorage.setItem('smtengo_qa', '1')
+        ;(window as any).dataLayer = []
+        const { useAnalytics } = await import('./analytics')
+        useAnalytics().trackEvent('cta_click', { location: 'line' })
+        expect((window as any).dataLayer).toHaveLength(0)
+        expect(fetchMock).not.toHaveBeenCalled()
+    })
+
+    it('a normal visitor is not internal', async () => {
+        const { isInternalTraffic } = await import('./siteTracking')
+        expect(isInternalTraffic()).toBe(false)
+    })
+  })
 })
