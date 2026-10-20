@@ -1,10 +1,11 @@
-import { recordSiteEvent } from './siteTracking'
+import { isInternalTraffic, recordSiteEvent } from './siteTracking'
 
 export function useAnalytics() {
     const trackEvent = (eventName: string, params: object = {}) => {
         // our own copy (site_events) — independent of whether GTM loaded
         recordSiteEvent(eventName, params as Record<string, any>)
-        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+        // Team / automated sessions never reach GTM either (see siteTracking.isInternalTraffic).
+        if (typeof window !== 'undefined' && (window as any).dataLayer && !isInternalTraffic()) {
             (window as any).dataLayer.push({
                 event: eventName,
                 ...params

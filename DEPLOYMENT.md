@@ -54,6 +54,7 @@ the bcrypt hash) and paste the hash into the `backend_members` row. Cost 10 matc
 |---|---|---|
 | `POST /api/contact` | store a contact submission, send SMTP notification | anon key + SMTP |
 | `POST /api/chatbot-query` | log chatbot questions for analytics | anon key |
+| Internal-traffic exclusion (`index.html` GTM loader, `src/utils/siteTracking.ts` `isInternalTraffic()`) | sessions with `navigator.webdriver` (Lighthouse, Playwright, devtools automation) or `localStorage.smtengo_qa=1` send nothing to `site_events` and never load GTM; mark a team browser once by opening any page with `?qa=1` (`?qa=0` clears). Do this before manual QA so the admin 站內行為 numbers and GA4 stay clean | none |
 | `POST /api/line/webhook` | LINE official-account bot: answers from the chatbot knowledge base, logs to `chatbot_analytics` as `line-<lang>` | LINE channel secret + access token, anon key for the log |
 | `/api/admin/auth` | admin login → signed session cookie | service role + `AUTH_SECRET` |
 | `/api/admin/members`, `/profile`, `/submissions`, `/chatbot-analytics` | admin back office (`/admin` in the SPA) | service role, session-gated |
