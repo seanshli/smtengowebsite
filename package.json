@@ -9,6 +9,7 @@
     "legal:check": "node scripts/legal-register.mjs check",
     "legal:bump": "node scripts/legal-register.mjs bump",
     "legal:register": "node scripts/legal-register.mjs register",
+    "analytics:pull": "node scripts/google-pull.mjs",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",

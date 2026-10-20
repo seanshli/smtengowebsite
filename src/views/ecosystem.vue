@@ -52,7 +52,7 @@
             </div>
             <div class="eco-door-text">
               <h3 class="ap-h3">{{ isZh ? 'enGo 牆掛平板' : 'enGo wall tablet' }}</h3>
-              <p class="ap-body">{{ isZh ? '家中的主控台：家電、情境、平面圖即時視圖、社區公告與報修、語音操作與待機相片牆。' : 'The control hub at home: appliances, scenes, the live floor plan, community notices and repairs, voice control and the standby photo wall.' }}</p>
+              <p class="ap-body">{{ isZh ? '家中的主控台：家電、情境、社區公告與報修、語音操作與待機相片牆。' : 'The control hub at home: appliances, scenes, community notices and repairs, voice control and the standby photo wall.' }}</p>
               <router-link to="/product" class="ap-link">{{ isZh ? '認識平板' : 'About the tablet' }}</router-link>
             </div>
           </article>
