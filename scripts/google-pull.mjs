@@ -6,6 +6,9 @@ import { homedir } from 'node:os'
 const KEY = process.env.GOOGLE_APPLICATION_CREDENTIALS || `${homedir()}/.config/smtengo/ga-service-account.json`
 const SITE = 'sc-domain:smtengo.com'
 const GA4_PROPERTY = '532831798'
+// The property also receives hits from demoha.smtengo.com (an internal Home Assistant demo),
+// h5.smtengo.com (old mall) and bk.smtengo.com; only the marketing site counts here.
+const GA4_HOST = process.env.GA4_HOST || 'www.smtengo.com'
 const days = Number(process.argv[2] || 28)
 const b64 = (o) => Buffer.from(typeof o === 'string' ? o : JSON.stringify(o)).toString('base64url')
 async function token(scope) {
@@ -35,10 +38,10 @@ try {
   const t = await token('https://www.googleapis.com/auth/analytics.readonly')
   const r = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${GA4_PROPERTY}:runReport`, {
     method: 'POST', headers: { Authorization: `Bearer ${t}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ dateRanges: [{ startDate: `${days}daysAgo`, endDate: 'today' }], dimensions: [{ name: 'date' }], metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'screenPageViews' }], orderBys: [{ dimension: { dimensionName: 'date' } }] }) })
+    body: JSON.stringify({ dateRanges: [{ startDate: `${days}daysAgo`, endDate: 'today' }], dimensions: [{ name: 'date' }], dimensionFilter: { filter: { fieldName: 'hostName', stringFilter: { matchType: 'EXACT', value: GA4_HOST } } }, metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'screenPageViews' }], orderBys: [{ dimension: { dimensionName: 'date' } }] }) })
   if (!r.ok) throw new Error(`ga4 ${r.status}: ${await r.text()}`)
   const j = await r.json()
-  out.ga4 = { days: (j.rows || []).map((x) => ({ date: x.dimensionValues[0].value, users: +x.metricValues[0].value, sessions: +x.metricValues[1].value, views: +x.metricValues[2].value })) }
+  out.ga4 = { host: GA4_HOST, days: (j.rows || []).map((x) => ({ date: x.dimensionValues[0].value, users: +x.metricValues[0].value, sessions: +x.metricValues[1].value, views: +x.metricValues[2].value })) }
   out.ga4.totals = out.ga4.days.reduce((a, d) => ({ users: a.users + d.users, sessions: a.sessions + d.sessions, views: a.views + d.views }), { users: 0, sessions: 0, views: 0 })
 } catch (e) { out.errors.push(String(e.message)) }
 console.log(JSON.stringify(out, null, 1))
