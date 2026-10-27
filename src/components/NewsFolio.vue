@@ -43,7 +43,6 @@
         <div class="folio-face" @click="onPageClick">
           <header class="folio-mast">
             <span class="folio-brand">{{ $t('brandJournal') }}</span>
-            <span class="folio-issue">N°{{ String(i + 1).padStart(2, '0') }}</span>
             <time class="folio-date">{{ formatDate(item.date) }}</time>
           </header>
 
@@ -346,11 +345,6 @@ export default defineComponent({
     color: $ink;
   }
 
-  .folio-issue {
-    font-size: 14px;
-    font-weight: 600;
-    color: $ink-80;
-  }
 
   .folio-date {
     margin-left: auto;
@@ -361,6 +355,7 @@ export default defineComponent({
 }
 
 .folio-headline {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
   font-family: $display-font;
   font-weight: 600;
   font-size: clamp(1.5rem, 3.1vw, 2.45rem);

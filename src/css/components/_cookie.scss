@@ -13,11 +13,15 @@
     border-radius: 18px;
 
     @media (max-width: 768px) {
-        right: 12px;
+        // Design review 2026-10-27: the card covered ~40% of every phone screen until
+        // dismissed. Compact it (two-line text, one row of buttons) and keep it clear of
+        // the chat launcher, which now sits bottom-right.
+        right: 88px;
         left: 12px;
-        bottom: 100px; // clear the floating chat button that sits bottom-left on phones
+        bottom: 12px;
         width: auto;
-        padding: 18px 18px 16px;
+        max-width: 480px; // tablets: keep the text under ~60 characters a line
+        padding: 14px 16px 12px;
     }
 
     .title {
@@ -27,8 +31,8 @@
     }
 
     .content {
-        margin-top: 8px;
-        font-size: 13px;
+        margin-top: 6px;
+        font-size: 14px;
         font-weight: 400;
         line-height: 1.65;
         color: $ink-80;
@@ -37,6 +41,8 @@
         -webkit-line-clamp: 3;
         overflow: hidden;
         word-break: break-word;
+
+        @media (max-width: 768px) { -webkit-line-clamp: 2; line-height: 1.5; }
 
         &.is-see-all {
             display: block;
@@ -49,14 +55,15 @@
         display: flex;
         justify-content: flex-end;
         margin: 6px 0 0;
-        font-size: 13px;
+        font-size: 14px;
         color: $brand-orange-text;
 
         u { cursor: pointer; }
     }
 
     .btn-container {
-        margin-top: 14px;
+        margin-top: 12px;
+        @media (max-width: 768px) { margin-top: 8px; }
 
         .inner {
             width: 100%;
@@ -68,6 +75,7 @@
             flex: 1;
             padding: 11px 12px;
             font-size: 14px;
+            @media (max-width: 768px) { padding: 9px 10px; min-height: 40px; }
             border-radius: 999px;
             cursor: pointer;
             display: flex;

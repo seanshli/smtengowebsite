@@ -328,13 +328,13 @@ const getImageUrl = (name: string) => {
 
 .chatbot-container {
   position: fixed;
-  bottom: 30px;
-  left: 30px;
+  bottom: 24px;
+  right: 24px;
   z-index: 9999;
 
   .chatbot-bubble {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     background: $brand-orange-text;
     border-radius: 50%;
     display: flex;
@@ -350,8 +350,8 @@ const getImageUrl = (name: string) => {
 
   .chat-window {
     position: absolute;
-    bottom: 80px;
-    left: 0;
+    bottom: 72px;
+    right: 0;
     width: 360px;
     height: 520px;
     background: white;
@@ -646,14 +646,14 @@ const getImageUrl = (name: string) => {
 // Mobile responsive
 @media (max-width: 480px) {
   .chatbot-container {
-    bottom: 15px;
-    left: 15px;
+    bottom: 12px;
+    right: 12px;
 
     .chat-window {
-      width: calc(100vw - 30px);
+      width: calc(100vw - 24px);
       height: calc(100vh - 120px);
-      bottom: 75px;
-      left: 0;
+      bottom: 68px;
+      right: 0;
       border-radius: 16px;
     }
   }

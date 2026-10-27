@@ -218,7 +218,7 @@ export default defineComponent({
   display: flex;
   flex-wrap: wrap;
   gap: 6px 20px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
   color: $ink-80;
 

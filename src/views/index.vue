@@ -6,9 +6,9 @@
          real 3.2.2 captures (文件-當前版/assets/screens, crop only, never retouched). -->
     <section id="home" class="hm-tile hm-tile-white hm-hero">
       <div class="hm-wrap hm-center">
-        <p class="hm-kicker">{{ $t('intextLogo') }}</p>
         <h1 class="hm-title">{{ $t('pageTitle') }}</h1>
         <p class="hm-lede">{{ locale.startsWith('zh') ? $t('paragraph1') : $t('paragraphEn') }}</p>
+        <p class="hm-kicker">{{ $t('intextLogo') }}</p>
         <div class="hm-cta-row">
           <router-link to="/contact" class="hm-pill hm-pill-primary" @click="trackCta('hero')">{{ T.cta }}</router-link>
           <router-link to="/product" class="hm-pill hm-pill-ghost">{{ T.seeProduct }}</router-link>
@@ -391,7 +391,7 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 
 // ─── hero ─────────────────────────────────────────────────────────────────
 .hm-hero { padding-top: clamp(84px, 9vw, 104px); padding-bottom: 0; overflow: hidden; }
-.hm-kicker { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; color: $ink-80; margin: 0 0 10px; animation: hmRise .7s cubic-bezier(.22,1,.36,1) .05s both; }
+.hm-kicker { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.022em; color: $ink-80; margin: 12px 0 0; animation: hmRise .7s cubic-bezier(.22,1,.36,1) .05s both; }
 .hm-title {
   font-family: $display; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; color: $ink; margin: 0;
   font-size: clamp(2.6rem, 6.4vw, 5rem); animation: hmRise .8s cubic-bezier(.22,1,.36,1) .15s both;
