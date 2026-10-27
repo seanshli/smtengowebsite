@@ -345,11 +345,6 @@ export default defineComponent({
     color: $ink;
   }
 
-  .folio-issue {
-    font-size: 14px;
-    font-weight: 600;
-    color: $ink-80;
-  }
 
   .folio-date {
     margin-left: auto;
