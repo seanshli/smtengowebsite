@@ -259,7 +259,7 @@ export default defineComponent({
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 70px 12px 56px;
+    padding: 70px 20px 56px; // 16px+ gutter: text sat 12px from the phone edge
   }
 }
 
