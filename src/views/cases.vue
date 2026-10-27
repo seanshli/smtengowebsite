@@ -222,7 +222,9 @@ const getLocaleText = (obj: any) => {
 }
 .cs-plate {
   height: 100%; padding: clamp(20px, 3vw, 32px); box-sizing: border-box; display: flex; align-items: flex-end;
-  background: $tile-dark; color: #fff;
+  // Design review 2026-10-27: a near-black plate on 18 of 22 cards read as broken
+  // images on the grid. A parchment plate with ink text reads as a deliberate card.
+  background: $parchment; color: $ink; border: 1px solid $hairline; border-radius: 18px;
 }
 .cs-plate-title { font-family: $display-font; font-weight: 600; font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.15; letter-spacing: -.02em; }
 .cs-cap { display: flex; flex-direction: column; gap: 4px; padding-top: 16px; }
