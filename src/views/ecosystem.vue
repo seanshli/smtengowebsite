@@ -1,93 +1,137 @@
 <template>
   <!-- eco- namespace: previously a dark global-CSS shell (_ecosystem.scss);
-       now an editorial page that owns its own layout. -->
-  <section id="engo-ecosystem" class="eco-page">
-    <header class="eco-mast">
-      <h1 class="eco-title">{{ $t('ecosystemTitle') }}</h1>
-      <p class="eco-sub fade-in">
-        {{ isZh
-          ? '雲端、設備與生活服務，一個平台，串起整個生態。'
-          : 'Cloud, devices, and everyday services, one platform, one connected ecosystem.' }}
-      </p>
-    </header>
-
-    <!-- The film, mounted like every other plate in the system -->
-    <figure class="eco-plate fade-in">
-      <div class="eco-video">
-        <iframe
-          src="https://www.youtube.com/embed/sKjo04dGmfg"
-          :title="$t('ecosystemTitle')"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
+       now a tile page that owns its layout. -->
+  <section id="engo-ecosystem" class="ap-page eco-page">
+    <!-- tile 1, white: title and subtitle -->
+    <div class="ap-tile ap-tile-first ap-white eco-head-tile">
+      <div class="ap-wrap ap-center">
+        <h1 class="ap-title">{{ $t('ecosystemTitle') }}</h1>
+        <p class="ap-lead fade-in">
+          {{ isZh
+            ? '雲端、設備與生活服務，一個平台，串起整個生態。'
+            : 'Cloud, devices, and everyday services, one platform, one connected ecosystem.' }}
+        </p>
       </div>
-      <figcaption>
-        <span class="eco-cap-brand">enGo</span>
-        {{ isZh ? '智慧生態系影片' : 'ecosystem film' }}
-      </figcaption>
-    </figure>
-
-    <!-- One account, three doors: the wall tablet at home, the app when out,
-         the store for everything you add. Real screens only (KB-001 rule). -->
-    <h2 class="eco-h2 fade-in">{{ isZh ? '一組帳號，三個入口' : 'One account, three doors' }}</h2>
-    <div class="eco-doors">
-      <article class="eco-door fade-in">
-        <div class="eco-frame eco-frame-tablet">
-          <img src="/images/screens/01-home-tablet.png" :alt="isZh ? 'enGo 牆掛平板首頁' : 'enGo wall tablet home screen'" width="2000" height="1200" loading="lazy" />
-        </div>
-        <h3>{{ isZh ? 'enGo 牆掛平板' : 'enGo wall tablet' }}</h3>
-        <p>{{ isZh ? '家中的主控台：家電、情境、平面圖即時視圖、社區公告與報修、語音操作與待機相片牆。' : 'The control hub at home: appliances, scenes, the live floor plan, community notices and repairs, voice control and the standby photo wall.' }}</p>
-        <router-link to="/product" class="eco-link">{{ isZh ? '認識平板' : 'About the tablet' }} →</router-link>
-      </article>
-      <article class="eco-door fade-in">
-        <div class="eco-frame eco-frame-phone">
-          <img src="/images/screens/12-home-iphone.png" :alt="isZh ? 'enGo智慧管家 手機 App 首頁' : 'enGo home app on a phone'" width="800" height="1731" loading="lazy" />
-        </div>
-        <h3>{{ isZh ? '手機 App「enGo智慧管家」' : 'The enGo app on your phone' }}</h3>
-        <p>{{ isZh ? '出門在外同一組帳號：家電控制、情境、社區服務、攝影機與庫存，iPhone／iPad 與 Android 免費下載。' : 'The same account when you are out: appliances, scenes, community services, cameras and inventory, free on iPhone/iPad and Android.' }}</p>
-        <router-link to="/product#interfaces" class="eco-link">{{ isZh ? '三種介面' : 'The three interfaces' }} →</router-link>
-      </article>
-      <article class="eco-door eco-door-store fade-in">
-        <div class="eco-store-mark" aria-hidden="true">
-          <span class="eco-store-brand">enGo</span>
-          <span class="eco-store-word">{{ $t('mallTitle') }}</span>
-        </div>
-        <h3>{{ $t('mallTitle') }}</h3>
-        <p>{{ isZh ? '套裝方案、淨水系統與生活選品，線上選購後由專人安排安裝與服務。' : 'Packages, the water system and everyday products, ordered online and installed and serviced by our team.' }}</p>
-        <a :href="SHOP_URL" target="_blank" rel="noopener" class="eco-link" data-track="ecosystem:store">{{ isZh ? '前往安購商城' : 'Open the enGo Store' }} →</a>
-      </article>
     </div>
 
-    <!-- Four product lines -->
-    <h2 class="eco-h2 fade-in">{{ isZh ? '五條產品線' : 'Five product lines' }}</h2>
-    <ul class="eco-lines">
-      <li v-for="l in lines" :key="l.to" class="eco-line fade-in">
-        <router-link :to="l.to" class="eco-line-link">
-          <span class="eco-line-title">{{ isZh ? l.zh : l.en }}</span>
-          <span class="eco-line-body">{{ isZh ? l.zhBody : l.enBody }}</span>
-        </router-link>
-      </li>
-    </ul>
+    <!-- tile 2, dark: the film -->
+    <div class="ap-tile ap-dark">
+      <div class="ap-wrap">
+        <figure class="ap-photo eco-plate fade-in">
+          <div class="eco-video">
+            <iframe
+              src="https://www.youtube.com/embed/sKjo04dGmfg"
+              :title="$t('ecosystemTitle')"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <figcaption>
+            <strong class="eco-cap-brand">enGo</strong>
+            {{ isZh ? '智慧生態系影片' : 'ecosystem film' }}
+          </figcaption>
+        </figure>
+      </div>
+    </div>
 
-    <!-- Partners: the names the site already states on /tutorial and in the FAQ -->
-    <h2 class="eco-h2 fade-in">{{ isZh ? '合作夥伴' : 'Partners' }}</h2>
-    <ul class="eco-partners">
-      <li v-for="p in partners" :key="p.zh" class="eco-partner fade-in">
-        <span class="eco-partner-name">{{ isZh ? p.zh : p.en }}</span>
-        <span class="eco-partner-role">{{ isZh ? p.zhRole : p.enRole }}</span>
-      </li>
-    </ul>
+    <!-- tile 3, white: one account, three doors: the wall tablet at home, the app
+         when out, the store for everything you add. Real screens only (KB-001 rule). -->
+    <div class="ap-tile ap-white">
+      <div class="ap-wrap">
+        <div class="ap-head ap-center">
+          <h2 class="ap-h2 fade-in">{{ isZh ? '一組帳號，三個入口' : 'One account, three doors' }}</h2>
+        </div>
+        <div class="ap-grid ap-grid-3 eco-doors">
+          <article class="ap-card eco-door fade-in">
+            <div class="eco-media">
+              <div class="eco-frame eco-frame-tablet">
+                <img src="/images/screens/01-home-tablet.png" :alt="isZh ? 'enGo 牆掛平板首頁' : 'enGo wall tablet home screen'" width="2000" height="1200" loading="lazy" />
+              </div>
+            </div>
+            <div class="eco-door-text">
+              <h3 class="ap-h3">{{ isZh ? 'enGo 牆掛平板' : 'enGo wall tablet' }}</h3>
+              <p class="ap-body">{{ isZh ? '家中的主控台：家電、情境、社區公告與報修、語音操作與待機相片牆。' : 'The control hub at home: appliances, scenes, community notices and repairs, voice control and the standby photo wall.' }}</p>
+              <router-link to="/product" class="ap-link">{{ isZh ? '認識平板' : 'About the tablet' }}</router-link>
+            </div>
+          </article>
+          <article class="ap-card eco-door fade-in">
+            <div class="eco-media">
+              <div class="eco-frame eco-frame-phone">
+                <img src="/images/screens/12-home-iphone.png" :alt="isZh ? 'enGo智慧管家 手機 App 首頁' : 'enGo home app on a phone'" width="800" height="1731" loading="lazy" />
+              </div>
+            </div>
+            <div class="eco-door-text">
+              <h3 class="ap-h3">{{ isZh ? '手機 App「enGo智慧管家」' : 'The enGo app on your phone' }}</h3>
+              <p class="ap-body">{{ isZh ? '出門在外同一組帳號：家電控制、情境、社區服務、攝影機與庫存，iPhone／iPad 與 Android 免費下載。' : 'The same account when you are out: appliances, scenes, community services, cameras and inventory, free on iPhone/iPad and Android.' }}</p>
+              <router-link to="/product#interfaces" class="ap-link">{{ isZh ? '三種介面' : 'The three interfaces' }}</router-link>
+            </div>
+          </article>
+          <article class="ap-card eco-door eco-door-store fade-in">
+            <div class="eco-media">
+              <div class="eco-store-mark" aria-hidden="true">
+                <span class="eco-store-brand">enGo</span>
+                <span class="eco-store-word">{{ $t('mallTitle') }}</span>
+              </div>
+            </div>
+            <div class="eco-door-text">
+              <h3 class="ap-h3">{{ $t('mallTitle') }}</h3>
+              <p class="ap-body">{{ isZh ? '套裝方案、淨水系統與生活選品，線上選購後由專人安排安裝與服務。' : 'Packages, the water system and everyday products, ordered online and installed and serviced by our team.' }}</p>
+              <a :href="SHOP_URL" target="_blank" rel="noopener" class="ap-link" data-track="ecosystem:store">{{ isZh ? '前往安購商城' : 'Open the enGo Store' }}</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
 
-    <!-- Where to next -->
-    <div class="eco-links fade-in">
-      <router-link to="/cases" class="eco-link">
-        {{ isZh ? '看實作案例' : 'See the installations' }} →
-      </router-link>
-      <router-link to="/contact" class="eco-link">
-        {{ isZh ? '洽談合作' : 'Talk to us about partnering' }} →
-      </router-link>
+    <!-- tile 4, parchment: five product lines -->
+    <div class="ap-tile ap-parchment">
+      <div class="ap-wrap">
+        <div class="ap-head ap-center">
+          <h2 class="ap-h2 fade-in">{{ isZh ? '五條產品線' : 'Five product lines' }}</h2>
+        </div>
+        <ul class="eco-lines">
+          <li v-for="l in lines" :key="l.to" class="fade-in">
+            <router-link :to="l.to" class="ap-card eco-line-link">
+              <span class="eco-line-title">{{ isZh ? l.zh : l.en }}</span>
+              <span class="eco-line-body">{{ isZh ? l.zhBody : l.enBody }}</span>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- tile 5, white: partners (names and roles only) and where to next -->
+    <div class="ap-tile ap-white">
+      <div class="ap-wrap ap-wrap-text">
+        <div class="ap-head ap-center">
+          <h2 class="ap-h2 fade-in">{{ isZh ? '合作夥伴' : 'Partners' }}</h2>
+        </div>
+        <ul class="ap-rows eco-partners">
+          <li v-for="p in partners" :key="p.zh" class="eco-partner fade-in">
+            <a
+              v-if="p.url"
+              :href="p.url"
+              target="_blank"
+              rel="noopener"
+              class="ap-link eco-partner-name eco-partner-link"
+              data-track="ecosystem:partner"
+            >{{ isZh ? p.zh : p.en }}</a>
+            <span v-else class="eco-partner-name">{{ isZh ? p.zh : p.en }}</span>
+            <span class="eco-partner-role">{{ isZh ? p.zhRole : p.enRole }}</span>
+          </li>
+        </ul>
+
+        <div class="ap-links eco-next fade-in">
+          <router-link to="/cases" class="ap-link">
+            {{ isZh ? '看實作案例' : 'See the installations' }}
+          </router-link>
+          <router-link to="/contact" class="ap-link">
+            {{ isZh ? '洽談合作' : 'Talk to us about partnering' }}
+          </router-link>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -107,12 +151,13 @@ const LINES = [
 ]
 
 // Same list the chatbot and FAQ 27 already give out; no component vendors.
-const PARTNERS = [
-  { zh: '大雅全屋裝修', en: 'Daya Whole-Home Renovation', zhRole: '台中，全屋裝修與建案智慧化，設有展示間', enRole: 'Taichung, whole-home renovation and smart developments, with a showroom' },
+// url only where the site is known; the rest stay plain text.
+const PARTNERS: { zh: string; en: string; zhRole: string; enRole: string; url?: string }[] = [
+  { zh: '大雅全屋裝修', en: 'Daya Whole-Home Renovation', url: 'https://www.tayakitchen.com.tw/', zhRole: '台中，全屋裝修與建案智慧化，設有展示間', enRole: 'Taichung, whole-home renovation and smart developments, with a showroom' },
   { zh: '撰美室內裝修', en: 'Zhuanmei Interior Design', zhRole: '台北，全室裝修與系統櫥櫃，智慧家居展示空間', enRole: 'Taipei, interiors and system cabinetry, smart-home showroom' },
-  { zh: '米多力 MEDOLE', en: 'MEDOLE', zhRole: '吊隱式新風除濕機與 3合1 智慧空氣平衡系統', enRole: 'Ceiling-concealed fresh-air dehumidifiers and the 3-in-1 air balance system' },
+  { zh: '米多力 MEDOLE', en: 'MEDOLE', url: 'https://www.medole.com.tw/', zhRole: '吊隱式新風除濕機與 3合1 智慧空氣平衡系統', enRole: 'Ceiling-concealed fresh-air dehumidifiers and the 3-in-1 air balance system' },
   { zh: '麗寶生技', en: 'Libo Biotech', zhRole: '智能富氧艙優化合作', enRole: 'Smart oxygen-chamber optimisation' },
-  { zh: '合野木業', en: 'Heye Woodworks', zhRole: '智慧功能櫃，北部展示間', enRole: 'Smart functional cabinetry, showroom in northern Taiwan' },
+  { zh: '合野木業', en: 'Heye Woodworks', url: 'https://www.he-ye.com/', zhRole: '智慧功能櫃，北部展示間', enRole: 'Smart functional cabinetry, showroom in northern Taiwan' },
   { zh: '嘉義達光電、金毅泰節能科技', en: 'Chia-Yi Da Optoelectronics and Jin Yi Tai Energy', zhRole: '能源與節能方案', enRole: 'Energy and energy-saving solutions' }
 ]
 
@@ -129,76 +174,22 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../css/utils/variables';
-@import '../css/utils/masthead';
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-in {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-.eco-page {
-  background: $warm-bg-light;
-  padding: 110px 5vw 100px;
-
-  @media (max-width: 768px) {
-    padding-top: 96px;
-  }
-}
-
-.eco-mast {
-  max-width: 1100px;
-  margin: 0 auto 48px;
-  @include masthead-block;
-}
-
-.eco-title {
-  @include masthead-title;
-}
-
-.eco-sub {
-  font-size: clamp(1.16rem, 2vw, 1.42rem);
-  font-weight: 500;
-  line-height: 1.95;
-  color: $grey-blue2;
-  max-width: 34em;
-}
-
-// mounted plate, same device as every other page
+// the film: a radius-18 frame resting on the dark tile, caption below
 .eco-plate {
-  position: relative;
-  max-width: 960px;
-  margin: 0 auto 72px;
+  max-width: 980px;
+  margin: 0 auto;
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 14px -14px -14px 14px;
-    border: 2px solid $brand-orange;
-    z-index: 0;
+  figcaption {
+    color: $on-dark-muted;
   }
 }
 
 .eco-video {
-  position: relative;
-  z-index: 1;
   aspect-ratio: 16 / 9;
-  border: 1px solid rgba($grey-blue3, 0.5);
-  box-shadow: 0 18px 38px -22px rgba(21, 41, 57, 0.55);
-  background: $grey-blue3;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
 
   iframe {
     display: block;
@@ -207,238 +198,186 @@ export default defineComponent({
   }
 }
 
-.eco-plate figcaption {
-  position: relative;
-  z-index: 1;
-  margin-top: 12px;
-  font-size: 0.85rem;
-  letter-spacing: 0.16em;
-  color: $dark-grey;
-
-  .eco-cap-brand {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 900;
-    color: $brand-orange;
-    margin-right: 6px;
-  }
-}
-
-.eco-h2 {
-  max-width: 1100px;
-  margin: 0 auto 22px;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 900;
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  line-height: 1.25;
-  color: $grey-blue3;
+.eco-cap-brand {
+  font-weight: 600;
+  color: #fff;
+  margin-right: 6px;
 }
 
 // ─── three doors ───
 .eco-doors {
-  max-width: 1100px;
-  margin: 0 auto 80px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0 clamp(28px, 4vw, 56px);
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
+  gap: clamp(20px, 2.5vw, 32px);
 }
 
 .eco-door {
-  border-top: 3px solid $grey-blue3;
-  padding: 22px 0 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
-  h3 {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 900;
-    font-size: clamp(1.2rem, 2vw, 1.4rem);
-    line-height: 1.3;
-    color: $grey-blue3;
-    margin: 18px 0 10px;
-  }
+.eco-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  padding: 32px 28px 8px;
+}
 
-  p {
-    font-size: 1rem;
-    line-height: 1.9;
-    color: #4c4c4c;
-    margin: 0 0 14px;
-  }
+.eco-door-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 20px 28px 28px;
 
-  @media (max-width: 900px) {
-    padding-bottom: 28px;
+  .ap-body {
+    margin-bottom: 4px;
   }
 }
 
-// screens sit in the same metal frame language as the homepage, at small size
-.eco-frame {
-  border-radius: 14px;
-  padding: 6px;
-  background: linear-gradient(135deg, #f4f6f8 0%, #c4cad2 16%, #e6e9ed 34%, #adb5bf 52%, #dde1e6 70%, #b6bdc6 86%, #eef1f4 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 0 rgba(15, 23, 32, 0.28), 0 14px 32px -16px rgba($grey-blue3, 0.45);
+// screens sit in the brushed-titanium frame from the homepage, with the one product shadow
+@mixin metal-frame($radius, $pad, $glass, $screen-radius) {
+  position: relative;
+  border-radius: $radius;
+  padding: $pad;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px 3px),
+    linear-gradient(135deg, #f4f6f8 0%, #c4cad2 16%, #e6e9ed 34%, #adb5bf 52%, #dde1e6 70%, #b6bdc6 86%, #eef1f4 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 0 rgba(15, 23, 32, 0.28), $product-shadow;
 
   img {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 0 3px #0c1219;
+    border-radius: $screen-radius;
+    box-shadow: 0 0 0 $glass #0c1219, 0 0 0 ($glass + 1px) rgba(255, 255, 255, 0.12);
   }
 }
 
 .eco-frame-tablet {
-  aspect-ratio: 2000 / 1200;
+  @include metal-frame(18px, 10px, 5px, 9px);
+  width: 100%;
 }
 
 .eco-frame-phone {
-  // the whole phone, never cropped into a landscape box (screenshot rule):
-  // the column simply runs taller than the tablet's
-  width: 42%;
-  border-radius: 22px;
-  padding: 5px;
-
-  img {
-    border-radius: 17px;
-  }
+  // the whole phone, never cropped into a landscape box (screenshot rule)
+  @include metal-frame(34px, 9px, 5px, 22px);
+  width: 46%;
+  max-width: 150px;
 }
 
-.eco-door-store {
-  .eco-store-mark {
-    aspect-ratio: 2000 / 1200;
-    border-radius: 14px;
-    background: $grey-blue3;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 18px 20px;
-    gap: 4px;
-  }
-
-  .eco-store-brand {
-    font-family: 'Noto Serif TC', serif;
-    font-weight: 900;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    line-height: 1;
-    color: $orange2;
-  }
-
-  .eco-store-word {
-    font-size: 0.95rem;
-    letter-spacing: 0.2em;
-    color: rgba($warm-bg-light, 0.85);
-  }
+.eco-store-mark {
+  width: 100%;
+  aspect-ratio: 2000 / 1200;
+  border-radius: 18px;
+  background: $tile-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 18px 22px;
+  gap: 4px;
 }
 
-// ─── product lines ───
+.eco-store-brand {
+  font-weight: 600;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.eco-store-word {
+  font-size: 1.0625rem;
+  letter-spacing: -0.022em;
+  color: $on-dark-muted;
+}
+
+// ─── product lines: white cards on the parchment tile ───
 .eco-lines {
-  max-width: 1100px;
-  margin: 0 auto 80px;
-  padding: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0 clamp(32px, 5vw, 72px);
-  border-top: 3px solid $grey-blue3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 640px) {
     grid-template-columns: 1fr;
   }
-}
 
-.eco-line {
-  border-bottom: 1px solid rgba($grey-blue3, 0.22);
+  li {
+    display: flex;
+  }
 }
 
 .eco-line-link {
-  display: block;
-  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 28px;
   text-decoration: none;
-  color: inherit;
+  transition: transform 0.15s ease;
 
-  &:hover .eco-line-title {
-    color: $brand-orange;
+  &:active {
+    transform: scale(0.99);
   }
 }
 
 .eco-line-title {
-  display: block;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-  line-height: 1.5;
-  color: $grey-blue2;
-  transition: color 0.25s ease;
+  font-weight: 600;
+  font-size: 1.3125rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: $ink;
+}
+
+.eco-line-title::after {
+  content: '\203A';
+  margin-left: 0.25em;
+  color: $brand-orange-text;
 }
 
 .eco-line-body {
-  display: block;
-  margin-top: 4px;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #4c4c4c;
+  font-size: 1.0625rem;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+  color: $ink-80;
 }
 
 // ─── partners ───
-.eco-partners {
-  max-width: 1100px;
-  margin: 0 auto 72px;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0 clamp(32px, 5vw, 72px);
-  border-top: 3px solid $grey-blue3;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-  }
-}
-
 .eco-partner {
-  padding: 16px 0;
-  border-bottom: 1px solid rgba($grey-blue3, 0.22);
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
 .eco-partner-name {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: $grey-blue2;
+  font-weight: 600;
+  font-size: 1.3125rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: $ink;
+}
+
+.eco-partner-link {
+  align-self: flex-start;
+  color: $brand-orange-text;
 }
 
 .eco-partner-role {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #4c4c4c;
+  font-size: 1.0625rem;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+  color: $ink-80;
 }
 
-.eco-links {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 36px;
-}
-
-.eco-link {
-  display: inline-block;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: $grey-blue3;
-  text-decoration: none;
-  border-bottom: 2px solid $brand-orange;
-  padding-bottom: 3px;
-  transition: color 0.25s ease;
-
-  &:hover {
-    color: $brand-orange;
-  }
+.eco-next {
+  margin-top: clamp(36px, 5vw, 56px);
 }
 </style>

@@ -69,6 +69,55 @@
       </template>
     </section>
 
+    <!-- Legal Center acknowledgements (api/admin/legal-acknowledgements). Superuser only:
+         the API answers 403 for operators and the block stays hidden. -->
+    <section v-if="legal" class="insights legal">
+      <div class="insights-header">
+        <h2>法務簽核</h2>
+        <div class="legal-tools">
+          <label class="insights-window">範圍
+            <select v-model.number="legalDays" @change="fetchLegal">
+              <option :value="30">30 天</option><option :value="365">365 天</option><option :value="3650">全部</option>
+            </select>
+          </label>
+          <button type="button" class="legal-csv" :disabled="!legal.rows.length" @click="downloadLegalCsv">下載 CSV</button>
+        </div>
+      </div>
+      <p class="insights-foot" style="margin: 0 0 14px">
+        共 {{ legal.total }} 筆<template v-for="a in LEGAL_AUDIENCES" :key="a.id"> · {{ a.label }}: {{ legalCounts[a.id] || 0 }}</template>
+        <template v-if="legal.total >= 200">（僅顯示最新 200 筆）</template>
+      </p>
+      <table class="legal-table legal-register">
+        <caption>文件登錄（src/data/legal.json；完整版次歷史見 docs/LEGAL_DOCUMENT_REGISTER.md）</caption>
+        <thead><tr><th>文件編號</th><th>文件</th><th>版次</th><th>發行日期</th><th>下次審查</th><th>SHA-256（繁中，前 12 碼）</th></tr></thead>
+        <tbody>
+          <tr v-for="d in legalRegister" :key="d.docNo">
+            <td>{{ d.docNo }}</td><td>{{ d.title }}</td><td>{{ d.revision }}</td><td>{{ d.issued }}</td><td>{{ d.nextReview }}</td><td><code>{{ d.sha }}</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p v-if="!legal.rows.length" class="insight-empty">尚無簽核紀錄</p>
+      <div v-else class="legal-scroll">
+        <table class="legal-table">
+          <thead>
+            <tr><th>日期</th><th>對象</th><th>姓名</th><th>公司／單位</th><th>Email</th><th>電話</th><th>文件（文件編號 版次）</th><th>備註</th></tr>
+          </thead>
+          <tbody>
+            <tr v-for="r in legal.rows" :key="r.id">
+              <td>{{ formatDate(r.created_at) }}</td>
+              <td>{{ audienceLabel(r.audience) }}</td>
+              <td>{{ r.name }}</td>
+              <td>{{ r.organization || '' }}</td>
+              <td>{{ r.email }}</td>
+              <td>{{ r.phone || '' }}</td>
+              <td>{{ legalDocs(r) }}</td>
+              <td class="legal-note">{{ r.note || '' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <div class="tabs-container">
       <button 
         v-for="tab in ['all', 'pending', 'processing', 'completed']" 
@@ -166,6 +215,7 @@
 </template>
 
 <script setup lang="ts">
+import legalData from '@/data/legal.json'
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import howtoData from '@/data/howto.json'
@@ -229,6 +279,63 @@ const fetchInsights = async () => {
     insights.value = null
   }
 }
+// ── Legal acknowledgements (api/admin/legal-acknowledgements) ──────────
+const LEGAL_AUDIENCES = [
+  { id: 'shop_buyer', label: '商城買家' },
+  { id: 'household', label: '住戶' },
+  { id: 'building', label: '建案／社區' },
+  { id: 'partner', label: '合作夥伴' },
+]
+const audienceLabel = (id: string) => LEGAL_AUDIENCES.find(a => a.id === id)?.label ?? id
+const legal = ref<any>(null)
+const legalDays = ref(365)
+const legalCounts = computed<Record<string, number>>(() => {
+  const out: Record<string, number> = {}
+  for (const r of legal.value?.rows ?? []) out[r.audience] = (out[r.audience] || 0) + 1
+  return out
+})
+// versions[d] is the server-recorded revision in force at submission: { docNo, revision, issued, sha256 }.
+const legalDocs = (r: any) =>
+  (r.documents || []).map((d: string) => {
+    const v = r.versions?.[d]
+    return v && typeof v === 'object' ? `${v.docNo} ${v.revision}` : v ? `${d}（${v}）` : d
+  }).join('、')
+const legalRegister = (legalData.documents as any[]).map((d) => ({
+  docNo: d.docNo, title: d.title.zh, revision: d.revision, issued: d.issued, nextReview: d.nextReview, sha: d.history?.[d.history.length - 1]?.sha256?.zh?.slice(0, 12) ?? ''
+}))
+const fetchLegal = async () => {
+  try {
+    const token = localStorage.getItem('admin_token')
+    const res = await fetch(`/api/admin/legal-acknowledgements?days=${legalDays.value}&limit=200`, {
+      headers: { 'Authorization': `Bearer ${token}` },
+    })
+    legal.value = res.ok ? await res.json() : null   // 403 for operators: hide the block
+  } catch { legal.value = null }
+}
+// Client-side CSV. Leading BOM so Excel reads the Chinese as UTF-8. Cells that
+// start with = + - @ are prefixed with an apostrophe to defuse spreadsheet formulas.
+const csvCell = (v: unknown) => {
+  let s = String(v ?? '')
+  if (/^[=+\-@\t\r]/.test(s)) s = `'${s}`
+  return `"${s.replace(/"/g, '""')}"`
+}
+const downloadLegalCsv = () => {
+  if (!legal.value?.rows?.length) return
+  const header = ['日期', '對象', '姓名', '公司／單位', 'Email', '電話', '文件（版本）', '備註']
+  const lines = [header.map(csvCell).join(',')]
+  for (const r of legal.value.rows) {
+    lines.push([r.created_at, audienceLabel(r.audience), r.name, r.organization, r.email, r.phone, legalDocs(r), r.note]
+      .map(csvCell).join(','))
+  }
+  const blob = new Blob(['\uFEFF' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `legal-acknowledgements-${new Date().toISOString().slice(0, 10)}.csv`
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
 const submissions = ref<any[]>([])
 const loading = ref(true)
 const error = ref('')
@@ -317,7 +424,7 @@ const saveChanges = async () => {
   }
 }
 
-onMounted(() => { fetchData(); fetchInsights(); fetchSite() })
+onMounted(() => { fetchData(); fetchInsights(); fetchSite(); fetchLegal() })
 </script>
 
 <style scoped lang="scss">
@@ -334,6 +441,16 @@ onMounted(() => { fetchData(); fetchInsights(); fetchSite() })
 .insight-card li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .insight-card li b { flex-shrink: 0; color: #e05a35; }
 .insight-empty { font-size: 13px; color: #999; margin: 0; }
+.legal-tools { display: flex; gap: 12px; align-items: center; }
+.legal-csv { padding: 6px 14px; border: 1px solid #b8431f; border-radius: 9999px; background: transparent; color: #b8431f; font-size: 13px; cursor: pointer; }
+.legal-csv:disabled { opacity: 0.4; cursor: default; }
+.legal-scroll { overflow-x: auto; }
+.legal-register { margin: 0 0 16px; }
+.legal-register caption { text-align: left; color: #6e6e73; font-size: 12px; padding: 0 0 6px; }
+.legal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.legal-table th, .legal-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e0e0e0; vertical-align: top; white-space: nowrap; }
+.legal-table th { color: #6e6e73; font-weight: 500; }
+.legal-table td.legal-note { white-space: normal; min-width: 160px; max-width: 320px; }
 .insights-foot { margin: 14px 0 0; font-size: 13px; color: #666; }
 .admin-dashboard {
   h1 { margin-bottom: 2rem; }

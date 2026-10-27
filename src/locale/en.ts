@@ -73,6 +73,10 @@ export const enLocale = {
       title: 'About | Our Vision & Mission',
       description: 'Learn about enGo brand story and our commitment to high-quality smart living for everyone.'
     },
+    legal: {
+      title: 'Legal Center | Terms, Privacy, Returns & Warranty',
+      description: 'Every legal document for store customers, households, developments and partners, in Traditional Chinese and English, with a review acknowledgement form.'
+    },
     contact: {
       title: 'Contact | Inquire enGo Solutions',
       description: 'Interested in enGo? Contact us via form or LINE for personalized smart home solutions.'
@@ -402,7 +406,7 @@ export const enLocale = {
       tabletOnly: 'Tablet only',
       features: {
         voice: { title: 'Voice control', body: 'Walk up to the wall, one sentence gets it done. “Turn on the living room light.” “Set the AC to 26 degrees.” “Turn off all the lights in the meeting room.” “After-work mode.” No reaching for your phone, no hunting for the button on screen. Safety-related devices ask you to confirm first, and when two names sound alike the system asks which you mean rather than guessing.', note: 'The system does not listen continuously and never records in the background.' },
-        floorplan: { title: 'Live floor plan', body: 'A floor plan generated from the actual room layout of your home shows at a glance which rooms are occupied, which lights are still on and which air conditioners are running, no need to open devices one by one.' },
+        floorplan: { title: 'Live floor plan (in development)', body: 'A floor plan generated from the actual room layout of your home shows at a glance which rooms are occupied, which lights are still on and which air conditioners are running, no need to open devices one by one.' },
         photowall: { title: 'Standby photo wall', body: 'When no one is using it, the tablet switches to your family photos, with the time, weather and latest community notices overlaid. Brightness follows the ambient light, never glaring at night, lighting up only when the hallway lights come on. One touch brings the screen back.' },
         inventory: { title: 'Smart inventory', body: 'Manage household storage, shop stock and office supplies alike: items, shelf locations, categories and low-stock alerts, linked to your shop orders and delivery notifications.' }
       }

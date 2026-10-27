@@ -53,6 +53,8 @@ onUnmounted(() => observer?.disconnect())
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
+
 .section-dots {
   position: fixed;
   right: 22px;
@@ -84,17 +86,17 @@ onUnmounted(() => observer?.disconnect())
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 0 0 1px rgba(4, 54, 85, 0.35);
-    transition: transform 0.3s ease, background 0.3s ease;
+    background: $ink;
+    opacity: 0.4;
+    transition: transform 0.3s ease, background 0.3s ease, opacity 0.3s ease;
   }
 
   &-label {
     font-size: 12px;
-    letter-spacing: 0.08em;
     padding: 4px 10px;
     color: #fff;
-    background: rgba(4, 54, 85, 0.85);
+    background: $ink;
+    border-radius: 8px;
     opacity: 0;
     transform: translateX(6px);
     transition: opacity 0.25s ease, transform 0.25s ease;
@@ -109,12 +111,13 @@ onUnmounted(() => observer?.disconnect())
   }
 
   &:focus-visible {
-    outline: 2px solid #12B5A8;
+    outline: 2px solid $brand-orange-text;
     outline-offset: 2px;
   }
 
   &.is-active .section-dot-mark {
-    background: #12B5A8;
+    background: $brand-orange-text;
+    opacity: 1;
     transform: scale(1.5);
   }
 }

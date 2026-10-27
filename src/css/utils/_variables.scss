@@ -37,6 +37,23 @@ $warm-bg-section: #E9EEF4;
 $warm-shadow: 0 8px 30px rgba(34, 66, 116, 0.1);
 $warm-shadow-hover: 0 16px 50px rgba(34, 66, 116, 0.18);
 
+// ─── Apple-style system (design-md/apple profile; site-wide since 2026-10-18, Sean) ───
+// Three tile grounds, one ink, one accent. Tiles touch edge to edge: the colour change is the divider.
+$ink: #1d1d1f;            // every headline and paragraph on light surfaces
+$ink-80: #333333;         // secondary text (AA on white and parchment)
+$ink-48: #7a7a7a;         // disabled / micro legal ONLY (fails AA at body size)
+$parchment: #f5f5f7;      // alternating light tile, footer, card ground
+$tile-dark: #272729;      // dark tile
+$tile-dark-2: #2a2a2c;    // dark tile sitting next to another dark tile
+$hairline: #e0e0e0;       // 1px card border; never as a section divider
+$on-dark-muted: #cccccc;  // secondary text on dark tiles
+$product-shadow: rgba(0, 0, 0, 0.22) 3px 5px 30px 0; // the ONLY shadow: product / device imagery resting on a surface
+$display-font: 'Noto Sans TC', system-ui, -apple-system, sans-serif; // 600 for display, 400 body, 300 airy lead
+$accent: $brand-orange;            // pill fills use $brand-orange-text so white text is 5.27:1
+$accent-text: $brand-orange-text;  // links and ghost pills on light surfaces
+$accent-on-dark: $orange2;         // links on dark tiles
+
+
 // fonts 文字管理
 $fz-root: 1px;
 $fw-code:"n","l","b","bk";

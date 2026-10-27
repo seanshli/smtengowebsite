@@ -1,10 +1,8 @@
 <template>
   <header class="header">
-    <a class="logo" href=" ">
-      <router-link to="/">
-        <img class="logo-engo" src="/assets/logo.svg" alt="enGo Logo" />
-      </router-link>
-    </a>
+    <router-link to="/" class="logo" aria-label="enGo home">
+      <img class="logo-engo" src="/assets/logo.svg" alt="enGo Logo" />
+    </router-link>
     <nav class="menu-container">
       <!-- 最新消息 lives on the home page (#news), so it hangs off 首頁 -->
       <div class="dropdown dropdown-spacing-right">
@@ -36,7 +34,7 @@
       </div>
       <router-link to="/packages" data-track="nav:packages">{{ $t('product.packages.tag') }}</router-link>
       
-      <a @click="toMall" data-track="nav:mall">{{ $t('mallTitle') }}</a>
+      <a :href="shopUrl" target="_blank" rel="noopener" @click.prevent="toMall" data-track="nav:mall">{{ $t('mallTitle') }}</a>
       <!-- 常見問題 is a section of 使用教學, so it hangs off it -->
       <div class="dropdown">
         <router-link to="/tutorial" class="dropdown-trigger" data-track="nav:tutorial">{{ $t('tutorialTitle') }}</router-link>
@@ -51,6 +49,7 @@
         @change="changeLanguage"
         id="language-dropdown"
         class="language-dropdown"
+        aria-label="Language"
       >
         <option value="en">{{ $t('english') }}</option>
         <option value="zh">{{ $t('chinese') }}</option>
@@ -60,14 +59,14 @@
         <option value="es">{{ $t('spanish') }}</option>
       </select>
     </nav>
-    <button class="menu-icon" @click="toggleMenu()">
+    <button class="menu-icon" type="button" aria-label="Menu" aria-controls="mobile-menu" @click="toggleMenu()">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </button>
   </header>
-  <div class="collapsible-menu-container hidden">
-    <button class="close-menu" @click="toggleMenu()">
+  <div id="mobile-menu" class="collapsible-menu-container hidden">
+    <button class="close-menu" type="button" aria-label="Close menu" @click="toggleMenu()">
       <img class="close-menu-icon" src="/images/close-line-icon.svg" alt="close menu" />
     </button>
     <nav class="collapsible-menu-nav">
@@ -77,6 +76,7 @@
           @change="changeLanguage"
           id="language-dropdown-in-menu"
           class="language-dropdown"
+          aria-label="Language"
         >
           <option value="en">{{ $t('english') }}</option>
           <option value="zh">{{ $t('chinese') }}</option>
@@ -102,7 +102,7 @@
         <router-link to="/enviro" class="sublink">{{ $t('enviroTitle') }}</router-link>
         <router-link to="/product#shop" class="sublink">{{ $t('product.shop.title') }}</router-link>
         <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
-        <a @click="toMall">{{ $t('mallTitle') }}</a>
+        <a :href="shopUrl" target="_blank" rel="noopener" @click.prevent="toMall">{{ $t('mallTitle') }}</a>
         <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
         <router-link :to="{ path: '/tutorial', hash: '#faq' }" class="sublink">{{ $t('faqTitle') }}</router-link>
         <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
@@ -120,7 +120,7 @@
 import { defineComponent, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { changeLocale, type LanguageType, i18n } from '../main'
-import { openShop } from '@/utils/shopUrl'
+import { openShop, SHOP_URL } from '@/utils/shopUrl'
 
 export default defineComponent({
   name: 'Header',
@@ -174,6 +174,7 @@ export default defineComponent({
 
     return {
       selectedLanguage,
+      shopUrl: SHOP_URL,
       toggleMenu,
       changeLanguage,
       toMall

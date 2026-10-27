@@ -81,6 +81,9 @@ const getSpecValue = (val: any) => {
 </script>
 
 <style scoped lang="scss">
+@import '../css/utils/variables';
+
+// Apple-profile utility modal: white sheet on a scrim, hairline tables, no shadows.
 .catalog-modal-overlay {
   position: fixed;
   top: 0;
@@ -96,33 +99,41 @@ const getSpecValue = (val: any) => {
 }
 
 .catalog-modal {
-  background: white;
-  border-radius: 20px;
+  background: #fff;
+  border-radius: 18px;
   width: 100%;
   max-width: 900px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-  
+  font-family: $display-font;
+  color: $ink;
+
   .close-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.75rem;
+    line-height: 1;
     background: none;
     border: none;
+    border-radius: 9999px;
     cursor: pointer;
-    color: #666;
+    color: $ink-80;
     z-index: 10;
-    
-    &:hover { color: #c46043; }
+    transition: transform 0.15s ease;
+
+    &:hover { color: $ink; }
+    &:active { transform: scale(0.95); }
+    &:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 2px; }
   }
 }
 
 .catalog-content {
   padding: 40px;
-  
+
   @media (max-width: 768px) {
     padding: 20px;
   }
@@ -131,15 +142,13 @@ const getSpecValue = (val: any) => {
 .catalog-header {
   text-align: center;
   margin-bottom: 30px;
-  
+
   h2 {
-    font-size: 2rem;
-    color: #043655;
-    font-weight: 700;
-    
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-    }
+    margin: 0;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    letter-spacing: -0.02em;
+    color: $ink;
+    font-weight: 600;
   }
 }
 
@@ -147,7 +156,7 @@ const getSpecValue = (val: any) => {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -157,23 +166,26 @@ const getSpecValue = (val: any) => {
 .product-gallery {
   .main-img {
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 18px;
   }
 }
 
 .product-info {
   h3 {
-    font-size: 1.2rem;
-    color: #c46043;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
+    font-size: 1.3125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: $ink;
     padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $hairline;
   }
-  
+
   p {
-    line-height: 1.6;
-    color: #555;
+    font-size: 1.0625rem;
+    line-height: 1.47;
+    letter-spacing: -0.022em;
+    color: $ink-80;
     margin-bottom: 30px;
     white-space: pre-wrap;
   }
@@ -183,35 +195,35 @@ const getSpecValue = (val: any) => {
   width: 100%;
   border-collapse: collapse;
   background: #fff;
-  border: 1px solid #e0e0e0;
+  border: 1px solid $hairline;
   margin-bottom: 20px;
-  
+
   tbody {
     .spec-row {
-      border-bottom: 1px solid #e0e0e0;
-      
-      &:last-child { 
-        border-bottom: none; 
+      border-bottom: 1px solid $hairline;
+
+      &:last-child {
+        border-bottom: none;
       }
-      
+
       td {
         padding: 14px 16px;
         vertical-align: top;
-        
+        font-size: 1.0625rem;
+        letter-spacing: -0.022em;
+
         &.spec-label {
-          color: #666;
-          font-weight: 500;
-          font-size: 0.95rem;
-          width: 40%;
-          background: #fafafa;
-        }
-        
-        &.spec-value {
-          color: #333;
+          color: $ink-80;
           font-weight: 400;
-          font-size: 0.95rem;
+          width: 40%;
+          background: $parchment;
+        }
+
+        &.spec-value {
+          color: $ink;
+          font-weight: 400;
           width: 60%;
-          line-height: 1.6;
+          line-height: 1.47;
         }
       }
     }
@@ -222,8 +234,12 @@ const getSpecValue = (val: any) => {
   margin-top: 20px;
   .spec-img-full {
     width: 100%;
-    border-radius: 8px;
-    border: 1px solid #eee;
+    border-radius: 18px;
+    border: 1px solid $hairline;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .close-btn { transition: none; }
 }
 </style>

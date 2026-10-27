@@ -30,6 +30,8 @@ value. Add those two to `.env.local` by hand from the Vercel dashboard.
 | `AUTH_SECRET` | `lib/session.ts` (signed admin session tokens) | **sensitive** |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` | `api/contact.ts` (nodemailer) | contact-form notification mail |
 | `NOTIFICATION_EMAIL` | `api/contact.ts` | recipient of contact notifications |
+| `LEGAL_ACK_SALT` | `api/legal/acknowledge.ts` | optional; salt for the stored `ip_hash` (default `smtengo`) |
+| `LEGAL_ACK_NOTIFY` | `api/legal/acknowledge.ts` | optional; recipient of 法務簽核 notifications (falls back to `CONTACT_NOTIFY_TO`, `NOTIFICATION_EMAIL`, then `SMTP_USER`) |
 | `LINE_CHANNEL_SECRET` | `api/line/webhook.ts` (signature check) | **sensitive**; from LINE Developers → channel Basic settings |
 | `LINE_CHANNEL_ACCESS_TOKEN` | `api/line/webhook.ts` (reply API) | **sensitive**; long-lived token from the Messaging API tab. Both missing → endpoint answers 503 Lowercase spellings (`line_channel_secret` / `line_channel_access_token`) are accepted too, because Vercel cannot rename a sensitive variable once created |
 
@@ -45,6 +47,8 @@ One-time SQL, in order, from the Supabase SQL editor:
 1. `supabase_setup.sql` — `backend_members`, `contact_submissions`, chatbot tables, RLS.
 2. `supabase_add_member_contact.sql` — adds `email` / `phone` to `backend_members`.
 
+Also present in the project (created in Supabase directly, no SQL file in the repo): `legal_acknowledgements` — RLS on, anon INSERT only with `accepted = true`, no anon SELECT; read by the service role through `api/admin/legal-acknowledgements`.
+
 To create or reset an admin password, run `node scripts/hash-password.mjs` (hidden prompt, prints only
 the bcrypt hash) and paste the hash into the `backend_members` row. Cost 10 matches `api/admin/auth.ts`.
 
@@ -53,8 +57,14 @@ the bcrypt hash) and paste the hash into the `backend_members` row. Cost 10 matc
 | Route | Purpose | Credentials |
 |---|---|---|
 | `POST /api/contact` | store a contact submission, send SMTP notification | anon key + SMTP |
+| `/legal` (SPA page, `src/views/legal.vue`) | 法務文件中心: lists every legal document by audience and posts acknowledgements to `POST /api/legal/acknowledge` | none (public page) |
+| Legal document register (`src/data/legal.json`, `docs/LEGAL_DOCUMENT_REGISTER.md`) | controlled documents ENGO-LG-001 服務條款 / ENGO-LG-002 隱私權政策 / ENGO-LG-003 退貨與保固政策 with revision `A.n`, issue date, owner/approver, SHA-256 of each published HTML; `npm run legal:check` (also in `test:unit`) fails when `public/<doc>.html` changes without `npm run legal:bump -- <id> <A.n> "<change>"` | none |
+| `POST /api/legal/acknowledge` | store a legal-document acknowledgement (`legal_acknowledgements`), rate-limited 5 / 10 min / IP, optional SMTP notification | anon key (+ SMTP if configured) |
 | `POST /api/chatbot-query` | log chatbot questions for analytics | anon key |
+| Internal-traffic exclusion (`index.html` GTM loader, `src/utils/siteTracking.ts` `isInternalTraffic()`) | sessions with `navigator.webdriver` (Lighthouse, Playwright, devtools automation) or `localStorage.smtengo_qa=1` send nothing to `site_events` and never load GTM; mark a team browser once by opening any page with `?qa=1` (`?qa=0` clears). Do this before manual QA so the admin 站內行為 numbers and GA4 stay clean | none |
+| `npm run analytics:pull [days]` (`scripts/google-pull.mjs`, local only, not deployed) | prints Search Console (`sc-domain:smtengo.com`, by date) and GA4 (property 532831798 智管家科技, users/sessions/views by date) as JSON for the weekly review; authenticates as the service account `smtengo-web-analytics-reader@engo-build.iam.gserviceaccount.com` (Cloud project `engo-build`, Search Console API + Analytics Data API enabled 2026-10-20; Search Console user 完整, GA4 property 檢視者) | key file `~/.config/smtengo/ga-service-account.json` (or `GOOGLE_APPLICATION_CREDENTIALS`), never in the repo or Vercel |
 | `POST /api/line/webhook` | LINE official-account bot: answers from the chatbot knowledge base, logs to `chatbot_analytics` as `line-<lang>` | LINE channel secret + access token, anon key for the log |
+| `GET /api/admin/legal-acknowledgements` | list acknowledgements (`days`, `limit`, `audience`) for the 「法務簽核」 block in the admin dashboard | service role, superuser only |
 | `/api/admin/auth` | admin login → signed session cookie | service role + `AUTH_SECRET` |
 | `/api/admin/members`, `/profile`, `/submissions`, `/chatbot-analytics` | admin back office (`/admin` in the SPA) | service role, session-gated |
 

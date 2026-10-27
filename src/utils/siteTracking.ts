@@ -40,6 +40,27 @@ const queue: SiteEvent[] = []
 let timer: ReturnType<typeof setTimeout> | null = null
 let disabled = false   // set once the API says the table does not exist yet
 
+// ── Internal / automated traffic ─────────────────────────────────────────────
+// Our own QA (Lighthouse, the taste inspector, chrome-devtools runs) was the
+// biggest "visitor" in site_events. Three signals mark a session as internal:
+//   1. navigator.webdriver — set by every automation driver (Lighthouse, Puppeteer,
+//      Playwright, chrome-devtools MCP); real browsers leave it false/undefined.
+//   2. localStorage `smtengo_qa` = '1' — the team's own browsers, set once by
+//      visiting any page with `?qa=1` (`?qa=0` clears it).
+//   3. the `?qa=1` query itself on the current load.
+// index.html checks the same signals before loading GTM, so GA4/Ads/Meta stay clean too.
+export const QA_KEY = 'smtengo_qa'
+export function isInternalTraffic(): boolean {
+    if (typeof window === 'undefined') return false
+    try {
+        const qa = new URLSearchParams(window.location.search).get('qa')
+        if (qa === '1') { localStorage.setItem(QA_KEY, '1'); return true }
+        if (qa === '0') localStorage.removeItem(QA_KEY)
+        if (localStorage.getItem(QA_KEY) === '1') return true
+    } catch { /* storage blocked: fall through to the other signals */ }
+    return (navigator as any).webdriver === true
+}
+
 const clip = (v: unknown, n = 80) => (typeof v === 'string' ? v.slice(0, n) : undefined)
 export const pagePath = () => (typeof window === 'undefined' ? '/' : window.location.pathname.slice(0, 200))
 const currentLocale = () => (typeof document === 'undefined' ? undefined : document.documentElement.lang || undefined)
@@ -48,13 +69,14 @@ const currentLocale = () => (typeof document === 'undefined' ? undefined : docum
 // outbound_click) are pushed to GTM here as well, so GA4 sees the same attention
 // data the admin dashboard does. Everything else already arrives via trackEvent.
 function emit(event: string, params: Record<string, any>) {
+    if (isInternalTraffic()) return
     if (typeof window !== 'undefined' && (window as any).dataLayer) (window as any).dataLayer.push({ event, ...params })
     recordSiteEvent(event, params)
 }
 
 /** Called by utils/analytics.ts for every trackEvent. Cheap no-op for events we do not keep. */
 export function recordSiteEvent(event: string, params: Record<string, any> = {}) {
-    if (disabled || !KEEP.has(event) || typeof window === 'undefined') return
+    if (disabled || !KEEP.has(event) || typeof window === 'undefined' || isInternalTraffic()) return
     // page_view carries the target path itself (router.afterEach fires before the URL settles here).
     const page = clip(params.page_path, 200) || pagePath()
     // Chatbot searches are free text typed by visitors: keep the event, drop the text.
