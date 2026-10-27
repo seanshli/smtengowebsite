@@ -1,4 +1,28 @@
 {
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "web.smtengo.com"
+                }
+            ],
+            "destination": "https://www.smtengo.com/:path*",
+            "permanent": true
+        },
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "w2.smtengo.com"
+                }
+            ],
+            "destination": "https://www.smtengo.com/:path*",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/api/(.*)",
