@@ -194,7 +194,7 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(home3.body.zh).toMatch(/手機[\s\S]*☰/)
     const dd = (howto as any).modules.find((m: any) => m.id === 'devicedata')
     expect(dd.steps[0].body.zh).toMatch(/平板：首頁右上角的第二顆圖示[\s\S]*手機：從裝置頁進入/)
-    expect((howto as any).meta.updated).toBe('2026-09-29')
+    expect((howto as any).meta.updated).toBe('2026-10-27')
     const bot = (kb as any).howto.find((e: any) => e.id === 'howto-devicedata')
     expect(bot.answer.zh).toContain('(/tutorial#howto-devicedata)')
     expect(bot.answer.zh).toMatch(/第二顆圖示/)
