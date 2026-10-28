@@ -111,7 +111,26 @@ function buildSchema(product: ProductDef, locale: Locale): object {
       price: product.priceTWD,
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
-      seller: BRAND
+      seller: BRAND,
+      // Merchant-listing fields Google flagged as missing (Search Console, 2026-10-27).
+      // Facts come from ENGO-LG-003 退貨與保固政策 (public/return-policy.html): A 類 hardware
+      // has a 7-day 鑑賞期 under 消保法 §19, returns go by mail, and the consumer pays
+      // return shipping for an unopened 鑑賞期 return (defects are collected at our cost).
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'TW',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 7,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
+        merchantReturnLink: `${BASE_URL}/return-policy.html`
+      },
+      // Delivery is within Taiwan only; rates and lead times are quoted per order by
+      // the store, so only the destination is stated here (no invented figures).
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'TW' }
+      }
     }
   }
 
