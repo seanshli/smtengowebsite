@@ -42,6 +42,7 @@ $warm-shadow-hover: 0 16px 50px rgba(34, 66, 116, 0.18);
 $ink: #1d1d1f;            // every headline and paragraph on light surfaces
 $ink-80: #333333;         // secondary text (AA on white and parchment)
 $ink-48: #7a7a7a;         // disabled / micro legal ONLY (fails AA at body size)
+$ink-prompt: #6e6e73;     // placeholders and unanswered selects (5.07:1 on white; ink-48 was 4.29:1)
 $parchment: #f5f5f7;      // alternating light tile, footer, card ground
 $tile-dark: #272729;      // dark tile
 $tile-dark-2: #2a2a2c;    // dark tile sitting next to another dark tile

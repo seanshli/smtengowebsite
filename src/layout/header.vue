@@ -5,13 +5,13 @@
     </router-link>
     <nav class="menu-container">
       <!-- 最新消息 lives on the home page (#news), so it hangs off 首頁 -->
-      <div class="dropdown dropdown-spacing-right">
+      <div class="dropdown">
         <router-link to="/" class="dropdown-trigger" data-track="nav:home">{{ $t('homeTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link :to="{ path: '/', hash: '#news' }">{{ $t('newsTitle') }}</router-link>
         </div>
       </div>
-      <div class="dropdown dropdown-spacing-right">
+      <div class="dropdown">
         <router-link to="/brand" class="dropdown-trigger" data-track="nav:about">{{ $t('aboutTitle') }}</router-link>
         <div class="dropdown-content">
           <router-link to="/brand">{{ $t('brand.brandStoryTitle') }}</router-link>
@@ -111,11 +111,6 @@
     </nav>
   </div>
 </template>
-<style scoped>
-.dropdown-spacing-right {
-  margin-right: 10px; /* 您可以調整這個值來增加右邊的間距 */
-}
-</style>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'

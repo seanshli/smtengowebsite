@@ -14,7 +14,7 @@
           <!-- A tagline, not a section heading. -->
           <p class="pd-tagline">{{ $t('product.tablet_intro.tagline') }}</p>
           <p class="pd-sub">
-            <img class="pd-mark" src="/images/logo_darkblue.svg" alt="enGo" />
+            <img class="pd-mark" src="/assets/logo.svg" alt="enGo" />
             {{ $t('product.tablet_intro.info') }}
           </p>
         </div>
@@ -28,7 +28,7 @@
         <div class="pd-wrap">
           <header class="pd-head pd-center" data-reveal>
             <h2 class="pd-h2">
-              <img class="pd-h2-logo" src="/images/logo_darkblue.svg" alt="enGo" />
+              <img class="pd-h2-logo" src="/assets/logo.svg" alt="enGo" />
               {{ $t('product.brand_intro.title') }}
             </h2>
           </header>
@@ -64,7 +64,6 @@
         <div class="pd-wrap">
           <div data-reveal-group class="pd-count-grid">
             <div class="pd-count">
-              <img class="pd-count-icon" src="/assets/file-badge.svg" alt="專利icon" />
               <div class="pd-count-num">
                 <count-up :end-val="24" :duration="2.5" :options="options" @init="onInit"></count-up>
                 <span class="pd-count-unit">{{ $t('product.brand_intro.countCard.card01.unit') }}</span>
@@ -72,7 +71,6 @@
               <p class="pd-count-info">{{ $t('product.brand_intro.countCard.card01.info') }}</p>
             </div>
             <div class="pd-count">
-              <img class="pd-count-icon" src="/assets/brain__circuit.svg" alt="AI功能 icon" />
               <div class="pd-count-num">
                 <count-up :end-val="30" :duration="3" :options="options" @init="onInit"></count-up>
                 <span class="pd-count-unit">{{ $t('product.brand_intro.countCard.card02.unit') }}</span>
@@ -80,7 +78,6 @@
               <p class="pd-count-info">{{ $t('product.brand_intro.countCard.card02.info') }}</p>
             </div>
             <div class="pd-count">
-              <img class="pd-count-icon" src="/assets/test_tubes.svg" alt="驗證測試 icon" />
               <div class="pd-count-num">
                 <count-up :end-val="10" :duration="2.5" :options="options" @init="onInit"></count-up>
                 <span class="pd-count-unit">{{ $t('product.brand_intro.countCard.card04.tenThousand') }}{{ $t('product.brand_intro.countCard.card04.unit') }}</span>
@@ -88,7 +85,6 @@
               <p class="pd-count-info">{{ $t('product.brand_intro.countCard.card04.info') }}</p>
             </div>
             <div class="pd-count">
-              <img class="pd-count-icon" src="/assets/lightbulb.svg" alt="研發 icon" />
               <div class="pd-count-num">
                 <count-up :end-val="5" :duration="2" :options="options" @init="onInit"></count-up>
                 <span class="pd-count-unit">{{ $t('product.brand_intro.countCard.card03.unit') }}</span>
@@ -949,14 +945,16 @@ const targetExpand = ref(false)
 
 // ─── numbers ──────────────────────────────────────────────────────────────
 .pd-count-grid {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 48px 32px;
   @media (max-width: 1024px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  @media (max-width: 480px) { grid-template-columns: 1fr; }
+  @media (max-width: 480px) { gap: 36px 20px; }
 }
+// An open spec strip, not four icon cards (review 2026-11-05: icon tile + big number
+// + tiny label in identical boxes is the stock template). A hairline above each figure
+// does the grouping the boxes used to do.
 .pd-count {
-  display: flex; flex-direction: column; gap: 6px; padding: 28px; background: $parchment; border: 1px solid $hairline; border-radius: 18px;
+  display: flex; flex-direction: column; gap: 10px; padding-top: 22px; border-top: 1px solid $ink;
 }
-.pd-count-icon { width: 36px; height: 36px; filter: brightness(0); opacity: .85; margin-bottom: 14px; }
 .pd-count-num {
   display: flex; align-items: baseline; gap: 8px; font-family: $display-font; font-weight: 600; letter-spacing: -.03em; line-height: 1;
   font-size: clamp(2.6rem, 4.4vw, 4rem); font-variant-numeric: tabular-nums; color: $ink;

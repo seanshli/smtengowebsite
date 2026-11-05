@@ -40,20 +40,20 @@
             <div class="hm-plate"><img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="lazy" /></div>
             <p class="hm-cap"><strong>{{ T.ifTablet }}</strong>{{ T.ifTabletCap }}</p>
           </div>
-          <div class="hm-if-item">
+          <!-- One phone column for both stores (review 2026-11-05): the Android column was
+               an empty box holding a badge, and there is no Android screenshot to put in it. -->
+          <div class="hm-if-item hm-if-phone">
             <div class="hm-iphone"><img src="/images/screens/12-home-iphone.png" :alt="T.altPhone" width="800" height="1731" loading="lazy" /></div>
             <p class="hm-cap"><strong>iPhone / iPad</strong>{{ T.ifIosCap }}</p>
-            <a class="hm-store" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
-              <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="T.altAppStore" width="120" height="40" loading="lazy" />
-            </a>
-          </div>
-          <div class="hm-if-item">
-            <div class="hm-if-android">
+            <p class="hm-cap"><strong>{{ T.ifAndroid }}</strong>{{ T.ifAndroidCap }}</p>
+            <div class="hm-if-stores">
+              <a class="hm-store" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
+                <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="T.altAppStore" width="120" height="40" loading="lazy" />
+              </a>
               <a class="hm-store hm-store-google" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play">
                 <img src="/images/badges/google-play-en.png" :alt="T.altGooglePlay" height="40" loading="lazy" />
               </a>
             </div>
-            <p class="hm-cap"><strong>{{ T.ifAndroid }}</strong>{{ T.ifAndroidCap }}</p>
           </div>
         </div>
         <p class="hm-fine" data-reveal>{{ T.ifNote }}</p>
@@ -503,12 +503,12 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 
 // ─── interfaces ───────────────────────────────────────────────────────────
 .hm-if-grid {
-  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; align-items: end;
-  @media (max-width: 834px) { grid-template-columns: 1fr 1fr; .hm-if-tablet { grid-column: 1 / -1; } }
-  @media (max-width: 640px) { grid-template-columns: 1fr; }
+  display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: end;
+  @media (max-width: 834px) { grid-template-columns: 1fr; }
 }
 .hm-if-item { display: flex; flex-direction: column; .hm-iphone { width: 62%; margin: 0 auto; } }
-.hm-if-android { display: flex; align-items: center; justify-content: center; min-height: 160px; border: 1px solid $hairline; border-radius: 18px; background: #fff; }
+.hm-if-phone { .hm-iphone { width: min(62%, 240px); } @media (max-width: 834px) { .hm-iphone { width: min(56%, 240px); } } }
+.hm-if-stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 14px; .hm-store { margin-top: 0; } }
 
 // ─── a day with enGo ──────────────────────────────────────────────────────
 // Copy + scene list left, the real 場景 screen right. The list is the control.

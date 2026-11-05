@@ -246,3 +246,13 @@ describe('footer carries the real wordmark, alive but quiet (2026-11-05, "too si
         expect(mark).toMatch(/\.fm-iris \{\s*fill: \$brand-orange;/)
     })
 })
+
+describe('case studies name places, not customers (2026-11-05)', () => {
+    const cases = JSON.parse(readFileSync(resolve(__dirname, '../data/cases.json'), 'utf-8'))
+    it('no surname + honorific or internal status markers in any public field or image path', () => {
+        const text = JSON.stringify(cases)
+        expect(text).not.toMatch(/[一-鿿](小姐|先生|太太|女士)/)
+        expect(text).not.toMatch(/\b(Mr|Ms|Mrs)\. [A-Z]/)
+        expect(text).not.toMatch(/無資料|結案|\(Finished\)/)
+    })
+})

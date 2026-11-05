@@ -3,7 +3,9 @@
 // viewport and sat on top of the hero on every first visit.
 .cookie-container {
     position: fixed;
-    right: 16px;
+    // Clear of the chat launcher (56px at right/bottom 24px, Chatbot.vue), which sits
+    // above this card: at right:16px it covered the 拒絕非必要 button (review 2026-11-05).
+    right: 96px;
     bottom: 16px;
     z-index: 10;
     width: min(440px, calc(100vw - 32px));

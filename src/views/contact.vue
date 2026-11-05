@@ -2,7 +2,7 @@
   <div class="contact ap-page">
     <!-- tile 1, white: title, subtitle, phone lines -->
     <div class="ap-tile ap-tile-first ap-white contact-head">
-      <div class="ap-wrap ap-wrap-text">
+      <div class="ap-wrap">
         <div class="contact_title">
           <h1 class="ap-title">{{ $t('contactUsTitle') }}</h1>
           <p class="ap-lead web">{{ $t('contactUsSubtitle') }}</p>
@@ -15,8 +15,11 @@
     </div>
 
     <!-- tile 2, parchment: the form (fields, ids and handlers unchanged) -->
+    <!-- tile 2, parchment: the form beside the other ways in (review 2026-11-05: the form
+         sat in the left half with the right half empty, and the only phone number was
+         in the footer). Fields, ids and handlers unchanged. -->
     <div class="ap-tile ap-parchment contact-form-tile">
-      <div class="ap-wrap ap-wrap-text">
+      <div class="ap-wrap">
         <div class="contact_wrap">
       <div class="contact_inputs flex_vertical">
         <div class="input_label">
@@ -105,16 +108,33 @@
             v-model="message"
           ></textarea>
         </div>
-      <div class="line-btn-container mt-4">
-        <button class="contact-form-line ap-pill ap-pill-ghost" @click="jumpToLine">
-          <img src="/images/link_Line.png" alt="LINE" class="line-icon" />
-          {{ $t('contactOnLine') }}
-        </button>
-      </div>
-
       <div id="form-error-message" class="mt-12">{{ errorMessage }}</div>
       <button class="contact-form-submit ap-pill ap-pill-primary" @click="submitForm">{{ $t('submitForm') }}</button>
       </div>
+
+          <aside class="cf-aside" :aria-label="isZh ? '其他聯絡方式' : 'Other ways to reach us'">
+            <div class="cf-aside-block">
+              <h2 class="cf-aside-title">{{ isZh ? '直接來電' : 'Call us' }}</h2>
+              <a class="cf-aside-phone" href="tel:+886-2-27510218" data-track="contact:phone">{{ $t('footer.phone') }}</a>
+              <p class="cf-aside-note">{{ $t('footer.time') }}</p>
+            </div>
+            <div class="cf-aside-block">
+              <h2 class="cf-aside-title">LINE</h2>
+              <button class="contact-form-line ap-pill ap-pill-ghost" @click="jumpToLine">
+                <img src="/images/link_Line.png" alt="" class="line-icon" />
+                {{ $t('contactOnLine') }}
+              </button>
+            </div>
+            <div class="cf-aside-block" v-if="showrooms.length">
+              <h2 class="cf-aside-title">{{ isZh ? '展示間' : 'Showrooms' }}</h2>
+              <ul class="cf-showrooms">
+                <li v-for="s in showrooms" :key="s.id">
+                  <router-link :to="'/cases/' + s.id">{{ pick(s.title) }}</router-link>
+                  <span>{{ pick(s.location) }}</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
@@ -126,6 +146,7 @@ import { config } from '../configs/systemConfig'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
+import casesData from '@/data/cases.json'
 
 export default defineComponent({
   name: 'Contact',
@@ -148,6 +169,11 @@ export default defineComponent({
     const planOptions = computed(() => {
       return tm('planItems') as any[]
     })
+
+    // Same source as the home page's showroom list, so the two never disagree.
+    const showrooms = (casesData as any[]).filter((c) => c.category?.en === 'Showroom')
+    const isZh = computed(() => String(locale.value).startsWith('zh'))
+    const pick = (o: any) => (o && (o[isZh.value ? 'zh' : 'en'] ?? o.zh)) || ''
 
     const route = useRoute()
     const router = useRouter()
@@ -307,6 +333,9 @@ const jumpToLine = () => {
       interest,
       planOptions,
       jumpToLine,
+      showrooms,
+      isZh,
+      pick,
     }
   }
 })
