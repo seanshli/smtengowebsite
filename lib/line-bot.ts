@@ -5,6 +5,7 @@
 import { createRequire } from 'node:module'
 import { composeAnswer, type AnswerStrings } from './chatbot-answer.js'
 import { askShopKnowledge } from './shop-knowledge.js'
+import { expandQuery, normalizeQuery, prefersShopKnowledge } from '../src/utils/chatbotMatch.js'
 import { detectLocale, toLineText, type LineLocale } from './line.js'
 
 // Vercel runs api/ as native ESM on Node 20, where a bare JSON import needs an
@@ -82,6 +83,8 @@ export interface BotDeps {
   reply: (replyToken: string, texts: string[]) => Promise<unknown>
   /** Mirrors the website's chatbot_analytics rows; must never throw into the bot. */
   log?: (keyword: string, locale: string, matchFound: boolean) => Promise<unknown>
+  /** Test seam; defaults to Shop's public knowledge API. */
+  askShop?: typeof askShopKnowledge
 }
 
 export interface Handled { event: string; locale?: LineLocale; matched?: boolean; id?: string | null; replied: boolean }
@@ -105,11 +108,14 @@ export async function processLineEvents(events: LineEvent[], deps: BotDeps): Pro
 
       // 本地知識庫沒命中時改問商城：退貨、鑑賞期、運費、訂閱、付款這些
       // 題目的真相在 Shop，我們這邊一個字都沒有（2026-09-30 實測全數落空）。
-      // 失敗回 null，維持原本的「找不到」回覆，不讓對話因為別的服務掛掉而中斷。
+      // 商城細節題（退款、缺貨、刷卡驗證…）即使命中本地「shop-platform」也先問
+      // 商城（prefersShopKnowledge）；商城沒答案時才用本地答案。
+      // 失敗回 null，維持原本的回覆，不讓對話因為別的服務掛掉而中斷。
       let shopSlugs: string[] | null = null
       let replyText = answer.text
-      if (!answer.matched) {
-        const shop = await askShopKnowledge(question, { locale })
+      const askShop = deps.askShop ?? askShopKnowledge
+      if (!answer.matched || prefersShopKnowledge(expandQuery(normalizeQuery(question)), answer.id)) {
+        const shop = await askShop(question, { locale })
         if (shop) {
           replyText = shop.text
           shopSlugs = shop.slugs
@@ -121,13 +127,14 @@ export async function processLineEvents(events: LineEvent[], deps: BotDeps): Pro
       if (deps.log) {
         try {
           await deps.log(question.slice(0, 500), `line-${locale}`, answer.matched || !!shopSlugs)
-          if (answer.matched && answer.id) await deps.log('kb:' + String(answer.id), `line-${locale}`, true)
+          // The kb: row names the entry that answered; Shop answers log as shop: instead.
+          if (answer.matched && answer.id && !shopSlugs) await deps.log('kb:' + String(answer.id), `line-${locale}`, true)
           if (shopSlugs) await deps.log('shop:' + shopSlugs.join(','), `line-${locale}`, true)
         } catch (err) {
           console.error('line log failed', err)
         }
       }
-      out.push({ event: 'message', locale, matched: answer.matched || !!shopSlugs, id: answer.id, shop: shopSlugs ?? undefined, replied: true })
+      out.push({ event: 'message', locale, matched: answer.matched || !!shopSlugs, id: shopSlugs ? null : answer.id, shop: shopSlugs ?? undefined, replied: true })
     } catch (err) {
       console.error('line event failed', ev?.type, err)
       out.push({ event: ev?.type || 'unknown', replied: false })
