@@ -246,8 +246,8 @@
     {
         "id": 6,
         "title": {
-            "zh": "新北-永和 Ricky設計師 智能展示間 (結案)",
-            "en": "New Taipei Yonghe Ricky Smart Showroom"
+            "zh": "新北永和 設計師智能展示間",
+            "en": "New Taipei Yonghe Designer Smart Showroom"
         },
         "category": {
             "zh": "私人住宅",
@@ -264,8 +264,8 @@
             "en": "New Taipei"
         },
         "description": {
-            "zh": "智能展示間 (結案)",
-            "en": "Smart Showroom (Finished)"
+            "zh": "智能展示間",
+            "en": "Smart Showroom"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
@@ -446,8 +446,8 @@
     {
         "id": 7,
         "title": {
-            "zh": "台北文山陳小姐 三房兩廳兩衛",
-            "en": "Taipei Wenshan Ms. Chen 3BR"
+            "zh": "台北文山 三房兩廳兩衛",
+            "en": "Taipei Wenshan 3BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -638,8 +638,8 @@
                 ]
             },
             "real_scene_gallery": [
-                "/images/cases/7/文山陳小姐客戶介面1.jpg",
-                "/images/cases/7/文山陳小姐客戶介面2.jpg"
+                "/images/cases/7/文山客戶介面1.jpg",
+                "/images/cases/7/文山客戶介面2.jpg"
             ]
         }
     },
@@ -859,8 +859,8 @@
     {
         "id": 9,
         "title": {
-            "zh": "台北大安廖先生 一房兩廳一衛(無資料)",
-            "en": "Taipei Da'an Mr. Liao 1BR"
+            "zh": "台北大安 一房兩廳一衛",
+            "en": "Taipei Da'an 1BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -1082,8 +1082,8 @@
     {
         "id": 10,
         "title": {
-            "zh": "台北文山蘇小姐 兩房兩廳兩衛",
-            "en": "Taipei Wenshan Ms. Su 2BR"
+            "zh": "台北文山 兩房兩廳兩衛",
+            "en": "Taipei Wenshan 2BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -1278,8 +1278,8 @@
     {
         "id": 11,
         "title": {
-            "zh": "台大大同葉先生 兩房兩廳一衛",
-            "en": "NTU Mr. Ip 2BR"
+            "zh": "台大大同 兩房兩廳一衛",
+            "en": "NTU 2BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -1474,8 +1474,8 @@
     {
         "id": 12,
         "title": {
-            "zh": "台北永和王小姐 三房兩廳兩衛",
-            "en": "Taipei Yonghe Ms. Wang 3BR"
+            "zh": "台北永和 三房兩廳兩衛",
+            "en": "Taipei Yonghe 3BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -1670,8 +1670,8 @@
     {
         "id": 13,
         "title": {
-            "zh": "台北永和黃小姐 一房一廳一衛",
-            "en": "Taipei Yonghe Ms. Huang 1BR"
+            "zh": "台北永和 一房一廳一衛",
+            "en": "Taipei Yonghe 1BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -2062,8 +2062,8 @@
     {
         "id": 15,
         "title": {
-            "zh": "基隆陳先生 (結案) 兩房兩廳一衛 (1)",
-            "en": "Keelung Mr. Chen (Finished) 2BR"
+            "zh": "基隆 兩房兩廳一衛",
+            "en": "Keelung 2BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -2258,8 +2258,8 @@
     {
         "id": 16,
         "title": {
-            "zh": "桃園劉小姐 三房兩廳兩衛",
-            "en": "Taoyuan Ms. Liu 3BR"
+            "zh": "桃園 三房兩廳兩衛",
+            "en": "Taoyuan 3BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -2460,8 +2460,8 @@
     {
         "id": 17,
         "title": {
-            "zh": "桃園青埔王小姐 (Vita) 兩房兩廳兩衛",
-            "en": "Taoyuan Qingpu Ms. Wang (Vita) 2BR"
+            "zh": "桃園青埔 兩房兩廳兩衛",
+            "en": "Taoyuan Qingpu 2BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -2658,8 +2658,8 @@
     {
         "id": 18,
         "title": {
-            "zh": "新竹邱先生 兩房兩廳一衛",
-            "en": "Hsinchu Mr. Qiu 2BR"
+            "zh": "新竹 兩房兩廳一衛",
+            "en": "Hsinchu 2BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -2854,8 +2854,8 @@
     {
         "id": 19,
         "title": {
-            "zh": "台中大里廖先生 三房兩廳兩衛",
-            "en": "Taichung Dali Mr. Liao 3BR"
+            "zh": "台中大里 三房兩廳兩衛",
+            "en": "Taichung Dali 3BR"
         },
         "category": {
             "zh": "私人住宅",
@@ -3322,8 +3322,8 @@
     {
         "id": 21,
         "title": {
-            "zh": "台中南區陳先生 三房兩廳一衛",
-            "en": "Taichung South Dist. Mr. Chen 3BR"
+            "zh": "台中南區 三房兩廳一衛",
+            "en": "Taichung South Dist. 3BR"
         },
         "category": {
             "zh": "私人住宅",
