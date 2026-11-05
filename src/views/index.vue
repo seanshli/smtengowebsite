@@ -1,34 +1,37 @@
 <template>
   <main class="hm" ref="motionRoot">
-    <!-- ─── HERO TILE (white): one headline, one lede, two pills, the product ────
-         Apple-profile rhythm (design-md/apple): centered stack, UI recedes, the
-         tablet and phone are the only things with a shadow on the page. Screens are
-         real 3.2.2 captures (文件-當前版/assets/screens, crop only, never retouched). -->
+    <!-- ─── HERO (white): copy left, the living house right. Design pass 2026-11-05
+         ("more active, not so AI like"): the centred stack + a second copy of the
+         tablet mockup read as template. The house is enGo's own illustrated loop
+         (video/src/HeroLoop.tsx, Aug 2026): rooms light when people come home and go
+         dark when they leave, the 回家 / 離家 scenes made visible. The real tablet
+         and phone screens stay in the next tile. -->
     <section id="home" class="hm-tile hm-tile-white hm-hero">
-      <div class="hm-wrap hm-center">
-        <h1 class="hm-title">{{ $t('pageTitle') }}</h1>
-        <p class="hm-lede">{{ locale.startsWith('zh') ? $t('paragraph1') : $t('paragraphEn') }}</p>
-        <p class="hm-kicker">{{ $t('intextLogo') }}</p>
-        <div class="hm-cta-row">
-          <router-link to="/contact" class="hm-pill hm-pill-primary" @click="trackCta('hero')">{{ T.cta }}</router-link>
-          <router-link to="/product" class="hm-pill hm-pill-ghost">{{ T.seeProduct }}</router-link>
+      <div class="hm-wrap hm-hero-grid">
+        <div class="hm-hero-copy">
+          <h1 class="hm-title">{{ $t('pageTitle') }}</h1>
+          <p class="hm-lede">{{ locale.startsWith('zh') ? $t('paragraph1') : $t('paragraphEn') }}</p>
+          <p class="hm-kicker">{{ $t('intextLogo') }}</p>
+          <div class="hm-cta-row">
+            <router-link to="/contact" class="hm-pill hm-pill-primary" @click="trackCta('hero')">{{ T.cta }}</router-link>
+            <router-link to="/product" class="hm-pill hm-pill-ghost">{{ T.seeProduct }}</router-link>
+          </div>
+          <a href="https://lin.ee/THIUSjW" class="hm-link" target="_blank" rel="noopener" data-track="home:line" @click="trackCta('line')">{{ T.lineCta }}<span class="hm-chev" aria-hidden="true">›</span></a>
         </div>
-        <a href="https://lin.ee/THIUSjW" class="hm-link" target="_blank" rel="noopener" data-track="home:line" @click="trackCta('line')">{{ T.lineCta }}<span class="hm-chev" aria-hidden="true">›</span></a>
+        <figure class="hm-hero-house">
+          <video ref="heroVideo" class="hm-house-video" autoplay muted loop playsinline preload="metadata"
+                 poster="/images/hero-home.jpg" :aria-label="T.houseAlt" width="1080" height="1350">
+            <source src="/videos/hero-loop.mp4" type="video/mp4" />
+          </video>
+          <figcaption class="hm-cap hm-house-cap">{{ T.houseCap }}</figcaption>
+        </figure>
       </div>
-      <figure class="hm-hero-figure" :aria-label="T.figureLabel">
-        <div class="hm-plate hm-plate-tablet">
-          <img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="eager" fetchpriority="high" />
-        </div>
-        <div class="hm-iphone hm-iphone-hero">
-          <img src="/images/screens/12-home-iphone.png" :alt="T.altPhone" width="800" height="1731" loading="eager" />
-        </div>
-      </figure>
     </section>
 
     <!-- ─── THREE INTERFACES, ONE ACCOUNT (parchment tile; copy mirrors /product §2.3) -->
     <section id="interfaces" class="hm-tile hm-tile-parchment">
       <div class="hm-wrap">
-        <header class="hm-head hm-center" data-reveal>
+        <header class="hm-head hm-head-split" data-reveal>
           <h2 class="hm-h2">{{ T.ifTitle }}</h2>
           <p class="hm-lead">{{ T.ifSub }}</p>
         </header>
@@ -53,29 +56,47 @@
             <p class="hm-cap"><strong>{{ T.ifAndroid }}</strong>{{ T.ifAndroidCap }}</p>
           </div>
         </div>
-        <p class="hm-fine hm-center" data-reveal>{{ T.ifNote }}</p>
+        <p class="hm-fine" data-reveal>{{ T.ifNote }}</p>
       </div>
     </section>
 
-    <!-- ─── A DAY WITH ENGO (dark tile): four scenes from the 模型屋 demo home. Names as
-         on the real 場景 screen (10-scenes-tablet.png); scenes run by tap or by time /
-         sensor (KB-001 §1). Text only, no chips, no colour cards. -->
-    <section id="day" class="hm-tile hm-tile-dark">
-      <div class="hm-wrap">
-        <header class="hm-head hm-center" data-reveal>
-          <h2 class="hm-h2">{{ T.dayTitle }}</h2>
-          <p class="hm-lead">{{ T.daySub }}</p>
-        </header>
-        <div class="hm-day-grid" data-reveal-group>
-          <div v-for="m in T.dayMoments" :key="m.time" class="hm-moment">
-            <span class="hm-moment-time">{{ m.time }}</span>
-            <span class="hm-moment-name">{{ m.name }}</span>
-            <p class="hm-moment-body">{{ m.body }}</p>
+    <!-- ─── A DAY WITH ENGO (dark tile): the one live thing. Four scenes from the
+         模型屋 demo home step through the day; the orange outline sits on the matching
+         card of the real 場景 screen (10-scenes-tablet.png, crop only). It is an
+         annotation, not UI. Pauses on hover/focus; with reduced motion it does not
+         advance. All four texts stay in the DOM (no hidden content). -->
+    <section id="day" ref="dayRoot" class="hm-tile hm-tile-dark"
+             @mouseenter="dayHover = true" @mouseleave="dayHover = false"
+             @focusin="dayHover = true" @focusout="dayHover = false">
+      <div class="hm-wrap hm-day-layout">
+        <div class="hm-day-copy">
+          <header class="hm-head" data-reveal>
+            <h2 class="hm-h2">{{ T.dayTitle }}</h2>
+            <p class="hm-lead">{{ T.daySub }}</p>
+          </header>
+          <div class="hm-day-list" role="tablist" :aria-label="T.dayTitle">
+            <button v-for="(m, i) in T.dayMoments" :key="m.time" type="button" role="tab"
+                    class="hm-moment" :class="{ 'is-on': i === day }" :aria-selected="i === day"
+                    @click="pickDay(i)">
+              <span class="hm-moment-time">{{ m.time }}</span>
+              <span class="hm-moment-name">{{ m.name }}</span>
+              <span class="hm-moment-body">{{ m.body }}</span>
+              <span v-if="i === day && dayAuto" :key="'bar' + dayTick" class="hm-moment-bar" :class="{ 'is-paused': dayHover }" aria-hidden="true"></span>
+            </button>
           </div>
+          <p data-reveal>
+            <router-link to="/tutorial#howto-scene" class="hm-link hm-link-on-dark">{{ T.dayLink }}<span class="hm-chev" aria-hidden="true">›</span></router-link>
+          </p>
         </div>
-        <p class="hm-center" data-reveal>
-          <router-link to="/tutorial#howto-scene" class="hm-link hm-link-on-dark">{{ T.dayLink }}<span class="hm-chev" aria-hidden="true">›</span></router-link>
-        </p>
+        <figure class="hm-day-screen" data-reveal>
+          <div class="hm-plate hm-day-plate">
+            <span class="hm-day-shot">
+              <img src="/images/screens/10-scenes-tablet.png" :alt="T.capScenes" width="2000" height="1200" loading="lazy" />
+              <span class="hm-day-ring" :style="{ left: DAY_RING[day] + '%' }" aria-hidden="true"></span>
+            </span>
+          </div>
+          <figcaption class="hm-cap hm-cap-on-dark">{{ T.dayScreenCap }}</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -85,7 +106,7 @@
     <!-- ─── FOUR CAPABILITIES (white tile): 2×2 utility cards, hairline, no shadow ── -->
     <section id="capabilities" class="hm-tile hm-tile-white">
       <div class="hm-wrap">
-        <header class="hm-head hm-center" data-reveal>
+        <header class="hm-head hm-head-split" data-reveal>
           <h2 class="hm-h2">{{ T.capTitle }}</h2>
           <p class="hm-lead">{{ T.capSub }}</p>
         </header>
@@ -184,7 +205,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import newsData from '@/data/news.json'
 import casesData from '@/data/cases.json'
@@ -212,6 +233,54 @@ const bmsCase = computed(() => cases.find((c) => hasPhoto(c) && c.category?.en =
 const showrooms = computed(() => cases.filter((c) => c.category?.en === 'Showroom'))
 
 const trackCta = (location: string) => trackEvent('cta_click', { location, page: 'home' })
+
+// ── hero loop: never animate for visitors who asked for reduced motion ───────────
+const heroVideo = ref<HTMLVideoElement | null>(null)
+const resumeHero = () => {
+  const v = heroVideo.value
+  if (v && v.paused && !document.hidden && !reducedMotion()) v.play?.()?.catch?.(() => {})
+}
+const reducedMotion = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+
+// ── day player ─────────────────────────────────────────────────────────────
+// Left edge (%) of each scene card on 10-scenes-tablet.png (2000×1200): 回家 228px,
+// 離家 649px, 早安 1069px, 晚安 1490px. Moments run 早安 → 離家 → 回家 → 晚安.
+const DAY_RING = [53.45, 32.45, 11.4, 74.5]
+const DAY_MS = 5200
+const day = ref(0)
+const dayTick = ref(0)          // restarts the progress bar animation
+const dayHover = ref(false)
+const dayInView = ref(false)
+const dayAuto = ref(false)      // false under reduced motion: no advance, no bar
+const dayRoot = ref<HTMLElement | null>(null)
+let dayTimer: ReturnType<typeof setInterval> | null = null
+let dayObserver: IntersectionObserver | null = null
+const stopDay = () => { if (dayTimer) { clearInterval(dayTimer); dayTimer = null } }
+const startDay = () => {
+  stopDay()
+  if (!dayAuto.value || !dayInView.value || dayHover.value) return
+  dayTimer = setInterval(() => { day.value = (day.value + 1) % 4; dayTick.value++ }, DAY_MS)
+}
+const pickDay = (i: number) => { day.value = i; dayTick.value++; trackEvent('ui_click', { section: 'day', label: String(i) }) }
+watch([dayHover, dayInView], startDay)
+
+onMounted(() => {
+  // Vue does not reliably reflect `muted` as a property, and browsers only autoplay
+  // muted video, so set it and start playback here (never under reduced motion).
+  const v = heroVideo.value
+  if (v) {
+    v.muted = true
+    if (reducedMotion()) v.pause()
+    else v.play?.()?.catch?.(() => { /* autoplay refused: the poster stays */ })
+  }
+  document.addEventListener('visibilitychange', resumeHero)
+  dayAuto.value = !reducedMotion()
+  if (dayRoot.value && 'IntersectionObserver' in window) {
+    dayObserver = new IntersectionObserver(([e]) => { dayInView.value = e.isIntersecting }, { threshold: 0.35 })
+    dayObserver.observe(dayRoot.value)
+  }
+})
+onUnmounted(() => { stopDay(); dayObserver?.disconnect(); document.removeEventListener('visibilitychange', resumeHero) })
 // "新北，兩房兩廳一衛": the room layout is lifted out of the title so the caption never
 // carries a development name.
 const caseLabel = (c: any) => {
@@ -224,6 +293,9 @@ const caseLabel = (c: any) => {
 // zh, zhCN and en are written out; the other locales fall back to en.
 const COPY: Record<string, Record<string, any>> = {
   zh: {
+    houseCap: '回家，燈先亮；離家，一鍵全關。',
+    houseAlt: '插畫：兩層樓住家的剖面。enGo 中樞連到各房間的燈光、空調與廚房，有人在的房間亮起。',
+    dayScreenCap: '示範住家平板上的「場景」頁。橘框標出這個時段執行的情境。',
     cta: '預約體驗', seeProduct: '看產品介紹', lineCta: '用 LINE 問我們',
     figureLabel: 'enGo 牆掛平板與手機 App', altAppStore: '在 App Store 下載', altGooglePlay: '在 Google Play 取得',
     altTablet: 'enGo 牆掛平板首頁，依房間分組的裝置卡片', altPhone: 'iPhone 上的 enGo智慧管家首頁，模型屋示範住家', altAnnounce: '平板上的社區公告',
@@ -244,7 +316,7 @@ const COPY: Record<string, Record<string, any>> = {
     capTitle: '每天都會用到的四件事。', capSub: '照明、插座、窗簾、空調、感測器、攝影機。一台平板，看見、控制、自動化。',
     capData: '設備數據', capDataSub: '用電趨勢、用電分布、用水量、空氣品質。平板與手機都有。',
     capVoice: '語音操作', capVoiceSub: '牆掛平板專屬。涉及安全的裝置會先向您確認。', capVoiceQuote: '「開客廳燈」',
-    capWarehouse: '智慧倉儲', capWarehouseSub: '濾芯、電池、備品放哪裡、剩多少。', capWarehouseChips: ['物品', '櫃位', '低庫存提醒'],
+    capWarehouse: '庫存管理', capWarehouseSub: '濾芯、電池、備品放哪裡、剩多少。', capWarehouseChips: ['物品', '櫃位', '低庫存提醒'],
     capScenes: '情境', capScenesSub: '「離家」等於關全部燈加關空調。一鍵執行，或依時間、感測器自動觸發。',
     bmsTitle: '一棟大樓，一個大腦。', bmsSub: '社區服務與家裡的裝置，同一個 App、同一台平板。',
     bmsItems: ['社區公告與通知', '報修與工單追蹤', '公設預約', '包裹通知與取件'],
@@ -253,6 +325,9 @@ const COPY: Record<string, Record<string, any>> = {
     ctaTitle: '想看看您家會變成什麼樣子？', ctaSub: '留下聯繫方式，我們安排展示間體驗與規劃建議。', hours: '週一至週五 09:00-18:00',
   },
   zhCN: {
+    houseCap: '回家，灯先亮；离家，一键全关。',
+    houseAlt: '插画：两层楼住家的剖面。enGo 中枢连到各房间的灯光、空调与厨房，有人在的房间亮起。',
+    dayScreenCap: '示范住家平板上的「场景」页。橙框标出这个时段执行的情境。',
     cta: '预约体验', seeProduct: '看产品介绍', lineCta: '用 LINE 问我们',
     figureLabel: 'enGo 壁挂平板与手机 App', altAppStore: '在 App Store 下载', altGooglePlay: '在 Google Play 获取',
     altTablet: 'enGo 壁挂平板首页，依房间分组的设备卡片', altPhone: 'iPhone 上的 enGo智慧管家首页，模型屋示范住家', altAnnounce: '平板上的社区公告',
@@ -273,7 +348,7 @@ const COPY: Record<string, Record<string, any>> = {
     capTitle: '每天都会用到的四件事。', capSub: '照明、插座、窗帘、空调、传感器、摄像头。一台平板，看见、控制、自动化。',
     capData: '设备数据', capDataSub: '用电趋势、用电分布、用水量、空气质量。平板与手机都有。',
     capVoice: '语音操作', capVoiceSub: '壁挂平板专属。涉及安全的设备会先向您确认。', capVoiceQuote: '「开客厅灯」',
-    capWarehouse: '智慧仓储', capWarehouseSub: '滤芯、电池、备品放哪里、剩多少。', capWarehouseChips: ['物品', '柜位', '低库存提醒'],
+    capWarehouse: '库存管理', capWarehouseSub: '滤芯、电池、备品放哪里、剩多少。', capWarehouseChips: ['物品', '柜位', '低库存提醒'],
     capScenes: '情境', capScenesSub: '「离家」等于关全部灯加关空调。一键执行，或依时间、传感器自动触发。',
     bmsTitle: '一栋大楼，一个大脑。', bmsSub: '社区服务与家里的设备，同一个 App、同一台平板。',
     bmsItems: ['社区公告与通知', '报修与工单追踪', '公设预约', '包裹通知与取件'],
@@ -282,6 +357,9 @@ const COPY: Record<string, Record<string, any>> = {
     ctaTitle: '想看看您家会变成什么样子？', ctaSub: '留下联系方式，我们安排展示间体验与规划建议。', hours: '周一至周五 09:00-18:00',
   },
   en: {
+    houseCap: 'Home: the lights come on first. Away: one tap turns everything off.',
+    houseAlt: 'Illustration: a cutaway of a two-storey home. The enGo hub links the lights, air conditioning and kitchen in each room; occupied rooms light up.',
+    dayScreenCap: 'The Scenes screen on the demo home\'s tablet. The orange outline marks the scene that runs at this time.',
     cta: 'Book a visit', seeProduct: 'See the product', lineCta: 'Ask us on LINE',
     figureLabel: 'enGo wall tablet and phone app', altAppStore: 'Download on the App Store', altGooglePlay: 'Get it on Google Play',
     altTablet: 'enGo wall tablet home screen with device cards grouped by room', altPhone: 'enGo智慧管家 home screen on iPhone, Model Home demo household', altAnnounce: 'Community announcements on the tablet',
@@ -302,7 +380,7 @@ const COPY: Record<string, Record<string, any>> = {
     capTitle: 'Four things you will use every day.', capSub: 'Lighting, outlets, curtains, air conditioning, sensors, cameras. One tablet to see, control and automate.',
     capData: 'Device data', capDataSub: 'Energy trend and share, water use, air quality. On the tablet and in the app.',
     capVoice: 'Voice control', capVoiceSub: 'Wall tablet only. Safety-related devices ask for confirmation first.', capVoiceQuote: '"Living room lights on"',
-    capWarehouse: 'Smart inventory', capWarehouseSub: 'Where the filters, batteries and spares are, and how many are left.', capWarehouseChips: ['Items', 'Cabinets', 'Low-stock alerts'],
+    capWarehouse: 'Inventory', capWarehouseSub: 'Where the filters, batteries and spares are, and how many are left.', capWarehouseChips: ['Items', 'Cabinets', 'Low-stock alerts'],
     capScenes: 'Scenes', capScenesSub: '"Away" means all lights off and AC off. One tap, or by time and sensor.',
     bmsTitle: 'One brain. Every building.', bmsSub: 'Community services and the home, in the same app and the same tablet.',
     bmsItems: ['Announcements and notices', 'Repair requests and tracking', 'Facility booking', 'Parcel notice and pickup'],
@@ -351,6 +429,11 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 }
 .hm-lead { font-size: clamp(1.15rem, 1.7vw, 1.5rem); font-weight: 400; line-height: 1.4; letter-spacing: -.005em; color: $ink; margin: 14px auto 0; max-width: 34em; }
 .hm-head { margin-bottom: clamp(36px, 5vw, 64px); }
+.hm-head-split {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px clamp(32px, 5vw, 80px); align-items: end;
+  .hm-h2, .hm-lead { margin: 0; }
+  @media (max-width: 834px) { grid-template-columns: 1fr; }
+}
 .hm-head-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; }
 .hm-cap { margin: 14px 0 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; strong { display: block; color: $ink; font-weight: 600; } }
 .hm-fine { margin: 40px 0 0; font-size: .875rem; line-height: 1.43; color: $ink-80; }
@@ -398,13 +481,25 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 }
 .hm-lede { font-size: clamp(1.2rem, 1.9vw, 1.6rem); font-weight: 300; line-height: 1.4; color: $ink; max-width: 30em; margin: 18px auto 0; animation: hmRise .7s cubic-bezier(.22,1,.36,1) .3s both; }
 .hm-hero .hm-cta-row, .hm-hero .hm-link { animation: hmRise .7s cubic-bezier(.22,1,.36,1) .45s both; }
-.hm-hero-figure {
-  position: relative; max-width: 1180px; margin: clamp(40px, 6vw, 72px) auto 0; padding: 0 clamp(20px, 5vw, 64px) clamp(56px, 8vw, 96px);
-  animation: hmRise 1s cubic-bezier(.22,1,.36,1) .5s both;
-  .hm-plate-tablet { width: 84%; margin: 0 auto; }
-  .hm-iphone-hero { position: absolute; right: clamp(20px, 5vw, 64px); bottom: clamp(24px, 4vw, 48px); width: 17%; }
-  @media (max-width: 734px) { .hm-plate-tablet { width: 100%; } .hm-iphone-hero { display: none; } }
+// Copy left, the living house right. Left-aligned so the page stops reading as a
+// centred template; the house is the only moving picture above the fold.
+.hm-hero-grid {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 80px); align-items: center;
+  padding-bottom: clamp(56px, 8vw, 96px);
+  @media (max-width: 834px) { grid-template-columns: 1fr; }
 }
+.hm-hero-copy {
+  .hm-lede { margin-left: 0; margin-right: 0; max-width: 24em; }
+  .hm-kicker { margin-top: 18px; }
+  .hm-cta-row { justify-content: flex-start; }
+  .hm-link { display: inline-block; margin-top: 18px; }
+}
+.hm-hero-house {
+  margin: 0; animation: hmRise 1s cubic-bezier(.22,1,.36,1) .35s both;
+  // Poster colour of hero-home.jpg (#f8f0e3), so the crop edge disappears.
+  .hm-house-video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 58%; background: #f8f0e3; border-radius: 28px; }
+}
+.hm-house-cap { font-weight: 600; color: $ink; }
 
 // ─── interfaces ───────────────────────────────────────────────────────────
 .hm-if-grid {
@@ -416,15 +511,37 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 .hm-if-android { display: flex; align-items: center; justify-content: center; min-height: 160px; border: 1px solid $hairline; border-radius: 18px; background: #fff; }
 
 // ─── a day with enGo ──────────────────────────────────────────────────────
-.hm-day-grid {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(24px, 3vw, 40px); margin-bottom: clamp(36px, 5vw, 56px);
-  @media (max-width: 834px) { grid-template-columns: 1fr 1fr; }
-  @media (max-width: 480px) { grid-template-columns: 1fr; }
+// Copy + scene list left, the real 場景 screen right. The list is the control.
+.hm-day-layout {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: center;
+  @media (max-width: 960px) { grid-template-columns: 1fr; }
 }
-.hm-moment { display: flex; flex-direction: column; gap: 8px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .18); }
-.hm-moment-time { font-family: $display; font-weight: 600; font-size: clamp(2.2rem, 3.4vw, 3rem); line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
-.hm-moment-name { font-size: 1.3125rem; font-weight: 600; letter-spacing: -.01em; }
-.hm-moment-body { margin: 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; }
+.hm-day-list { display: flex; flex-direction: column; margin-bottom: clamp(24px, 3vw, 36px); }
+.hm-day-screen { margin: 0; }
+.hm-day-shot { position: relative; display: block; }
+.hm-cap-on-dark { color: $on-dark-muted; }
+// Annotation ring over the active scene card. Geometry measured on the 2000×1200 PNG.
+.hm-day-ring {
+  position: absolute; top: 40.7%; width: 19.8%; height: 18.9%;
+  border: 3px solid $orange2; border-radius: 14px; box-shadow: 0 0 0 6px rgba(254, 139, 5, .22);
+  transition: left .55s cubic-bezier(.22,1,.36,1); pointer-events: none;
+}
+.hm-moment {
+  position: relative; display: grid; grid-template-columns: auto 1fr; column-gap: 18px; row-gap: 4px; align-items: baseline;
+  width: 100%; padding: 16px 0 18px; text-align: left; font: inherit; color: inherit; background: none; border: 0;
+  border-top: 1px solid rgba(255, 255, 255, .18); cursor: pointer; opacity: .5; transition: opacity .3s ease;
+  &:hover, &.is-on { opacity: 1; }
+  &:focus-visible { outline: 2px solid $orange2; outline-offset: 4px; opacity: 1; }
+}
+.hm-moment-time { grid-row: span 2; font-family: $display; font-weight: 600; font-size: clamp(1.6rem, 2.4vw, 2.1rem); line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums; min-width: 4.2ch; }
+.hm-moment-name { font-size: 1.1875rem; font-weight: 600; letter-spacing: -.01em; }
+.hm-moment.is-on .hm-moment-time { color: $orange2; }
+.hm-moment-body { margin: 0; font-size: 1rem; line-height: 1.47; letter-spacing: -.022em; }
+.hm-moment-bar {
+  position: absolute; left: 0; top: -1px; height: 2px; width: 100%; background: $orange2; transform-origin: left;
+  animation: hmDayBar 5.2s linear both;
+  &.is-paused { animation-play-state: paused; }
+}
 
 // ─── capabilities: utility cards, hairline, no shadow ─────────────────────
 .hm-cap-grid {
@@ -478,9 +595,11 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 .hm-cta .hm-lead { margin-bottom: 0; }
 
 // ─── keyframes ────────────────────────────────────────────────────────────
+@keyframes hmDayBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes hmRise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
-  .hm-kicker, .hm-title, .hm-lede, .hm-hero .hm-cta-row, .hm-hero .hm-link, .hm-hero-figure { animation: none; }
+  .hm-kicker, .hm-title, .hm-lede, .hm-hero .hm-cta-row, .hm-hero .hm-link, .hm-hero-house { animation: none; }
+  .hm-day-ring, .hm-moment { transition: none; }
   .hm-pill, .hm-card { transition: none; }
 }
 </style>
