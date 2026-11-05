@@ -111,6 +111,38 @@ describe('processLineEvents', () => {
     ])
   })
 
+  it('asks Shop first for a shop detail question and logs Shop as the answer', async () => {
+    const reply = vi.fn(async () => 200)
+    const log = vi.fn(async () => undefined)
+    const askShop = vi.fn(async () => ({ text: '**退款入帳時間**\n\n退款處理中，款項將退回原付款方式。', slugs: ['refund-timing'] }))
+    const out = await processLineEvents([
+      { type: 'message', replyToken: 'r2', source: { type: 'user' }, message: { type: 'text', text: '商城退款多久會入帳' } },
+    ], { reply, log, askShop })
+    expect(askShop).toHaveBeenCalledWith('商城退款多久會入帳', { locale: 'zh' })
+    expect((reply.mock.calls[0] as any)[1][0]).toContain('退款處理中')
+    expect(out[0]).toMatchObject({ matched: true, id: null, shop: ['refund-timing'] })
+    expect(log.mock.calls.map((c: any) => c[0])).toEqual(['商城退款多久會入帳', 'shop:refund-timing'])
+  })
+
+  it('falls back to the local shop answer when Shop has nothing', async () => {
+    const reply = vi.fn(async () => 200)
+    const askShop = vi.fn(async () => null)
+    const out = await processLineEvents([
+      { type: 'message', replyToken: 'r3', source: { type: 'user' }, message: { type: 'text', text: '商城缺貨怎麼辦' } },
+    ], { reply, askShop })
+    expect(askShop).toHaveBeenCalled()
+    expect(out[0]).toMatchObject({ matched: true, id: 'shop-platform' })
+    expect((reply.mock.calls[0] as any)[1][0]).toContain(SHOP_URL)
+  })
+
+  it('does not ask Shop for a plain what-is-the-shop question', async () => {
+    const askShop = vi.fn(async () => null)
+    await processLineEvents([
+      { type: 'message', replyToken: 'r4', source: { type: 'user' }, message: { type: 'text', text: '智管家商城是什麼' } },
+    ], { reply: vi.fn(async () => 200), askShop })
+    expect(askShop).not.toHaveBeenCalled()
+  })
+
   it('welcomes a new follower and skips what it cannot answer', async () => {
     const reply = vi.fn(async () => 200)
     const out = await processLineEvents([

@@ -77,7 +77,7 @@ import { ref, nextTick, onMounted } from 'vue'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import knowledgeBase from '@/data/knowledge_base.json'
-import { normalizeQuery, expandQuery, rankKnowledge } from '@/utils/chatbotMatch'
+import { normalizeQuery, expandQuery, rankKnowledge, prefersShopKnowledge } from '@/utils/chatbotMatch'
 import { askShopKnowledge } from '../../lib/shop-knowledge'
 
 const isOpen = ref(false)
@@ -229,8 +229,14 @@ const handleSearch = () => {
       secondMatch = { ...scored[1].item, type: scored[1].cat }
     }
 
+    // Shop detail questions (退款、缺貨、刷卡驗證、到貨通知…) ask Shop's KB first
+    // even when the local shop-platform entry matched; that local text answer
+    // is shown meanwhile and stays if Shop has nothing (see prefersShopKnowledge).
+    const shopFirst = (!bestMatch || !!bestMatch.answer) &&
+      prefersShopKnowledge(query, bestMatch?.id ?? null)
+
     let response = ''
-    if (bestMatch) {
+    if (bestMatch && !shopFirst) {
       if (bestMatch.type === 'youtube') {
         const videoId = bestMatch.url.split('v=')[1] || bestMatch.url.split('/').pop()
         const embedUrl = `https://www.youtube.com/embed/${videoId}`
@@ -287,17 +293,23 @@ const handleSearch = () => {
       // 我們這邊一個字都沒有。Shop 的 /api/knowledge/ask 是公開免金鑰、
       // CORS 開放，正是為官網準備的（見 Shop/docs/KNOWLEDGE_API.md），
       // 所以直接從瀏覽器問，不複製內容過來。
-      const placeholder = { role: 'assistant', text: t('chatbot.no_match'), type: 'handover' }
+      const localText: string | null = bestMatch?.answer
+        ? bestMatch.answer[locale.value] || bestMatch.answer.zh || bestMatch.answer
+        : null
+      const placeholder: { role: string; text: string; type?: string } = localText
+        ? { role: 'assistant', text: localText }
+        : { role: 'assistant', text: t('chatbot.no_match'), type: 'handover' }
       messages.value.push(placeholder as any)
+      const keepLocal = () => { if (localText && bestMatch?.id) logQuery('kb:' + String(bestMatch.id), true) }
       askShopKnowledge(currentQuery, { locale: locale.value })
         .then((shop) => {
-          if (!shop) return
+          if (!shop) return keepLocal()
           placeholder.text = shop.text
           placeholder.type = undefined as any
           logQuery('shop:' + shop.slugs.join(','), true)
           scrollToBottom()
         })
-        .catch(() => { /* 問不到就維持原本的「找不到」，不影響對話 */ })
+        .catch(() => { keepLocal() /* 問不到就維持原本的回覆，不影響對話 */ })
       response = placeholder.text
     }
 
@@ -305,7 +317,7 @@ const handleSearch = () => {
     // Second row per answered question: which entry answered. Ridden into the same
     // table behind the kb: prefix (see lib/analytics-events.ts) so the admin report
     // can rank what visitors actually ask about, not just what they typed.
-    if (bestMatch?.id) logQuery('kb:' + String(bestMatch.id), true)
+    if (bestMatch?.id && !shopFirst) logQuery('kb:' + String(bestMatch.id), true)
     scrollToBottom()
   }, 800)
 }

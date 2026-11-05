@@ -8,7 +8,7 @@ import news from '../data/news.json'
 import packages from '../data/packages.json'
 import { readFileSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { normalizeQuery, expandQuery, rankKnowledge } from './chatbotMatch'
+import { normalizeQuery, expandQuery, rankKnowledge, prefersShopKnowledge } from './chatbotMatch'
 
 const top = (q: string) => rankKnowledge(kb as any, expandQuery(normalizeQuery(q)))[0]
 
@@ -293,5 +293,45 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     const f48 = (faqs as any[]).find((f) => f.id === 48).answer.zh as string
     expect(f48).toContain('定價列在套裝方案頁')
     expect(f48).toContain('依需求報價')
+  })
+})
+
+describe('shop detail questions ask the Shop KB first', () => {
+  const shopFirst = (q: string) => {
+    const query = expandQuery(normalizeQuery(q))
+    const best = rankKnowledge(kb as any, query)[0]
+    return prefersShopKnowledge(query, best ? (best.item.id ?? null) : null)
+  }
+
+  it('sends refund, stock, card and franchise questions to Shop even when shop-platform matched', () => {
+    for (const q of [
+      '商城退款多久會入帳',
+      '商城缺貨怎麼辦',
+      '商城的到貨通知怎麼用',
+      '刷卡要銀行驗證但視窗沒出來',
+      '訂單還沒付款可以繼續付款嗎',
+      '商城可以用 ATM 付款嗎',
+      '加盟店的撥款匯到哪裡',
+      'how long does a shop refund take',
+    ]) expect(shopFirst(q), q).toBe(true)
+  })
+
+  it('keeps the local answer for what-is-the-shop and enGo HMS questions', () => {
+    expect(top('智管家商城是什麼').item.id).toBe('shop-platform')
+    for (const q of ['智管家商城是什麼', '安購商城還在嗎', '公告在哪裡看', '斷網可以用嗎', '平面圖可以看嗎'])
+      expect(shopFirst(q), q).toBe(false)
+  })
+
+  it('treats shared words like 庫存 and 通知 as HMS unless the shop is named', () => {
+    expect(prefersShopKnowledge('倉儲 庫存怎麼記', 'howto-warehouse')).toBe(false)
+    expect(prefersShopKnowledge('商城 庫存', 'howto-warehouse')).toBe(true)
+    expect(prefersShopKnowledge('社區 通知', 'howto-community')).toBe(false)
+  })
+
+  it('tells visitors about the Android enGo Shop app without claiming an iPhone listing', () => {
+    const zh = (kb as any).general.find((i: any) => i.id === 'shop-platform').answer.zh as string
+    expect(zh).toContain('play.google.com/store/apps/details?id=com.smtengo.engo.shop')
+    expect(zh).toContain('iPhone 版即將推出')
+    expect(zh).not.toContain('apps.apple.com')
   })
 })
