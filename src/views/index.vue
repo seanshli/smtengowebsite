@@ -123,7 +123,7 @@
           </ul>
         </div>
         <div class="hm-bms-media" data-reveal-group>
-          <div class="hm-plate hm-plate-land"><img src="/images/screens/09-announcement-tablet.png" :alt="T.altAnnounce" width="2000" height="1148" loading="lazy" /></div>
+          <div class="hm-plate hm-plate-land"><img src="/images/screens/09-notification-tablet.png" :alt="T.altAnnounce" width="1400" height="840" loading="lazy" /></div>
           <router-link :to="'/cases/' + bmsCase.id" class="hm-photo" v-if="bmsCase">
             <img :src="bmsCase.image" :alt="T.bmsPhotoCap" loading="lazy" />
             <!-- Sean 2026-09-24: no development (建案) name on the home page; the photo alone. -->
@@ -226,7 +226,7 @@ const COPY: Record<string, Record<string, any>> = {
   zh: {
     cta: '預約體驗', seeProduct: '看產品介紹', lineCta: '用 LINE 問我們',
     figureLabel: 'enGo 牆掛平板與手機 App', altAppStore: '在 App Store 下載', altGooglePlay: '在 Google Play 取得',
-    altTablet: 'enGo 牆掛平板首頁，依房間分組的裝置卡片', altPhone: 'iPhone 上的 enGo智慧管家首頁，模型屋示範住家', altAnnounce: '平板上的社區公告',
+    altTablet: 'enGo 牆掛平板首頁，依房間分組的裝置卡片', altPhone: 'iPhone 上的 enGo智慧管家首頁，模型屋示範住家', altAnnounce: '平板上的通知頁：電鈴、信箱、包裹三類通知',
     ifTitle: '三種介面，一組帳號。',
     ifSub: '牆掛平板在家裡當主控台，手機在外面接手。',
     ifTablet: 'enGo 牆掛平板', ifTabletCap: '家電、情境、設備數據、社區服務，加上平板專屬的語音與待機相片牆。',
@@ -255,7 +255,7 @@ const COPY: Record<string, Record<string, any>> = {
   zhCN: {
     cta: '预约体验', seeProduct: '看产品介绍', lineCta: '用 LINE 问我们',
     figureLabel: 'enGo 壁挂平板与手机 App', altAppStore: '在 App Store 下载', altGooglePlay: '在 Google Play 获取',
-    altTablet: 'enGo 壁挂平板首页，依房间分组的设备卡片', altPhone: 'iPhone 上的 enGo智慧管家首页，模型屋示范住家', altAnnounce: '平板上的社区公告',
+    altTablet: 'enGo 壁挂平板首页，依房间分组的设备卡片', altPhone: 'iPhone 上的 enGo智慧管家首页，模型屋示范住家', altAnnounce: '平板上的通知页：电铃、信箱、包裹三类通知',
     ifTitle: '三种界面，一组账号。',
     ifSub: '壁挂平板在家里当主控台，手机在外面接手。',
     ifTablet: 'enGo 壁挂平板', ifTabletCap: '家电、情境、设备数据、社区服务，加上平板专属的语音与待机相片墙。',
@@ -284,7 +284,7 @@ const COPY: Record<string, Record<string, any>> = {
   en: {
     cta: 'Book a visit', seeProduct: 'See the product', lineCta: 'Ask us on LINE',
     figureLabel: 'enGo wall tablet and phone app', altAppStore: 'Download on the App Store', altGooglePlay: 'Get it on Google Play',
-    altTablet: 'enGo wall tablet home screen with device cards grouped by room', altPhone: 'enGo智慧管家 home screen on iPhone, Model Home demo household', altAnnounce: 'Community announcements on the tablet',
+    altTablet: 'enGo wall tablet home screen with device cards grouped by room', altPhone: 'enGo智慧管家 home screen on iPhone, Model Home demo household', altAnnounce: 'Notifications page on the tablet: doorbell, mailbox and parcel notices',
     ifTitle: 'Three interfaces. One account.',
     ifSub: 'The wall tablet runs the home. Your phone takes over when you are out.',
     ifTablet: 'enGo wall tablet', ifTabletCap: 'Devices, scenes, device data and community services, plus tablet-only voice and the standby photo wall.',

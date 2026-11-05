@@ -47,10 +47,10 @@
                 <strong class="intro-label">{{ $t('product.brand_intro.communityLabel') }}</strong>
                 {{ $t('product.brand_intro.community') }}
               </p>
-              <!-- §3.2 shot #8, cropped to the two real notices (違規勸導／社區除蟲通知);
-                   the same screen also carried a／b／123／test entries. -->
+              <!-- UM-001 A.20 (2026-10-19): the old announcement-detail shot was an unfilled template
+                   (placeholders, escaped \( \) on screen) and was withdrawn; this is the real 通知頁 retake. -->
               <figure class="intro-figure">
-                <img src="/images/screens/09-announcement-tablet.png" :alt="$t('product.brand_intro.communityFigure')" loading="lazy" />
+                <img src="/images/screens/09-notification-tablet.png" :alt="$t('product.brand_intro.communityFigure')" loading="lazy" />
                 <figcaption>{{ $t('product.brand_intro.communityFigure') }}</figcaption>
               </figure>
               <p class="pd-body">{{ $t('product.brand_intro.scenes') }}</p>
