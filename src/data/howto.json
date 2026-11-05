@@ -2,13 +2,13 @@
   "meta": {
     "version": "1.0",
     "generatedFor": {
-      "zh": "enGo 3.2.2（建置 489）",
-      "en": "enGo 3.2.2 (build 489)"
+      "zh": "enGo 3.6.2（文字說明）；多數截圖取自 3.2.2（建置 489）",
+      "en": "enGo 3.6.2 (text); most screenshots from 3.2.2 (build 489)"
     },
-    "updated": "2026-10-27",
+    "updated": "2026-11-05",
     "note": {
-      "zh": "截圖取自「模型屋」示範住家與智管家實驗社區帳號，於 enGo 3.2.2（建置 489）正式建置實機擷取，僅裁切、未修圖。",
-      "en": "Screenshots were captured on the Model Home demo household and the enGo test-community account running enGo 3.2.2 (build 489) release build; cropped only, never retouched."
+      "zh": "截圖取自「模型屋」示範住家與智管家實驗社區帳號，多數於 enGo 3.2.2（建置 489）正式建置實機擷取；庫存管理頁取自 SmartPad（enGo 3.6.0）實機，通知頁為較新的平板實機重拍。僅裁切、未修圖。",
+      "en": "Screenshots were captured on the Model Home demo household and the enGo test-community account, most of them on the enGo 3.2.2 (build 489) release build; the inventory pages come from a SmartPad running enGo 3.6.0, and the notifications page is a newer tablet capture. Cropped only, never retouched."
     }
   },
   "modules": [
@@ -90,8 +90,8 @@
         "en": "Adding Devices (Pairing)"
       },
       "summary": {
-        "zh": "配網是讓裝置連上您家 Wi-Fi 並加入 enGo 的過程。首頁右上「＋」進入「添加設備」，上方有五種方式，先試「設備發現」。",
-        "en": "Pairing is how a device joins your Wi-Fi and your enGo home. Tap + at the top right of the home screen to open Add device. Five methods are offered: try Device discovery first."
+        "zh": "配網是讓裝置連上您家 Wi-Fi 並加入 enGo 的過程。首頁右上「＋」進入「添加設備」，上方有六種方式，先試「設備發現」。",
+        "en": "Pairing is how a device joins your Wi-Fi and your enGo home. Tap + at the top right of the home screen to open Add device. Six methods are offered: try Device discovery first."
       },
       "steps": [
         {
@@ -151,14 +151,25 @@
         },
         {
           "title": {
-            "zh": "AP 配網（備援）",
-            "en": "AP pairing (fallback)"
+            "zh": "AP 配網（生態系裝置，備援）",
+            "en": "AP pairing (ecosystem devices, fallback)"
           },
           "body": {
-            "zh": "上述方式都失敗時使用，共三個步驟。步驟 1：長按裝置配網鍵 3-5 秒，待指示燈快閃、裝置自行開啟 AP 熱點；步驟 2：手動連上該熱點；步驟 3：回到 App 完成。",
-            "en": "Use this when the others fail; it has three steps. Step 1: hold the device's pairing button for 3-5 seconds until the LED blinks fast and the device opens its own hotspot. Step 2: connect to that hotspot manually. Step 3: return to the app to finish."
+            "zh": "適用生態系裝置，上述方式都失敗時使用，共三個步驟。步驟 1：長按裝置配網鍵 3-5 秒，待指示燈快閃、裝置自行開啟 AP 熱點；步驟 2：手動連上該熱點；步驟 3：回到 App 完成。配網進行中，畫面會顯示五個節點的進程點線圖：取得配網資訊 → 傳送資訊給設備 → 等待設備連網 → 等待設備上線 → 配網完成，卡在哪一步就知道問題出在哪一段。",
+            "en": "For ecosystem devices; use it when the others fail. It has three steps. Step 1: hold the device's pairing button for 3-5 seconds until the LED blinks fast and the device opens its own hotspot. Step 2: connect to that hotspot manually. Step 3: return to the app to finish. While pairing runs, a five-node progress line is shown: get pairing info → send info to the device → wait for the device to join the network → wait for the device to come online → pairing complete. Where it stalls tells you which stage is at fault."
           },
           "image": "/images/howto/device/24-pair-ap.png"
+        },
+        {
+          "title": {
+            "zh": "ESP 配網（enGo 自有裝置）",
+            "en": "ESP pairing (enGo's own devices)"
+          },
+          "body": {
+            "zh": "485 轉換器等 enGo 自有裝置使用。同為熱點方式，但走 enGo 自己的配網流程，上線與否改由後端確認。",
+            "en": "For enGo's own devices such as the 485 converter. It is also a hotspot method, but follows enGo's own pairing flow, and whether the device is online is confirmed by the backend."
+          },
+          "image": null
         }
       ],
       "tips": [
@@ -169,6 +180,10 @@
         {
           "zh": "同一台裝置重複配網會建立第二筆紀錄。配網前先確認它是不是已經在清單裡。",
           "en": "Pairing the same device twice creates a second entry. Check the list before pairing again."
+        },
+        {
+          "zh": "3.6.x 起「AP 配網」與「ESP 配網」是兩個分頁。選錯分頁不會有明確錯誤訊息，只會一直停在等待。認不出裝置是哪一種時，請洽安裝人員。",
+          "en": "From 3.6.x, AP pairing and ESP pairing are two separate tabs. Choosing the wrong one gives no clear error, it just waits forever. If you cannot tell which kind your device is, ask your installer."
         }
       ]
     },
@@ -325,6 +340,10 @@
         {
           "zh": "裝置顯示離線時，先看它自己的指示燈與電源，再看家中 Wi-Fi，最後才懷疑 App。",
           "en": "If a device shows offline, check its own LED and power first, then your Wi-Fi, and only then suspect the app."
+        },
+        {
+          "zh": "平板左側導覽列依序為家庭、場景、工單、庫存、預約、通知、訊息、設置、登出，可用最上方的「收起／展開」切換成只有圖示。",
+          "en": "On the tablet the left navigation rail lists 家庭 Home, 場景 Scenes, 工單 Work orders, 庫存 Inventory, 預約 Reservations, 通知 Notifications, 訊息 Messages, 設置 Settings and 登出 Sign out. The top Collapse/Expand button shrinks it to icons only."
         }
       ]
     },
@@ -475,20 +494,31 @@
         "en": "Community Announcements & Messages"
       },
       "summary": {
-        "zh": "公布欄收社區公告與通知，訊息收系統、社區與商城三類消息。這是 enGo 與一般智慧家庭產品最大的差別。不必為了看社區公告另外裝一支 App。",
-        "en": "The bulletin board carries community announcements and notices; Messages holds system, community and shop messages. This is what sets enGo apart from ordinary smart-home products. You do not need a second app to read community notices."
+        "zh": "通知頁收電鈴、信箱、包裹三類通知；訊息收系統、社區與商城三類消息，社區公告也在訊息裡看。這是 enGo 與一般智慧家庭產品最大的差別。不必為了看社區公告另外裝一支 App。",
+        "en": "The Notifications page carries doorbell, mailbox and parcel notices; Messages holds system, community and shop messages, and community announcements are read there too. This is what sets enGo apart from ordinary smart-home products. You do not need a second app to read community notices."
       },
       "steps": [
         {
           "title": {
-            "zh": "看公告",
-            "en": "Read announcements"
+            "zh": "看通知：電鈴、信箱、包裹",
+            "en": "Read notifications: doorbell, mailbox, parcel"
           },
           "body": {
-            "zh": "左側欄的公布欄列出社區公告與通知，未讀會標記。點進去看完整全文，例如除蟲通知的施作時間、區域與注意事項。",
-            "en": "The bulletin board in the left rail lists community announcements and notices, with unread ones marked. Open one for the full text, for example a pest-control notice with its time, area and precautions."
+            "zh": "平板：左側導覽列的鈴鐺圖示；手機：底部第四個分頁「通知」。上方三個分頁分別是電鈴通知（有人按門口電鈴的來電紀錄）、信箱通知（信件到達）、包裹通知（有您的包裹到管理室）。分頁下方另有查看攝影機、解鎖開門、致電管理中心三個按鈕，解鎖開門的使用範圍請洽專人。圖中社區目前沒有電鈴紀錄，所以顯示「尚無資料」。",
+            "en": "Tablet: the bell icon in the left rail. Phone: the fourth tab at the bottom, 通知 (Notifications). The three tabs at the top are doorbell notices (a log of calls when someone rings at the door), mailbox notices (mail has arrived) and parcel notices (a parcel for you has reached the management office). Below the tabs are three buttons: view camera, unlock door and call the management center; please ask our team about the scope of unlock door. In this screenshot the community has no doorbell records yet, so it shows 尚無資料 (No data)."
           },
-          "image": "/images/howto/community/03-announce-detail.png"
+          "image": "/images/howto/community/01-notification-tablet.png"
+        },
+        {
+          "title": {
+            "zh": "看社區公告",
+            "en": "Read community announcements"
+          },
+          "body": {
+            "zh": "公告在訊息裡：平板是左側導覽列的對話框圖示，手機在底部「更多」裡的「訊息」。點進任一則可看完整全文。公告與您的所在社區綁定，沒有收到任何公告時，先確認家庭管理的社區設定是否正確。",
+            "en": "Announcements live under Messages: the speech-bubble icon in the tablet's left rail, or 訊息 under More on the phone. Open any item for the full text. Announcements are tied to your community, so if none arrive, first check the community setting in Home management."
+          },
+          "image": null
         },
         {
           "title": {
@@ -504,8 +534,12 @@
       ],
       "tips": [
         {
-          "zh": "包裹通知也走這條管道；若沒收到，先確認設定裡的通知權限。",
-          "en": "Parcel notices come through the same channel. If you are not getting them, check notification permission in Settings first."
+          "zh": "包裹通知在通知頁的「包裹通知」分頁，訊息裡也看得到；若沒收到，先確認設定裡的通知權限。",
+          "en": "Parcel notices sit in the Parcel tab of the Notifications page and also appear under Messages. If you are not getting them, check notification permission in Settings first."
+        },
+        {
+          "zh": "包裹怎麼領（3.6.x 起）：智能櫃走到櫃前，在 App 按「開櫃取件」，櫃門自動開啟，不需輸入取件碼；人工櫃或管理室則前往存放位置向管理中心取件。",
+          "en": "Collecting a parcel (from 3.6.x): at a smart locker, walk up to it and tap “Open locker” in the app; the door opens by itself and no pickup code needs to be typed in. For a staffed locker or the management office, collect it from the management center."
         }
       ],
       "imagesPending": false
@@ -529,8 +563,8 @@
             "en": "Submit a repair request"
           },
           "body": {
-            "zh": "左側欄的報修 → 新增，填寫維修項目與描述，可附照片。送出後系統產生工單編號。",
-            "en": "Repairs in the left rail → New. Describe the item and the problem, and attach photos. Submitting creates a work-order number."
+            "zh": "左側欄的工單（扳手圖示；手機在底部「工單」分頁），右上「＋」新增。填寫維修項目與描述，可附照片。送出後系統產生工單編號。",
+            "en": "Work orders (工單) in the left rail, the wrench icon (on the phone, the bottom 工單 tab), then + at the top right. Describe the item and the problem, and attach photos. Submitting creates a work-order number."
           },
           "image": "/images/howto/service/02-workorder-new.png"
         },
@@ -650,8 +684,8 @@
             "en": "Move items and adjust quantities"
           },
           "body": {
-            "zh": "物品卡片可編輯、調整數量、變更位置與查看資訊。「異動位置」對話框會顯示目前存放位置（房間 → 櫃位）與數量，設定搬移數量後即可改房間或改櫃位。",
-            "en": "Each item card lets you edit it, adjust the quantity, change its location or view details. The move dialog shows the current location (room → cabinet) and quantity; set how many to move, then choose a new room or cabinet."
+            "zh": "物品卡片可編輯、調整數量、變更位置與查看資訊。「異動位置」對話框會顯示目前存放位置（房間 → 櫃位，例如「會議室 → 設備櫃」）與數量，設定搬移數量後即可改房間或改櫃位。",
+            "en": "Each item card lets you edit it, adjust the quantity, change its location or view details. The move dialog shows the current location (room → cabinet, for example “Meeting room → Equipment cabinet”) and quantity; set how many to move, then choose a new room or cabinet."
           },
           "image": "/images/howto/warehouse/02-move-item.png"
         }

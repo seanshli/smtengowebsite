@@ -371,8 +371,8 @@ export const enLocale = {
       homeLabel: 'At home',
       home: 'Lighting, sockets, curtains and air conditioning, plus infrared appliances such as TVs and air conditioners. Real-time sensing of temperature and humidity, air quality, presence, gas, water leaks and smoke. Camera feeds, door intercom and circuit-level power monitoring.',
       communityLabel: 'In the community',
-      communityFigure: 'Community notices in the enGo HMS app',
-      community: 'Never miss a notice, track repair requests, book facilities online, and when a parcel reaches the smart locker, open it by entering the code in the app.',
+      communityFigure: 'Notifications page on the tablet: doorbell, mailbox and parcel notices',
+      community: 'Never miss a notice, track repair requests, book facilities online, and when a parcel reaches the smart locker, tap “Open locker” in the app to open it.',
       scenes: 'Save your everyday combinations as one-tap scenes: press “Leaving home” and every light goes off, the air conditioning shuts down and security mode switches on. Or set up automations that run on a schedule or on sensor status.',
       countCard: {
         card01: { unit: '', info: 'Patented designs' },

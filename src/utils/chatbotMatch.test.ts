@@ -194,7 +194,7 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(home3.body.zh).toMatch(/手機[\s\S]*☰/)
     const dd = (howto as any).modules.find((m: any) => m.id === 'devicedata')
     expect(dd.steps[0].body.zh).toMatch(/平板：首頁右上角的第二顆圖示[\s\S]*手機：從裝置頁進入/)
-    expect((howto as any).meta.updated).toBe('2026-10-27')
+    expect((howto as any).meta.updated).toBe('2026-11-05')
     const bot = (kb as any).howto.find((e: any) => e.id === 'howto-devicedata')
     expect(bot.answer.zh).toContain('(/tutorial#howto-devicedata)')
     expect(bot.answer.zh).toMatch(/第二顆圖示/)
@@ -227,6 +227,56 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
       expect(e.answer[loc], loc).toMatch(/30/)
       expect(e.answer[loc], loc).toContain('/tutorial#howto-device')
     }
+  })
+  it('UM-001 A.17-A.20 / UM-002 A.5 / WEB-001 A.6 sync (2026-11-05): six pairing modes incl. ESP, voice on by default from 3.6.x, floor plan still not in 3.6.2, announcements under 訊息 (no 公布欄 menu), withdrawn images gone, pickup is a button not a code', () => {
+    const locs = ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']
+    const g = (kb as any).general
+    const gen = (id: string) => g.find((e: any) => e.id === id).answer
+    const fq = (id: number) => (faqs as any[]).find((f) => f.id === id).answer
+    const mod = (id: string) => (howto as any).modules.find((m: any) => m.id === id)
+    // §5 / A.17 ①: six pairing modes, 「ESP 配網」 is its own tab and 「AP 配網」 is ecosystem devices only
+    const dev = mod('device')
+    expect(dev.summary.zh).toMatch(/六種/)
+    expect(dev.summary.zh).not.toMatch(/五種/)
+    expect(dev.steps.map((s: any) => s.title.zh).join('|')).toMatch(/AP 配網（生態系裝置[\s\S]*ESP 配網/)
+    expect(dev.steps.find((s: any) => /AP 配網/.test(s.title.zh)).body.zh).toMatch(/五個節點的進程點線圖/)
+    expect((kb as any).howto.find((e: any) => e.id === 'howto-device').answer.zh).toContain('ESP 配網')
+    for (const loc of locs) {
+      expect(gen('device-pairing')[loc], loc).toMatch(/ESP/)
+      expect(gen('device-pairing')[loc], loc).not.toMatch(/五種|五种|Five methods|cinco métodos|Cinq méthodes|5 つの方式/)
+      expect(fq(1)[loc], loc).toMatch(/ESP/)
+      expect(fq(52)[loc], loc).toMatch(/ESP/)
+    }
+    // §8.1 / A.17 ③: voice is on by default from 3.6.x, but the activation method is still referred to a person (KB-001 §4, no wake word)
+    for (const loc of locs) {
+      expect(gen('voice-control')[loc], loc).toMatch(/3\.6\.x/)
+      expect(fq(31)[loc], loc).toMatch(/3\.6\.x/)
+    }
+    expect(gen('voice-control').zh).toMatch(/請洽專人/)
+    // §1.1 / §6.1 (rechecked 2026-10-18): 3.6.2 still has no floor plan
+    for (const [id, a] of [['engo-interfaces', gen('engo-interfaces')], ['floorplan-inventory', gen('floorplan-inventory')], ['faq 38', fq(38)]] as Array<[string, any]>) {
+      for (const loc of locs) {
+        expect(a[loc], `${id} ${loc}`).toMatch(/3\.6\.2/)
+        expect(a[loc], `${id} ${loc}`).not.toMatch(/3\.2\.2/)
+      }
+    }
+    // §9.2 / A.19 nav list: announcements sit under 訊息; there is no 公布欄 menu to point at
+    expect(JSON.stringify(howto)).not.toMatch(/公布欄|bulletin/)
+    expect(JSON.stringify([gen('property-management'), fq(40)])).not.toMatch(/公布欄|公布栏|bulletin|掲示板|tableau d'affichage|tablón/)
+    expect(mod('service').steps[0].body.zh).toMatch(/左側欄的工單/)
+    expect(mod('service').steps[0].body.zh).not.toMatch(/報修 →/)
+    // A.20: the announcement-detail template shot is withdrawn everywhere; every how-to image exists on disk
+    expect(JSON.stringify(howto)).not.toMatch(/announce-detail/)
+    expect(existsSync(resolve(process.cwd(), 'public/images/howto/community/03-announce-detail.png'))).toBe(false)
+    expect(existsSync(resolve(process.cwd(), 'public/images/screens/09-announcement-tablet.png'))).toBe(false)
+    for (const m of (howto as any).modules) for (const s of m.steps) if (s.image) expect(existsSync(resolve(process.cwd(), 'public' + s.image)), s.image).toBe(true)
+    for (const f of ['index.vue', 'product.vue']) expect(readFileSync(resolve(process.cwd(), 'src/views', f), 'utf-8'), f).not.toContain('09-announcement-tablet')
+    // §9.2 / A.17 ②: the locale blurbs say 開櫃取件 (button), never "enter the code"
+    for (const loc of ['zh', 'zhCN', 'en', 'ja']) {
+      const src = readFileSync(resolve(process.cwd(), `src/locale/${loc}.ts`), 'utf-8')
+      expect(src, loc).not.toMatch(/輸碼|输码|entering the code|コードを入力/)
+    }
+    expect(readFileSync(resolve(process.cwd(), 'src/locale/zh.ts'), 'utf-8')).toContain('按「開櫃取件」即可開櫃')
   })
   it('voice activation is referred to a person (KB-001 A.8 §4): no Settings path is described', () => {
     const zh = (kb as any).general.find((x: any) => x.id === 'voice-control').answer.zh as string

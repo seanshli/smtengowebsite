@@ -37,7 +37,7 @@
 
     <!-- ─── 操作指南（依功能模組）(tile 2, parchment) ───
          每個模組帶 id="howto-<模組>"，供 FAQ 與 chatbot 的 /tutorial#howto-xxx 深連結落點。
-         內容來自 src/data/howto.json，截圖為 enGo 3.2.2（489）實機擷取。 -->
+         內容來自 src/data/howto.json，截圖多數為 enGo 3.2.2（489）實機擷取，庫存管理與通知頁為較新版本重拍。 -->
     <section id="howto" class="tt-tile tt-tile-parchment howto-section">
       <div class="tt-wrap">
         <header class="tt-head-block tt-center">
@@ -237,12 +237,12 @@ const HOWTO_TEXT: Record<string, Record<string, string>> = {
     fr: 'Guides pratiques', ja: '操作ガイド', es: 'Guías de uso',
   },
   sub: {
-    zh: '依功能模組整理的圖文步驟，截圖取自 enGo 3.2.2 實機畫面。',
-    zhCN: '依功能模块整理的图文步骤，截图取自 enGo 3.2.2 实机画面。',
-    en: 'Step-by-step guides by module, with screenshots taken from enGo 3.2.2 on a real device.',
-    fr: 'Guides pas à pas par module, avec des captures réelles d\'enGo 3.2.2.',
-    ja: '機能モジュール別の手順ガイド。スクリーンショットは実機の enGo 3.2.2 から取得。',
-    es: 'Guías paso a paso por módulo, con capturas reales de enGo 3.2.2.',
+    zh: '依功能模組整理的圖文步驟，截圖取自 enGo 實機畫面，多數擷取自 3.2.2，部分已用較新版本重拍。',
+    zhCN: '依功能模块整理的图文步骤，截图取自 enGo 实机画面，多数截取自 3.2.2，部分已用较新版本重拍。',
+    en: 'Step-by-step guides by module, with screenshots taken from enGo on a real device, mostly from 3.2.2 and some re-shot on a newer version.',
+    fr: 'Guides pas à pas par module, avec des captures réelles d\'enGo, surtout de la 3.2.2 et certaines refaites sur une version plus récente.',
+    ja: '機能モジュール別の手順ガイド。スクリーンショットは実機の enGo から取得（多くは 3.2.2、一部は新しいバージョンで撮り直し）。',
+    es: 'Guías paso a paso por módulo, con capturas reales de enGo, la mayoría de la 3.2.2 y algunas rehechas en una versión más reciente.',
   },
   steps: { zh: '個步驟', zhCN: '个步骤', en: 'steps', fr: 'étapes', ja: 'ステップ', es: 'pasos' },
   pending: {
