@@ -13,8 +13,10 @@
 // annotation valid — a hreflang set whose entries all resolve to one URL is
 // discarded by Google, which is what this site used to ship.
 //
-// NOTE: keep the zh strings in sync with seo.* in src/locale/zh.ts, and the en
-// strings with src/locale/en.ts.
+// SOURCE OF TRUTH for page titles and descriptions. The zh strings are mirrored
+// in seo.* of src/locale/zh.ts and the en strings in src/locale/en.ts, because
+// seo.ts sets document.title from those after hydration; src/utils/seoParity.test.ts
+// fails when the two drift. Edit here first, then copy into the locale files.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -23,7 +25,7 @@ const BASE = 'https://www.smtengo.com'
 const EN_PREFIX = '/en'
 
 // route -> { zh: [title, desc], en: [title, desc] }
-const ROUTES = {
+export const ROUTES = {
   '/': {
     zh: ['enGo智管家 - 智慧家居第一品牌', 'enGo 是住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務，管理家中照明、空調、窗簾與感測器，以及社區公告、報修、公設預約；智管家商城提供社區訂閱與鄰里市集。'],
     en: ['enGo Smart Home: AI for Sunlight, Air, Water & Food', 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.']

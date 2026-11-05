@@ -21,32 +21,32 @@ export const enLocale = {
       description: 'This link may have changed or expired. Return to the home page, or browse our products, case studies and contact details.'
     },
     core: {
-      title: 'Core Values | The Philosophy Behind enGo',
-      description: 'Discover the core values of enGo: using AI to integrate sunlight, air, water and food into a healthier, safer smart-living experience.'
+      title: 'Core Values | The enGo Design Philosophy',
+      description: 'enGo brings sunlight, air, water and food together with AI, with health, safety and ease as the core of smart living.'
     },
     brand: {
       title: 'Brand Story | The Origin of enGo',
-      description: 'Learn the story behind enGo and why we set out to make high-quality smart living accessible to every home.'
+      description: 'How enGo began, and why we build technology that gives every household a genuinely better everyday life.'
     },
     mission: {
       title: 'Our Mission | enGo Smart Home',
-      description: 'The mission of enGo: use AIoT technology to make the smart home an affordable everyday essential for everyone.'
+      description: 'Using AIoT to make the smart home an affordable necessity rather than a luxury.'
     },
     team: {
       title: 'Leadership Team | enGo Smart Home',
-      description: 'Meet the founding team and board advisor of enGo, leadership across AI, operations, design, and technology strategy.'
+      description: 'Meet the founders and board advisor behind enGo, spanning AI, operations, design and technology strategy.'
     },
     enviro: {
       title: 'Environmental Control | enGo Smart Home',
-      description: 'enGo environmental control: dynamic daylight and temperature, air purification monitoring, smart water, and kitchen safety, one connected system.'
+      description: 'One system for sunlight and temperature, air quality, water management and kitchen safety.'
     },
     vision: {
       title: 'Our Vision | enGo Smart Home',
-      description: 'The vision of enGo: a one-stop smart-living platform uniting cloud storage, connected devices and daily provisioning to define the home of the future.'
+      description: 'Cloud storage, connected devices and everyday purchasing on a single platform for the smart home.'
     },
     ecosystem: {
-      title: 'Smart Ecosystem | enGo AIoT Platform',
-      description: 'Explore the enGo ecosystem: from AI control to smart water purification and air care, connecting every smart device in your home.'
+      title: 'Smart Ecosystem | The enGo AIoT Platform',
+      description: 'The wall tablet, the phone app and the enGo Store as three doors into one system, five product lines, and the partners behind them.'
     },
     default: {
       title: 'enGo Smart Home - Leading AIot Solutions',
@@ -58,16 +58,16 @@ export const enLocale = {
       description: 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.'
     },
     product: {
-      title: 'Product | enGo AI Smart Hub & Water Systems',
-      description: 'Explore enGo AI Smart Hub and Water Filtration systems designed for modern smart living.'
+      title: 'Products | enGo AI Hub, Water System & enGo Store',
+      description: 'The enGo AI control tablet, the Shui Wei Yang smart water system, environmental control, and the enGo Store for community subscriptions and a neighbourhood marketplace.'
     },
     cases: {
-      title: 'Cases | Smart Home Implementation Stories',
-      description: 'See real-world examples of smart home transformations helping families live better.'
+      title: 'Case Studies | enGo Installations',
+      description: 'Real homes, offices and developments running enGo, what was installed and what changed.'
     },
     tutorial: {
-      title: 'Tutorial | Empower Your Smart Life',
-      description: 'Detailed product guides and video tutorials for enGo smart home systems.'
+      title: 'Tutorials | Getting Started with enGo',
+      description: 'Step-by-step guides and videos for setting up and living with your enGo system.'
     },
     about: {
       title: 'About | Our Vision & Mission',
@@ -78,12 +78,12 @@ export const enLocale = {
       description: 'Every legal document for store customers, households, developments and partners, in Traditional Chinese and English, with a review acknowledgement form.'
     },
     contact: {
-      title: 'Contact | Inquire enGo Solutions',
-      description: 'Interested in enGo? Contact us via form or LINE for personalized smart home solutions.'
+      title: 'Contact Us | Talk to enGo',
+      description: 'Interested in enGo? Send us a message or reach us on LINE and a specialist will get back to you.'
     },
     packages: {
       title: 'Packages | enGo Smart Home',
-      description: 'Choose the best smart home package to improve comfort and security.'
+      description: 'Choose the smart home package that fits your space, your budget and how you actually live.'
     },
     login: {
       title: 'Login | enGo Management System',
