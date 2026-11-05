@@ -107,6 +107,54 @@
             </div>
           </section>
         </div>
+
+        <!-- ─── 商城使用手冊（顧客／商家／加盟店）───
+             手冊本體在 Shop repo docs/user-guide，建置後複製到 public/manuals/；
+             搜尋索引 src/data/manual-index.json 由 scripts/gen-manual-index.mjs 產生。
+             平台端手冊為內部文件，不放官網。 -->
+        <div id="manuals" class="manuals">
+          <header class="manuals-head">
+            <h2 class="tt-h3 manuals-title">{{ manualText('heading') }}</h2>
+            <p class="manuals-sub">{{ manualText('sub') }}</p>
+          </header>
+
+          <div class="manual-search" role="search">
+            <label for="manual-q" class="manual-search-label">{{ manualText('searchLabel') }}</label>
+            <input
+              id="manual-q"
+              v-model="manualQuery"
+              type="search"
+              class="manual-search-input"
+              :placeholder="manualText('placeholder')"
+              autocomplete="off"
+              @change="recordManualSearch"
+            />
+          </div>
+
+          <ol v-if="manualQuery.trim()" class="manual-results" aria-live="polite">
+            <li v-for="h in manualHits" :key="h.url" class="manual-hit">
+              <a :href="h.url" target="_blank" rel="noopener" class="manual-hit-link" @click="recordManualOpen(h.manualId, 'search')">
+                <span class="manual-hit-book">{{ pick(h.manualTitle) }}</span>
+                <span class="manual-hit-heading">{{ h.heading }}</span>
+                <span class="manual-hit-snippet">{{ h.snippet }}</span>
+              </a>
+            </li>
+            <li v-if="!manualHits.length" class="manual-empty">{{ manualText('noHits') }}</li>
+          </ol>
+
+          <div class="manual-grid">
+            <article v-for="m in manuals" :id="'manual-' + m.id" :key="m.id" class="manual-card">
+              <h3 class="manual-card-title">{{ pick(m.title) }}</h3>
+              <p class="manual-card-desc">{{ pick(m.audience) }}</p>
+              <p v-if="m.docMeta" class="manual-card-meta">{{ m.docMeta }}</p>
+              <div class="manual-card-links">
+                <a :href="m.html" target="_blank" rel="noopener" class="howto-pill" @click="recordManualOpen(m.id, 'html')">{{ manualText('read') }}</a>
+                <a :href="m.pdf" target="_blank" rel="noopener" class="howto-pill" @click="recordManualOpen(m.id, 'pdf')">{{ manualText('pdf') }}</a>
+              </div>
+            </article>
+          </div>
+          <p v-if="locale !== 'zh'" class="manual-zh-note">{{ manualText('zhOnly') }}</p>
+        </div>
       </div>
     </section>
 
@@ -218,6 +266,8 @@ import tutorialsData from '@/data/tutorials.json'
 import faqsData from '@/data/faqs.json'
 import knowledgeBaseData from '@/data/knowledge_base.json'
 import howtoData from '@/data/howto.json'
+import manualIndex from '@/data/manual-index.json'
+import { searchManuals, type ManualEntry } from '@/utils/manualSearch'
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
@@ -297,6 +347,50 @@ const openFromHash = (hash: string | undefined) => {
 }
 watch(() => route.hash, (h) => openFromHash(h))
 onMounted(() => openFromHash(route.hash || window.location.hash))
+
+// ── 商城使用手冊：卡片 + 全文搜尋（標題與內文，結果連到手冊錨點）
+const manuals = (manualIndex as any).manuals as (ManualEntry & { audience: Record<string, string>; pdf: string; docMeta: string | null })[]
+const manualQuery = ref('')
+const manualHits = computed(() => searchManuals(manuals, manualQuery.value))
+const MANUAL_TEXT: Record<string, Record<string, string>> = {
+  heading: { zh: '商城使用手冊', zhCN: '商城使用手册', en: 'Shop user manuals', fr: 'Manuels de la boutique', ja: 'ストア利用マニュアル', es: 'Manuales de la tienda' },
+  sub: {
+    zh: '智管家商城的完整操作說明，分為顧客、商家與加盟店三本，可線上閱讀或下載 PDF。',
+    zhCN: '智管家商城的完整操作说明，分为顾客、商家与加盟店三本，可在线阅读或下载 PDF。',
+    en: 'Complete guides to the enGo Store for customers, merchants and franchise stores. Read online or download the PDF.',
+    fr: 'Guides complets de la boutique enGo pour les clients, les commerçants et les franchisés, en ligne ou en PDF.',
+    ja: 'enGo ストアの操作説明。顧客・店舗・フランチャイズ店の 3 冊をオンラインまたは PDF で。',
+    es: 'Guías completas de la tienda enGo para clientes, comercios y franquicias, en línea o en PDF.',
+  },
+  searchLabel: { zh: '搜尋手冊', zhCN: '搜索手册', en: 'Search the manuals', fr: 'Rechercher dans les manuels', ja: 'マニュアルを検索', es: 'Buscar en los manuales' },
+  placeholder: { zh: '例如：到貨通知、繼續付款、加盟店撥款', zhCN: '例如：到货通知、继续付款、加盟店拨款', en: 'e.g. 到貨通知, 退款, 加盟店', fr: 'ex. 到貨通知, 退款', ja: '例：到貨通知、退款', es: 'p. ej. 到貨通知, 退款' },
+  noHits: { zh: '找不到相關章節，請換個說法或直接開啟手冊。', zhCN: '找不到相关章节，请换个说法或直接打开手册。', en: 'No matching section. Try other words or open a manual.', fr: 'Aucune section trouvée. Essayez d\'autres mots.', ja: '該当する章がありません。別の言葉でお試しください。', es: 'No hay secciones que coincidan. Pruebe otras palabras.' },
+  read: { zh: '線上閱讀', zhCN: '在线阅读', en: 'Read online', fr: 'Lire en ligne', ja: 'オンラインで読む', es: 'Leer en línea' },
+  pdf: { zh: '下載 PDF', zhCN: '下载 PDF', en: 'Download PDF', fr: 'Télécharger le PDF', ja: 'PDF をダウンロード', es: 'Descargar PDF' },
+  zhOnly: {
+    zh: '',
+    zhCN: '手册目前为繁体中文版。',
+    en: 'The manuals are currently in Traditional Chinese only.',
+    fr: 'Les manuels sont pour l\'instant en chinois traditionnel uniquement.',
+    ja: 'マニュアルは現在、繁体字中国語のみです。',
+    es: 'Por ahora, los manuales solo están en chino tradicional.',
+  },
+}
+const manualText = (k: string) => MANUAL_TEXT[k][locale.value] ?? MANUAL_TEXT[k].zh
+const recordManualOpen = (id: string, via: 'html' | 'pdf' | 'search') => {
+  trackEvent('manual_open', { manual: id, via, locale: locale.value })
+}
+// One row per committed search (change = Enter/blur), same table as the chatbot.
+const recordManualSearch = () => {
+  const q = manualQuery.value.trim().slice(0, 100)
+  if (!q) return
+  trackEvent('manual_search', { query: q, hits: manualHits.value.length })
+  fetch('/api/chatbot-query', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ keyword: 'manual:' + q, locale: locale.value, matchFound: manualHits.value.length > 0 }),
+  }).catch(() => { /* analytics must never break the page */ })
+}
 
 // --- Dynamic FAQ ---
 const openFaqId = ref<number | null>(null)
@@ -562,6 +656,36 @@ onUnmounted(() => {
   &.active { background: $brand-orange-text; color: #fff; }
 }
 .howto-list { max-width: 980px; margin: 0 auto; }
+/* 商城使用手冊 (inside the 操作指南 tile) */
+.manuals { max-width: 980px; margin: 64px auto 0; scroll-margin-top: 96px; }
+.manuals-head { text-align: center; margin-bottom: 24px; }
+.manuals-title { font-size: 1.75rem; font-weight: 600; letter-spacing: -.02em; color: $ink; margin: 0 0 8px; }
+.manuals-sub { color: $ink-80; font-size: 1.0625rem; line-height: 1.47; margin: 0; }
+.manual-search { display: flex; flex-direction: column; gap: 8px; max-width: 640px; margin: 0 auto 16px; }
+.manual-search-label { font-size: .875rem; color: $ink-80; }
+.manual-search-input {
+  width: 100%; min-height: 48px; padding: 12px 18px; border: 1px solid $hairline; border-radius: 9999px;
+  font: inherit; font-size: 1.0625rem; color: $ink; background: #fff;
+  &:focus { outline: 2px solid $brand-orange-text; outline-offset: 2px; }
+}
+.manual-results { list-style: none; max-width: 760px; margin: 0 auto 28px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.manual-hit-link {
+  display: flex; flex-direction: column; gap: 4px; padding: 14px 18px; border-radius: 18px; background: #fff;
+  border: 1px solid $hairline; text-decoration: none; color: inherit;
+  &:hover { border-color: $brand-orange-text; }
+}
+.manual-hit-book { font-size: .8125rem; color: $brand-orange-text; }
+.manual-hit-heading { font-size: 1.125rem; font-weight: 600; color: $ink; }
+.manual-hit-snippet { font-size: .9375rem; line-height: 1.5; color: $ink-80; overflow-wrap: anywhere; }
+.manual-empty { text-align: center; color: $ink-80; padding: 8px 0; }
+.manual-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.manual-card { display: flex; flex-direction: column; gap: 8px; padding: 24px; border-radius: 18px; background: #fff; border: 1px solid $hairline; }
+.manual-card-title { font-size: 1.25rem; font-weight: 600; color: $ink; margin: 0; }
+.manual-card-desc { color: $ink-80; line-height: 1.47; margin: 0; flex: 1; }
+.manual-card-meta { font-size: .75rem; color: $ink-80; margin: 0; overflow-wrap: anywhere; }
+.manual-card-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.manual-zh-note { text-align: center; color: $ink-80; font-size: .875rem; margin-top: 16px; }
+
 .howto-module { scroll-margin-top: 96px; border-top: 1px solid $hairline; &:first-of-type { border-top: 0; } &:last-of-type { border-bottom: 1px solid $hairline; } }
 .howto-module-head {
   display: flex; align-items: center; justify-content: space-between; gap: 20px;

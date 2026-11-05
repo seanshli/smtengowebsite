@@ -124,15 +124,15 @@ describe('processLineEvents', () => {
     expect(log.mock.calls.map((c: any) => c[0])).toEqual(['商城退款多久會入帳', 'shop:refund-timing'])
   })
 
-  it('falls back to the local shop answer when Shop has nothing', async () => {
+  it('falls back to the local shop how-to when Shop has nothing', async () => {
     const reply = vi.fn(async () => 200)
     const askShop = vi.fn(async () => null)
     const out = await processLineEvents([
       { type: 'message', replyToken: 'r3', source: { type: 'user' }, message: { type: 'text', text: '商城缺貨怎麼辦' } },
     ], { reply, askShop })
     expect(askShop).toHaveBeenCalled()
-    expect(out[0]).toMatchObject({ matched: true, id: 'shop-platform' })
-    expect((reply.mock.calls[0] as any)[1][0]).toContain(SHOP_URL)
+    expect(out[0]).toMatchObject({ matched: true, id: 'howto-shopstock' })
+    expect((reply.mock.calls[0] as any)[1][0]).toContain('到貨通知我')
   })
 
   it('does not ask Shop for a plain what-is-the-shop question', async () => {

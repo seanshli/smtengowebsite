@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "gen:knowledge": "node scripts/gen-knowledge-md.mjs",
+    "gen:manuals": "node scripts/gen-manual-index.mjs",
     "legal:check": "node scripts/legal-register.mjs check",
     "legal:bump": "node scripts/legal-register.mjs bump",
     "legal:register": "node scripts/legal-register.mjs register",
