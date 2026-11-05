@@ -1,11 +1,11 @@
 <template>
   <!-- ed-footer: Apple dense-link footer on parchment. Plain-text columns,
-       display-font wordmark, text social links, no rules. -->
+       the vector wordmark with a living eye (FooterMark), text social links, no rules. -->
   <footer class="ed-footer">
     <div class="ft-inner">
       <div class="ft-top">
         <div class="ft-brand">
-          <p class="ft-word">enGo</p>
+          <FooterMark :label="isZh ? 'enGo 首頁' : 'enGo home'" />
           <p class="ft-tag">
             {{ isZh ? '把智慧生活，寫進每一天。' : 'Smart living, written into every day.' }}
           </p>
@@ -79,9 +79,11 @@
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+import FooterMark from '../components/FooterMark.vue'
 
 export default defineComponent({
   name: 'Footer',
+  components: { FooterMark },
   setup() {
     const { t, locale } = useI18n()
     const router = useRouter()
@@ -133,17 +135,8 @@ export default defineComponent({
   flex-wrap: wrap;
 }
 
-.ft-word {
-  font-family: $display-font;
-  font-weight: 600;
-  font-size: clamp(3rem, 7vw, 5rem);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: $ink;
-}
-
 .ft-tag {
-  margin-top: 14px;
+  margin-top: 18px;
   font-weight: 400;
   font-size: 17px;
   line-height: 1.47;

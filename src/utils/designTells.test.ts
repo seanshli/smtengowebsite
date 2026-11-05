@@ -228,3 +228,21 @@ describe('home is alive, not a template (design pass 2026-11-05, "more active, n
         expect(src).toContain("capWarehouse: '庫存管理'")
     })
 })
+
+describe('footer carries the real wordmark, alive but quiet (2026-11-05, "too simple, make it more visible")', () => {
+    const footer = readFileSync(resolve(__dirname, '../layout/footer.vue'), 'utf-8')
+    const mark = readFileSync(resolve(__dirname, '../components/FooterMark.vue'), 'utf-8')
+    it('uses the vector logo, not typed text, and links home with a label', () => {
+        expect(footer).toContain('<FooterMark')
+        expect(footer).not.toMatch(/class="ft-word"/)
+        // same geometry as the header logo, so the two can never disagree
+        const logo = readFileSync(resolve(__dirname, '../assets/logo.svg'), 'utf-8')
+        for (const d of logo.match(/ d="[^"]+"/g) || []) expect(mark).toContain(d)
+        expect(mark).toMatch(/<router-link to="\/" class="fm" :aria-label="label"/)
+    })
+    it('only the eye moves, and nothing moves under reduced motion', () => {
+        expect(mark).toMatch(/prefers-reduced-motion: reduce\)'\)\.matches\) return/)
+        expect(mark).toContain('IntersectionObserver')
+        expect(mark).toMatch(/\.fm-iris \{\s*fill: \$brand-orange;/)
+    })
+})
