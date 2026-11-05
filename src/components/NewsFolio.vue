@@ -21,14 +21,13 @@
         <div v-else class="folio-plate folio-plate--bare" aria-hidden="true">
           <span class="folio-watermark">enGo</span>
         </div>
-        <figcaption v-if="current" class="folio-plate-cap">
-          <span class="folio-plate-brand">{{ $t('brandJournal') }}</span>
-          <!-- Every news plate is our own illustration, not a photo of the
-               event or of a partner's product. Say so rather than imply it. -->
-          <span v-if="current.image" class="folio-plate-note">
+        <!-- Every news plate is our own illustration, not a photo of the event or of a
+             partner's product. Say so rather than imply it. Brand and date are on the
+             page's masthead already; repeating them here read as a duplicate. -->
+        <figcaption v-if="current && current.image" class="folio-plate-cap">
+          <span class="folio-plate-note">
             {{ locale.startsWith('zh') ? '示意圖' : 'Illustration' }}
           </span>
-          <time>{{ formatDate(current.date) }}</time>
         </figcaption>
       </div>
 
@@ -58,7 +57,6 @@
           </div>
 
           <footer class="folio-foot">
-            <span class="folio-pageno">{{ i + 1 }} ／ {{ items.length }}</span>
             <span v-if="i < items.length - 1" class="folio-corner" aria-hidden="true"></span>
           </footer>
 
@@ -442,10 +440,6 @@ export default defineComponent({
   color: $ink-80;
 }
 
-.folio-plate-brand {
-  color: $ink-80;
-}
-
 .folio-plate-note {
   margin-right: auto;
   font-size: 14px;
@@ -484,14 +478,11 @@ export default defineComponent({
 .folio-foot {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // The count lives once, in .folio-controls; a second "1 ／ 8" printed on the page
+  // read as a duplicate (review 2026-11-05). The corner keeps the right edge.
+  justify-content: flex-end;
   padding-top: 10px;
   margin-top: clamp(10px, 2vw, 16px);
-
-  .folio-pageno {
-    font-size: 14px;
-    color: $ink-80;
-  }
 
   // small orange corner inviting the turn
   .folio-corner {
