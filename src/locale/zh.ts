@@ -39,7 +39,7 @@ export const zhLocale = {
     },
     enviro: {
       title: '智慧環控 | enGo智管家',
-      description: '整合陽光、空氣、水與智慧廚房的全方位環控方案：動態控溫、空氣淨化監測、智慧水務與廚房安全，一套系統全部連動。'
+      description: '整合陽光、空氣、水與智慧廚房的全方位環控方案：動態控溫、空氣淨化監測、智慧水務與廚房安全。'
     },
     vision: {
       title: '未來願景 | enGo智管家',
@@ -47,7 +47,7 @@ export const zhLocale = {
     },
     ecosystem: {
       title: '智慧生態系 | enGo AIoT 整合平台',
-      description: '探索 enGo 智慧生態系，從 AI 中控、智慧淨水到空氣清淨，串連家中每一個智慧裝置。'
+      description: '探索 enGo 智慧生態系：牆掛平板、手機 App 與智管家商城三個入口，五條產品線與合作夥伴，串連家中每一個智慧裝置。'
     },
     default: {
       title: 'enGo智管家 - 智慧家居第一品牌',
@@ -59,8 +59,8 @@ export const zhLocale = {
       description: 'enGo 是住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務，管理家中照明、空調、窗簾與感測器，以及社區公告、報修、公設預約；智管家商城提供社區訂閱與鄰里市集。'
     },
     product: {
-      title: '產品介紹 | enGo AI智慧中控系統 & 淨水系統',
-      description: '探索 enGo AI智慧中控平板與水維氧智慧淨水系統，提升家居舒適度與安全性。'
+      title: '產品介紹 | enGo AI智慧中控系統、淨水系統與智管家商城',
+      description: '探索 enGo AI智慧中控平板、水維氧智慧淨水系統與智慧環控，以及智管家商城的社區訂閱與鄰里市集。'
     },
     cases: {
       title: '案例分享 | 智慧家居實作紀錄',
