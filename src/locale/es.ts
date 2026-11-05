@@ -54,8 +54,8 @@ export const esLocale = {
       keywords: 'enGo, Hogar Inteligente, AIot, Purificador de Agua, Automatización del Hogar'
     },
     home: {
-      title: 'Inicio | enGo Hogar Inteligente - Soluciones AIot Líderes',
-      description: 'enGo utiliza tecnología AI para hacer tu hogar más saludable y seguro. Almacenamiento en la nube integrado y gestión de dispositivos.'
+      title: 'enGo Hogar Inteligente - Soluciones AIot Líderes',
+      description: 'enGo une el hogar y la comunidad: tableta de pared, app móvil y servicios en la nube para iluminación, aire acondicionado, cortinas y sensores, además de avisos de la comunidad, solicitudes de reparación y reserva de espacios comunes.'
     },
     product: {
       title: 'Producto | Centro Inteligente AI de enGo y Sistemas de Agua',

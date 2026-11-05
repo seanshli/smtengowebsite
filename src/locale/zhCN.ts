@@ -55,8 +55,8 @@ export const zhCNLocale = {
       keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 净水器, 云端仓储'
     },
     home: {
-      title: '首页 | enGo智管家 - 智慧家居第一品牌',
-      description: 'enGo智管家用AI技术让家更健康、更安心。整合云端仓储、联网设备管理与生活采购。'
+      title: 'enGo智管家 - 智慧家居第一品牌',
+      description: 'enGo 是住家与社区合一的智慧生活系统：墙挂平板、手机 App 与云端服务，管理家中照明、空调、窗帘与传感器，以及社区公告、报修、公设预约。'
     },
     product: {
       title: '产品介绍 | enGo AI智慧中控系统 & 净水系统',
