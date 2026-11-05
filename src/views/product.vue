@@ -14,7 +14,7 @@
           <!-- A tagline, not a section heading. -->
           <p class="pd-tagline">{{ $t('product.tablet_intro.tagline') }}</p>
           <p class="pd-sub">
-            <img class="pd-mark" src="/images/logo_darkblue.svg" alt="enGo" />
+            <img class="pd-mark" src="/assets/logo.svg" alt="enGo" />
             {{ $t('product.tablet_intro.info') }}
           </p>
         </div>
@@ -28,7 +28,7 @@
         <div class="pd-wrap">
           <header class="pd-head pd-center" data-reveal>
             <h2 class="pd-h2">
-              <img class="pd-h2-logo" src="/images/logo_darkblue.svg" alt="enGo" />
+              <img class="pd-h2-logo" src="/assets/logo.svg" alt="enGo" />
               {{ $t('product.brand_intro.title') }}
             </h2>
           </header>
