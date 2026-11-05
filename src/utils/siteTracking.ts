@@ -74,11 +74,27 @@ function emit(event: string, params: Record<string, any>) {
     recordSiteEvent(event, params)
 }
 
+// A tab left open and auto-reloading (kiosk, monitor) inflated page_view 10x on /contact
+// (weekly review 2026-11-02). Count each path once per tab per 30 minutes; sessionStorage
+// survives reloads in the same tab, and a new visit in a new tab still counts.
+export const PAGE_VIEW_WINDOW_MS = 30 * 60 * 1000
+function seenRecently(page: string): boolean {
+    try {
+        const key = 'smtengo_pv:' + page
+        const last = Number(sessionStorage.getItem(key) || 0)
+        const now = Date.now()
+        if (last && now - last < PAGE_VIEW_WINDOW_MS) return true
+        sessionStorage.setItem(key, String(now))
+    } catch { /* storage blocked: count it */ }
+    return false
+}
+
 /** Called by utils/analytics.ts for every trackEvent. Cheap no-op for events we do not keep. */
 export function recordSiteEvent(event: string, params: Record<string, any> = {}) {
     if (disabled || !KEEP.has(event) || typeof window === 'undefined' || isInternalTraffic()) return
     // page_view carries the target path itself (router.afterEach fires before the URL settles here).
     const page = clip(params.page_path, 200) || pagePath()
+    if (event === 'page_view' && seenRecently(page)) return
     // Chatbot searches are free text typed by visitors: keep the event, drop the text.
     const label = event === 'chatbot_search' ? undefined
         : clip(params.label ?? params.location ?? params.module ?? params.faq_id ?? params.case_id ?? params.category ?? params.href ?? params.depth ?? params.tutorial_id ?? params.productType)

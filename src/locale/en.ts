@@ -54,8 +54,8 @@ export const enLocale = {
       keywords: 'enGo, Smart Home, AIot, Water Purifier, Home Automation'
     },
     home: {
-      title: 'Home | enGo Smart Home - Leading AIot Solutions',
-      description: 'enGo uses AI technology to make your home healthier and safer. Integrated cloud storage and device management.'
+      title: 'enGo Smart Home: AI for Sunlight, Air, Water & Food',
+      description: 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.'
     },
     product: {
       title: 'Product | enGo AI Smart Hub & Water Systems',

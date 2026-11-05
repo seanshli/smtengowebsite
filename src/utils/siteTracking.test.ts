@@ -214,4 +214,37 @@ describe('useAnalytics', () => {
         expect(isInternalTraffic()).toBe(false)
     })
   })
+
+  describe('page_view de-duplication (kiosk tab, weekly review 2026-11-02)', () => {
+    let fetchMock: ReturnType<typeof vi.fn>
+    beforeEach(() => {
+      vi.resetModules()
+      vi.useFakeTimers()
+      sessionStorage.clear()
+      fetchMock = vi.fn().mockResolvedValue({ status: 200, json: vi.fn().mockResolvedValue({}) })
+      vi.stubGlobal('fetch', fetchMock)
+      window.history.replaceState({}, '', '/')
+    })
+    afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals() })
+
+    it('counts the same path once per tab within 30 minutes', async () => {
+      const { flush, recordSiteEvent } = await import('./siteTracking')
+      recordSiteEvent('page_view', { page_path: '/contact' })
+      recordSiteEvent('page_view', { page_path: '/contact' })
+      recordSiteEvent('page_view', { page_path: '/product' })
+      flush(false)
+      const events = fetchMock.mock.calls.flatMap((c: any[]) => JSON.parse(c[1].body).events)
+      expect(events.filter((e: any) => e.event === 'page_view').map((e: any) => e.page)).toEqual(['/contact', '/product'])
+    })
+
+    it('counts the path again after the window', async () => {
+      const { flush, recordSiteEvent, PAGE_VIEW_WINDOW_MS } = await import('./siteTracking')
+      recordSiteEvent('page_view', { page_path: '/contact' })
+      vi.setSystemTime(Date.now() + PAGE_VIEW_WINDOW_MS + 1000)
+      recordSiteEvent('page_view', { page_path: '/contact' })
+      flush(false)
+      const events = fetchMock.mock.calls.flatMap((c: any[]) => JSON.parse(c[1].body).events)
+      expect(events.filter((e: any) => e.event === 'page_view')).toHaveLength(2)
+    })
+  })
 })

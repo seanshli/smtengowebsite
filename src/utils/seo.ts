@@ -1,6 +1,7 @@
 import { nextTick } from 'vue'
 import type { RouteLocationNormalized } from 'vue-router'
 import { i18n } from '../main'
+import { rawMessageIn } from './rawMessage'
 
 const LOCALE_TO_HTML_LANG: Record<string, string> = {
   zh: 'zh-TW',
@@ -39,9 +40,16 @@ export function useSeo() {
 
     const locale = i18n.global.locale.value as string
 
-    // Translation helper
+    // Translation helper. Titles are written "頁名 | enGo智管家 …", and vue-i18n treats
+    // " | " as a plural separator: t() silently returned only the first segment, so
+    // every rendered <title>/og:title was a bare "首頁" / "Product" (found 2026-11-05;
+    // Google renders JS, so search results showed the bare word). Read the raw string
+    // from the locale messages instead and only fall back to t() for non-strings.
     const t = (key: string, def: string) => {
       if (!key) return def
+      const g = i18n.global as any
+      const raw = rawMessageIn(g.getLocaleMessage(locale), key) ?? rawMessageIn(g.getLocaleMessage('zh'), key)
+      if (typeof raw === 'string' && raw) return raw
       const val = i18n.global.t(key)
       return val === key ? def : val
     }

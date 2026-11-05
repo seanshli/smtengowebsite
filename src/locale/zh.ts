@@ -52,11 +52,11 @@ export const zhLocale = {
     default: {
       title: 'enGo智管家 - 智慧家居第一品牌',
       description: 'enGo「安購」運用 AI 將陽光、空氣、水與食物智慧整合，打造一站式智慧生活平台。',
-      keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 淨水器, 雲端倉儲'
+      keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 淨水器, 庫存管理'
     },
     home: {
-      title: '首頁 | enGo智管家 - 智慧家居第一品牌',
-      description: 'enGo智管家用AI技術讓家更健康、更安心。整合雲端倉儲、聯網設備管理與生活採購。'
+      title: 'enGo智管家 - 智慧家居第一品牌',
+      description: 'enGo 是住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務，管理家中照明、空調、窗簾與感測器，以及社區公告、報修、公設預約；智管家商城提供社區訂閱與鄰里市集。'
     },
     product: {
       title: '產品介紹 | enGo AI智慧中控系統 & 淨水系統',

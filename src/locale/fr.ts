@@ -66,8 +66,8 @@ export const frLocale = {
       keywords: 'enGo, Maison intelligente, AIot, Purificateur d\'eau, Domotique'
     },
     home: {
-      title: 'Accueil | enGo Smart Home - Solutions AIot de pointe',
-      description: 'enGo utilise l\'IA pour rendre votre maison plus saine et plus sûre.'
+      title: 'enGo Smart Home - Solutions AIot de pointe',
+      description: 'enGo réunit la maison et la résidence : tablette murale, application mobile et services cloud pour l\'éclairage, la climatisation, les rideaux et les capteurs, ainsi que les avis de résidence, les demandes de réparation et la réservation des espaces communs.'
     },
     product: {
       title: 'Produit | enGo AI Smart Hub & Systèmes d\'eau',
