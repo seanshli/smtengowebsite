@@ -205,3 +205,26 @@ describe('no em-dash or en-dash in user-visible copy (polish/no-dashes, 2026-09-
         expect(failures, failures.join('\n')).toEqual([])
     })
 })
+
+describe('home is alive, not a template (design pass 2026-11-05, "more active, not so AI like")', () => {
+    const src = readFileSync(resolve(views, 'index.vue'), 'utf-8')
+    const t = templateOf('index.vue')
+    it('hero pairs the copy with enGo\'s own living-house loop, muted and inline, with a poster', () => {
+        expect(t).toContain('/videos/hero-loop.mp4')
+        expect(t).toMatch(/<video[^>]*\bmuted\b[^>]*\bplaysinline\b[^>]*poster="\/images\/hero-home\.jpg"/)
+        expect(t).not.toMatch(/hm-hero-figure/)
+        expect(existsSync(resolve(__dirname, '../../public/videos/hero-loop.mp4'))).toBe(true)
+    })
+    it('the day player is a real tablist over the real scenes screen and respects reduced motion', () => {
+        expect(t).toMatch(/role="tablist"/)
+        expect(t).toMatch(/role="tab"/)
+        expect(t).toMatch(/:aria-selected="i === day"/)
+        expect(src).toMatch(/dayAuto\.value = !reducedMotion\(\)/)
+        expect(src).toMatch(/prefers-reduced-motion: reduce/)
+        expect(src).toMatch(/const DAY_RING = \[53\.45, 32\.45, 11\.4, 74\.5\]/)
+    })
+    it('names the feature as the manual does (UM-001 A.19 §12 庫存管理), not 智慧倉儲', () => {
+        expect(src).not.toMatch(/智慧倉儲|智慧仓储/)
+        expect(src).toContain("capWarehouse: '庫存管理'")
+    })
+})
