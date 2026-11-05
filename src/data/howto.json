@@ -701,6 +701,370 @@
         }
       ],
       "imagesPending": false
+    },
+    {
+      "id": "shopbuy",
+      "order": 11,
+      "icon": "cart",
+      "group": "shop",
+      "title": {
+        "zh": "商城：購物、付款與繼續付款",
+        "en": "Store: shopping, payment and resuming payment"
+      },
+      "summary": {
+        "zh": "在智管家商城（網站或 Android 的 enGo Shop App）選購、結帳，以信用卡付款；付款中斷時用「繼續付款」完成。",
+        "en": "Shop on the enGo Store (website or the enGo Shop app for Android), check out, and pay by credit card. If payment is interrupted, finish it with 繼續付款 (resume payment)."
+      },
+      "steps": [
+        {
+          "title": {
+            "zh": "加入購物車並結帳",
+            "en": "Add to cart and check out"
+          },
+          "body": {
+            "zh": "在商品頁點「加入購物車」，可同時選購不同店家的商品。到「購物車」確認數量後點「結帳」，確認收件資訊後點「前往付款」。",
+            "en": "On a product page tap 加入購物車 (add to cart); items from several shops can share one cart. In 購物車, check the quantities, tap 結帳, confirm the delivery details and tap 前往付款 (go to payment)."
+          }
+        },
+        {
+          "title": {
+            "zh": "以信用卡付款",
+            "en": "Pay by credit card"
+          },
+          "body": {
+            "zh": "目前付款方式為信用卡，由綠界 ECPay 處理，網站與 App 相同；ATM 轉帳與超商代碼暫不提供。訂閱方案同樣以信用卡定期扣款。",
+            "en": "Payment is by credit card, processed by ECPay, on both the website and the app. ATM transfer and convenience-store payment are not offered at present. Subscription plans renew on the same card."
+          }
+        },
+        {
+          "title": {
+            "zh": "完成銀行驗證（3D 驗證）",
+            "en": "Complete the bank check (3-D Secure)"
+          },
+          "body": {
+            "zh": "部分發卡銀行會要求輸入簡訊驗證碼。網站會在付款頁或新視窗開啟驗證頁，App 會開啟「銀行驗證」視窗；完成前請勿關閉。視窗沒出現時，網站請允許彈出式視窗，App 請更新到最新版本。",
+            "en": "Some card issuers ask for a one-time code sent by SMS. On the website the bank page opens on the payment page or in a new window; in the app it opens in a 銀行驗證 window. Keep it open until the check finishes. If it does not appear, allow pop-ups on the website or update the app."
+          }
+        },
+        {
+          "title": {
+            "zh": "付款中斷時「繼續付款」",
+            "en": "Resume an unpaid order"
+          },
+          "body": {
+            "zh": "沒有完成付款的訂單會顯示為待付款。到「我的訂單」打開該訂單，點「繼續付款」即可再付一次。系統為待付款訂單保留商品約 60 分鐘，逾時會自動取消並放回庫存。",
+            "en": "An order that was not paid shows as unpaid. Open it in 我的訂單 (my orders) and tap 繼續付款 to pay again. Items are held for an unpaid order for about 60 minutes; after that the order is cancelled automatically and the items return to stock."
+          }
+        }
+      ],
+      "tips": [
+        {
+          "zh": "商品缺貨、團購已結束，或訂單金額未達 NT$5 時無法繼續付款，請取消訂單後重新結帳。",
+          "en": "Resuming is not possible when an item is out of stock, the group buy has ended, or the order is under NT$5; cancel the order and check out again."
+        },
+        {
+          "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "en": "Full details are in the Shop user manuals further down this page."
+        }
+      ]
+    },
+    {
+      "id": "shopstock",
+      "order": 12,
+      "icon": "box",
+      "group": "shop",
+      "title": {
+        "zh": "商城：缺貨、到貨通知與接單生產",
+        "en": "Store: out of stock, restock alerts and made-to-order"
+      },
+      "summary": {
+        "zh": "商城只販售實際有庫存的數量。缺貨商品可登記「到貨通知我」，補貨後通知您；「接單生產」商品則可隨時下單。",
+        "en": "The store sells only units that are in stock. For an out-of-stock item, register 到貨通知我 to be told when it is back; made-to-order items can be ordered at any time."
+      },
+      "steps": [
+        {
+          "title": {
+            "zh": "看懂庫存狀態",
+            "en": "Read the stock status"
+          },
+          "body": {
+            "zh": "商品頁顯示「缺貨／待補貨」時暫時無法購買，也無法付款，不會先收款再等補貨。購物車中有商品缺貨或數量不足時，結帳前會提示調整或移除。",
+            "en": "When a product page shows 缺貨／待補貨 the item cannot be bought or paid for; payment is never taken in advance of restocking. If the cart holds an item that is out of stock or short, checkout asks for the quantity to be changed or the item removed."
+          }
+        },
+        {
+          "title": {
+            "zh": "登記「到貨通知我」",
+            "en": "Register a restock alert"
+          },
+          "body": {
+            "zh": "登入後在缺貨商品頁點「到貨通知我」，畫面會顯示「已登記到貨通知」。補貨後會以 App 推播通知一次，並留在「通知」頁；通知只在 09:00 至 21:00 發送，且不保留商品。",
+            "en": "After signing in, tap 到貨通知我 on the out-of-stock product; it then shows 已登記到貨通知. When stock returns, one push notification is sent and also kept on the 通知 page. Alerts go out between 09:00 and 21:00 and do not reserve the item."
+          }
+        },
+        {
+          "title": {
+            "zh": "「接單生產」商品",
+            "en": "Made-to-order items"
+          },
+          "body": {
+            "zh": "標示「接單生產」的商品由店家接單後製作或備貨，不受庫存數量限制，不會顯示缺貨。出貨時間以商品頁或店家說明為準。",
+            "en": "Items marked 接單生產 are made or sourced after the order, so they are not limited by stock and never show as out of stock. Shipping time follows the product page or the shop's notes."
+          }
+        }
+      ],
+      "tips": [
+        {
+          "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "en": "Full details are in the Shop user manuals further down this page."
+        }
+      ]
+    },
+    {
+      "id": "shoporders",
+      "order": 13,
+      "icon": "receipt",
+      "group": "shop",
+      "title": {
+        "zh": "商城：訂單、取消與退款",
+        "en": "Store: orders, cancellations and refunds"
+      },
+      "summary": {
+        "zh": "在「我的訂單」追蹤進度、取消訂單或申請退貨退款；退款一律經平台核准後原路退回信用卡。",
+        "en": "Track orders, cancel them, or request a return or refund in 我的訂單. Every refund is approved by the platform and returned to the original card."
+      },
+      "steps": [
+        {
+          "title": {
+            "zh": "追蹤訂單進度",
+            "en": "Track an order"
+          },
+          "body": {
+            "zh": "在「我的訂單」打開訂單明細，進度依序為「已下單」「已付款」「備貨中」「配送中」「已送達大廳」（宅配為「已送達」）。送達後會收到通知，再到社區大廳或管理室領取。",
+            "en": "Open an order in 我的訂單 to see it move through 已下單 (placed), 已付款 (paid), 備貨中 (being prepared), 配送中 (on the way) and 已送達大廳 (at the lobby; 已送達 for home delivery). A notification follows delivery; collect the parcel at the lobby or management office."
+          }
+        },
+        {
+          "title": {
+            "zh": "取消訂單",
+            "en": "Cancel an order"
+          },
+          "body": {
+            "zh": "在訂單頁點「取消訂單」。已付款的訂單取消後，系統會自動送出退款申請，審核通過後款項原路退回。",
+            "en": "Tap 取消訂單 on the order page. Cancelling a paid order sends a refund request automatically; once approved, the money goes back to the original card."
+          }
+        },
+        {
+          "title": {
+            "zh": "申請退貨或退款",
+            "en": "Request a return or refund"
+          },
+          "body": {
+            "zh": "在符合條件的訂單點「申請退貨」或「申請退款」，說明原因後「送出申請」，由平台審核。生鮮等商品另有例外規定，請以退換貨政策為準。",
+            "en": "On an eligible order tap 申請退貨 (return) or 申請退款 (refund), give the reason and tap 送出申請. The platform reviews each request; perishable goods follow the exceptions in the returns policy."
+          }
+        },
+        {
+          "title": {
+            "zh": "退款入帳",
+            "en": "When the refund arrives"
+          },
+          "body": {
+            "zh": "核准後訂單顯示「退款處理中，款項將退回原付款方式」。信用卡退款依發卡銀行作業，通常需數個工作天入帳。",
+            "en": "After approval the order shows 退款處理中，款項將退回原付款方式 (refund in progress, back to the original payment method). Card refunds depend on the issuing bank and usually take several working days."
+          }
+        }
+      ],
+      "tips": [
+        {
+          "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "en": "Full details are in the Shop user manuals further down this page."
+        }
+      ]
+    },
+    {
+      "id": "shopnotify",
+      "order": 14,
+      "icon": "bell",
+      "group": "shop",
+      "title": {
+        "zh": "商城：通知",
+        "en": "Store: notifications"
+      },
+      "summary": {
+        "zh": "訂單、付款、配送、訂閱與到貨通知的消息，都集中在網站與 App 的「通知」頁。",
+        "en": "Order, payment, delivery, subscription and restock messages are collected on the 通知 page of the website and the app."
+      },
+      "steps": [
+        {
+          "title": {
+            "zh": "開啟「通知」頁",
+            "en": "Open the notifications page"
+          },
+          "body": {
+            "zh": "網站請點頁首的「通知」鈴鐺，或從「我的 → 通知」進入；App 請開啟「通知」頁。",
+            "en": "On the website, tap the 通知 bell in the header or go to 我的 → 通知; in the app, open the 通知 page."
+          }
+        },
+        {
+          "title": {
+            "zh": "分類與已讀",
+            "en": "Categories and read status"
+          },
+          "body": {
+            "zh": "可依「全部」「訂單」「配送」「訂閱」「提醒」分類查看；未讀消息會標示，可一次「全部標為已讀」。通知保留 90 天。",
+            "en": "Filter by 全部, 訂單, 配送, 訂閱 or 提醒 (all, orders, delivery, subscriptions, reminders). Unread items are marked, and 全部標為已讀 clears them all. Notifications are kept for 90 days."
+          }
+        },
+        {
+          "title": {
+            "zh": "沒收到推播時",
+            "en": "When no push arrives"
+          },
+          "body": {
+            "zh": "請到手機設定確認已允許 enGo Shop 傳送通知。即使沒有推播，消息仍會出現在「通知」頁。",
+            "en": "Check in the phone's settings that enGo Shop may send notifications. Messages still appear on the 通知 page even without a push."
+          }
+        }
+      ],
+      "tips": [
+        {
+          "zh": "社區公告與包裹等大樓消息在 enGo 智慧管家 App 的公布欄與訊息查看，請見上方「社區公告與訊息」。",
+          "en": "Building messages such as announcements and parcels are in the enGo HMS app; see Community Announcements & Messages above."
+        },
+        {
+          "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "en": "Full details are in the Shop user manuals further down this page."
+        }
+      ]
+    },
+    {
+      "id": "shopmerchant",
+      "order": 15,
+      "icon": "store",
+      "group": "shop",
+      "title": {
+        "zh": "商家：商品與庫存",
+        "en": "Merchants: products and stock"
+      },
+      "summary": {
+        "zh": "在商家管理中心設定可售數量、看保留給未付款訂單的件數，並可把商品設為「接單生產」。",
+        "en": "In the merchant console, set the quantity for sale, see units held for unpaid orders, and mark products as made-to-order."
+      },
+      "steps": [
+        {
+          "title": {
+            "zh": "設定可售數量",
+            "en": "Set the quantity for sale"
+          },
+          "body": {
+            "zh": "在商品的「價格與庫存」填「庫存數量」。這是可售數量，不含保留給未付款訂單的件數；批次「設定庫存」也以列表顯示的數量計算差額。",
+            "en": "Fill in 庫存數量 under 價格與庫存 on the product. This is the quantity for sale and excludes units held for unpaid orders; the bulk 設定庫存 action also works from the quantity shown in the list."
+          }
+        },
+        {
+          "title": {
+            "zh": "保留給未付款訂單",
+            "en": "Units held for unpaid orders"
+          },
+          "body": {
+            "zh": "列表與商品頁會顯示「另有 N 件保留給未付款訂單」。這些件數不含在庫存內，訂單逾時未付款會自動放回。",
+            "en": "The list and product page show 另有 N 件保留給未付款訂單 (N more held for unpaid orders). They are not counted in stock and return automatically when an unpaid order times out."
+          }
+        },
+        {
+          "title": {
+            "zh": "接單生產與到貨通知",
+            "en": "Made-to-order and restock alerts"
+          },
+          "body": {
+            "zh": "勾選「不追蹤庫存（接單生產）」後，商品不受庫存限制、不會顯示缺貨。庫存補回大於 0 時，登記到貨通知的顧客會自動收到通知。",
+            "en": "Tick 不追蹤庫存（接單生產） and the product is no longer limited by stock or shown as out of stock. When stock goes back above zero, customers who registered a restock alert are notified automatically."
+          }
+        },
+        {
+          "title": {
+            "zh": "修改已上架商品",
+            "en": "Editing a live product"
+          },
+          "body": {
+            "zh": "已通過審核的商品，變更售價、名稱或圖片會重新送審，通過前暫時自買家端下架；只調整庫存或說明不影響上架。",
+            "en": "Changing the price, name or images of an approved product sends it back to review and hides it from buyers until approved. Changing only stock or the description keeps it listed."
+          }
+        }
+      ],
+      "tips": [
+        {
+          "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "en": "Full details are in the Shop user manuals further down this page."
+        }
+      ]
+    },
+    {
+      "id": "shopfranchise",
+      "order": 16,
+      "icon": "briefcase",
+      "group": "shop",
+      "title": {
+        "zh": "加盟店：財務資料與撥款",
+        "en": "Franchise stores: financial details and payouts"
+      },
+      "summary": {
+        "zh": "加盟店為獨立法人，有自己的加盟主資料與銀行帳戶；只有該店負責人與財務人員可以查看，撥款只匯入該店核准的帳戶。",
+        "en": "A franchise store is a separate legal entity with its own franchisee details and bank account. Only the store's owner and finance staff can see them, and payouts go only to the store's approved account."
+      },
+      "steps": [
+        {
+          "title": {
+            "zh": "誰可以查看",
+            "en": "Who can see what"
+          },
+          "body": {
+            "zh": "「加盟店財務」頁僅供加盟店負責人與財務人員使用。品牌總部只在「結算撥款」看到各加盟店的銷售與撥款合計，看不到加盟主的身分或銀行資料；各店鋪之間看不到彼此的財務資料。",
+            "en": "The 加盟店財務 page is for the franchise store's owner and finance staff only. Brand HQ sees each franchise store's sales and payout totals in 結算撥款, never the franchisee's identity or bank details; stores never see each other's finances."
+          }
+        },
+        {
+          "title": {
+            "zh": "填寫加盟主資料與銀行帳戶",
+            "en": "Submit franchisee details and bank account"
+          },
+          "body": {
+            "zh": "在「加盟主資料與銀行帳戶」填寫並上傳文件，送交平台審核。審核需要補件時，會通知加盟店補齊後再送審。",
+            "en": "Fill in 加盟主資料與銀行帳戶 and upload the documents for platform review. If more is needed, the store is asked to complete it and resubmit."
+          }
+        },
+        {
+          "title": {
+            "zh": "撥款規則",
+            "en": "How payouts work"
+          },
+          "body": {
+            "zh": "撥款只匯入該店核准的銀行帳戶，不會改匯到總部。資料尚未核准時撥款暫停，重新核准後處理；核准後變更銀行或資料，該筆撥款需重新核准。",
+            "en": "Payouts go only to the store's approved bank account, never to HQ. While details are not approved, payouts are held and processed after approval; changing the bank or details after a payout was approved means that payout must be approved again."
+          }
+        },
+        {
+          "title": {
+            "zh": "退款與經營型態轉換",
+            "en": "Refunds and changing store type"
+          },
+          "body": {
+            "zh": "退款由出貨的店鋪承擔。直營與加盟的轉換只能由平台管理員辦理，轉換時店鋪現有人員權限會全部移除，由新負責人重新邀請團隊。",
+            "en": "Refunds are borne by the store that shipped the order. Only a platform administrator can switch a store between directly operated and franchise; the switch removes all existing staff access and the new owner re-invites the team."
+          }
+        }
+      ],
+      "tips": [
+        {
+          "zh": "對消費者而言，在直營店或加盟店購物的下單、付款與退款方式都相同。",
+          "en": "For customers, ordering, payment and refunds are the same at directly operated and franchise stores."
+        },
+        {
+          "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "en": "Full details are in the Shop user manuals further down this page."
+        }
+      ]
     }
   ]
 }

@@ -1203,6 +1203,33 @@
                 "ja": "**enGo パートナーエコシステム**\n\n🛠️ **大雅**（台中）、フルリノベーション＋スマート建設、台中ショールーム\n🛠️ **撰美**（台北）、リノベーション＋システム収納、台北スマートホーム・ショールーム\n💨 **MEDOLE 米多力**、天井埋込型・新風除湿機\n🧬 **麗寶生技**、スマート高濃度酸素ルーム\n🪵 **合野木業**、スマート機能収納\n⚡ **嘉義達光電・金毅泰**、省エネソリューション\n\n🔗 [パートナー製品](/tutorial)",
                 "es": "**Ecosistema de socios de enGo**\n\n🛠️ **Taya** (Taichung): renovación integral + desarrollos inteligentes\n🛠️ **Zhuanmei** (Taipéi): renovación + mobiliario de sistema, showroom en Taipéi\n💨 **MEDOLE**: deshumidificador de aire fresco de techo\n🧬 **Lihpao Biotech**: cámara de oxígeno inteligente\n🪵 **Heye Woodwork**: muebles funcionales inteligentes\n⚡ **Chiayida, Jinyitai**: soluciones energéticas\n\n🔗 [Productos de socios](/tutorial)"
             }
+        },
+        {
+            "id": "shop-manuals",
+            "keywords": [
+                "使用手冊",
+                "使用手册",
+                "手冊",
+                "手册",
+                "說明書",
+                "说明书",
+                "操作手冊",
+                "user manual",
+                "manual",
+                "manuals",
+                "顧客手冊",
+                "商家手冊",
+                "加盟店手冊",
+                "商城手冊",
+                "商城使用手冊",
+                "商家怎麼上架",
+                "加盟店怎麼用"
+            ],
+            "answer": {
+                "zh": "**智管家商城使用手冊**\n\n商城的完整操作說明分為三本，可線上閱讀或下載 PDF，也可以在頁面上直接搜尋章節：\n\n📗 **顧客端**：註冊、購物、信用卡付款與銀行驗證、繼續付款、到貨通知、訂單與退款、通知\n📘 **商家端**：商品與庫存、接單生產、訂單與售後、結算撥款、團隊權限\n📙 **加盟店端**：加盟主資料與銀行帳戶、撥款規則、退款歸屬、經營型態轉換\n\n🔗 [搜尋與下載手冊](/tutorial#manuals)",
+                "zhCN": "**智管家商城使用手册**\n\n商城的完整操作说明分为三本（繁体中文），可在线阅读或下载 PDF，也可以在页面上直接搜索章节：\n\n📗 **顾客端**：注册、购物、信用卡付款与银行验证、继续付款、到货通知、订单与退款、通知\n📘 **商家端**：商品与库存、接单生产、订单与售后、结算拨款、团队权限\n📙 **加盟店端**：加盟主资料与银行账户、拨款规则、退款归属、经营型态转换\n\n🔗 [搜索与下载手册](/tutorial#manuals)",
+                "en": "**enGo Store user manuals**\n\nThree complete guides (Traditional Chinese) can be read online, downloaded as PDF, or searched by section:\n\n📗 **Customers**: sign-up, shopping, card payment and bank verification, resuming payment, restock alerts, orders and refunds, notifications\n📘 **Merchants**: products and stock, made-to-order, orders and after-sales, settlement, team roles\n📙 **Franchise stores**: franchisee details and bank account, payout rules, refund attribution, changing store type\n\n🔗 [Search and download the manuals](/tutorial#manuals)"
+            }
         }
     ],
     "tutorials": [
@@ -2118,6 +2145,109 @@
             "answer": {
                 "zh": "**庫存管理（操作步驟）**\n\n記錄家中物品放在哪個房間的哪個櫃位、還有多少，並在低於告警門檻時提醒。適合濾芯、電池、備品這類「要用時常常找不到」的東西。\n\n**1. 先建櫃位與分類**：庫存頁上方有物品、櫃位、分類、記錄、告警五個分頁。先在「櫃位」建立實體收納位置（例如「廚房下櫃」），在「分類」建立類別（例如「濾芯」），再回到「物品」新增。\n\n**2. 新增與查詢物品**：上方四個數字是物品總數、櫃位總數、分類總數與低庫存數量。可用房間分頁篩選，或用右上放大鏡搜尋。\n\n**3. 異動位置與數量**：物品卡片可編輯、調整數量、變更位置與查看資訊。「異動位置」對話框會顯示目前存放位置（房間 → 櫃位，例如「會議室 → 設備櫃」）與數量，設定搬移數量後即可改房間或改櫃位。\n\n**小提醒**\n- 平板與手機都叫「庫存」：平板在左側導覽列，手機收在底部「更多」分頁裡。兩邊是同一頁、同一批資料。（3.2.2 的平板曾顯示「倉儲」，3.6.x 起已統一為「庫存」。）\n- 低庫存門檻在庫存頁的「告警」分頁設定；數量低於門檻的物品，卡片上會出現紅色「庫存不足」標籤，上方的「低庫存」數字就是目前低於門檻的品項數。濾芯這類有壽命的東西，建議一併記下更換日期。\n\n🔗 [圖文步驟與截圖](/tutorial#howto-warehouse)",
                 "en": "**Home Inventory: step by step**\n\nTrack which room and cabinet each item is in and how many are left, with a reminder when stock falls below your alert threshold. Ideal for filters, batteries and spares, the things you can never find when you need them.\n\n**1. Create cabinets and categories first**: The inventory page has five tabs: Items, Cabinets, Categories, History and Alerts. Create your physical storage places under Cabinets (e.g. \"kitchen lower cabinet\") and your categories (e.g. \"filters\") first, then add items.\n\n**2. Add and find items**: The four figures on top are total items, cabinets, categories and low-stock count. Filter by room with the tabs, or search with the magnifier at the top right.\n\n**3. Move items and adjust quantities**: Each item card lets you edit it, adjust the quantity, change its location or view details. The move dialog shows the current location (room → cabinet, for example “Meeting room → Equipment cabinet”) and quantity; set how many to move, then choose a new room or cabinet.\n\n**Tips**\n- Both the tablet and the phone call this 庫存 (Inventory): on the tablet it is in the left navigation rail, on the phone it sits under the bottom “More” tab. Same page, same data. (Tablets on 3.2.2 showed 倉儲; this was unified to 庫存 in 3.6.x.)\n- Set the low-stock threshold in the Alerts (告警) tab. Any item below it shows a red 庫存不足 (low stock) tag on its card, and the Low stock figure at the top counts those items. For things with a service life, such as filters, record the replacement date too.\n\n🔗 [Illustrated steps](/tutorial#howto-warehouse)"
+            }
+        },
+        {
+            "id": "howto-shopbuy",
+            "keywords": [
+                "商城怎麼買",
+                "怎麼結帳",
+                "商城結帳",
+                "怎麼付款",
+                "商城付款",
+                "付款方式",
+                "信用卡",
+                "繼續付款",
+                "付款失敗",
+                "銀行驗證",
+                "3d驗證",
+                "how to pay",
+                "checkout"
+            ],
+            "answer": {
+                "zh": "**商城：購物、付款與繼續付款（操作步驟）**\n\n在智管家商城（網站或 Android 的 enGo Shop App）選購、結帳，以信用卡付款；付款中斷時用「繼續付款」完成。\n\n**1. 加入購物車並結帳**：在商品頁點「加入購物車」，可同時選購不同店家的商品。到「購物車」確認數量後點「結帳」，確認收件資訊後點「前往付款」。\n\n**2. 以信用卡付款**：目前付款方式為信用卡，由綠界 ECPay 處理，網站與 App 相同；ATM 轉帳與超商代碼暫不提供。訂閱方案同樣以信用卡定期扣款。\n\n**3. 完成銀行驗證（3D 驗證）**：部分發卡銀行會要求輸入簡訊驗證碼。網站會在付款頁或新視窗開啟驗證頁，App 會開啟「銀行驗證」視窗；完成前請勿關閉。視窗沒出現時，網站請允許彈出式視窗，App 請更新到最新版本。\n\n**4. 付款中斷時「繼續付款」**：沒有完成付款的訂單會顯示為待付款。到「我的訂單」打開該訂單，點「繼續付款」即可再付一次。系統為待付款訂單保留商品約 60 分鐘，逾時會自動取消並放回庫存。\n\n**小提醒**\n- 商品缺貨、團購已結束，或訂單金額未達 NT$5 時無法繼續付款，請取消訂單後重新結帳。\n\n🔗 [完整步驟](/tutorial#howto-shopbuy)｜[商城使用手冊](/tutorial#manuals)",
+                "en": "**Store: shopping, payment and resuming payment: step by step**\n\nShop on the enGo Store (website or the enGo Shop app for Android), check out, and pay by credit card. If payment is interrupted, finish it with 繼續付款 (resume payment).\n\n**1. Add to cart and check out**: On a product page tap 加入購物車 (add to cart); items from several shops can share one cart. In 購物車, check the quantities, tap 結帳, confirm the delivery details and tap 前往付款 (go to payment).\n\n**2. Pay by credit card**: Payment is by credit card, processed by ECPay, on both the website and the app. ATM transfer and convenience-store payment are not offered at present. Subscription plans renew on the same card.\n\n**3. Complete the bank check (3-D Secure)**: Some card issuers ask for a one-time code sent by SMS. On the website the bank page opens on the payment page or in a new window; in the app it opens in a 銀行驗證 window. Keep it open until the check finishes. If it does not appear, allow pop-ups on the website or update the app.\n\n**4. Resume an unpaid order**: An order that was not paid shows as unpaid. Open it in 我的訂單 (my orders) and tap 繼續付款 to pay again. Items are held for an unpaid order for about 60 minutes; after that the order is cancelled automatically and the items return to stock.\n\n**Tips**\n- Resuming is not possible when an item is out of stock, the group buy has ended, or the order is under NT$5; cancel the order and check out again.\n\n🔗 [Full steps](/tutorial#howto-shopbuy) | [Shop user manuals](/tutorial#manuals)"
+            }
+        },
+        {
+            "id": "howto-shopstock",
+            "keywords": [
+                "缺貨",
+                "到貨通知",
+                "補貨",
+                "接單生產",
+                "缺貨怎麼辦",
+                "到貨通知怎麼用",
+                "out of stock",
+                "restock"
+            ],
+            "answer": {
+                "zh": "**商城：缺貨、到貨通知與接單生產（操作步驟）**\n\n商城只販售實際有庫存的數量。缺貨商品可登記「到貨通知我」，補貨後通知您；「接單生產」商品則可隨時下單。\n\n**1. 看懂庫存狀態**：商品頁顯示「缺貨／待補貨」時暫時無法購買，也無法付款，不會先收款再等補貨。購物車中有商品缺貨或數量不足時，結帳前會提示調整或移除。\n\n**2. 登記「到貨通知我」**：登入後在缺貨商品頁點「到貨通知我」，畫面會顯示「已登記到貨通知」。補貨後會以 App 推播通知一次，並留在「通知」頁；通知只在 09:00 至 21:00 發送，且不保留商品。\n\n**3. 「接單生產」商品**：標示「接單生產」的商品由店家接單後製作或備貨，不受庫存數量限制，不會顯示缺貨。出貨時間以商品頁或店家說明為準。\n\n🔗 [完整步驟](/tutorial#howto-shopstock)｜[商城使用手冊](/tutorial#manuals)",
+                "en": "**Store: out of stock, restock alerts and made-to-order: step by step**\n\nThe store sells only units that are in stock. For an out-of-stock item, register 到貨通知我 to be told when it is back; made-to-order items can be ordered at any time.\n\n**1. Read the stock status**: When a product page shows 缺貨／待補貨 the item cannot be bought or paid for; payment is never taken in advance of restocking. If the cart holds an item that is out of stock or short, checkout asks for the quantity to be changed or the item removed.\n\n**2. Register a restock alert**: After signing in, tap 到貨通知我 on the out-of-stock product; it then shows 已登記到貨通知. When stock returns, one push notification is sent and also kept on the 通知 page. Alerts go out between 09:00 and 21:00 and do not reserve the item.\n\n**3. Made-to-order items**: Items marked 接單生產 are made or sourced after the order, so they are not limited by stock and never show as out of stock. Shipping time follows the product page or the shop's notes.\n\n🔗 [Full steps](/tutorial#howto-shopstock) | [Shop user manuals](/tutorial#manuals)"
+            }
+        },
+        {
+            "id": "howto-shoporders",
+            "keywords": [
+                "商城訂單",
+                "我的訂單",
+                "取消訂單",
+                "退款",
+                "退貨",
+                "申請退款",
+                "退款多久",
+                "refund",
+                "cancel order"
+            ],
+            "answer": {
+                "zh": "**商城：訂單、取消與退款（操作步驟）**\n\n在「我的訂單」追蹤進度、取消訂單或申請退貨退款；退款一律經平台核准後原路退回信用卡。\n\n**1. 追蹤訂單進度**：在「我的訂單」打開訂單明細，進度依序為「已下單」「已付款」「備貨中」「配送中」「已送達大廳」（宅配為「已送達」）。送達後會收到通知，再到社區大廳或管理室領取。\n\n**2. 取消訂單**：在訂單頁點「取消訂單」。已付款的訂單取消後，系統會自動送出退款申請，審核通過後款項原路退回。\n\n**3. 申請退貨或退款**：在符合條件的訂單點「申請退貨」或「申請退款」，說明原因後「送出申請」，由平台審核。生鮮等商品另有例外規定，請以退換貨政策為準。\n\n**4. 退款入帳**：核准後訂單顯示「退款處理中，款項將退回原付款方式」。信用卡退款依發卡銀行作業，通常需數個工作天入帳。\n\n🔗 [完整步驟](/tutorial#howto-shoporders)｜[商城使用手冊](/tutorial#manuals)",
+                "en": "**Store: orders, cancellations and refunds: step by step**\n\nTrack orders, cancel them, or request a return or refund in 我的訂單. Every refund is approved by the platform and returned to the original card.\n\n**1. Track an order**: Open an order in 我的訂單 to see it move through 已下單 (placed), 已付款 (paid), 備貨中 (being prepared), 配送中 (on the way) and 已送達大廳 (at the lobby; 已送達 for home delivery). A notification follows delivery; collect the parcel at the lobby or management office.\n\n**2. Cancel an order**: Tap 取消訂單 on the order page. Cancelling a paid order sends a refund request automatically; once approved, the money goes back to the original card.\n\n**3. Request a return or refund**: On an eligible order tap 申請退貨 (return) or 申請退款 (refund), give the reason and tap 送出申請. The platform reviews each request; perishable goods follow the exceptions in the returns policy.\n\n**4. When the refund arrives**: After approval the order shows 退款處理中，款項將退回原付款方式 (refund in progress, back to the original payment method). Card refunds depend on the issuing bank and usually take several working days.\n\n🔗 [Full steps](/tutorial#howto-shoporders) | [Shop user manuals](/tutorial#manuals)"
+            }
+        },
+        {
+            "id": "howto-shopnotify",
+            "keywords": [
+                "商城通知",
+                "通知在哪",
+                "通知怎麼看",
+                "推播",
+                "沒收到通知",
+                "shop notification"
+            ],
+            "answer": {
+                "zh": "**商城：通知（操作步驟）**\n\n訂單、付款、配送、訂閱與到貨通知的消息，都集中在網站與 App 的「通知」頁。\n\n**1. 開啟「通知」頁**：網站請點頁首的「通知」鈴鐺，或從「我的 → 通知」進入；App 請開啟「通知」頁。\n\n**2. 分類與已讀**：可依「全部」「訂單」「配送」「訂閱」「提醒」分類查看；未讀消息會標示，可一次「全部標為已讀」。通知保留 90 天。\n\n**3. 沒收到推播時**：請到手機設定確認已允許 enGo Shop 傳送通知。即使沒有推播，消息仍會出現在「通知」頁。\n\n**小提醒**\n- 社區公告與包裹等大樓消息在 enGo 智慧管家 App 的公布欄與訊息查看，請見上方「社區公告與訊息」。\n\n🔗 [完整步驟](/tutorial#howto-shopnotify)｜[商城使用手冊](/tutorial#manuals)",
+                "en": "**Store: notifications: step by step**\n\nOrder, payment, delivery, subscription and restock messages are collected on the 通知 page of the website and the app.\n\n**1. Open the notifications page**: On the website, tap the 通知 bell in the header or go to 我的 → 通知; in the app, open the 通知 page.\n\n**2. Categories and read status**: Filter by 全部, 訂單, 配送, 訂閱 or 提醒 (all, orders, delivery, subscriptions, reminders). Unread items are marked, and 全部標為已讀 clears them all. Notifications are kept for 90 days.\n\n**3. When no push arrives**: Check in the phone's settings that enGo Shop may send notifications. Messages still appear on the 通知 page even without a push.\n\n**Tips**\n- Building messages such as announcements and parcels are in the enGo HMS app; see Community Announcements & Messages above.\n\n🔗 [Full steps](/tutorial#howto-shopnotify) | [Shop user manuals](/tutorial#manuals)"
+            }
+        },
+        {
+            "id": "howto-shopmerchant",
+            "keywords": [
+                "商家上架",
+                "商家庫存",
+                "可售數量",
+                "庫存怎麼設定",
+                "接單生產怎麼設定",
+                "重新送審",
+                "merchant stock"
+            ],
+            "answer": {
+                "zh": "**商家：商品與庫存（操作步驟）**\n\n在商家管理中心設定可售數量、看保留給未付款訂單的件數，並可把商品設為「接單生產」。\n\n**1. 設定可售數量**：在商品的「價格與庫存」填「庫存數量」。這是可售數量，不含保留給未付款訂單的件數；批次「設定庫存」也以列表顯示的數量計算差額。\n\n**2. 保留給未付款訂單**：列表與商品頁會顯示「另有 N 件保留給未付款訂單」。這些件數不含在庫存內，訂單逾時未付款會自動放回。\n\n**3. 接單生產與到貨通知**：勾選「不追蹤庫存（接單生產）」後，商品不受庫存限制、不會顯示缺貨。庫存補回大於 0 時，登記到貨通知的顧客會自動收到通知。\n\n**4. 修改已上架商品**：已通過審核的商品，變更售價、名稱或圖片會重新送審，通過前暫時自買家端下架；只調整庫存或說明不影響上架。\n\n🔗 [完整步驟](/tutorial#howto-shopmerchant)｜[商城使用手冊](/tutorial#manuals)",
+                "en": "**Merchants: products and stock: step by step**\n\nIn the merchant console, set the quantity for sale, see units held for unpaid orders, and mark products as made-to-order.\n\n**1. Set the quantity for sale**: Fill in 庫存數量 under 價格與庫存 on the product. This is the quantity for sale and excludes units held for unpaid orders; the bulk 設定庫存 action also works from the quantity shown in the list.\n\n**2. Units held for unpaid orders**: The list and product page show 另有 N 件保留給未付款訂單 (N more held for unpaid orders). They are not counted in stock and return automatically when an unpaid order times out.\n\n**3. Made-to-order and restock alerts**: Tick 不追蹤庫存（接單生產） and the product is no longer limited by stock or shown as out of stock. When stock goes back above zero, customers who registered a restock alert are notified automatically.\n\n**4. Editing a live product**: Changing the price, name or images of an approved product sends it back to review and hides it from buyers until approved. Changing only stock or the description keeps it listed.\n\n🔗 [Full steps](/tutorial#howto-shopmerchant) | [Shop user manuals](/tutorial#manuals)"
+            }
+        },
+        {
+            "id": "howto-shopfranchise",
+            "keywords": [
+                "加盟店",
+                "加盟主",
+                "加盟店撥款",
+                "加盟店財務",
+                "直營店",
+                "franchise"
+            ],
+            "answer": {
+                "zh": "**加盟店：財務資料與撥款（操作步驟）**\n\n加盟店為獨立法人，有自己的加盟主資料與銀行帳戶；只有該店負責人與財務人員可以查看，撥款只匯入該店核准的帳戶。\n\n**1. 誰可以查看**：「加盟店財務」頁僅供加盟店負責人與財務人員使用。品牌總部只在「結算撥款」看到各加盟店的銷售與撥款合計，看不到加盟主的身分或銀行資料；各店鋪之間看不到彼此的財務資料。\n\n**2. 填寫加盟主資料與銀行帳戶**：在「加盟主資料與銀行帳戶」填寫並上傳文件，送交平台審核。審核需要補件時，會通知加盟店補齊後再送審。\n\n**3. 撥款規則**：撥款只匯入該店核准的銀行帳戶，不會改匯到總部。資料尚未核准時撥款暫停，重新核准後處理；核准後變更銀行或資料，該筆撥款需重新核准。\n\n**4. 退款與經營型態轉換**：退款由出貨的店鋪承擔。直營與加盟的轉換只能由平台管理員辦理，轉換時店鋪現有人員權限會全部移除，由新負責人重新邀請團隊。\n\n**小提醒**\n- 對消費者而言，在直營店或加盟店購物的下單、付款與退款方式都相同。\n\n🔗 [完整步驟](/tutorial#howto-shopfranchise)｜[商城使用手冊](/tutorial#manuals)",
+                "en": "**Franchise stores: financial details and payouts: step by step**\n\nA franchise store is a separate legal entity with its own franchisee details and bank account. Only the store's owner and finance staff can see them, and payouts go only to the store's approved account.\n\n**1. Who can see what**: The 加盟店財務 page is for the franchise store's owner and finance staff only. Brand HQ sees each franchise store's sales and payout totals in 結算撥款, never the franchisee's identity or bank details; stores never see each other's finances.\n\n**2. Submit franchisee details and bank account**: Fill in 加盟主資料與銀行帳戶 and upload the documents for platform review. If more is needed, the store is asked to complete it and resubmit.\n\n**3. How payouts work**: Payouts go only to the store's approved bank account, never to HQ. While details are not approved, payouts are held and processed after approval; changing the bank or details after a payout was approved means that payout must be approved again.\n\n**4. Refunds and changing store type**: Refunds are borne by the store that shipped the order. Only a platform administrator can switch a store between directly operated and franchise; the switch removes all existing staff access and the new owner re-invites the team.\n\n**Tips**\n- For customers, ordering, payment and refunds are the same at directly operated and franchise stores.\n\n🔗 [Full steps](/tutorial#howto-shopfranchise) | [Shop user manuals](/tutorial#manuals)"
             }
         }
     ]
