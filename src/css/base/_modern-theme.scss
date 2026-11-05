@@ -20,11 +20,12 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 4px;
-  background: $warm-gradient;
+  // Flat 2px in the one accent (review 2026-11-05): the gradient with an orange glow
+  // was the only zero-offset colour halo rendered anywhere on the site.
+  height: 2px;
+  background: $brand-orange;
   z-index: 10000;
   transition: width 0.1s linear;
-  box-shadow: 0 0 10px rgba(224, 90, 53, 0.5);
 }
 
 // ─── Page Transition ───
