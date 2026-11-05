@@ -52,10 +52,13 @@
     <!-- tile 2 (white): photo cards, caption below the image -->
     <section class="cs-tile cs-tile-white">
       <div class="cs-wrap">
-        <div class="cs-grid">
+        <!-- Review 2026-11-05: 18 of 22 cases have no photo, and a plate repeating the
+             title above the same title read as a missing image. Photographed work keeps
+             the photo grid; the rest is an honest list of records under it. -->
+        <div class="cs-grid" v-if="photoCases.length">
           <transition-group name="fade">
             <article
-              v-for="item in filteredCases"
+              v-for="item in photoCases"
               :key="item.id"
               class="cs-card scroll-reveal"
               role="link"
@@ -66,21 +69,35 @@
               <!-- view-transition-name pairs with CaseDetail's cover figure so the
                    card image morphs into the detail page on navigation -->
               <div class="cs-photo" :style="{ viewTransitionName: 'case-' + item.id }">
-                <img v-if="hasPhoto(item)" :src="item.image" :alt="getLocaleText(item.title)" loading="lazy" />
-                <!-- 18 of 22 cases share one illustration; a plate that names the
-                     project reads as real work, the repeated drawing read as placeholder -->
-                <div v-else class="cs-plate" aria-hidden="true">
-                  <span class="cs-plate-title">{{ getLocaleText(item.title) }}</span>
-                </div>
+                <img :src="item.image" :alt="getLocaleText(item.title)" loading="lazy" />
               </div>
               <div class="cs-cap">
-                <h3 class="cs-name">{{ getLocaleText(item.title) }}</h3>
+                <h2 class="cs-name">{{ getLocaleText(item.title) }}</h2>
                 <p class="cs-meta">{{ getLocaleText(item.location) }}, {{ getLocaleText(item.category) }}</p>
                 <p class="cs-desc">{{ getLocaleText(item.description) }}</p>
                 <span class="cs-more">{{ $t('viewDetails') || '查看詳情' }}<span class="cs-chev" aria-hidden="true">›</span></span>
               </div>
             </article>
           </transition-group>
+        </div>
+
+        <div class="cs-records" v-if="recordCases.length">
+          <h2 class="cs-records-title">{{ isZh ? '更多實作紀錄' : 'More projects' }}</h2>
+          <ul class="cs-list">
+            <li
+              v-for="item in recordCases"
+              :key="item.id"
+              class="cs-row"
+              role="link"
+              tabindex="0"
+              @click="handleCaseClick(item)"
+              @keydown.enter="handleCaseClick(item)"
+            >
+              <span class="cs-row-name">{{ getLocaleText(item.title) }}</span>
+              <span class="cs-row-meta">{{ getLocaleText(item.location) }} · {{ getLocaleText(item.category) }}</span>
+              <span class="cs-row-more" aria-hidden="true">›</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -147,6 +164,9 @@ const filteredCases = computed(() => {
     return matchType && matchCountry && matchCity
   })
 })
+const photoCases = computed(() => filteredCases.value.filter(hasPhoto))
+const recordCases = computed(() => filteredCases.value.filter((c) => !hasPhoto(c)))
+const isZh = computed(() => locale.value.startsWith('zh'))
 
 const setType = (type: string) => {
   selectedType.value = type
@@ -220,13 +240,6 @@ const getLocaleText = (obj: any) => {
   aspect-ratio: 4 / 3; border-radius: 18px; overflow: hidden; background: $parchment;
   img { width: 100%; height: 100%; object-fit: cover; display: block; }
 }
-.cs-plate {
-  height: 100%; padding: clamp(20px, 3vw, 32px); box-sizing: border-box; display: flex; align-items: flex-end;
-  // Design review 2026-10-27: a near-black plate on 18 of 22 cards read as broken
-  // images on the grid. A parchment plate with ink text reads as a deliberate card.
-  background: $parchment; color: $ink; border: 1px solid $hairline; border-radius: 18px;
-}
-.cs-plate-title { font-family: $display-font; font-weight: 600; font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.15; letter-spacing: -.02em; }
 .cs-cap { display: flex; flex-direction: column; gap: 4px; padding-top: 16px; }
 .cs-name { margin: 0; font-family: $display-font; font-weight: 600; font-size: 1.3125rem; line-height: 1.25; letter-spacing: -.01em; color: $ink; }
 .cs-meta { margin: 0; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; }
@@ -235,6 +248,22 @@ const getLocaleText = (obj: any) => {
 .cs-card:hover .cs-more { text-decoration: underline; }
 .cs-card:active .cs-photo { transform: scale(.99); }
 .cs-photo { transition: transform .15s ease; }
+
+// ─── records without a photo: a hairline list, not image-less tiles ───
+.cs-records { margin-top: clamp(64px, 8vw, 96px); }
+.cs-records:first-child { margin-top: 0; }
+.cs-records-title { margin: 0 0 20px; font-family: $display-font; font-weight: 600; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.15; letter-spacing: -.02em; color: $ink; }
+.cs-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid $ink; }
+.cs-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto 20px; align-items: baseline; gap: 4px 24px;
+  min-height: 44px; padding: 18px 0; border-bottom: 1px solid $hairline; cursor: pointer; color: $ink;
+  &:hover .cs-row-name, &:focus-visible .cs-row-name { color: $brand-orange-text; }
+  &:focus-visible { outline: 2px solid $brand-orange-text; outline-offset: 4px; }
+  @media (max-width: 640px) { grid-template-columns: minmax(0, 1fr) 20px; .cs-row-meta { grid-column: 1; grid-row: 2; } }
+}
+.cs-row-name { font-weight: 600; font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; transition: color .2s ease; }
+.cs-row-meta { font-size: 1.0625rem; line-height: 1.47; letter-spacing: -.022em; color: $ink-80; }
+.cs-row-more { color: $brand-orange-text; font-size: 1.25rem; text-align: right; @media (max-width: 640px) { grid-row: 1; grid-column: 2; } }
 
 .fade-enter-active, .fade-leave-active { transition: opacity 0.5s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
