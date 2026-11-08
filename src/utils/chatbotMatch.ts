@@ -60,11 +60,20 @@ export const SYNONYMS: Record<string, string[]> = {
   '電子鎖': ['門鎖'],
   'smart lock': ['door lock'],
   // KB-001 §2 / §1 app
-  // 「App在哪裡下載」 also contains 在哪 (→ address, 19 points) and answered with the
-  // office address (2026-11-08 probe); the store names lift app-download above it.
-  '下載': ['app', 'download', 'app store', 'google play'],
-  '下载': ['app', 'download', 'app store', 'google play'],
+  '下載': ['app', 'download'],
+  '下载': ['app', 'download'],
   '哪裡下載': ['app', 'download'],
+  // 「App在哪裡下載」 also contains 在哪 (→ address) and answered with the office
+  // address (2026-11-08 probe). Only questions that say "app" next to where get the
+  // store names, so 「使用手冊在哪裡下載」 is not pulled to app-download.
+  'app在哪': ['app store', 'google play'],
+  'app 在哪': ['app store', 'google play'],
+  'app要去哪': ['app store', 'google play'],
+  'app 要去哪': ['app store', 'google play'],
+  'app去哪': ['app store', 'google play'],
+  'app 去哪': ['app store', 'google play'],
+  'app哪裡': ['app store', 'google play'],
+  'app 哪裡': ['app store', 'google play'],
   // how-to (KB-001 §9.2.1) — 「公告在哪」 must reach the community module, not the office address
   '公告在哪': ['社區公告', '公布欄怎麼看'],
   '公告哪裡': ['社區公告', '公布欄怎麼看'],
@@ -89,10 +98,11 @@ const SHOP_ONLY_TERMS = [
   '退款', '退貨', '退货', '鑑賞期', '鉴赏期', '到貨通知', '到货通知', '接單生產', '接单生产',
   '繼續付款', '继续付款', '待付款', '刷卡', '3d驗證', '3d验证', '3d 驗證', '銀行驗證', '银行验证',
   '購物車', '购物车', '結帳', '结帐', '结账', '加盟店', '直營店', '直营店', '撥款', '拨款',
-  // Stock and shipping words only ever mean the shop (HMS inventory says 低庫存),
-  // yet without the shop named they lost to 營業時間 / 方案 entries (2026-11-08 probe:
-  // 「商品缺貨什麼時候補」→ hours, 「運費多少」→ packages, 「賣完了可以通知我嗎」→ community).
-  '缺貨', '缺货', '補貨', '补货', '賣完', '卖完', '售完', '到貨', '到货', '運費', '运费',
+  // Sold-out and shipping words only ever mean the shop, yet without the shop named
+  // they lost to 營業時間 / 方案 / 社區 entries (2026-11-08 probe: 「運費多少」→ packages,
+  // 「賣完了可以通知我嗎」→ community). 缺貨/補貨 stay below: HMS 庫存管理 uses them for
+  // 濾芯 and 備品 reminders, and 到貨 alone also means a building parcel.
+  '賣完', '卖完', '售完', '運費', '运费',
   'engo shop',
   'refund', 'checkout', 'restock', 'out of stock', 'sold out', 'shipping fee',
 ]
@@ -100,7 +110,7 @@ const SHOP_ONLY_TERMS = [
 // notices), so they prefer the shop only when nothing else local matched or the
 // question names the shop:
 const SHOP_DETAIL_TERMS = [
-  '付款', '信用卡', '訂單', '订单', '下單', '下单', '庫存', '库存',
+  '付款', '信用卡', '訂單', '订单', '下單', '下单', '缺貨', '缺货', '補貨', '补货', '庫存', '库存',
   '發票', '发票', '載具', '團購', '团购', '加盟', '通知',
   // App questions mean the enGo智慧管家 app unless the shop is named; with 商城 they
   // mean the separate enGo Shop app (Shop article shop-app-download: Android live,
@@ -108,14 +118,23 @@ const SHOP_DETAIL_TERMS = [
   'app', '下載', '下载', 'iphone', 'android', 'ios',
   'payment', 'credit card', 'order', 'invoice',
 ]
-const SHOP_CONTEXT_TERMS = ['商城', 'shop', '安購', '安购']
+// 商品 is store wording (HMS 庫存管理 says 物品), so it names the shop too:
+// 「商品缺貨什麼時候補」 answered with office hours before (2026-11-08 probe).
+const SHOP_CONTEXT_TERMS = ['商城', 'shop', '安購', '安购', '商品']
+
+// ASCII terms match whole words only ('app' must not fire on 'apple', 'ios' on
+// 'studios', 'order' on 'border'); CJK terms have no word breaks, so substring.
+const hasTerm = (q: string, t: string): boolean =>
+  /^[\x00-\x7f]+$/.test(t)
+    ? new RegExp(`(^|[^a-z0-9])${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^a-z0-9])`).test(q)
+    : q.includes(t)
 
 /** True when a (normalized) question should be answered from Shop's KB before the local one. */
 export const prefersShopKnowledge = (query: string, bestLocalId: string | null): boolean => {
   const q = query.toLowerCase()
-  if (SHOP_ONLY_TERMS.some((t) => q.includes(t))) return true
-  if (!SHOP_DETAIL_TERMS.some((t) => q.includes(t))) return false
-  return bestLocalId === null || bestLocalId === 'shop-platform' || SHOP_CONTEXT_TERMS.some((t) => q.includes(t))
+  if (SHOP_ONLY_TERMS.some((t) => hasTerm(q, t))) return true
+  if (!SHOP_DETAIL_TERMS.some((t) => hasTerm(q, t))) return false
+  return bestLocalId === null || bestLocalId === 'shop-platform' || SHOP_CONTEXT_TERMS.some((t) => hasTerm(q, t))
 }
 
 // Normalize a query: lowercase, strip punctuation, collapse whitespace,

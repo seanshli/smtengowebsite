@@ -409,6 +409,27 @@ describe('shop detail questions ask the Shop KB first', () => {
     expect(prefersShopKnowledge('社區 通知', 'howto-community')).toBe(false)
   })
 
+  it('keeps HMS inventory and parcel questions that share shop words local (review 2026-11-08)', () => {
+    // 庫存管理 reminders use 補貨/缺貨; building parcels use 到貨. Only the shop named
+    // (商城, 商品…) or a sold-out word sends them to Shop.
+    for (const q of ['濾芯快用完要補貨怎麼設提醒', '庫存缺貨提醒怎麼設', '包裹到貨會通知我嗎'])
+      expect(shopFirst(q), q).toBe(false)
+    expect(shopFirst('商品缺貨什麼時候補')).toBe(true)
+  })
+
+  it('matches English shop terms as whole words only', () => {
+    // 'app' must not fire on Apple, 'ios' on studios, 'order' on border.
+    expect(prefersShopKnowledge('商城有賣apple充電器嗎', 'homekit-siri')).toBe(false)
+    expect(prefersShopKnowledge('shop studios', 'cases')).toBe(false)
+    expect(prefersShopKnowledge('border 商城', 'cases')).toBe(false)
+    expect(prefersShopKnowledge('商城app在哪裡下載', 'app-download')).toBe(true)
+  })
+
+  it('gives the store-name boost only to app questions', () => {
+    expect(expandQuery(normalizeQuery('App在哪裡下載'))).toContain('google play')
+    expect(expandQuery(normalizeQuery('使用手冊在哪裡下載'))).not.toContain('google play')
+  })
+
   it('tells visitors about the Android enGo Shop app without claiming an iPhone listing', () => {
     const zh = (kb as any).general.find((i: any) => i.id === 'shop-platform').answer.zh as string
     expect(zh).toContain('play.google.com/store/apps/details?id=com.smtengo.engo.shop')
