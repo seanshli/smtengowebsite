@@ -124,6 +124,24 @@ describe('processLineEvents', () => {
     expect(log.mock.calls.map((c: any) => c[0])).toEqual(['商城退款多久會入帳', 'shop:refund-timing'])
   })
 
+  it('asks Shop for the shop app download but answers home app downloads locally', async () => {
+    const reply = vi.fn(async () => 200)
+    const askShop = vi.fn(async () => ({ text: '商城 App 下載', slugs: ['shop-app-download'] }))
+    await processLineEvents([
+      { type: 'message', replyToken: 'shop-app', source: { type: 'user' }, message: { type: 'text', text: '商城App在哪裡下載' } },
+    ], { reply, askShop })
+    expect(askShop).toHaveBeenCalledTimes(1)
+    expect(askShop).toHaveBeenCalledWith('商城App在哪裡下載', { locale: 'zh' })
+
+    askShop.mockClear()
+    reply.mockClear()
+    await processLineEvents([
+      { type: 'message', replyToken: 'home-app', source: { type: 'user' }, message: { type: 'text', text: 'App在哪裡下載' } },
+    ], { reply, askShop })
+    expect(askShop).not.toHaveBeenCalled()
+    expect((reply.mock.calls[0] as any)[1][0]).toContain('enGo智慧管家')
+  })
+
   it('falls back to the local shop how-to when Shop has nothing', async () => {
     const reply = vi.fn(async () => 200)
     const askShop = vi.fn(async () => null)
