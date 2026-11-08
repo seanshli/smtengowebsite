@@ -60,8 +60,10 @@ export const SYNONYMS: Record<string, string[]> = {
   '電子鎖': ['門鎖'],
   'smart lock': ['door lock'],
   // KB-001 §2 / §1 app
-  '下載': ['app', 'download'],
-  '下载': ['app', 'download'],
+  // 「App在哪裡下載」 also contains 在哪 (→ address, 19 points) and answered with the
+  // office address (2026-11-08 probe); the store names lift app-download above it.
+  '下載': ['app', 'download', 'app store', 'google play'],
+  '下载': ['app', 'download', 'app store', 'google play'],
   '哪裡下載': ['app', 'download'],
   // how-to (KB-001 §9.2.1) — 「公告在哪」 must reach the community module, not the office address
   '公告在哪': ['社區公告', '公布欄怎麼看'],
@@ -87,15 +89,24 @@ const SHOP_ONLY_TERMS = [
   '退款', '退貨', '退货', '鑑賞期', '鉴赏期', '到貨通知', '到货通知', '接單生產', '接单生产',
   '繼續付款', '继续付款', '待付款', '刷卡', '3d驗證', '3d验证', '3d 驗證', '銀行驗證', '银行验证',
   '購物車', '购物车', '結帳', '结帐', '结账', '加盟店', '直營店', '直营店', '撥款', '拨款',
-  'refund', 'checkout', 'restock',
+  // Stock and shipping words only ever mean the shop (HMS inventory says 低庫存),
+  // yet without the shop named they lost to 營業時間 / 方案 entries (2026-11-08 probe:
+  // 「商品缺貨什麼時候補」→ hours, 「運費多少」→ packages, 「賣完了可以通知我嗎」→ community).
+  '缺貨', '缺货', '補貨', '补货', '賣完', '卖完', '售完', '到貨', '到货', '運費', '运费',
+  'engo shop',
+  'refund', 'checkout', 'restock', 'out of stock', 'sold out', 'shipping fee',
 ]
 // Shop topics that can also mean an enGo HMS feature (home inventory, building
 // notices), so they prefer the shop only when nothing else local matched or the
 // question names the shop:
 const SHOP_DETAIL_TERMS = [
-  '付款', '信用卡', '訂單', '订单', '下單', '下单', '缺貨', '缺货', '補貨', '补货', '庫存', '库存',
-  '發票', '发票', '載具', '运费', '運費', '團購', '团购', '加盟', '通知',
-  'payment', 'credit card', 'order', 'out of stock', 'invoice',
+  '付款', '信用卡', '訂單', '订单', '下單', '下单', '庫存', '库存',
+  '發票', '发票', '載具', '團購', '团购', '加盟', '通知',
+  // App questions mean the enGo智慧管家 app unless the shop is named; with 商城 they
+  // mean the separate enGo Shop app (Shop article shop-app-download: Android live,
+  // iPhone coming). Before this, 「商城App在哪裡下載」 answered with the office address.
+  'app', '下載', '下载', 'iphone', 'android', 'ios',
+  'payment', 'credit card', 'order', 'invoice',
 ]
 const SHOP_CONTEXT_TERMS = ['商城', 'shop', '安購', '安购']
 
