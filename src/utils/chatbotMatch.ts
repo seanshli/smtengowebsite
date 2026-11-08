@@ -103,6 +103,12 @@ const SHOP_ONLY_TERMS = [
   // 「賣完了可以通知我嗎」→ community). 缺貨/補貨 stay below: HMS 庫存管理 uses them for
   // 濾芯 and 備品 reminders, and 到貨 alone also means a building parcel.
   '賣完', '卖完', '售完', '運費', '运费',
+  // Re-probe after Shop #535 (2026-11-08): 「滿多少免運」 answered with the package
+  // prices, 「有LINE Pay嗎」 with the LINE account, 「付款後可以改地址嗎」 with the
+  // office address. These words only mean a shop payment or a shop order.
+  '免運', '免运', '貨到付款', '货到付款', '街口', '行動支付', '行动支付',
+  '改地址', '修改地址', '收件地址', '重複扣款', '重复扣款',
+  'line pay', 'linepay',
   'engo shop',
   'refund', 'checkout', 'restock', 'out of stock', 'sold out', 'shipping fee',
 ]
@@ -117,6 +123,10 @@ const SHOP_DETAIL_TERMS = [
   // iPhone coming). Before this, 「商城App在哪裡下載」 answered with the office address.
   'app', '下載', '下载', 'iphone', 'android', 'ios',
   'payment', 'credit card', 'order', 'invoice',
+  // Account, service and warranty words exist for enGo too (the enGo app account,
+  // enGo after-sales phone and device warranty), so the Shop answers them only
+  // when the shop is named: 「商城客服電話」, 「商品保固多久」, 「商城帳號怎麼刪除」.
+  '客服', '保固', '刪除', '删除', '註銷', '注销', '手機號碼', '手机号码',
 ]
 // 商品 is store wording (HMS 庫存管理 says 物品), so it names the shop too:
 // 「商品缺貨什麼時候補」 answered with office hours before (2026-11-08 probe).
