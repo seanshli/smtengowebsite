@@ -366,6 +366,37 @@ describe('shop detail questions ask the Shop KB first', () => {
     ]) expect(shopFirst(q), q).toBe(true)
   })
 
+  it('sends stock, shipping and explicitly named shop app questions to Shop', () => {
+    for (const q of [
+      '商品缺貨什麼時候補',
+      '賣完了可以通知我嗎',
+      '運費多少',
+      '商城有App嗎',
+      '商城App在哪裡下載',
+      'iPhone可以用商城App嗎',
+      'enGo Shop app',
+      'is this sold out',
+    ]) expect(shopFirst(q), q).toBe(true)
+  })
+
+  it('keeps shared app and community words local without a shop detail question', () => {
+    for (const q of [
+      'App在哪裡下載',
+      'iPhone 可以用嗎',
+      'Android 平板可以用嗎',
+      '智管家商城是什麼',
+      '公告在哪裡看',
+      '社區 通知',
+    ]) expect(shopFirst(q), q).toBe(false)
+  })
+
+  it('ranks app downloads above address while keeping location questions on address', () => {
+    for (const q of ['App在哪裡下載', 'app要去哪下載'])
+      expect(top(q).item.id, q).toBe('app-download')
+    for (const q of ['公司在哪裡', '地址在哪'])
+      expect(top(q).item.id, q).toBe('address')
+  })
+
   it('keeps the local answer for what-is-the-shop and enGo HMS questions', () => {
     expect(top('智管家商城是什麼').item.id).toBe('shop-platform')
     for (const q of ['智管家商城是什麼', '安購商城還在嗎', '公告在哪裡看', '斷網可以用嗎', '平面圖可以看嗎'])
