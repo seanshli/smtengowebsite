@@ -379,6 +379,26 @@ describe('shop detail questions ask the Shop KB first', () => {
     ]) expect(shopFirst(q), q).toBe(true)
   })
 
+  it('sends shop payment, shipping and order-change wording to Shop (re-probe after Shop #535)', () => {
+    for (const q of [
+      '滿多少免運',
+      '有LINE Pay嗎',
+      '可以用街口付款嗎',
+      '可以貨到付款嗎',
+      '付款後可以改地址嗎',
+      '重複扣款怎麼辦',
+      '商品保固多久',
+      '商城客服電話多少',
+      '商城帳號怎麼刪除',
+      '商城怎麼改手機號碼',
+    ]) expect(shopFirst(q), q).toBe(true)
+  })
+
+  it('keeps enGo service, warranty, hours and account questions local unless the shop is named', () => {
+    for (const q of ['客服電話多少', '客服時間', '營業時間', '設備保固多久', '帳號怎麼刪除', '怎麼改手機號碼', '公司地址'])
+      expect(shopFirst(q), q).toBe(false)
+  })
+
   it('keeps shared app and community words local without a shop detail question', () => {
     for (const q of [
       'App在哪裡下載',
