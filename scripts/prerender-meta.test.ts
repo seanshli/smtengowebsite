@@ -123,3 +123,25 @@ describe('prerender buildHtml', () => {
     expect(second).not.toContain('twitter:description content="enGo理家')
   })
 })
+
+describe('brand: enGo is the official name (Sean, 2026-11-09)', () => {
+  // 智管家 stays only in the legal entity (智管家科技股份有限公司), the 智管家商城
+  // product name and the App Store listing name. The unsupported 「第一品牌」
+  // superlative is gone from every title.
+  const files = ['index.html', 'scripts/prerender-meta.mjs', 'src/locale/zh.ts', 'src/locale/zhCN.ts', 'src/locale/en.ts', 'src/utils/seo.ts']
+  it.each(files)('%s has no 「第一品牌」 claim and no "enGo智管家" brand in titles', async (f) => {
+    const { readFileSync } = await import('node:fs')
+    const src = readFileSync(f, 'utf-8')
+    expect(src).not.toMatch(/第一品牌/)
+    expect(src).not.toMatch(/Leading AIot/)
+    expect(src).not.toMatch(/title[^\n]*enGo ?智管家/i)
+  })
+  it('every zh and en route title carries the enGo brand', () => {
+    for (const route of ['/', '/product', '/packages', '/contact']) {
+      for (const loc of ['zh', 'en'] as const) {
+        const html = buildHtml(TEMPLATE, route, loc)
+        expect(html, `${loc} ${route}`).toMatch(/<title>[^<]*enGo/)
+      }
+    }
+  })
+})

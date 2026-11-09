@@ -1,4 +1,6 @@
-# enGo 智管家（enGo HMS, Home Management System）
+# enGo（enGo HMS, Home Management System）
+
+品牌名稱統一為 enGo（各語系相同）；「enGo智管家」「安購智管家」是早期名稱，指的是同一個品牌。
 
 > enGo 是住家與社區合一的智慧生活系統：一台牆掛平板＋手機 App（enGo智慧管家）＋雲端服務，同時管理家裡的照明、插座、窗簾、空調、感測器、攝影機，以及社區的公告、報修、公設預約、包裹通知。由智管家科技股份有限公司（台北）提供。
 

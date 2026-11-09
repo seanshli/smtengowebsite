@@ -7,7 +7,7 @@ export const zhCNLocale = {
   contactTitle: '联络我们',
   contactOnLine: '用 LINE 联系我们',
   tutorialTitle: '使用教学',
-  tutorialSubtitle: 'enGo 智管家，启动您的智慧生活',
+  tutorialSubtitle: 'enGo，启动您的智慧生活',
   faqTitle: '常见问题',
   watchTutorials: '观看完整影片教学',
   videoGuideDesc: '关于产品使用与智慧场景的详细影音指南',
@@ -18,11 +18,11 @@ export const zhCNLocale = {
   // SEO
   seo: {
     notFound: {
-      title: '找不到页面 | enGo智管家',
+      title: '找不到页面 | enGo',
       description: '这个链接可能已经变更或失效。回到首页，或前往产品介绍、案例分享与联系我们。'
     },
     core: {
-      title: '核心价值 | enGo智管家的设计理念',
+      title: '核心价值 | enGo 的设计理念',
       description: 'enGo 以 AI 整合阳光、空气、水与食物，从健康、安心到便利，打造智慧生活的核心价值。'
     },
     brand: {
@@ -30,19 +30,19 @@ export const zhCNLocale = {
       description: '了解 enGo「安购」的创立初衷与品牌故事，我们如何用科技让每个家庭享有高品质的智慧生活。'
     },
     mission: {
-      title: '我们的使命 | enGo智管家',
+      title: '我们的使命 | enGo',
       description: 'enGo 的使命：运用 AIoT 技术，让智慧居家成为人人都能负担的生活必需品。'
     },
     team: {
-      title: '经营团队 | enGo智管家',
-      description: '认识 enGo 智管家的创始团队与董事顾问：跨越 AI、运营、设计与技术战略的四位掌舵者。'
+      title: '经营团队 | enGo',
+      description: '认识 enGo 的创始团队与董事顾问：跨越 AI、运营、设计与技术战略的四位掌舵者。'
     },
     enviro: {
-      title: '智慧环控 | enGo智管家',
+      title: '智慧环控 | enGo',
       description: '整合阳光、空气、水与智慧厨房的全方位环控方案：动态控温、空气净化监测、智慧水务与厨房安全，一套系统全部联动。'
     },
     vision: {
-      title: '未来愿景 | enGo智管家',
+      title: '未来愿景 | enGo',
       description: 'enGo 的愿景：整合云端仓储、联网设备与生活采购，打造定义未来的一站式智慧生活平台。'
     },
     ecosystem: {
@@ -50,12 +50,12 @@ export const zhCNLocale = {
       description: '探索 enGo 智慧生态系，从 AI 中控、智慧净水到空气清净，串连家中每一个智慧装置。'
     },
     default: {
-      title: 'enGo智管家 - 智慧家居第一品牌',
+      title: 'enGo - 住家与社区合一的智慧生活系统',
       description: 'enGo「安购」运用 AI 将阳光、空气、水与食物智慧整合，打造一站式智慧生活平台。',
       keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 净水器, 云端仓储'
     },
     home: {
-      title: 'enGo智管家 - 智慧家居第一品牌',
+      title: 'enGo - 住家与社区合一的智慧生活系统',
       description: 'enGo 是住家与社区合一的智慧生活系统：墙挂平板、手机 App 与云端服务，管理家中照明、空调、窗帘与传感器，以及社区公告、报修、公设预约。'
     },
     product: {
@@ -83,11 +83,11 @@ export const zhCNLocale = {
       description: '对我们的产品有兴趣？立即填写表单或透过 LINE 联系我们，专人将竭诚为您服务。'
     },
     packages: {
-      title: '套装方案 | enGo智管家 - 智慧家居第一品牌',
+      title: '套装方案 | enGo',
       description: '挑选最适合您的智慧家庭套装方案，提升家居舒适度与安全性。'
     },
     login: {
-      title: '登入 | enGo 智管家管理系统',
+      title: '登入 | enGo 管理系统',
       description: '登入 enGo 帐户以管理您的联网视窗与智慧家居配备。'
     }
   },
@@ -247,7 +247,7 @@ export const zhCNLocale = {
   // Forms / Misc (Top Level)
   name: '姓名',
   chatbotTitle: 'enGo 小精灵',
-  brandName: 'enGo 智管家',
+  brandName: 'enGo',
   reviewNamePlaceholder: '您的姓名',
   reviewCommentPlaceholder: '您的宝贵意见...',
   reviewThanks: '感谢您的评价！',
@@ -323,7 +323,7 @@ export const zhCNLocale = {
 
   // Chatbot (Top Level)
   chatbot: {
-    welcome: '你好！我是 enGo 智管家助手。有什么我可以帮您的吗？',
+    welcome: '你好！我是 enGo 助手。有什么我可以帮您的吗？',
     inputPlaceholder: '问我任何问题...',
     specs: '规格',
     features: '特色',
@@ -390,7 +390,7 @@ export const zhCNLocale = {
     brand_intro: {
       badge: '产品介绍',
       title: 'AI智慧管家中控平板',
-      heading: '家中的大小事，都是智管家的事',
+      heading: '家中的大小事，都是 enGo 的事',
       lead: '多数智慧家庭产品只管家里。enGo 同时管家里与社区。这是它与其他系统最根本的不同。',
       homeLabel: '家里',
       home: '照明、插座、窗帘、空调，以及电视、冷气等红外线家电。温湿度、空气质量、人体存在、瓦斯、漏水、烟雾的即时感知。摄影机画面、门口对讲、回路用电监测。',
@@ -502,7 +502,7 @@ export const zhCNLocale = {
       },
       list03: {
         title: '滤芯状态智慧提醒',
-        desc: '当滤芯使用寿命低于10%，智管家智慧AI系统自动提示更换。'
+        desc: '当滤芯使用寿命低于10%，enGo AI 系统自动提示更换。'
       },
       list04: {
         title: '传统净水器',
@@ -579,7 +579,7 @@ export const zhCNLocale = {
   },
 
   // contact (Top Level)
-  contactUsTitle: '智管家带您开启智慧新生活',
+  contactUsTitle: 'enGo 带您开启智慧新生活',
   contactUsSubtitle: '欢迎您留下联系资料，我们将尽快安排专人与您联系',
   contactUsSubtitle1: '欢迎您留下联系资料',
   contactUsSubtitle2: '我们将尽快安排专人与您联系',

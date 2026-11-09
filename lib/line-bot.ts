@@ -18,7 +18,7 @@ const knowledgeBase: Record<string, any[]> = require('../src/data/knowledge_base
 /** Same wording as the website chatbot (src/locale/*.ts → chatbot.*). */
 export const LINE_STRINGS: Record<LineLocale, AnswerStrings & { welcome: string; group_hint: string }> = {
   zh: {
-    welcome: '你好！我是 enGo 智管家助手。直接輸入問題就可以，例如「斷網可以用嗎」「怎麼新增房間」「商城在哪裡」。需要真人時請撥 02-27510218（週一至週五 09:00-18:00）。',
+    welcome: '你好！我是 enGo 助手。直接輸入問題就可以，例如「斷網可以用嗎」「怎麼新增房間」「商城在哪裡」。需要真人時請撥 02-27510218（週一至週五 09:00-18:00）。',
     found_video: '我為您找到了一段影片：',
     found_info: '我為您找到了一些資訊。您可以點擊這裡查看：',
     specs: '規格',
@@ -27,7 +27,7 @@ export const LINE_STRINGS: Record<LineLocale, AnswerStrings & { welcome: string;
     group_hint: '在群組裡請在訊息中提到「enGo」或「智管家」，我才會回答。',
   },
   zhCN: {
-    welcome: '你好！我是 enGo 智管家助手。直接输入问题就可以，例如「断网可以用吗」「怎么新增房间」「商城在哪里」。需要真人请拨 02-27510218（周一至周五 09:00-18:00）。',
+    welcome: '你好！我是 enGo 助手。直接输入问题就可以，例如「断网可以用吗」「怎么新增房间」「商城在哪里」。需要真人请拨 02-27510218（周一至周五 09:00-18:00）。',
     found_video: '我为您找到了一段影片：',
     found_info: '我为您找到了一些信息。您可以点击这里查看：',
     specs: '规格',
