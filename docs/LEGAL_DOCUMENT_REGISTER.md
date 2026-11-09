@@ -8,9 +8,9 @@
 
 | 文件編號 | 文件名稱 | 版次 | 發行日期 | 生效日 | 下次審查 | 文件所有人 | 核准（日期） | 機密等級 | 適用對象 | 繁中 | 英文 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ENGO-LG-001 | 服務條款（Terms of Service） | A.1 | 2026-10-19 | 2024-01-15 | 2027-10-19 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、住戶、建案與社區、合作夥伴 | `/terms.html` | `/terms-en.html` |
-| ENGO-LG-002 | 隱私權政策（Privacy Policy） | A.1 | 2026-10-19 | 2026-04 | 2027-10-19 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、住戶、建案與社區、合作夥伴 | `/privacy.html` | `/privacy-en.html` |
-| ENGO-LG-003 | 退貨與保固政策（Return & Warranty Policy） | A.1 | 2026-10-19 | 2026-04 | 2027-10-19 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、合作夥伴 | `/return-policy.html` | `/return-policy-en.html` |
+| ENGO-LG-001 | 服務條款（Terms of Service） | A.2 | 2026-11-09 | 2024-01-15 | 2027-11-09 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、住戶、建案與社區、合作夥伴 | `/terms.html` | `/terms-en.html` |
+| ENGO-LG-002 | 隱私權政策（Privacy Policy） | A.2 | 2026-11-09 | 2026-04 | 2027-11-09 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、住戶、建案與社區、合作夥伴 | `/privacy.html` | `/privacy-en.html` |
+| ENGO-LG-003 | 退貨與保固政策（Return & Warranty Policy） | A.2 | 2026-11-09 | 2026-04 | 2027-11-09 | Van Lee | Sean Li（2026-10-19） | 可對外 | 商城買家、合作夥伴 | `/return-policy.html` | `/return-policy-en.html` |
 
 ## 版次歷史 Revision history
 
@@ -19,18 +19,21 @@
 | 版次 | 日期 | 變更 | SHA-256（繁中） | SHA-256（英文） |
 |---|---|---|---|---|
 | A.1 | 2026-10-19 | 納入文件管制：賦予文件編號、版次與內容雜湊；條文內容同 2026-04 版，未變更。 | `d4ab656fb0af1181f6fe4e612c3d1cda53920ff5dd2b53dd0ad8653c797c1d25` | `604129fae75b430c040898490f75ef7b48b67eb26ef9570cc18ab78ce48654dd` |
+| A.2 | 2026-11-09 | 英文公司名稱更正為 Smart enGo Home Technology Corp.（原誤植為中文名稱音譯 Zhiguanjia Technology Co., Ltd.）；條文內容未變更。 | `4c211b2dfb89d873753d83d709bbb924f6e0a3e1644604b0d39b5d4ffafa8c7e` | `d9322c21b4d5b0123c2ffda3adabf690ec9ea0a06575210da2df77c0a7188912` |
 
 ### ENGO-LG-002 隱私權政策
 
 | 版次 | 日期 | 變更 | SHA-256（繁中） | SHA-256（英文） |
 |---|---|---|---|---|
 | A.1 | 2026-10-19 | 納入文件管制：賦予文件編號、版次與內容雜湊；條文內容同 2026-04 版，未變更。 | `8324cb9014ad5fb88c99ca28f09ec2b0503a1a358798ed945059cab5a56d20ec` | `b524d74f75d1401d5b7f36a61b837159324e183cb757f6b671a5c7b1941230cd` |
+| A.2 | 2026-11-09 | 英文公司名稱更正為 Smart enGo Home Technology Corp.（原誤植為中文名稱音譯 Zhiguanjia Technology Co., Ltd.）；條文內容未變更。 | `511e908ce2b3b30c5e5e15dc9d1224645a1cfb53f944ebe88676fcda901b2a29` | `30dd3c276a72886693686f0f89f2e15dd7017b077b25a59d7226683f64dd299e` |
 
 ### ENGO-LG-003 退貨與保固政策
 
 | 版次 | 日期 | 變更 | SHA-256（繁中） | SHA-256（英文） |
 |---|---|---|---|---|
 | A.1 | 2026-10-19 | 納入文件管制：賦予文件編號、版次與內容雜湊；條文內容同 2026-04 版，未變更。 | `41ab3158c4c3e565b33661fe8a282ff6cb621986bbdd0be95e27f0023b1cadea` | `c2eb52cdd9fe1d252a00c595663c009710ae606ec52cfdc845e07a23702fe54b` |
+| A.2 | 2026-11-09 | 英文公司名稱更正為 Smart enGo Home Technology Corp.（原誤植為中文名稱音譯 Zhiguanjia Technology Co., Ltd.）；條文內容未變更。 | `a4f14b0979dc16a5d4e349f4eada87494f92db3f45b155ad013ed6dd823bf25b` | `57e50bad2fc85d7ac0b42d524004754420d9543ab58dcaf1fe9ef3e88b3f8da8` |
 
 ## 變更程序 Change procedure
 

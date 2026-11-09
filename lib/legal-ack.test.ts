@@ -1,12 +1,17 @@
 import { describe, expect, it } from 'vitest'
 import { hashIp, validateAcknowledgement } from './legal-ack'
+import register from '../src/data/legal.json'
+
+// Current revision of the terms, read from the register so a legal:bump does not
+// break the fixture.
+const TERMS_REV = register.documents.find((d) => d.id === 'terms')!.revision
 
 const base = {
   audience: 'shop_buyer',
   name: '  王小明 ',
   email: 'ming@example.com',
   documents: ['terms', 'privacy'],
-  versions: { terms: 'A.1' },
+  versions: { terms: TERMS_REV },
   accepted: true
 }
 
@@ -19,7 +24,7 @@ describe('validateAcknowledgement', () => {
       expect(r.row.organization).toBeNull()
       expect(r.row.phone).toBeNull()
       expect(r.row.note).toBeNull()
-      expect(r.row.versions.terms).toMatchObject({ docNo: 'ENGO-LG-001', revision: 'A.1' })
+      expect(r.row.versions.terms).toMatchObject({ docNo: 'ENGO-LG-001', revision: TERMS_REV })
       expect(r.row.versions.terms.sha256.zh).toMatch(/^[0-9a-f]{64}$/)
     }
   })
