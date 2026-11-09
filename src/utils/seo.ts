@@ -40,7 +40,7 @@ export function useSeo() {
 
     const locale = i18n.global.locale.value as string
 
-    // Translation helper. Titles are written "頁名 | enGo智管家 …", and vue-i18n treats
+    // Translation helper. Titles are written "頁名 | enGo …", and vue-i18n treats
     // " | " as a plural separator: t() silently returned only the first segment, so
     // every rendered <title>/og:title was a bare "首頁" / "Product" (found 2026-11-05;
     // Google renders JS, so search results showed the bare word). Read the raw string
@@ -58,8 +58,8 @@ export function useSeo() {
     const descKey = to.meta.descKey as string || ''
     const keywordsKey = to.meta.keywordsKey as string || ''
 
-    const title = t(titleKey, to.meta.title as string || 'enGo智管家 - 智慧家居第一品牌')
-    const description = t(descKey, to.meta.description as string || 'enGo理家，蝦咪攏嗯驚！智管家用AI技術轉化為智慧居家的必須品...')
+    const title = t(titleKey, to.meta.title as string || 'enGo - 住家與社區合一的智慧生活系統')
+    const description = t(descKey, to.meta.description as string || 'enGo 是住家與社區合一的智慧生活系統。')
     const keywords = t(keywordsKey, '智管家, enGo, smart home, AIot, 智慧家居')
 
     // 1. Update html lang attribute

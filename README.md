@@ -1,6 +1,6 @@
 # smtengowebsite — www.smtengo.com
 
-Marketing site for **enGo智管家** (Smart enGo Technology). Vue 3 + Vite single-page app with a
+Marketing site for **enGo** (智管家科技股份有限公司). Vue 3 + Vite single-page app with a
 handful of Vercel serverless functions (contact form, chatbot, admin back office) backed by Supabase.
 
 - **Live:** https://www.smtengo.com (aliases: web.smtengo.com, w2.smtengo.com)

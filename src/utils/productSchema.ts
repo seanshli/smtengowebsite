@@ -15,7 +15,7 @@ const BASE_URL = 'https://www.smtengo.com'
 const PRODUCT_URL = `${BASE_URL}/product`
 const BRAND = {
   '@type': 'Brand' as const,
-  name: 'enGo智管家',
+  name: 'enGo',
   url: BASE_URL
 }
 

@@ -16,9 +16,9 @@
 -->
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>enGo智管家 產品目錄</title>
+    <title>enGo 產品目錄</title>
     <link>https://www.smtengo.com</link>
-    <description>enGo智管家 AI 智慧家居產品 — 中控平板、淨水系統、空氣清淨機</description>
+    <description>enGo AI 智慧家居產品 — 中控平板、淨水系統、空氣清淨機</description>
 
     <!-- enGo AI 智慧中控平板 -->
     <item>
@@ -31,7 +31,7 @@
       <g:quantity_to_sell_on_facebook>100</g:quantity_to_sell_on_facebook>
       <g:price>12000.00 TWD</g:price>
       <g:sale_price>8000.00 TWD</g:sale_price>
-      <g:brand>enGo智管家</g:brand>
+      <g:brand>enGo</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Home &amp; Garden &gt; Household Appliances</g:google_product_category>
       <g:product_type>智慧家居 &gt; 智慧中控</g:product_type>
@@ -55,7 +55,7 @@
       <g:quantity_to_sell_on_facebook>100</g:quantity_to_sell_on_facebook>
       <g:price>21000.00 TWD</g:price>
       <g:sale_price>18000.00 TWD</g:sale_price>
-      <g:brand>enGo智管家</g:brand>
+      <g:brand>enGo</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Kitchen Appliances &gt; Water Filters</g:google_product_category>
       <g:product_type>智慧家居 &gt; 淨水系統</g:product_type>
@@ -79,7 +79,7 @@
       <g:quantity_to_sell_on_facebook>100</g:quantity_to_sell_on_facebook>
       <g:price>12800.00 TWD</g:price>
       <g:sale_price>8960.00 TWD</g:sale_price>
-      <g:brand>enGo智管家</g:brand>
+      <g:brand>enGo</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Home &amp; Garden &gt; Household Appliances &gt; Climate Control Appliances &gt; Air Purifiers</g:google_product_category>
       <g:product_type>智慧家居 &gt; 空氣清淨機</g:product_type>

@@ -49,7 +49,7 @@ export const enLocale = {
       description: 'The wall tablet, the phone app and the enGo Store as three doors into one system, five product lines, and the partners behind them.'
     },
     default: {
-      title: 'enGo Smart Home - Leading AIot Solutions',
+      title: 'enGo - Smart Living for Home and Community',
       description: 'enGo integrates AI with light, air, water, and food to create a healthier, smarter home life.',
       keywords: 'enGo, Smart Home, AIot, Water Purifier, Home Automation'
     },
