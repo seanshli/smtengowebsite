@@ -149,12 +149,6 @@
                   <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
                   <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
                 </tr>
-                <tr>
-                  <th scope="row">{{ $t('product.interfaces.rows.photowall') }}</th>
-                  <td><span class="if-yes" :aria-label="$t('product.interfaces.yes')">●</span><small class="if-only">{{ $t('product.interfaces.tabletOnly') }}</small></td>
-                  <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
-                  <td><span class="if-no" :aria-label="$t('product.interfaces.no')">—</span></td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -218,16 +212,6 @@
               </div>
               <h3>{{ $t('product.tablet_function.features.floorplan.title') }}</h3>
               <p>{{ $t('product.tablet_function.features.floorplan.body') }}</p>
-            </article>
-            <article class="tf-card">
-              <figure v-if="featureImages.photowall" class="tf-figure">
-                <img :src="featureImages.photowall" :alt="$t('product.tablet_function.features.photowall.title')" loading="lazy" />
-              </figure>
-              <div class="tf-card-head">
-                <span class="tf-badge">{{ $t('product.tablet_function.tabletOnly') }}</span>
-              </div>
-              <h3>{{ $t('product.tablet_function.features.photowall.title') }}</h3>
-              <p>{{ $t('product.tablet_function.features.photowall.body') }}</p>
             </article>
             <article class="tf-card">
               <figure v-if="featureImages.inventory" class="tf-figure">
@@ -620,19 +604,16 @@ export default defineComponent({
     // so an unfilled slot is simply absent — never an empty box.
     //   voice     → shot #2 not taken: the idle screen draws no voice entry point
     //               and the wake method is unconfirmed. Stays text-only until told.
-    //   photowall → shot #4 delivered, but it shows a MEDOLE catalogue page rather
-    //               than family photos; kept text-only (2026-09-11 feedback).
     //   ios       → 2026-09-23: filled with a REAL enGo iOS capture (iPhone, prd
     //               3.2.2+489, 智管家工作室 household, 米多力3合1 device page). It is a
     //               device-control page, NOT the §3.2 shot #6 home screen: the home
     //               screen carries a live account greeting (a colleague's display
     //               name), so it stays unpublished until that account is changed.
     //               Never substitute the Android shot here.
-    const featureImages: Record<'voice' | 'floorplan' | 'photowall' | 'inventory', string | null> = {
+    const featureImages: Record<'voice' | 'floorplan' | 'inventory', string | null> = {
       voice: null,
       // 2026-09-27: the floor plan is not in 3.2.2 (開發中); the old capture was a dev build, so no figure.
       floorplan: null,
-      photowall: null,
       // 2026-09-22: the only inventory capture shows third-party product names — text-only until a clean capture exists.
       inventory: null
     }
