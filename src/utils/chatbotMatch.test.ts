@@ -194,7 +194,7 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(home3.body.zh).toMatch(/手機[\s\S]*☰/)
     const dd = (howto as any).modules.find((m: any) => m.id === 'devicedata')
     expect(dd.steps[0].body.zh).toMatch(/平板：首頁右上角的第二顆圖示[\s\S]*手機：從裝置頁進入/)
-    expect((howto as any).meta.updated).toBe('2026-11-05')
+    expect((howto as any).meta.updated).toBe('2026-11-09')   // moved from 2026-11-05 by the UM-001 A.24 sync
     const bot = (kb as any).howto.find((e: any) => e.id === 'howto-devicedata')
     expect(bot.answer.zh).toContain('(/tutorial#howto-devicedata)')
     expect(bot.answer.zh).toMatch(/第二顆圖示/)
@@ -277,6 +277,53 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
       expect(src, loc).not.toMatch(/輸碼|输码|entering the code|コードを入力/)
     }
     expect(readFileSync(resolve(process.cwd(), 'src/locale/zh.ts'), 'utf-8')).toContain('按「開櫃取件」即可開櫃')
+  })
+  it('UM-001 A.21-A.24 sync (2026-11-09): 訊息 has four tabs (告警, 電鈴紀錄), photo wall per §6.4, §6.5 device control pages reachable, provenance moved to 3.11.0', () => {
+    const locs = ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']
+    const mod = (id: string) => (howto as any).modules.find((m: any) => m.id === id)
+    const gen = (id: string) => (kb as any).general.find((e: any) => e.id === id)
+    // A.21 / §9.3: the 訊息 page tabs are 公告／告警／操作紀錄／電鈴紀錄; the old 「通知」 tab is gone, and the old "three kinds" claim with it
+    const community = JSON.stringify(mod('community')) + JSON.stringify((kb as any).howto.find((e: any) => e.id === 'howto-community')) + readFileSync(resolve(process.cwd(), 'public/llms.txt'), 'utf-8')
+    expect(community).toMatch(/公告[、，／]?[^"]*告警[^"]*操作紀錄[^"]*電鈴紀錄/)
+    expect(community).toContain('電鈴紀錄')
+    expect(community).not.toMatch(/三類訊息|Three kinds of messages|系統消息|System messages/)
+    expect(community).not.toMatch(/訊息[^。"]{0,12}「通知」分頁|Messages[^."]{0,30}通知 tab/)
+    const steps = mod('community').steps.map((s: any) => s.title.zh + s.body.zh).join('')
+    expect(steps).toMatch(/原本的「通知」分頁已更名為「告警」/)
+    expect(steps).toMatch(/查看分機資訊/)
+    expect(steps).not.toMatch(/查看攝影機、解鎖開門/)
+    // Shop (商城) 「通知」 pages are a different product and keep their name
+    expect(JSON.stringify(mod('shopnotify'))).toContain('「通知」頁')
+    // A.23 / §6.4: where it is set, the five-photo cap, the two switches, 「關螢幕」 is brightness-to-minimum
+    const f33 = (faqs as any[]).find((f) => f.id === 33).answer
+    for (const loc of locs) {
+      expect(f33[loc], loc).toMatch(/engo_wall/)
+      expect(f33[loc], loc).toMatch(/\b5\b/)
+      expect(gen('photo-wall').answer[loc], loc).toMatch(/engo_wall/)
+    }
+    expect(f33.zh).toContain('設定 → 待機相片牆')
+    expect(f33.zh).toMatch(/並非真的關閉螢幕/)
+    expect(f33.zh).not.toMatch(/相片牆會把螢幕關掉/)
+    // A.24 / §6.5 and A.22 ④: the new answer exists in all six locales, mentions Matter ACs on the dial panel, and is reachable from natural questions
+    const dc = gen('device-control-pages')
+    for (const loc of locs) expect(dc.answer[loc], loc).toMatch(/3\.11\.0/)
+    expect(dc.answer.zh).toMatch(/第三方 Matter 冷氣也會自動接上這個轉盤式面板/)
+    expect(top('冷氣控制頁有什麼').item.id).toBe('device-control-pages')
+    expect(top('燈的控制頁可以調什麼').item.id).toBe('device-control-pages')
+    expect(top('各種裝置的控制頁有什麼').item.id).toBe('device-control-pages')
+    expect(mod('home').steps.map((s: any) => s.title.zh).join('|')).toMatch(/各種裝置的控制頁有什麼/)
+    // 無線情境按鍵 vs 無線開關 and the gear stay distinct, and nothing leaks the retired air purifier or a door lock
+    expect(dc.answer.zh).toMatch(/無線情境按鍵[\s\S]*無線開關/)
+    expect(JSON.stringify(dc)).not.toMatch(/空氣清淨機|門鎖|Alexa/)
+    // A.22 provenance: the how-to no longer calls 3.6.2 the whole current app, and the pin is 2026-11-09
+    expect((howto as any).meta.generatedFor.zh).toMatch(/3\.6\.2 為底[\s\S]*3\.11\.0/)
+    expect((howto as any).meta.generatedFor.en).toMatch(/Based on enGo 3\.6\.2[\s\S]*3\.11\.0/)
+    expect((howto as any).meta.updated).toBe('2026-11-09')
+    // every howto module still has a bot entry mirroring its steps
+    for (const m of (howto as any).modules.filter((x: any) => ['home', 'community'].includes(x.id))) {
+      const e = (kb as any).howto.find((x: any) => x.id === `howto-${m.id}`)
+      for (const st of m.steps) expect(e.answer.zh, `${m.id}/${st.title.zh}`).toContain(st.body.zh)
+    }
   })
   it('voice activation is referred to a person (KB-001 A.8 §4): no Settings path is described', () => {
     const zh = (kb as any).general.find((x: any) => x.id === 'voice-control').answer.zh as string

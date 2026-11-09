@@ -2,13 +2,13 @@
   "meta": {
     "version": "1.0",
     "generatedFor": {
-      "zh": "enGo 3.6.2（文字說明）；多數截圖取自 3.2.2（建置 489）",
-      "en": "enGo 3.6.2 (text); most screenshots from 3.2.2 (build 489)"
+      "zh": "enGo 3.6.2 為底（文字說明）；首頁與裝置控制頁、通知與訊息依 3.11.0 更正；多數截圖取自 3.2.2（建置 489）",
+      "en": "Based on enGo 3.6.2 (text); the home and device pages and the notifications and messages sections are corrected to 3.11.0; most screenshots are from 3.2.2 (build 489)"
     },
-    "updated": "2026-11-05",
+    "updated": "2026-11-09",
     "note": {
-      "zh": "截圖取自「模型屋」示範住家與智管家實驗社區帳號，多數於 enGo 3.2.2（建置 489）正式建置實機擷取；庫存管理頁取自 SmartPad（enGo 3.6.0）實機，通知頁為較新的平板實機重拍。僅裁切、未修圖。",
-      "en": "Screenshots were captured on the Model Home demo household and the enGo test-community account, most of them on the enGo 3.2.2 (build 489) release build; the inventory pages come from a SmartPad running enGo 3.6.0, and the notifications page is a newer tablet capture. Cropped only, never retouched."
+      "zh": "截圖取自「模型屋」示範住家與智管家實驗社區帳號，多數於 enGo 3.2.2（建置 489）正式建置實機擷取；庫存管理頁取自 SmartPad（enGo 3.6.0）實機；通知頁截圖為較舊版本的畫面（動作按鈕現已更名），待重拍。僅裁切、未修圖。",
+      "en": "Screenshots were captured on the Model Home demo household and the enGo test-community account, most of them on the enGo 3.2.2 (build 489) release build; the inventory pages come from a SmartPad running enGo 3.6.0; the notifications page screenshot is from an older version (its action buttons have since been renamed) and is due for a retake. Cropped only, never retouched."
     }
   },
   "modules": [
@@ -334,6 +334,17 @@
             "en": "Tap any device card to open its control page. Every device type looks different, the layout follows what the device actually supports: live readings, switches, presets/modes, dials or sliders, with the gear at the top right for renaming and moving rooms. A reading showing “--” usually means the device is off or has not reported yet, not that it is broken."
           },
           "image": "/images/howto/home/04-device-page.png"
+        },
+        {
+          "title": {
+            "zh": "各種裝置的控制頁有什麼",
+            "en": "What each device type's control page offers"
+          },
+          "body": {
+            "zh": "App 會自己判斷點的是哪一種裝置，開對應的控制頁，不必自己選；實際出現哪些項目，取決於裝置自己回報了哪些功能，同類不同品牌多一兩項或少一兩項屬正常。燈與插座：智能吸頂燈有電源、亮度、色溫，分白光與彩光兩種模式，彩光另可調明度與飽和；軌道插座有全開／全關、燈光調節、倒數計時與定時，並可看電流、電壓、瓦數與今日度數；三孔插座各孔獨立開關。冷氣與環境：轉盤式冷氣面板可轉盤調溫，另有開關、模式（自動／冷氣／除濕／送風）與風量；自 3.11.0 起，第三方 Matter 冷氣也會自動接上這個轉盤式面板，先前只能落到通用頁。經 485 轉換器接入的冷氣則是即時資訊加電源與嗶聲開關，紅外遙控的冷氣與電視是紅外公版按鍵。窗簾：開／停／關與開合百分比。感測與安全：人體存在傳感器顯示有人／無人、光照度、距離與電量，並可調靈敏度、距離與存在保持時間等；淨水器報警閥可開關閥門，偵測到漏水會告警；攝影機看即時影像。無線情境按鍵可為單擊、雙擊、長按各綁一個情境，它和「無線開關」是兩種東西。每一頁右上角的齒輪是該裝置的設定（改名、換房間、移除），和頁面中間的控制項分開。",
+            "en": "The app works out which type of device you tapped and opens the matching control page; you do not have to choose. What appears depends on which functions the device itself reports, so two brands of the same kind may differ by an item or two. Lights and sockets: a smart ceiling light has power, brightness and colour temperature, in white and colour modes, with brightness and saturation for colour; a track socket has all on/off, light adjustment, countdown and schedules, and shows current, voltage, watts and today's kWh; a three-hole socket switches each hole separately. Air conditioning and environment: the dial-style AC panel has a temperature dial plus power, mode (auto, cool, dry, fan) and fan speed; from 3.11.0 third-party Matter air conditioners are connected to this dial-style panel automatically, where before they only fell back to a generic page. An AC connected through a 485 converter shows live readings plus power and beep switches, and an infrared AC or TV uses the standard infrared keys. Curtains: open, stop, close and an opening percentage. Sensing and safety: the human presence sensor shows present/absent, light level, distance and battery, with adjustable sensitivity, distance and hold time among others; the water-purifier alarm valve opens and closes the valve and alerts when a leak is detected; a camera shows live video. A wireless scene button binds one scene each to single press, double press and long press, and it is not the same thing as a wireless switch. The gear at the top right of every page is that device's settings (rename, move room, remove), separate from the controls in the middle."
+          },
+          "image": null
         }
       ],
       "tips": [
@@ -494,8 +505,8 @@
         "en": "Community Announcements & Messages"
       },
       "summary": {
-        "zh": "通知頁收電鈴、信箱、包裹三類通知；訊息收系統、社區與商城三類消息，社區公告也在訊息裡看。這是 enGo 與一般智慧家庭產品最大的差別。不必為了看社區公告另外裝一支 App。",
-        "en": "The Notifications page carries doorbell, mailbox and parcel notices; Messages holds system, community and shop messages, and community announcements are read there too. This is what sets enGo apart from ordinary smart-home products. You do not need a second app to read community notices."
+        "zh": "通知頁收電鈴、信箱、包裹三類通知；訊息頁有公告、告警、操作紀錄、電鈴紀錄四個分頁，社區公告與門口電鈴的來電紀錄都在訊息裡看。這是 enGo 與一般智慧家庭產品最大的差別。不必為了看社區公告另外裝一支 App。",
+        "en": "The Notifications page carries doorbell, mailbox and parcel notices; the Messages page has four tabs (公告 Announcements, 告警 Alerts, 操作紀錄 Activity log and 電鈴紀錄 Doorbell log), so community announcements and the doorbell call log are both read there. This is what sets enGo apart from ordinary smart-home products. You do not need a second app to read community notices."
       },
       "steps": [
         {
@@ -504,8 +515,8 @@
             "en": "Read notifications: doorbell, mailbox, parcel"
           },
           "body": {
-            "zh": "平板：左側導覽列的鈴鐺圖示；手機：底部第四個分頁「通知」。上方三個分頁分別是電鈴通知（有人按門口電鈴的來電紀錄）、信箱通知（信件到達）、包裹通知（有您的包裹到管理室）。分頁下方另有查看攝影機、解鎖開門、致電管理中心三個按鈕，解鎖開門的使用範圍請洽專人。圖中社區目前沒有電鈴紀錄，所以顯示「尚無資料」。",
-            "en": "Tablet: the bell icon in the left rail. Phone: the fourth tab at the bottom, 通知 (Notifications). The three tabs at the top are doorbell notices (a log of calls when someone rings at the door), mailbox notices (mail has arrived) and parcel notices (a parcel for you has reached the management office). Below the tabs are three buttons: view camera, unlock door and call the management center; please ask our team about the scope of unlock door. In this screenshot the community has no doorbell records yet, so it shows 尚無資料 (No data)."
+            "zh": "平板：左側導覽列的鈴鐺圖示；手機：底部第四個分頁「通知」。上方三個分頁分別是電鈴通知（有人按門口電鈴時的來電）、信箱通知（信件到達）、包裹通知（有您的包裹到管理室）。分頁下方另有查看分機資訊、解鎖開門、致電管理中心三個按鈕，解鎖開門的使用範圍請洽專人。此圖為較舊版本的畫面，按鈕當時叫「查看攝影機」，現已改名為「查看分機資訊」；圖中社區目前沒有電鈴紀錄，所以顯示「尚無資料」。門口電鈴的通話紀錄請到訊息的「電鈴紀錄」分頁看。",
+            "en": "Tablet: the bell icon in the left rail. Phone: the fourth tab at the bottom, 通知 (Notifications). The three tabs at the top are doorbell notices (calls when someone rings at the door), mailbox notices (mail has arrived) and parcel notices (a parcel for you has reached the management office). Below the tabs are three buttons: view extension info (查看分機資訊), unlock door and call the management center; please ask our team about the scope of unlock door. This screenshot is from an older version, when the first button was still called 查看攝影機 (view camera); it is now 查看分機資訊. In this screenshot the community has no doorbell records yet, so it shows 尚無資料 (No data). The doorbell call log itself is on the 電鈴紀錄 tab of the Messages page."
           },
           "image": "/images/howto/community/01-notification-tablet.png"
         },
@@ -522,20 +533,20 @@
         },
         {
           "title": {
-            "zh": "三類訊息",
-            "en": "Three kinds of messages"
+            "zh": "訊息頁的四個分頁",
+            "en": "The four tabs of the Messages page"
           },
           "body": {
-            "zh": "系統消息（維護、版本）、社區／大樓消息（管理費、包裹、公告）、商城消息（優惠、訂單）。可用上方分頁分別檢視。",
-            "en": "System messages (maintenance, releases), community/building messages (management fees, parcels, announcements) and shop messages (offers, orders). Use the tabs at the top to view each."
+            "zh": "訊息頁有四個分頁：公告（管委會或物業管理室發布的社區公告、包裹到件通知）、告警（您在「設備告警設置」設定的門檻被觸發時的紀錄）、操作紀錄（誰在什麼時候動了哪個裝置）、電鈴紀錄（門口按電鈴的來電紀錄，含未接）。原本的「通知」分頁已更名為「告警」，門鈴的通話紀錄也改放在「電鈴紀錄」；舊版說明若寫「通知分頁」，已不適用。點任一則可看完整全文。",
+            "en": "The Messages page has four tabs: 公告 Announcements (community notices from the committee or property office, and parcel arrival notices), 告警 Alerts (a record of each time a threshold you set under device alert settings was triggered), 操作紀錄 Activity log (who operated which device, and when) and 電鈴紀錄 Doorbell log (calls from the door station, missed ones included). The former 通知 tab has been renamed 告警, and doorbell call records now live under 電鈴紀錄; older instructions that mention a 通知 tab no longer apply. Open any item for the full text."
           },
           "image": null
         }
       ],
       "tips": [
         {
-          "zh": "包裹通知在通知頁的「包裹通知」分頁，訊息裡也看得到；若沒收到，先確認設定裡的通知權限。",
-          "en": "Parcel notices sit in the Parcel tab of the Notifications page and also appear under Messages. If you are not getting them, check notification permission in Settings first."
+          "zh": "包裹到件通知在通知頁的「包裹通知」分頁，訊息的「公告」分頁也看得到；若沒收到，先確認設定裡的通知權限。",
+          "en": "Parcel notices sit in the Parcel tab of the Notifications page and also appear under the Announcements tab of Messages. If you are not getting them, check notification permission in Settings first."
         },
         {
           "zh": "包裹怎麼領（3.6.x 起）：智能櫃走到櫃前，在 App 按「開櫃取件」，櫃門自動開啟，不需輸入取件碼；人工櫃或管理室則前往存放位置向管理中心取件。",
