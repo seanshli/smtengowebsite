@@ -371,7 +371,7 @@ export const enLocale = {
       homeLabel: 'At home',
       home: 'Lighting, sockets, curtains and air conditioning, plus infrared appliances such as TVs and air conditioners. Real-time sensing of temperature and humidity, air quality, presence, gas, water leaks and smoke. Camera feeds, door intercom and circuit-level power monitoring.',
       communityLabel: 'In the community',
-      communityFigure: 'Notifications page on the tablet: doorbell, mailbox and parcel notices',
+      communityFigure: 'Notifications page on the tablet: doorbell settings, mailbox and parcel',
       community: 'Never miss a notice, track repair requests, book facilities online, and when a parcel reaches the smart locker, tap “Open locker” in the app to open it.',
       scenes: 'Save your everyday combinations as one-tap scenes: press “Leaving home” and every light goes off, the air conditioning shuts down and security mode switches on. Or set up automations that run on a schedule or on sensor status.',
       countCard: {
@@ -391,8 +391,7 @@ export const enLocale = {
         floorplan: 'Live floor plan',
         deviceData: 'Device data (energy, water, air quality)',
         community: 'Community services, cameras, inventory',
-        voice: 'Voice control',
-        photowall: 'Standby photo wall'
+        voice: 'Voice control'
       },
       tabletOnly: 'Tablet only',
       comingSoon: 'In development',
@@ -407,7 +406,6 @@ export const enLocale = {
       features: {
         voice: { title: 'Voice control', body: 'Walk up to the wall, one sentence gets it done. “Turn on the living room light.” “Set the AC to 26 degrees.” “Turn off all the lights in the meeting room.” “After-work mode.” No reaching for your phone, no hunting for the button on screen. Safety-related devices ask you to confirm first, and when two names sound alike the system asks which you mean rather than guessing.', note: 'The system does not listen continuously and never records in the background.' },
         floorplan: { title: 'Live floor plan (in development)', body: 'A floor plan generated from the actual room layout of your home shows at a glance which rooms are occupied, which lights are still on and which air conditioners are running, no need to open devices one by one.' },
-        photowall: { title: 'Standby photo wall', body: 'When no one is using it, the tablet switches to your family photos, with the time, weather and latest community notices overlaid. Brightness follows the ambient light, never glaring at night, lighting up only when the hallway lights come on. One touch brings the screen back. Switch it on and tune it under 設定 → 待機相片牆 (Settings → Standby photo wall).' },
         inventory: { title: 'Smart inventory', body: 'Manage household storage, shop stock and office supplies alike: items, shelf locations, categories and low-stock alerts, linked to your shop orders and delivery notifications.' }
       }
     },
@@ -434,7 +432,7 @@ export const enLocale = {
       points: {
         p1: { title: 'Neighbourhood marketplace', body: 'Merchants trusted by your community list fresh produce, household goods, health foods and smart-home accessories; search or browse, add to cart, check out, delivered within the community.' },
         p2: { title: 'Subscription plans', body: 'Silver, Gold and Platinum: weekly fresh produce, monthly household essentials and store-wide discounts. Pause or change any time, no lock-in.' },
-        p3: { title: 'Updates in the enGo app', body: 'Order, promotion and delivery updates arrive as 商城消息 and 商城快遞 notifications in the enGo app; shopping itself happens on the store site.' }
+        p3: { title: 'Shop on the store site', body: 'Shopping itself happens on the store site.' }
       },
       note: 'The enGo Store is the new version of the former 安購商城: the same store on a new platform with a new name. For orders, returns and delivery, contact the store\'s own support.',
       cta: 'Open the enGo Store',

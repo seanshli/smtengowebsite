@@ -6,7 +6,7 @@ import howto from '../data/howto.json'
 import forbidden from '../data/forbidden-claims.json'
 import news from '../data/news.json'
 import packages from '../data/packages.json'
-import { readFileSync, existsSync } from 'node:fs'
+import { readFileSync, readdirSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { normalizeQuery, expandQuery, rankKnowledge, prefersShopKnowledge } from './chatbotMatch'
 
@@ -22,7 +22,6 @@ describe('chatbot routes KB-001 questions to the right entry', () => {
     ['平板會不會偷聽錄音', 'voice-control'],
     ['Siri 可以用嗎', 'homekit-siri'],
     ['支援 Apple HomeKit 嗎', 'homekit-siri'],
-    ['相片牆半夜會很亮嗎', 'photo-wall'],
     ['App 叫什麼名字 哪裡下載', 'app-download'],
     ['iPhone 和平板功能一樣嗎', 'engo-interfaces'],
     ['怎麼報修', 'property-management'],
@@ -278,7 +277,7 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     }
     expect(readFileSync(resolve(process.cwd(), 'src/locale/zh.ts'), 'utf-8')).toContain('按「開櫃取件」即可開櫃')
   })
-  it('UM-001 A.21-A.24 sync (2026-11-09): 訊息 has four tabs (告警, 電鈴紀錄), photo wall per §6.4, §6.5 device control pages reachable, provenance moved to 3.11.0', () => {
+  it('UM-001 A.21-A.24 sync (2026-11-09): 訊息 has four tabs (告警, 電鈴紀錄), §6.5 device control pages reachable, provenance moved to 3.11.0', () => {
     const locs = ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']
     const mod = (id: string) => (howto as any).modules.find((m: any) => m.id === id)
     const gen = (id: string) => (kb as any).general.find((e: any) => e.id === id)
@@ -294,16 +293,10 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(steps).not.toMatch(/查看攝影機、解鎖開門/)
     // Shop (商城) 「通知」 pages are a different product and keep their name
     expect(JSON.stringify(mod('shopnotify'))).toContain('「通知」頁')
-    // A.23 / §6.4: where it is set, the five-photo cap, the two switches, 「關螢幕」 is brightness-to-minimum
-    const f33 = (faqs as any[]).find((f) => f.id === 33).answer
-    for (const loc of locs) {
-      expect(f33[loc], loc).toMatch(/engo_wall/)
-      expect(f33[loc], loc).toMatch(/\b5\b/)
-      expect(gen('photo-wall').answer[loc], loc).toMatch(/engo_wall/)
-    }
-    expect(f33.zh).toContain('設定 → 待機相片牆')
-    expect(f33.zh).toMatch(/並非真的關閉螢幕/)
-    expect(f33.zh).not.toMatch(/相片牆會把螢幕關掉/)
+    // Product feedback 2026-11-09: the 通知 page's 電鈴通知 tab is the doorbell settings and dial keypad; the history is the 電鈴紀錄 tab on 訊息
+    expect(steps).toMatch(/電鈴通知（電鈴設定與撥號鍵盤）/)
+    expect(steps).toMatch(/門口電鈴的歷史紀錄請到訊息的「電鈴紀錄」分頁看/)
+    expect(community).not.toMatch(/含未接|missed ones included|來電紀錄/)
     // A.24 / §6.5 and A.22 ④: the new answer exists in all six locales, mentions Matter ACs on the dial panel, and is reachable from natural questions
     const dc = gen('device-control-pages')
     for (const loc of locs) expect(dc.answer[loc], loc).toMatch(/3\.11\.0/)
@@ -323,6 +316,28 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     for (const m of (howto as any).modules.filter((x: any) => ['home', 'community'].includes(x.id))) {
       const e = (kb as any).howto.find((x: any) => x.id === `howto-${m.id}`)
       for (const st of m.steps) expect(e.answer.zh, `${m.id}/${st.title.zh}`).toContain(st.body.zh)
+    }
+  })
+  it('product feedback 2026-11-09: no standby photo wall, 電鈴通知 is settings/dial pad, the menu is 設置, no Shop push into 訊息', () => {
+    const root = process.cwd()
+    const read = (p: string) => readFileSync(resolve(root, p), 'utf-8')
+    const viewFiles = readdirSync(resolve(root, 'src/views')).filter((f) => f.endsWith('.vue')).map((f) => `src/views/${f}`)
+    const sources = [
+      'src/data/knowledge_base.json', 'src/data/faqs.json', 'src/data/howto.json', 'src/data/news.json', 'src/data/packages.json',
+      'src/locale/zh.ts', 'src/locale/zhCN.ts', 'src/locale/en.ts', 'src/locale/ja.ts', 'public/llms.txt', ...viewFiles
+    ]
+    // (a) the standby photo wall was never a product feature (forbidden-claims files mirror a product-owned source and are exempt)
+    const photoWall = /相片牆|相片墙|photo ?wall|フォトウォール|mur de photos|muro de fotos/i
+    for (const f of sources) expect(read(f), f).not.toMatch(photoWall)
+    expect((kb as any).general.some((e: any) => e.id === 'photo-wall')).toBe(false)
+    expect((faqs as any[]).some((f) => f.id === 33)).toBe(false)
+    // (b) the app's settings menu is 設置; no copy navigates via 「設定 →」. Allow-list: the Japanese verb 設定 in 「動作を設定→名前を付けて…」 (scene-building step order, FAQ 36), which is not a menu.
+    for (const f of sources) expect(read(f), f).not.toMatch(/(?<!動作を)設定\s*(→|->|＞|>)/)
+    // (c) the 電鈴通知 tab never shows call records
+    for (const f of sources) expect(read(f), f).not.toMatch(/電鈴通知[^。；]{0,12}來電/)
+    // (d) no Shop push into the enGo 訊息 page
+    for (const f of sources) {
+      expect(read(f), f).not.toMatch(/推播到[^。；]{0,12}訊息|推播到[^。；]{0,12}讯息|pushed to the (enGo app|Messages)|arrive as 商城消息/)
     }
   })
   it('voice activation is referred to a person (KB-001 A.8 §4): no Settings path is described', () => {

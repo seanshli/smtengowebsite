@@ -443,7 +443,7 @@
       "order": 6,
       "icon": "gear",
       "title": {
-        "zh": "設定與帳號",
+        "zh": "設置與帳號",
         "en": "Settings & Account"
       },
       "summary": {
@@ -453,7 +453,7 @@
       "steps": [
         {
           "title": {
-            "zh": "設定頁有什麼",
+            "zh": "設置頁有什麼",
             "en": "What is on the Settings page"
           },
           "body": {
@@ -479,7 +479,7 @@
             "en": "Deleting your account"
           },
           "body": {
-            "zh": "「帳號註銷」是刪除帳號的入口，在設定頁申請。是否有可取消的緩衝期，請洽客服確認。若只是想換手機或重新登入，不需要用這個功能。",
+            "zh": "「帳號註銷」是刪除帳號的入口，在設置頁申請。是否有可取消的緩衝期，請洽客服確認。若只是想換手機或重新登入，不需要用這個功能。",
             "en": "“Account deletion” (帳號註銷) in Settings is where you request deleting your account. Whether there is a grace period in which it can be cancelled, please confirm with customer service. If you only want to change phones or sign in again, you do not need this."
           },
           "image": null
@@ -487,8 +487,8 @@
       ],
       "tips": [
         {
-          "zh": "手機上叫「設置」不叫「設定」，同樣在底部「更多」分頁裡。手機沒有左側導覽列，底部只有家庭、場景、工單、通知、更多五個分頁，其餘功能都收在「更多」。",
-          "en": "On phones it is labelled 設置 rather than 設定, also under the bottom “More” tab. Phones have no left-hand nav: the bottom bar carries only Home, Scenes, Work Orders, Notifications and More, and everything else sits under More."
+          "zh": "選單叫「設置」，手機在底部「更多」分頁裡。手機沒有左側導覽列，底部只有家庭、場景、工單、通知、更多五個分頁，其餘功能都收在「更多」。",
+          "en": "The menu is labelled 設置, found under the bottom “More” tab on phones. Phones have no left-hand nav: the bottom bar carries only Home, Scenes, Work Orders, Notifications and More, and everything else sits under More."
         },
         {
           "zh": "裝置告警門檻（例如溫濕度上下限）設得太敏感會一直推播；建議先用預設值住一週再調。",
@@ -505,18 +505,18 @@
         "en": "Community Announcements & Messages"
       },
       "summary": {
-        "zh": "通知頁收電鈴、信箱、包裹三類通知；訊息頁有公告、告警、操作紀錄、電鈴紀錄四個分頁，社區公告與門口電鈴的來電紀錄都在訊息裡看。這是 enGo 與一般智慧家庭產品最大的差別。不必為了看社區公告另外裝一支 App。",
-        "en": "The Notifications page carries doorbell, mailbox and parcel notices; the Messages page has four tabs (公告 Announcements, 告警 Alerts, 操作紀錄 Activity log and 電鈴紀錄 Doorbell log), so community announcements and the doorbell call log are both read there. This is what sets enGo apart from ordinary smart-home products. You do not need a second app to read community notices."
+        "zh": "通知頁有電鈴通知（電鈴設定與撥號鍵盤）、信箱通知、包裹通知三個分頁；訊息頁有公告、告警、操作紀錄、電鈴紀錄四個分頁，社區公告與門口電鈴的歷史紀錄都在訊息裡看。這是 enGo 與一般智慧家庭產品最大的差別。不必為了看社區公告另外裝一支 App。",
+        "en": "The Notifications page has three tabs: 電鈴通知 (doorbell settings and dial keypad), mailbox notices and parcel notices; the Messages page has four tabs (公告 Announcements, 告警 Alerts, 操作紀錄 Activity log and 電鈴紀錄 Doorbell log), so community announcements and the doorbell call history are both read there. This is what sets enGo apart from ordinary smart-home products. You do not need a second app to read community notices."
       },
       "steps": [
         {
           "title": {
-            "zh": "看通知：電鈴、信箱、包裹",
-            "en": "Read notifications: doorbell, mailbox, parcel"
+            "zh": "通知頁：電鈴設定、信箱、包裹",
+            "en": "Notifications page: doorbell settings, mailbox, parcel"
           },
           "body": {
-            "zh": "平板：左側導覽列的鈴鐺圖示；手機：底部第四個分頁「通知」。上方三個分頁分別是電鈴通知（有人按門口電鈴時的來電）、信箱通知（信件到達）、包裹通知（有您的包裹到管理室）。分頁下方另有查看分機資訊、解鎖開門、致電管理中心三個按鈕，解鎖開門的使用範圍請洽專人。此圖為較舊版本的畫面，按鈕當時叫「查看攝影機」，現已改名為「查看分機資訊」；圖中社區目前沒有電鈴紀錄，所以顯示「尚無資料」。門口電鈴的通話紀錄請到訊息的「電鈴紀錄」分頁看。",
-            "en": "Tablet: the bell icon in the left rail. Phone: the fourth tab at the bottom, 通知 (Notifications). The three tabs at the top are doorbell notices (calls when someone rings at the door), mailbox notices (mail has arrived) and parcel notices (a parcel for you has reached the management office). Below the tabs are three buttons: view extension info (查看分機資訊), unlock door and call the management center; please ask our team about the scope of unlock door. This screenshot is from an older version, when the first button was still called 查看攝影機 (view camera); it is now 查看分機資訊. In this screenshot the community has no doorbell records yet, so it shows 尚無資料 (No data). The doorbell call log itself is on the 電鈴紀錄 tab of the Messages page."
+            "zh": "平板：左側導覽列的鈴鐺圖示；手機：底部第四個分頁「通知」。上方三個分頁分別是電鈴通知（電鈴設定與撥號鍵盤）、信箱通知（信件到達）、包裹通知（有您的包裹到管理室）。分頁下方另有查看分機資訊、解鎖開門、致電管理中心三個按鈕，解鎖開門的使用範圍請洽專人。此圖為較舊版本的畫面，按鈕當時叫「查看攝影機」，現已改名為「查看分機資訊」。門口電鈴的歷史紀錄請到訊息的「電鈴紀錄」分頁看。",
+            "en": "Tablet: the bell icon in the left rail. Phone: the fourth tab at the bottom, 通知 (Notifications). The three tabs at the top are 電鈴通知 (doorbell settings and dial keypad), mailbox notices (mail has arrived) and parcel notices (a parcel for you has reached the management office). Below the tabs are three buttons: view extension info (查看分機資訊), unlock door and call the management center; please ask our team about the scope of unlock door. This screenshot is from an older version, when the first button was still called 查看攝影機 (view camera); it is now 查看分機資訊. The doorbell call history is on the 電鈴紀錄 tab of the Messages page."
           },
           "image": "/images/howto/community/01-notification-tablet.png"
         },
@@ -537,8 +537,8 @@
             "en": "The four tabs of the Messages page"
           },
           "body": {
-            "zh": "訊息頁有四個分頁：公告（管委會或物業管理室發布的社區公告、包裹到件通知）、告警（您在「設備告警設置」設定的門檻被觸發時的紀錄）、操作紀錄（誰在什麼時候動了哪個裝置）、電鈴紀錄（門口按電鈴的來電紀錄，含未接）。原本的「通知」分頁已更名為「告警」，門鈴的通話紀錄也改放在「電鈴紀錄」；舊版說明若寫「通知分頁」，已不適用。點任一則可看完整全文。",
-            "en": "The Messages page has four tabs: 公告 Announcements (community notices from the committee or property office, and parcel arrival notices), 告警 Alerts (a record of each time a threshold you set under device alert settings was triggered), 操作紀錄 Activity log (who operated which device, and when) and 電鈴紀錄 Doorbell log (calls from the door station, missed ones included). The former 通知 tab has been renamed 告警, and doorbell call records now live under 電鈴紀錄; older instructions that mention a 通知 tab no longer apply. Open any item for the full text."
+            "zh": "訊息頁有四個分頁：公告（管委會或物業管理室發布的社區公告、包裹到件通知）、告警（您在「設備告警設置」設定的門檻被觸發時的紀錄）、操作紀錄（誰在什麼時候動了哪個裝置）、電鈴紀錄（門口電鈴的歷史紀錄）。原本的「通知」分頁已更名為「告警」，門鈴的歷史紀錄也改放在「電鈴紀錄」；舊版說明若寫「通知分頁」，已不適用。點任一則可看完整全文。",
+            "en": "The Messages page has four tabs: 公告 Announcements (community notices from the committee or property office, and parcel arrival notices), 告警 Alerts (a record of each time a threshold you set under device alert settings was triggered), 操作紀錄 Activity log (who operated which device, and when) and 電鈴紀錄 Doorbell log (doorbell call history). The former 通知 tab has been renamed 告警, and doorbell call history now lives under 電鈴紀錄; older instructions that mention a 通知 tab no longer apply. Open any item for the full text."
           },
           "image": null
         }
