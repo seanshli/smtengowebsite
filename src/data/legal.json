@@ -11,10 +11,10 @@
     {
       "id": "terms",
       "docNo": "ENGO-LG-001",
-      "revision": "A.1",
-      "issued": "2026-10-19",
+      "revision": "A.2",
+      "issued": "2026-11-09",
       "effective": "2024-01-15",
-      "nextReview": "2027-10-19",
+      "nextReview": "2027-11-09",
       "owner": "Van Lee",
       "approvedBy": "Sean Li",
       "approvedOn": "2026-10-19",
@@ -46,16 +46,25 @@
             "zh": "d4ab656fb0af1181f6fe4e612c3d1cda53920ff5dd2b53dd0ad8653c797c1d25",
             "en": "604129fae75b430c040898490f75ef7b48b67eb26ef9570cc18ab78ce48654dd"
           }
+        },
+        {
+          "revision": "A.2",
+          "date": "2026-11-09",
+          "change": "英文公司名稱更正為 Smart enGo Home Technology Corp.（原誤植為中文名稱音譯 Zhiguanjia Technology Co., Ltd.）；條文內容未變更。",
+          "sha256": {
+            "zh": "4c211b2dfb89d873753d83d709bbb924f6e0a3e1644604b0d39b5d4ffafa8c7e",
+            "en": "d9322c21b4d5b0123c2ffda3adabf690ec9ea0a06575210da2df77c0a7188912"
+          }
         }
       ]
     },
     {
       "id": "privacy",
       "docNo": "ENGO-LG-002",
-      "revision": "A.1",
-      "issued": "2026-10-19",
+      "revision": "A.2",
+      "issued": "2026-11-09",
       "effective": "2026-04",
-      "nextReview": "2027-10-19",
+      "nextReview": "2027-11-09",
       "owner": "Van Lee",
       "approvedBy": "Sean Li",
       "approvedOn": "2026-10-19",
@@ -87,16 +96,25 @@
             "zh": "8324cb9014ad5fb88c99ca28f09ec2b0503a1a358798ed945059cab5a56d20ec",
             "en": "b524d74f75d1401d5b7f36a61b837159324e183cb757f6b671a5c7b1941230cd"
           }
+        },
+        {
+          "revision": "A.2",
+          "date": "2026-11-09",
+          "change": "英文公司名稱更正為 Smart enGo Home Technology Corp.（原誤植為中文名稱音譯 Zhiguanjia Technology Co., Ltd.）；條文內容未變更。",
+          "sha256": {
+            "zh": "511e908ce2b3b30c5e5e15dc9d1224645a1cfb53f944ebe88676fcda901b2a29",
+            "en": "30dd3c276a72886693686f0f89f2e15dd7017b077b25a59d7226683f64dd299e"
+          }
         }
       ]
     },
     {
       "id": "return-policy",
       "docNo": "ENGO-LG-003",
-      "revision": "A.1",
-      "issued": "2026-10-19",
+      "revision": "A.2",
+      "issued": "2026-11-09",
       "effective": "2026-04",
-      "nextReview": "2027-10-19",
+      "nextReview": "2027-11-09",
       "owner": "Van Lee",
       "approvedBy": "Sean Li",
       "approvedOn": "2026-10-19",
@@ -125,6 +143,15 @@
           "sha256": {
             "zh": "41ab3158c4c3e565b33661fe8a282ff6cb621986bbdd0be95e27f0023b1cadea",
             "en": "c2eb52cdd9fe1d252a00c595663c009710ae606ec52cfdc845e07a23702fe54b"
+          }
+        },
+        {
+          "revision": "A.2",
+          "date": "2026-11-09",
+          "change": "英文公司名稱更正為 Smart enGo Home Technology Corp.（原誤植為中文名稱音譯 Zhiguanjia Technology Co., Ltd.）；條文內容未變更。",
+          "sha256": {
+            "zh": "a4f14b0979dc16a5d4e349f4eada87494f92db3f45b155ad013ed6dd823bf25b",
+            "en": "57e50bad2fc85d7ac0b42d524004754420d9543ab58dcaf1fe9ef3e88b3f8da8"
           }
         }
       ]

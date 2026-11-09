@@ -144,7 +144,7 @@ const MEMBERS: Member[] = [
         '彰師大財經博士候選人'
       ],
       en: [
-        'VP of Business Operations, Smart enGo Home Corp.',
+        'VP of Business Operations, Smart enGo Home Technology Corp.',
         'Principal, Ruicheng Green Materials',
         'GM, Faxing Digital Industry',
         'Operations Director, Xiamen Songzong Home',
