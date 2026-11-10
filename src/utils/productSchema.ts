@@ -125,11 +125,28 @@ function buildSchema(product: ProductDef, locale: Locale): object {
         returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
         merchantReturnLink: `${BASE_URL}/return-policy.html`
       },
-      // Delivery is within Taiwan only; rates and lead times are quoted per order by
-      // the store, so only the destination is stated here (no invented figures).
+      // Sean, 2026-11-10: free shipping within Taiwan, delivered in 3–5 working days.
+      // Google needs the total split into handling + transit; 1–2 + 2–3 sums to the
+      // confirmed 3–5 working days. Keep in sync with public/product-feed.xml.
       shippingDetails: {
         '@type': 'OfferShippingDetails',
-        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'TW' }
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'TW' },
+        shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'TWD' },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          businessDays: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: [
+              'https://schema.org/Monday',
+              'https://schema.org/Tuesday',
+              'https://schema.org/Wednesday',
+              'https://schema.org/Thursday',
+              'https://schema.org/Friday'
+            ]
+          },
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 3, unitCode: 'DAY' }
+        }
       }
     }
   }
