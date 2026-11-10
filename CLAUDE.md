@@ -15,11 +15,13 @@ Never push to `main`. Branch → PR → Vercel preview → Sean merges. A merge 
 npm ci                                   # Node 24 (matches Vercel); local 22 works too
 npm run type-check                       # vue-tsc --build --force
 npx vitest run                           # 19 files / 367 tests incl. locale parity, SEO parity, design tells, legal register
+npm run lint:ci                          # eslint, errors only block
 node scripts/legal-register.mjs check    # controlled-document stamps + hashes (also inside vitest)
 npm run dev                              # vite on :5173
 ```
-`npm run lint` is **not** a gate: the ESLint config currently throws 113 parse errors (needs a config fix). Don't
-"fix" lint output by hand in a feature PR; open a separate PR for the config.
+`npm run lint:ci` (no `--fix`) is a gate: **errors block, warnings don't**. `npm run lint` autofixes locally. Config is
+`.eslintrc.cjs` (create-vue standard; `video/` and `public/` ignored). Prefer fixing an `@typescript-eslint/no-unused-vars`
+warning over silencing it.
 `npm run build` = type-check + `vite build` + `postbuild` prerender-meta; Vercel runs it on every PR, so CI does
 not duplicate the build.
 

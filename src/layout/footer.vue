@@ -82,7 +82,7 @@ import { useRouter } from 'vue-router'
 import FooterMark from '../components/FooterMark.vue'
 
 export default defineComponent({
-  name: 'Footer',
+  name: 'SiteFooter',
   components: { FooterMark },
   setup() {
     const { t, locale } = useI18n()

@@ -406,7 +406,7 @@ const faqClicks = ref<Record<number, number>>((() => {
 })())
 
 const saveClicks = () => {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(faqClicks.value)) } catch {}
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(faqClicks.value)) } catch { /* localStorage unavailable (private mode) — ignore */ }
 }
 
 const toggleFaq = (faq: any) => {
@@ -515,7 +515,7 @@ const renderStepContent = (text: string) => {
   return text
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/\n/g, '<br>')
-    .replace(/\[([^\]]+)\]\(([^\)\s]+)\)/g, (_m: string, label: string, href: string) =>
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_m: string, label: string, href: string) =>
       /^https?:\/\//.test(href)
         ? `<a href="${href}" class="step-link" target="_blank" rel="noopener">${label}</a>`
         : `<a href="${href}" class="step-link">${label}</a>`

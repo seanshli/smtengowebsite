@@ -27,7 +27,7 @@ function ensureMeta(attr: string, value: string, content: string) {
   let el = document.querySelector(`meta[${attr}="${value}"]`)
   if (!el) {
     el = document.createElement('meta')
-    el.setAttribute(attr.replace(/[\[\]"]/g, ''), value)
+    el.setAttribute(attr.replace(/[[\]"]/g, ''), value)
     document.head.appendChild(el)
   }
   el.setAttribute('content', content)

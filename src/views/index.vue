@@ -198,7 +198,7 @@
           <router-link to="/contact" class="hm-pill hm-pill-primary" @click="trackCta('band')">{{ T.cta }}</router-link>
           <a href="https://lin.ee/THIUSjW" class="hm-pill hm-pill-ghost hm-pill-ghost-dark" target="_blank" rel="noopener" data-track="home:line-band" @click="trackCta('line-band')">{{ T.lineCta }}</a>
         </div>
-        <p class="hm-fine hm-fine-on-dark">02-27510218　{{ T.hours }}</p>
+        <p class="hm-fine hm-fine-on-dark">02-27510218&#x3000;{{ T.hours }}</p>
       </div>
     </section>
   </main>

@@ -61,7 +61,7 @@ const toText = (html) =>
 
 /** Split one pandoc HTML document into {id, level, heading, text} sections. */
 export function sectionsFromHtml(html) {
-  const body = (/<body[^>]*>([\s\S]*)<\/body>/i.exec(html) || [, html])[1]
+  const body = (/<body[^>]*>([\s\S]*)<\/body>/i.exec(html) || [undefined, html])[1]
     .replace(/<footer class="doc-meta">[\s\S]*?<\/footer>/i, '')
   const re = /<h([23])\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/h\1>/gi
   const heads = []

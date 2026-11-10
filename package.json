@@ -18,7 +18,8 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "postbuild": "node scripts/prerender-meta.mjs"
+    "postbuild": "node scripts/prerender-meta.mjs",
+    "lint:ci": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.97.0",

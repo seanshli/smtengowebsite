@@ -35,6 +35,7 @@ export function detectLocale(text: string): LineLocale {
   if (/[぀-ヿ]/.test(text)) return 'ja'
   if (/[一-鿿]/.test(text)) return SIMPLIFIED_ONLY.test(text) ? 'zhCN' : 'zh'
   // Latin letters and nothing CJK: English. Anything else falls back to zh.
+  // eslint-disable-next-line no-control-regex -- ASCII-range test is the intent
   return /[a-z]/i.test(text) && !/[^\x00-\x7f]/.test(text) ? 'en' : 'zh'
 }
 

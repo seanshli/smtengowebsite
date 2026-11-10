@@ -135,6 +135,7 @@ const SHOP_CONTEXT_TERMS = ['商城', 'shop', '安購', '安购', '商品']
 // ASCII terms match whole words only ('app' must not fire on 'apple', 'ios' on
 // 'studios', 'order' on 'border'); CJK terms have no word breaks, so substring.
 const hasTerm = (q: string, t: string): boolean =>
+  // eslint-disable-next-line no-control-regex -- ASCII-only test is the intent
   /^[\x00-\x7f]+$/.test(t)
     ? new RegExp(`(^|[^a-z0-9])${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^a-z0-9])`).test(q)
     : q.includes(t)
@@ -152,7 +153,7 @@ export const prefersShopKnowledge = (query: string, bestLocalId: string | null):
 export const normalizeQuery = (q: string): string => {
   return q
     .toLowerCase()
-    .replace(/[？?！!，,。、；;：:()\[\]【】「」『』"'`~]/g, ' ')
+    .replace(/[？?！!，,。、；;：:()[\]【】「」『』"'`~]/g, ' ')
     .replace(/[０-９]/g, (d) => String.fromCharCode(d.charCodeAt(0) - 0xFEE0))
     .replace(/\s+/g, ' ')
     .trim()

@@ -1,6 +1,6 @@
 # CI — the same gates CLAUDE.md asks you to run locally.
 # Vercel builds every PR (preview) and main (production); this workflow does NOT rebuild.
-# ESLint is deliberately absent: the current config throws parse errors (see CLAUDE.md).
+# ESLint runs via lint:ci (no --fix); warnings do not block, errors do.
 name: CI
 
 on:
@@ -35,6 +35,9 @@ jobs:
 
       - name: 🔎 type-check (vue-tsc)
         run: npm run type-check
+
+      - name: 🧹 eslint（errors block；warnings 不擋）
+        run: npm run lint:ci
 
       - name: 🧪 vitest
         run: npx vitest run --reporter=dot
