@@ -47,7 +47,7 @@
               <p class="lg-meta">{{ d.docNo }} · {{ T.rev }} {{ d.revision }} · {{ T.issued }} {{ d.issued }} · {{ T.appliesTo }} {{ d.audiences.map(audienceLabel).join('、') }}</p>
             </div>
             <div class="lg-doc-actions">
-              <a :href="d.href.zh" class="lg-pill lg-pill-primary" :data-track="'legal:open:' + d.id + ':zh'">繁體中文</a>
+              <a :href="d.href.zh" class="lg-pill lg-pill-primary" :data-track="'legal:open:' + d.id + ':zh'">{{ locale === 'zhCN' ? '繁体中文' : '繁體中文' }}</a>
               <a :href="d.href.en" class="lg-pill lg-pill-ghost" :data-track="'legal:open:' + d.id + ':en'">English</a>
             </div>
           </article>

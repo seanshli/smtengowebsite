@@ -2,20 +2,18 @@
   <section class="bms" ref="root" aria-label="enGo HMS and BMS integration">
     <header class="bms-head">
       <p class="bms-kicker">
-        HMS × BMS・{{ isZh ? '家與大樓，即時互通' : 'HOME & BUILDING, IN CONVERSATION' }}
+        HMS × BMS・{{ tx('家與大樓，即時互通', '家与大楼，实时互通', 'HOME & BUILDING, IN CONVERSATION') }}
       </p>
       <h3 class="bms-title">
-        {{ isZh ? '一棟大樓，一個大腦。' : 'One Brain. Every Building.' }}
+        {{ tx('一棟大樓，一個大腦。', '一栋大楼，一个大脑。', 'One Brain. Every Building.') }}
       </h3>
       <p class="bms-sub">
-        {{ isZh
-          ? '每一戶的 HMS，公布欄、物業管理、家居系統、通訊警報、AIoT，與大樓的智能櫃、監控、智能信箱、能源管理，透過樓中央的 enGo 中樞即時雙向連動。'
-          : 'Every unit\'s HMS, bulletin, property services, home systems, alerts, AIoT, links live and both ways with the building\'s smart lockers, surveillance, smart mailboxes, and energy management, through the enGo hub at the building\'s core.' }}
+        {{ tx('每一戶的 HMS，公布欄、物業管理、家居系統、通訊警報、AIoT，與大樓的智能櫃、監控、智能信箱、能源管理，透過樓中央的 enGo 中樞即時雙向連動。', '每一户的 HMS，公布栏、物业管理、家居系统、通信警报、AIoT，与大楼的智能柜、监控、智能信箱、能源管理，透过楼中央的 enGo 中枢实时双向连动。', 'Every unit\'s HMS, bulletin, property services, home systems, alerts, AIoT, links live and both ways with the building\'s smart lockers, surveillance, smart mailboxes, and energy management, through the enGo hub at the building\'s core.') }}
       </p>
     </header>
 
     <svg class="bms-scene" viewBox="0 0 800 700" fill="none" role="img"
-      :aria-label="isZh ? 'enGo HMS 與 BMS 雙向連動示意' : 'enGo HMS and BMS two-way integration diagram'">
+      :aria-label="tx('enGo HMS 與 BMS 雙向連動示意', 'enGo HMS 与 BMS 双向连动示意', 'enGo HMS and BMS two-way integration diagram')">
       <!-- ground -->
       <line class="bms-ground" x1="60" y1="640" x2="760" y2="640" />
 
@@ -59,13 +57,13 @@
         <rect class="bms-card" x="0" y="0" width="252" height="322" rx="6" />
         <image href="/images/cases/case-home.jpg" x="12" y="12" width="228" height="76" preserveAspectRatio="xMidYMid slice" />
         <rect x="12" y="12" width="228" height="76" fill="none" stroke="rgba(21,41,57,0.35)" stroke-width="1.5" />
-        <text class="bms-card-title" x="36" y="116">HMS・{{ isZh ? '每一戶' : 'Every Unit' }}</text>
+        <text class="bms-card-title" x="36" y="116">HMS・{{ tx('每一戶', '每一户', 'Every Unit') }}</text>
         <line class="bms-card-rule" x1="36" y1="130" x2="216" y2="130" />
         <!-- x=36 matches the title inset, and every glyph is boxed 0..16, so the
              icon column and the title start on exactly the same edge -->
         <g v-for="(f, i) in hmsRows" :key="'h'+i" ref="hmsRowEls" :transform="`translate(36, ${158 + i * 34})`">
           <g class="bms-row-icon bms-row-icon--hms" v-html="f.icon"></g>
-          <text class="bms-row-text" x="34" y="0">{{ isZh ? f.zh : f.en }}</text>
+          <text class="bms-row-text" x="34" y="0">{{ lt(f) }}</text>
         </g>
       </g>
 
@@ -74,11 +72,11 @@
         <rect class="bms-card" x="0" y="0" width="252" height="272" rx="6" />
         <image href="/images/home/bms-lobby.jpg" x="12" y="12" width="228" height="76" preserveAspectRatio="xMidYMid slice" />
         <rect x="12" y="12" width="228" height="76" fill="none" stroke="rgba(21,41,57,0.35)" stroke-width="1.5" />
-        <text class="bms-card-title" x="36" y="116">BMS・{{ isZh ? '整棟公設' : 'The Building' }}</text>
+        <text class="bms-card-title" x="36" y="116">BMS・{{ tx('整棟公設', '整栋公设', 'The Building') }}</text>
         <line class="bms-card-rule" x1="36" y1="130" x2="216" y2="130" />
         <g v-for="(f, i) in bmsRows" :key="'b'+i" ref="bmsRowEls" :transform="`translate(36, ${156 + i * 30})`">
           <g class="bms-row-icon bms-row-icon--bms" v-html="f.icon"></g>
-          <text class="bms-row-text" x="34" y="0">{{ isZh ? f.zh : f.en }}</text>
+          <text class="bms-row-text" x="34" y="0">{{ lt(f) }}</text>
         </g>
       </g>
     </svg>
@@ -86,8 +84,8 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, onUnmounted, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { defineComponent, onMounted, onUnmounted, ref } from 'vue'
+import { useLocaleText } from '../composables/useLocaleText'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
@@ -111,24 +109,23 @@ const I = {
 }
 
 const HMS_ROWS = [
-  { zh: '公布欄', en: 'Bulletin board', icon: I.bulletin },
-  { zh: '物業管理', en: 'Property services', icon: I.property },
-  { zh: '家居系統管理', en: 'Home system control', icon: I.sliders },
-  { zh: '通訊警報', en: 'Comms & alerts', icon: I.bell },
-  { zh: 'AIoT 智慧連動', en: 'AIoT automation', icon: I.chip }
+  { zh: '公布欄', zhCN: '公布栏', en: 'Bulletin board', icon: I.bulletin },
+  { zh: '物業管理', zhCN: '物业管理', en: 'Property services', icon: I.property },
+  { zh: '家居系統管理', zhCN: '家居系统管理', en: 'Home system control', icon: I.sliders },
+  { zh: '通訊警報', zhCN: '通信警报', en: 'Comms & alerts', icon: I.bell },
+  { zh: 'AIoT 智慧連動', zhCN: 'AIoT 智慧连动', en: 'AIoT automation', icon: I.chip }
 ]
 const BMS_ROWS = [
-  { zh: '智能櫃', en: 'Smart lockers', icon: I.locker },
-  { zh: '監控系統', en: 'Surveillance', icon: I.camera },
-  { zh: '智能信箱', en: 'Smart mailboxes', icon: I.mailbox },
-  { zh: '能源管理', en: 'Energy management', icon: I.bolt }
+  { zh: '智能櫃', zhCN: '智能柜', en: 'Smart lockers', icon: I.locker },
+  { zh: '監控系統', zhCN: '监控系统', en: 'Surveillance', icon: I.camera },
+  { zh: '智能信箱', zhCN: '智能信箱', en: 'Smart mailboxes', icon: I.mailbox },
+  { zh: '能源管理', zhCN: '能源管理', en: 'Energy management', icon: I.bolt }
 ]
 
 export default defineComponent({
   name: 'BuildingBmsScene',
   setup() {
-    const { locale } = useI18n()
-    const isZh = computed(() => locale.value.startsWith('zh'))
+    const { tx, lt } = useLocaleText()
 
     const root = ref<HTMLElement | null>(null)
     const buildingG = ref<SVGGElement | null>(null)
@@ -245,7 +242,7 @@ export default defineComponent({
     onUnmounted(() => ctx?.revert())
 
     return {
-      isZh, root, buildingG, hubG, hubHalo, brainImg,
+      tx, lt, root, buildingG, hubG, hubHalo, brainImg,
       hmsCard, hmsRowEls, bmsCard, bmsRowEls, hmsWire, bmsWire,
       dotHmsOut, dotHmsBack, dotBmsOut, dotBmsBack,
       hmsRows: HMS_ROWS, bmsRows: BMS_ROWS

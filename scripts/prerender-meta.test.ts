@@ -85,7 +85,7 @@ describe('prerender structured data (AI-SEO)', () => {
       const store = jsonLdFor(route, lang).find((b: any) => b['@type'] === 'OnlineStore') as any
       expect(store.url).toBe('https://shoph5.smtengo.com/')
       expect(store.name).toBe(lang === 'en' ? 'enGo Shop' : 'enGo 安購商城')
-      expect(store.parentOrganization.name).toBe('智管家科技股份有限公司')
+      expect(store.parentOrganization.name).toBe(lang === 'en' ? 'Smart enGo Home Technology Corp.' : '智管家科技股份有限公司')
       expect(store.description).not.toMatch(/合併|轉移|收購/)
     }
     expect(jsonLdFor('/cases', 'zh').find((b: any) => b['@type'] === 'OnlineStore')).toBeUndefined()

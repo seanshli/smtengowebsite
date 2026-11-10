@@ -26,7 +26,7 @@
             ],
             "answer": {
                 "zh": "**enGo 是什麼？**\n\nenGo 是**住家與社區合一**的智慧生活系統，同時管兩件事：\n\n🏠 **家裡**：照明、插座、窗簾、空調、紅外線家電、感測器、攝影機\n🏢 **社區**：公告、報修、公設預約、包裹通知\n\n多數智慧家庭產品只做第一項。enGo 把兩者放在同一個 App 與同一台牆上的平板裡，不必為了看社區公告另外裝一支 App。\n\n正式產品名稱：**enGo AI智慧中控系統**（英文 **enGo HMS**，Home Management System）。手機 App 顯示名稱為 **enGo智慧管家**。\n\n🔗 [產品介紹](/product)\n🔗 [品牌故事](/brandStory)",
-                "en": "**What is enGo?**\n\nenGo is a smart-living system that manages **home and community together**:\n\n🏠 **At home**: lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras\n🏢 **In the community**: notices, repair requests, facility bookings, parcel notifications\n\nMost smart-home products only do the first. enGo puts both in one app and one wall tablet, so you never need a second app for community notices.\n\nOfficial product name: **enGo HMS** (Home Management System; 中文 enGo AI智慧中控系統). The mobile app is listed as **enGo智慧管家**.\n\n🔗 [Products](/product)\n🔗 [Brand story](/brandStory)",
+                "en": "**What is enGo?**\n\nenGo is a smart-living system that manages **home and community together**:\n\n🏠 **At home**: lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras\n🏢 **In the community**: notices, repair requests, facility bookings, parcel notifications\n\nMost smart-home products only do the first. enGo puts both in one app and one wall tablet, so you never need a second app for community notices.\n\nOfficial product name: **enGo HMS** (Home Management System; Chinese name enGo AI智慧中控系統). The mobile app is listed as **enGo智慧管家**.\n\n🔗 [Products](/product)\n🔗 [Brand story](/brandStory)",
                 "ja": "**enGo とは？**\n\nenGo は**住まいとコミュニティを一つに**するスマートリビングシステムです。\n\n🏠 **自宅**、照明・コンセント・カーテン・エアコン・赤外線家電・センサー・カメラ\n🏢 **コミュニティ**、お知らせ・修理依頼・共用施設予約・宅配通知\n\n多くのスマートホーム製品は前者だけ。enGo は両方を一つのアプリと壁掛けタブレットにまとめています。\n\n正式名称：**enGo HMS**（Home Management System）。スマホアプリの表示名は **enGo智慧管家** です。\n\n🔗 [製品紹介](/product)\n🔗 [ブランドストーリー](/brandStory)",
                 "fr": "**Qu'est-ce qu'enGo ?**\n\nenGo est un système de vie intelligente qui gère **la maison et la résidence ensemble** :\n\n🏠 **À la maison** : éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras\n🏢 **Dans la résidence** : avis, demandes de réparation, réservation d'espaces communs, notifications de colis\n\nLa plupart des produits domotiques ne font que le premier. enGo réunit les deux dans une seule appli et une tablette murale.\n\nNom officiel : **enGo HMS** (Home Management System). L'appli mobile est publiée sous le nom **enGo智慧管家**.\n\n🔗 [Produits](/product)\n🔗 [Histoire de la marque](/brandStory)",
                 "es": "**¿Qué es enGo?**\n\nenGo es un sistema de vida inteligente que gestiona **el hogar y la comunidad juntos**:\n\n🏠 **En casa**: iluminación, enchufes, cortinas, aire acondicionado, electrodomésticos por infrarrojos, sensores, cámaras\n🏢 **En la comunidad**: avisos, solicitudes de reparación, reserva de instalaciones, notificaciones de paquetes\n\nLa mayoría de los productos solo hacen lo primero. enGo reúne ambos en una sola app y una tableta de pared.\n\nNombre oficial: **enGo HMS** (Home Management System). La app móvil aparece como **enGo智慧管家**.\n\n🔗 [Productos](/product)\n🔗 [Historia de la marca](/brandStory)",
@@ -1374,6 +1374,10 @@
     "youtube": [
         {
             "title": "平板系統介紹",
+            "titles": {
+                "zhCN": "平板系统介绍",
+                "en": "Tablet system introduction"
+            },
             "keywords": [
                 "平板",
                 "系統",
@@ -1384,6 +1388,10 @@
         },
         {
             "title": "平板開箱完整版",
+            "titles": {
+                "zhCN": "平板开箱完整版",
+                "en": "Tablet unboxing (full version)"
+            },
             "keywords": [
                 "開箱",
                 "平板",
@@ -1393,6 +1401,10 @@
         },
         {
             "title": "enGo 水精靈 淨水器",
+            "titles": {
+                "zhCN": "enGo 水精灵 净水器",
+                "en": "enGo water purifier"
+            },
             "keywords": [
                 "淨水器",
                 "水精靈",
@@ -1402,6 +1414,10 @@
         },
         {
             "title": "智慧家庭 智能場景介紹",
+            "titles": {
+                "zhCN": "智慧家庭 智能场景介绍",
+                "en": "Smart home scenes introduction"
+            },
             "keywords": [
                 "智慧家庭",
                 "智能場景",
@@ -1411,6 +1427,10 @@
         },
         {
             "title": "電動升降拉藍控制",
+            "titles": {
+                "zhCN": "电动升降拉蓝控制",
+                "en": "Motorized pull-down basket control"
+            },
             "keywords": [
                 "電動",
                 "升降拉藍",
@@ -1420,6 +1440,10 @@
         },
         {
             "title": "平板安裝",
+            "titles": {
+                "zhCN": "平板安装",
+                "en": "Tablet installation"
+            },
             "keywords": [
                 "平板",
                 "安裝",
@@ -1429,6 +1453,10 @@
         },
         {
             "title": "enGo 平板App介紹",
+            "titles": {
+                "zhCN": "enGo 平板App介绍",
+                "en": "enGo tablet app introduction"
+            },
             "keywords": [
                 "平板",
                 "App",
@@ -1438,6 +1466,10 @@
         },
         {
             "title": "enGo 簡介",
+            "titles": {
+                "zhCN": "enGo 简介",
+                "en": "enGo introduction"
+            },
             "keywords": [
                 "安購",
                 "智管家",
@@ -1652,7 +1684,7 @@
             ],
             "answer": {
                 "zh": "【旗艦中控 基礎版】定價 NT$ 50,000\n適合小資族、套房與一房一廳使用。\n🔸核心功能：包含智慧中控平台、安控(漏水, 煙霧)、燈光單迴路控制以及 App 遠端管理。\n🔸主要包含組件有：網關、燈控開關、遙控系統、中控平板、以及各類感測器。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
-                "en": "【Flagship Hub Basic Edition】NT$ 50,000\nSuitable for singles, studios, and 1BR. Includes smart hub, safety sensors, lighting control. \n🔗 [View Details](/product?jump=packages)",
+                "en": "[Flagship Hub Basic Edition]NT$ 50,000\nSuitable for singles, studios, and 1BR. Includes smart hub, safety sensors, lighting control. \n🔗 [View Details](/product?jump=packages)",
                 "es": "【Hub central insignia - Edición básica】NT$ 50,000\nAdecuado para solteros, estudios y 1BR. Incluye centro inteligente, sensores de seguridad, control de iluminación.\n🔗 [Ver detalles](/product?jump=packages)",
                 "zhCN": "【旗舰中控 基础版】定价 NT$ 50,000\n适合小资族、套房与一房一厅使用。\n🔸核心功能：包含智慧中控平台、安控(漏水, 烟雾)、灯光单回路控制以及 App 远端管理。\n🔸主要包含组件有：网关、灯控开关、遥控系统、中控平板、以及各类感测器。\n🔗 [点此查看完整方案内容](/product?jump=packages)"
             }
@@ -1670,7 +1702,7 @@
             ],
             "answer": {
                 "zh": "【全屋智慧 進階版】定價 NT$ 80,000\n適合兩房兩廳，是小家庭的智慧首選。\n🔸核心功能升級：支援智慧冷氣自動調節、多迴路燈光聯動。\n🔸情境控制：提供回家亮燈、一鍵關燈、動態感應走廊燈、冷氣恆溫等智慧情境。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
-                "en": "【Smart Home Advanced Edition】NT$ 80,000\nFor 2BR & small families. Adds smart AC, multi-loop lighting, and hallway motion lights.\n🔗 [View Details](/product?jump=packages)",
+                "en": "[Smart Home Advanced Edition]NT$ 80,000\nFor 2BR & small families. Adds smart AC, multi-loop lighting, and hallway motion lights.\n🔗 [View Details](/product?jump=packages)",
                 "es": "【Edición avanzada de hogar inteligente】NT$ 80,000\nPara 2BR y familias pequeñas. Agrega AC inteligente, iluminación de múltiples bucles y luces de movimiento del pasillo.\n🔗 [Ver detalles](/product?jump=packages)",
                 "zhCN": "【全屋智慧 进阶版】定价 NT$ 80,000\n适合两房两厅，是小家庭的智慧首选。\n🔸核心功能升级：支持智慧冷气自动调节、多回路灯光联动。\n🔸情境控制：提供回家亮灯、一键关灯、动态感应走廊灯、冷气恒温等智慧情境。\n🔗 [点此查看完整方案内容](/product?jump=packages)"
             }
@@ -1690,7 +1722,7 @@
             "answer": {
                 "zh": "【奢華宅邸 豪華版】價格請洽專人\n為三房以上、透天別墅及頂級玩家設計的極致體驗方案。\n🔸情境控制：全方位離家警戒、晨曦喚醒(自動開簾)、環境自動淨化模式。\n🔗 [點此查看完整方案內容](/product?jump=packages)",
                 "zhCN": "【奢华宅邸 豪华版】价格请洽专人\n为三房以上、透天别墅及顶级玩家设计的极致体验方案。\n🔸情境控制：全方位离家警戒、晨曦唤醒(自动开帘)、环境自动净化模式。\n🔗 [点此查看完整方案内容](/product?jump=packages)",
-                "en": "【Luxury Villa Edition】Contact us for pricing\nFor 3BR+, villas & premium experience. Features full smart curtains, air quality linkage, and comprehensive security mesh.\n🔗 [View Details](/product?jump=packages)",
+                "en": "[Luxury Villa Edition]Contact us for pricing\nFor 3BR+, villas & premium experience. Features full smart curtains, air quality linkage, and comprehensive security mesh.\n🔗 [View Details](/product?jump=packages)",
                 "es": "【Edición de villa de lujo】Consultar precio\nPara 3BR+, villas y experiencia premium. Presenta cortinas inteligentes completas, vinculación de calidad de aire y malla de seguridad integral.\n🔗 [Ver detalles](/product?jump=packages)"
             }
         },

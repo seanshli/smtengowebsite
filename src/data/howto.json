@@ -3,11 +3,13 @@
     "version": "1.0",
     "generatedFor": {
       "zh": "enGo 3.6.2 為底（文字說明）；首頁與裝置控制頁、通知與訊息依 3.11.0 更正；多數截圖取自 3.2.2（建置 489）",
+      "zhCN": "enGo 3.6.2 为底（文字说明）；首页与设备控制页、通知与消息依 3.11.0 更正；多数截屏取自 3.2.2（建置 489）",
       "en": "Based on enGo 3.6.2 (text); the home and device pages and the notifications and messages sections are corrected to 3.11.0; most screenshots are from 3.2.2 (build 489)"
     },
     "updated": "2026-11-09",
     "note": {
       "zh": "截圖取自「模型屋」示範住家與智管家實驗社區帳號，多數於 enGo 3.2.2（建置 489）正式建置實機擷取；庫存管理頁取自 SmartPad（enGo 3.6.0）實機；通知頁截圖為較舊版本的畫面（動作按鈕現已更名），待重拍。僅裁切、未修圖。",
+      "zhCN": "截屏取自「模型屋」示范住家与智管家实验社区帐号，多数于 enGo 3.2.2（建置 489）正式建置实机截取；库存管理页取自 SmartPad（enGo 3.6.0）实机；通知页截屏为较旧版本的画面（动作按钮现已更名），待重拍。仅裁切、未修图。",
       "en": "Screenshots were captured on the Model Home demo household and the enGo test-community account, most of them on the enGo 3.2.2 (build 489) release build; the inventory pages come from a SmartPad running enGo 3.6.0; the notifications page screenshot is from an older version (its action buttons have since been renamed) and is due for a retake. Cropped only, never retouched."
     }
   },
@@ -18,20 +20,24 @@
       "icon": "home",
       "title": {
         "zh": "住家與房間設定",
+        "zhCN": "住家与房间设置",
         "en": "Household & Rooms"
       },
       "summary": {
         "zh": "建立住家、填好地址與社區、規劃房間，並把家人加進來。這是所有其他功能的基礎。房間名稱之後會直接成為語音指令的一部分。",
+        "zhCN": "创建住家、填好地址与社区、规划房间，并把家人加进来。这是所有其他功能的基础。房间名称之后会直接成为语音指令的一部分。",
         "en": "Create a household, fill in its address and community, plan the rooms, and invite your family. Everything else builds on this. Room names later become part of your voice commands."
       },
       "steps": [
         {
           "title": {
             "zh": "切換或新增住家",
+            "zhCN": "切换或添加住家",
             "en": "Switch or add a household"
           },
           "body": {
             "zh": "點首頁左上的住家名稱展開清單。目前使用中的住家左側有勾號。清單下方有「創建家庭」與「加入一個新家庭」（用邀請碼加入別人的住家）。一個帳號可以管理多個住家，切換後首頁、工單、公告都會跟著換。",
+            "zhCN": "点首页左上的住家名称展开清单。目前使用中的住家左侧有勾号。清单下方有「创建家庭」与「加入一个新家庭」（用邀请码加入别人的住家）。一个帐号可以管理多个住家，切换后首页、工单、公告都会跟着换。",
             "en": "Tap the household name at the top left of the home screen. A check mark shows which one is active. Below the list are Create household and Join a household (using an invite code). One account can manage several households; switching also switches the home screen, work orders and announcements."
           },
           "image": "/images/howto/household/10-switch.png"
@@ -39,10 +45,12 @@
         {
           "title": {
             "zh": "填寫家庭資訊",
+            "zhCN": "填写家庭信息",
             "en": "Fill in household details"
           },
           "body": {
             "zh": "在住家清單中點該住家右側的鉛筆進入「家庭管理」。依序填家庭名稱、縣市、區鎮、街道（可按右側定位圖示自動帶入）、所在社區、門牌號。改完務必按右上角「保存」。",
+            "zhCN": "在住家清单中点该住家右侧的铅笔进入「家庭管理」。依序填家庭名称、县市、区镇、街道（可按右侧定位图标自动带入）、所在社区、门牌号。改完务必按右上角「保存」。",
             "en": "In the household list, tap the pencil on the right to open Household management. Fill in the name, city, district, street (the pin icon can locate it for you), community and unit number. Always press Save at the top right."
           },
           "image": "/images/howto/household/11-info.png"
@@ -50,10 +58,12 @@
         {
           "title": {
             "zh": "規劃房間",
+            "zhCN": "规划房间",
             "en": "Plan the rooms"
           },
           "body": {
             "zh": "同一頁往下捲就是房間清單。在輸入框輸入名稱後按「＋」新增；每一列右側可改名（鉛筆）或刪除（垃圾桶）。建議依實際格局建立：客廳、主臥、次臥、廚房、浴室、陽台。",
+            "zhCN": "同一页往下卷就是房间清单。在输入框输入名称后按「＋」添加；每一列右侧可改名（铅笔）或删除（垃圾桶）。建议依实际格局创建：客厅、主卧、次卧、厨房、浴室、阳台。",
             "en": "Scroll down the same page for the room list. Type a name and press + to add; each row can be renamed (pencil) or deleted (trash). Use your real layout: living room, master bedroom, second bedroom, kitchen, bathroom, balcony."
           },
           "image": "/images/howto/household/12-rooms.png"
@@ -61,10 +71,12 @@
         {
           "title": {
             "zh": "邀請家人並確認權限",
+            "zhCN": "邀请家人并确认权限",
             "en": "Invite family and check permissions"
           },
           "body": {
             "zh": "再往下是權限資訊與成員資訊。成員可用信箱或電話邀請，角色分所有者／管理員／成員。權限資訊會逐項列出該角色能做什麼：設備、一鍵執行、自動化、管理成員、管理家庭。",
+            "zhCN": "再往下是权限信息与成员信息。成员可用信箱或电话邀请，角色分所有者／管理员／成员。权限信息会逐项列出该角色能做什么：设备、一键运行、自动化、管理成员、管理家庭。",
             "en": "Further down are Permissions and Members. Invite members by email or phone; roles are Owner, Admin and Member. The permissions panel lists exactly what the role can do: devices, one-tap scenes, automations, managing members, managing the household."
           },
           "image": "/images/howto/household/13-permissions.png"
@@ -73,10 +85,12 @@
       "tips": [
         {
           "zh": "房間名稱請用家人自己的說法（「主臥」而不是「房間 1」）。這個名稱會直接被語音使用，好不好念決定語音好不好用。",
+          "zhCN": "房间名称请用家人自己的说法（「主卧」而不是「房间 1」）。这个名称会直接被语音使用，好不好念决定语音好不好用。",
           "en": "Name rooms the way your family actually says them (\"master bedroom\", not \"room 1\"). The name becomes part of the voice command, so how easily it is spoken decides how well voice works."
         },
         {
           "zh": "🔒 邀請碼請當成密碼看待。任何人拿到就能加入您的住家、看到並控制家中裝置。不要拍照外流或貼在群組；若已外流，按邀請碼右側的重新產生鍵即可讓舊碼失效。",
+          "zhCN": "🔒 邀请码请当成密码看待。任何人拿到就能加入您的住家、看到并控制家中设备。不要拍照外流或贴在群组；若已外流，按邀请码右侧的重新产生键即可让旧码失效。",
           "en": "🔒 Treat the invite code like a password. Anyone who has it can join your household and control your devices. Never share it in a photo or a group chat; if it leaks, press Regenerate next to the code to invalidate the old one."
         }
       ]
@@ -87,20 +101,24 @@
       "icon": "plug",
       "title": {
         "zh": "新增裝置（配網）",
+        "zhCN": "添加设备（配网）",
         "en": "Adding Devices (Pairing)"
       },
       "summary": {
         "zh": "配網是讓裝置連上您家 Wi-Fi 並加入 enGo 的過程。首頁右上「＋」進入「添加設備」，上方有六種方式，先試「設備發現」。",
+        "zhCN": "配网是让设备连上您家 Wi-Fi 并加入 enGo 的过程。首页右上「＋」进入「添加设备」，上方有六种方式，先试「设备发现」。",
         "en": "Pairing is how a device joins your Wi-Fi and your enGo home. Tap + at the top right of the home screen to open Add device. Six methods are offered: try Device discovery first."
       },
       "steps": [
         {
           "title": {
             "zh": "配網前先確認三件事",
+            "zhCN": "配网前先确认三件事",
             "en": "Three things to check first"
           },
           "body": {
             "zh": "① 平板或手機連在 2.4GHz Wi-Fi（多數智慧裝置不支援 5GHz，這是最常見的失敗原因）② 裝置已進入配對模式（多為長按重置鍵至指示燈快閃，做法依廠牌而異）③ 裝置與路由器距離不要太遠。",
+            "zhCN": "① 平板或手机连在 2.4GHz Wi-Fi（多数智慧设备不支持 5GHz，这是最常见的失败原因）② 设备已进入配对模式（多为长按重置键至指示灯快闪，做法依厂牌而异）③ 设备与路由器距离不要太远。",
             "en": "① Your tablet or phone is on 2.4GHz Wi-Fi (most smart devices do not support 5GHz, this is the most common cause of failure). ② The device is in pairing mode (usually hold its reset button until the LED blinks fast; this varies by brand). ③ The device is not too far from the router."
           },
           "image": null
@@ -108,10 +126,12 @@
         {
           "title": {
             "zh": "設備發現（優先使用）",
+            "zhCN": "设备发现（优先使用）",
             "en": "Device discovery (try this first)"
           },
           "body": {
             "zh": "適用大多數 Wi-Fi 裝置。讓裝置進入配對模式，畫面會自動列出找到的裝置，選取後指定房間即可。若等約 30 秒仍沒有任何裝置出現，這一頁不會主動告訴您失敗。請改用下面其他方式，或回頭確認上一步的三個條件。",
+            "zhCN": "适用大多数 Wi-Fi 设备。让设备进入配对模式，画面会自动列出找到的设备，选取后指定房间即可。若等约 30 秒仍没有任何设备出现，这一页不会主动告诉您失败。请改用下面其他方式，或回头确认上一步的三个条件。",
             "en": "Works for most Wi-Fi devices. Put the device in pairing mode and it appears in the list; select it and assign a room. If nothing appears after about 30 seconds the page will not tell you it failed. Switch to one of the methods below, or re-check the three conditions above."
           },
           "image": null
@@ -119,10 +139,12 @@
         {
           "title": {
             "zh": "子設備配網（透過閘道器）",
+            "zhCN": "子设备配网（透过网关）",
             "en": "Sub-device pairing (via a gateway)"
           },
           "body": {
             "zh": "ZigBee 等裝置需要透過閘道器加入。先確認閘道器已加入且在線，選擇網關設備後按「開始配網」，再讓子裝置進入配網模式。",
+            "zhCN": "ZigBee 等设备需要透过网关加入。先确认网关已加入且在线，选择网关设备后按「开始配网」，再让子设备进入配网模式。",
             "en": "ZigBee and similar devices join through a gateway. Make sure the gateway is already added and online, choose it, press Start pairing, then put the sub-device into pairing mode."
           },
           "image": "/images/howto/device/21-pair-subdevice.png"
@@ -130,10 +152,12 @@
         {
           "title": {
             "zh": "Matter 配網",
+            "zhCN": "Matter 配网",
             "en": "Matter pairing"
           },
           "body": {
             "zh": "支援 Matter 標準的裝置。先設定 WiFi，再輸入或掃碼取得裝置的配網碼，然後按「開始配網」。",
+            "zhCN": "支持 Matter 标准的设备。先设置 WiFi，再输入或扫码取得设备的配网码，然后按「开始配网」。",
             "en": "For devices that support the Matter standard. Set the Wi-Fi first, then type or scan the device's pairing code, and press Start pairing."
           },
           "image": "/images/howto/device/22-pair-matter.png"
@@ -141,10 +165,12 @@
         {
           "title": {
             "zh": "QR 配網",
+            "zhCN": "QR 配网",
             "en": "QR pairing"
           },
           "body": {
             "zh": "包裝或機身有 enGo QR 碼的裝置。先設定 WiFi，按「生成二維碼」後以裝置掃描該碼完成配網。",
+            "zhCN": "包装或机身有 enGo QR 码的设备。先设置 WiFi，按「生成二维码」后以设备扫描该码完成配网。",
             "en": "For devices with an enGo QR code on the box or body. Set the Wi-Fi, press Generate QR code, and let the device scan it."
           },
           "image": "/images/howto/device/23-pair-qr.png"
@@ -152,10 +178,12 @@
         {
           "title": {
             "zh": "AP 配網（生態系裝置，備援）",
+            "zhCN": "AP 配网（生态系设备，备援）",
             "en": "AP pairing (ecosystem devices, fallback)"
           },
           "body": {
             "zh": "適用生態系裝置，上述方式都失敗時使用，共三個步驟。步驟 1：長按裝置配網鍵 3-5 秒，待指示燈快閃、裝置自行開啟 AP 熱點；步驟 2：手動連上該熱點；步驟 3：回到 App 完成。配網進行中，畫面會顯示五個節點的進程點線圖：取得配網資訊 → 傳送資訊給設備 → 等待設備連網 → 等待設備上線 → 配網完成，卡在哪一步就知道問題出在哪一段。",
+            "zhCN": "适用生态系设备，上述方式都失败时使用，共三个步骤。步骤 1：长按设备配网键 3-5 秒，待指示灯快闪、设备自行打开 AP 热点；步骤 2：手动连上该热点；步骤 3：回到 App 完成。配网进行中，画面会显示五个节点的进程点线图：取得配网信息 → 发送信息给设备 → 等待设备连网 → 等待设备上线 → 配网完成，卡在哪一步就知道问题出在哪一段。",
             "en": "For ecosystem devices; use it when the others fail. It has three steps. Step 1: hold the device's pairing button for 3-5 seconds until the LED blinks fast and the device opens its own hotspot. Step 2: connect to that hotspot manually. Step 3: return to the app to finish. While pairing runs, a five-node progress line is shown: get pairing info → send info to the device → wait for the device to join the network → wait for the device to come online → pairing complete. Where it stalls tells you which stage is at fault."
           },
           "image": "/images/howto/device/24-pair-ap.png"
@@ -163,10 +191,12 @@
         {
           "title": {
             "zh": "ESP 配網（enGo 自有裝置）",
+            "zhCN": "ESP 配网（enGo 自有设备）",
             "en": "ESP pairing (enGo's own devices)"
           },
           "body": {
             "zh": "485 轉換器等 enGo 自有裝置使用。同為熱點方式，但走 enGo 自己的配網流程，上線與否改由後端確認。",
+            "zhCN": "485 转换器等 enGo 自有设备使用。同为热点方式，但走 enGo 自己的配网流程，上线与否改由后端确认。",
             "en": "For enGo's own devices such as the 485 converter. It is also a hotspot method, but follows enGo's own pairing flow, and whether the device is online is confirmed by the backend."
           },
           "image": null
@@ -175,14 +205,17 @@
       "tips": [
         {
           "zh": "配網成功後請立刻改名並指定房間。「白色四鍵123」這種型號名在語音與情境裡都不好用，改成「客廳壁切」才有意義。",
+          "zhCN": "配网成功后请立刻改名并指定房间。「白色四键123」这种型号名在语音与情境里都不好用，改成「客厅壁切」才有意义。",
           "en": "Rename the device and assign its room right away. A model name like \"white 4-gang 123\" is useless in voice commands and scenes, \"living-room wall switch\" is not."
         },
         {
           "zh": "同一台裝置重複配網會建立第二筆紀錄。配網前先確認它是不是已經在清單裡。",
+          "zhCN": "同一台设备重复配网会创建第二笔纪录。配网前先确认它是不是已经在清单里。",
           "en": "Pairing the same device twice creates a second entry. Check the list before pairing again."
         },
         {
           "zh": "3.6.x 起「AP 配網」與「ESP 配網」是兩個分頁。選錯分頁不會有明確錯誤訊息，只會一直停在等待。認不出裝置是哪一種時，請洽安裝人員。",
+          "zhCN": "3.6.x 起「AP 配网」与「ESP 配网」是两个分页。选错分页不会有明确错误消息，只会一直停在等待。认不出设备是哪一种时，请洽安装人员。",
           "en": "From 3.6.x, AP pairing and ESP pairing are two separate tabs. Choosing the wrong one gives no clear error, it just waits forever. If you cannot tell which kind your device is, ask your installer."
         }
       ]
@@ -193,20 +226,24 @@
       "icon": "sparkles",
       "title": {
         "zh": "情境（一鍵模式）",
+        "zhCN": "情境（一键模式）",
         "en": "Scenes (One-tap Modes)"
       },
       "summary": {
         "zh": "情境把多個動作打包成一鍵。分手動執行（您主動點或用語音喊）與自動執行（由條件觸發）。情境名稱會直接被語音使用，所以取名很重要。",
+        "zhCN": "情境把多个动作打包成一键。分手动运行（您主动点或用语音喊）与自动运行（由条件触发）。情境名称会直接被语音使用，所以取名很重要。",
         "en": "A scene bundles several actions into one tap. Manual scenes you trigger yourself (by tap or by voice); automatic scenes fire on a condition. The scene name becomes the voice command, so naming matters."
       },
       "steps": [
         {
           "title": {
             "zh": "認識三個分頁",
+            "zhCN": "认识三个分页",
             "en": "The three tabs"
           },
           "body": {
             "zh": "自動執行：由條件自動觸發，右側開關可啟用／停用。手動執行：需要您主動執行，語音可以直接執行這一類。執行紀錄：查看過去的執行情形。",
+            "zhCN": "自动运行：由条件自动触发，右侧开关可激活／禁用。手动运行：需要您主动运行，语音可以直接运行这一类。运行纪录：查看过去的运行情形。",
             "en": "Automatic: fires on a condition; the switch on the right enables or disables it. Manual: you trigger it yourself, and voice can run these directly. History: shows past runs."
           },
           "image": "/images/howto/scene/30-auto-list.png"
@@ -214,10 +251,12 @@
         {
           "title": {
             "zh": "步驟 1：先選觸發方式",
+            "zhCN": "步骤 1：先选触发方式",
             "en": "Step 1: choose the trigger"
           },
           "body": {
             "zh": "情境頁右上「＋」開始建立。第一個畫面決定這是手動還是自動：「選擇控制設備」＝手動；「設備狀態變化時」與「定時」＝自動。",
+            "zhCN": "情境页右上「＋」开始创建。第一个画面决定这是手动还是自动：「选择控制设备」＝手动；「设备状态变化时」与「定时」＝自动。",
             "en": "Press + at the top right of the Scenes page. The first screen decides manual or automatic: Choose devices to control = manual; When a device's state changes and Schedule = automatic."
           },
           "image": "/images/howto/scene/31-create-trigger.png"
@@ -225,10 +264,12 @@
         {
           "title": {
             "zh": "步驟 2-3：選裝置、設定動作",
+            "zhCN": "步骤 2-3：选设备、设置动作",
             "en": "Steps 2-3: pick devices and set actions"
           },
           "body": {
             "zh": "依房間分頁挑選裝置，然後勾選要下達的項目。這一層顯示的是裝置本身回報的控制項名稱（例如「開關1」），不是 enGo 另外取的名字，因此會依裝置廠牌而異。",
+            "zhCN": "依房间分页挑选设备，然后勾选要下达的项目。这一层显示的是设备本身回报的控制项名称（例如「开关1」），不是 enGo 另外取的名字，因此会依设备厂牌而异。",
             "en": "Pick a device from the room tabs, then tick the items to send. This level shows the control names the device itself reports (e.g. \"switch 1\") rather than names enGo assigns, so they vary by brand."
           },
           "image": "/images/howto/scene/32-set-action.png"
@@ -236,10 +277,12 @@
         {
           "title": {
             "zh": "步驟 4：命名並確認任務清單",
+            "zhCN": "步骤 4：命名并确认任务清单",
             "en": "Step 4: name it and review the task list"
           },
           "body": {
             "zh": "輸入情境名稱，下方表格逐列列出已加入的任務：房間、裝置、任務名稱、任務內容、在線狀態。可按「添加任務」再加一台裝置。",
+            "zhCN": "输入情境名称，下方表格逐列列出已加入的任务：房间、设备、任务名称、任务内容、在线状态。可按「添加任务」再加一台设备。",
             "en": "Enter the scene name. The table below lists every task you have added: room, device, task name, task value and online state. Press Add task to include another device."
           },
           "image": "/images/howto/scene/33-name-and-tasks.png"
@@ -247,10 +290,12 @@
         {
           "title": {
             "zh": "步驟 5：保存",
+            "zhCN": "步骤 5：保存",
             "en": "Step 5: save"
           },
           "body": {
             "zh": "按右上「保存」。存檔後回到情境頁，於對應分頁出現新卡片。若卡片顯示「狀態讀取失敗」，按右上重整鍵即可。那是新情境還沒取到裝置狀態，不是設定錯誤。",
+            "zhCN": "按右上「保存」。保存后回到情境页，于对应分页出现新卡片。若卡片显示「状态读取失败」，按右上重整键即可。那是新情境还没取到设备状态，不是设置错误。",
             "en": "Press Save at the top right. You return to the Scenes page and the new card appears under the matching tab. If the card says the status could not be read, press the refresh icon. The new scene simply has not fetched device states yet; nothing is wrong with your settings."
           },
           "image": "/images/howto/scene/34-manual-list.png"
@@ -258,10 +303,12 @@
         {
           "title": {
             "zh": "修改、暫停與刪除",
+            "zhCN": "修改、暂停与删除",
             "en": "Edit, pause and delete"
           },
           "body": {
             "zh": "卡片右上「⋯」有三個選項：延時執行（過一段時間後才執行）、編輯、移除。自動情境的卡片右側另有開關，可暫時停用而不刪除，例如出遠門時先關掉自動亮燈。",
+            "zhCN": "卡片右上「⋯」有三个选项：延时运行（过一段时间后才运行）、编辑、移除。自动情境的卡片右侧另有开关，可暂时禁用而不删除，例如出远门时先关掉自动亮灯。",
             "en": "The ⋯ menu on each card offers three options: Run later, Edit and Remove. Automatic scenes also have a switch on the right so you can pause one without deleting it, handy when you travel and want the auto lights off."
           },
           "image": "/images/howto/scene/35-card-menu.png"
@@ -270,10 +317,12 @@
       "tips": [
         {
           "zh": "「下班模式」比「情境 A」好記也好念。避免兩個情境取相近的名字，否則語音會反問您指的是哪一個。",
+          "zhCN": "「下班模式」比「情境 A」好记也好念。避免两个情境取相近的名字，否则语音会反问您指的是哪一个。",
           "en": "\"Leaving-work mode\" beats \"Scene A\", easier to remember and to say. Avoid near-identical names, or voice will ask which one you meant."
         },
         {
           "zh": "⚠ 兩個情境同名時，移除的確認視窗只會顯示名稱、不會顯示是哪一個。清單裡有同名情境時，建議先用「編輯」確認內容，或先改名再刪。",
+          "zhCN": "⚠ 两个情境同名时，移除的确认窗口只会显示名称、不会显示是哪一个。清单里有同名情境时，建议先用「编辑」确认内容，或先改名再删。",
           "en": "⚠ If two scenes share a name, the delete confirmation shows only the name, not which one. Use Edit to confirm the contents first, or rename before deleting."
         }
       ]
@@ -284,20 +333,24 @@
       "icon": "layout",
       "title": {
         "zh": "首頁與日常操作",
+        "zhCN": "首页与日常操作",
         "en": "Home Screen & Daily Use"
       },
       "summary": {
         "zh": "首頁是最常用的一頁：上方是住家名稱與天氣，中段是房間分頁，下方依房間分組列出裝置卡片，每張卡片顯示名稱與在線狀態。",
+        "zhCN": "首页是最常用的一页：上方是住家名称与天气，中段是房间分页，下方依房间分组列出设备卡片，每张卡片显示名称与在线状态。",
         "en": "The home screen is the one you use most: household name and weather on top, room tabs in the middle, then device cards grouped by room, each showing its name and online state."
       },
       "steps": [
         {
           "title": {
             "zh": "依房間找裝置",
+            "zhCN": "依房间找设备",
             "en": "Find devices by room"
           },
           "body": {
             "zh": "點上方的房間分頁只看該房間的裝置，或用右側放大鏡直接搜尋名稱。卡片上的綠點代表在線、紅點代表離線。",
+            "zhCN": "点上方的房间分页只看该房间的设备，或用右侧放大镜直接搜索名称。卡片上的绿点代表在线、红点代表离线。",
             "en": "Tap a room tab to see only that room's devices, or use the magnifier on the right to search by name. A green dot means online, red means offline."
           },
           "image": "/images/howto/home/01-home.png"
@@ -305,10 +358,12 @@
         {
           "title": {
             "zh": "把「未分配」清空",
+            "zhCN": "把「未分配」清空",
             "en": "Clear the Unassigned group"
           },
           "body": {
             "zh": "剛配網還沒指定房間的裝置會落在「未分配」。建議盡快把它們歸進房間。未分配的裝置語音叫不到。",
+            "zhCN": "刚配网还没指定房间的设备会落在「未分配」。建议尽快把它们归进房间。未分配的设备语音叫不到。",
             "en": "Devices paired but not yet assigned a room land in Unassigned. Move them into rooms promptly. Unassigned devices cannot be reached by voice."
           },
           "image": null
@@ -316,10 +371,12 @@
         {
           "title": {
             "zh": "右上四個按鈕（平板版面）",
+            "zhCN": "右上四个按钮（平板版面）",
             "en": "The four buttons at the top right (tablet layout)"
           },
           "body": {
             "zh": "平板首頁右上角的四個圖示，依序為版面切換、設備數據、手動更新、新增裝置。手機沒有這四顆按鈕，右上角是一個 ☰ 選單。改過裝置或情境而畫面還沒跟上時，按手動更新最快。",
+            "zhCN": "平板首页右上角的四个图标，依序为版面切换、设备数据、手动更新、添加设备。手机没有这四颗按钮，右上角是一个 ☰ 菜单。改过设备或情境而画面还没跟上时，按手动更新最快。",
             "en": "On the tablet layout, the four icons at the top right are, from left to right: layout switch, device data, manual refresh and add device. The phone does not show these four buttons; it has a single ☰ menu at the top right instead. If you changed a device or scene and the screen has not caught up, manual refresh is the quickest fix."
           },
           "image": null
@@ -327,10 +384,12 @@
         {
           "title": {
             "zh": "點卡片進入裝置控制頁",
+            "zhCN": "点卡片进入设备控制页",
             "en": "Tap a card to open the device page"
           },
           "body": {
             "zh": "點任一張裝置卡片就進入該裝置的控制頁。每一種裝置的控制頁長得不一樣：版面由裝置本身支援的功能決定，常見有即時資訊、開關、檔位／模式、轉盤或滑桿，右上齒輪則是改名與換房間。即時資訊顯示「--」多半是裝置關機或尚未回報，不是故障。",
+            "zhCN": "点任一张设备卡片就进入该设备的控制页。每一种设备的控制页长得不一样：版面由设备本身支持的功能决定，常见有实时信息、开关、档位／模式、转盘或滑杆，右上齿轮则是改名与换房间。实时信息显示「--」多半是设备关机或尚未回报，不是故障。",
             "en": "Tap any device card to open its control page. Every device type looks different, the layout follows what the device actually supports: live readings, switches, presets/modes, dials or sliders, with the gear at the top right for renaming and moving rooms. A reading showing “--” usually means the device is off or has not reported yet, not that it is broken."
           },
           "image": "/images/howto/home/04-device-page.png"
@@ -338,10 +397,12 @@
         {
           "title": {
             "zh": "各種裝置的控制頁有什麼",
+            "zhCN": "各种设备的控制页有什么",
             "en": "What each device type's control page offers"
           },
           "body": {
             "zh": "App 會自己判斷點的是哪一種裝置，開對應的控制頁，不必自己選；實際出現哪些項目，取決於裝置自己回報了哪些功能，同類不同品牌多一兩項或少一兩項屬正常。燈與插座：智能吸頂燈有電源、亮度、色溫，分白光與彩光兩種模式，彩光另可調明度與飽和；軌道插座有全開／全關、燈光調節、倒數計時與定時，並可看電流、電壓、瓦數與今日度數；三孔插座各孔獨立開關。冷氣與環境：轉盤式冷氣面板可轉盤調溫，另有開關、模式（自動／冷氣／除濕／送風）與風量；自 3.11.0 起，第三方 Matter 冷氣也會自動接上這個轉盤式面板，先前只能落到通用頁。經 485 轉換器接入的冷氣則是即時資訊加電源與嗶聲開關，紅外遙控的冷氣與電視是紅外公版按鍵。窗簾：開／停／關與開合百分比。感測與安全：人體存在傳感器顯示有人／無人、光照度、距離與電量，並可調靈敏度、距離與存在保持時間等；淨水器報警閥可開關閥門，偵測到漏水會告警；攝影機看即時影像。無線情境按鍵可為單擊、雙擊、長按各綁一個情境，它和「無線開關」是兩種東西。每一頁右上角的齒輪是該裝置的設定（改名、換房間、移除），和頁面中間的控制項分開。",
+            "zhCN": "App 会自己判断点的是哪一种设备，开对应的控制页，不必自己选；实际出现哪些项目，取决于设备自己回报了哪些功能，同类不同品牌多一两项或少一两项属正常。灯与插座：智能吸顶灯有电源、亮度、色温，分白光与彩光两种模式，彩光另可调明度与饱和；轨道插座有全开／全关、灯光调节、倒数计时与定时，并可看电流、电压、瓦数与今日度数；三孔插座各孔独立开关。冷气与环境：转盘式冷气面板可转盘调温，另有开关、模式（自动／冷气／除湿／送风）与风量；自 3.11.0 起，第三方 Matter 冷气也会自动接上这个转盘式面板，先前只能落到通用页。经 485 转换器接入的冷气则是实时信息加电源与哔声开关，红外遥控的冷气与电视是红外公版按键。窗帘：开／停／关与开合百分比。传感与安全：人体存在传感器显示有人／无人、光照度、距离与电量，并可调灵敏度、距离与存在保持时间等；净水器报警阀可开关阀门，侦测到漏水会告警；摄影机看实时图像。无线情境按键可为单击、双击、长按各绑一个情境，它和「无线开关」是两种东西。每一页右上角的齿轮是该设备的设置（改名、换房间、移除），和页面中间的控制项分开。",
             "en": "The app works out which type of device you tapped and opens the matching control page; you do not have to choose. What appears depends on which functions the device itself reports, so two brands of the same kind may differ by an item or two. Lights and sockets: a smart ceiling light has power, brightness and colour temperature, in white and colour modes, with brightness and saturation for colour; a track socket has all on/off, light adjustment, countdown and schedules, and shows current, voltage, watts and today's kWh; a three-hole socket switches each hole separately. Air conditioning and environment: the dial-style AC panel has a temperature dial plus power, mode (auto, cool, dry, fan) and fan speed; from 3.11.0 third-party Matter air conditioners are connected to this dial-style panel automatically, where before they only fell back to a generic page. An AC connected through a 485 converter shows live readings plus power and beep switches, and an infrared AC or TV uses the standard infrared keys. Curtains: open, stop, close and an opening percentage. Sensing and safety: the human presence sensor shows present/absent, light level, distance and battery, with adjustable sensitivity, distance and hold time among others; the water-purifier alarm valve opens and closes the valve and alerts when a leak is detected; a camera shows live video. A wireless scene button binds one scene each to single press, double press and long press, and it is not the same thing as a wireless switch. The gear at the top right of every page is that device's settings (rename, move room, remove), separate from the controls in the middle."
           },
           "image": null
@@ -350,10 +411,12 @@
       "tips": [
         {
           "zh": "裝置顯示離線時，先看它自己的指示燈與電源，再看家中 Wi-Fi，最後才懷疑 App。",
+          "zhCN": "设备显示离线时，先看它自己的指示灯与电源，再看家中 Wi-Fi，最后才怀疑 App。",
           "en": "If a device shows offline, check its own LED and power first, then your Wi-Fi, and only then suspect the app."
         },
         {
           "zh": "平板左側導覽列依序為家庭、場景、工單、庫存、預約、通知、訊息、設置、登出，可用最上方的「收起／展開」切換成只有圖示。",
+          "zhCN": "平板左侧导览列依序为家庭、场景、工单、库存、预约、通知、消息、设置、注销，可用最上方的「收起／展开」切换成只有图标。",
           "en": "On the tablet the left navigation rail lists 家庭 Home, 場景 Scenes, 工單 Work orders, 庫存 Inventory, 預約 Reservations, 通知 Notifications, 訊息 Messages, 設置 Settings and 登出 Sign out. The top Collapse/Expand button shrinks it to icons only."
         }
       ]
@@ -364,20 +427,24 @@
       "icon": "chart",
       "title": {
         "zh": "設備數據（用電與用水）",
+        "zhCN": "设备数据（用电与用水）",
         "en": "Device Data (Energy & Water)"
       },
       "summary": {
         "zh": "設備數據把裝置自己回報的量測值整理成四個分頁：用電趨勢、用電分布、用水量、空氣品質。用途是看趨勢與占比，哪一台耗電、什麼時段耗電，不是台電計費依據。",
+        "zhCN": "设备数据把设备自己回报的量测值整理成四个分页：用电趋势、用电分布、用水量、空气品质。用途是看趋势与占比，哪一台耗电、什么时段耗电，不是台电计费依据。",
         "en": "Device Data organises the readings your devices report into four tabs: energy trend, energy breakdown, water usage and air quality. It is for spotting trends and shares, which device draws power, and when, not for utility billing."
       },
       "steps": [
         {
           "title": {
             "zh": "從哪裡進入設備數據",
+            "zhCN": "从哪里进入设备数据",
             "en": "Where to open Device Data"
           },
           "body": {
             "zh": "平板：首頁右上角的第二顆圖示（數據報表）。手機：從裝置頁進入。進去之後共有用電趨勢、用電分布、用水量、空氣品質四個分頁。",
+            "zhCN": "平板：首页右上角的第二颗图标（数据报表）。手机：从设备页进入。进去之后共有用电趋势、用电分布、用水量、空气品质四个分页。",
             "en": "Tablet: the second icon at the top right of the home screen (the data-report button). Phone: open it from the device page. Inside there are four tabs: energy trend, energy breakdown, water usage and air quality."
           },
           "image": null
@@ -385,10 +452,12 @@
         {
           "title": {
             "zh": "用電趨勢：看什麼時段在耗電",
+            "zhCN": "用电趋势：看什么时段在耗电",
             "en": "Energy trend: when power is being drawn"
           },
           "body": {
             "zh": "四張數值卡分別是日最高、日最低、累計與平均每日用電（單位：度），下方長條圖以小時為刻度。上方可切換要看的裝置，以及日／月／年與日期。",
+            "zhCN": "四张数值卡分别是日最高、日最低、累计与平均每日用电（单位：度），下方长条图以小时为刻度。上方可切换要看的设备，以及日／月／年与日期。",
             "en": "Four cards show the daily high, daily low, cumulative and average daily consumption (in kWh), with an hourly bar chart below. Above them you can switch device, day/month/year and the date."
           },
           "image": "/images/howto/devicedata/01-power.png"
@@ -396,10 +465,12 @@
         {
           "title": {
             "zh": "用電分布：看哪一台在耗電",
+            "zhCN": "用电分布：看哪一台在耗电",
             "en": "Energy breakdown: which device draws it"
           },
           "body": {
             "zh": "環圈圖顯示總用電量，下方逐台列出度數與百分比。想找「電費是誰用掉的」就看這一頁。",
+            "zhCN": "环圈图显示总用电量，下方逐台列出度数与百分比。想找「电费是谁用掉的」就看这一页。",
             "en": "A donut chart shows total consumption, with each device's kWh and share listed below. This is the page for answering “what is using the electricity”."
           },
           "image": "/images/howto/devicedata/02-distribution.png"
@@ -407,10 +478,12 @@
         {
           "title": {
             "zh": "用水量：需搭配淨水設備",
+            "zhCN": "用水量：需搭配净水设备",
             "en": "Water usage: needs water equipment"
           },
           "body": {
             "zh": "四張數值卡為月最高、月最低、累計與平均每日水量（單位：L），長條圖以日為刻度。家中沒有淨水器或智慧主閥時這一頁不會有數字。",
+            "zhCN": "四张数值卡为月最高、月最低、累计与平均每日水量（单位：L），长条图以日为刻度。家中没有净水器或智慧主阀时这一页不会有数字。",
             "en": "Four cards show the monthly high, monthly low, cumulative and average daily water volume (in litres), with a daily bar chart. Without a water purifier or smart main valve this tab stays empty."
           },
           "image": "/images/howto/devicedata/03-water.png"
@@ -418,10 +491,12 @@
         {
           "title": {
             "zh": "空氣品質：需搭配感測裝置",
+            "zhCN": "空气品质：需搭配传感设备",
             "en": "Air quality: needs a sensor"
           },
           "body": {
             "zh": "以折線圖呈現，可切換 PM2.5 等指標與日／月／年。同樣地，家中沒有空氣品質感測裝置時這一頁不會有數字。",
+            "zhCN": "以折线图呈现，可切换 PM2.5 等指针与日／月／年。同样地，家中没有空气品质传感设备时这一页不会有数字。",
             "en": "Shown as a line chart; you can switch the metric (PM2.5 and others) and day/month/year. Again, without an air-quality sensor this tab stays empty."
           },
           "image": "/images/howto/devicedata/04-air.png"
@@ -430,10 +505,12 @@
       "tips": [
         {
           "zh": "這裡的度數來自裝置自己回報的量測值，和台電電表不會完全一致。它回答的是「哪一台、什麼時候」，不是「這個月要繳多少」。",
+          "zhCN": "这里的度数来自设备自己回报的量测值，和台电电表不会完全一致。它回答的是「哪一台、什么时候」，不是「这个月要缴多少」。",
           "en": "These readings come from the devices themselves and will not match your utility meter exactly. They answer “which device, and when”, not “how much is this month's bill”."
         },
         {
           "zh": "某個分頁一直沒有數字，通常不是故障，而是家中沒有對應的裝置（用水量要淨水設備、空氣品質要感測器）。",
+          "zhCN": "某个分页一直没有数字，通常不是故障，而是家中没有对应的设备（用水量要净水设备、空气品质要传感器）。",
           "en": "A tab with no numbers is usually not a fault: it means you do not have the matching hardware (water needs water equipment, air quality needs a sensor)."
         }
       ]
@@ -444,20 +521,24 @@
       "icon": "gear",
       "title": {
         "zh": "設置與帳號",
+        "zhCN": "设置与帐号",
         "en": "Settings & Account"
       },
       "summary": {
         "zh": "主題、語系、個人資料、裝置告警門檻，以及回報問題時要提供的版本號都在這裡。",
+        "zhCN": "主题、语系、个人数据、设备告警门槛，以及回报问题时要提供的版本号都在这里。",
         "en": "Theme, language, personal details, device alarm thresholds, and the version numbers to quote when reporting a problem."
       },
       "steps": [
         {
           "title": {
             "zh": "設置頁有什麼",
+            "zhCN": "设置页有什么",
             "en": "What is on the Settings page"
           },
           "body": {
             "zh": "目前主題（淺色／深色）、目前語系（預設跟隨系統）、個人信息、設備告警設置、當前版本、後端版本、會員條款、帳號註銷。",
+            "zhCN": "目前主题（浅色／深色）、目前语系（预设跟随系统）、个人信息、设备告警设置、当前版本、后端版本、会员条款、帐号注销。",
             "en": "Theme (light/dark), language (follows the system by default), personal information, device alarm settings, app version, backend version, terms of membership, and account deletion."
           },
           "image": "/images/howto/settings/01-settings.png"
@@ -465,10 +546,12 @@
         {
           "title": {
             "zh": "回報問題時請附兩組版本號",
+            "zhCN": "回报问题时请附两组版本号",
             "en": "Quote both version numbers when reporting an issue"
           },
           "body": {
             "zh": "「當前版本」是 App 版本，「後端版本」是雲端服務版本。兩組一起提供，客服才能判斷問題出在哪一端。",
+            "zhCN": "「当前版本」是 App 版本，「后端版本」是云端服务版本。两组一起提供，客服才能判断问题出在哪一端。",
             "en": "App version and backend version. Provide both so support can tell which side the problem is on."
           },
           "image": null
@@ -476,10 +559,12 @@
         {
           "title": {
             "zh": "帳號註銷",
+            "zhCN": "帐号注销",
             "en": "Deleting your account"
           },
           "body": {
             "zh": "「帳號註銷」是刪除帳號的入口，在設置頁申請。是否有可取消的緩衝期，請洽客服確認。若只是想換手機或重新登入，不需要用這個功能。",
+            "zhCN": "「帐号注销」是删除帐号的入口，在设置页申请。是否有可取消的缓冲期，请洽客服确认。若只是想换手机或重新登录，不需要用这个功能。",
             "en": "“Account deletion” (帳號註銷) in Settings is where you request deleting your account. Whether there is a grace period in which it can be cancelled, please confirm with customer service. If you only want to change phones or sign in again, you do not need this."
           },
           "image": null
@@ -488,10 +573,12 @@
       "tips": [
         {
           "zh": "選單叫「設置」，手機在底部「更多」分頁裡。手機沒有左側導覽列，底部只有家庭、場景、工單、通知、更多五個分頁，其餘功能都收在「更多」。",
+          "zhCN": "菜单叫「设置」，手机在底部「更多」分页里。手机没有左侧导览列，底部只有家庭、场景、工单、通知、更多五个分页，其余功能都收在「更多」。",
           "en": "The menu is labelled 設置, found under the bottom “More” tab on phones. Phones have no left-hand nav: the bottom bar carries only Home, Scenes, Work Orders, Notifications and More, and everything else sits under More."
         },
         {
           "zh": "裝置告警門檻（例如溫濕度上下限）設得太敏感會一直推播；建議先用預設值住一週再調。",
+          "zhCN": "设备告警门槛（例如温湿度上下限）设得太敏感会一直推播；建议先用默认值住一周再调。",
           "en": "Alarm thresholds that are too sensitive will keep pushing notifications. Live with the defaults for a week before tuning them."
         }
       ]
@@ -502,20 +589,24 @@
       "icon": "megaphone",
       "title": {
         "zh": "社區公告與訊息",
+        "zhCN": "社区公告与消息",
         "en": "Community Announcements & Messages"
       },
       "summary": {
         "zh": "通知頁有電鈴通知（電鈴設定與撥號鍵盤）、信箱通知、包裹通知三個分頁；訊息頁有公告、告警、操作紀錄、電鈴紀錄四個分頁，社區公告與門口電鈴的歷史紀錄都在訊息裡看。這是 enGo 與一般智慧家庭產品最大的差別。不必為了看社區公告另外裝一支 App。",
+        "zhCN": "通知页有电铃通知（电铃设置与拨号键盘）、信箱通知、包裹通知三个分页；消息页有公告、告警、操作纪录、电铃纪录四个分页，社区公告与门口电铃的历史纪录都在消息里看。这是 enGo 与一般智慧家庭产品最大的差别。不必为了看社区公告另外装一支 App。",
         "en": "The Notifications page has three tabs: 電鈴通知 (doorbell settings and dial keypad), mailbox notices and parcel notices; the Messages page has four tabs (公告 Announcements, 告警 Alerts, 操作紀錄 Activity log and 電鈴紀錄 Doorbell log), so community announcements and the doorbell call history are both read there. This is what sets enGo apart from ordinary smart-home products. You do not need a second app to read community notices."
       },
       "steps": [
         {
           "title": {
             "zh": "通知頁：電鈴設定、信箱、包裹",
+            "zhCN": "通知页：电铃设置、信箱、包裹",
             "en": "Notifications page: doorbell settings, mailbox, parcel"
           },
           "body": {
             "zh": "平板：左側導覽列的鈴鐺圖示；手機：底部第四個分頁「通知」。上方三個分頁分別是電鈴通知（電鈴設定與撥號鍵盤）、信箱通知（信件到達）、包裹通知（有您的包裹到管理室）。分頁下方另有查看分機資訊、解鎖開門、致電管理中心三個按鈕，解鎖開門的使用範圍請洽專人。此圖為較舊版本的畫面，按鈕當時叫「查看攝影機」，現已改名為「查看分機資訊」。門口電鈴的歷史紀錄請到訊息的「電鈴紀錄」分頁看。",
+            "zhCN": "平板：左侧导览列的铃铛图标；手机：底部第四个分页「通知」。上方三个分页分别是电铃通知（电铃设置与拨号键盘）、信箱通知（信件到达）、包裹通知（有您的包裹到管理室）。分页下方另有查看分机信息、解锁开门、致电管理中心三个按钮，解锁开门的使用范围请洽专人。此图为较旧版本的画面，按钮当时叫「查看摄影机」，现已改名为「查看分机资讯」。门口电铃的历史纪录请到消息的「电铃纪录」分页看。",
             "en": "Tablet: the bell icon in the left rail. Phone: the fourth tab at the bottom, 通知 (Notifications). The three tabs at the top are 電鈴通知 (doorbell settings and dial keypad), mailbox notices (mail has arrived) and parcel notices (a parcel for you has reached the management office). Below the tabs are three buttons: view extension info (查看分機資訊), unlock door and call the management center; please ask our team about the scope of unlock door. This screenshot is from an older version, when the first button was still called 查看攝影機 (view camera); it is now 查看分機資訊. The doorbell call history is on the 電鈴紀錄 tab of the Messages page."
           },
           "image": "/images/howto/community/01-notification-tablet.png"
@@ -523,10 +614,12 @@
         {
           "title": {
             "zh": "看社區公告",
+            "zhCN": "看社区公告",
             "en": "Read community announcements"
           },
           "body": {
             "zh": "公告在訊息裡：平板是左側導覽列的對話框圖示，手機在底部「更多」裡的「訊息」。點進任一則可看完整全文。公告與您的所在社區綁定，沒有收到任何公告時，先確認家庭管理的社區設定是否正確。",
+            "zhCN": "公告在消息里：平板是左侧导览列的对话框图标，手机在底部「更多」里的「讯息」。点进任一则可看完整全文。公告与您的所在社区绑定，没有收到任何公告时，先确认家庭管理的社区设置是否正确。",
             "en": "Announcements live under Messages: the speech-bubble icon in the tablet's left rail, or 訊息 under More on the phone. Open any item for the full text. Announcements are tied to your community, so if none arrive, first check the community setting in Home management."
           },
           "image": null
@@ -534,10 +627,12 @@
         {
           "title": {
             "zh": "訊息頁的四個分頁",
+            "zhCN": "消息页的四个分页",
             "en": "The four tabs of the Messages page"
           },
           "body": {
             "zh": "訊息頁有四個分頁：公告（管委會或物業管理室發布的社區公告、包裹到件通知）、告警（您在「設備告警設置」設定的門檻被觸發時的紀錄）、操作紀錄（誰在什麼時候動了哪個裝置）、電鈴紀錄（門口電鈴的歷史紀錄）。原本的「通知」分頁已更名為「告警」，門鈴的歷史紀錄也改放在「電鈴紀錄」；舊版說明若寫「通知分頁」，已不適用。點任一則可看完整全文。",
+            "zhCN": "消息页有四个分页：公告（管委会或物业管理室发布的社区公告、包裹到件通知）、告警（您在「设备告警设置」设置的门槛被触发时的纪录）、操作纪录（谁在什么时候动了哪个设备）、电铃纪录（门口电铃的历史纪录）。原本的「通知」分页已更名为「告警」，门铃的历史纪录也改放在「电铃纪录」；旧版说明若写「通知分页」，已不适用。点任一则可看完整全文。",
             "en": "The Messages page has four tabs: 公告 Announcements (community notices from the committee or property office, and parcel arrival notices), 告警 Alerts (a record of each time a threshold you set under device alert settings was triggered), 操作紀錄 Activity log (who operated which device, and when) and 電鈴紀錄 Doorbell log (doorbell call history). The former 通知 tab has been renamed 告警, and doorbell call history now lives under 電鈴紀錄; older instructions that mention a 通知 tab no longer apply. Open any item for the full text."
           },
           "image": null
@@ -546,10 +641,12 @@
       "tips": [
         {
           "zh": "包裹到件通知在通知頁的「包裹通知」分頁，訊息的「公告」分頁也看得到；若沒收到，先確認設定裡的通知權限。",
+          "zhCN": "包裹到件通知在通知页的「包裹通知」分页，消息的「公告」分页也看得到；若没收到，先确认设置里的通知权限。",
           "en": "Parcel notices sit in the Parcel tab of the Notifications page and also appear under the Announcements tab of Messages. If you are not getting them, check notification permission in Settings first."
         },
         {
           "zh": "包裹怎麼領（3.6.x 起）：智能櫃走到櫃前，在 App 按「開櫃取件」，櫃門自動開啟，不需輸入取件碼；人工櫃或管理室則前往存放位置向管理中心取件。",
+          "zhCN": "包裹怎么领（3.6.x 起）：智能柜走到柜前，在 App 按「开柜取件」，柜门自动打开，不需输入取件码；人工柜或管理室则前往存放位置向管理中心取件。",
           "en": "Collecting a parcel (from 3.6.x): at a smart locker, walk up to it and tap “Open locker” in the app; the door opens by itself and no pickup code needs to be typed in. For a staffed locker or the management office, collect it from the management center."
         }
       ],
@@ -561,20 +658,24 @@
       "icon": "wrench",
       "title": {
         "zh": "報修與工單",
+        "zhCN": "报修与工单",
         "en": "Repairs & Work Orders"
       },
       "summary": {
         "zh": "住家或公設有問題可直接在 App 提出報修，並追蹤處理進度。",
+        "zhCN": "住家或公设有问题可直接在 App 提出报修，并追踪处理进度。",
         "en": "Report a problem at home or in the shared facilities straight from the app, then follow its progress."
       },
       "steps": [
         {
           "title": {
             "zh": "提出報修",
+            "zhCN": "提出报修",
             "en": "Submit a repair request"
           },
           "body": {
             "zh": "左側欄的工單（扳手圖示；手機在底部「工單」分頁），右上「＋」新增。填寫維修項目與描述，可附照片。送出後系統產生工單編號。",
+            "zhCN": "左侧栏的工单（扳手图标；手机在底部「工单」分页），右上「＋」添加。填写维修项目与描述，可附照片。送出后系统产生工单编号。",
             "en": "Work orders (工單) in the left rail, the wrench icon (on the phone, the bottom 工單 tab), then + at the top right. Describe the item and the problem, and attach photos. Submitting creates a work-order number."
           },
           "image": "/images/howto/service/02-workorder-new.png"
@@ -582,10 +683,12 @@
         {
           "title": {
             "zh": "追蹤進度",
+            "zhCN": "追踪进度",
             "en": "Track progress"
           },
           "body": {
             "zh": "工單列表顯示編號、維修項目、狀態與建立時間，右側可查看詳情。狀態變更會推播通知。",
+            "zhCN": "工单列表显示编号、维修项目、状态与创建时间，右侧可查看详情。状态变更会推播通知。",
             "en": "The list shows the number, item, status and creation time, with details on the right. Status changes are pushed to you."
           },
           "image": "/images/howto/service/01-workorder-list.png"
@@ -594,6 +697,7 @@
       "tips": [
         {
           "zh": "附一張照片通常能省掉一次來回確認。",
+          "zhCN": "附一张照片通常能省掉一次来回确认。",
           "en": "One photo usually saves a round trip of questions."
         }
       ],
@@ -605,20 +709,24 @@
       "icon": "calendar",
       "title": {
         "zh": "公設預約",
+        "zhCN": "公设预约",
         "en": "Booking Shared Facilities"
       },
       "summary": {
         "zh": "健身房、會議室、交誼廳等公設可直接在 App 預約，並查詢或取消既有預約。",
+        "zhCN": "健身房、会议室、交谊厅等公设可直接在 App 预约，并查找或取消既有预约。",
         "en": "Book the gym, meeting room, lounge and other shared facilities in the app, and review or cancel existing bookings."
       },
       "steps": [
         {
           "title": {
             "zh": "挑選設施",
+            "zhCN": "挑选设施",
             "en": "Choose a facility"
           },
           "body": {
             "zh": "可預約項目頁以卡片列出設施名稱、位置、總人數限制與費率。",
+            "zhCN": "可预约项目页以卡片列出设施名称、位置、总人数限制与费率。",
             "en": "The facilities page lists each one as a card with its name, location, capacity and rate."
           },
           "image": "/images/howto/reservation/01-facilities.png"
@@ -626,10 +734,12 @@
         {
           "title": {
             "zh": "送出預約",
+            "zhCN": "送出预约",
             "en": "Make the booking"
           },
           "body": {
             "zh": "點進設施看項目資訊、說明、規格與注意事項，右側填預約日期、開始與結束時間、成人與兒童人數，送出即完成。",
+            "zhCN": "点进设施看项目信息、说明、规格与注意事项，右侧填预约日期、开始与结束时间、成人与儿童人数，送出即完成。",
             "en": "Open a facility to see its information, description, specifications and rules; on the right choose the date, start and end time, and the number of adults and children, then submit."
           },
           "image": "/images/howto/reservation/02-book.png"
@@ -637,10 +747,12 @@
         {
           "title": {
             "zh": "查詢與取消",
+            "zhCN": "查找与取消",
             "en": "Review and cancel"
           },
           "body": {
             "zh": "預約紀錄分頁列出過去與未來的預約，可在規定時限內取消。",
+            "zhCN": "预约纪录分页列出过去与未来的预约，可在规定时限内取消。",
             "en": "The history tab lists past and upcoming bookings; you can cancel within the allowed window."
           },
           "image": "/images/howto/reservation/03-history.png"
@@ -649,6 +761,7 @@
       "tips": [
         {
           "zh": "取消時限依各社區規章而異，請看該設施的「注意事項&限制」分頁。",
+          "zhCN": "取消时限依各社区规章而异，请看该设施的「注意事项&限制」分页。",
           "en": "Cancellation windows differ by community: check the facility's rules tab."
         }
       ],
@@ -660,20 +773,24 @@
       "icon": "box",
       "title": {
         "zh": "庫存管理",
+        "zhCN": "库存管理",
         "en": "Home Inventory"
       },
       "summary": {
         "zh": "記錄家中物品放在哪個房間的哪個櫃位、還有多少，並在低於告警門檻時提醒。適合濾芯、電池、備品這類「要用時常常找不到」的東西。",
+        "zhCN": "记录家中物品放在哪个房间的哪个柜位、还有多少，并在低于告警门槛时提醒。适合滤芯、电池、备品这类「要用时常常找不到」的东西。",
         "en": "Track which room and cabinet each item is in and how many are left, with a reminder when stock falls below your alert threshold. Ideal for filters, batteries and spares, the things you can never find when you need them."
       },
       "steps": [
         {
           "title": {
             "zh": "先建櫃位與分類",
+            "zhCN": "先建柜位与分类",
             "en": "Create cabinets and categories first"
           },
           "body": {
             "zh": "庫存頁上方有物品、櫃位、分類、記錄、告警五個分頁。先在「櫃位」建立實體收納位置（例如「廚房下櫃」），在「分類」建立類別（例如「濾芯」），再回到「物品」新增。",
+            "zhCN": "库存页上方有物品、柜位、分类、记录、告警五个分页。先在「柜位」创建实体收纳位置（例如「厨房下柜」），在「分类」创建类别（例如「滤芯」），再回到「物品」添加。",
             "en": "The inventory page has five tabs: Items, Cabinets, Categories, History and Alerts. Create your physical storage places under Cabinets (e.g. \"kitchen lower cabinet\") and your categories (e.g. \"filters\") first, then add items."
           },
           "image": null
@@ -681,10 +798,12 @@
         {
           "title": {
             "zh": "新增與查詢物品",
+            "zhCN": "添加与查找物品",
             "en": "Add and find items"
           },
           "body": {
             "zh": "上方四個數字是物品總數、櫃位總數、分類總數與低庫存數量。可用房間分頁篩選，或用右上放大鏡搜尋。",
+            "zhCN": "上方四个数字是物品总数、柜位总数、分类总数与低库存数量。可用房间分页筛选，或用右上放大镜搜索。",
             "en": "The four figures on top are total items, cabinets, categories and low-stock count. Filter by room with the tabs, or search with the magnifier at the top right."
           },
           "image": "/images/howto/warehouse/01-overview.png"
@@ -692,10 +811,12 @@
         {
           "title": {
             "zh": "異動位置與數量",
+            "zhCN": "异动位置与数量",
             "en": "Move items and adjust quantities"
           },
           "body": {
             "zh": "物品卡片可編輯、調整數量、變更位置與查看資訊。「異動位置」對話框會顯示目前存放位置（房間 → 櫃位，例如「會議室 → 設備櫃」）與數量，設定搬移數量後即可改房間或改櫃位。",
+            "zhCN": "物品卡片可编辑、调整数量、变更位置与查看信息。「异动位置」对话框会显示目前存放位置（房间 → 柜位，例如「会议室 → 设备柜」）与数量，设置搬移数量后即可改房间或改柜位。",
             "en": "Each item card lets you edit it, adjust the quantity, change its location or view details. The move dialog shows the current location (room → cabinet, for example “Meeting room → Equipment cabinet”) and quantity; set how many to move, then choose a new room or cabinet."
           },
           "image": "/images/howto/warehouse/02-move-item.png"
@@ -704,10 +825,12 @@
       "tips": [
         {
           "zh": "平板與手機都叫「庫存」：平板在左側導覽列，手機收在底部「更多」分頁裡。兩邊是同一頁、同一批資料。（3.2.2 的平板曾顯示「倉儲」，3.6.x 起已統一為「庫存」。）",
+          "zhCN": "平板与手机都叫「库存」：平板在左侧导览列，手机收在底部「更多」分页里。两边是同一页、同一批数据。（3.2.2 的平板曾显示「仓储」，3.6.x 起已统一为「库存」。）",
           "en": "Both the tablet and the phone call this 庫存 (Inventory): on the tablet it is in the left navigation rail, on the phone it sits under the bottom “More” tab. Same page, same data. (Tablets on 3.2.2 showed 倉儲; this was unified to 庫存 in 3.6.x.)"
         },
         {
           "zh": "低庫存門檻在庫存頁的「告警」分頁設定；數量低於門檻的物品，卡片上會出現紅色「庫存不足」標籤，上方的「低庫存」數字就是目前低於門檻的品項數。濾芯這類有壽命的東西，建議一併記下更換日期。",
+          "zhCN": "低库存门槛在库存页的「告警」分页设置；数量低于门槛的物品，卡片上会出现红色「库存不足」标签，上方的「低库存」数字就是目前低于门槛的品项数。滤芯这类有寿命的东西，建议一并记下更换日期。",
           "en": "Set the low-stock threshold in the Alerts (告警) tab. Any item below it shows a red 庫存不足 (low stock) tag on its card, and the Low stock figure at the top counts those items. For things with a service life, such as filters, record the replacement date too."
         }
       ],
@@ -720,50 +843,60 @@
       "group": "shop",
       "title": {
         "zh": "商城：購物、付款與繼續付款",
+        "zhCN": "商城：购物、付款与继续付款",
         "en": "Shop: shopping, payment and resuming payment"
       },
       "summary": {
         "zh": "在 enGo 商城（網站或 Android 的 enGo Shop App）選購、結帳，以信用卡付款；付款中斷時用「繼續付款」完成。",
+        "zhCN": "在 enGo 商城（网站或 Android 的 enGo Shop App）选购、结帐，以信用卡付款；付款中断时用「继续付款」完成。",
         "en": "Shop on the enGo Shop (website or the enGo Shop app for Android), check out, and pay by credit card. If payment is interrupted, finish it with 繼續付款 (resume payment)."
       },
       "steps": [
         {
           "title": {
             "zh": "加入購物車並結帳",
+            "zhCN": "加入购物车并结帐",
             "en": "Add to cart and check out"
           },
           "body": {
             "zh": "在商品頁點「加入購物車」，可同時選購不同店家的商品。到「購物車」確認數量後點「結帳」，確認收件資訊後點「前往付款」。",
+            "zhCN": "在商品页点「加入购物车」，可同时选购不同店家的商品。到「购物车」确认数量后点「结帐」，确认收件信息后点「前往付款」。",
             "en": "On a product page tap 加入購物車 (add to cart); items from several shops can share one cart. In 購物車, check the quantities, tap 結帳, confirm the delivery details and tap 前往付款 (go to payment)."
           }
         },
         {
           "title": {
             "zh": "以信用卡付款",
+            "zhCN": "以信用卡付款",
             "en": "Pay by credit card"
           },
           "body": {
             "zh": "目前付款方式為信用卡，由綠界 ECPay 處理，網站與 App 相同；ATM 轉帳與超商代碼暫不提供。訂閱方案同樣以信用卡定期扣款。",
+            "zhCN": "目前付款方式为信用卡，由绿界 ECPay 处理，网站与 App 相同；ATM 转帐与超商代码暂不提供。订阅方案同样以信用卡定期扣款。",
             "en": "Payment is by credit card, processed by ECPay, on both the website and the app. ATM transfer and convenience-store payment are not offered at present. Subscription plans renew on the same card."
           }
         },
         {
           "title": {
             "zh": "完成銀行驗證（3D 驗證）",
+            "zhCN": "完成银行验证（3D 验证）",
             "en": "Complete the bank check (3-D Secure)"
           },
           "body": {
             "zh": "部分發卡銀行會要求輸入簡訊驗證碼。網站會在付款頁或新視窗開啟驗證頁，App 會開啟「銀行驗證」視窗；完成前請勿關閉。視窗沒出現時，網站請允許彈出式視窗，App 請更新到最新版本。",
+            "zhCN": "部分发卡银行会要求输入短信验证码。网站会在付款页或新窗口打开验证页，App 会打开「银行验证」窗口；完成前请勿关闭。窗口没出现时，网站请允许弹出式窗口，App 请更新到最新版本。",
             "en": "Some card issuers ask for a one-time code sent by SMS. On the website the bank page opens on the payment page or in a new window; in the app it opens in a 銀行驗證 window. Keep it open until the check finishes. If it does not appear, allow pop-ups on the website or update the app."
           }
         },
         {
           "title": {
             "zh": "付款中斷時「繼續付款」",
+            "zhCN": "付款中断时「继续付款」",
             "en": "Resume an unpaid order"
           },
           "body": {
             "zh": "沒有完成付款的訂單會顯示為待付款。到「我的訂單」打開該訂單，點「繼續付款」即可再付一次。系統為待付款訂單保留商品約 60 分鐘，逾時會自動取消並放回庫存。",
+            "zhCN": "没有完成付款的订单会显示为待付款。到「我的订单」打开该订单，点「继续付款」即可再付一次。系统为待付款订单保留商品约 60 分钟，逾时会自动取消并放回库存。",
             "en": "An order that was not paid shows as unpaid. Open it in 我的訂單 (my orders) and tap 繼續付款 to pay again. Items are held for an unpaid order for about 60 minutes; after that the order is cancelled automatically and the items return to stock."
           }
         }
@@ -771,10 +904,12 @@
       "tips": [
         {
           "zh": "商品缺貨、團購已結束，或訂單金額未達 NT$5 時無法繼續付款，請取消訂單後重新結帳。",
+          "zhCN": "商品缺货、团购已结束，或订单金额未达 NT$5 时无法继续付款，请取消订单后重新结帐。",
           "en": "Resuming is not possible when an item is out of stock, the group buy has ended, or the order is under NT$5; cancel the order and check out again."
         },
         {
           "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "zhCN": "完整说明请见本页下方「商城使用手册」。",
           "en": "Full details are in the Shop user manuals further down this page."
         }
       ]
@@ -786,40 +921,48 @@
       "group": "shop",
       "title": {
         "zh": "商城：缺貨、到貨通知與接單生產",
+        "zhCN": "商城：缺货、到货通知与接单生产",
         "en": "Shop: out of stock, restock alerts and made-to-order"
       },
       "summary": {
         "zh": "商城只販售實際有庫存的數量。缺貨商品可登記「到貨通知我」，補貨後通知您；「接單生產」商品則可隨時下單。",
+        "zhCN": "商城只贩售实际有库存的数量。缺货商品可登记「到货通知我」，补货后通知您；「接单生产」商品则可随时下单。",
         "en": "The store sells only units that are in stock. For an out-of-stock item, register 到貨通知我 to be told when it is back; made-to-order items can be ordered at any time."
       },
       "steps": [
         {
           "title": {
             "zh": "看懂庫存狀態",
+            "zhCN": "看懂库存状态",
             "en": "Read the stock status"
           },
           "body": {
             "zh": "商品頁顯示「缺貨／待補貨」時暫時無法購買，也無法付款，不會先收款再等補貨。購物車中有商品缺貨或數量不足時，結帳前會提示調整或移除。",
+            "zhCN": "商品页显示「缺货／待补货」时暂时无法购买，也无法付款，不会先收款再等补货。购物车中有商品缺货或数量不足时，结帐前会提示调整或移除。",
             "en": "When a product page shows 缺貨／待補貨 the item cannot be bought or paid for; payment is never taken in advance of restocking. If the cart holds an item that is out of stock or short, checkout asks for the quantity to be changed or the item removed."
           }
         },
         {
           "title": {
             "zh": "登記「到貨通知我」",
+            "zhCN": "登记「到货通知我」",
             "en": "Register a restock alert"
           },
           "body": {
             "zh": "登入後在缺貨商品頁點「到貨通知我」，畫面會顯示「已登記到貨通知」。補貨後會以 App 推播通知一次，並留在「通知」頁；通知只在 09:00 至 21:00 發送，且不保留商品。",
+            "zhCN": "登录后在缺货商品页点「到货通知我」，画面会显示「已登记到货通知」。补货后会以 App 推播通知一次，并留在「通知」页；通知只在 09:00 至 21:00 发送，且不保留商品。",
             "en": "After signing in, tap 到貨通知我 on the out-of-stock product; it then shows 已登記到貨通知. When stock returns, one push notification is sent and also kept on the 通知 page. Alerts go out between 09:00 and 21:00 and do not reserve the item."
           }
         },
         {
           "title": {
             "zh": "「接單生產」商品",
+            "zhCN": "「接单生产」商品",
             "en": "Made-to-order items"
           },
           "body": {
             "zh": "標示「接單生產」的商品由店家接單後製作或備貨，不受庫存數量限制，不會顯示缺貨。出貨時間以商品頁或店家說明為準。",
+            "zhCN": "标示「接单生产」的商品由店家接单后制作或备货，不受库存数量限制，不会显示缺货。出货时间以商品页或店家说明为准。",
             "en": "Items marked 接單生產 are made or sourced after the order, so they are not limited by stock and never show as out of stock. Shipping time follows the product page or the shop's notes."
           }
         }
@@ -827,6 +970,7 @@
       "tips": [
         {
           "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "zhCN": "完整说明请见本页下方「商城使用手册」。",
           "en": "Full details are in the Shop user manuals further down this page."
         }
       ]
@@ -838,50 +982,60 @@
       "group": "shop",
       "title": {
         "zh": "商城：訂單、取消與退款",
+        "zhCN": "商城：订单、取消与退款",
         "en": "Shop: orders, cancellations and refunds"
       },
       "summary": {
         "zh": "在「我的訂單」追蹤進度、取消訂單或申請退貨退款；退款一律經平台核准後原路退回信用卡。",
+        "zhCN": "在「我的订单」追踪进度、取消订单或申请退货退款；退款一律经平台核准后原路退回信用卡。",
         "en": "Track orders, cancel them, or request a return or refund in 我的訂單. Every refund is approved by the platform and returned to the original card."
       },
       "steps": [
         {
           "title": {
             "zh": "追蹤訂單進度",
+            "zhCN": "追踪订单进度",
             "en": "Track an order"
           },
           "body": {
             "zh": "在「我的訂單」打開訂單明細，進度依序為「已下單」「已付款」「備貨中」「配送中」「已送達大廳」（宅配為「已送達」）。送達後會收到通知，再到社區大廳或管理室領取。",
+            "zhCN": "在「我的订单」打开订单明细，进度依序为「已下单」「已付款」「备货中」「配送中」「已送达大厅」（宅配为「已送达」）。送达后会收到通知，再到社区大厅或管理室领取。",
             "en": "Open an order in 我的訂單 to see it move through 已下單 (placed), 已付款 (paid), 備貨中 (being prepared), 配送中 (on the way) and 已送達大廳 (at the lobby; 已送達 for home delivery). A notification follows delivery; collect the parcel at the lobby or management office."
           }
         },
         {
           "title": {
             "zh": "取消訂單",
+            "zhCN": "取消订单",
             "en": "Cancel an order"
           },
           "body": {
             "zh": "在訂單頁點「取消訂單」。已付款的訂單取消後，系統會自動送出退款申請，審核通過後款項原路退回。",
+            "zhCN": "在订单页点「取消订单」。已付款的订单取消后，系统会自动送出退款申请，审核通过后款项原路退回。",
             "en": "Tap 取消訂單 on the order page. Cancelling a paid order sends a refund request automatically; once approved, the money goes back to the original card."
           }
         },
         {
           "title": {
             "zh": "申請退貨或退款",
+            "zhCN": "申请退货或退款",
             "en": "Request a return or refund"
           },
           "body": {
             "zh": "在符合條件的訂單點「申請退貨」或「申請退款」，說明原因後「送出申請」，由平台審核。生鮮等商品另有例外規定，請以退換貨政策為準。",
+            "zhCN": "在符合条件的订单点「申请退货」或「申请退款」，说明原因后「送出申请」，由平台审核。生鲜等商品另有例外规定，请以退换货政策为准。",
             "en": "On an eligible order tap 申請退貨 (return) or 申請退款 (refund), give the reason and tap 送出申請. The platform reviews each request; perishable goods follow the exceptions in the returns policy."
           }
         },
         {
           "title": {
             "zh": "退款入帳",
+            "zhCN": "退款入帐",
             "en": "When the refund arrives"
           },
           "body": {
             "zh": "核准後訂單顯示「退款處理中，款項將退回原付款方式」。信用卡退款依發卡銀行作業，通常需數個工作天入帳。",
+            "zhCN": "核准后订单显示「退款处理中，款项将退回原付款方式」。信用卡退款依发卡银行作业，通常需数个工作天入帐。",
             "en": "After approval the order shows 退款處理中，款項將退回原付款方式 (refund in progress, back to the original payment method). Card refunds depend on the issuing bank and usually take several working days."
           }
         }
@@ -889,6 +1043,7 @@
       "tips": [
         {
           "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "zhCN": "完整说明请见本页下方「商城使用手册」。",
           "en": "Full details are in the Shop user manuals further down this page."
         }
       ]
@@ -900,40 +1055,48 @@
       "group": "shop",
       "title": {
         "zh": "商城：通知",
+        "zhCN": "商城：通知",
         "en": "Shop: notifications"
       },
       "summary": {
         "zh": "訂單、付款、配送、訂閱與到貨通知的消息，都集中在網站與 App 的「通知」頁。",
+        "zhCN": "订单、付款、配送、订阅与到货通知的消息，都集中在网站与 App 的「通知」页。",
         "en": "Order, payment, delivery, subscription and restock messages are collected on the 通知 page of the website and the app."
       },
       "steps": [
         {
           "title": {
             "zh": "開啟「通知」頁",
+            "zhCN": "打开「通知」页",
             "en": "Open the notifications page"
           },
           "body": {
             "zh": "網站請點頁首的「通知」鈴鐺，或從「我的 → 通知」進入；App 請開啟「通知」頁。",
+            "zhCN": "网站请点页眉的「通知」铃铛，或从「我的 → 通知」进入；App 请打开「通知」页。",
             "en": "On the website, tap the 通知 bell in the header or go to 我的 → 通知; in the app, open the 通知 page."
           }
         },
         {
           "title": {
             "zh": "分類與已讀",
+            "zhCN": "分类与已读",
             "en": "Categories and read status"
           },
           "body": {
             "zh": "可依「全部」「訂單」「配送」「訂閱」「提醒」分類查看；未讀消息會標示，可一次「全部標為已讀」。通知保留 90 天。",
+            "zhCN": "可依「全部」「订单」「配送」「订阅」「提醒」分类查看；未读消息会标示，可一次「全部标为已读」。通知保留 90 天。",
             "en": "Filter by 全部, 訂單, 配送, 訂閱 or 提醒 (all, orders, delivery, subscriptions, reminders). Unread items are marked, and 全部標為已讀 clears them all. Notifications are kept for 90 days."
           }
         },
         {
           "title": {
             "zh": "沒收到推播時",
+            "zhCN": "没收到推播时",
             "en": "When no push arrives"
           },
           "body": {
             "zh": "請到手機設定確認已允許 enGo Shop 傳送通知。即使沒有推播，消息仍會出現在「通知」頁。",
+            "zhCN": "请到手机设置确认已允许 enGo Shop 发送通知。即使没有推播，消息仍会出现在「通知」页。",
             "en": "Check in the phone's settings that enGo Shop may send notifications. Messages still appear on the 通知 page even without a push."
           }
         }
@@ -941,10 +1104,12 @@
       "tips": [
         {
           "zh": "社區公告與包裹等大樓消息在 enGo 智慧管家 App 的「訊息」查看，請見上方「社區公告與訊息」。",
+          "zhCN": "社区公告与包裹等大楼消息在 enGo 智慧管家 App 的「讯息」查看，请见上方「社区公告与讯息」。",
           "en": "Building messages such as announcements and parcels are in the enGo HMS app; see Community Announcements & Messages above."
         },
         {
           "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "zhCN": "完整说明请见本页下方「商城使用手册」。",
           "en": "Full details are in the Shop user manuals further down this page."
         }
       ]
@@ -956,50 +1121,60 @@
       "group": "shop",
       "title": {
         "zh": "商家：商品與庫存",
+        "zhCN": "商家：商品与库存",
         "en": "Merchants: products and stock"
       },
       "summary": {
         "zh": "在商家管理中心設定可售數量、看保留給未付款訂單的件數，並可把商品設為「接單生產」。",
+        "zhCN": "在商家管理中心设置可售数量、看保留给未付款订单的件数，并可把商品设为「接单生产」。",
         "en": "In the merchant console, set the quantity for sale, see units held for unpaid orders, and mark products as made-to-order."
       },
       "steps": [
         {
           "title": {
             "zh": "設定可售數量",
+            "zhCN": "设置可售数量",
             "en": "Set the quantity for sale"
           },
           "body": {
             "zh": "在商品的「價格與庫存」填「庫存數量」。這是可售數量，不含保留給未付款訂單的件數；批次「設定庫存」也以列表顯示的數量計算差額。",
+            "zhCN": "在商品的「价格与库存」填「库存数量」。这是可售数量，不含保留给未付款订单的件数；批量「设定库存」也以列表显示的数量计算差额。",
             "en": "Fill in 庫存數量 under 價格與庫存 on the product. This is the quantity for sale and excludes units held for unpaid orders; the bulk 設定庫存 action also works from the quantity shown in the list."
           }
         },
         {
           "title": {
             "zh": "保留給未付款訂單",
+            "zhCN": "保留给未付款订单",
             "en": "Units held for unpaid orders"
           },
           "body": {
             "zh": "列表與商品頁會顯示「另有 N 件保留給未付款訂單」。這些件數不含在庫存內，訂單逾時未付款會自動放回。",
+            "zhCN": "列表与商品页会显示「另有 N 件保留给未付款订单」。这些件数不含在库存内，订单逾时未付款会自动放回。",
             "en": "The list and product page show 另有 N 件保留給未付款訂單 (N more held for unpaid orders). They are not counted in stock and return automatically when an unpaid order times out."
           }
         },
         {
           "title": {
             "zh": "接單生產與到貨通知",
+            "zhCN": "接单生产与到货通知",
             "en": "Made-to-order and restock alerts"
           },
           "body": {
             "zh": "勾選「不追蹤庫存（接單生產）」後，商品不受庫存限制、不會顯示缺貨。庫存補回大於 0 時，登記到貨通知的顧客會自動收到通知。",
+            "zhCN": "勾选「不追踪库存（接单生产）」后，商品不受库存限制、不会显示缺货。库存补回大于 0 时，登记到货通知的顾客会自动收到通知。",
             "en": "Tick 不追蹤庫存（接單生產） and the product is no longer limited by stock or shown as out of stock. When stock goes back above zero, customers who registered a restock alert are notified automatically."
           }
         },
         {
           "title": {
             "zh": "修改已上架商品",
+            "zhCN": "修改已上架商品",
             "en": "Editing a live product"
           },
           "body": {
             "zh": "已通過審核的商品，變更售價、名稱或圖片會重新送審，通過前暫時自買家端下架；只調整庫存或說明不影響上架。",
+            "zhCN": "已通过审核的商品，变更售价、名称或图片会重新送审，通过前暂时自买家端下架；只调整库存或说明不影响上架。",
             "en": "Changing the price, name or images of an approved product sends it back to review and hides it from buyers until approved. Changing only stock or the description keeps it listed."
           }
         }
@@ -1007,6 +1182,7 @@
       "tips": [
         {
           "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "zhCN": "完整说明请见本页下方「商城使用手册」。",
           "en": "Full details are in the Shop user manuals further down this page."
         }
       ]
@@ -1018,50 +1194,60 @@
       "group": "shop",
       "title": {
         "zh": "加盟店：財務資料與撥款",
+        "zhCN": "加盟店：财务数据与拨款",
         "en": "Franchise stores: financial details and payouts"
       },
       "summary": {
         "zh": "加盟店為獨立法人，有自己的加盟主資料與銀行帳戶；只有該店負責人與財務人員可以查看，撥款只匯入該店核准的帳戶。",
+        "zhCN": "加盟店为独立法人，有自己的加盟主数据与银行帐户；只有该店负责人与财务人员可以查看，拨款只导入该店核准的帐户。",
         "en": "A franchise store is a separate legal entity with its own franchisee details and bank account. Only the store's owner and finance staff can see them, and payouts go only to the store's approved account."
       },
       "steps": [
         {
           "title": {
             "zh": "誰可以查看",
+            "zhCN": "谁可以查看",
             "en": "Who can see what"
           },
           "body": {
             "zh": "「加盟店財務」頁僅供加盟店負責人與財務人員使用。品牌總部只在「結算撥款」看到各加盟店的銷售與撥款合計，看不到加盟主的身分或銀行資料；各店鋪之間看不到彼此的財務資料。",
+            "zhCN": "「加盟店财务」页仅供加盟店负责人与财务人员使用。品牌总部只在「结算拨款」看到各加盟店的销售与拨款合计，看不到加盟主的身分或银行数据；各店铺之间看不到彼此的财务数据。",
             "en": "The 加盟店財務 page is for the franchise store's owner and finance staff only. Brand HQ sees each franchise store's sales and payout totals in 結算撥款, never the franchisee's identity or bank details; stores never see each other's finances."
           }
         },
         {
           "title": {
             "zh": "填寫加盟主資料與銀行帳戶",
+            "zhCN": "填写加盟主数据与银行帐户",
             "en": "Submit franchisee details and bank account"
           },
           "body": {
             "zh": "在「加盟主資料與銀行帳戶」填寫並上傳文件，送交平台審核。審核需要補件時，會通知加盟店補齊後再送審。",
+            "zhCN": "在「加盟主资料与银行帐户」填写并上传文档，送交平台审核。审核需要补件时，会通知加盟店补齐后再送审。",
             "en": "Fill in 加盟主資料與銀行帳戶 and upload the documents for platform review. If more is needed, the store is asked to complete it and resubmit."
           }
         },
         {
           "title": {
             "zh": "撥款規則",
+            "zhCN": "拨款规则",
             "en": "How payouts work"
           },
           "body": {
             "zh": "撥款只匯入該店核准的銀行帳戶，不會改匯到總部。資料尚未核准時撥款暫停，重新核准後處理；核准後變更銀行或資料，該筆撥款需重新核准。",
+            "zhCN": "拨款只导入该店核准的银行帐户，不会改汇到总部。数据尚未核准时拨款暂停，重新核准后处理；核准后变更银行或数据，该笔拨款需重新核准。",
             "en": "Payouts go only to the store's approved bank account, never to HQ. While details are not approved, payouts are held and processed after approval; changing the bank or details after a payout was approved means that payout must be approved again."
           }
         },
         {
           "title": {
             "zh": "退款與經營型態轉換",
+            "zhCN": "退款与经营型态转换",
             "en": "Refunds and changing store type"
           },
           "body": {
             "zh": "退款由出貨的店鋪承擔。直營與加盟的轉換只能由平台管理員辦理，轉換時店鋪現有人員權限會全部移除，由新負責人重新邀請團隊。",
+            "zhCN": "退款由出货的店铺承担。直营与加盟的转换只能由平台管理员办理，转换时店铺现有人员权限会全部移除，由新负责人重新邀请团队。",
             "en": "Refunds are borne by the store that shipped the order. Only a platform administrator can switch a store between directly operated and franchise; the switch removes all existing staff access and the new owner re-invites the team."
           }
         }
@@ -1069,10 +1255,12 @@
       "tips": [
         {
           "zh": "對消費者而言，在直營店或加盟店購物的下單、付款與退款方式都相同。",
+          "zhCN": "对消费者而言，在直营店或加盟店购物的下单、付款与退款方式都相同。",
           "en": "For customers, ordering, payment and refunds are the same at directly operated and franchise stores."
         },
         {
           "zh": "完整說明請見本頁下方「商城使用手冊」。",
+          "zhCN": "完整说明请见本页下方「商城使用手册」。",
           "en": "Full details are in the Shop user manuals further down this page."
         }
       ]

@@ -75,14 +75,14 @@
                 <h2 class="cs-name">{{ getLocaleText(item.title) }}</h2>
                 <p class="cs-meta">{{ getLocaleText(item.location) }}, {{ getLocaleText(item.category) }}</p>
                 <p class="cs-desc">{{ getLocaleText(item.description) }}</p>
-                <span class="cs-more">{{ $t('viewDetails') || '查看詳情' }}<span class="cs-chev" aria-hidden="true">›</span></span>
+                <span class="cs-more">{{ $t('viewDetails') }}<span class="cs-chev" aria-hidden="true">›</span></span>
               </div>
             </article>
           </transition-group>
         </div>
 
         <div class="cs-records" v-if="recordCases.length">
-          <h2 class="cs-records-title">{{ isZh ? '更多實作紀錄' : 'More projects' }}</h2>
+          <h2 class="cs-records-title">{{ tx('更多實作紀錄', '更多实作纪录', 'More projects') }}</h2>
           <ul class="cs-list">
             <li
               v-for="item in recordCases"
@@ -109,6 +109,7 @@ import { ref, computed } from 'vue'
 import casesData from '@/data/cases.json'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
+import { useLocaleText } from '../composables/useLocaleText'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
 import { useRouter } from 'vue-router'
@@ -166,7 +167,7 @@ const filteredCases = computed(() => {
 })
 const photoCases = computed(() => filteredCases.value.filter(hasPhoto))
 const recordCases = computed(() => filteredCases.value.filter((c) => !hasPhoto(c)))
-const isZh = computed(() => locale.value.startsWith('zh'))
+const { tx } = useLocaleText()
 
 const setType = (type: string) => {
   selectedType.value = type

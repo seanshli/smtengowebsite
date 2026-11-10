@@ -4,6 +4,7 @@
             "id": "basic",
             "name": {
                 "zh": "旗艦中控 基礎版",
+                "zhCN": "旗舰中控 基础版",
                 "en": "Basic Smart Hub Edition",
                 "ja": "スマートハブ基礎版",
                 "fr": "Édition Hub Intelligent de Base"
@@ -11,6 +12,7 @@
             "price": "NT$ 50,000",
             "suggested_usage": {
                 "zh": "小資族 / 一房一廳 / 套房推薦",
+                "zhCN": "小资族 / 一房一厅 / 套房推荐",
                 "en": "Studio / 1BR / Budget Friendly",
                 "ja": "ワンルーム / 1K / 単身者向け",
                 "fr": "Studio / T1 / Budget économique"
@@ -21,6 +23,12 @@
                     "安控 (漏水 , 煙霧安控)",
                     "燈光單迴路控制",
                     "App 遠端管理"
+                ],
+                "zhCN": [
+                    "智慧中控平台",
+                    "安控 (漏水 , 烟雾安控)",
+                    "灯光单回路控制",
+                    "App 远程管理"
                 ],
                 "en": [
                     "Smart Control Hub",
@@ -46,6 +54,11 @@
                     "回家模式 (自動亮燈)",
                     "離家模式 (一鍵關燈)",
                     "睡眠情境設定"
+                ],
+                "zhCN": [
+                    "回家模式 (自动亮灯)",
+                    "离家模式 (一键关灯)",
+                    "睡眠情境设置"
                 ],
                 "en": [
                     "Welcome Home (Auto Light)",
@@ -73,6 +86,16 @@
                     "智能煙霧偵測 x1",
                     "智能斷電器/瓦斯閥 x1",
                     "人體感應器 x1"
+                ],
+                "zhCN": [
+                    "网关 x1",
+                    "灯控开关 x1",
+                    "遥控系统 x1",
+                    "中控系统平板 x1",
+                    "智能漏水球阀 x1",
+                    "智能烟雾侦测 x1",
+                    "智能断电器/瓦斯阀 x1",
+                    "人体感应器 x1"
                 ],
                 "en": [
                     "Gateway x1",
@@ -110,6 +133,7 @@
             "id": "advanced",
             "name": {
                 "zh": "全屋智慧 進階版",
+                "zhCN": "全屋智慧 高级版",
                 "en": "Advanced Full-House Edition",
                 "ja": "全自動スマート進階版",
                 "fr": "Édition Avancée Maison Connectée"
@@ -117,6 +141,7 @@
             "price": "NT$ 80,000",
             "suggested_usage": {
                 "zh": "兩房兩廳 / 小家庭智慧首選",
+                "zhCN": "两房两厅 / 小家庭智慧首选",
                 "en": "2BR Apartment / Smart Family Choice",
                 "ja": "2LDK / 小家族のスマートな選択",
                 "fr": "Appartement T3 / Choix famille connectée"
@@ -127,6 +152,12 @@
                     "多迴路燈光聯動",
                     "安控 (漏水 , 煙霧安控)",
                     "App 遠端管理"
+                ],
+                "zhCN": [
+                    "智慧冷气自动调节",
+                    "多回路灯光联动",
+                    "安控 (漏水 , 烟雾安控)",
+                    "App 远程管理"
                 ],
                 "en": [
                     "Smart AC Automation",
@@ -154,6 +185,13 @@
                     "睡眠情境設定",
                     "動態感應自動走廊燈",
                     "冷氣恆溫自動化"
+                ],
+                "zhCN": [
+                    "回家模式 (自动亮灯)",
+                    "离家模式 (一键关灯)",
+                    "睡眠情境设置",
+                    "动态感应自动走廊灯",
+                    "冷气恒温自动化"
                 ],
                 "en": [
                     "Welcome Home (Auto Light)",
@@ -187,6 +225,16 @@
                     "智能煙霧偵測 x1",
                     "智能斷電器/瓦斯閥 x1",
                     "人體感應器 x2"
+                ],
+                "zhCN": [
+                    "智慧网关 x1",
+                    "智能灯控开关 x4",
+                    "智能红外线遥控系统 x2",
+                    "中控系统平板+ 管理系统 x1",
+                    "智能漏水球阀 x1",
+                    "智能烟雾侦测 x1",
+                    "智能断电器/瓦斯阀 x1",
+                    "人体感应器 x2"
                 ],
                 "en": [
                     "Smart Gateway x1",
@@ -224,6 +272,7 @@
             "id": "luxury",
             "name": {
                 "zh": "奢華宅邸 豪華版",
+                "zhCN": "奢华宅邸 豪华版",
                 "en": "Luxury Villa Edition",
                 "ja": "プレミアム豪華版",
                 "fr": "Édition Villa de Luxe"
@@ -238,6 +287,7 @@
             },
             "suggested_usage": {
                 "zh": "三房以上 / 透天別墅 / 頂級玩家",
+                "zhCN": "三房以上 / 透天别墅 / 顶级玩家",
                 "en": "3BR+ / Villa / Premium Experience",
                 "ja": "3LDK以上 / 一軒家 / プレミアム体験",
                 "fr": "Appartement T4+ / Villa / Expérience Premium"
@@ -249,6 +299,13 @@
                     "智慧窗簾與環境聯動",
                     "安控 (漏水 , 煙霧安控)",
                     "App 遠端管理"
+                ],
+                "zhCN": [
+                    "智慧冷气自动调节",
+                    "多回路灯光联动",
+                    "智慧窗帘与环境联动",
+                    "安控 (漏水 , 烟雾安控)",
+                    "App 远程管理"
                 ],
                 "en": [
                     "Smart AC Automation",
@@ -282,6 +339,16 @@
                     "全方位離家警戒",
                     "晨曦喚醒 (自動開簾)",
                     "環境自動淨化模式"
+                ],
+                "zhCN": [
+                    "回家模式 (自动亮灯)",
+                    "离家模式 (一键关灯)",
+                    "睡眠情境设置",
+                    "动态感应自动走廊灯",
+                    "冷气恒温自动化",
+                    "全方位离家警戒",
+                    "晨曦唤醒 (自动开帘)",
+                    "环境自动净化模式"
                 ],
                 "en": [
                     "Welcome Home (Auto Light)",
@@ -327,6 +394,18 @@
                     "窗簾馬達 x2",
                     "人體感應器 x2"
                 ],
+                "zhCN": [
+                    "智慧网关 x2",
+                    "智能灯控开关 x7",
+                    "智能红外线遥控系统 x4",
+                    "enGo 旗舰中控平板 x2",
+                    "管理系统 x1",
+                    "智能漏水球阀 x1",
+                    "智能烟雾侦测 x1",
+                    "智能断电器/瓦斯阀 x1",
+                    "窗帘马达 x2",
+                    "人体感应器 x2"
+                ],
                 "en": [
                     "Smart Gateway x2",
                     "Smart Light Control Switch x7",
@@ -371,6 +450,7 @@
             "id": "health",
             "name": {
                 "zh": "enGo 健康套裝 陽光空氣水",
+                "zhCN": "enGo 健康套装 阳光空气水",
                 "en": "enGo Health Package",
                 "ja": "enGo 健康セット",
                 "fr": "Pack Santé enGo"
@@ -379,6 +459,10 @@
                 "zh": [
                     "enGo 中控平板 + 管理系統",
                     "enGo 水精靈 (RO + 礦物質 + 記量) ＋智能漏水偵測斷水閥"
+                ],
+                "zhCN": [
+                    "enGo 中控平板 + 管理系统",
+                    "enGo 水精灵 (RO + 矿物质 + 记量) ＋智能漏水侦测断水阀"
                 ],
                 "en": [
                     "enGo Hub + Management System",
@@ -398,6 +482,7 @@
             "id": "kitchen",
             "name": {
                 "zh": "enGo 智能廚房套裝",
+                "zhCN": "enGo 智能厨房套装",
                 "en": "enGo Smart Kitchen Package",
                 "ja": "enGo スマートキッチンセット",
                 "fr": "Pack Cuisine Intelligente enGo"
@@ -408,6 +493,13 @@
                     "enGo 中控平板 + 管理系統 (含智慧庫存)",
                     "enGo 水精靈 (RO + 礦物質 + 記量)",
                     "電動拉籃 (可選 60/70/80/90cm 寬櫥櫃)",
+                    "排差"
+                ],
+                "zhCN": [
+                    "智能断水阀",
+                    "enGo 中控平板 + 管理系统 (含智慧库存)",
+                    "enGo 水精灵 (RO + 矿物质 + 记量)",
+                    "电动拉篮 (可选 60/70/80/90cm 宽橱柜)",
                     "排差"
                 ],
                 "en": [
@@ -439,12 +531,14 @@
             "id": "tablet_t1",
             "name": {
                 "zh": "enGo AI智慧中控系統 — enGo 牆掛平板 + 手機 App",
+                "zhCN": "enGo AI智慧中控系统 — enGo 墙挂平板 + 手机 App",
                 "en": "enGo HMS — enGo wall tablet + mobile app",
                 "ja": "enGo HMS — enGo 壁掛けタブレット + アプリ",
                 "fr": "enGo HMS — tablette murale enGo + appli mobile"
             },
             "description": {
                 "zh": "enGo 是住家與社區合一的智慧生活系統：牆上的 enGo 平板是家中主控台，手機 App 讓您在外也能掌握。整合照明、插座、窗簾、空調、紅外線家電、感測器、攝影機與門口對講，加上社區公告、報修、公設預約與包裹通知；語音操作為平板專屬。同一組帳號通用，手機 App「enGo智慧管家」免費下載。",
+                "zhCN": "enGo 是住家与社区合一的智慧生活系统：墙上的 enGo 平板是家中主控台，手机 App 让您在外也能掌握。集成照明、插座、窗帘、空调、红外线家电、传感器、摄影机与门口对讲，加上社区公告、报修、公设预约与包裹通知；语音操作为平板专属。同一组帐号通用，手机 App「enGo智慧管家」免费下载。",
                 "en": "enGo manages home and community together: the enGo wall tablet is the control hub at home and the mobile app keeps you in charge when out. It integrates lighting, sockets, curtains, air conditioning, infrared appliances, sensors, cameras and the door intercom, plus community notices, repair requests, facility bookings and parcel notifications; voice control is tablet-only. One account works everywhere; the mobile app (listed as enGo智慧管家) is free.",
                 "ja": "enGo は住まいとコミュニティを一つにするスマートリビングシステム。壁掛けの enGo タブレットが家の司令塔、外出先ではスマホアプリで操作。照明・コンセント・カーテン・エアコン・赤外線家電・センサー・カメラ・インターホンに加え、お知らせ・修理依頼・共用施設予約・宅配通知を統合。音声操作はタブレット専用。アカウントは共通、アプリ（enGo智慧管家）は無料。",
                 "fr": "enGo gère la maison et la résidence ensemble : la tablette murale enGo est le poste de commande à la maison, l'appli mobile prend le relais à l'extérieur. Éclairage, prises, rideaux, climatisation, appareils infrarouges, capteurs, caméras et interphone, plus avis, réparations, réservations et colis ; commande vocale réservée à la tablette. Un seul compte ; l'appli (enGo智慧管家) est gratuite."
@@ -455,12 +549,14 @@
             "id": "gateway_z1",
             "name": {
                 "zh": "智能網關 Z1 PRO",
+                "zhCN": "智能网关 Z1 PRO",
                 "en": "Smart Gateway Z1 PRO",
                 "ja": "スマートゲートウェイ Z1 PRO",
                 "fr": "Passerelle Intelligente Z1 PRO"
             },
             "description": {
                 "zh": "Smart Gateway Z1 是智慧家庭的大腦，支援 Zigbee 3.0 標準與 Matter 協議，能連接超過 100 個子設備。體積小庫，可放置於家中任何角落，確保網路覆蓋無死角。",
+                "zhCN": "Smart Gateway Z1 是智慧家庭的大脑，支持 Zigbee 3.0 标准与 Matter 协议，能连接超过 100 个子设备。体积小库，可放置于家中任何角落，确保网络覆盖无死角。",
                 "en": "Smart Gateway Z1 is the brain of the smart home, supporting Zigbee 3.0 standard and Matter protocol, capable of connecting over 100 sub-devices. Compact in size, it can be placed anywhere in the home to ensure no dead zones in network coverage.",
                 "ja": "スマートゲートウェイZ1はスマートホームの頭脳であり、Zigbee 3.0標準とMatterプロトコルをサポートし、100以上のサブデバイスを接続できます。コンパクトなサイズで、家のどこにでも配置でき、ネットワークカバレッジの死角をなくします。",
                 "fr": "Smart Gateway Z1 est le cerveau de la maison intelligente, prenant en charge la norme Zigbee 3.0 et le protocole Matter, capable de connecter plus de 100 sous-appareils. De taille compacte, il peut être placé n'importe où dans la maison pour garantir l'absence de zones mortes dans la couverture réseau."
@@ -469,19 +565,23 @@
             "specs": {
                 "power_input": {
                     "en": "5V/1A Type-C",
-                    "zh": "5V/1A Type-C"
+                    "zh": "5V/1A Type-C",
+                    "zhCN": "5V/1A Type-C"
                 },
                 "working": {
                     "en": "-10°C to +55°C / 10% to 90%RH",
-                    "zh": "-10°C 至 +55°C / 10% 至 90%RH"
+                    "zh": "-10°C 至 +55°C / 10% 至 90%RH",
+                    "zhCN": "-10°C 至 +55°C / 10% 至 90%RH"
                 },
                 "size": {
                     "en": "90*90*22mm",
-                    "zh": "90*90*22mm"
+                    "zh": "90*90*22mm",
+                    "zhCN": "90*90*22mm"
                 },
                 "wireless": {
                     "en": "Zigbee 3.0 / Wi-Fi",
-                    "zh": "Zigbee 3.0 / Wi-Fi"
+                    "zh": "Zigbee 3.0 / Wi-Fi",
+                    "zhCN": "Zigbee 3.0 / Wi-Fi"
                 }
             }
         },
@@ -489,12 +589,14 @@
             "id": "switch_s1",
             "name": {
                 "zh": "智能開關 S1 / 星羽系列",
+                "zhCN": "智能开关 S1 / 星羽系列",
                 "en": "Smart Switch S1 Series",
                 "ja": "スマートスイッチ S1 シリーズ",
                 "fr": "Interrupteur Intelligent Série S1"
             },
             "description": {
                 "zh": "S1 系列智能開關採用極簡觸控介面，專為壁掛設計。兼具直覺操作與高端視覺美感，支援單/雙/三位開關控制與多種情境設定。",
+                "zhCN": "S1 系列智能开关采用极简触摸界面，专为壁挂设计。兼具直觉操作与高端视觉美感，支持单/双/三位开关控制与多种情境设置。",
                 "en": "The S1 series smart switches feature a minimalist touch interface designed for wall mounting. Combining intuitive operation with high-end visual aesthetics, it supports single/dual/triple switch control and various scene settings.",
                 "ja": "S1シリーズのスマートスイッチは、壁掛け用に設計されたミニマリストのタッチインターフェースを採用しています。直感的な操作とハイエンドな視覚的美学を兼ね備え、シングル/デュアル/トリプルスイッチ制御とさまざまなシーン設定をサポートします。",
                 "fr": "Les interrupteurs intelligents de la série S1 présentent une interface tactile minimaliste conçue pour le montage mural. Alliant fonctionnement intuitif et esthétique visuelle haut de gamme, il prend en charge le contrôle d'interrupteur simple/double/triple et divers réglages de scène."
@@ -503,23 +605,28 @@
             "specs": {
                 "input": {
                     "en": "100~240V AC 50/60Hz",
-                    "zh": "100~240V AC 50/60Hz"
+                    "zh": "100~240V AC 50/60Hz",
+                    "zhCN": "100~240V AC 50/60Hz"
                 },
                 "wireless": {
                     "en": "Zigbee",
-                    "zh": "Zigbee"
+                    "zh": "Zigbee",
+                    "zhCN": "Zigbee"
                 },
                 "optional_switches": {
                     "en": "1, 2, 3, 4 gang",
-                    "zh": "1, 2, 3, 4鍵"
+                    "zh": "1, 2, 3, 4鍵",
+                    "zhCN": "1, 2, 3, 4键"
                 },
                 "size": {
                     "en": "86*86*36.2mm",
-                    "zh": "86*86*36.2mm"
+                    "zh": "86*86*36.2mm",
+                    "zhCN": "86*86*36.2mm"
                 },
                 "current": {
                     "en": "74mA (Rated)",
-                    "zh": "74mA (額定)"
+                    "zh": "74mA (額定)",
+                    "zhCN": "74mA (额定)"
                 }
             }
         },
@@ -527,12 +634,14 @@
             "id": "sensor_h1",
             "name": {
                 "zh": "高精度人體存在感測器 H1",
+                "zhCN": "高精度人体存在传感器 H1",
                 "en": "Human Presence Sensor H1",
                 "ja": "人体存在センサー H1",
                 "fr": "Capteur de Présence Humaine H1"
             },
             "description": {
                 "zh": "H1 採用毫米波雷達技術，能偵測人體細微動作甚至呼吸，準確判斷人體存在，解決傳統紅外線感測器無法偵測靜止人體的痛點。",
+                "zhCN": "H1 采用毫米波雷达技术，能侦测人体细微动作甚至呼吸，准确判断人体存在，解决传统红外线传感器无法侦测静止人体的痛点。",
                 "en": "H1 adopts millimeter-wave radar technology to detect subtle human movements and even breathing, accurately judging human presence and solving the pain point of traditional infrared sensors unable to detect stationary bodies.",
                 "ja": "H1はミリ波レーダー技術を採用し、人体の微細な動きや呼吸さえも検知し、人体の存在を正確に判断し、静止している人体を検知できない従来の赤外線センサーの問題点を解決します。",
                 "fr": "H1 adopte la technologie radar à ondes millimétriques pour détecter les mouvements humains subtils et même la respiration, jugeant avec précision la présence humaine et résolvant le problème des capteurs infrarouges traditionnels incapables de détecter les corps immobiles."
@@ -541,19 +650,23 @@
             "specs": {
                 "input": {
                     "en": "5V/1A Type-C",
-                    "zh": "5V/1A Type-C"
+                    "zh": "5V/1A Type-C",
+                    "zhCN": "5V/1A Type-C"
                 },
                 "technology": {
                     "en": "Millimeter Wave Radar (mmWave) + Ambient Light Sensor (ALS)",
-                    "zh": "毫米波雷達 (mmWave) + 光感 (ALS:ambient light sensor)"
+                    "zh": "毫米波雷達 (mmWave) + 光感 (ALS:ambient light sensor)",
+                    "zhCN": "毫米波雷达 (mmWave) + 光感 (ALS:ambient light sensor)"
                 },
                 "wireless": {
                     "en": "Zigbee 3.0",
-                    "zh": "Zigbee 3.0"
+                    "zh": "Zigbee 3.0",
+                    "zhCN": "Zigbee 3.0"
                 },
                 "range": {
                     "en": "Up to 6m radius",
-                    "zh": "半徑 6 米內"
+                    "zh": "半徑 6 米內",
+                    "zhCN": "半径 6 米内"
                 }
             }
         },
@@ -561,12 +674,14 @@
             "id": "switch_d1",
             "name": {
                 "zh": "自訂螢幕顯示開關 D1",
+                "zhCN": "自订屏幕显示开关 D1",
                 "en": "Custom Display Switch D1",
                 "ja": "カスタムディスプレイ スイッチ D1",
                 "fr": "Interrupteur à écran personnalisé D1"
             },
             "description": {
                 "zh": "D1 智能開關配備可自訂螢幕，提供直覺的觸控操作體驗。用戶可依需求設定多種情境模式，輕鬆切換，打造個性化智能家居。",
+                "zhCN": "D1 智能开关配备可自订屏幕，提供直觉的触摸操作体验。用户可依需求设置多种情境模式，轻松切换，打造个性化智能家居。",
                 "en": "The D1 Smart Switch features a customizable screen, providing an intuitive touch operation experience. Users can set various scene modes according to their needs for easy switching.",
                 "ja": "D1スマートスイッチはカスタマイズ可能な画面を備えており、直感的なタッチ操作体験を提供します。ユーザーはニーズに応じてさまざまなシーンモードを設定し、簡単に切り替えることができます。",
                 "fr": "L'interrupteur intelligent D1 dispose d'un écran personnalisable, offrant une expérience tactile intuitive. Les utilisateurs peuvent définir divers modes de scène selon leurs besoins."
@@ -575,15 +690,18 @@
             "specs": {
                 "input": {
                     "en": "5V/1A Type-C",
-                    "zh": "5V/1A Type-C"
+                    "zh": "5V/1A Type-C",
+                    "zhCN": "5V/1A Type-C"
                 },
                 "wireless": {
                     "en": "Wi-Fi / Zigbee",
-                    "zh": "Wi-Fi / Zigbee"
+                    "zh": "Wi-Fi / Zigbee",
+                    "zhCN": "Wi-Fi / Zigbee"
                 },
                 "size": {
                     "en": "90*90*22mm",
-                    "zh": "90*90*22mm"
+                    "zh": "90*90*22mm",
+                    "zhCN": "90*90*22mm"
                 }
             }
         },
@@ -591,12 +709,14 @@
             "id": "light_strip",
             "name": {
                 "zh": "影音同步燈條 / 智能燈條",
+                "zhCN": "影音同步灯条 / 智能灯条",
                 "en": "Audio/Video Sync Light Strip",
                 "ja": "オーディオ/ビデオ同期ライトストリップ",
                 "fr": "Bande lumineuse de synchronisation audio/vidéo"
             },
             "description": {
                 "zh": "智能燈條支援影音同步功能，提供 1600 萬種色彩選擇，輕鬆營造各種氛圍。採用高顯色性 LED，讓居家空間更具層次感。",
+                "zhCN": "智能灯条支持影音同步功能，提供 1600 万种色彩选择，轻松营造各种氛围。采用高显色性 LED，让居家空间更具层次感。",
                 "en": "The smart light strip supports audio/video sync, offering 16 million colors to easily create various atmospheres. High CRI LEDs make the home space more layered.",
                 "ja": "スマートライトストリップはオーディオ/ビデオ同期をサポートし、1600万色を提供してさまざまな雰囲気を簡単に作り出します。高演色性LEDがホームスペースをより層状にします。",
                 "fr": "La bande lumineuse intelligente prend en charge la synchronisation audio/vidéo, offrant 16 millions de couleurs pour créer facilement diverses atmosphères."
@@ -605,19 +725,23 @@
             "specs": {
                 "power": {
                     "en": "12W",
-                    "zh": "12W"
+                    "zh": "12W",
+                    "zhCN": "12W"
                 },
                 "voltage": {
                     "en": "12V/24V",
-                    "zh": "12V/24V"
+                    "zh": "12V/24V",
+                    "zhCN": "12V/24V"
                 },
                 "wireless": {
                     "en": "Zigbee",
-                    "zh": "Zigbee"
+                    "zh": "Zigbee",
+                    "zhCN": "Zigbee"
                 },
                 "color": {
                     "en": "RGB/RGBCW",
-                    "zh": "RGB/RGBCW"
+                    "zh": "RGB/RGBCW",
+                    "zhCN": "RGB/RGBCW"
                 }
             }
         },
@@ -625,12 +749,14 @@
             "id": "smart_bulb",
             "name": {
                 "zh": "智能燈泡",
+                "zhCN": "智能灯泡",
                 "en": "Smart Bulb",
                 "ja": "スマート電球",
                 "fr": "Ampoule Intelligente"
             },
             "description": {
                 "zh": "智能燈泡支援語音控制、調光調色及定時開關功能。多種燈頭規格 E27/E14/GU10 可選，色溫範圍 2700-6500K 搭配 RGB 全彩。",
+                "zhCN": "智能灯泡支持语音控制、调光调色及定时开关功能。多种灯头规格 E27/E14/GU10 可选，色温范围 2700-6500K 搭配 RGB 全彩。",
                 "en": "Smart bulbs support voice control, dimming, color tuning, and timer functions. Available in E27/E14/GU10 bases with 2700-6500K + RGB color range.",
                 "ja": "スマート電球は、音声制御、調光、調色、タイマー機能をサポートしています。E27/E14/GU10ベースで利用可能で、2700-6500K + RGB色範囲を備えています。",
                 "fr": "Les ampoules intelligentes prennent en charge la commande vocale, la gradation, le réglage des couleurs et les fonctions de minuterie. Disponible en bases E27/E14/GU10."
@@ -639,15 +765,18 @@
             "specs": {
                 "base": {
                     "en": "E27/E14/GU10",
-                    "zh": "E27/E14/GU10"
+                    "zh": "E27/E14/GU10",
+                    "zhCN": "E27/E14/GU10"
                 },
                 "color_temp": {
                     "en": "2700-6500K+RGB",
-                    "zh": "2700-6500K+RGB"
+                    "zh": "2700-6500K+RGB",
+                    "zhCN": "2700-6500K+RGB"
                 },
                 "wireless": {
                     "en": "Zigbee",
-                    "zh": "Zigbee"
+                    "zh": "Zigbee",
+                    "zhCN": "Zigbee"
                 }
             }
         },
@@ -655,12 +784,14 @@
             "id": "track_light",
             "name": {
                 "zh": "磁吸軌道燈",
+                "zhCN": "磁吸轨道灯",
                 "en": "Magnetic Track Light",
                 "ja": "磁気トラックライト",
                 "fr": "Rail Lumineux Magnétique"
             },
             "description": {
                 "zh": "磁吸軌道燈設計靈活，可隨意移動調整照明位置。提供多種瓦數選擇 (6W-40W) 及光束角，高顯色性 RA≥90/98，完美適應各種空間照明需求。",
+                "zhCN": "磁吸轨道灯设计灵活，可随意移动调整照明位置。提供多种瓦数选择 (6W-40W) 及光束角，高显色性 RA≥90/98，完美适应各种空间照明需求。",
                 "en": "Magnetic track lights offer flexible design, allowing easy movement and adjustment. Available in various wattages (6W-40W) and beam angles with high CRI RA≥90/98.",
                 "ja": "磁気トラックライトは柔軟なデザインを提供し、照明位置の移動と調整が簡単です。さまざまなワット数（6W-40W）とビーム角で利用可能で、高演色性RA≥90/98を備えています。",
                 "fr": "Les rails lumineux magnétiques offrent une conception flexible, permettant un déplacement et un réglage faciles. Disponible en plusieurs puissances (6W-40W)."
@@ -669,19 +800,23 @@
             "specs": {
                 "power": {
                     "en": "6W-40W",
-                    "zh": "6W-40W"
+                    "zh": "6W-40W",
+                    "zhCN": "6W-40W"
                 },
                 "voltage": {
                     "en": "48V",
-                    "zh": "DC 48V"
+                    "zh": "DC 48V",
+                    "zhCN": "DC 48V"
                 },
                 "CRI": {
                     "en": "RA≥90/98",
-                    "zh": "RA≥90/98"
+                    "zh": "RA≥90/98",
+                    "zhCN": "RA≥90/98"
                 },
                 "beam_angle": {
                     "en": "15°/24°/35°/55°",
-                    "zh": "15°/24°/35°/55°"
+                    "zh": "15°/24°/35°/55°",
+                    "zhCN": "15°/24°/35°/55°"
                 }
             }
         },
@@ -689,12 +824,14 @@
             "id": "downlight",
             "name": {
                 "zh": "防眩光筒燈/崁燈",
+                "zhCN": "防眩光筒灯/崁灯",
                 "en": "Anti-glare Downlight",
                 "ja": "防眩ダウンライト",
                 "fr": "Downlight Anti-éblouissement"
             },
             "description": {
                 "zh": "防眩光筒燈/崁燈提供舒適護眼的照明體驗，高顯色性 RA≥90。支援 Zigbee 無線控制，多種光束角可選，適用於居家及商業空間。",
+                "zhCN": "防眩光筒灯/崁灯提供舒适护眼的照明体验，高显色性 RA≥90。支持 Zigbee 无线控制，多种光束角可选，适用于居家及商业空间。",
                 "en": "Anti-glare downlights provide a comfortable, eye-protecting lighting experience with high CRI RA≥90. Supports Zigbee wireless control and various beam angles.",
                 "ja": "防眩ダウンライトは、高演色性RA≥90の快適で目に優しい照明体験を提供します。Zigbee無線制御とさまざまなビーム角をサポートしています。",
                 "fr": "Les downlights anti-éblouissement offrent une expérience d'éclairage confortable et protectrice pour les yeux avec un IRC élevé RA≥90."
@@ -703,27 +840,33 @@
             "specs": {
                 "input": {
                     "en": "AC 110-220V",
-                    "zh": "AC 110-220V"
+                    "zh": "AC 110-220V",
+                    "zhCN": "AC 110-220V"
                 },
                 "CRI": {
                     "en": "RA≥90",
-                    "zh": "RA≥90"
+                    "zh": "RA≥90",
+                    "zhCN": "RA≥90"
                 },
                 "wireless": {
                     "en": "Zigbee",
-                    "zh": "Zigbee"
+                    "zh": "Zigbee",
+                    "zhCN": "Zigbee"
                 },
                 "beam_angle": {
                     "en": "8°/15°/24°/36°/55°/120°",
-                    "zh": "8°/15°/24°/36°/55°/120°"
+                    "zh": "8°/15°/24°/36°/55°/120°",
+                    "zhCN": "8°/15°/24°/36°/55°/120°"
                 },
                 "color": {
                     "en": "White/Black",
-                    "zh": "白/黑"
+                    "zh": "白/黑",
+                    "zhCN": "白/黑"
                 },
                 "hole_size": {
                     "en": "55/75/95mm",
-                    "zh": "55/75/95mm"
+                    "zh": "55/75/95mm",
+                    "zhCN": "55/75/95mm"
                 }
             }
         },
@@ -731,12 +874,14 @@
             "id": "cob_downlight",
             "name": {
                 "zh": "COB 防眩光崁燈",
+                "zhCN": "COB 防眩光崁灯",
                 "en": "COB Anti-glare Recessed Light",
                 "ja": "COB 防眩埋込灯",
                 "fr": "Downlight Encastré COB Anti-éblouissement"
             },
             "description": {
                 "zh": "COB 防眩光崁燈提供重點照明與極致的防眩光效果，營造高品質光環境。多色與多種開孔尺寸可選，滿足不同設計需求。",
+                "zhCN": "COB 防眩光崁灯提供重点照明与极致的防眩光效果，营造高品质光环境。多色与多种开孔尺寸可选，满足不同设计需求。",
                 "en": "COB Anti-glare Recessed Lights provide accent lighting with ultimate anti-glare effects, creating a high-quality light environment. Available in multiple colors and aperture sizes to meet different design needs.",
                 "ja": "COB 防眩埋込灯は、アクセント照明と究極の防眩効果を提供し、高品質な光環境を作り出します。さまざまなデザインニーズに合わせて、複数の色と開口サイズをご用意しています。",
                 "fr": "Les downlights encastrés COB anti-éblouissement offrent un éclairage d'accentuation avec des effets anti-éblouissement ultimes, créant un environnement lumineux de haute qualité."
@@ -745,27 +890,33 @@
             "specs": {
                 "input": {
                     "en": "AC 110-220V",
-                    "zh": "AC 110-220V"
+                    "zh": "AC 110-220V",
+                    "zhCN": "AC 110-220V"
                 },
                 "CRI": {
                     "en": "RA≥90",
-                    "zh": "RA≥90"
+                    "zh": "RA≥90",
+                    "zhCN": "RA≥90"
                 },
                 "wireless": {
                     "en": "Zigbee",
-                    "zh": "Zigbee"
+                    "zh": "Zigbee",
+                    "zhCN": "Zigbee"
                 },
                 "beam_angle": {
                     "en": "120°",
-                    "zh": "120°"
+                    "zh": "120°",
+                    "zhCN": "120°"
                 },
                 "color": {
                     "en": "Gun Black/Matte White/Silver",
-                    "zh": "槍黑/無光白/銀色"
+                    "zh": "槍黑/無光白/銀色",
+                    "zhCN": "枪黑/无光白/银色"
                 },
                 "hole_size": {
                     "en": "55/75/95mm",
-                    "zh": "55/75/95mm"
+                    "zh": "55/75/95mm",
+                    "zhCN": "55/75/95mm"
                 }
             }
         },
@@ -773,12 +924,14 @@
             "id": "smart_diffuser",
             "name": {
                 "zh": "智能擴散燈",
+                "zhCN": "智能扩散灯",
                 "en": "Smart Diffuser Light",
                 "ja": "スマートディフューザーライト",
                 "fr": "Lumière Diffuse Intelligente"
             },
             "description": {
                 "zh": "智能擴散燈提供均勻柔和的散光照明，適合營造舒適氛圍。支援 Zigbee 智能控制，可與全屋智能系統完美聯動。",
+                "zhCN": "智能扩散灯提供均匀柔和的散光照明，适合营造舒适氛围。支持 Zigbee 智能控制，可与全屋智能系统完美联动。",
                 "en": "Smart Diffuser Lights provide uniform and soft diffused lighting, perfect for creating a comfortable atmosphere. Supports Zigbee smart control for perfect integration with full-house smart systems.",
                 "ja": "スマートディフューザーライトは、均一で柔らかな拡散照明を提供し、快適な雰囲気を作り出すのに最適です。Zigbeeスマートコントロールをサポートし、全屋スマートシステムと完全に連携します。",
                 "fr": "Les lumières diffuses intelligentes offrent un éclairage diffus uniforme et doux, parfait pour créer une atmosphère confortable. Prend en charge le contrôle intelligent Zigbee."
@@ -787,27 +940,33 @@
             "specs": {
                 "input": {
                     "en": "AC 110-220V",
-                    "zh": "AC 110-220V"
+                    "zh": "AC 110-220V",
+                    "zhCN": "AC 110-220V"
                 },
                 "CRI": {
                     "en": "RA≥85",
-                    "zh": "RA≥85"
+                    "zh": "RA≥85",
+                    "zhCN": "RA≥85"
                 },
                 "wireless": {
                     "en": "Zigbee",
-                    "zh": "Zigbee"
+                    "zh": "Zigbee",
+                    "zhCN": "Zigbee"
                 },
                 "beam_angle": {
                     "en": "Diffused 120°",
-                    "zh": "散光120°"
+                    "zh": "散光120°",
+                    "zhCN": "散光120°"
                 },
                 "color": {
                     "en": "White",
-                    "zh": "白"
+                    "zh": "白",
+                    "zhCN": "白"
                 },
                 "hole_size": {
                     "en": "55/75/95/115mm",
-                    "zh": "55/75/95/115mm"
+                    "zh": "55/75/95/115mm",
+                    "zhCN": "55/75/95/115mm"
                 }
             }
         }

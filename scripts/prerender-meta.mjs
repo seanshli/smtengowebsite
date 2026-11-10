@@ -97,6 +97,8 @@ const pickL = (o, L) => (o && (o[L] ?? o.zh ?? o.en)) || ''
  */
 export function jsonLdFor(route, lang) {
   const L = lang === 'en' ? 'en' : 'zh'
+  // Legal name: Chinese on the zh shells, the English name on every other language.
+  const LEGAL_NAME = L === 'en' ? 'Smart enGo Home Technology Corp.' : '智管家科技股份有限公司'
   const prefix = lang === 'en' ? EN_PREFIX : ''
   const blocks = []
   if (route === '/' || route === '/product') {
@@ -109,7 +111,7 @@ export function jsonLdFor(route, lang) {
         : 'enGo AI智慧中控系統的手機 App：家電控制、情境、設備數據與社區服務，iPhone、iPad 與 Android 皆可用，商店名稱為 enGo智慧管家。',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'TWD' },
       installUrl: ['https://apps.apple.com/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android'],
-      publisher: { '@type': 'Organization', name: '智管家科技股份有限公司', url: BASE },
+      publisher: { '@type': 'Organization', name: LEGAL_NAME, url: BASE },
     })
     // enGo 安購商城: the fifth product line (2026-09-27). Its own site, so it is an
     // OnlineStore entity owned by the company, not a Product sold on this site.
@@ -121,7 +123,7 @@ export function jsonLdFor(route, lang) {
         ? 'Community subscriptions and a neighbourhood marketplace for enGo residents: fresh food, daily essentials and smart-home add-ons, delivered to the community lobby.'
         : '給 enGo 社區住戶的社區訂閱與鄰里市集：生鮮、日用與智慧家居配件，送到社區大廳。',
       areaServed: 'TW', inLanguage: 'zh-Hant',
-      parentOrganization: { '@type': 'Organization', name: '智管家科技股份有限公司', url: BASE },
+      parentOrganization: { '@type': 'Organization', name: LEGAL_NAME, url: BASE },
       sameAs: [`${BASE}${prefix}/product#shop`],
     })
   }

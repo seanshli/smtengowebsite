@@ -3,12 +3,10 @@
     <div class="ap-tile ap-tile-first ap-white nf-tile">
       <div class="ap-wrap ap-wrap-text">
         <h1 class="ap-title">
-          {{ isZh ? '這個頁面不存在。' : 'This page does not exist.' }}
+          {{ tx('這個頁面不存在。', '这个页面不存在。', 'This page does not exist.') }}
         </h1>
         <p class="ap-lead">
-          {{ isZh
-            ? '連結可能已經變更或失效。以下是幾個常去的地方：'
-            : 'The link may have changed or expired. Here are some places to go instead:' }}
+          {{ tx('連結可能已經變更或失效。以下是幾個常去的地方：', '链接可能已经变更或失效。以下是几个常去的地方：', 'The link may have changed or expired. Here are some places to go instead:') }}
         </p>
 
         <div class="ap-links nf-links">
@@ -26,7 +24,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, onMounted, onUnmounted } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { useLocaleText } from '../composables/useLocaleText'
 
 // A Vue SPA behind Vercel's catch-all rewrite cannot return a real 404 status:
 // the platform has already answered 200 with index.html before any JS runs.
@@ -39,8 +37,7 @@ const ROBOTS_ID = 'nf-robots-noindex'
 export default defineComponent({
   name: 'NotFound',
   setup() {
-    const { locale } = useI18n()
-    const isZh = computed(() => locale.value.startsWith('zh'))
+    const { isZh, tx, locale } = useLocaleText()
 
     // English is the one prefixed locale (zh is unprefixed, fr/ja/es reuse the
     // unprefixed routes). Without this the recovery links carried English
@@ -78,7 +75,7 @@ export default defineComponent({
       parked = []
     })
 
-    return { isZh, localePath }
+    return { isZh, tx, localePath }
   }
 })
 </script>

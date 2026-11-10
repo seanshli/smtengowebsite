@@ -528,7 +528,7 @@ export const jaLocale = {
         contactUs: 'お問い合わせ',
         tutorial: 'チュートリアル',
         cases: '導入事例',
-        copyright: 'Copyright © 2024, enGo Technology Co., Ltd. All rights reserved.',
+        copyright: 'Copyright © 2024, Smart enGo Home Technology Corp. All rights reserved.',
         time: '月-金 9:00-18:00',
         phone: '02-27510218',
         customer: 'カスタマーサポート'
@@ -545,6 +545,7 @@ export const jaLocale = {
 
     chatbot: {
         welcome: 'こんにちは！enGoアシスタントです。何かお手伝いできることはありますか？',
+        online: 'オンライン',
         inputPlaceholder: '何でも聞いてください...',
         specs: '製品仕様',
         features: '特長',

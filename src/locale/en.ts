@@ -248,6 +248,7 @@ export const enLocale = {
   contactUsSubtitle2: 'please feel free to contact us.',
   name: 'Name',
   chatbotTitle: 'enGo Assistant',
+  login: 'Log in',
   brandName: 'enGo Smart Home',
   reviewNamePlaceholder: 'Your name',
   reviewCommentPlaceholder: 'Your feedback...',
@@ -490,7 +491,7 @@ export const enLocale = {
     contactUs: 'Contact Us',
     tutorial: 'Tutorial',
     cases: 'Case Sharing',
-    copyright: 'Copyright © 2024, SmtenGo. All rights reserved.',
+    copyright: 'Copyright © 2024, Smart enGo Home Technology Corp. All rights reserved.',
     time: 'Mon-Fri 9:00-18:00',
     phone: '02-27510218',
     customer: 'Customer Service'
@@ -507,6 +508,7 @@ export const enLocale = {
 
   chatbot: {
     welcome: 'Hello! I am the enGo Assistant. How can I help you today?',
+    online: 'Online',
     inputPlaceholder: 'Ask me anything...',
     specs: 'Specs',
     features: 'Features',

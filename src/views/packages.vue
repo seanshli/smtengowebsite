@@ -5,8 +5,8 @@
       <section id="packages" class="pk-tile pk-white package-section">
         <div class="pk-wrap">
           <header class="pk-head">
-            <h1 class="pk-title">{{ $t('product.packages.tag') || '套裝方案' }}</h1>
-            <p class="pk-lead">{{ $t('product.packages.title') || '挑選最適合您的智慧家庭方案' }}</p>
+            <h1 class="pk-title">{{ $t('product.packages.tag') }}</h1>
+            <p class="pk-lead">{{ $t('product.packages.title') }}</p>
           </header>
 
           <div class="package-grid">
@@ -19,21 +19,21 @@
 
               <div class="p-card-body">
                 <div class="spec-group">
-                  <h4>{{ $t('product.packages.functions') || '核心功能' }}</h4>
+                  <h4>{{ $t('product.packages.functions') }}</h4>
                   <ul>
                     <li v-for="f in ((pkg.functions as any)[locale] || pkg.functions['zh'])" :key="f">{{ f }}</li>
                   </ul>
                 </div>
 
                 <div class="spec-group">
-                  <h4>{{ $t('product.packages.scenarios') || '情境控制' }}</h4>
+                  <h4>{{ $t('product.packages.scenarios') }}</h4>
                   <ul>
                     <li v-for="s in ((pkg.scenarios as any)[locale] || pkg.scenarios['zh'])" :key="s">{{ s }}</li>
                   </ul>
                 </div>
 
                 <div class="spec-group">
-                  <h4>{{ $t('product.packages.components') || '套裝組件' }}</h4>
+                  <h4>{{ $t('product.packages.components') }}</h4>
                   <ul>
                     <li v-for="c in ((pkg.components as any)[locale] || pkg.components['zh'])" :key="c">{{ c }}</li>
                   </ul>
@@ -71,7 +71,7 @@
               <div class="catalog-icon">
                 <img src="/assets/file-badge.svg" alt="Catalog" />
               </div>
-              <p class="catalog-hint">{{ $t('product.viewDetails') || '查看所有產品' }}</p>
+              <p class="catalog-hint">{{ $t('product.viewDetails') }}</p>
             </div>
           </div>
         </div>

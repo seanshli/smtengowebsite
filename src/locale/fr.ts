@@ -383,7 +383,7 @@ export const frLocale = {
     contactUs: 'Contactez-nous',
     tutorial: 'Tutoriel',
     cases: 'Partage de cas',
-    copyright: 'Copyright © 2024, enGo Technology Co., Ltd. Tous droits réservés.',
+    copyright: 'Copyright © 2024, Smart enGo Home Technology Corp. Tous droits réservés.',
     time: 'Lun-Ven 9:00-18:00',
     phone: '02-27510218',
     customer: 'Service client'
@@ -400,6 +400,7 @@ export const frLocale = {
 
   chatbot: {
     welcome: 'Bonjour ! Je suis l\'assistant enGo. Comment puis-je vous aider ?',
+    online: 'En ligne',
     inputPlaceholder: 'Posez-moi une question...',
     specs: 'Spécifications',
     features: 'Caractéristiques',

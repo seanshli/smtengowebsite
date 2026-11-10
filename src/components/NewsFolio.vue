@@ -26,7 +26,7 @@
              page's masthead already; repeating them here read as a duplicate. -->
         <figcaption v-if="current && current.image" class="folio-plate-cap">
           <span class="folio-plate-note">
-            {{ locale.startsWith('zh') ? '示意圖' : 'Illustration' }}
+            {{ tx('示意圖', '示意图', 'Illustration') }}
           </span>
         </figcaption>
       </div>
@@ -76,7 +76,7 @@
       <button
         class="folio-btn"
         :disabled="page === 0 || flipping"
-        :aria-label="locale.startsWith('zh') ? '上一頁' : 'Prev'"
+        :aria-label="tx('上一頁', '上一页', 'Prev')"
         @click="prev"
       >
         <span aria-hidden="true">←</span>
@@ -85,7 +85,7 @@
       <button
         class="folio-btn"
         :disabled="page === items.length - 1 || flipping"
-        :aria-label="locale.startsWith('zh') ? '下一頁' : 'Next'"
+        :aria-label="tx('下一頁', '下一页', 'Next')"
         @click="next"
       >
         <span aria-hidden="true">→</span>
@@ -97,6 +97,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, ref, type PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useLocaleText } from '../composables/useLocaleText'
 import gsap from 'gsap'
 
 type NewsLocale = 'zh' | 'zhCN' | 'en' | 'fr' | 'ja' | 'es'
@@ -116,6 +117,7 @@ export default defineComponent({
   },
   setup(props) {
     const { locale } = useI18n()
+    const { tx } = useLocaleText()
     const root = ref<HTMLElement | null>(null)
     const book = ref<HTMLElement | null>(null)
     const pageEls = ref<HTMLElement[]>([])
@@ -133,7 +135,8 @@ export default defineComponent({
       const date = new Date(dateStr)
       const loc = locale.value as NewsLocale
       const dateLocale =
-        loc === 'zh' || loc === 'zhCN' ? 'zh-TW' :
+        loc === 'zh' ? 'zh-TW' :
+        loc === 'zhCN' ? 'zh-CN' :
         loc === 'ja' ? 'ja-JP' :
         loc === 'fr' ? 'fr-FR' :
         loc === 'es' ? 'es-ES' : 'en-US'
@@ -215,7 +218,7 @@ export default defineComponent({
       next()
     }
 
-    return { locale, root, book, pageEls, shadeEls, page, flipping, current, tr, formatDate, next, prev, onPageClick }
+    return { locale, tx, root, book, pageEls, shadeEls, page, flipping, current, tr, formatDate, next, prev, onPageClick }
   }
 })
 </script>

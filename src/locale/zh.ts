@@ -247,6 +247,7 @@ export const zhLocale = {
   // Forms / Misc (Top Level)
   name: '姓名',
   chatbotTitle: 'enGo 小精靈',
+  login: '登入',
   brandName: 'enGo',
   reviewNamePlaceholder: '您的姓名',
   reviewCommentPlaceholder: '您的寶貴意見...',
@@ -324,6 +325,7 @@ export const zhLocale = {
   // Chatbot (Top Level)
   chatbot: {
     welcome: '你好！我是 enGo 助手。有什麼我可以幫您的嗎？',
+    online: '線上',
     inputPlaceholder: '問我任何問題...',
     specs: '規格',
     features: '特色',

@@ -7,9 +7,7 @@
       <div class="ap-wrap ap-center">
         <h1 class="ap-title">{{ $t('ecosystemTitle') }}</h1>
         <p class="ap-lead fade-in">
-          {{ isZh
-            ? '雲端、設備與生活服務，一個平台，串起整個生態。'
-            : 'Cloud, devices, and everyday services, one platform, one connected ecosystem.' }}
+          {{ tx('雲端、設備與生活服務，一個平台，串起整個生態。', '云端、设备与生活服务，一个平台，串起整个生态。', 'Cloud, devices, and everyday services, one platform, one connected ecosystem.') }}
         </p>
       </div>
     </div>
@@ -30,7 +28,7 @@
           </div>
           <figcaption>
             <strong class="eco-cap-brand">enGo</strong>
-            {{ isZh ? '智慧生態系影片' : 'ecosystem film' }}
+            {{ tx('智慧生態系影片', '智慧生态系视频', 'ecosystem film') }}
           </figcaption>
         </figure>
       </div>
@@ -41,31 +39,31 @@
     <div class="ap-tile ap-white">
       <div class="ap-wrap">
         <div class="ap-head ap-center">
-          <h2 class="ap-h2 fade-in">{{ isZh ? '一組帳號，三個入口' : 'One account, three doors' }}</h2>
+          <h2 class="ap-h2 fade-in">{{ tx('一組帳號，三個入口', '一组帐号，三个入口', 'One account, three doors') }}</h2>
         </div>
         <div class="ap-grid ap-grid-3 eco-doors">
           <article class="ap-card eco-door fade-in">
             <div class="eco-media">
               <div class="eco-frame eco-frame-tablet">
-                <img src="/images/screens/01-home-tablet.png" :alt="isZh ? 'enGo 牆掛平板首頁' : 'enGo wall tablet home screen'" width="2000" height="1200" loading="lazy" />
+                <img src="/images/screens/01-home-tablet.png" :alt="tx('enGo 牆掛平板首頁', 'enGo 墙挂平板首页', 'enGo wall tablet home screen')" width="2000" height="1200" loading="lazy" />
               </div>
             </div>
             <div class="eco-door-text">
-              <h3 class="ap-h3">{{ isZh ? 'enGo 牆掛平板' : 'enGo wall tablet' }}</h3>
-              <p class="ap-body">{{ isZh ? '家中的主控台：家電、情境、社區公告與報修、語音操作。' : 'The control hub at home: appliances, scenes, community notices and repairs, voice control.' }}</p>
-              <router-link to="/product" class="ap-link">{{ isZh ? '認識平板' : 'About the tablet' }}</router-link>
+              <h3 class="ap-h3">{{ tx('enGo 牆掛平板', 'enGo 墙挂平板', 'enGo wall tablet') }}</h3>
+              <p class="ap-body">{{ tx('家中的主控台：家電、情境、社區公告與報修、語音操作。', '家中的主控台：家电、情境、社区公告与报修、语音操作。', 'The control hub at home: appliances, scenes, community notices and repairs, voice control.') }}</p>
+              <router-link to="/product" class="ap-link">{{ tx('認識平板', '认识平板', 'About the tablet') }}</router-link>
             </div>
           </article>
           <article class="ap-card eco-door fade-in">
             <div class="eco-media">
               <div class="eco-frame eco-frame-phone">
-                <img src="/images/screens/12-home-iphone.png" :alt="isZh ? 'enGo智慧管家 手機 App 首頁' : 'enGo home app on a phone'" width="800" height="1731" loading="lazy" />
+                <img src="/images/screens/12-home-iphone.png" :alt="tx('enGo智慧管家 手機 App 首頁', 'enGo智慧管家 手机 App 首页', 'enGo home app on a phone')" width="800" height="1731" loading="lazy" />
               </div>
             </div>
             <div class="eco-door-text">
-              <h3 class="ap-h3">{{ isZh ? '手機 App「enGo智慧管家」' : 'The enGo app on your phone' }}</h3>
-              <p class="ap-body">{{ isZh ? '出門在外同一組帳號：家電控制、情境、社區服務、攝影機與庫存，iPhone／iPad 與 Android 免費下載。' : 'The same account when you are out: appliances, scenes, community services, cameras and inventory, free on iPhone/iPad and Android.' }}</p>
-              <router-link to="/product#interfaces" class="ap-link">{{ isZh ? '三種介面' : 'The three interfaces' }}</router-link>
+              <h3 class="ap-h3">{{ tx('手機 App「enGo智慧管家」', '手机 App「enGo智慧管家」', 'The enGo app on your phone') }}</h3>
+              <p class="ap-body">{{ tx('出門在外同一組帳號：家電控制、情境、社區服務、攝影機與庫存，iPhone／iPad 與 Android 免費下載。', '出门在外同一组帐号：家电控制、情境、社区服务、摄影机与库存，iPhone／iPad 与 Android 免费下载。', 'The same account when you are out: appliances, scenes, community services, cameras and inventory, free on iPhone/iPad and Android.') }}</p>
+              <router-link to="/product#interfaces" class="ap-link">{{ tx('三種介面', '三种界面', 'The three interfaces') }}</router-link>
             </div>
           </article>
           <article class="ap-card eco-door eco-door-store fade-in">
@@ -77,8 +75,8 @@
             </div>
             <div class="eco-door-text">
               <h3 class="ap-h3">{{ $t('mallTitle') }}</h3>
-              <p class="ap-body">{{ isZh ? '套裝方案、淨水系統與生活選品，線上選購後由專人安排安裝與服務。' : 'Packages, the water system and everyday products, ordered online and installed and serviced by our team.' }}</p>
-              <a :href="SHOP_URL" target="_blank" rel="noopener" class="ap-link" data-track="ecosystem:store">{{ isZh ? '前往 enGo 安購商城' : 'Open enGo Shop' }}</a>
+              <p class="ap-body">{{ tx('套裝方案、淨水系統與生活選品，線上選購後由專人安排安裝與服務。', '套装方案、净水系统与生活选品，在线选购后由专人安排安装与服务。', 'Packages, the water system and everyday products, ordered online and installed and serviced by our team.') }}</p>
+              <a :href="SHOP_URL" target="_blank" rel="noopener" class="ap-link" data-track="ecosystem:store">{{ tx('前往 enGo 安購商城', '前往 enGo 安购商城', 'Open enGo Shop') }}</a>
             </div>
           </article>
         </div>
@@ -89,13 +87,13 @@
     <div class="ap-tile ap-parchment">
       <div class="ap-wrap">
         <div class="ap-head ap-center">
-          <h2 class="ap-h2 fade-in">{{ isZh ? '五條產品線' : 'Five product lines' }}</h2>
+          <h2 class="ap-h2 fade-in">{{ tx('五條產品線', '五条产品线', 'Five product lines') }}</h2>
         </div>
         <ul class="eco-lines">
           <li v-for="l in lines" :key="l.to" class="fade-in">
             <router-link :to="l.to" class="ap-card eco-line-link">
-              <span class="eco-line-title">{{ isZh ? l.zh : l.en }}</span>
-              <span class="eco-line-body">{{ isZh ? l.zhBody : l.enBody }}</span>
+              <span class="eco-line-title">{{ lt(l) }}</span>
+              <span class="eco-line-body">{{ lt(l, 'Body') }}</span>
             </router-link>
           </li>
         </ul>
@@ -106,7 +104,7 @@
     <div class="ap-tile ap-white">
       <div class="ap-wrap ap-wrap-text">
         <div class="ap-head ap-center">
-          <h2 class="ap-h2 fade-in">{{ isZh ? '合作夥伴' : 'Partners' }}</h2>
+          <h2 class="ap-h2 fade-in">{{ tx('合作夥伴', '合作伙伴', 'Partners') }}</h2>
         </div>
         <ul class="ap-rows eco-partners">
           <li v-for="p in partners" :key="p.zh" class="eco-partner fade-in">
@@ -117,18 +115,18 @@
               rel="noopener"
               class="ap-link eco-partner-name eco-partner-link"
               data-track="ecosystem:partner"
-            >{{ isZh ? p.zh : p.en }}</a>
-            <span v-else class="eco-partner-name">{{ isZh ? p.zh : p.en }}</span>
-            <span class="eco-partner-role">{{ isZh ? p.zhRole : p.enRole }}</span>
+            >{{ lt(p) }}</a>
+            <span v-else class="eco-partner-name">{{ lt(p) }}</span>
+            <span class="eco-partner-role">{{ lt(p, 'Role') }}</span>
           </li>
         </ul>
 
         <div class="ap-links eco-next fade-in">
           <router-link to="/cases" class="ap-link">
-            {{ isZh ? '看實作案例' : 'See the installations' }}
+            {{ tx('看實作案例', '看实作案例', 'See the installations') }}
           </router-link>
           <router-link to="/contact" class="ap-link">
-            {{ isZh ? '洽談合作' : 'Talk to us about partnering' }}
+            {{ tx('洽談合作', '洽谈合作', 'Talk to us about partnering') }}
           </router-link>
         </div>
       </div>
@@ -137,37 +135,36 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { defineComponent } from 'vue'
+import { useLocaleText } from '../composables/useLocaleText'
 import { useScrollReveal } from '../composables/useScrollReveal'
 import { SHOP_URL } from '@/utils/shopUrl'
 
 const LINES = [
-  { to: '/product', zh: 'enGo AI 智慧中控系統', en: 'enGo AI home control', zhBody: '牆掛平板、手機 App 與雲端服務，家與社區同一套系統。', enBody: 'Wall tablet, phone app and cloud service, one system for the home and the community.' },
-  { to: '/product?jump=oxygen', zh: '水維氧 AI 智慧淨水系統', en: 'AI water purification', zhBody: '三道濾心、濾芯壽命與 TDS 監測，在平板與 App 上看得見。', enBody: 'Three-stage filtration with filter life and TDS readings on the tablet and the app.' },
-  { to: '/enviro', zh: '智慧環控', en: 'Environmental control', zhBody: '陽光控溫、空氣淨化監測、智慧水務與廚房安全。', enBody: 'Daylight and temperature, air quality, water and kitchen safety.' },
-  { to: '/packages', zh: '套裝方案', en: 'Packages', zhBody: '基礎、進階、豪華三種組合，依坪數與需求選配。', enBody: 'Three bundles, sized to the home and what it needs.' },
-  { to: '/product#shop', zh: 'enGo 安購商城', en: 'enGo Shop', zhBody: '社區訂閱與鄰里市集，生鮮、日用與智慧家居送到家門口。', enBody: 'Community subscriptions and a neighbourhood marketplace, delivered to your door.' }
+  { to: '/product', zh: 'enGo AI 智慧中控系統', zhCN: 'enGo AI 智慧中控系统', en: 'enGo AI home control', zhBody: '牆掛平板、手機 App 與雲端服務，家與社區同一套系統。', zhCNBody: '墙挂平板、手机 App 与云端服务，家与社区同一套系统。', enBody: 'Wall tablet, phone app and cloud service, one system for the home and the community.' },
+  { to: '/product?jump=oxygen', zh: '水維氧 AI 智慧淨水系統', zhCN: '水维氧 AI 智慧净水系统', en: 'AI water purification', zhBody: '三道濾心、濾芯壽命與 TDS 監測，在平板與 App 上看得見。', zhCNBody: '三道滤心、滤芯寿命与 TDS 监测，在平板与 App 上看得见。', enBody: 'Three-stage filtration with filter life and TDS readings on the tablet and the app.' },
+  { to: '/enviro', zh: '智慧環控', zhCN: '智慧环控', en: 'Environmental control', zhBody: '陽光控溫、空氣淨化監測、智慧水務與廚房安全。', zhCNBody: '阳光控温、空气净化监测、智慧水务与厨房安全。', enBody: 'Daylight and temperature, air quality, water and kitchen safety.' },
+  { to: '/packages', zh: '套裝方案', zhCN: '套装方案', en: 'Packages', zhBody: '基礎、進階、豪華三種組合，依坪數與需求選配。', zhCNBody: '基础、高级、豪华三种组合，依坪数与需求选配。', enBody: 'Three bundles, sized to the home and what it needs.' },
+  { to: '/product#shop', zh: 'enGo 安購商城', zhCN: 'enGo 安购商城', en: 'enGo Shop', zhBody: '社區訂閱與鄰里市集，生鮮、日用與智慧家居送到家門口。', zhCNBody: '社区订阅与邻里市集，生鲜、日用与智慧家居送到家门口。', enBody: 'Community subscriptions and a neighbourhood marketplace, delivered to your door.' }
 ]
 
 // Same list the chatbot and FAQ 27 already give out; no component vendors.
 // url only where the site is known; the rest stay plain text.
-const PARTNERS: { zh: string; en: string; zhRole: string; enRole: string; url?: string }[] = [
-  { zh: '大雅全屋裝修', en: 'Daya Whole-Home Renovation', url: 'https://www.tayakitchen.com.tw/', zhRole: '台中，全屋裝修與建案智慧化，設有展示間', enRole: 'Taichung, whole-home renovation and smart developments, with a showroom' },
-  { zh: '撰美室內裝修', en: 'Zhuanmei Interior Design', zhRole: '台北，全室裝修與系統櫥櫃，智慧家居展示空間', enRole: 'Taipei, interiors and system cabinetry, smart-home showroom' },
-  { zh: '米多力 MEDOLE', en: 'MEDOLE', url: 'https://www.medole.com.tw/', zhRole: '吊隱式新風除濕機與 3合1 智慧空氣平衡系統', enRole: 'Ceiling-concealed fresh-air dehumidifiers and the 3-in-1 air balance system' },
-  { zh: '麗寶生技', en: 'Libo Biotech', zhRole: '智能富氧艙優化合作', enRole: 'Smart oxygen-chamber optimisation' },
-  { zh: '合野木業', en: 'Heye Woodworks', url: 'https://www.he-ye.com/', zhRole: '智慧功能櫃，北部展示間', enRole: 'Smart functional cabinetry, showroom in northern Taiwan' },
-  { zh: '嘉義達光電、金毅泰節能科技', en: 'Chia-Yi Da Optoelectronics and Jin Yi Tai Energy', zhRole: '能源與節能方案', enRole: 'Energy and energy-saving solutions' }
+const PARTNERS: { zh: string; zhCN: string; en: string; zhRole: string; zhCNRole: string; enRole: string; url?: string }[] = [
+  { zh: '大雅全屋裝修', zhCN: '大雅全屋装修', en: 'Daya Whole-Home Renovation', url: 'https://www.tayakitchen.com.tw/', zhRole: '台中，全屋裝修與建案智慧化，設有展示間', zhCNRole: '台中，全屋装修与建案智慧化，设有展示间', enRole: 'Taichung, whole-home renovation and smart developments, with a showroom' },
+  { zh: '撰美室內裝修', zhCN: '撰美室内装修', en: 'Zhuanmei Interior Design', zhRole: '台北，全室裝修與系統櫥櫃，智慧家居展示空間', zhCNRole: '台北，全室装修与系统橱柜，智慧家居展示空间', enRole: 'Taipei, interiors and system cabinetry, smart-home showroom' },
+  { zh: '米多力 MEDOLE', zhCN: '米多力 MEDOLE', en: 'MEDOLE', url: 'https://www.medole.com.tw/', zhRole: '吊隱式新風除濕機與 3合1 智慧空氣平衡系統', zhCNRole: '吊隐式新风除湿机与 3合1 智慧空气平衡系统', enRole: 'Ceiling-concealed fresh-air dehumidifiers and the 3-in-1 air balance system' },
+  { zh: '麗寶生技', zhCN: '丽宝生技', en: 'Libo Biotech', zhRole: '智能富氧艙優化合作', zhCNRole: '智能富氧舱优化合作', enRole: 'Smart oxygen-chamber optimisation' },
+  { zh: '合野木業', zhCN: '合野木业', en: 'Heye Woodworks', url: 'https://www.he-ye.com/', zhRole: '智慧功能櫃，北部展示間', zhCNRole: '智慧功能柜，北部展示间', enRole: 'Smart functional cabinetry, showroom in northern Taiwan' },
+  { zh: '嘉義達光電、金毅泰節能科技', zhCN: '嘉义达光电、金毅泰节能科技', en: 'Chia-Yi Da Optoelectronics and Jin Yi Tai Energy', zhRole: '能源與節能方案', zhCNRole: '能源与节能方案', enRole: 'Energy and energy-saving solutions' }
 ]
 
 export default defineComponent({
   name: 'Ecosystem',
   setup() {
-    const { locale } = useI18n()
+    const { tx, lt } = useLocaleText()
     useScrollReveal('.fade-in', 'visible')
-    const isZh = computed(() => locale.value.startsWith('zh'))
-    return { isZh, SHOP_URL, lines: LINES, partners: PARTNERS }
+    return { tx, lt, SHOP_URL, lines: LINES, partners: PARTNERS }
   }
 })
 </script>

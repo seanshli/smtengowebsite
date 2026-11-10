@@ -146,7 +146,7 @@
             <article v-for="m in manuals" :id="'manual-' + m.id" :key="m.id" class="manual-card">
               <h3 class="manual-card-title">{{ pick(m.title) }}</h3>
               <p class="manual-card-desc">{{ pick(m.audience) }}</p>
-              <p v-if="m.docMeta" class="manual-card-meta">{{ m.docMeta }}</p>
+              <p v-if="manualMeta(m.docMeta)" class="manual-card-meta">{{ manualMeta(m.docMeta) }}</p>
               <div class="manual-card-links">
                 <a :href="m.html" target="_blank" rel="noopener" class="howto-pill" @click="recordManualOpen(m.id, 'html')">{{ manualText('read') }}</a>
                 <a :href="m.pdf" target="_blank" rel="noopener" class="howto-pill" @click="recordManualOpen(m.id, 'pdf')">{{ manualText('pdf') }}</a>
@@ -224,7 +224,7 @@
             <transition name="faq-expand">
               <div v-if="openFaqId === faq.id" class="faq-body">
                 <p class="answer" @click="handleLinkClick" v-html="'A: ' + renderStepContent((faq.answer as any)[locale] || (faq.answer as any)['zh'])"></p>
-                <span class="faq-helpful" v-if="faqClicks[faq.id]">{{ faqClicks[faq.id] }} {{ locale === 'zh' || locale === 'zhCN' ? '人瀏覽' : locale === 'ja' ? '回閲覧' : locale === 'fr' ? 'vues' : locale === 'es' ? 'vistas' : 'views' }}</span>
+                <span class="faq-helpful" v-if="faqClicks[faq.id]">{{ faqClicks[faq.id] }} {{ locale === 'zh' ? '人瀏覽' : locale === 'zhCN' ? '人浏览' : locale === 'ja' ? '回閲覧' : locale === 'fr' ? 'vues' : locale === 'es' ? 'vistas' : 'views' }}</span>
               </div>
             </transition>
           </div>
@@ -248,12 +248,12 @@
             class="video-card"
           >
             <div class="thumbnail-wrapper">
-              <img :src="getYoutubeThumbnail(video.url)" :alt="video.title" class="thumbnail" loading="lazy" />
+              <img :src="getYoutubeThumbnail(video.url)" :alt="videoTitle(video, locale)" class="thumbnail" loading="lazy" />
               <div class="play-overlay">
                 <i class="icon-play"></i>
               </div>
             </div>
-            <span class="video-title">{{ video.title }}</span>
+            <span class="video-title">{{ videoTitle(video, locale) }}</span>
           </a>
         </div>
       </div>
@@ -275,6 +275,7 @@ import { useRouter, useRoute } from 'vue-router'
 
 const tutorials = ref(tutorialsData)
 const faqs = ref(faqsData as any[])
+import { videoTitle } from '@/utils/videoTitle'
 const youtubeVideos = ref(knowledgeBaseData.youtube)
 
 // ── 操作指南（howto.json）
@@ -377,6 +378,15 @@ const MANUAL_TEXT: Record<string, Record<string, string>> = {
   },
 }
 const manualText = (k: string) => MANUAL_TEXT[k][locale.value] ?? MANUAL_TEXT[k].zh
+// The manual's own document name (docMeta) is Chinese; show only version and month, in the visitor's language.
+const manualMeta = (meta?: string | null): string => {
+  const m = /v(\d+\.\d+) · (\d{4}) 年 (\d{1,2}) 月/.exec(meta ?? '')
+  if (!m) return ''
+  const [, v, y, mo] = m
+  if (locale.value === 'zh' || locale.value === 'zhCN') return `v${v} · ${y} 年 ${mo} 月`
+  const tag = ({ ja: 'ja-JP', fr: 'fr-FR', es: 'es-ES' } as Record<string, string>)[locale.value] ?? 'en-US'
+  return `v${v} · ${new Date(Number(y), Number(mo) - 1, 1).toLocaleDateString(tag, { year: 'numeric', month: 'long' })}`
+}
 const recordManualOpen = (id: string, via: 'html' | 'pdf' | 'search') => {
   trackEvent('manual_open', { manual: id, via, locale: locale.value })
 }

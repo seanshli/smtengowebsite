@@ -247,6 +247,7 @@ export const zhCNLocale = {
   // Forms / Misc (Top Level)
   name: '姓名',
   chatbotTitle: 'enGo 小精灵',
+  login: '登录',
   brandName: 'enGo',
   reviewNamePlaceholder: '您的姓名',
   reviewCommentPlaceholder: '您的宝贵意见...',
@@ -324,6 +325,7 @@ export const zhCNLocale = {
   // Chatbot (Top Level)
   chatbot: {
     welcome: '你好！我是 enGo 助手。有什么我可以帮您的吗？',
+    online: '在线',
     inputPlaceholder: '问我任何问题...',
     specs: '规格',
     features: '特色',
@@ -570,7 +572,7 @@ export const zhCNLocale = {
     contactUs: '联络我们',
     tutorial: '使用教学',
     cases: '案例分享',
-    copyright: 'Copyright © 2024， 智管家科技股份有限公司 着作权所有，版权所有。',
+    copyright: 'Copyright © 2024， 智管家科技股份有限公司 著作权所有，版权所有。',
     time: '周一至周五 9:00-18:00',
     phone: '02-27510218',
     customer: '专人客服'

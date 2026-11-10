@@ -3,30 +3,36 @@
         "id": 5,
         "title": {
             "zh": "新北新莊 兩房兩廳一衛",
+            "zhCN": "新北新庄 两房两厅一卫",
             "en": "New Taipei Xinzhuang 2BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "新北",
+            "zhCN": "新北",
             "en": "New Taipei"
         },
         "description": {
             "zh": "兩房兩廳一衛",
+            "zhCN": "两房两厅一卫",
             "en": "2 Bedrooms, 2 Living Rooms, 1 Bathroom"
         },
         "image": "/images/cases/5/xinzhuang_new.png",
         "details": {
             "intro": {
                 "zh": "這是一間兩房兩廳的格局，屋主是一位工程師，裝潢前就很清楚要打造全屋智能家居。希望針對燈光、窗簾、空調去做控制。屋主需求是所有燈控、窗簾、空調可以透過手機控制、聲控及遠端控制，並且能夠在玄關處的開關上設定一鍵啟動離家模式。",
+                "zhCN": "这是一间两房两厅的格局，屋主是一位工程师，装潢前就很清楚要打造全屋智能家居。希望针对灯光、窗帘、空调去做控制。屋主需求是所有灯控、窗帘、空调可以透过手机控制、声控及远程控制，并且能够在玄关处的开关上设置一键启动离家模式。",
                 "en": "This is a 2-bedroom, 2-living room layout. The owner, an engineer, planned for a full smart home setup before renovation. Key requirements included control over lighting, curtains, and AC via app, voice, and remote.",
                 "fr": "Il s'agit d'un agencement de 2 chambres et 2 salons. Le propriétaire, un ingénieur, a planifié une configuration complète de maison intelligente avant la rénovation. Les exigences clés comprenaient le contrôle de l'éclairage, des rideaux et de la climatisation via l'application, la voix et la télécommande.",
                 "ja": "これは2ベッドルーム、2リビングルームのレイアウトです。オーナーはエンジニアで、リノベーション前にフルスマートホームのセットアップを計画していました。主な要件には、アプリ、音声、リモートによる照明、カーテン、エアコンの制御が含まれていました。"
@@ -35,12 +41,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "新北新莊",
+                        "zhCN": "新北新庄",
                         "en": "Xinzhuang, New Taipei",
                         "fr": "Xinzhuang, New Taipei",
                         "ja": "Xinzhuang, New Taipei"
@@ -49,12 +57,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "約 25 坪",
+                        "zhCN": "约 25 坪",
                         "en": "Approx. 25 Pings",
                         "fr": "Approx. 25 Pings",
                         "ja": "Approx. 25 Pings"
@@ -63,12 +73,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "三房兩廳",
+                        "zhCN": "三房两厅",
                         "en": "3 Bedrooms, 2 Living Rooms",
                         "fr": "3 Bedrooms, 2 Living Rooms",
                         "ja": "3 Bedrooms, 2 Living Rooms"
@@ -77,12 +89,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024.10",
+                        "zhCN": "2024.10",
                         "en": "Oct 2024",
                         "fr": "Oct 2024",
                         "ja": "Oct 2024"
@@ -93,6 +107,10 @@
                 "zh": [
                     "燈光、窗簾、空調皆需可透過手機、聲控及遠端控制。",
                     "玄關處設定「一鍵離家模式」，關閉所有燈光、空調、窗簾。"
+                ],
+                "zhCN": [
+                    "灯光、窗帘、空调皆需可透过手机、声控及远程控制。",
+                    "玄关处设置「一键离家模式」，关闭所有灯光、空调、窗帘。"
                 ],
                 "en": [
                     "Full control of lights, curtains, and AC via App, Voice, and Remote.",
@@ -109,6 +127,7 @@
             },
             "solution": {
                 "zh": "透過 enGo 整合主機，我們實現了全屋設備的連動與自動化，設備也可分享至 Apple HomeKit。特別針對影音娛樂需求，配置了電視影音同步燈條，並設定了多種情境模式（離家、回家、劇院、睡眠、起床），滿足屋主對科技生活的所有想像。",
+                "zhCN": "透过 enGo 集成主机，我们实现了全屋设备的连动与自动化，设备也可分享至 Apple HomeKit。特别针对影音娱乐需求，配置了电视影音同步灯条，并设置了多种情境模式（离家、回家、剧院、睡眠、起床），满足屋主对科技生活的所有想像。",
                 "en": "Using the enGo central hub, we automated the entire home, and devices can also be shared to Apple HomeKit. We installed TV-sync light strips for entertainment and configured multiple scenes (Away, Home, Theater, Sleep, Wake) to fulfill the owner's tech-savvy lifestyle.",
                 "fr": "Grâce au hub central enGo, nous avons automatisé toute la maison ; les appareils peuvent aussi être partagés vers Apple HomeKit. Nous avons installé des bandes lumineuses synchronisées à la télévision pour le divertissement et configuré plusieurs scènes (Absent, Maison, Théâtre, Sommeil, Réveil) pour répondre au mode de vie technophile du propriétaire.",
                 "ja": "enGo のセントラルハブで家全体を自動化し、デバイスは Apple HomeKit へ共有することもできます。エンターテインメント用にテレビ同期ライトストリップを設置し、複数のシーン（外出、帰宅、シアター、睡眠、起床）を設定して、オーナーのテクノロジー志向のライフスタイルを実現しました。"
@@ -120,6 +139,13 @@
                     "電動窗簾（2 組）+ 手動窗簾（1 組）",
                     "電視影音同步燈條",
                     "整合主機一台"
+                ],
+                "zhCN": [
+                    "全屋智能开关（12 个）",
+                    "全屋空调控制（4 台）",
+                    "电动窗帘（2 组）+ 手动窗帘（1 组）",
+                    "电视影音同步灯条",
+                    "集成主机一台"
                 ],
                 "en": [
                     "Smart Switches (12 units)",
@@ -150,6 +176,12 @@
                     "電視影音同步燈條設定與整合",
                     "網路規劃與設定"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "情境设置：离家、回家、剧院、睡觉、起床模式",
+                    "电视影音同步灯条设置与集成",
+                    "网络规划与设置"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Scene Setup: Away, Home, Theater, Sleep, Wake",
@@ -178,6 +210,15 @@
                     "床頭夜燈開啟時自動進入睡前模式",
                     "空調定時關閉 / 30度以上自動開啟",
                     "漏水偵測"
+                ],
+                "zhCN": [
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制",
+                    "一键离家：全屋关灯/关空调/关窗廉",
+                    "一键回家：打开公区灯光/窗帘/冷气",
+                    "睡觉/起床模式：自动开关灯与窗帘",
+                    "床头夜灯打开时自动进入睡前模式",
+                    "空调定时关闭 / 30度以上自动打开",
+                    "漏水侦测"
                 ],
                 "en": [
                     "Shared devices can be controlled by Siri through Apple's Home app",
@@ -219,30 +260,36 @@
         "id": 6,
         "title": {
             "zh": "新北永和 設計師智能展示間",
+            "zhCN": "新北永和 设计师智能展示间",
             "en": "New Taipei Yonghe Designer Smart Showroom"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "新北",
+            "zhCN": "新北",
             "en": "New Taipei"
         },
         "description": {
             "zh": "智能展示間",
+            "zhCN": "智能展示间",
             "en": "Smart Showroom"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一間智能展示間，屋主是一位室內設計師，裝潢前就很清楚要打造智能展示間。屋主需求是針對書房的燈控系統進行改善，搭配智能燈具切換不同模式，如：專注模式、工作模式等。",
+                "zhCN": "这是一间智能展示间，屋主是一位室内设计师，装潢前就很清楚要打造智能展示间。屋主需求是针对书房的灯控系统进行改善，搭配智能灯具切换不同模式，如：专注模式、工作模式等。",
                 "en": "This is a smart showroom project. The owner, an interior designer, wanted a smart showroom from the start. The focus was on improving the lighting control system in the study, using smart lights to switch between modes like Focus Mode and Work Mode.",
                 "fr": "This is a smart showroom project. The owner, an interior designer, wanted a smart showroom from the start. The focus was on improving the lighting control system in the study, using smart lights to switch between modes like Focus Mode and Work Mode.",
                 "ja": "This is a smart showroom project. The owner, an interior designer, wanted a smart showroom from the start. The focus was on improving the lighting control system in the study, using smart lights to switch between modes like Focus Mode and Work Mode."
@@ -251,12 +298,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "新北市永和",
+                        "zhCN": "新北市永和",
                         "en": "Yonghe, New Taipei",
                         "fr": "Yonghe, New Taipei",
                         "ja": "Yonghe, New Taipei"
@@ -265,12 +314,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -279,12 +330,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "書房改善 (智能展示間)",
+                        "zhCN": "书房改善 (智能展示间)",
                         "en": "Study Room Renovation",
                         "fr": "Study Room Renovation",
                         "ja": "Study Room Renovation"
@@ -293,12 +346,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2025.04",
+                        "zhCN": "2025.04",
                         "en": "Apr 2025",
                         "fr": "Apr 2025",
                         "ja": "Apr 2025"
@@ -312,6 +367,13 @@
                     "雙色溫調光調色崁燈",
                     "筒燈",
                     "網關"
+                ],
+                "zhCN": [
+                    "情境开关（2 个）",
+                    "COB双色温灯调",
+                    "双色温调光调色崁灯",
+                    "筒灯",
+                    "网关"
                 ],
                 "en": [
                     "Scene Switch (2 units)",
@@ -338,6 +400,11 @@
                     "軟體配對、設定",
                     "情境設定"
                 ],
+                "zhCN": [
+                    "硬件施工",
+                    "软件配对、设置",
+                    "情境设置"
+                ],
                 "en": [
                     "Hardware Installation",
                     "Software Pairing & Setup",
@@ -359,6 +426,11 @@
                     "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制",
                     "一鍵啟動情境控制：離家、回家、睡覺、起床、劇院",
                     "漏水偵測"
+                ],
+                "zhCN": [
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制",
+                    "一键启动情境控制：离家、回家、睡觉、起床、剧院",
+                    "漏水侦测"
                 ],
                 "en": [
                     "Shared devices can be controlled by Siri through Apple's Home app",
@@ -391,31 +463,37 @@
         "id": 7,
         "title": {
             "zh": "台北文山 三房兩廳兩衛",
+            "zhCN": "台北文山 三房两厅两卫",
             "en": "Taipei Wenshan 3BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台北",
+            "zhCN": "台北",
             "en": "Taipei"
         },
         "description": {
             "zh": "三房兩廳兩衛",
+            "zhCN": "三房两厅两卫",
             "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於台北的三房兩廳兩衛及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
-                "en": "A full-house smart integration project for a 三房兩廳兩衛 in 台北. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
+                "zhCN": "这是一个位于台北的三房两厅两卫及全屋智能集成案。屋主生活繁忙，希望能透过自动化提升生活品质，特别是灯光与传感器的连动。",
+                "en": "A full-house smart integration project for a 3-bedroom, 2-living-room, 2-bathroom home in Taipei. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
                 "fr": "Un projet d'intégration intelligente pour une 三房兩廳兩衛 à 台北. Le propriétaire souhaitait améliorer sa qualité de vie grâce à l'automatisation.",
                 "ja": "台北にある三房兩廳兩衛のフルハウス・スマート統合プロジェクト。オーナーは自動化、特に照明とセンサーの連動を通じて生活の質を向上させたいと考えていました。"
             },
@@ -423,23 +501,27 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台北",
-                        "en": "台北",
+                        "zhCN": "台北",
+                        "en": "Taipei",
                         "ja": "台北"
                     }
                 },
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "ja": "未定"
                     }
@@ -447,23 +529,27 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "三房兩廳兩衛",
-                        "en": "三房兩廳兩衛",
+                        "zhCN": "三房两厅两卫",
+                        "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms",
                         "ja": "三房兩廳兩衛"
                     }
                 },
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024",
+                        "zhCN": "2024",
                         "en": "2024",
                         "ja": "2024"
                     }
@@ -475,6 +561,12 @@
                     "環境溫濕度自動調節",
                     "語音聲控整合",
                     "家中沒人時自動關閉不必要電器"
+                ],
+                "zhCN": [
+                    "全屋灯光智慧控制",
+                    "环境温湿度自动调节",
+                    "语音声控集成",
+                    "家中没人时自动关闭不必要电器"
                 ],
                 "en": [
                     "Full house smart lighting control",
@@ -491,6 +583,7 @@
             },
             "solution": {
                 "zh": "透過佈署中樞網關與全屋智能開關，實現多樣的情境模式。並結合多功能感測器，讓燈光隨人體活動自動開關，空調隨溫度自動調整。",
+                "zhCN": "透过布署中枢网关与全屋智能开关，实现多样的情境模式。并结合多功能传感器，让灯光随人体活动自动开关，空调随温度自动调整。",
                 "en": "Deployed central gateway and smart switches for various scene modes. Used multi-sensors for occupancy-based lighting and temperature-based AC control.",
                 "ja": "セントラルゲートウェイとスマートスイッチを配置し、多様なシーンモードを実現。多機能センサーを組み合わせることで、人の動きに合わせた照明の自動開閉や、温度に合わせたエアコンの自動調整を可能にしました。"
             },
@@ -501,6 +594,13 @@
                     "多功能人體感測器",
                     "溫濕度感測器",
                     "智慧空調控制器"
+                ],
+                "zhCN": [
+                    "中枢网关",
+                    "智能开关 (10-15个)",
+                    "多功能人体传感器",
+                    "温湿度传感器",
+                    "智慧空调控制器"
                 ],
                 "en": [
                     "Central Gateway",
@@ -523,6 +623,11 @@
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化场景设置 (回家/离家/剧院)",
+                    "定时器与逻辑触发分析"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
@@ -541,6 +646,13 @@
                     "動態感應自動點燈",
                     "節能效率監測",
                     "漏水與安全警報"
+                ],
+                "zhCN": [
+                    "跨平台 App 控制",
+                    "一键离家模式",
+                    "动态感应自动点灯",
+                    "节能效率监测",
+                    "漏水与安全警报"
                 ],
                 "en": [
                     "Cross-platform App control",
@@ -567,30 +679,36 @@
         "id": 8,
         "title": {
             "zh": "台北南港 Tain",
+            "zhCN": "台北南港 Tain",
             "en": "Taipei Nangang Tain"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台北",
+            "zhCN": "台北",
             "en": "Taipei"
         },
         "description": {
             "zh": "台北南港 Tain",
+            "zhCN": "台北南港 Tain",
             "en": "Taipei Nangang Tain"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "台北南港 Tain",
+                "zhCN": "台北南港 Tain",
                 "en": "Taipei Nangang Tain",
                 "fr": "Taipei Nangang Tain",
                 "ja": "Taipei Nangang Tain"
@@ -599,12 +717,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台北",
+                        "zhCN": "台北",
                         "en": "Taipei",
                         "fr": "Taipei",
                         "ja": "Taipei"
@@ -613,12 +733,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -627,12 +749,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -641,12 +765,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -660,6 +786,13 @@
                     "窗簾自動化控制",
                     "空調智慧控制",
                     "智慧家庭主機"
+                ],
+                "zhCN": [
+                    "智能开关系统",
+                    "全屋灯光控制",
+                    "窗帘自动化控制",
+                    "空调智慧控制",
+                    "智慧家庭主机"
                 ],
                 "en": [
                     "Smart Switch System",
@@ -690,6 +823,12 @@
                     "作息排程控制",
                     "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化情境设置 (离家/回家)",
+                    "作息调度控制",
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automated Scenes (Away/Home)",
@@ -715,6 +854,12 @@
                     "GPS 定位自動觸發離家/返家情境",
                     "感測器自動化 (人體感應、溫濕度)",
                     "一鍵執行多種設備連動"
+                ],
+                "zhCN": [
+                    "随时随地透过手机 App 控制家中设备",
+                    "GPS 定位自动触发离家/返家情境",
+                    "传感器自动化 (人体感应、温湿度)",
+                    "一键运行多种设备连动"
                 ],
                 "en": [
                     "Control devices via App from anywhere",
@@ -748,30 +893,36 @@
         "id": 9,
         "title": {
             "zh": "台北大安 一房兩廳一衛",
+            "zhCN": "台北大安 一房两厅一卫",
             "en": "Taipei Da'an 1BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台北",
+            "zhCN": "台北",
             "en": "Taipei"
         },
         "description": {
             "zh": "一房兩廳一衛",
+            "zhCN": "一房两厅一卫",
             "en": "1 Bedroom, 2 Living Rooms, 1 Bathroom"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "一房兩廳一衛",
+                "zhCN": "一房两厅一卫",
                 "en": "1 Bedroom, 2 Living Rooms, 1 Bathroom",
                 "fr": "1 Bedroom, 2 Living Rooms, 1 Bathroom",
                 "ja": "1 Bedroom, 2 Living Rooms, 1 Bathroom"
@@ -780,12 +931,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台北",
+                        "zhCN": "台北",
                         "en": "Taipei",
                         "fr": "Taipei",
                         "ja": "Taipei"
@@ -794,12 +947,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -808,12 +963,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "1房2廳1衛",
+                        "zhCN": "1房2厅1卫",
                         "en": "1 Bedrooms, 2 Living Rooms, 1 Bathrooms",
                         "fr": "1 Bedrooms, 2 Living Rooms, 1 Bathrooms",
                         "ja": "1 Bedrooms, 2 Living Rooms, 1 Bathrooms"
@@ -822,12 +979,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -841,6 +1000,13 @@
                     "窗簾自動化控制",
                     "空調智慧控制",
                     "智慧家庭主機"
+                ],
+                "zhCN": [
+                    "智能开关系统",
+                    "全屋灯光控制",
+                    "窗帘自动化控制",
+                    "空调智慧控制",
+                    "智慧家庭主机"
                 ],
                 "en": [
                     "Smart Switch System",
@@ -871,6 +1037,12 @@
                     "作息排程控制",
                     "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化情境设置 (离家/回家)",
+                    "作息调度控制",
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automated Scenes (Away/Home)",
@@ -896,6 +1068,12 @@
                     "GPS 定位自動觸發離家/返家情境",
                     "感測器自動化 (人體感應、溫濕度)",
                     "一鍵執行多種設備連動"
+                ],
+                "zhCN": [
+                    "随时随地透过手机 App 控制家中设备",
+                    "GPS 定位自动触发离家/返家情境",
+                    "传感器自动化 (人体感应、温湿度)",
+                    "一键运行多种设备连动"
                 ],
                 "en": [
                     "Control devices via App from anywhere",
@@ -939,31 +1117,37 @@
         "id": 10,
         "title": {
             "zh": "台北文山 兩房兩廳兩衛",
+            "zhCN": "台北文山 两房两厅两卫",
             "en": "Taipei Wenshan 2BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台北",
+            "zhCN": "台北",
             "en": "Taipei"
         },
         "description": {
             "zh": "兩房兩廳兩衛",
+            "zhCN": "两房两厅两卫",
             "en": "2 Bedrooms, 2 Living Rooms, 2 Bathrooms"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於台北的兩房兩廳兩衛及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
-                "en": "A full-house smart integration project for a 兩房兩廳兩衛 in 台北. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
+                "zhCN": "这是一个位于台北的两房两厅两卫及全屋智能集成案。屋主生活繁忙，希望能透过自动化提升生活品质，特别是灯光与传感器的连动。",
+                "en": "A full-house smart integration project for a 2-bedroom, 2-living-room, 2-bathroom home in Taipei. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
                 "fr": "Un projet d'intégration intelligente pour une 兩房兩廳兩衛 à 台北. Le propriétaire souhaitait améliorer sa qualité de vie grâce à l'automatisation.",
                 "ja": "台北にある兩房兩廳兩衛のフルハウス・スマート統合プロジェクト。オーナーは自動化、特に照明とセンサーの連動を通じて生活の質を向上させたいと考えていました。"
             },
@@ -971,23 +1155,27 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台北",
-                        "en": "台北",
+                        "zhCN": "台北",
+                        "en": "Taipei",
                         "ja": "台北"
                     }
                 },
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "ja": "未定"
                     }
@@ -995,23 +1183,27 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "兩房兩廳兩衛",
-                        "en": "兩房兩廳兩衛",
+                        "zhCN": "两房两厅两卫",
+                        "en": "2 Bedrooms, 2 Living Rooms, 2 Bathrooms",
                         "ja": "兩房兩廳兩衛"
                     }
                 },
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024",
+                        "zhCN": "2024",
                         "en": "2024",
                         "ja": "2024"
                     }
@@ -1023,6 +1215,12 @@
                     "環境溫濕度自動調節",
                     "語音聲控整合",
                     "家中沒人時自動關閉不必要電器"
+                ],
+                "zhCN": [
+                    "全屋灯光智慧控制",
+                    "环境温湿度自动调节",
+                    "语音声控集成",
+                    "家中没人时自动关闭不必要电器"
                 ],
                 "en": [
                     "Full house smart lighting control",
@@ -1039,6 +1237,7 @@
             },
             "solution": {
                 "zh": "透過佈署中樞網關與全屋智能開關，實現多樣的情境模式。並結合多功能感測器，讓燈光隨人體活動自動開關，空調隨溫度自動調整。",
+                "zhCN": "透过布署中枢网关与全屋智能开关，实现多样的情境模式。并结合多功能传感器，让灯光随人体活动自动开关，空调随温度自动调整。",
                 "en": "Deployed central gateway and smart switches for various scene modes. Used multi-sensors for occupancy-based lighting and temperature-based AC control.",
                 "ja": "セントラルゲートウェイとスマートスイッチを配置し、多様なシーンモードを実現。多機能センサーを組み合わせることで、人の動きに合わせた照明の自動開閉や、温度に合わせたエアコンの自動調整を可能にしました。"
             },
@@ -1049,6 +1248,13 @@
                     "多功能人體感測器",
                     "溫濕度感測器",
                     "智慧空調控制器"
+                ],
+                "zhCN": [
+                    "中枢网关",
+                    "智能开关 (10-15个)",
+                    "多功能人体传感器",
+                    "温湿度传感器",
+                    "智慧空调控制器"
                 ],
                 "en": [
                     "Central Gateway",
@@ -1071,6 +1277,11 @@
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化场景设置 (回家/离家/剧院)",
+                    "定时器与逻辑触发分析"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
@@ -1089,6 +1300,13 @@
                     "動態感應自動點燈",
                     "節能效率監測",
                     "漏水與安全警報"
+                ],
+                "zhCN": [
+                    "跨平台 App 控制",
+                    "一键离家模式",
+                    "动态感应自动点灯",
+                    "节能效率监测",
+                    "漏水与安全警报"
                 ],
                 "en": [
                     "Cross-platform App control",
@@ -1111,31 +1329,37 @@
         "id": 11,
         "title": {
             "zh": "台大大同 兩房兩廳一衛",
+            "zhCN": "台大大同 两房两厅一卫",
             "en": "NTU 2BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台北",
+            "zhCN": "台北",
             "en": "Taipei"
         },
         "description": {
             "zh": "兩房兩廳一衛",
+            "zhCN": "两房两厅一卫",
             "en": "2 Bedrooms, 2 Living Rooms, 1 Bathroom"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於台大的兩房兩廳一衛及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
-                "en": "A full-house smart integration project for a 兩房兩廳一衛 in 台大. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
+                "zhCN": "这是一个位于台大的两房两厅一卫及全屋智能集成案。屋主生活繁忙，希望能透过自动化提升生活品质，特别是灯光与传感器的连动。",
+                "en": "A full-house smart integration project for a 2-bedroom, 2-living-room, 1-bathroom home near National Taiwan University. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
                 "fr": "Un projet d'intégration intelligente pour une 兩房兩廳一衛 à 台大. Le propriétaire souhaitait améliorer sa qualité de vie grâce à l'automatisation.",
                 "ja": "台大にある兩房兩廳一衛のフルハウス・スマート統合プロジェクト。オーナーは自動化、特に照明とセンサーの連動を通じて生活の質を向上させたいと考えていました。"
             },
@@ -1143,23 +1367,27 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台大",
-                        "en": "台大",
+                        "zhCN": "台大",
+                        "en": "National Taiwan University area",
                         "ja": "台大"
                     }
                 },
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "ja": "未定"
                     }
@@ -1167,23 +1395,27 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "兩房兩廳一衛",
-                        "en": "兩房兩廳一衛",
+                        "zhCN": "两房两厅一卫",
+                        "en": "2 Bedrooms, 2 Living Rooms, 1 Bathroom",
                         "ja": "兩房兩廳一衛"
                     }
                 },
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024",
+                        "zhCN": "2024",
                         "en": "2024",
                         "ja": "2024"
                     }
@@ -1195,6 +1427,12 @@
                     "環境溫濕度自動調節",
                     "語音聲控整合",
                     "家中沒人時自動關閉不必要電器"
+                ],
+                "zhCN": [
+                    "全屋灯光智慧控制",
+                    "环境温湿度自动调节",
+                    "语音声控集成",
+                    "家中没人时自动关闭不必要电器"
                 ],
                 "en": [
                     "Full house smart lighting control",
@@ -1211,6 +1449,7 @@
             },
             "solution": {
                 "zh": "透過佈署中樞網關與全屋智能開關，實現多樣的情境模式。並結合多功能感測器，讓燈光隨人體活動自動開關，空調隨溫度自動調整。",
+                "zhCN": "透过布署中枢网关与全屋智能开关，实现多样的情境模式。并结合多功能传感器，让灯光随人体活动自动开关，空调随温度自动调整。",
                 "en": "Deployed central gateway and smart switches for various scene modes. Used multi-sensors for occupancy-based lighting and temperature-based AC control.",
                 "ja": "セントラルゲートウェイとスマートスイッチを配置し、多様なシーンモードを実現。多機能センサーを組み合わせることで、人の動きに合わせた照明の自動開閉や、温度に合わせたエアコンの自動調整を可能にしました。"
             },
@@ -1221,6 +1460,13 @@
                     "多功能人體感測器",
                     "溫濕度感測器",
                     "智慧空調控制器"
+                ],
+                "zhCN": [
+                    "中枢网关",
+                    "智能开关 (10-15个)",
+                    "多功能人体传感器",
+                    "温湿度传感器",
+                    "智慧空调控制器"
                 ],
                 "en": [
                     "Central Gateway",
@@ -1243,6 +1489,11 @@
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化场景设置 (回家/离家/剧院)",
+                    "定时器与逻辑触发分析"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
@@ -1261,6 +1512,13 @@
                     "動態感應自動點燈",
                     "節能效率監測",
                     "漏水與安全警報"
+                ],
+                "zhCN": [
+                    "跨平台 App 控制",
+                    "一键离家模式",
+                    "动态感应自动点灯",
+                    "节能效率监测",
+                    "漏水与安全警报"
                 ],
                 "en": [
                     "Cross-platform App control",
@@ -1283,31 +1541,37 @@
         "id": 12,
         "title": {
             "zh": "台北永和 三房兩廳兩衛",
+            "zhCN": "台北永和 三房两厅两卫",
             "en": "Taipei Yonghe 3BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台北",
+            "zhCN": "台北",
             "en": "Taipei"
         },
         "description": {
             "zh": "三房兩廳兩衛",
+            "zhCN": "三房两厅两卫",
             "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於台北的三房兩廳兩衛及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
-                "en": "A full-house smart integration project for a 三房兩廳兩衛 in 台北. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
+                "zhCN": "这是一个位于台北的三房两厅两卫及全屋智能集成案。屋主生活繁忙，希望能透过自动化提升生活品质，特别是灯光与传感器的连动。",
+                "en": "A full-house smart integration project for a 3-bedroom, 2-living-room, 2-bathroom home in Taipei. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
                 "fr": "Un projet d'intégration intelligente pour une 三房兩廳兩衛 à 台北. Le propriétaire souhaitait améliorer sa qualité de vie grâce à l'automatisation.",
                 "ja": "台北にある三房兩廳兩衛のフルハウス・スマート統合プロジェクト。オーナーは自動化、特に照明とセンサーの連動を通じて生活の質を向上させたいと考えていました。"
             },
@@ -1315,23 +1579,27 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台北",
-                        "en": "台北",
+                        "zhCN": "台北",
+                        "en": "Taipei",
                         "ja": "台北"
                     }
                 },
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "ja": "未定"
                     }
@@ -1339,23 +1607,27 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "三房兩廳兩衛",
-                        "en": "三房兩廳兩衛",
+                        "zhCN": "三房两厅两卫",
+                        "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms",
                         "ja": "三房兩廳兩衛"
                     }
                 },
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024",
+                        "zhCN": "2024",
                         "en": "2024",
                         "ja": "2024"
                     }
@@ -1367,6 +1639,12 @@
                     "環境溫濕度自動調節",
                     "語音聲控整合",
                     "家中沒人時自動關閉不必要電器"
+                ],
+                "zhCN": [
+                    "全屋灯光智慧控制",
+                    "环境温湿度自动调节",
+                    "语音声控集成",
+                    "家中没人时自动关闭不必要电器"
                 ],
                 "en": [
                     "Full house smart lighting control",
@@ -1383,6 +1661,7 @@
             },
             "solution": {
                 "zh": "透過佈署中樞網關與全屋智能開關，實現多樣的情境模式。並結合多功能感測器，讓燈光隨人體活動自動開關，空調隨溫度自動調整。",
+                "zhCN": "透过布署中枢网关与全屋智能开关，实现多样的情境模式。并结合多功能传感器，让灯光随人体活动自动开关，空调随温度自动调整。",
                 "en": "Deployed central gateway and smart switches for various scene modes. Used multi-sensors for occupancy-based lighting and temperature-based AC control.",
                 "ja": "セントラルゲートウェイとスマートスイッチを配置し、多様なシーンモードを実現。多機能センサーを組み合わせることで、人の動きに合わせた照明の自動開閉や、温度に合わせたエアコンの自動調整を可能にしました。"
             },
@@ -1393,6 +1672,13 @@
                     "多功能人體感測器",
                     "溫濕度感測器",
                     "智慧空調控制器"
+                ],
+                "zhCN": [
+                    "中枢网关",
+                    "智能开关 (10-15个)",
+                    "多功能人体传感器",
+                    "温湿度传感器",
+                    "智慧空调控制器"
                 ],
                 "en": [
                     "Central Gateway",
@@ -1415,6 +1701,11 @@
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化场景设置 (回家/离家/剧院)",
+                    "定时器与逻辑触发分析"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
@@ -1433,6 +1724,13 @@
                     "動態感應自動點燈",
                     "節能效率監測",
                     "漏水與安全警報"
+                ],
+                "zhCN": [
+                    "跨平台 App 控制",
+                    "一键离家模式",
+                    "动态感应自动点灯",
+                    "节能效率监测",
+                    "漏水与安全警报"
                 ],
                 "en": [
                     "Cross-platform App control",
@@ -1455,31 +1753,37 @@
         "id": 13,
         "title": {
             "zh": "台北永和 一房一廳一衛",
+            "zhCN": "台北永和 一房一厅一卫",
             "en": "Taipei Yonghe 1BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台北",
+            "zhCN": "台北",
             "en": "Taipei"
         },
         "description": {
             "zh": "一房一廳一衛",
+            "zhCN": "一房一厅一卫",
             "en": "1 Bedroom, 1 Living Room, 1 Bathroom"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於台北的一房一廳一衛及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
-                "en": "A full-house smart integration project for a 一房一廳一衛 in 台北. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
+                "zhCN": "这是一个位于台北的一房一厅一卫及全屋智能集成案。屋主生活繁忙，希望能透过自动化提升生活品质，特别是灯光与传感器的连动。",
+                "en": "A full-house smart integration project for a 1-bedroom, 1-living-room, 1-bathroom home in Taipei. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
                 "fr": "Un projet d'intégration intelligente pour une 一房一廳一衛 à 台北. Le propriétaire souhaitait améliorer sa qualité de vie grâce à l'automatisation.",
                 "ja": "台北にある一房一廳一衛のフルハウス・スマート統合プロジェクト。オーナーは自動化、特に照明とセンサーの連動を通じて生活の質を向上させたいと考えていました。"
             },
@@ -1487,23 +1791,27 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台北",
-                        "en": "台北",
+                        "zhCN": "台北",
+                        "en": "Taipei",
                         "ja": "台北"
                     }
                 },
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "ja": "未定"
                     }
@@ -1511,23 +1819,27 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "一房一廳一衛",
-                        "en": "一房一廳一衛",
+                        "zhCN": "一房一厅一卫",
+                        "en": "1 Bedroom, 1 Living Room, 1 Bathroom",
                         "ja": "一房一廳一衛"
                     }
                 },
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024",
+                        "zhCN": "2024",
                         "en": "2024",
                         "ja": "2024"
                     }
@@ -1539,6 +1851,12 @@
                     "環境溫濕度自動調節",
                     "語音聲控整合",
                     "家中沒人時自動關閉不必要電器"
+                ],
+                "zhCN": [
+                    "全屋灯光智慧控制",
+                    "环境温湿度自动调节",
+                    "语音声控集成",
+                    "家中没人时自动关闭不必要电器"
                 ],
                 "en": [
                     "Full house smart lighting control",
@@ -1555,6 +1873,7 @@
             },
             "solution": {
                 "zh": "透過佈署中樞網關與全屋智能開關，實現多樣的情境模式。並結合多功能感測器，讓燈光隨人體活動自動開關，空調隨溫度自動調整。",
+                "zhCN": "透过布署中枢网关与全屋智能开关，实现多样的情境模式。并结合多功能传感器，让灯光随人体活动自动开关，空调随温度自动调整。",
                 "en": "Deployed central gateway and smart switches for various scene modes. Used multi-sensors for occupancy-based lighting and temperature-based AC control.",
                 "ja": "セントラルゲートウェイとスマートスイッチを配置し、多様なシーンモードを実現。多機能センサーを組み合わせることで、人の動きに合わせた照明の自動開閉や、温度に合わせたエアコンの自動調整を可能にしました。"
             },
@@ -1565,6 +1884,13 @@
                     "多功能人體感測器",
                     "溫濕度感測器",
                     "智慧空調控制器"
+                ],
+                "zhCN": [
+                    "中枢网关",
+                    "智能开关 (10-15个)",
+                    "多功能人体传感器",
+                    "温湿度传感器",
+                    "智慧空调控制器"
                 ],
                 "en": [
                     "Central Gateway",
@@ -1587,6 +1913,11 @@
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化场景设置 (回家/离家/剧院)",
+                    "定时器与逻辑触发分析"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
@@ -1605,6 +1936,13 @@
                     "動態感應自動點燈",
                     "節能效率監測",
                     "漏水與安全警報"
+                ],
+                "zhCN": [
+                    "跨平台 App 控制",
+                    "一键离家模式",
+                    "动态感应自动点灯",
+                    "节能效率监测",
+                    "漏水与安全警报"
                 ],
                 "en": [
                     "Cross-platform App control",
@@ -1627,31 +1965,37 @@
         "id": 14,
         "title": {
             "zh": "新北淡水 三房兩廳兩衛",
+            "zhCN": "新北淡水 三房两厅两卫",
             "en": "New Taipei Tamsui 3BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "新北",
+            "zhCN": "新北",
             "en": "New Taipei"
         },
         "description": {
             "zh": "三房兩廳兩衛",
+            "zhCN": "三房两厅两卫",
             "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於新北的三房兩廳兩衛及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
-                "en": "A full-house smart integration project for a 三房兩廳兩衛 in 新北. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
+                "zhCN": "这是一个位于新北的三房两厅两卫及全屋智能集成案。屋主生活繁忙，希望能透过自动化提升生活品质，特别是灯光与传感器的连动。",
+                "en": "A full-house smart integration project for a 3-bedroom, 2-living-room, 2-bathroom home in New Taipei. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
                 "fr": "Un projet d'intégration intelligente pour une 三房兩廳兩衛 à 新北. Le propriétaire souhaitait améliorer sa qualité de vie grâce à l'automatisation.",
                 "ja": "新北にある三房兩廳兩衛のフルハウス・スマート統合プロジェクト。オーナーは自動化、特に照明とセンサーの連動を通じて生活の質を向上させたいと考えていました。"
             },
@@ -1659,23 +2003,27 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "新北",
-                        "en": "新北",
+                        "zhCN": "新北",
+                        "en": "New Taipei",
                         "ja": "新北"
                     }
                 },
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "ja": "未定"
                     }
@@ -1683,23 +2031,27 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "三房兩廳兩衛",
-                        "en": "三房兩廳兩衛",
+                        "zhCN": "三房两厅两卫",
+                        "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms",
                         "ja": "三房兩廳兩衛"
                     }
                 },
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024",
+                        "zhCN": "2024",
                         "en": "2024",
                         "ja": "2024"
                     }
@@ -1711,6 +2063,12 @@
                     "環境溫濕度自動調節",
                     "語音聲控整合",
                     "家中沒人時自動關閉不必要電器"
+                ],
+                "zhCN": [
+                    "全屋灯光智慧控制",
+                    "环境温湿度自动调节",
+                    "语音声控集成",
+                    "家中没人时自动关闭不必要电器"
                 ],
                 "en": [
                     "Full house smart lighting control",
@@ -1727,6 +2085,7 @@
             },
             "solution": {
                 "zh": "透過佈署中樞網關與全屋智能開關，實現多樣的情境模式。並結合多功能感測器，讓燈光隨人體活動自動開關，空調隨溫度自動調整。",
+                "zhCN": "透过布署中枢网关与全屋智能开关，实现多样的情境模式。并结合多功能传感器，让灯光随人体活动自动开关，空调随温度自动调整。",
                 "en": "Deployed central gateway and smart switches for various scene modes. Used multi-sensors for occupancy-based lighting and temperature-based AC control.",
                 "ja": "セントラルゲートウェイとスマートスイッチを配置し、多様なシーンモードを実現。多機能センサーを組み合わせることで、人の動きに合わせた照明の自動開閉や、温度に合わせたエアコンの自動調整を可能にしました。"
             },
@@ -1737,6 +2096,13 @@
                     "多功能人體感測器",
                     "溫濕度感測器",
                     "智慧空調控制器"
+                ],
+                "zhCN": [
+                    "中枢网关",
+                    "智能开关 (10-15个)",
+                    "多功能人体传感器",
+                    "温湿度传感器",
+                    "智慧空调控制器"
                 ],
                 "en": [
                     "Central Gateway",
@@ -1759,6 +2125,11 @@
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化场景设置 (回家/离家/剧院)",
+                    "定时器与逻辑触发分析"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
@@ -1777,6 +2148,13 @@
                     "動態感應自動點燈",
                     "節能效率監測",
                     "漏水與安全警報"
+                ],
+                "zhCN": [
+                    "跨平台 App 控制",
+                    "一键离家模式",
+                    "动态感应自动点灯",
+                    "节能效率监测",
+                    "漏水与安全警报"
                 ],
                 "en": [
                     "Cross-platform App control",
@@ -1799,31 +2177,37 @@
         "id": 15,
         "title": {
             "zh": "基隆 兩房兩廳一衛",
+            "zhCN": "基隆 两房两厅一卫",
             "en": "Keelung 2BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "基隆",
+            "zhCN": "基隆",
             "en": "Keelung"
         },
         "description": {
             "zh": "兩房兩廳一衛",
+            "zhCN": "两房两厅一卫",
             "en": "2 Bedrooms, 2 Living Rooms, 1 Bathroom"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於基隆的(1)及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
-                "en": "A full-house smart integration project for a (1) in 基隆. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
+                "zhCN": "这是一个位于基隆的(1)及全屋智能集成案。屋主生活繁忙，希望能透过自动化提升生活品质，特别是灯光与传感器的连动。",
+                "en": "A full-house smart integration project for a (1) in Keelung. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
                 "fr": "Un projet d'intégration intelligente pour une (1) à 基隆. Le propriétaire souhaitait améliorer sa qualité de vie grâce à l'automatisation.",
                 "ja": "基隆にある(1)のフルハウス・スマート統合プロジェクト。オーナーは自動化、特に照明とセンサーの連動を通じて生活の質を向上させたいと考えていました。"
             },
@@ -1831,23 +2215,27 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "基隆",
-                        "en": "基隆",
+                        "zhCN": "基隆",
+                        "en": "Keelung",
                         "ja": "基隆"
                     }
                 },
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "ja": "未定"
                     }
@@ -1855,11 +2243,13 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "(1)",
+                        "zhCN": "(1)",
                         "en": "(1)",
                         "ja": "(1)"
                     }
@@ -1867,11 +2257,13 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024",
+                        "zhCN": "2024",
                         "en": "2024",
                         "ja": "2024"
                     }
@@ -1883,6 +2275,12 @@
                     "環境溫濕度自動調節",
                     "語音聲控整合",
                     "家中沒人時自動關閉不必要電器"
+                ],
+                "zhCN": [
+                    "全屋灯光智慧控制",
+                    "环境温湿度自动调节",
+                    "语音声控集成",
+                    "家中没人时自动关闭不必要电器"
                 ],
                 "en": [
                     "Full house smart lighting control",
@@ -1899,6 +2297,7 @@
             },
             "solution": {
                 "zh": "透過佈署中樞網關與全屋智能開關，實現多樣的情境模式。並結合多功能感測器，讓燈光隨人體活動自動開關，空調隨溫度自動調整。",
+                "zhCN": "透过布署中枢网关与全屋智能开关，实现多样的情境模式。并结合多功能传感器，让灯光随人体活动自动开关，空调随温度自动调整。",
                 "en": "Deployed central gateway and smart switches for various scene modes. Used multi-sensors for occupancy-based lighting and temperature-based AC control.",
                 "ja": "セントラルゲートウェイとスマートスイッチを配置し、多様なシーンモードを実現。多機能センサーを組み合わせることで、人の動きに合わせた照明の自動開閉や、温度に合わせたエアコンの自動調整を可能にしました。"
             },
@@ -1909,6 +2308,13 @@
                     "多功能人體感測器",
                     "溫濕度感測器",
                     "智慧空調控制器"
+                ],
+                "zhCN": [
+                    "中枢网关",
+                    "智能开关 (10-15个)",
+                    "多功能人体传感器",
+                    "温湿度传感器",
+                    "智慧空调控制器"
                 ],
                 "en": [
                     "Central Gateway",
@@ -1931,6 +2337,11 @@
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化场景设置 (回家/离家/剧院)",
+                    "定时器与逻辑触发分析"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
@@ -1949,6 +2360,13 @@
                     "動態感應自動點燈",
                     "節能效率監測",
                     "漏水與安全警報"
+                ],
+                "zhCN": [
+                    "跨平台 App 控制",
+                    "一键离家模式",
+                    "动态感应自动点灯",
+                    "节能效率监测",
+                    "漏水与安全警报"
                 ],
                 "en": [
                     "Cross-platform App control",
@@ -1971,30 +2389,36 @@
         "id": 16,
         "title": {
             "zh": "桃園 三房兩廳兩衛",
+            "zhCN": "桃园 三房两厅两卫",
             "en": "Taoyuan 3BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "桃園",
+            "zhCN": "桃园",
             "en": "Taoyuan"
         },
         "description": {
             "zh": "三房兩廳兩衛",
+            "zhCN": "三房两厅两卫",
             "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "屋主是一位家庭主婦，希望打造全屋智能家居。主要針對燈光、窗簾、空調進控制，需求是能透過手機、聲控及遠端操作。特別要求在玄關處設定「一鍵離家」模式，防止陽光照射家具。",
+                "zhCN": "屋主是一位家庭主妇，希望打造全屋智能家居。主要针对灯光、窗帘、空调进控制，需求是能透过手机、声控及远程操作。特别要求在玄关处设置「一键离家」模式，防止阳光照射家具。",
                 "en": "The owner, a housewife, wanted a full smart home. Key requirements were control over lights, curtains, and AC via app, voice, and remote. Specifically requested a 'One-touch Away' mode at the entrance to prevent sun damage to furniture.",
                 "fr": "The owner, a housewife, wanted a full smart home. Key requirements were control over lights, curtains, and AC via app, voice, and remote. Specifically requested a 'One-touch Away' mode at the entrance to prevent sun damage to furniture.",
                 "ja": "The owner, a housewife, wanted a full smart home. Key requirements were control over lights, curtains, and AC via app, voice, and remote. Specifically requested a 'One-touch Away' mode at the entrance to prevent sun damage to furniture."
@@ -2003,12 +2427,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "桃園市",
+                        "zhCN": "桃园市",
                         "en": "Taoyuan City",
                         "fr": "Taoyuan City",
                         "ja": "Taoyuan City"
@@ -2017,12 +2443,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -2031,12 +2459,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "三房兩廳",
+                        "zhCN": "三房两厅",
                         "en": "3 Bedrooms, 2 Living Rooms",
                         "fr": "3 Bedrooms, 2 Living Rooms",
                         "ja": "3 Bedrooms, 2 Living Rooms"
@@ -2045,12 +2475,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2025.05",
+                        "zhCN": "2025.05",
                         "en": "May 2025",
                         "fr": "May 2025",
                         "ja": "May 2025"
@@ -2064,6 +2496,13 @@
                     "電動窗簾（3組，含夢幻簾、木百葉）",
                     "COB雙色溫燈調",
                     "崁燈、筒燈"
+                ],
+                "zhCN": [
+                    "全屋智能开关（13 个）",
+                    "全屋空调控制（4 台）",
+                    "电动窗帘（3组，含梦幻帘、木百叶）",
+                    "COB双色温灯调",
+                    "崁灯、筒灯"
                 ],
                 "en": [
                     "Full House Smart Switches (13 units)",
@@ -2095,6 +2534,13 @@
                     "五大情境設定",
                     "網路規劃與設定"
                 ],
+                "zhCN": [
+                    "硬件施工",
+                    "软件配对",
+                    "可分享至 Apple HomeKit",
+                    "五大情境设置",
+                    "网络规划与设置"
+                ],
                 "en": [
                     "Hardware Installation",
                     "Software Pairing",
@@ -2124,6 +2570,13 @@
                     "床頭夜燈聯動",
                     "空調定時關閉與溫度感應",
                     "漏水偵測"
+                ],
+                "zhCN": [
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制",
+                    "一键情境控制（离家、回家、睡觉、起床、剧院）",
+                    "床头夜灯联动",
+                    "空调定时关闭与温度感应",
+                    "漏水侦测"
                 ],
                 "en": [
                     "Shared devices can be controlled by Siri through Apple's Home app",
@@ -2159,30 +2612,36 @@
         "id": 17,
         "title": {
             "zh": "桃園青埔 兩房兩廳兩衛",
+            "zhCN": "桃园青埔 两房两厅两卫",
             "en": "Taoyuan Qingpu 2BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "桃園",
+            "zhCN": "桃园",
             "en": "Taoyuan"
         },
         "description": {
             "zh": "兩房兩廳兩衛",
+            "zhCN": "两房两厅两卫",
             "en": "2 Bedrooms, 2 Living Rooms, 2 Bathrooms"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "屋主為工程師，重視劇院模式的打造。除了全屋燈光、窗簾、空調的基礎智能控制外，特別強調電視畫面燈光渲染同步，營造沉浸式的影音同步效果。",
+                "zhCN": "屋主为工程师，重视剧院模式的打造。除了全屋灯光、窗帘、空调的基础智能控制外，特别强调电视画面灯光渲染同步，营造沉浸式的影音同步效果。",
                 "en": "The owner, an engineer, prioritized a Theater Mode. Beyond basic control of lights, curtains, and AC, they emphasized TV-sync lighting for an immersive experience.",
                 "fr": "The owner, an engineer, prioritized a Theater Mode. Beyond basic control of lights, curtains, and AC, they emphasized TV-sync lighting for an immersive experience.",
                 "ja": "The owner, an engineer, prioritized a Theater Mode. Beyond basic control of lights, curtains, and AC, they emphasized TV-sync lighting for an immersive experience."
@@ -2191,12 +2650,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "桃園市",
+                        "zhCN": "桃园市",
                         "en": "Taoyuan City",
                         "fr": "Taoyuan City",
                         "ja": "Taoyuan City"
@@ -2205,12 +2666,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -2219,12 +2682,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "兩房一廳",
+                        "zhCN": "两房一厅",
                         "en": "2 Bedrooms, 1 Living Room",
                         "fr": "2 Bedrooms, 1 Living Room",
                         "ja": "2 Bedrooms, 1 Living Room"
@@ -2233,12 +2698,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2025.03",
+                        "zhCN": "2025.03",
                         "en": "Mar 2025",
                         "fr": "Mar 2025",
                         "ja": "Mar 2025"
@@ -2252,6 +2719,13 @@
                     "電動窗簾（3組，含夢幻簾、木板頁）",
                     "智能燈調/崁燈",
                     "整合主機"
+                ],
+                "zhCN": [
+                    "全屋智能开关（13 个）",
+                    "全屋空调控制（4 台）",
+                    "电动窗帘（3组，含梦幻帘、木板页）",
+                    "智能灯调/崁灯",
+                    "集成主机"
                 ],
                 "en": [
                     "Full House Smart Switches (13 units)",
@@ -2282,6 +2756,12 @@
                     "劇院模式燈條設定與整合",
                     "網路規劃"
                 ],
+                "zhCN": [
+                    "硬件施工与设置",
+                    "可分享至 Apple HomeKit",
+                    "剧院模式灯条设置与集成",
+                    "网络规划"
+                ],
                 "en": [
                     "Hardware Setup",
                     "Shareable to Apple HomeKit",
@@ -2308,6 +2788,13 @@
                     "自動化控制：床頭燈聯動",
                     "溫度感應開啟空調",
                     "漏水偵測"
+                ],
+                "zhCN": [
+                    "电视画面灯光渲染与影音同步（剧院模式）",
+                    "一键情境控制；已分享的设备可经 Apple 家庭 App 以 Siri 语音控制",
+                    "自动化控制：床头灯联动",
+                    "温度感应打开空调",
+                    "漏水侦测"
                 ],
                 "en": [
                     "TV Sync Lighting (Theater Mode)",
@@ -2343,31 +2830,37 @@
         "id": 18,
         "title": {
             "zh": "新竹 兩房兩廳一衛",
+            "zhCN": "新竹 两房两厅一卫",
             "en": "Hsinchu 2BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "新竹",
+            "zhCN": "新竹",
             "en": "Hsinchu"
         },
         "description": {
             "zh": "兩房兩廳一衛",
+            "zhCN": "两房两厅一卫",
             "en": "2 Bedrooms, 2 Living Rooms, 1 Bathroom"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "這是一個位於新竹的兩房兩廳一衛及全屋智能整合案。屋主生活繁忙，希望能透過自動化提升生活品質，特別是燈光與感測器的連動。",
-                "en": "A full-house smart integration project for a 兩房兩廳一衛 in 新竹. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
+                "zhCN": "这是一个位于新竹的两房两厅一卫及全屋智能集成案。屋主生活繁忙，希望能透过自动化提升生活品质，特别是灯光与传感器的连动。",
+                "en": "A full-house smart integration project for a 2-bedroom, 2-living-room, 1-bathroom home in Hsinchu. The owner wanted to improve quality of life through automation, especially lighting and sensor links.",
                 "fr": "Un projet d'intégration intelligente pour une 兩房兩廳一衛 à 新竹. Le propriétaire souhaitait améliorer sa qualité de vie grâce à l'automatisation.",
                 "ja": "新竹にある兩房兩廳一衛のフルハウス・スマート統合プロジェクト。オーナーは自動化、特に照明とセンサーの連動を通じて生活の質を向上させたいと考えていました。"
             },
@@ -2375,23 +2868,27 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "新竹",
-                        "en": "新竹",
+                        "zhCN": "新竹",
+                        "en": "Hsinchu",
                         "ja": "新竹"
                     }
                 },
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "ja": "未定"
                     }
@@ -2399,23 +2896,27 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "兩房兩廳一衛",
-                        "en": "兩房兩廳一衛",
+                        "zhCN": "两房两厅一卫",
+                        "en": "2 Bedrooms, 2 Living Rooms, 1 Bathroom",
                         "ja": "兩房兩廳一衛"
                     }
                 },
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2024",
+                        "zhCN": "2024",
                         "en": "2024",
                         "ja": "2024"
                     }
@@ -2427,6 +2928,12 @@
                     "環境溫濕度自動調節",
                     "語音聲控整合",
                     "家中沒人時自動關閉不必要電器"
+                ],
+                "zhCN": [
+                    "全屋灯光智慧控制",
+                    "环境温湿度自动调节",
+                    "语音声控集成",
+                    "家中没人时自动关闭不必要电器"
                 ],
                 "en": [
                     "Full house smart lighting control",
@@ -2443,6 +2950,7 @@
             },
             "solution": {
                 "zh": "透過佈署中樞網關與全屋智能開關，實現多樣的情境模式。並結合多功能感測器，讓燈光隨人體活動自動開關，空調隨溫度自動調整。",
+                "zhCN": "透过布署中枢网关与全屋智能开关，实现多样的情境模式。并结合多功能传感器，让灯光随人体活动自动开关，空调随温度自动调整。",
                 "en": "Deployed central gateway and smart switches for various scene modes. Used multi-sensors for occupancy-based lighting and temperature-based AC control.",
                 "ja": "セントラルゲートウェイとスマートスイッチを配置し、多様なシーンモードを実現。多機能センサーを組み合わせることで、人の動きに合わせた照明の自動開閉や、温度に合わせたエアコンの自動調整を可能にしました。"
             },
@@ -2453,6 +2961,13 @@
                     "多功能人體感測器",
                     "溫濕度感測器",
                     "智慧空調控制器"
+                ],
+                "zhCN": [
+                    "中枢网关",
+                    "智能开关 (10-15个)",
+                    "多功能人体传感器",
+                    "温湿度传感器",
+                    "智慧空调控制器"
                 ],
                 "en": [
                     "Central Gateway",
@@ -2475,6 +2990,11 @@
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化场景设置 (回家/离家/剧院)",
+                    "定时器与逻辑触发分析"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
@@ -2493,6 +3013,13 @@
                     "動態感應自動點燈",
                     "節能效率監測",
                     "漏水與安全警報"
+                ],
+                "zhCN": [
+                    "跨平台 App 控制",
+                    "一键离家模式",
+                    "动态感应自动点灯",
+                    "节能效率监测",
+                    "漏水与安全警报"
                 ],
                 "en": [
                     "Cross-platform App control",
@@ -2515,30 +3042,36 @@
         "id": 19,
         "title": {
             "zh": "台中大里 三房兩廳兩衛",
+            "zhCN": "台中大里 三房两厅两卫",
             "en": "Taichung Dali 3BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台中",
+            "zhCN": "台中",
             "en": "Taichung"
         },
         "description": {
             "zh": "三房兩廳兩衛",
+            "zhCN": "三房两厅两卫",
             "en": "3 Bedrooms, 2 Living Rooms, 2 Bathrooms"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "屋主追求全屋智能與安全防護。需求涵蓋燈控、智能門鎖、安防與空調，實現手機、聲控及遠端全方位管理。玄關同樣配置了一鍵離家自動化。",
+                "zhCN": "屋主追求全屋智能与安全防护。需求涵盖灯控、智能门锁、安防与空调，实现手机、声控及远程全方位管理。玄关同样配置了一键离家自动化。",
                 "en": "The owner sought full smart home capability and security. Requirements included lighting, smart locks, security, and AC, managed via phone, voice, and remote. Also features 'One-touch Away' automation at the entrance.",
                 "fr": "The owner sought full smart home capability and security. Requirements included lighting, smart locks, security, and AC, managed via phone, voice, and remote. Also features 'One-touch Away' automation at the entrance.",
                 "ja": "The owner sought full smart home capability and security. Requirements included lighting, smart locks, security, and AC, managed via phone, voice, and remote. Also features 'One-touch Away' automation at the entrance."
@@ -2547,12 +3080,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台中市（大里）",
+                        "zhCN": "台中市（大里）",
                         "en": "Dali, Taichung",
                         "fr": "Dali, Taichung",
                         "ja": "Dali, Taichung"
@@ -2561,12 +3096,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -2575,12 +3112,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "三房兩廳",
+                        "zhCN": "三房两厅",
                         "en": "3 Bedrooms, 2 Living Rooms",
                         "fr": "3 Bedrooms, 2 Living Rooms",
                         "ja": "3 Bedrooms, 2 Living Rooms"
@@ -2589,12 +3128,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2025.04",
+                        "zhCN": "2025.04",
                         "en": "Apr 2025",
                         "fr": "Apr 2025",
                         "ja": "Apr 2025"
@@ -2609,6 +3150,14 @@
                     "智能燈具(40)與智慧燈條",
                     "Matter Zigbee 網關",
                     "人體感測器(2+1)"
+                ],
+                "zhCN": [
+                    "全屋智能开关（17个）",
+                    "全屋空调控制（4 台）",
+                    "Aqara D200i 电子门锁",
+                    "智能灯具(40)与智慧灯条",
+                    "Matter Zigbee 网关",
+                    "人体传感器(2+1)"
                 ],
                 "en": [
                     "Smart Switches (17 units)",
@@ -2642,6 +3191,12 @@
                     "五大情境模式設定",
                     "網路規劃與設定"
                 ],
+                "zhCN": [
+                    "硬件施工",
+                    "可分享至 Apple HomeKit",
+                    "五大情境模式设置",
+                    "网络规划与设置"
+                ],
                 "en": [
                     "Hardware Installation",
                     "Shareable to Apple HomeKit",
@@ -2667,6 +3222,12 @@
                     "一鍵情境控制",
                     "自動化：空調定時關閉與起床模式連動",
                     "溫度高於30度自動開冷氣"
+                ],
+                "zhCN": [
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制",
+                    "一键情境控制",
+                    "自动化：空调定时关闭与起床模式连动",
+                    "温度高于30度自动开冷气"
                 ],
                 "en": [
                     "Shared devices can be controlled by Siri through Apple's Home app",
@@ -2711,30 +3272,36 @@
         "id": 20,
         "title": {
             "zh": "台中 惠宇大聚 兩房兩廳 兩戶打通",
+            "zhCN": "台中 惠宇大聚 两房两厅 两户打通",
             "en": "Taichung Huayu Daju 2BR (Combined)"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台中",
+            "zhCN": "台中",
             "en": "Taichung"
         },
         "description": {
             "zh": "兩房兩廳 兩戶打通",
+            "zhCN": "两房两厅 两户打通",
             "en": "2 Bedrooms, 2 Living Rooms, Combined Units"
         },
         "image": "/images/cases/20/cover.jpg",
         "details": {
             "intro": {
                 "zh": "此案為兩戶打通的特殊格局，重點在於公區域的智能整合，包含智能開關、窗簾、空調與電視控制。屋主希望能在雙戶空間內實現高效的遠端與聲控控制。",
+                "zhCN": "此案为两户打通的特殊格局，重点在于公区域的智能集成，包含智能开关、窗帘、空调与电视控制。屋主希望能在双户空间内实现高效的远程与声控控制。",
                 "en": "A combined unit project focusing on the public area's smart integration, including switches, curtains, AC, and TV. The owner wanted efficient remote and voice control across the dual-unit space.",
                 "fr": "A combined unit project focusing on the public area's smart integration, including switches, curtains, AC, and TV. The owner wanted efficient remote and voice control across the dual-unit space.",
                 "ja": "A combined unit project focusing on the public area's smart integration, including switches, curtains, AC, and TV. The owner wanted efficient remote and voice control across the dual-unit space."
@@ -2743,12 +3310,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台中（惠宇大聚）",
+                        "zhCN": "台中（惠宇大聚）",
                         "en": "Taichung (Huayu Daju)",
                         "fr": "Taichung (Huayu Daju)",
                         "ja": "Taichung (Huayu Daju)"
@@ -2757,12 +3326,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -2771,12 +3342,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "一層兩戶打通 (僅施作公區域)",
+                        "zhCN": "一层两户打通 (仅施作公区域)",
                         "en": "Combined Units (Public Area)",
                         "fr": "Combined Units (Public Area)",
                         "ja": "Combined Units (Public Area)"
@@ -2785,12 +3358,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "2025.06",
+                        "zhCN": "2025.06",
                         "en": "Jun 2025",
                         "fr": "Jun 2025",
                         "ja": "Jun 2025"
@@ -2807,6 +3382,18 @@
                     "門磁感應器、PM2.5空氣偵測器",
                     "IoT Gateway",
                     "enGo 空氣清淨器",
+                    "enGo 中控平板",
+                    "WIFI6 AP"
+                ],
+                "zhCN": [
+                    "全屋智能开关（16 个）",
+                    "大金空调控制（3台）",
+                    "电视远程控制",
+                    "电动窗帘（3组）",
+                    "毫米波人体感应器",
+                    "门磁感应器、PM2.5空气侦测器",
+                    "IoT Gateway",
+                    "enGo 空气清净器",
                     "enGo 中控平板",
                     "WIFI6 AP"
                 ],
@@ -2854,6 +3441,12 @@
                     "全屋情境設定",
                     "網路規劃"
                 ],
+                "zhCN": [
+                    "全套硬件安装与配对",
+                    "可分享至 Apple HomeKit",
+                    "全屋情境设置",
+                    "网络规划"
+                ],
                 "en": [
                     "Full Hardware Install",
                     "Shareable to Apple HomeKit",
@@ -2880,6 +3473,13 @@
                     "環境自動化：睡前儀式光源聯動",
                     "定時空調",
                     "漏水偵測"
+                ],
+                "zhCN": [
+                    "一键情境控制；已分享的设备可经 Apple 家庭 App 以 Siri 语音控制",
+                    "全屋空气品质监测与过动化（空气净化器联动）",
+                    "环境自动化：睡前仪式光源联动",
+                    "定时空调",
+                    "漏水侦测"
                 ],
                 "en": [
                     "One-tap scene control; shared devices can be controlled by Siri through Apple's Home app",
@@ -2927,30 +3527,36 @@
         "id": 21,
         "title": {
             "zh": "台中南區 三房兩廳一衛",
+            "zhCN": "台中南区 三房两厅一卫",
             "en": "Taichung South Dist. 3BR"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台中",
+            "zhCN": "台中",
             "en": "Taichung"
         },
         "description": {
             "zh": "三房兩廳一衛",
+            "zhCN": "三房两厅一卫",
             "en": "3 Bedrooms, 2 Living Rooms, 1 Bathroom"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "三房兩廳一衛",
+                "zhCN": "三房两厅一卫",
                 "en": "3 Bedrooms, 2 Living Rooms, 1 Bathroom",
                 "fr": "3 Bedrooms, 2 Living Rooms, 1 Bathroom",
                 "ja": "3 Bedrooms, 2 Living Rooms, 1 Bathroom"
@@ -2959,12 +3565,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台中",
+                        "zhCN": "台中",
                         "en": "Taichung",
                         "fr": "Taichung",
                         "ja": "Taichung"
@@ -2973,12 +3581,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -2987,12 +3597,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "3房2廳1衛",
+                        "zhCN": "3房2厅1卫",
                         "en": "3 Bedrooms, 2 Living Rooms, 1 Bathrooms",
                         "fr": "3 Bedrooms, 2 Living Rooms, 1 Bathrooms",
                         "ja": "3 Bedrooms, 2 Living Rooms, 1 Bathrooms"
@@ -3001,12 +3613,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -3020,6 +3634,13 @@
                     "窗簾自動化控制",
                     "空調智慧控制",
                     "智慧家庭主機"
+                ],
+                "zhCN": [
+                    "智能开关系统",
+                    "全屋灯光控制",
+                    "窗帘自动化控制",
+                    "空调智慧控制",
+                    "智慧家庭主机"
                 ],
                 "en": [
                     "Smart Switch System",
@@ -3050,6 +3671,12 @@
                     "作息排程控制",
                     "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化情境设置 (离家/回家)",
+                    "作息调度控制",
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automated Scenes (Away/Home)",
@@ -3075,6 +3702,12 @@
                     "GPS 定位自動觸發離家/返家情境",
                     "感測器自動化 (人體感應、溫濕度)",
                     "一鍵執行多種設備連動"
+                ],
+                "zhCN": [
+                    "随时随地透过手机 App 控制家中设备",
+                    "GPS 定位自动触发离家/返家情境",
+                    "传感器自动化 (人体感应、温湿度)",
+                    "一键运行多种设备连动"
                 ],
                 "en": [
                     "Control devices via App from anywhere",
@@ -3108,30 +3741,36 @@
         "id": 22,
         "title": {
             "zh": "台中國泰+",
+            "zhCN": "台中国泰+",
             "en": "Taichung Cathay+"
         },
         "category": {
             "zh": "私人住宅",
+            "zhCN": "私人住宅",
             "en": "Private Residence",
             "fr": "Résidence Privée",
             "ja": "個人住宅"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台中",
+            "zhCN": "台中",
             "en": "Taichung"
         },
         "description": {
             "zh": "台中國泰+",
+            "zhCN": "台中国泰+",
             "en": "Taichung Cathay+"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "台中國泰+",
+                "zhCN": "台中国泰+",
                 "en": "Taichung Cathay+",
                 "fr": "Taichung Cathay+",
                 "ja": "Taichung Cathay+"
@@ -3140,12 +3779,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台中",
+                        "zhCN": "台中",
                         "en": "Taichung",
                         "fr": "Taichung",
                         "ja": "Taichung"
@@ -3154,12 +3795,14 @@
                 {
                     "label": {
                         "zh": "坪數",
+                        "zhCN": "坪数",
                         "en": "Size",
                         "fr": "Taille",
                         "ja": "サイズ"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -3168,12 +3811,14 @@
                 {
                     "label": {
                         "zh": "戶型",
+                        "zhCN": "户型",
                         "en": "Layout",
                         "fr": "Agencement",
                         "ja": "レイアウト"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -3182,12 +3827,14 @@
                 {
                     "label": {
                         "zh": "完工時間",
+                        "zhCN": "完工时间",
                         "en": "Completion",
                         "fr": "Achèvement",
                         "ja": "完成"
                     },
                     "value": {
                         "zh": "待定",
+                        "zhCN": "待定",
                         "en": "TBD",
                         "fr": "À déterminer",
                         "ja": "未定"
@@ -3201,6 +3848,13 @@
                     "窗簾自動化控制",
                     "空調智慧控制",
                     "智慧家庭主機"
+                ],
+                "zhCN": [
+                    "智能开关系统",
+                    "全屋灯光控制",
+                    "窗帘自动化控制",
+                    "空调智慧控制",
+                    "智慧家庭主机"
                 ],
                 "en": [
                     "Smart Switch System",
@@ -3231,6 +3885,12 @@
                     "作息排程控制",
                     "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化情境设置 (离家/回家)",
+                    "作息调度控制",
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Automated Scenes (Away/Home)",
@@ -3256,6 +3916,12 @@
                     "GPS 定位自動觸發離家/返家情境",
                     "感測器自動化 (人體感應、溫濕度)",
                     "一鍵執行多種設備連動"
+                ],
+                "zhCN": [
+                    "随时随地透过手机 App 控制家中设备",
+                    "GPS 定位自动触发离家/返家情境",
+                    "传感器自动化 (人体感应、温湿度)",
+                    "一键运行多种设备连动"
                 ],
                 "en": [
                     "Control devices via App from anywhere",
@@ -3289,28 +3955,34 @@
         "id": 23,
         "title": {
             "zh": "合野木業股份有限公司 (展間)",
+            "zhCN": "合野木业股份有限公司 (展间)",
             "en": "Heye Wood Industry Co., Ltd. (Showroom)"
         },
         "category": {
             "zh": "展間",
+            "zhCN": "展间",
             "en": "Showroom"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "新北",
+            "zhCN": "新北",
             "en": "New Taipei"
         },
         "description": {
             "zh": "24158新北市三重區光復路一段72號 二樓",
+            "zhCN": "24158新北市三重区光复路一段72号 二楼",
             "en": "2F., No. 72, Sec. 1, Guangfu Rd., Sanchong Dist., New Taipei City"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "合野木業智慧家居展間，展示 enGo 智慧管家如何與木質裝修完美融合。",
+                "zhCN": "合野木业智慧家居展间，展示 enGo 智慧管家如何与木质装修完美融合。",
                 "en": "Heye Wood Industry smart home showroom, demonstrating the perfect integration of enGo smart hub and wood interior design.",
                 "fr": "Heye Wood Industry smart home showroom, demonstrating the perfect integration of enGo smart hub and wood interior design.",
                 "ja": "Heye Wood Industry smart home showroom, demonstrating the perfect integration of enGo smart hub and wood interior design."
@@ -3319,12 +3991,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "新北市三重區",
+                        "zhCN": "新北市三重区",
                         "en": "Sanchong, New Taipei City",
                         "fr": "Sanchong, New Taipei City",
                         "ja": "Sanchong, New Taipei City"
@@ -3333,12 +4007,14 @@
                 {
                     "label": {
                         "zh": "地址",
+                        "zhCN": "地址",
                         "en": "Address",
                         "fr": "Address",
                         "ja": "Address"
                     },
                     "value": {
                         "zh": "24158新北市三重區光復路一段72號 二樓",
+                        "zhCN": "24158新北市三重区光复路一段72号 二楼",
                         "en": "2F., No. 72, Sec. 1, Guangfu Rd., Sanchong Dist., New Taipei City",
                         "fr": "2F., No. 72, Sec. 1, Guangfu Rd., Sanchong Dist., New Taipei City",
                         "ja": "2F., No. 72, Sec. 1, Guangfu Rd., Sanchong Dist., New Taipei City"
@@ -3351,6 +4027,12 @@
                     "智能開關系統",
                     "全屋燈光控制",
                     "智慧家庭主機"
+                ],
+                "zhCN": [
+                    "enGo AI 智慧中控平板",
+                    "智能开关系统",
+                    "全屋灯光控制",
+                    "智慧家庭主机"
                 ],
                 "en": [
                     "enGo AI Smart Hub",
@@ -3377,6 +4059,11 @@
                     "自動化情境設定",
                     "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "自动化情境设置",
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Scene Automation",
@@ -3398,6 +4085,11 @@
                     "展示智慧家居設備與裝修的整合",
                     "現場體驗語音及手機 App 操控",
                     "多樣化情境模式模擬"
+                ],
+                "zhCN": [
+                    "展示智慧家居设备与装修的集成",
+                    "现场体验语音及手机 App 操控",
+                    "多样化情境模式模拟"
                 ],
                 "en": [
                     "Smart home integration with interior design",
@@ -3421,28 +4113,34 @@
         "id": 24,
         "title": {
             "zh": "大雅廚具 (展間)",
+            "zhCN": "大雅厨具 (展间)",
             "en": "Taya Kitchen (Showroom)"
         },
         "category": {
             "zh": "展間",
+            "zhCN": "展间",
             "en": "Showroom"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台中",
+            "zhCN": "台中",
             "en": "Taichung"
         },
         "description": {
             "zh": "台中市大雅區中清路三段739號 5樓",
+            "zhCN": "台中市大雅区中清路三段739号 5楼",
             "en": "5F., No. 739, Sec. 3, Zhongqing Rd., Daya Dist., Taichung City"
         },
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
                 "zh": "大雅廚具智慧廚房展間，展示 AI 智慧管家在現代廚房空間的多元應用。",
+                "zhCN": "大雅厨具智慧厨房展间，展示 AI 智慧管家在现代厨房空间的多元应用。",
                 "en": "Taya Kitchen smart kitchen showroom, showcasing various AI smart hub applications in modern kitchen spaces.",
                 "fr": "Taya Kitchen smart kitchen showroom, showcasing various AI smart hub applications in modern kitchen spaces.",
                 "ja": "Taya Kitchen smart kitchen showroom, showcasing various AI smart hub applications in modern kitchen spaces."
@@ -3451,12 +4149,14 @@
                 {
                     "label": {
                         "zh": "地區",
+                        "zhCN": "地区",
                         "en": "Region",
                         "fr": "Région",
                         "ja": "地域"
                     },
                     "value": {
                         "zh": "台中市大雅區",
+                        "zhCN": "台中市大雅区",
                         "en": "Daya, Taichung City",
                         "fr": "Daya, Taichung City",
                         "ja": "Daya, Taichung City"
@@ -3465,12 +4165,14 @@
                 {
                     "label": {
                         "zh": "地址",
+                        "zhCN": "地址",
                         "en": "Address",
                         "fr": "Address",
                         "ja": "Address"
                     },
                     "value": {
                         "zh": "中清路三段 739號 5樓",
+                        "zhCN": "中清路三段 739号 5楼",
                         "en": "5F., No. 739, Sec. 3, Zhongqing Rd., Daya Dist., Taichung City",
                         "fr": "5F., No. 739, Sec. 3, Zhongqing Rd., Daya Dist., Taichung City",
                         "ja": "5F., No. 739, Sec. 3, Zhongqing Rd., Daya Dist., Taichung City"
@@ -3483,6 +4185,12 @@
                     "水維氧 AI 智慧淨水器",
                     "智能燈光控制",
                     "智慧家庭主機"
+                ],
+                "zhCN": [
+                    "enGo AI 智慧中控平板",
+                    "水维氧 AI 智慧净水器",
+                    "智能灯光控制",
+                    "智慧家庭主机"
                 ],
                 "en": [
                     "enGo AI Smart Hub",
@@ -3509,6 +4217,11 @@
                     "廚房自動化情境",
                     "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
+                "zhCN": [
+                    "可分享至 Apple HomeKit",
+                    "厨房自动化情境",
+                    "已分享的设备可经 Apple 家庭 App 以 Siri 语音控制"
+                ],
                 "en": [
                     "Shareable to Apple HomeKit",
                     "Kitchen Scene Automation",
@@ -3530,6 +4243,11 @@
                     "智慧廚房空間整合體驗",
                     "展示淨水與中控系統聯動",
                     "現場體驗語音食譜與智慧烹飪"
+                ],
+                "zhCN": [
+                    "智慧厨房空间集成体验",
+                    "展示净水与中控系统联动",
+                    "现场体验语音食谱与智慧烹饪"
                 ],
                 "en": [
                     "Smart kitchen spatial integration",
@@ -3553,24 +4271,29 @@
         "id": 25,
         "title": {
             "zh": "宏盛心",
+            "zhCN": "宏盛心",
             "en": "Hong Sheng Xin"
         },
         "category": {
             "zh": "建案",
+            "zhCN": "建案",
             "en": "Property Development",
             "fr": "Programme Immobilier",
             "ja": "分譲プロジェクト"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "新北",
+            "zhCN": "新北",
             "en": "New Taipei"
         },
         "description": {
             "zh": "宏盛建設｜新北汐止　地上21層/地下3層，314戶，20-39坪（1-3房）",
+            "zhCN": "宏盛建设｜新北汐止　地上21层/地下3层，314户，20-39坪（1-3房）",
             "en": "Hong Sheng Construction | Xizhi, New Taipei: 21F/B3, 314 units, 20-39 pings (1-3BR)"
         },
         "image": "/images/news/hongshengxin.jpg"
@@ -3579,24 +4302,29 @@
         "id": 26,
         "title": {
             "zh": "昌益南青山",
+            "zhCN": "昌益南青山",
             "en": "Chang Yi Nan Qing Shan"
         },
         "category": {
             "zh": "建案",
+            "zhCN": "建案",
             "en": "Property Development",
             "fr": "Programme Immobilier",
             "ja": "分譲プロジェクト"
         },
         "country": {
             "zh": "台灣",
+            "zhCN": "台湾",
             "en": "Taiwan"
         },
         "location": {
             "zh": "台南",
+            "zhCN": "台南",
             "en": "Tainan"
         },
         "description": {
             "zh": "昌益建設｜台南　建案智慧宅整合",
+            "zhCN": "昌益建设｜台南　建案智慧宅集成",
             "en": "Chang Yi Construction | Tainan: smart home integration"
         },
         "image": "/images/news/nanqingshan.jpg"

@@ -19,7 +19,7 @@
         </figure>
 
         <template v-if="galleryItems.length > 0">
-          <h2 class="cd-h2 cd-gallery-title">{{ $t('caseRealScene') || '實景照片／影片' }}</h2>
+          <h2 class="cd-h2 cd-gallery-title">{{ $t('caseRealScene') }}</h2>
           <div class="cd-gallery">
             <div v-for="(img, index) in galleryItems" :key="index" class="cd-gallery-item">
               <video v-if="isVideo(img)" controls class="cd-media">
@@ -39,13 +39,13 @@
       <div class="cd-wrap">
         <!-- 1. Intro -->
         <div v-if="details.intro" class="cd-row intro">
-          <h2 class="cd-h2">{{ $t('caseIntro') || '專案簡介' }}</h2>
+          <h2 class="cd-h2">{{ $t('caseIntro') }}</h2>
           <div class="cd-body"><p>{{ getLocaleText(details.intro) }}</p></div>
         </div>
 
         <!-- 2. Basic Info -->
         <div v-if="details.basic_info" class="cd-row basic-info">
-          <h2 class="cd-h2">{{ $t('caseBasicInfo') || '基本資料' }}</h2>
+          <h2 class="cd-h2">{{ $t('caseBasicInfo') }}</h2>
           <div class="cd-body cd-info-grid">
             <div v-for="(info, index) in details.basic_info" :key="index" class="cd-info">
               <span class="cd-info-label">{{ getLocaleText(info.label) }}</span>
@@ -56,7 +56,7 @@
 
         <!-- 3. Needs -->
         <div v-if="details.needs" class="cd-row needs">
-          <h2 class="cd-h2">{{ $t('caseNeeds') || '需求分析' }}</h2>
+          <h2 class="cd-h2">{{ $t('caseNeeds') }}</h2>
           <div class="cd-body">
             <ul class="cd-list">
               <li v-for="(item, index) in getLocaleList(details.needs)" :key="index">{{ item }}</li>
@@ -66,22 +66,22 @@
 
         <!-- 4. Solution -->
         <div v-if="details.solution" class="cd-row solution">
-          <h2 class="cd-h2">{{ $t('caseSolution') || '解決方案' }}</h2>
+          <h2 class="cd-h2">{{ $t('caseSolution') }}</h2>
           <div class="cd-body"><p class="cd-card">{{ getLocaleText(details.solution) }}</p></div>
         </div>
 
         <!-- 5. Scope (Hardware/Software) -->
         <div v-if="details.hardware || details.software" class="cd-row specs">
-          <h2 class="cd-h2">{{ $t('caseScope') || '施作項目' }}</h2>
+          <h2 class="cd-h2">{{ $t('caseScope') }}</h2>
           <div class="cd-body cd-specs">
             <div v-if="details.hardware" class="cd-col">
-              <h3 class="cd-h3">{{ $t('caseHardware') || '硬體項目' }}</h3>
+              <h3 class="cd-h3">{{ $t('caseHardware') }}</h3>
               <ul class="cd-list">
                 <li v-for="(item, index) in getLocaleList(details.hardware)" :key="index">{{ item }}</li>
               </ul>
             </div>
             <div v-if="details.software" class="cd-col">
-              <h3 class="cd-h3">{{ $t('caseSoftware') || '軟體項目' }}</h3>
+              <h3 class="cd-h3">{{ $t('caseSoftware') }}</h3>
               <ul class="cd-list">
                 <li v-for="(item, index) in getLocaleList(details.software)" :key="index">{{ item }}</li>
               </ul>
@@ -91,7 +91,7 @@
 
         <!-- 6. Features Demo -->
         <div v-if="details.features" class="cd-row features">
-          <h2 class="cd-h2">{{ $t('caseFeatures') || '實際功能展示' }}</h2>
+          <h2 class="cd-h2">{{ $t('caseFeatures') }}</h2>
           <div class="cd-body">
             <ul class="cd-list">
               <li v-for="(item, index) in getLocaleList(details.features)" :key="index">{{ item }}</li>
