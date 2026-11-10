@@ -118,7 +118,7 @@ import { changeLocale, type LanguageType, i18n } from '../main'
 import { openShop, SHOP_URL } from '@/utils/shopUrl'
 
 export default defineComponent({
-  name: 'Header',
+  name: 'SiteHeader',
   setup() {
     const selectedLanguage = ref<LanguageType>(i18n.global.locale.value || 'zh')
     const router = useRouter()
