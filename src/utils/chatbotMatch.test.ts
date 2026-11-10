@@ -368,6 +368,31 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(src).not.toMatch(/Alexa/)
     expect(src).not.toMatch(/一鍵控制全家|MEDOLE/)
   })
+  it('the merchant feed makes no retired claims and agrees with the JSON-LD on shipping (Sean 2026-11-10: free in TW, 3–5 working days)', async () => {
+    const feed = readFileSync(resolve(process.cwd(), 'public/product-feed.xml'), 'utf-8')
+    expect(feed).not.toMatch(/Alexa|MEDOLE|一鍵控制全家|EAP-01|空氣清淨機/)
+    const items = feed.match(/<item>[\s\S]*?<\/item>/g) ?? []
+    expect(items.length).toBe(2)
+    for (const it of items) {
+      expect(it).toContain('<g:price>0 TWD</g:price>')
+      const n = (tag: string) => Number(it.match(new RegExp(`<g:${tag}>(\\d+)</g:${tag}>`))?.[1])
+      expect(n('min_handling_time') + n('min_transit_time')).toBe(3)
+      expect(n('max_handling_time') + n('max_transit_time')).toBe(5)
+    }
+    const { injectProductSchemas, cleanupProductSchemas } = await import('./productSchema')
+    injectProductSchemas('zh')
+    const schemas = [...document.querySelectorAll('script[data-schema="product"]')].map((s) => JSON.parse(s.textContent ?? '{}'))
+    expect(schemas).toHaveLength(2)
+    for (const s of schemas) {
+      const sd = s.offers.shippingDetails
+      expect(sd.shippingRate).toEqual({ '@type': 'MonetaryAmount', value: 0, currency: 'TWD' })
+      const d = sd.deliveryTime
+      expect(d.handlingTime.minValue + d.transitTime.minValue).toBe(3)
+      expect(d.handlingTime.maxValue + d.transitTime.maxValue).toBe(5)
+      expect(d.businessDays.dayOfWeek).toHaveLength(5)
+    }
+    cleanupProductSchemas()
+  })
   it('every FAQ has six locales, a known category, and well-formed links to real routes or our YouTube channel', () => {
     const cats = ['setup', 'features', 'products', 'services', 'safety', 'energy', 'maintenance', 'warranty', 'compatibility', 'tutorials', 'showroom']
     const routes = ['/product', '/product?jump=oxygen', '/product?jump=packages', '/tutorial', '/contact', '/packages', '/enviro', '/ecosystem', '/brandStory', '/cases', '/cases/23', '/cases/24']

@@ -18,13 +18,13 @@
   <channel>
     <title>enGo 產品目錄</title>
     <link>https://www.smtengo.com</link>
-    <description>enGo AI 智慧家居產品 — 中控平板、淨水系統、空氣清淨機</description>
+    <description>enGo AI 智慧家居產品 — 中控平板、淨水系統</description>
 
     <!-- enGo AI 智慧中控平板 -->
     <item>
       <g:id>SmartPad_01</g:id>
       <g:title>enGo AI 智慧中控平板 SmartPad_01</g:title>
-      <g:description>整合 MEDOLE 架構，支援 Apple HomeKit、Google Home、Amazon Alexa，一鍵控制全家智慧家電與情境模式。早鳥優惠 NT$8,000（原價 NT$12,000）。</g:description>
+      <g:description>住家與社區合一的 AI 智慧中控：enGo 牆掛平板搭配手機 App，整合照明、插座、窗簾、空調、紅外線家電、感測器與攝影機，加上社區公告、報修、公設預約與包裹通知。Matter 網關下的裝置可分享至 Apple HomeKit 與 Google Home。早鳥優惠 NT$8,000（原價 NT$12,000）。</g:description>
       <g:link>https://www.smtengo.com/product?jump=tablet</g:link>
       <g:image_link>https://www.smtengo.com/images/tablet_1.png</g:image_link>
       <g:availability>in_stock</g:availability>
@@ -41,7 +41,11 @@
         <g:country>TW</g:country>
         <g:service>Standard</g:service>
         <g:price>0 TWD</g:price>
+        <g:min_transit_time>2</g:min_transit_time>
+        <g:max_transit_time>3</g:max_transit_time>
       </g:shipping>
+      <g:min_handling_time>1</g:min_handling_time>
+      <g:max_handling_time>2</g:max_handling_time>
     </item>
 
     <!-- 水維氧 AI 智慧淨水系統 -->
@@ -65,32 +69,13 @@
         <g:country>TW</g:country>
         <g:service>Standard</g:service>
         <g:price>0 TWD</g:price>
+        <g:min_transit_time>2</g:min_transit_time>
+        <g:max_transit_time>3</g:max_transit_time>
       </g:shipping>
+      <g:min_handling_time>1</g:min_handling_time>
+      <g:max_handling_time>2</g:max_handling_time>
     </item>
 
-    <!-- enGo 智能空氣清淨機 EAP-01 -->
-    <item>
-      <g:id>EAP-01</g:id>
-      <g:title>enGo 智能空氣清淨機 EAP-01</g:title>
-      <g:description>一機四用：HEPA12 + NIH1 + 銀離子三重濾網、SoundBox 藍牙音響、Qi 無線充電、香氛擴香。適用 8–10 坪，最大噪音 &lt; 61dB，NCC / BSMI 認證。預售優惠 NT$8,960（MSRP NT$12,800），贈一組原廠濾網。預售期間商品，若預購量未達最低生產門檻，本公司保留取消預售之權利，並於取消後 30 日內全額退款。</g:description>
-      <g:link>https://www.smtengo.com/product?jump=oxygen1</g:link>
-      <g:image_link>https://www.smtengo.com/images/AirPurifier001.png</g:image_link>
-      <g:availability>in_stock</g:availability>
-      <g:quantity_to_sell_on_facebook>100</g:quantity_to_sell_on_facebook>
-      <g:price>12800.00 TWD</g:price>
-      <g:sale_price>8960.00 TWD</g:sale_price>
-      <g:brand>enGo</g:brand>
-      <g:condition>new</g:condition>
-      <g:google_product_category>Home &amp; Garden &gt; Household Appliances &gt; Climate Control Appliances &gt; Air Purifiers</g:google_product_category>
-      <g:product_type>智慧家居 &gt; 空氣清淨機</g:product_type>
-      <g:mpn>EAP-01</g:mpn>
-      <g:identifier_exists>no</g:identifier_exists>
-      <g:shipping>
-        <g:country>TW</g:country>
-        <g:service>Standard</g:service>
-        <g:price>0 TWD</g:price>
-      </g:shipping>
-    </item>
 
   </channel>
 </rss>
