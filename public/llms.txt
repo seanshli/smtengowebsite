@@ -1,6 +1,6 @@
 # enGo（enGo HMS, Home Management System）
 
-品牌名稱統一為 enGo（各語系相同）；「enGo智管家」「安購智管家」是早期名稱，指的是同一個品牌。
+品牌名稱統一為 enGo（各語系相同）；「enGo智管家」是早期名稱，指的是同一個品牌。
 
 > enGo 是住家與社區合一的智慧生活系統：一台牆掛平板＋手機 App（enGo智慧管家）＋雲端服務，同時管理家裡的照明、插座、窗簾、空調、感測器、攝影機，以及社區的公告、報修、公設預約、包裹通知。由智管家科技股份有限公司（台北）提供。
 
@@ -9,7 +9,7 @@
 ## 核心文件
 
 - [知識庫：九個模組的操作步驟與全部常見問題（繁中／英文，含截圖網址）](https://www.smtengo.com/knowledge-base.md): 由網站資料自動產生，與 /tutorial 頁面同一份內容。
-- [產品介紹 enGo AI智慧中控系統、水維氧淨水系統、智管家商城](https://www.smtengo.com/product)
+- [產品介紹 enGo AI智慧中控系統、水維氧淨水系統、enGo 安購商城](https://www.smtengo.com/product)
 - [使用教學與操作指南](https://www.smtengo.com/tutorial)
 - [常見問題](https://www.smtengo.com/tutorial#faq)
 - [套裝方案（零售定價）](https://www.smtengo.com/packages)
@@ -30,7 +30,7 @@
 - 語音操作為牆掛平板專屬；設備數據（用電趨勢／用電分布／用水量／空氣品質）平板與手機都有；平面圖即時視圖開發中，尚未提供（規劃為平板專屬）。手機 App 底部為家庭／場景／工單／通知／更多五個分頁；「庫存」與「設置」在平板與手機的名稱一致（App 3.6.x 起統一，舊版曾叫「倉儲」），手機上在「更多」裡。
 - Apple HomeKit／Google Home：可將 Matter 網關下的裝置逐台分享給 HomeKit 或 Google Home，之後由 Siri／Google 助理直接控制該裝置；沒有與 Amazon 語音助理的整合。
 - 目前不支援智慧門鎖。
-- 線上購買：智管家商城（enGo Store）https://shoph5.smtengo.com/ ，是原「安購商城」的新版本（同一家、同一個商城，會員與訂單都在同一邊）；網站上的「安購商城」與「立即購買」都連到它的首頁。enGo App 裡沒有商城本體，只有「商城消息」「商城快遞」兩類通知；購物請到商城網站，Android 手機也可下載商城專屬的「enGo Shop」App（Google Play：https://play.google.com/store/apps/details?id=com.smtengo.engo.shop ，與網站同一組帳號；iPhone 版即將推出）。商城的付款（目前僅信用卡）、信用卡銀行驗證、繼續付款、退款、缺貨與到貨通知、接單生產、通知、直營與加盟店等問題，以商城說明中心為準：https://shoph5.smtengo.com/help。商城使用手冊（顧客端、商家端、加盟店端，可搜尋與下載 PDF）：https://www.smtengo.com/tutorial#manualsApp 內的服務條款目前仍寫舊名稱「安購商城」，條款正在更新中。
+- 線上購買：enGo 安購商城（簡稱 enGo 商城；英文 enGo Shop）https://shoph5.smtengo.com/ ，已升級為新版本（同一家、同一個商城，會員與訂單都在同一邊）；網站上的「商城」與「立即購買」都連到它的首頁。enGo App 裡沒有商城本體，只有「商城消息」「商城快遞」兩類通知；購物請到商城網站，Android 手機也可下載商城專屬的「enGo Shop」App（Google Play：https://play.google.com/store/apps/details?id=com.smtengo.engo.shop ，與網站同一組帳號；iPhone 版即將推出）。商城的付款（目前僅信用卡）、信用卡銀行驗證、繼續付款、退款、缺貨與到貨通知、接單生產、通知、直營與加盟店等問題，以商城說明中心為準：https://shoph5.smtengo.com/help。商城使用手冊（顧客端、商家端、加盟店端，可搜尋與下載 PDF）：https://www.smtengo.com/tutorial#manuals
 - 報價、方案組合、交期、特定品牌型號相容性、客製開發、資料儲存位置與法規、已購客戶的帳號與保固，請洽專人 02-27510218。
 
 ## 語言

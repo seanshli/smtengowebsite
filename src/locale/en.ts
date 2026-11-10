@@ -3,7 +3,7 @@ export const enLocale = {
   homeTitle: 'Home',
   aboutTitle: 'About enGo',
   productTitle: 'enGo Product',
-  mallTitle: 'enGo Store',
+  mallTitle: 'enGo Shop',
   contactTitle: 'Contact Us',
   contactOnLine: 'Contact Us via LINE',
   tutorialTitle: 'Tutorial',
@@ -46,7 +46,7 @@ export const enLocale = {
     },
     ecosystem: {
       title: 'Smart Ecosystem | The enGo AIoT Platform',
-      description: 'The wall tablet, the phone app and the enGo Store as three doors into one system, five product lines, and the partners behind them.'
+      description: 'The wall tablet, the phone app and enGo Shop as three doors into one system, five product lines, and the partners behind them.'
     },
     default: {
       title: 'enGo - Smart Living for Home and Community',
@@ -58,8 +58,8 @@ export const enLocale = {
       description: 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.'
     },
     product: {
-      title: 'Products | enGo AI Hub, Water System & enGo Store',
-      description: 'The enGo AI control tablet, the Shui Wei Yang smart water system, environmental control, and the enGo Store for community subscriptions and a neighbourhood marketplace.'
+      title: 'Products | enGo AI Hub, Water System & enGo Shop',
+      description: 'The enGo AI control tablet, the Shui Wei Yang smart water system, environmental control, and enGo Shop for community subscriptions and a neighbourhood marketplace.'
     },
     cases: {
       title: 'Case Studies | enGo Installations',
@@ -427,17 +427,17 @@ export const enLocale = {
       }
     },
     shop: {
-      title: 'enGo Store (智管家商城)',
+      title: 'enGo Shop',
       lede: 'Community subscriptions and a neighbourhood marketplace, delivered to your door. Order fresh food, daily essentials and smart-home add-ons from merchants your community trusts; when the parcel reaches the lobby, the system tells you to pick it up.',
       points: {
         p1: { title: 'Neighbourhood marketplace', body: 'Merchants trusted by your community list fresh produce, household goods, health foods and smart-home accessories; search or browse, add to cart, check out, delivered within the community.' },
         p2: { title: 'Subscription plans', body: 'Silver, Gold and Platinum: weekly fresh produce, monthly household essentials and store-wide discounts. Pause or change any time, no lock-in.' },
         p3: { title: 'Shop on the store site', body: 'Shopping itself happens on the store site.' }
       },
-      note: 'The enGo Store is the new version of the former 安購商城: the same store on a new platform with a new name. For orders, returns and delivery, contact the store\'s own support.',
-      cta: 'Open the enGo Store',
+      note: 'enGo Shop has moved to a new version: the same shop, on a new platform. For orders, returns and delivery, contact the store\'s own support.',
+      cta: 'Open enGo Shop',
       ctaPlans: 'See the plans',
-      alt: 'enGo Store home page',
+      alt: 'enGo Shop home page',
       caption: 'shoph5.smtengo.com, the new storefront launched in September 2026.'
     },
     packages: {

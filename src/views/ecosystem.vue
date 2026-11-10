@@ -78,7 +78,7 @@
             <div class="eco-door-text">
               <h3 class="ap-h3">{{ $t('mallTitle') }}</h3>
               <p class="ap-body">{{ isZh ? '套裝方案、淨水系統與生活選品，線上選購後由專人安排安裝與服務。' : 'Packages, the water system and everyday products, ordered online and installed and serviced by our team.' }}</p>
-              <a :href="SHOP_URL" target="_blank" rel="noopener" class="ap-link" data-track="ecosystem:store">{{ isZh ? '前往安購商城' : 'Open the enGo Store' }}</a>
+              <a :href="SHOP_URL" target="_blank" rel="noopener" class="ap-link" data-track="ecosystem:store">{{ isZh ? '前往 enGo 安購商城' : 'Open enGo Shop' }}</a>
             </div>
           </article>
         </div>
@@ -147,7 +147,7 @@ const LINES = [
   { to: '/product?jump=oxygen', zh: '水維氧 AI 智慧淨水系統', en: 'AI water purification', zhBody: '三道濾心、濾芯壽命與 TDS 監測，在平板與 App 上看得見。', enBody: 'Three-stage filtration with filter life and TDS readings on the tablet and the app.' },
   { to: '/enviro', zh: '智慧環控', en: 'Environmental control', zhBody: '陽光控溫、空氣淨化監測、智慧水務與廚房安全。', enBody: 'Daylight and temperature, air quality, water and kitchen safety.' },
   { to: '/packages', zh: '套裝方案', en: 'Packages', zhBody: '基礎、進階、豪華三種組合，依坪數與需求選配。', enBody: 'Three bundles, sized to the home and what it needs.' },
-  { to: '/product#shop', zh: '智管家商城', en: 'enGo Store', zhBody: '社區訂閱與鄰里市集，生鮮、日用與智慧家居送到家門口。', enBody: 'Community subscriptions and a neighbourhood marketplace, delivered to your door.' }
+  { to: '/product#shop', zh: 'enGo 安購商城', en: 'enGo Shop', zhBody: '社區訂閱與鄰里市集，生鮮、日用與智慧家居送到家門口。', enBody: 'Community subscriptions and a neighbourhood marketplace, delivered to your door.' }
 ]
 
 // Same list the chatbot and FAQ 27 already give out; no component vendors.

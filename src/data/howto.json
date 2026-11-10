@@ -720,11 +720,11 @@
       "group": "shop",
       "title": {
         "zh": "商城：購物、付款與繼續付款",
-        "en": "Store: shopping, payment and resuming payment"
+        "en": "Shop: shopping, payment and resuming payment"
       },
       "summary": {
-        "zh": "在智管家商城（網站或 Android 的 enGo Shop App）選購、結帳，以信用卡付款；付款中斷時用「繼續付款」完成。",
-        "en": "Shop on the enGo Store (website or the enGo Shop app for Android), check out, and pay by credit card. If payment is interrupted, finish it with 繼續付款 (resume payment)."
+        "zh": "在 enGo 商城（網站或 Android 的 enGo Shop App）選購、結帳，以信用卡付款；付款中斷時用「繼續付款」完成。",
+        "en": "Shop on the enGo Shop (website or the enGo Shop app for Android), check out, and pay by credit card. If payment is interrupted, finish it with 繼續付款 (resume payment)."
       },
       "steps": [
         {
@@ -786,7 +786,7 @@
       "group": "shop",
       "title": {
         "zh": "商城：缺貨、到貨通知與接單生產",
-        "en": "Store: out of stock, restock alerts and made-to-order"
+        "en": "Shop: out of stock, restock alerts and made-to-order"
       },
       "summary": {
         "zh": "商城只販售實際有庫存的數量。缺貨商品可登記「到貨通知我」，補貨後通知您；「接單生產」商品則可隨時下單。",
@@ -838,7 +838,7 @@
       "group": "shop",
       "title": {
         "zh": "商城：訂單、取消與退款",
-        "en": "Store: orders, cancellations and refunds"
+        "en": "Shop: orders, cancellations and refunds"
       },
       "summary": {
         "zh": "在「我的訂單」追蹤進度、取消訂單或申請退貨退款；退款一律經平台核准後原路退回信用卡。",
@@ -900,7 +900,7 @@
       "group": "shop",
       "title": {
         "zh": "商城：通知",
-        "en": "Store: notifications"
+        "en": "Shop: notifications"
       },
       "summary": {
         "zh": "訂單、付款、配送、訂閱與到貨通知的消息，都集中在網站與 App 的「通知」頁。",

@@ -3,7 +3,7 @@ export const frLocale = {
   homeTitle: 'Accueil',
   aboutTitle: 'enGo',
   productTitle: 'Produit enGo',
-  mallTitle: 'enGo Store',
+  mallTitle: 'enGo Shop',
   contactTitle: 'Contactez-nous',
   contactOnLine: 'Contactez-nous via LINE',
   english: 'Anglais',

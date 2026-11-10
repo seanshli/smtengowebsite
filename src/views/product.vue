@@ -521,9 +521,9 @@
         </div>
       </section>
 
-      <!-- 智管家商城: the fifth product line (Sean 2026-09-27). A separate site
+      <!-- enGo 安購商城: the fifth product line (Sean 2026-09-27). A separate site
            (shoph5.smtengo.com), so this section describes and links, never sells here.
-           Copy follows KB-001 A.15: same store as the former 安購商城, new version. -->
+           Copy follows KB-001 A.15: same store, new version. -->
       <section id="shop" class="pd-tile pd-white shop-line">
         <div class="pd-wrap">
           <header class="pd-head pd-center" data-reveal>
@@ -1087,7 +1087,7 @@ const targetExpand = ref(false)
 .wf-price-bonus { font-size: 1.0625rem; line-height: 1.47; color: $ink-80; }
 .wf-buy-btn-card { margin-top: 6px; padding-inline: 36px; }
 
-// ─── 智管家商城 ───────────────────────────────────────────────────────────
+// ─── enGo 安購商城 ───────────────────────────────────────────────────────────
 .shop-line-figure {
   margin: 0 auto; max-width: 1000px;
   figcaption { margin-top: 18px; text-align: center; font-size: .875rem; line-height: 1.43; color: $ink-80; }

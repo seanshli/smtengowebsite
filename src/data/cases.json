@@ -87,34 +87,6 @@
                         "fr": "Oct 2024",
                         "ja": "Oct 2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "fr": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "20 萬內",
-                        "en": "Under 200k",
-                        "fr": "Under 200k",
-                        "ja": "Under 200k"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "17 萬",
-                        "en": "170k",
-                        "fr": "170k",
-                        "ja": "170k"
-                    }
                 }
             ],
             "needs": {
@@ -136,10 +108,10 @@
                 ]
             },
             "solution": {
-                "zh": "透過整合主機與 HomeKit，我們實現了全屋設備的連動與自動化。特別針對影音娛樂需求，配置了電視影音同步燈條，並設定了多種情境模式（離家、回家、劇院、睡眠、起床），滿足屋主對科技生活的所有想像。",
-                "en": "Using a central hub and HomeKit integration, we automated the entire home. We installed TV-sync light strips for entertainment and configured multiple scenes (Away, Home, Theater, Sleep, Wake) to fulfill the owner's tech-savvy lifestyle.",
-                "fr": "En utilisant un hub central et l'intégration HomeKit, nous avons automatisé toute la maison. Nous avons installé des bandes lumineuses synchronisées à la télévision pour le divertissement et configuré plusieurs scènes (Absent, Maison, Théâtre, Sommeil, Réveil) pour répondre au mode de vie technophile du propriétaire.",
-                "ja": "セントラルハブとHomeKit統合を使用して、家全体を自動化しました。エンターテインメント用にテレビ同期ライトストリップを設置し、複数のシーン（外出、帰宅、シアター、睡眠、起床）を設定して、オーナーのテクノロジー志向のライフスタイルを実現しました。"
+                "zh": "透過 enGo 整合主機，我們實現了全屋設備的連動與自動化，設備也可分享至 Apple HomeKit。特別針對影音娛樂需求，配置了電視影音同步燈條，並設定了多種情境模式（離家、回家、劇院、睡眠、起床），滿足屋主對科技生活的所有想像。",
+                "en": "Using the enGo central hub, we automated the entire home, and devices can also be shared to Apple HomeKit. We installed TV-sync light strips for entertainment and configured multiple scenes (Away, Home, Theater, Sleep, Wake) to fulfill the owner's tech-savvy lifestyle.",
+                "fr": "Grâce au hub central enGo, nous avons automatisé toute la maison ; les appareils peuvent aussi être partagés vers Apple HomeKit. Nous avons installé des bandes lumineuses synchronisées à la télévision pour le divertissement et configuré plusieurs scènes (Absent, Maison, Théâtre, Sommeil, Réveil) pour répondre au mode de vie technophile du propriétaire.",
+                "ja": "enGo のセントラルハブで家全体を自動化し、デバイスは Apple HomeKit へ共有することもできます。エンターテインメント用にテレビ同期ライトストリップを設置し、複数のシーン（外出、帰宅、シアター、睡眠、起床）を設定して、オーナーのテクノロジー志向のライフスタイルを実現しました。"
             },
             "hardware": {
                 "zh": [
@@ -173,25 +145,25 @@
             },
             "software": {
                 "zh": [
-                    "Homekit 整合",
+                    "可分享至 Apple HomeKit",
                     "情境設定：離家、回家、劇院、睡覺、起床模式",
                     "電視影音同步燈條設定與整合",
                     "網路規劃與設定"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Scene Setup: Away, Home, Theater, Sleep, Wake",
                     "TV Sync Light Strip Integration",
                     "Network Planning"
                 ],
                 "fr": [
-                    "Intégration HomeKit",
+                    "Partageable vers Apple HomeKit",
                     "Configuration de scènes : Absent, Maison, Théâtre, Sommeil, Réveil",
                     "Intégration de bande lumineuse synchronisée TV",
                     "Planification réseau"
                 ],
                 "ja": [
-                    "HomeKit統合",
+                    "Apple HomeKit へ共有可能",
                     "シーン設定：外出、帰宅、シアター、睡眠、起床",
                     "テレビ同期ライトストリップ統合",
                     "ネットワーク計画"
@@ -199,7 +171,7 @@
             },
             "features": {
                 "zh": [
-                    "Hey Siri 控制燈光、窗簾百分比、空調溫度",
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制",
                     "一鍵離家：全屋關燈/關空調/關窗廉",
                     "一鍵回家：開啟公區燈光/窗簾/冷氣",
                     "睡覺/起床模式：自動開關燈與窗簾",
@@ -208,7 +180,7 @@
                     "漏水偵測"
                 ],
                 "en": [
-                    "Hey Siri control for all devices",
+                    "Shared devices can be controlled by Siri through Apple's Home app",
                     "One-touch Away/Home scenes",
                     "Automated Sleep/Wake scenes",
                     "Bedside night mode automation",
@@ -216,7 +188,7 @@
                     "Leak Detection"
                 ],
                 "fr": [
-                    "Contrôle Hey Siri pour tous les appareils",
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple",
                     "Scènes Absent/Maison en un seul toucher",
                     "Scènes Sommeil/Réveil automatisées",
                     "Automatisation du mode nuit de chevet",
@@ -224,7 +196,7 @@
                     "Détection de fuite"
                 ],
                 "ja": [
-                    "Hey Siriですべてのデバイスを制御",
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能",
                     "ワンタッチ外出/帰宅シーン",
                     "自動睡眠/起床シーン",
                     "ベッドサイドナイトモード自動化",
@@ -331,34 +303,6 @@
                         "fr": "Apr 2025",
                         "ja": "Apr 2025"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "fr": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "5 萬內",
-                        "en": "Under 50k",
-                        "fr": "Under 50k",
-                        "ja": "Under 50k"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "25,736",
-                        "en": "25,736",
-                        "fr": "25,736",
-                        "ja": "25,736"
-                    }
                 }
             ],
             "hardware": {
@@ -412,22 +356,22 @@
             },
             "features": {
                 "zh": [
-                    "Hey Siri 控制開/關燈、窗簾開關、空調",
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制",
                     "一鍵啟動情境控制：離家、回家、睡覺、起床、劇院",
                     "漏水偵測"
                 ],
                 "en": [
-                    "Hey Siri Control (Lights, Curtains, AC)",
+                    "Shared devices can be controlled by Siri through Apple's Home app",
                     "One-touch Scenes (Away, Home, Sleep, Wake, Theater)",
                     "Leak Detection"
                 ],
                 "fr": [
-                    "Hey Siri Control (Lights, Curtains, AC)",
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple",
                     "One-touch Scenes (Away, Home, Sleep, Wake, Theater)",
                     "Leak Detection"
                 ],
                 "ja": [
-                    "Hey Siri Control (Lights, Curtains, AC)",
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能",
                     "One-touch Scenes (Away, Home, Sleep, Wake, Theater)",
                     "Leak Detection"
                 ]
@@ -523,30 +467,6 @@
                         "en": "2024",
                         "ja": "2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15-25 萬",
-                        "en": "150k-250k",
-                        "ja": "15-25万"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "ja": "未定"
-                    }
                 }
             ],
             "needs": {
@@ -599,17 +519,17 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 整合",
+                    "可分享至 Apple HomeKit",
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
                     "Timer & logic triggers"
                 ],
                 "ja": [
-                    "HomeKit 統合",
+                    "Apple HomeKit へ共有可能",
                     "自動化シーン設定 (帰宅/外出/シアター)",
                     "タイマーとロジックトリガーの分析"
                 ]
@@ -731,34 +651,6 @@
                         "fr": "À déterminer",
                         "ja": "未定"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "fr": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "fr": "À déterminer",
-                        "ja": "未定"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "fr": "À déterminer",
-                        "ja": "未定"
-                    }
                 }
             ],
             "hardware": {
@@ -793,55 +685,51 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 居家整合",
+                    "可分享至 Apple HomeKit",
                     "自動化情境設定 (離家/回家)",
                     "作息排程控制",
-                    "Siri 語音聲控"
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "Shared devices can be controlled by Siri through Apple's Home app"
                 ],
                 "fr": [
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ]
             },
             "features": {
                 "zh": [
                     "隨時隨地透過手機 App 控制家中設備",
-                    "整合 Siri 語音控制，動口不動手",
                     "GPS 定位自動觸發離家/返家情境",
                     "感測器自動化 (人體感應、溫濕度)",
                     "一鍵執行多種設備連動"
                 ],
                 "en": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
                 ],
                 "fr": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
                 ],
                 "ja": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
@@ -944,34 +832,6 @@
                         "fr": "À déterminer",
                         "ja": "未定"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "fr": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "fr": "À déterminer",
-                        "ja": "未定"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "fr": "À déterminer",
-                        "ja": "未定"
-                    }
                 }
             ],
             "hardware": {
@@ -1006,55 +866,51 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 居家整合",
+                    "可分享至 Apple HomeKit",
                     "自動化情境設定 (離家/回家)",
                     "作息排程控制",
-                    "Siri 語音聲控"
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "Shared devices can be controlled by Siri through Apple's Home app"
                 ],
                 "fr": [
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ]
             },
             "features": {
                 "zh": [
                     "隨時隨地透過手機 App 控制家中設備",
-                    "整合 Siri 語音控制，動口不動手",
                     "GPS 定位自動觸發離家/返家情境",
                     "感測器自動化 (人體感應、溫濕度)",
                     "一鍵執行多種設備連動"
                 ],
                 "en": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
                 ],
                 "fr": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
                 ],
                 "ja": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
@@ -1159,30 +1015,6 @@
                         "en": "2024",
                         "ja": "2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15-25 萬",
-                        "en": "150k-250k",
-                        "ja": "15-25万"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "ja": "未定"
-                    }
                 }
             ],
             "needs": {
@@ -1235,17 +1067,17 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 整合",
+                    "可分享至 Apple HomeKit",
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
                     "Timer & logic triggers"
                 ],
                 "ja": [
-                    "HomeKit 統合",
+                    "Apple HomeKit へ共有可能",
                     "自動化シーン設定 (帰宅/外出/シアター)",
                     "タイマーとロジックトリガーの分析"
                 ]
@@ -1355,30 +1187,6 @@
                         "en": "2024",
                         "ja": "2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15-25 萬",
-                        "en": "150k-250k",
-                        "ja": "15-25万"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "ja": "未定"
-                    }
                 }
             ],
             "needs": {
@@ -1431,17 +1239,17 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 整合",
+                    "可分享至 Apple HomeKit",
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
                     "Timer & logic triggers"
                 ],
                 "ja": [
-                    "HomeKit 統合",
+                    "Apple HomeKit へ共有可能",
                     "自動化シーン設定 (帰宅/外出/シアター)",
                     "タイマーとロジックトリガーの分析"
                 ]
@@ -1551,30 +1359,6 @@
                         "en": "2024",
                         "ja": "2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15-25 萬",
-                        "en": "150k-250k",
-                        "ja": "15-25万"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "ja": "未定"
-                    }
                 }
             ],
             "needs": {
@@ -1627,17 +1411,17 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 整合",
+                    "可分享至 Apple HomeKit",
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
                     "Timer & logic triggers"
                 ],
                 "ja": [
-                    "HomeKit 統合",
+                    "Apple HomeKit へ共有可能",
                     "自動化シーン設定 (帰宅/外出/シアター)",
                     "タイマーとロジックトリガーの分析"
                 ]
@@ -1747,30 +1531,6 @@
                         "en": "2024",
                         "ja": "2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15-25 萬",
-                        "en": "150k-250k",
-                        "ja": "15-25万"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "ja": "未定"
-                    }
                 }
             ],
             "needs": {
@@ -1823,17 +1583,17 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 整合",
+                    "可分享至 Apple HomeKit",
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
                     "Timer & logic triggers"
                 ],
                 "ja": [
-                    "HomeKit 統合",
+                    "Apple HomeKit へ共有可能",
                     "自動化シーン設定 (帰宅/外出/シアター)",
                     "タイマーとロジックトリガーの分析"
                 ]
@@ -1943,30 +1703,6 @@
                         "en": "2024",
                         "ja": "2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15-25 萬",
-                        "en": "150k-250k",
-                        "ja": "15-25万"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "ja": "未定"
-                    }
                 }
             ],
             "needs": {
@@ -2019,17 +1755,17 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 整合",
+                    "可分享至 Apple HomeKit",
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
                     "Timer & logic triggers"
                 ],
                 "ja": [
-                    "HomeKit 統合",
+                    "Apple HomeKit へ共有可能",
                     "自動化シーン設定 (帰宅/外出/シアター)",
                     "タイマーとロジックトリガーの分析"
                 ]
@@ -2139,30 +1875,6 @@
                         "en": "2024",
                         "ja": "2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15-25 萬",
-                        "en": "150k-250k",
-                        "ja": "15-25万"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "ja": "未定"
-                    }
                 }
             ],
             "needs": {
@@ -2215,17 +1927,17 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 整合",
+                    "可分享至 Apple HomeKit",
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
                     "Timer & logic triggers"
                 ],
                 "ja": [
-                    "HomeKit 統合",
+                    "Apple HomeKit へ共有可能",
                     "自動化シーン設定 (帰宅/外出/シアター)",
                     "タイマーとロジックトリガーの分析"
                 ]
@@ -2343,20 +2055,6 @@
                         "fr": "May 2025",
                         "ja": "May 2025"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "132,420",
-                        "en": "132,420",
-                        "fr": "132,420",
-                        "ja": "132,420"
-                    }
                 }
             ],
             "hardware": {
@@ -2393,56 +2091,56 @@
                 "zh": [
                     "硬體施工",
                     "軟體配對",
-                    "Homekit 整合",
+                    "可分享至 Apple HomeKit",
                     "五大情境設定",
                     "網路規劃與設定"
                 ],
                 "en": [
                     "Hardware Installation",
                     "Software Pairing",
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "5 Major Scenes",
                     "Network Planning"
                 ],
                 "fr": [
                     "Hardware Installation",
                     "Software Pairing",
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "5 Major Scenes",
                     "Network Planning"
                 ],
                 "ja": [
                     "Hardware Installation",
                     "Software Pairing",
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "5 Major Scenes",
                     "Network Planning"
                 ]
             },
             "features": {
                 "zh": [
-                    "Hey Siri 語音控制調控",
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制",
                     "一鍵情境控制（離家、回家、睡覺、起床、劇院）",
                     "床頭夜燈聯動",
                     "空調定時關閉與溫度感應",
                     "漏水偵測"
                 ],
                 "en": [
-                    "Hey Siri Voice Control",
+                    "Shared devices can be controlled by Siri through Apple's Home app",
                     "One-touch Scenes",
                     "Bedside Night Light Automation",
                     "Smart AC Automation (>30°C)",
                     "Leak Detection"
                 ],
                 "fr": [
-                    "Hey Siri Voice Control",
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple",
                     "One-touch Scenes",
                     "Bedside Night Light Automation",
                     "Smart AC Automation (>30°C)",
                     "Leak Detection"
                 ],
                 "ja": [
-                    "Hey Siri Voice Control",
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能",
                     "One-touch Scenes",
                     "Bedside Night Light Automation",
                     "Smart AC Automation (>30°C)",
@@ -2545,20 +2243,6 @@
                         "fr": "Mar 2025",
                         "ja": "Mar 2025"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "86,059",
-                        "en": "86,059",
-                        "fr": "86,059",
-                        "ja": "86,059"
-                    }
                 }
             ],
             "hardware": {
@@ -2594,25 +2278,25 @@
             "software": {
                 "zh": [
                     "硬體施工與設定",
-                    "Homekit 整合",
+                    "可分享至 Apple HomeKit",
                     "劇院模式燈條設定與整合",
                     "網路規劃"
                 ],
                 "en": [
                     "Hardware Setup",
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Theater Mode Sync",
                     "Network Planning"
                 ],
                 "fr": [
                     "Hardware Setup",
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "Theater Mode Sync",
                     "Network Planning"
                 ],
                 "ja": [
                     "Hardware Setup",
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "Theater Mode Sync",
                     "Network Planning"
                 ]
@@ -2620,28 +2304,28 @@
             "features": {
                 "zh": [
                     "電視畫面燈光渲染與影音同步（劇院模式）",
-                    "Hey Siri 與一鍵情境控制",
+                    "一鍵情境控制；已分享的設備可經 Apple 家庭 App 以 Siri 語音控制",
                     "自動化控制：床頭燈聯動",
                     "溫度感應開啟空調",
                     "漏水偵測"
                 ],
                 "en": [
                     "TV Sync Lighting (Theater Mode)",
-                    "Hey Siri & Scene Control",
+                    "One-tap scene control; shared devices can be controlled by Siri through Apple's Home app",
                     "Bedside Light Linkage",
                     "Smart AC Automation",
                     "Leak Detection"
                 ],
                 "fr": [
                     "TV Sync Lighting (Theater Mode)",
-                    "Hey Siri & Scene Control",
+                    "Scènes en un geste ; appareils partagés commandables avec Siri via l'app Maison d'Apple",
                     "Bedside Light Linkage",
                     "Smart AC Automation",
                     "Leak Detection"
                 ],
                 "ja": [
                     "TV Sync Lighting (Theater Mode)",
-                    "Hey Siri & Scene Control",
+                    "ワンタップのシーン操作。共有したデバイスは Apple のホームアプリから Siri で操作可能",
                     "Bedside Light Linkage",
                     "Smart AC Automation",
                     "Leak Detection"
@@ -2735,30 +2419,6 @@
                         "en": "2024",
                         "ja": "2024"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15-25 萬",
-                        "en": "150k-250k",
-                        "ja": "15-25万"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "ja": "未定"
-                    }
                 }
             ],
             "needs": {
@@ -2811,17 +2471,17 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 整合",
+                    "可分享至 Apple HomeKit",
                     "自動化場景設定 (回家/離家/劇院)",
                     "定時器與邏輯觸發分析"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automation Scenes (Home/Away/Theater)",
                     "Timer & logic triggers"
                 ],
                 "ja": [
-                    "HomeKit 統合",
+                    "Apple HomeKit へ共有可能",
                     "自動化シーン設定 (帰宅/外出/シアター)",
                     "タイマーとロジックトリガーの分析"
                 ]
@@ -2939,34 +2599,6 @@
                         "fr": "Apr 2025",
                         "ja": "Apr 2025"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "fr": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15 萬內",
-                        "en": "Under 150k",
-                        "fr": "Under 150k",
-                        "ja": "Under 150k"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "134,820",
-                        "en": "134,820",
-                        "fr": "134,820",
-                        "ja": "134,820"
-                    }
                 }
             ],
             "hardware": {
@@ -3006,50 +2638,50 @@
             "software": {
                 "zh": [
                     "硬體施工",
-                    "Homekit 整合",
+                    "可分享至 Apple HomeKit",
                     "五大情境模式設定",
                     "網路規劃與設定"
                 ],
                 "en": [
                     "Hardware Installation",
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "5 Major Scenes",
                     "Network Planning"
                 ],
                 "fr": [
                     "Hardware Installation",
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "5 Major Scenes",
                     "Network Planning"
                 ],
                 "ja": [
                     "Hardware Installation",
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "5 Major Scenes",
                     "Network Planning"
                 ]
             },
             "features": {
                 "zh": [
-                    "Hey Siri 語音控制",
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制",
                     "一鍵情境控制",
                     "自動化：空調定時關閉與起床模式連動",
                     "溫度高於30度自動開冷氣"
                 ],
                 "en": [
-                    "Hey Siri Voice Control",
+                    "Shared devices can be controlled by Siri through Apple's Home app",
                     "One-touch Scenes",
                     "Automated AC (Timer/Wake Mode)",
                     "Temp Trigger (>30°C)"
                 ],
                 "fr": [
-                    "Hey Siri Voice Control",
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple",
                     "One-touch Scenes",
                     "Automated AC (Timer/Wake Mode)",
                     "Temp Trigger (>30°C)"
                 ],
                 "ja": [
-                    "Hey Siri Voice Control",
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能",
                     "One-touch Scenes",
                     "Automated AC (Timer/Wake Mode)",
                     "Temp Trigger (>30°C)"
@@ -3163,34 +2795,6 @@
                         "fr": "Jun 2025",
                         "ja": "Jun 2025"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "fr": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "15 萬內",
-                        "en": "Under 150k",
-                        "fr": "Under 150k",
-                        "ja": "Under 150k"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "130,818",
-                        "en": "130,818",
-                        "fr": "130,818",
-                        "ja": "130,818"
-                    }
                 }
             ],
             "hardware": {
@@ -3246,53 +2850,53 @@
             "software": {
                 "zh": [
                     "全套硬體安裝與配對",
-                    "Homekit 整合",
+                    "可分享至 Apple HomeKit",
                     "全屋情境設定",
                     "網路規劃"
                 ],
                 "en": [
                     "Full Hardware Install",
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Full House Scenes",
                     "Network Planning"
                 ],
                 "fr": [
                     "Full Hardware Install",
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "Full House Scenes",
                     "Network Planning"
                 ],
                 "ja": [
                     "Full Hardware Install",
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "Full House Scenes",
                     "Network Planning"
                 ]
             },
             "features": {
                 "zh": [
-                    "Hey Siri 與一鍵情境控制",
+                    "一鍵情境控制；已分享的設備可經 Apple 家庭 App 以 Siri 語音控制",
                     "全屋空氣品質監測與過動化（空氣清淨機聯動）",
                     "環境自動化：睡前儀式光源聯動",
                     "定時空調",
                     "漏水偵測"
                 ],
                 "en": [
-                    "Hey Siri & Scene Control",
+                    "One-tap scene control; shared devices can be controlled by Siri through Apple's Home app",
                     "Air Quality Monitoring & Automation",
                     "Sleep Ritual Lighting",
                     "Scheduled AC",
                     "Leak Detection"
                 ],
                 "fr": [
-                    "Hey Siri & Scene Control",
+                    "Scènes en un geste ; appareils partagés commandables avec Siri via l'app Maison d'Apple",
                     "Air Quality Monitoring & Automation",
                     "Sleep Ritual Lighting",
                     "Scheduled AC",
                     "Leak Detection"
                 ],
                 "ja": [
-                    "Hey Siri & Scene Control",
+                    "ワンタップのシーン操作。共有したデバイスは Apple のホームアプリから Siri で操作可能",
                     "Air Quality Monitoring & Automation",
                     "Sleep Ritual Lighting",
                     "Scheduled AC",
@@ -3407,34 +3011,6 @@
                         "fr": "À déterminer",
                         "ja": "未定"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "fr": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "fr": "À déterminer",
-                        "ja": "未定"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "fr": "À déterminer",
-                        "ja": "未定"
-                    }
                 }
             ],
             "hardware": {
@@ -3469,55 +3045,51 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 居家整合",
+                    "可分享至 Apple HomeKit",
                     "自動化情境設定 (離家/回家)",
                     "作息排程控制",
-                    "Siri 語音聲控"
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "Shared devices can be controlled by Siri through Apple's Home app"
                 ],
                 "fr": [
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ]
             },
             "features": {
                 "zh": [
                     "隨時隨地透過手機 App 控制家中設備",
-                    "整合 Siri 語音控制，動口不動手",
                     "GPS 定位自動觸發離家/返家情境",
                     "感測器自動化 (人體感應、溫濕度)",
                     "一鍵執行多種設備連動"
                 ],
                 "en": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
                 ],
                 "fr": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
                 ],
                 "ja": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
@@ -3620,34 +3192,6 @@
                         "fr": "À déterminer",
                         "ja": "未定"
                     }
-                },
-                {
-                    "label": {
-                        "zh": "預算區間",
-                        "en": "Budget",
-                        "fr": "Budget",
-                        "ja": "予算"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "fr": "À déterminer",
-                        "ja": "未定"
-                    }
-                },
-                {
-                    "label": {
-                        "zh": "實際完工金額",
-                        "en": "Actual Cost",
-                        "fr": "Coût réel",
-                        "ja": "実際のコスト"
-                    },
-                    "value": {
-                        "zh": "待定",
-                        "en": "TBD",
-                        "fr": "À déterminer",
-                        "ja": "未定"
-                    }
                 }
             ],
             "hardware": {
@@ -3682,55 +3226,51 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 居家整合",
+                    "可分享至 Apple HomeKit",
                     "自動化情境設定 (離家/回家)",
                     "作息排程控制",
-                    "Siri 語音聲控"
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "Shared devices can be controlled by Siri through Apple's Home app"
                 ],
                 "fr": [
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "Automated Scenes (Away/Home)",
                     "Schedule Control",
-                    "Siri Voice Control"
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ]
             },
             "features": {
                 "zh": [
                     "隨時隨地透過手機 App 控制家中設備",
-                    "整合 Siri 語音控制，動口不動手",
                     "GPS 定位自動觸發離家/返家情境",
                     "感測器自動化 (人體感應、溫濕度)",
                     "一鍵執行多種設備連動"
                 ],
                 "en": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
                 ],
                 "fr": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
                 ],
                 "ja": [
                     "Control devices via App from anywhere",
-                    "Siri Voice Control Integration",
                     "GPS Geofencing for Away/Home scenes",
                     "Sensor Automation (Motion, Temp/Humidity)",
                     "One-touch Scene Execution"
@@ -3833,24 +3373,24 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 居家整合",
+                    "可分享至 Apple HomeKit",
                     "自動化情境設定",
-                    "Siri 語音聲控"
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Scene Automation",
-                    "Siri Voice Control"
+                    "Shared devices can be controlled by Siri through Apple's Home app"
                 ],
                 "fr": [
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "Scene Automation",
-                    "Siri Voice Control"
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "Scene Automation",
-                    "Siri Voice Control"
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ]
             },
             "features": {
@@ -3965,24 +3505,24 @@
             },
             "software": {
                 "zh": [
-                    "HomeKit 居家整合",
+                    "可分享至 Apple HomeKit",
                     "廚房自動化情境",
-                    "Siri 語音聲控"
+                    "已分享的設備可經 Apple 家庭 App 以 Siri 語音控制"
                 ],
                 "en": [
-                    "HomeKit Integration",
+                    "Shareable to Apple HomeKit",
                     "Kitchen Scene Automation",
-                    "Siri Voice Control"
+                    "Shared devices can be controlled by Siri through Apple's Home app"
                 ],
                 "fr": [
-                    "HomeKit Integration",
+                    "Partageable vers Apple HomeKit",
                     "Kitchen Scene Automation",
-                    "Siri Voice Control"
+                    "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
-                    "HomeKit Integration",
+                    "Apple HomeKit へ共有可能",
                     "Kitchen Scene Automation",
-                    "Siri Voice Control"
+                    "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ]
             },
             "features": {

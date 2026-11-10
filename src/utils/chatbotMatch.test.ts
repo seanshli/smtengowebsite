@@ -173,7 +173,7 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(e.answer.zh).not.toMatch(/合併|轉移|收購|\/\/h5\.smtengo\.com/)
     const faq45 = (faqs as any[]).find((f) => f.id === 45).answer.zh as string
     expect(faq45).toMatch(/^五條/)
-    expect(faq45).toMatch(/智管家商城/)
+    expect(faq45).toMatch(/enGo 安購商城/)
   })
   it('UM-001 A.16 / KB-001 A.17 sync (2026-09-29): account deletion is 請洽客服確認 everywhere (KB-001 §10.1 #7 undecided); low-stock threshold lives in the 告警 tab; top-right icons are 設備數據 not 用電統計; device data has an entry path and a bot entry', () => {
     const locs = ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']

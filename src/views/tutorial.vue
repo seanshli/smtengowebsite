@@ -355,12 +355,12 @@ const manualHits = computed(() => searchManuals(manuals, manualQuery.value))
 const MANUAL_TEXT: Record<string, Record<string, string>> = {
   heading: { zh: '商城使用手冊', zhCN: '商城使用手册', en: 'Shop user manuals', fr: 'Manuels de la boutique', ja: 'ストア利用マニュアル', es: 'Manuales de la tienda' },
   sub: {
-    zh: '智管家商城的完整操作說明，分為顧客、商家與加盟店三本，可線上閱讀或下載 PDF。',
-    zhCN: '智管家商城的完整操作说明，分为顾客、商家与加盟店三本，可在线阅读或下载 PDF。',
-    en: 'Complete guides to the enGo Store for customers, merchants and franchise stores. Read online or download the PDF.',
-    fr: 'Guides complets de la boutique enGo pour les clients, les commerçants et les franchisés, en ligne ou en PDF.',
-    ja: 'enGo ストアの操作説明。顧客・店舗・フランチャイズ店の 3 冊をオンラインまたは PDF で。',
-    es: 'Guías completas de la tienda enGo para clientes, comercios y franquicias, en línea o en PDF.',
+    zh: 'enGo 安購商城的完整操作說明，分為顧客、商家與加盟店三本，可線上閱讀或下載 PDF。',
+    zhCN: 'enGo 安购商城的完整操作说明，分为顾客、商家与加盟店三本，可在线阅读或下载 PDF。',
+    en: 'Complete guides to enGo Shop for customers, merchants and franchise stores. Read online or download the PDF.',
+    fr: 'Guides complets de enGo Shop pour les clients, les commerçants et les franchisés, en ligne ou en PDF.',
+    ja: 'enGo Shop の操作説明。顧客・店舗・フランチャイズ店の 3 冊をオンラインまたは PDF で。',
+    es: 'Guías completas de enGo Shop para clientes, comercios y franquicias, en línea o en PDF.',
   },
   searchLabel: { zh: '搜尋手冊', zhCN: '搜索手册', en: 'Search the manuals', fr: 'Rechercher dans les manuels', ja: 'マニュアルを検索', es: 'Buscar en los manuales' },
   placeholder: { zh: '例如：到貨通知、繼續付款、加盟店撥款', zhCN: '例如：到货通知、继续付款、加盟店拨款', en: 'e.g. 到貨通知, 退款, 加盟店', fr: 'ex. 到貨通知, 退款', ja: '例：到貨通知、退款', es: 'p. ej. 到貨通知, 退款' },

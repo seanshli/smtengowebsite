@@ -66,8 +66,8 @@ const MEMBERS: Member[] = [
     name: { zh: '黎世宏', en: 'Sean Li' },
     role: { zh: '共同創辦人・董事長暨總經理', en: 'Co-founder · Chairman & CEO' },
     story: {
-      zh: '美國麻省理工學院（MIT）博士，主修人工智慧、機器人與精密機械設計，累計逾二十八年產業經歷。曾於 Apple 參與 iPod／iPad／iPhone 產品開發，歷任敦南科技策略長、敦宏科技董事長、達爾科技亞太區新業務戰略與發展副總裁。於 enGo 主導自研 enGoCLC／MultiLink 跨設備整合中介層，以及公司二十七項專利的佈局。',
-      en: 'MIT Ph.D. in AI, robotics, and precision machine design, with over 28 years across hardware, software, and operations. At Apple he helped ship iPod, iPad, and iPhone; he has served as CSO of Lite-On Semiconductor, Chairman of Dyna Image, and VP of APAC New Business Strategy at Diodes Inc. At enGo he leads the enGoCLC/MultiLink integration layer and the company\'s 27-patent portfolio.'
+      zh: '美國麻省理工學院（MIT）博士，主修人工智慧、機器人與精密機械設計，累計逾二十八年產業經歷。曾於 Apple 參與 iPod／iPad／iPhone 產品開發，歷任敦南科技策略長、敦宏科技董事長、達爾科技亞太區新業務戰略與發展副總裁。於 enGo 主導自研 enGoCLC／MultiLink 跨設備整合中介層，以及公司二十四項專利的佈局。',
+      en: 'MIT Ph.D. in AI, robotics, and precision machine design, with over 28 years across hardware, software, and operations. At Apple he helped ship iPod, iPad, and iPhone; he has served as CSO of Lite-On Semiconductor, Chairman of Dyna Image, and VP of APAC New Business Strategy at Diodes Inc. At enGo he leads the enGoCLC/MultiLink integration layer and the company\'s 24-patent portfolio.'
     },
     creds: {
       zh: [

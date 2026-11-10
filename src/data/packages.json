@@ -228,7 +228,14 @@
                 "ja": "プレミアム豪華版",
                 "fr": "Édition Villa de Luxe"
             },
-            "price": "NT$ 99,999+",
+            "price": {
+                "zh": "洽詢",
+                "zhCN": "洽询",
+                "en": "Contact us",
+                "ja": "お問い合わせ",
+                "fr": "Sur demande",
+                "es": "Consultar"
+            },
             "suggested_usage": {
                 "zh": "三房以上 / 透天別墅 / 頂級玩家",
                 "en": "3BR+ / Villa / Premium Experience",

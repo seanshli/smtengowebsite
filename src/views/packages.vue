@@ -14,7 +14,7 @@
               <div class="p-card-header">
                 <h3 class="pkg-name">{{ (pkg.name as any)[locale] || pkg.name['zh'] }}</h3>
                 <p class="pkg-usage">{{ (pkg.suggested_usage as any)[locale] || pkg.suggested_usage['zh'] }}</p>
-                <div class="pkg-price">{{ pkg.price }}</div>
+                <div class="pkg-price">{{ typeof pkg.price === 'string' ? pkg.price : ((pkg.price as any)[locale] || (pkg.price as any).zh) }}</div>
               </div>
 
               <div class="p-card-body">

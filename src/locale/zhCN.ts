@@ -3,7 +3,7 @@ export const zhCNLocale = {
   homeTitle: '首页',
   aboutTitle: '关于enGo',
   productTitle: 'enGo产品',
-  mallTitle: '智管家商城',
+  mallTitle: 'enGo 商城',
   contactTitle: '联络我们',
   contactOnLine: '用 LINE 联系我们',
   tutorialTitle: '使用教学',
@@ -26,8 +26,8 @@ export const zhCNLocale = {
       description: 'enGo 以 AI 整合阳光、空气、水与食物，从健康、安心到便利，打造智慧生活的核心价值。'
     },
     brand: {
-      title: '品牌故事 | enGo「安购」的起源',
-      description: '了解 enGo「安购」的创立初衷与品牌故事，我们如何用科技让每个家庭享有高品质的智慧生活。'
+      title: '品牌故事 | enGo 的起源',
+      description: '了解 enGo 的创立初衷与品牌故事，我们如何用科技让每个家庭享有高品质的智慧生活。'
     },
     mission: {
       title: '我们的使命 | enGo',
@@ -47,20 +47,20 @@ export const zhCNLocale = {
     },
     ecosystem: {
       title: '智慧生态系 | enGo AIoT 整合平台',
-      description: '探索 enGo 智慧生态系，从 AI 中控、智慧净水到空气清净，串连家中每一个智慧装置。'
+      description: '探索 enGo 智慧生态系：墙挂平板、手机 App 与 enGo 商城三个入口，五条产品线与合作伙伴，串连家中每一个智慧设备。'
     },
     default: {
       title: 'enGo - 住家与社区合一的智慧生活系统',
-      description: 'enGo「安购」运用 AI 将阳光、空气、水与食物智慧整合，打造一站式智慧生活平台。',
+      description: 'enGo 运用 AI 将阳光、空气、水与食物智慧集成，打造一站式智慧生活平台。',
       keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 净水器, 云端仓储'
     },
     home: {
       title: 'enGo - 住家与社区合一的智慧生活系统',
-      description: 'enGo 是住家与社区合一的智慧生活系统：墙挂平板、手机 App 与云端服务，管理家中照明、空调、窗帘与传感器，以及社区公告、报修、公设预约。'
+      description: 'enGo 是住家与社区合一的智慧生活系统：墙挂平板、手机 App 与云端服务，管理家中照明、空调、窗帘与传感器，以及社区公告、报修、公设预约；enGo 安购商城提供社区订阅与邻里市集。'
     },
     product: {
-      title: '产品介绍 | enGo AI智慧中控系统 & 净水系统',
-      description: '探索 enGo AI智慧中控平板与水维氧智慧净水系统，提升家居舒适度与安全性。'
+      title: '产品介绍 | enGo AI智慧中控系统、净水系统与 enGo 商城',
+      description: '探索 enGo AI智慧中控平板、水维氧智慧净水系统与智慧环控，以及 enGo 安购商城的社区订阅与邻里市集。'
     },
     cases: {
       title: '案例分享 | 智慧家居实作纪录',
@@ -147,7 +147,7 @@ export const zhCNLocale = {
   // index (Top Level)
   pageTitle: 'AI 赋能家',
   intextLogo: '理家！虾咪攏嘸惊！',
-  paragraph1: 'enGo「安购」运用 AI 将阳光、空气、水与食物智慧整合，让家更健康、更安心。',
+  paragraph1: 'enGo 运用 AI 将阳光、空气、水与食物智慧集成，让家更健康、更安心。',
   paragraph2: '☀ 自然采光 , 💨 空气净化 , 💧 水质守护 , 🥗 食材管理 , 🔒 智慧安防',
   paragraph3: '从生活细节到安全防护，enGo 让科技充满温度，守护每一个家。',
   paragraph4: '节能减碳，智慧永续，enGo 让幸福生活每一刻都更美好。',
@@ -206,13 +206,13 @@ export const zhCNLocale = {
   fiveValues5: '节能减碳与企业永续责任',
   missionConclusion: '从台湾出发，enGo 正在重新定义「家」的意义。我们不只是卖产品，<font color="e05a35">我们打造让全家人都能微笑的生活方式。</font>',
   visionTitle: '公司愿景',
-  visionIntextLogo: '「安购」运用尖端AI技术，将阳光、空气、水和食物智能化地整合进家庭生活。打造节能、健康、减少浪费的爱地球智慧宅。',
+  visionIntextLogo: 'enGo 运用尖端AI技术，将阳光、空气、水和食物智能化地集成进家庭生活。打造节能、健康、减少浪费的爱地球智慧宅。',
   vision1: '拓展运用场景',
   vision2: '技术智能化',
   vision3: '品牌经营',
   vision4: '技术货架化',
   vision5: '多元化发展',
-  vision6: 'enGo 安购币回馈机制',
+  vision6: 'enGo 币回馈机制',
   vision7: 'B2B2C的互动架构',
 
   // vision page — 五大元素 body copy
@@ -238,7 +238,7 @@ export const zhCNLocale = {
       copy: '领先的智慧安防技术全天候守护您的家园，让您无忧无虑地享受高品质的家庭生活，体验社区经济带来的价值。'
     },
     closing:
-      'enGo「安购」，用科技温暖您的心灵，让 AI 帮您节能减碳，打造完美的家居生活。智慧管家不再是梦想，智慧家居 enGo「安购」将永远守护您。'
+      'enGo，用科技温暖您的心灵，让 AI 帮您节能减碳，打造完美的家居生活。智慧管家不再是梦想，智慧家居 enGo 将永远守护您。'
   },
 
   // ecosystem (Top Level)
@@ -348,7 +348,7 @@ export const zhCNLocale = {
       product: '我们的 AI 智慧中控平板整合了家电管理、安全监控与水处理系统。您可以前往「产品介绍」页面查看更多。',
       tutorial: '我们有针对个人、设计师与建筑商的专属教学。您可以前往「使用教学」页面了解详情。',
       contact: '您可以拨打 02-27510218，或在「联络我们」页面留下您的资料，我们将尽快联系您。',
-      purchase: '您可以点击选单中的「安购商城」连结前往选购，或关注我们的早鸟优惠活动。',
+      purchase: '您可以点击菜单中的「enGo 商城」链接前往选购，或关注我们的早鸟优惠活动。',
       default: '感谢您的询问，我们会尽快派真人客服为您服务。'
     }
   },
@@ -533,18 +533,18 @@ export const zhCNLocale = {
       }
     },
     shop: {
-      title: '智管家商城',
+      title: 'enGo 安购商城',
       lede: '社区订阅与邻里市集，送到您家门口。向社区信赖的商家订购生鲜、日用与智慧家居，商品送达社区大厅后，系统会通知您取货。',
       points: {
         p1: { title: '邻里市集', body: '社区信赖的商家上架生鲜、日用品、保健食品与智慧家居配件；搜索或浏览后加入购物车结账，社区内配送。' },
         p2: { title: '订阅方案', body: '银卡、金卡、白金卡三种方案：每周生鲜直送、每月日用补给、全站专属折扣，可随时暂停或变更，没有绑约。' },
         p3: { title: '在商城网站购物', body: '购物本身在商城网站进行。' }
       },
-      note: '智管家商城是原「安购商城」的新版本：同一个商城、新的平台与名称。商城订单、退换货与物流问题请洽商城客服。',
-      cta: '前往智管家商城',
+      note: 'enGo 安购商城已升级为新版本：同一个商城、新的平台。商城订单、退换货与物流问题请洽商城客服。',
+      cta: '前往 enGo 安购商城',
       ctaPlans: '看订阅方案',
-      alt: '智管家商城首页',
-      caption: '智管家商城 shoph5.smtengo.com，2026 年 9 月上线的新版商城。'
+      alt: 'enGo 安购商城首页',
+      caption: 'enGo 安购商城 shoph5.smtengo.com，2026 年 9 月上线的新版商城。'
     },
     packages: {
       tag: '套装方案',

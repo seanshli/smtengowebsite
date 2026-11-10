@@ -3,7 +3,7 @@ export const esLocale = {
   homeTitle: 'Inicio',
   aboutTitle: 'Acerca de enGo',
   productTitle: 'Producto enGo',
-  mallTitle: 'Tienda enGo',
+  mallTitle: 'enGo Shop',
   contactTitle: 'Contáctenos',
   contactOnLine: 'Contáctenos por LINE',
   tutorialTitle: 'Tutorial',
@@ -424,7 +424,7 @@ export const esLocale = {
       product: 'Nuestro Centro Inteligente AI integra electrodomésticos del hogar, seguridad y filtración de agua. Visita nuestra página de Producto para más detalles.',
       tutorial: 'Proporcionamos guías especializadas para individuos, diseñadores y constructores. Consulta nuestra página de Tutoriales.',
       contact: 'Llámanos al 02-27510218 o deja tus detalles en la página de Contacto, y nos pondremos en contacto contigo.',
-      purchase: 'Visita nuestra Tienda enGo para comprar en línea o sigue nuestras promociones para usuarios tempranos.',
+      purchase: 'Visita enGo Shop para comprar en línea o sigue nuestras promociones para usuarios tempranos.',
       default: 'Gracias por tu consulta. Un representante te asistirá en breve.'
     }
   }
