@@ -154,7 +154,7 @@ const PARTNERS: { zh: string; zhCN: string; en: string; zhRole: string; zhCNRole
   { zh: '大雅全屋裝修', zhCN: '大雅全屋装修', en: 'Daya Whole-Home Renovation', url: 'https://www.tayakitchen.com.tw/', zhRole: '台中，全屋裝修與建案智慧化，設有展示間', zhCNRole: '台中，全屋装修与建案智慧化，设有展示间', enRole: 'Taichung, whole-home renovation and smart developments, with a showroom' },
   { zh: '撰美室內裝修', zhCN: '撰美室内装修', en: 'Zhuanmei Interior Design', zhRole: '台北，全室裝修與系統櫥櫃，智慧家居展示空間', zhCNRole: '台北，全室装修与系统橱柜，智慧家居展示空间', enRole: 'Taipei, interiors and system cabinetry, smart-home showroom' },
   { zh: '米多力 MEDOLE', zhCN: '米多力 MEDOLE', en: 'MEDOLE', url: 'https://www.medole.com.tw/', zhRole: '吊隱式新風除濕機與 3合1 智慧空氣平衡系統', zhCNRole: '吊隐式新风除湿机与 3合1 智慧空气平衡系统', enRole: 'Ceiling-concealed fresh-air dehumidifiers and the 3-in-1 air balance system' },
-  { zh: '麗寶生技', zhCN: '丽宝生技', en: 'Libo Biotech', zhRole: '智能富氧艙優化合作', zhCNRole: '智能富氧舱优化合作', enRole: 'Smart oxygen-chamber optimisation' },
+  { zh: '麗寶生醫', zhCN: '丽宝生医', en: 'Lihpao Life Science', url: 'https://libobio.com/?page_id=527', zhRole: '智能富氧艙優化合作', zhCNRole: '智能富氧舱优化合作', enRole: 'Smart Oxygen Chamber optimization' },
   { zh: '合野木業', zhCN: '合野木业', en: 'Heye Woodworks', url: 'https://www.he-ye.com/', zhRole: '智慧功能櫃，北部展示間', zhCNRole: '智慧功能柜，北部展示间', enRole: 'Smart functional cabinetry, showroom in northern Taiwan' },
   { zh: '嘉義達光電、金毅泰節能科技', zhCN: '嘉义达光电、金毅泰节能科技', en: 'Chia-Yi Da Optoelectronics and Jin Yi Tai Energy', zhRole: '能源與節能方案', zhCNRole: '能源与节能方案', enRole: 'Energy and energy-saving solutions' }
 ]

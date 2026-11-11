@@ -61,4 +61,11 @@ describe('content rulings 2026-11-10', () => {
     expect(COPY['src/locale/zhCN.ts']).toContain("mallTitle: 'enGo 商城'")
     for (const l of ['en', 'ja', 'fr', 'es']) expect(COPY[`src/locale/${l}.ts`], l).toContain("mallTitle: 'enGo Shop'")
   })
+  it('partner 麗寶生醫 uses its current name (Sean 2026-11-11; official site libobio.com: LIHPAO LIFE SCIENCE CORP.)', () => {
+    for (const [f, text] of Object.entries(COPY)) expect(text, f).not.toMatch(/麗寶生技|丽宝生技|Lihpao Biotech|Libo Biotech/)
+    const all = Object.values(COPY).join('\n')
+    expect(all).toContain('麗寶生醫')
+    expect(all).toContain('Lihpao Life Science')
+    expect(all).toContain('智能富氧艙優化合作')
+  })
 })
