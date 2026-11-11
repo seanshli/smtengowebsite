@@ -36,7 +36,7 @@
 |---|---|---|---|---|
 | A.1 | 2026-10-19 | 納入文件管制：賦予文件編號、版次與內容雜湊；條文內容同 2026-04 版，未變更。 | `41ab3158c4c3e565b33661fe8a282ff6cb621986bbdd0be95e27f0023b1cadea` | `c2eb52cdd9fe1d252a00c595663c009710ae606ec52cfdc845e07a23702fe54b` |
 | A.2 | 2026-11-09 | 英文公司名稱更正為 Smart enGo Home Technology Corp.（原誤植為中文名稱音譯 Zhiguanjia Technology Co., Ltd.）；條文內容未變更。 | `a4f14b0979dc16a5d4e349f4eada87494f92db3f45b155ad013ed6dd823bf25b` | `57e50bad2fc85d7ac0b42d524004754420d9543ab58dcaf1fe9ef3e88b3f8da8` |
-| A.3 | 2026-11-11 | 品牌名稱統一：服務名稱「ENGO 智管家」「enGo 智管家」改為 enGo；App 名稱改為 enGo智慧管家 App；商城一律為 enGo 安購商城（英文 enGo Shop）；英文版 enGo Smart Home 改為 enGo。公司法定名稱（智管家科技股份有限公司／Smart enGo Home Technology Corp.）與條文權利義務均未變更。 | `46dfa7df81f66afe440ecd8e4728ec67e3341c0333020860c617d28b18251a45` | `f2a0709508d31ce3f68a808fd70801acfa4f8306373e96fbb2b068fb2c9cbfdf` |
+| A.3 | 2026-11-11 | 品牌名稱統一：服務名稱「ENGO 智管家」「enGo 智管家」改為 enGo；App 名稱改為 enGo智慧管家 App；商城一律為 enGo 安購商城（英文 enGo Shop）；英文版 enGo Smart Home 改為 enGo；商城點數名稱更新為 App 現行名稱「engo 幣」（原為舊名）。公司法定名稱（智管家科技股份有限公司／Smart enGo Home Technology Corp.）與條文權利義務均未變更。 | `84a30651a050daefaef6767b86a0a5cfc54553f98136e9a19cc8f5f8a4b1e203` | `1ce95bcdd9c2b213b23fb39108292648e1b67d0ab8bfe89e8c0502f997ebade3` |
 
 ## 變更程序 Change procedure
 

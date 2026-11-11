@@ -50,6 +50,7 @@ describe('content rulings 2026-11-10', () => {
       expect(zh, f).not.toMatch(/ENGO 智管家|enGo ?智管家|智管家 ?APP|智管家用戶/)
       expect(zh.replace(/智管家科技股份有限公司/g, ''), f).not.toMatch(/智管家/)
       expect(en, f).not.toMatch(/enGo Smart Home|enGo智管家/)
+      expect(zh + en, f).not.toMatch(/安購幣|enGo Coin/) // Shop UI names the points 「engo 幣」
     }
   })
   it('English pages call the brand enGo, not enGo Smart Home', () => {

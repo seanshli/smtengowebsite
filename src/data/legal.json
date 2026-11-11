@@ -181,10 +181,10 @@
         {
           "revision": "A.3",
           "date": "2026-11-11",
-          "change": "品牌名稱統一：服務名稱「ENGO 智管家」「enGo 智管家」改為 enGo；App 名稱改為 enGo智慧管家 App；商城一律為 enGo 安購商城（英文 enGo Shop）；英文版 enGo Smart Home 改為 enGo。公司法定名稱（智管家科技股份有限公司／Smart enGo Home Technology Corp.）與條文權利義務均未變更。",
+          "change": "品牌名稱統一：服務名稱「ENGO 智管家」「enGo 智管家」改為 enGo；App 名稱改為 enGo智慧管家 App；商城一律為 enGo 安購商城（英文 enGo Shop）；英文版 enGo Smart Home 改為 enGo；商城點數名稱更新為 App 現行名稱「engo 幣」（原為舊名）。公司法定名稱（智管家科技股份有限公司／Smart enGo Home Technology Corp.）與條文權利義務均未變更。",
           "sha256": {
-            "zh": "46dfa7df81f66afe440ecd8e4728ec67e3341c0333020860c617d28b18251a45",
-            "en": "f2a0709508d31ce3f68a808fd70801acfa4f8306373e96fbb2b068fb2c9cbfdf"
+            "zh": "84a30651a050daefaef6767b86a0a5cfc54553f98136e9a19cc8f5f8a4b1e203",
+            "en": "1ce95bcdd9c2b213b23fb39108292648e1b67d0ab8bfe89e8c0502f997ebade3"
           }
         }
       ]
