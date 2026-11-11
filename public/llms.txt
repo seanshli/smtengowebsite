@@ -15,6 +15,7 @@
 - [套裝方案（零售定價）](https://www.smtengo.com/packages)
 - [案例分享](https://www.smtengo.com/cases)
 - [聯絡我們](https://www.smtengo.com/contact): 電話 02-27510218，週一至週五 09:00-18:00。
+- 簡體中文版：與繁體中文同一份內容的簡體版本位於 https://www.smtengo.com/zh-cn 之下（例如 /zh-cn/product）。
 
 ## 可直接引用的事實
 
