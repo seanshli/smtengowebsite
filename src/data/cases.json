@@ -65,8 +65,8 @@
                         "zh": "新北新莊",
                         "zhCN": "新北新庄",
                         "en": "Xinzhuang, New Taipei",
-                        "fr": "Xinzhuang, New Taipei",
-                        "ja": "Xinzhuang, New Taipei",
+                        "fr": "Xinzhuang, Nouveau Taipei",
+                        "ja": "新北市新荘区",
                         "es": "Xinzhuang, Nuevo Taipéi"
                     }
                 },
@@ -83,8 +83,8 @@
                         "zh": "約 25 坪",
                         "zhCN": "约 25 坪",
                         "en": "Approx. 25 Pings",
-                        "fr": "Approx. 25 Pings",
-                        "ja": "Approx. 25 Pings",
+                        "fr": "Env. 25 pings",
+                        "ja": "約25坪",
                         "es": "Aprox. 25 pings"
                     }
                 },
@@ -101,8 +101,8 @@
                         "zh": "三房兩廳",
                         "zhCN": "三房两厅",
                         "en": "3 Bedrooms, 2 Living Rooms",
-                        "fr": "3 Bedrooms, 2 Living Rooms",
-                        "ja": "3 Bedrooms, 2 Living Rooms",
+                        "fr": "3 chambres, 2 salons",
+                        "ja": "3ベッドルーム・2リビング",
                         "es": "3 recámaras, 2 salas"
                     }
                 },
@@ -119,9 +119,9 @@
                         "zh": "2024.10",
                         "zhCN": "2024.10",
                         "en": "Oct 2024",
-                        "fr": "Oct 2024",
-                        "ja": "Oct 2024",
-                        "es": "Oct 2024"
+                        "fr": "oct. 2024",
+                        "ja": "2024年10月",
+                        "es": "oct. 2024"
                     }
                 }
             ],
@@ -352,8 +352,8 @@
                 "zh": "這是一間智能展示間，屋主是一位室內設計師，裝潢前就很清楚要打造智能展示間。屋主需求是針對書房的燈控系統進行改善，搭配智能燈具切換不同模式，如：專注模式、工作模式等。",
                 "zhCN": "这是一间智能展示间，屋主是一位室内设计师，装潢前就很清楚要打造智能展示间。屋主需求是针对书房的灯控系统进行改善，搭配智能灯具切换不同模式，如：专注模式、工作模式等。",
                 "en": "This is a smart showroom project. The owner, an interior designer, wanted a smart showroom from the start. The focus was on improving the lighting control system in the study, using smart lights to switch between modes like Focus Mode and Work Mode.",
-                "fr": "This is a smart showroom project. The owner, an interior designer, wanted a smart showroom from the start. The focus was on improving the lighting control system in the study, using smart lights to switch between modes like Focus Mode and Work Mode.",
-                "ja": "This is a smart showroom project. The owner, an interior designer, wanted a smart showroom from the start. The focus was on improving the lighting control system in the study, using smart lights to switch between modes like Focus Mode and Work Mode.",
+                "fr": "Il s'agit d'un projet de showroom connecté. Le propriétaire, architecte d'intérieur, souhaitait dès le départ un showroom connecté. L'accent a été mis sur l'amélioration du système de contrôle de l'éclairage du bureau, avec des lampes connectées permettant de basculer entre des modes tels que le mode Concentration et le mode Travail.",
+                "ja": "スマートショールームの案件です。オーナーはインテリアデザイナーで、内装工事の前からスマートショールームをつくる方針を明確にしていました。ご要望は書斎の照明制御システムの改善で、スマート照明を組み合わせて、集中モード・仕事モードなどのモードを切り替えられるようにしました。",
                 "es": "Este es un proyecto de sala de exhibición inteligente. El propietario, diseñador de interiores, quería una sala de exhibición inteligente desde antes de la remodelación. El enfoque fue mejorar el sistema de control de iluminación del estudio, con luminarias inteligentes que permiten cambiar entre modos como el de concentración y el de trabajo."
             },
             "basic_info": [
@@ -370,8 +370,8 @@
                         "zh": "新北市永和",
                         "zhCN": "新北市永和",
                         "en": "Yonghe, New Taipei",
-                        "fr": "Yonghe, New Taipei",
-                        "ja": "Yonghe, New Taipei",
+                        "fr": "Yonghe, Nouveau Taipei",
+                        "ja": "新北市永和区",
                         "es": "Yonghe, Nuevo Taipéi"
                     }
                 },
@@ -406,8 +406,8 @@
                         "zh": "書房改善 (智能展示間)",
                         "zhCN": "书房改善 (智能展示间)",
                         "en": "Study Room Renovation",
-                        "fr": "Study Room Renovation",
-                        "ja": "Study Room Renovation",
+                        "fr": "Rénovation du bureau",
+                        "ja": "書斎の改善（スマートショールーム）",
                         "es": "Remodelación del estudio (sala de exhibición inteligente)"
                     }
                 },
@@ -424,8 +424,8 @@
                         "zh": "2025.04",
                         "zhCN": "2025.04",
                         "en": "Apr 2025",
-                        "fr": "Apr 2025",
-                        "ja": "Apr 2025",
+                        "fr": "avr. 2025",
+                        "ja": "2025年4月",
                         "es": "Abr 2025"
                     }
                 }
@@ -452,15 +452,15 @@
                     "Gateway"
                 ],
                 "fr": [
-                    "Scene Switch (2 units)",
-                    "COB Dual Color Temp Light Strip",
-                    "Dual Color Temp Downlights",
+                    "Interrupteur de scènes (2 unités)",
+                    "Ruban lumineux COB à double température de couleur",
+                    "Spots encastrés à double température de couleur",
                     "Gateway"
                 ],
                 "ja": [
-                    "Scene Switch (2 units)",
-                    "COB Dual Color Temp Light Strip",
-                    "Dual Color Temp Downlights",
+                    "シーンスイッチ（2個）",
+                    "COB二色温度ライトストリップ",
+                    "二色温度・調光調色ダウンライト",
                     "Gateway"
                 ],
                 "es": [
@@ -487,14 +487,14 @@
                     "Scene Configuration"
                 ],
                 "fr": [
-                    "Hardware Installation",
-                    "Software Pairing & Setup",
-                    "Scene Configuration"
+                    "Installation du matériel",
+                    "Appairage et configuration logicielle",
+                    "Configuration des scènes"
                 ],
                 "ja": [
-                    "Hardware Installation",
-                    "Software Pairing & Setup",
-                    "Scene Configuration"
+                    "ハードウェア施工",
+                    "ソフトウェアのペアリング・設定",
+                    "シーン設定"
                 ],
                 "es": [
                     "Instalación del hardware",
@@ -520,13 +520,13 @@
                 ],
                 "fr": [
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple",
-                    "One-touch Scenes (Away, Home, Sleep, Wake, Theater)",
-                    "Leak Detection"
+                    "Scènes en un geste (Départ, Retour, Coucher, Réveil, Cinéma)",
+                    "Détection de fuite d'eau"
                 ],
                 "ja": [
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能",
-                    "One-touch Scenes (Away, Home, Sleep, Wake, Theater)",
-                    "Leak Detection"
+                    "ワンタッチシーン制御：外出、帰宅、就寝、起床、シアター",
+                    "水漏れ検知"
                 ],
                 "es": [
                     "Los dispositivos compartidos se pueden controlar con Siri mediante la app Casa de Apple",
@@ -992,18 +992,18 @@
                     "Smart Home Hub"
                 ],
                 "fr": [
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Automated Curtain Control",
-                    "Smart AC Control",
-                    "Smart Home Hub"
+                    "Système d'interrupteurs connectés",
+                    "Contrôle de l'éclairage de toute la maison",
+                    "Contrôle automatisé des rideaux",
+                    "Contrôle intelligent de la climatisation",
+                    "Centrale domotique"
                 ],
                 "ja": [
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Automated Curtain Control",
-                    "Smart AC Control",
-                    "Smart Home Hub"
+                    "スマートスイッチシステム",
+                    "全室の照明制御",
+                    "カーテンの自動制御",
+                    "エアコンのスマート制御",
+                    "スマートホームハブ"
                 ],
                 "es": [
                     "Sistema de interruptores inteligentes",
@@ -1034,14 +1034,14 @@
                 ],
                 "fr": [
                     "Partageable vers Apple HomeKit",
-                    "Automated Scenes (Away/Home)",
-                    "Schedule Control",
+                    "Scènes automatisées (Départ/Retour)",
+                    "Contrôle par programmation horaire",
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
                     "Apple HomeKit へ共有可能",
-                    "Automated Scenes (Away/Home)",
-                    "Schedule Control",
+                    "自動化シーン設定（外出／帰宅）",
+                    "生活スケジュール制御",
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ],
                 "es": [
@@ -1071,16 +1071,16 @@
                     "One-touch Scene Execution"
                 ],
                 "fr": [
-                    "Control devices via App from anywhere",
-                    "GPS Geofencing for Away/Home scenes",
-                    "Sensor Automation (Motion, Temp/Humidity)",
-                    "One-touch Scene Execution"
+                    "Contrôle des appareils depuis l'application, où que l'on soit",
+                    "Géolocalisation GPS pour déclencher les scènes Départ/Retour",
+                    "Automatisation par capteurs (mouvement, température/humidité)",
+                    "Exécution de scènes en un geste"
                 ],
                 "ja": [
-                    "Control devices via App from anywhere",
-                    "GPS Geofencing for Away/Home scenes",
-                    "Sensor Automation (Motion, Temp/Humidity)",
-                    "One-touch Scene Execution"
+                    "いつでもどこでもスマートフォンのアプリから自宅の機器を操作",
+                    "GPSの位置情報で外出／帰宅シーンを自動実行",
+                    "センサーによる自動化（人感、温湿度）",
+                    "ワンタッチで複数の機器を連動"
                 ],
                 "es": [
                     "Control de los dispositivos de la casa desde la app, en cualquier momento y lugar",
@@ -1146,8 +1146,8 @@
                 "zh": "一房兩廳一衛",
                 "zhCN": "一房两厅一卫",
                 "en": "1 Bedroom, 2 Living Rooms, 1 Bathroom",
-                "fr": "1 Bedroom, 2 Living Rooms, 1 Bathroom",
-                "ja": "1 Bedroom, 2 Living Rooms, 1 Bathroom",
+                "fr": "1 chambre, 2 salons, 1 salle de bain",
+                "ja": "1ベッドルーム・2リビング・1バスルーム",
                 "es": "1 recámara, 2 salas, 1 baño"
             },
             "basic_info": [
@@ -1200,8 +1200,8 @@
                         "zh": "1房2廳1衛",
                         "zhCN": "1房2厅1卫",
                         "en": "1 Bedrooms, 2 Living Rooms, 1 Bathrooms",
-                        "fr": "1 Bedrooms, 2 Living Rooms, 1 Bathrooms",
-                        "ja": "1 Bedrooms, 2 Living Rooms, 1 Bathrooms",
+                        "fr": "1 chambre, 2 salons, 1 salle de bain",
+                        "ja": "1ベッドルーム・2リビング・1バスルーム",
                         "es": "1 recámara, 2 salas, 1 baño"
                     }
                 },
@@ -1247,18 +1247,18 @@
                     "Smart Home Hub"
                 ],
                 "fr": [
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Automated Curtain Control",
-                    "Smart AC Control",
-                    "Smart Home Hub"
+                    "Système d'interrupteurs connectés",
+                    "Contrôle de l'éclairage de toute la maison",
+                    "Contrôle automatisé des rideaux",
+                    "Contrôle intelligent de la climatisation",
+                    "Centrale domotique"
                 ],
                 "ja": [
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Automated Curtain Control",
-                    "Smart AC Control",
-                    "Smart Home Hub"
+                    "スマートスイッチシステム",
+                    "全室の照明制御",
+                    "カーテンの自動制御",
+                    "エアコンのスマート制御",
+                    "スマートホームハブ"
                 ],
                 "es": [
                     "Sistema de interruptores inteligentes",
@@ -1289,14 +1289,14 @@
                 ],
                 "fr": [
                     "Partageable vers Apple HomeKit",
-                    "Automated Scenes (Away/Home)",
-                    "Schedule Control",
+                    "Scènes automatisées (Départ/Retour)",
+                    "Contrôle par programmation horaire",
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
                     "Apple HomeKit へ共有可能",
-                    "Automated Scenes (Away/Home)",
-                    "Schedule Control",
+                    "自動化シーン設定（外出／帰宅）",
+                    "生活スケジュール制御",
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ],
                 "es": [
@@ -1326,16 +1326,16 @@
                     "One-touch Scene Execution"
                 ],
                 "fr": [
-                    "Control devices via App from anywhere",
-                    "GPS Geofencing for Away/Home scenes",
-                    "Sensor Automation (Motion, Temp/Humidity)",
-                    "One-touch Scene Execution"
+                    "Contrôle des appareils depuis l'application, où que l'on soit",
+                    "Géolocalisation GPS pour déclencher les scènes Départ/Retour",
+                    "Automatisation par capteurs (mouvement, température/humidité)",
+                    "Exécution de scènes en un geste"
                 ],
                 "ja": [
-                    "Control devices via App from anywhere",
-                    "GPS Geofencing for Away/Home scenes",
-                    "Sensor Automation (Motion, Temp/Humidity)",
-                    "One-touch Scene Execution"
+                    "いつでもどこでもスマートフォンのアプリから自宅の機器を操作",
+                    "GPSの位置情報で外出／帰宅シーンを自動実行",
+                    "センサーによる自動化（人感、温湿度）",
+                    "ワンタッチで複数の機器を連動"
                 ],
                 "es": [
                     "Control de los dispositivos de la casa desde la app, en cualquier momento y lugar",
@@ -3175,8 +3175,8 @@
                 "zh": "屋主是一位家庭主婦，希望打造全屋智能家居。主要針對燈光、窗簾、空調進控制，需求是能透過手機、聲控及遠端操作。特別要求在玄關處設定「一鍵離家」模式，防止陽光照射家具。",
                 "zhCN": "屋主是一位家庭主妇，希望打造全屋智能家居。主要针对灯光、窗帘、空调进控制，需求是能透过手机、声控及远程操作。特别要求在玄关处设置「一键离家」模式，防止阳光照射家具。",
                 "en": "The owner, a housewife, wanted a full smart home. Key requirements were control over lights, curtains, and AC via app, voice, and remote. Specifically requested a 'One-touch Away' mode at the entrance to prevent sun damage to furniture.",
-                "fr": "The owner, a housewife, wanted a full smart home. Key requirements were control over lights, curtains, and AC via app, voice, and remote. Specifically requested a 'One-touch Away' mode at the entrance to prevent sun damage to furniture.",
-                "ja": "The owner, a housewife, wanted a full smart home. Key requirements were control over lights, curtains, and AC via app, voice, and remote. Specifically requested a 'One-touch Away' mode at the entrance to prevent sun damage to furniture.",
+                "fr": "La propriétaire, femme au foyer, souhaitait une maison entièrement connectée. Les principales exigences étaient le contrôle de l'éclairage, des rideaux et de la climatisation par application, par la voix et à distance. Un mode « Départ en un geste » a notamment été demandé à l'entrée afin de protéger les meubles des dommages causés par le soleil.",
+                "ja": "オーナーは主婦の方で、全室のスマートホーム化を希望されました。主なご要望は、照明・カーテン・エアコンをアプリ、音声、遠隔操作で制御できることです。特に、玄関に「ワンタッチ外出」モードを設定し、日差しによる家具の傷みを防ぎたいとのご要望がありました。",
                 "es": "La propietaria, ama de casa, quería un hogar inteligente completo. El control de las luces, las cortinas y el aire acondicionado desde la app, por voz y de forma remota era el requisito principal. Pidió en especial un modo de salida con un toque en la entrada para evitar que el sol dañe los muebles."
             },
             "basic_info": [
@@ -3193,8 +3193,8 @@
                         "zh": "桃園市",
                         "zhCN": "桃园市",
                         "en": "Taoyuan City",
-                        "fr": "Taoyuan City",
-                        "ja": "Taoyuan City",
+                        "fr": "Ville de Taoyuan",
+                        "ja": "桃園市",
                         "es": "Ciudad de Taoyuan"
                     }
                 },
@@ -3229,8 +3229,8 @@
                         "zh": "三房兩廳",
                         "zhCN": "三房两厅",
                         "en": "3 Bedrooms, 2 Living Rooms",
-                        "fr": "3 Bedrooms, 2 Living Rooms",
-                        "ja": "3 Bedrooms, 2 Living Rooms",
+                        "fr": "3 chambres, 2 salons",
+                        "ja": "3ベッドルーム・2リビング",
                         "es": "3 recámaras, 2 salas"
                     }
                 },
@@ -3247,9 +3247,9 @@
                         "zh": "2025.05",
                         "zhCN": "2025.05",
                         "en": "May 2025",
-                        "fr": "May 2025",
-                        "ja": "May 2025",
-                        "es": "May 2025"
+                        "fr": "mai 2025",
+                        "ja": "2025年5月",
+                        "es": "may. 2025"
                     }
                 }
             ],
@@ -3276,17 +3276,17 @@
                     "Downlights"
                 ],
                 "fr": [
-                    "Full House Smart Switches (13 units)",
-                    "AC Control (4 units)",
-                    "Electric Curtains (3 sets)",
-                    "COB Light Strips",
+                    "Interrupteurs connectés pour toute la maison (13 unités)",
+                    "Contrôle de la climatisation (4 unités)",
+                    "Rideaux motorisés (3 ensembles)",
+                    "Rubans lumineux COB",
                     "Downlights"
                 ],
                 "ja": [
-                    "Full House Smart Switches (13 units)",
-                    "AC Control (4 units)",
-                    "Electric Curtains (3 sets)",
-                    "COB Light Strips",
+                    "全室スマートスイッチ（13個）",
+                    "全室エアコン制御（4台）",
+                    "電動カーテン（3セット）",
+                    "COB二色温度ライトストリップ",
                     "Downlights"
                 ],
                 "es": [
@@ -3320,18 +3320,18 @@
                     "Network Planning"
                 ],
                 "fr": [
-                    "Hardware Installation",
-                    "Software Pairing",
+                    "Installation du matériel",
+                    "Appairage logiciel",
                     "Partageable vers Apple HomeKit",
-                    "5 Major Scenes",
-                    "Network Planning"
+                    "5 scènes principales",
+                    "Planification du réseau"
                 ],
                 "ja": [
-                    "Hardware Installation",
-                    "Software Pairing",
+                    "ハードウェア施工",
+                    "ソフトウェアのペアリング",
                     "Apple HomeKit へ共有可能",
-                    "5 Major Scenes",
-                    "Network Planning"
+                    "5つの主要シーン設定",
+                    "ネットワーク設計"
                 ],
                 "es": [
                     "Instalación del hardware",
@@ -3365,17 +3365,17 @@
                 ],
                 "fr": [
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple",
-                    "One-touch Scenes",
-                    "Bedside Night Light Automation",
-                    "Smart AC Automation (>30°C)",
-                    "Leak Detection"
+                    "Scènes en un geste",
+                    "Automatisation de la veilleuse de chevet",
+                    "Automatisation de la climatisation (>30 °C)",
+                    "Détection de fuite d'eau"
                 ],
                 "ja": [
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能",
-                    "One-touch Scenes",
-                    "Bedside Night Light Automation",
-                    "Smart AC Automation (>30°C)",
-                    "Leak Detection"
+                    "ワンタッチシーン制御",
+                    "ベッドサイドの常夜灯の連動",
+                    "エアコンのタイマー停止と温度センサー連動（30℃超）",
+                    "水漏れ検知"
                 ],
                 "es": [
                     "Los dispositivos compartidos se pueden controlar con Siri mediante la app Casa de Apple",
@@ -3441,8 +3441,8 @@
                 "zh": "屋主為工程師，重視劇院模式的打造。除了全屋燈光、窗簾、空調的基礎智能控制外，特別強調電視畫面燈光渲染同步，營造沉浸式的影音同步效果。",
                 "zhCN": "屋主为工程师，重视剧院模式的打造。除了全屋灯光、窗帘、空调的基础智能控制外，特别强调电视画面灯光渲染同步，营造沉浸式的影音同步效果。",
                 "en": "The owner, an engineer, prioritized a Theater Mode. Beyond basic control of lights, curtains, and AC, they emphasized TV-sync lighting for an immersive experience.",
-                "fr": "The owner, an engineer, prioritized a Theater Mode. Beyond basic control of lights, curtains, and AC, they emphasized TV-sync lighting for an immersive experience.",
-                "ja": "The owner, an engineer, prioritized a Theater Mode. Beyond basic control of lights, curtains, and AC, they emphasized TV-sync lighting for an immersive experience.",
+                "fr": "Le propriétaire, ingénieur, a accordé la priorité à un mode Cinéma. Au-delà du contrôle de base de l'éclairage, des rideaux et de la climatisation, il a insisté sur un éclairage synchronisé avec le téléviseur pour une expérience immersive.",
+                "ja": "オーナーはエンジニアの方で、シアターモードづくりを重視されました。全室の照明・カーテン・エアコンの基本的なスマート制御に加え、テレビ映像と連動した照明演出を特に重視し、没入感のある映像・照明の同期体験を実現しました。",
                 "es": "El propietario, ingeniero, dio prioridad al modo cine. Además del control básico inteligente de las luces, las cortinas y el aire acondicionado de toda la casa, puso especial énfasis en la iluminación sincronizada con la imagen de la TV para lograr una experiencia inmersiva."
             },
             "basic_info": [
@@ -3459,8 +3459,8 @@
                         "zh": "桃園市",
                         "zhCN": "桃园市",
                         "en": "Taoyuan City",
-                        "fr": "Taoyuan City",
-                        "ja": "Taoyuan City",
+                        "fr": "Ville de Taoyuan",
+                        "ja": "桃園市",
                         "es": "Ciudad de Taoyuan"
                     }
                 },
@@ -3495,8 +3495,8 @@
                         "zh": "兩房一廳",
                         "zhCN": "两房一厅",
                         "en": "2 Bedrooms, 1 Living Room",
-                        "fr": "2 Bedrooms, 1 Living Room",
-                        "ja": "2 Bedrooms, 1 Living Room",
+                        "fr": "2 chambres, 1 salon",
+                        "ja": "2ベッドルーム・1リビング",
                         "es": "2 recámaras, 1 sala"
                     }
                 },
@@ -3513,9 +3513,9 @@
                         "zh": "2025.03",
                         "zhCN": "2025.03",
                         "en": "Mar 2025",
-                        "fr": "Mar 2025",
-                        "ja": "Mar 2025",
-                        "es": "Mar 2025"
+                        "fr": "mars 2025",
+                        "ja": "2025年3月",
+                        "es": "mar. 2025"
                     }
                 }
             ],
@@ -3542,18 +3542,18 @@
                     "Central Hub"
                 ],
                 "fr": [
-                    "Full House Smart Switches (13 units)",
-                    "AC Control (4 units)",
-                    "Electric Curtains (3 sets)",
-                    "Smart Lights",
-                    "Central Hub"
+                    "Interrupteurs connectés pour toute la maison (13 unités)",
+                    "Contrôle de la climatisation (4 unités)",
+                    "Rideaux motorisés (3 ensembles)",
+                    "Lampes connectées",
+                    "Centrale d'intégration"
                 ],
                 "ja": [
-                    "Full House Smart Switches (13 units)",
-                    "AC Control (4 units)",
-                    "Electric Curtains (3 sets)",
-                    "Smart Lights",
-                    "Central Hub"
+                    "全室スマートスイッチ（13個）",
+                    "全室エアコン制御（4台）",
+                    "電動カーテン（3セット）",
+                    "スマート照明／ダウンライト",
+                    "統合ハブ"
                 ],
                 "es": [
                     "Interruptores inteligentes de toda la casa (13 piezas)",
@@ -3583,16 +3583,16 @@
                     "Network Planning"
                 ],
                 "fr": [
-                    "Hardware Setup",
+                    "Installation et configuration du matériel",
                     "Partageable vers Apple HomeKit",
-                    "Theater Mode Sync",
-                    "Network Planning"
+                    "Synchronisation du mode Cinéma",
+                    "Planification du réseau"
                 ],
                 "ja": [
-                    "Hardware Setup",
+                    "ハードウェア施工・設定",
                     "Apple HomeKit へ共有可能",
-                    "Theater Mode Sync",
-                    "Network Planning"
+                    "シアターモードのライトストリップ設定・統合",
+                    "ネットワーク設計"
                 ],
                 "es": [
                     "Instalación y configuración del hardware",
@@ -3624,18 +3624,18 @@
                     "Leak Detection"
                 ],
                 "fr": [
-                    "TV Sync Lighting (Theater Mode)",
+                    "Éclairage synchronisé avec le téléviseur (mode Cinéma)",
                     "Scènes en un geste ; appareils partagés commandables avec Siri via l'app Maison d'Apple",
-                    "Bedside Light Linkage",
-                    "Smart AC Automation",
-                    "Leak Detection"
+                    "Liaison avec la lampe de chevet",
+                    "Automatisation de la climatisation selon la température",
+                    "Détection de fuite d'eau"
                 ],
                 "ja": [
-                    "TV Sync Lighting (Theater Mode)",
+                    "テレビ映像連動の照明演出と映像・照明の同期（シアターモード）",
                     "ワンタップのシーン操作。共有したデバイスは Apple のホームアプリから Siri で操作可能",
-                    "Bedside Light Linkage",
-                    "Smart AC Automation",
-                    "Leak Detection"
+                    "自動化制御：ベッドサイド照明の連動",
+                    "温度センサーによるエアコン起動",
+                    "水漏れ検知"
                 ],
                 "es": [
                     "Iluminación sincronizada con la imagen de la TV y el audio (modo cine)",
@@ -3992,12 +3992,12 @@
         "image": "/images/cases/case-home.jpg",
         "details": {
             "intro": {
-                "zh": "屋主追求全屋智能與安全防護。需求涵蓋燈控、智能門鎖、安防與空調，實現手機、聲控及遠端全方位管理。玄關同樣配置了一鍵離家自動化。",
-                "zhCN": "屋主追求全屋智能与安全防护。需求涵盖灯控、智能门锁、安防与空调，实现手机、声控及远程全方位管理。玄关同样配置了一键离家自动化。",
-                "en": "The owner sought full smart home capability and security. Requirements included lighting, smart locks, security, and AC, managed via phone, voice, and remote. Also features 'One-touch Away' automation at the entrance.",
-                "fr": "The owner sought full smart home capability and security. Requirements included lighting, smart locks, security, and AC, managed via phone, voice, and remote. Also features 'One-touch Away' automation at the entrance.",
-                "ja": "The owner sought full smart home capability and security. Requirements included lighting, smart locks, security, and AC, managed via phone, voice, and remote. Also features 'One-touch Away' automation at the entrance.",
-                "es": "El propietario buscaba un hogar inteligente completo con protección de seguridad. Los requisitos abarcaban iluminación, cerradura inteligente, seguridad y aire acondicionado, con gestión integral desde el celular, por voz y de forma remota. En la entrada también se configuró la automatización de salida con un toque."
+                "zh": "屋主追求全屋智能與安全防護。需求涵蓋燈控、安防與空調，實現手機、聲控及遠端全方位管理。玄關同樣配置了一鍵離家自動化。",
+                "zhCN": "屋主追求全屋智能与安全防护。需求涵盖灯控、安防与空调，实现手机、声控及远程全方位管理。玄关同样配置了一键离家自动化。",
+                "en": "The owner sought full smart home capability and security. Requirements included lighting, security, and AC, managed via phone, voice, and remote. Also features 'One-touch Away' automation at the entrance.",
+                "fr": "Le propriétaire recherchait une maison entièrement connectée et sécurisée. Les besoins comprenaient l'éclairage, la sécurité et la climatisation, gérés par téléphone, par la voix et à distance. Une automatisation « Départ en un geste » est également prévue à l'entrée.",
+                "ja": "オーナーは、全室のスマートホーム化と防犯・安全対策を求められました。ご要望は照明、防犯、エアコンで、スマートフォン、音声、遠隔操作によるあらゆる面での管理を実現しました。玄関にも、ワンタッチ外出の自動化を設定しています。",
+                "es": "El propietario buscaba un hogar inteligente completo con protección de seguridad. Los requisitos abarcaban iluminación, seguridad y aire acondicionado, con gestión integral desde el celular, por voz y de forma remota. En la entrada también se configuró la automatización de salida con un toque."
             },
             "basic_info": [
                 {
@@ -4014,7 +4014,7 @@
                         "zhCN": "台中市（大里）",
                         "en": "Dali, Taichung",
                         "fr": "Dali, Taichung",
-                        "ja": "Dali, Taichung",
+                        "ja": "台中市大里区",
                         "es": "Dali, Taichung"
                     }
                 },
@@ -4049,8 +4049,8 @@
                         "zh": "三房兩廳",
                         "zhCN": "三房两厅",
                         "en": "3 Bedrooms, 2 Living Rooms",
-                        "fr": "3 Bedrooms, 2 Living Rooms",
-                        "ja": "3 Bedrooms, 2 Living Rooms",
+                        "fr": "3 chambres, 2 salons",
+                        "ja": "3ベッドルーム・2リビング",
                         "es": "3 recámaras, 2 salas"
                     }
                 },
@@ -4067,8 +4067,8 @@
                         "zh": "2025.04",
                         "zhCN": "2025.04",
                         "en": "Apr 2025",
-                        "fr": "Apr 2025",
-                        "ja": "Apr 2025",
+                        "fr": "avr. 2025",
+                        "ja": "2025年4月",
                         "es": "Abr 2025"
                     }
                 }
@@ -4077,7 +4077,6 @@
                 "zh": [
                     "全屋智能開關（17個）",
                     "全屋空調控制（4 台）",
-                    "Aqara D200i 電子門鎖",
                     "智能燈具(40)與智慧燈條",
                     "Matter Zigbee 網關",
                     "人體感測器(2+1)"
@@ -4085,7 +4084,6 @@
                 "zhCN": [
                     "全屋智能开关（17个）",
                     "全屋空调控制（4 台）",
-                    "Aqara D200i 电子门锁",
                     "智能灯具(40)与智慧灯条",
                     "Matter Zigbee 网关",
                     "人体传感器(2+1)"
@@ -4093,31 +4091,27 @@
                 "en": [
                     "Smart Switches (17 units)",
                     "AC Control (4 units)",
-                    "Aqara D200i Smart Lock",
                     "Smart Lights (40) & Strips",
                     "Matter Zigbee Gateway",
                     "Motion Sensors (2+1)"
                 ],
                 "fr": [
-                    "Smart Switches (17 units)",
-                    "AC Control (4 units)",
-                    "Aqara D200i Smart Lock",
-                    "Smart Lights (40) & Strips",
-                    "Matter Zigbee Gateway",
-                    "Motion Sensors (2+1)"
+                    "Interrupteurs connectés (17 unités)",
+                    "Contrôle de la climatisation (4 unités)",
+                    "Lampes connectées (40) et rubans lumineux",
+                    "Passerelle Matter Zigbee",
+                    "Détecteurs de mouvement (2+1)"
                 ],
                 "ja": [
-                    "Smart Switches (17 units)",
-                    "AC Control (4 units)",
-                    "Aqara D200i Smart Lock",
-                    "Smart Lights (40) & Strips",
-                    "Matter Zigbee Gateway",
-                    "Motion Sensors (2+1)"
+                    "全室スマートスイッチ（17個）",
+                    "全室エアコン制御（4台）",
+                    "スマート照明器具（40）とスマートライトストリップ",
+                    "Matter Zigbeeゲートウェイ",
+                    "人感センサー（2+1）"
                 ],
                 "es": [
                     "Interruptores inteligentes de toda la casa (17 piezas)",
                     "Control del aire acondicionado de toda la casa (4 unidades)",
-                    "Cerradura inteligente Aqara D200i",
                     "Luminarias inteligentes (40) y tiras de luz inteligentes",
                     "Gateway Matter Zigbee",
                     "Sensores de presencia (2+1)"
@@ -4143,16 +4137,16 @@
                     "Network Planning"
                 ],
                 "fr": [
-                    "Hardware Installation",
+                    "Installation du matériel",
                     "Partageable vers Apple HomeKit",
-                    "5 Major Scenes",
-                    "Network Planning"
+                    "5 scènes principales",
+                    "Planification du réseau"
                 ],
                 "ja": [
-                    "Hardware Installation",
+                    "ハードウェア施工",
                     "Apple HomeKit へ共有可能",
-                    "5 Major Scenes",
-                    "Network Planning"
+                    "5つの主要シーン設定",
+                    "ネットワーク設計"
                 ],
                 "es": [
                     "Instalación del hardware",
@@ -4182,15 +4176,15 @@
                 ],
                 "fr": [
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple",
-                    "One-touch Scenes",
-                    "Automated AC (Timer/Wake Mode)",
-                    "Temp Trigger (>30°C)"
+                    "Scènes en un geste",
+                    "Climatisation automatisée (minuterie/mode Réveil)",
+                    "Déclenchement par température (>30 °C)"
                 ],
                 "ja": [
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能",
-                    "One-touch Scenes",
-                    "Automated AC (Timer/Wake Mode)",
-                    "Temp Trigger (>30°C)"
+                    "ワンタッチシーン制御",
+                    "自動化：エアコンのタイマー停止と起床モード連動",
+                    "温度が30℃を超えたら自動でエアコンを起動"
                 ],
                 "es": [
                     "Los dispositivos compartidos se pueden controlar con Siri mediante la app Casa de Apple",
@@ -4267,8 +4261,8 @@
                 "zh": "此案為兩戶打通的特殊格局，重點在於公區域的智能整合，包含智能開關、窗簾、空調與電視控制。屋主希望能在雙戶空間內實現高效的遠端與聲控控制。",
                 "zhCN": "此案为两户打通的特殊格局，重点在于公区域的智能集成，包含智能开关、窗帘、空调与电视控制。屋主希望能在双户空间内实现高效的远程与声控控制。",
                 "en": "A combined unit project focusing on the public area's smart integration, including switches, curtains, AC, and TV. The owner wanted efficient remote and voice control across the dual-unit space.",
-                "fr": "A combined unit project focusing on the public area's smart integration, including switches, curtains, AC, and TV. The owner wanted efficient remote and voice control across the dual-unit space.",
-                "ja": "A combined unit project focusing on the public area's smart integration, including switches, curtains, AC, and TV. The owner wanted efficient remote and voice control across the dual-unit space.",
+                "fr": "Il s'agit d'un projet de deux logements réunis, axé sur l'intégration connectée des espaces communs, notamment les interrupteurs, les rideaux, la climatisation et le téléviseur. Le propriétaire souhaitait un contrôle à distance et vocal efficace dans tout l'espace formé par les deux logements.",
+                "ja": "2戸をつなげた特殊な間取りの案件で、スイッチ、カーテン、エアコン、テレビの制御を含む共用エリアのスマート統合が中心です。オーナーは、2戸分の空間で効率的な遠隔操作と音声操作を実現したいとご希望でした。",
                 "es": "Este proyecto corresponde a una distribución especial en la que se integraron dos unidades. El enfoque fue la integración inteligente de las áreas comunes, con interruptores inteligentes y control de cortinas, aire acondicionado y televisión. La propietaria o el propietario quería un control remoto y por voz eficiente en el espacio de las dos unidades."
             },
             "basic_info": [
@@ -4286,7 +4280,7 @@
                         "zhCN": "台中（惠宇大聚）",
                         "en": "Taichung (Huayu Daju)",
                         "fr": "Taichung (Huayu Daju)",
-                        "ja": "Taichung (Huayu Daju)",
+                        "ja": "台中市（惠宇大聚）",
                         "es": "Taichung (Huayu Daju)"
                     }
                 },
@@ -4321,8 +4315,8 @@
                         "zh": "一層兩戶打通 (僅施作公區域)",
                         "zhCN": "一层两户打通 (仅施作公区域)",
                         "en": "Combined Units (Public Area)",
-                        "fr": "Combined Units (Public Area)",
-                        "ja": "Combined Units (Public Area)",
+                        "fr": "Logements réunis (espaces communs uniquement)",
+                        "ja": "1フロア2戸をつなげた間取り（共用エリアのみ施工）",
                         "es": "Dos unidades integradas por piso (solo se trabajaron las áreas comunes)"
                     }
                 },
@@ -4339,9 +4333,9 @@
                         "zh": "2025.06",
                         "zhCN": "2025.06",
                         "en": "Jun 2025",
-                        "fr": "Jun 2025",
-                        "ja": "Jun 2025",
-                        "es": "Jun 2025"
+                        "fr": "juin 2025",
+                        "ja": "2025年6月",
+                        "es": "jun. 2025"
                     }
                 }
             ],
@@ -4383,27 +4377,27 @@
                     "WIFI6 AP"
                 ],
                 "fr": [
-                    "Smart Switches (16 units)",
-                    "Daikin AC Control (3 units)",
-                    "TV Remote Control",
-                    "Electric Curtains (3 sets)",
-                    "mmWave Presence Sensor",
-                    "Door/PM2.5 Sensor",
-                    "IoT Gateway",
-                    "enGo Air Purifier",
-                    "enGo Control Tablet",
+                    "Interrupteurs connectés (16 unités)",
+                    "Contrôle de la climatisation Daikin (3 unités)",
+                    "Télécommande du téléviseur",
+                    "Rideaux motorisés (3 ensembles)",
+                    "Détecteur de présence à ondes millimétriques",
+                    "Capteur d'ouverture de porte / capteur PM2,5",
+                    "Passerelle IoT",
+                    "Purificateur d'air enGo",
+                    "Tablette de contrôle enGo",
                     "WIFI6 AP"
                 ],
                 "ja": [
-                    "Smart Switches (16 units)",
-                    "Daikin AC Control (3 units)",
-                    "TV Remote Control",
-                    "Electric Curtains (3 sets)",
-                    "mmWave Presence Sensor",
-                    "Door/PM2.5 Sensor",
-                    "IoT Gateway",
-                    "enGo Air Purifier",
-                    "enGo Control Tablet",
+                    "全室スマートスイッチ（16個）",
+                    "ダイキンエアコン制御（3台）",
+                    "テレビのリモコン操作",
+                    "電動カーテン（3セット）",
+                    "ミリ波人感センサー",
+                    "ドアセンサー、PM2.5空気センサー",
+                    "IoTゲートウェイ",
+                    "enGo 空気清浄機",
+                    "enGo コントロールタブレット",
                     "WIFI6 AP"
                 ],
                 "es": [
@@ -4439,16 +4433,16 @@
                     "Network Planning"
                 ],
                 "fr": [
-                    "Full Hardware Install",
+                    "Installation et appairage complets du matériel",
                     "Partageable vers Apple HomeKit",
-                    "Full House Scenes",
-                    "Network Planning"
+                    "Scènes pour toute la maison",
+                    "Planification du réseau"
                 ],
                 "ja": [
-                    "Full Hardware Install",
+                    "ハードウェア一式の設置・ペアリング",
                     "Apple HomeKit へ共有可能",
-                    "Full House Scenes",
-                    "Network Planning"
+                    "全室シーン設定",
+                    "ネットワーク設計"
                 ],
                 "es": [
                     "Instalación y emparejamiento de todo el hardware",
@@ -4481,17 +4475,17 @@
                 ],
                 "fr": [
                     "Scènes en un geste ; appareils partagés commandables avec Siri via l'app Maison d'Apple",
-                    "Air Quality Monitoring & Automation",
-                    "Sleep Ritual Lighting",
-                    "Scheduled AC",
-                    "Leak Detection"
+                    "Surveillance de la qualité de l'air et automatisation (liaison avec le purificateur d'air)",
+                    "Éclairage lié au rituel du coucher",
+                    "Climatisation programmée",
+                    "Détection de fuite d'eau"
                 ],
                 "ja": [
                     "ワンタップのシーン操作。共有したデバイスは Apple のホームアプリから Siri で操作可能",
-                    "Air Quality Monitoring & Automation",
-                    "Sleep Ritual Lighting",
-                    "Scheduled AC",
-                    "Leak Detection"
+                    "全室の空気質モニタリングと自動化（空気清浄機の連動）",
+                    "環境の自動化：就寝前の照明連動",
+                    "タイマーエアコン",
+                    "水漏れ検知"
                 ],
                 "es": [
                     "Control de escenas con un toque; los dispositivos compartidos se pueden controlar con Siri mediante la app Casa de Apple",
@@ -4569,8 +4563,8 @@
                 "zh": "三房兩廳一衛",
                 "zhCN": "三房两厅一卫",
                 "en": "3 Bedrooms, 2 Living Rooms, 1 Bathroom",
-                "fr": "3 Bedrooms, 2 Living Rooms, 1 Bathroom",
-                "ja": "3 Bedrooms, 2 Living Rooms, 1 Bathroom",
+                "fr": "3 chambres, 2 salons, 1 salle de bain",
+                "ja": "3ベッドルーム・2リビング・1バスルーム",
                 "es": "3 recámaras, 2 salas, 1 baño"
             },
             "basic_info": [
@@ -4623,8 +4617,8 @@
                         "zh": "3房2廳1衛",
                         "zhCN": "3房2厅1卫",
                         "en": "3 Bedrooms, 2 Living Rooms, 1 Bathrooms",
-                        "fr": "3 Bedrooms, 2 Living Rooms, 1 Bathrooms",
-                        "ja": "3 Bedrooms, 2 Living Rooms, 1 Bathrooms",
+                        "fr": "3 chambres, 2 salons, 1 salle de bain",
+                        "ja": "3ベッドルーム・2リビング・1バスルーム",
                         "es": "3 recámaras, 2 salas, 1 baño"
                     }
                 },
@@ -4670,18 +4664,18 @@
                     "Smart Home Hub"
                 ],
                 "fr": [
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Automated Curtain Control",
-                    "Smart AC Control",
-                    "Smart Home Hub"
+                    "Système d'interrupteurs connectés",
+                    "Contrôle de l'éclairage de toute la maison",
+                    "Contrôle automatisé des rideaux",
+                    "Contrôle intelligent de la climatisation",
+                    "Centrale domotique"
                 ],
                 "ja": [
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Automated Curtain Control",
-                    "Smart AC Control",
-                    "Smart Home Hub"
+                    "スマートスイッチシステム",
+                    "全室の照明制御",
+                    "カーテンの自動制御",
+                    "エアコンのスマート制御",
+                    "スマートホームハブ"
                 ],
                 "es": [
                     "Sistema de interruptores inteligentes",
@@ -4712,14 +4706,14 @@
                 ],
                 "fr": [
                     "Partageable vers Apple HomeKit",
-                    "Automated Scenes (Away/Home)",
-                    "Schedule Control",
+                    "Scènes automatisées (Départ/Retour)",
+                    "Contrôle par programmation horaire",
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
                     "Apple HomeKit へ共有可能",
-                    "Automated Scenes (Away/Home)",
-                    "Schedule Control",
+                    "自動化シーン設定（外出／帰宅）",
+                    "生活スケジュール制御",
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ],
                 "es": [
@@ -4749,16 +4743,16 @@
                     "One-touch Scene Execution"
                 ],
                 "fr": [
-                    "Control devices via App from anywhere",
-                    "GPS Geofencing for Away/Home scenes",
-                    "Sensor Automation (Motion, Temp/Humidity)",
-                    "One-touch Scene Execution"
+                    "Contrôle des appareils depuis l'application, où que l'on soit",
+                    "Géolocalisation GPS pour déclencher les scènes Départ/Retour",
+                    "Automatisation par capteurs (mouvement, température/humidité)",
+                    "Exécution de scènes en un geste"
                 ],
                 "ja": [
-                    "Control devices via App from anywhere",
-                    "GPS Geofencing for Away/Home scenes",
-                    "Sensor Automation (Motion, Temp/Humidity)",
-                    "One-touch Scene Execution"
+                    "いつでもどこでもスマートフォンのアプリから自宅の機器を操作",
+                    "GPSの位置情報で外出／帰宅シーンを自動実行",
+                    "センサーによる自動化（人感、温湿度）",
+                    "ワンタッチで複数の機器を連動"
                 ],
                 "es": [
                     "Control de los dispositivos de la casa desde la app, en cualquier momento y lugar",
@@ -4825,7 +4819,7 @@
                 "zhCN": "台中国泰+",
                 "en": "Taichung Cathay+",
                 "fr": "Taichung Cathay+",
-                "ja": "Taichung Cathay+",
+                "ja": "台中國泰+",
                 "es": "Cathay+, Taichung"
             },
             "basic_info": [
@@ -4925,18 +4919,18 @@
                     "Smart Home Hub"
                 ],
                 "fr": [
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Automated Curtain Control",
-                    "Smart AC Control",
-                    "Smart Home Hub"
+                    "Système d'interrupteurs connectés",
+                    "Contrôle de l'éclairage de toute la maison",
+                    "Contrôle automatisé des rideaux",
+                    "Contrôle intelligent de la climatisation",
+                    "Centrale domotique"
                 ],
                 "ja": [
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Automated Curtain Control",
-                    "Smart AC Control",
-                    "Smart Home Hub"
+                    "スマートスイッチシステム",
+                    "全室の照明制御",
+                    "カーテンの自動制御",
+                    "エアコンのスマート制御",
+                    "スマートホームハブ"
                 ],
                 "es": [
                     "Sistema de interruptores inteligentes",
@@ -4967,14 +4961,14 @@
                 ],
                 "fr": [
                     "Partageable vers Apple HomeKit",
-                    "Automated Scenes (Away/Home)",
-                    "Schedule Control",
+                    "Scènes automatisées (Départ/Retour)",
+                    "Contrôle par programmation horaire",
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
                     "Apple HomeKit へ共有可能",
-                    "Automated Scenes (Away/Home)",
-                    "Schedule Control",
+                    "自動化シーン設定（外出／帰宅）",
+                    "生活スケジュール制御",
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ],
                 "es": [
@@ -5004,16 +4998,16 @@
                     "One-touch Scene Execution"
                 ],
                 "fr": [
-                    "Control devices via App from anywhere",
-                    "GPS Geofencing for Away/Home scenes",
-                    "Sensor Automation (Motion, Temp/Humidity)",
-                    "One-touch Scene Execution"
+                    "Contrôle des appareils depuis l'application, où que l'on soit",
+                    "Géolocalisation GPS pour déclencher les scènes Départ/Retour",
+                    "Automatisation par capteurs (mouvement, température/humidité)",
+                    "Exécution de scènes en un geste"
                 ],
                 "ja": [
-                    "Control devices via App from anywhere",
-                    "GPS Geofencing for Away/Home scenes",
-                    "Sensor Automation (Motion, Temp/Humidity)",
-                    "One-touch Scene Execution"
+                    "いつでもどこでもスマートフォンのアプリから自宅の機器を操作",
+                    "GPSの位置情報で外出／帰宅シーンを自動実行",
+                    "センサーによる自動化（人感、温湿度）",
+                    "ワンタッチで複数の機器を連動"
                 ],
                 "es": [
                     "Control de los dispositivos de la casa desde la app, en cualquier momento y lugar",
@@ -5079,8 +5073,8 @@
                 "zh": "合野木業智慧家居展間，展示 enGo 智慧管家如何與木質裝修完美融合。",
                 "zhCN": "合野木业智慧家居展间，展示 enGo 智慧管家如何与木质装修完美融合。",
                 "en": "Heye Wood Industry smart home showroom, demonstrating the perfect integration of enGo smart hub and wood interior design.",
-                "fr": "Heye Wood Industry smart home showroom, demonstrating the perfect integration of enGo smart hub and wood interior design.",
-                "ja": "Heye Wood Industry smart home showroom, demonstrating the perfect integration of enGo smart hub and wood interior design.",
+                "fr": "Showroom de maison connectée de Heye Wood Industry, illustrant l'intégration parfaite de la centrale enGo et de l'aménagement intérieur en bois.",
+                "ja": "合野木業のスマートホーム展示ルームです。enGoスマートホームが木質の内装とどのように調和するかをご紹介しています。",
                 "es": "Sala de exhibición de hogar inteligente de Heye Wood Industry, que muestra cómo el hub inteligente enGo se integra a la perfección con los acabados interiores de madera."
             },
             "basic_info": [
@@ -5097,8 +5091,8 @@
                         "zh": "新北市三重區",
                         "zhCN": "新北市三重区",
                         "en": "Sanchong, New Taipei City",
-                        "fr": "Sanchong, New Taipei City",
-                        "ja": "Sanchong, New Taipei City",
+                        "fr": "Sanchong, Nouveau Taipei",
+                        "ja": "新北市三重区",
                         "es": "Sanchong, Nuevo Taipéi"
                     }
                 },
@@ -5115,8 +5109,8 @@
                         "zh": "24158新北市三重區光復路一段72號 二樓",
                         "zhCN": "24158新北市三重区光复路一段72号 二楼",
                         "en": "2F., No. 72, Sec. 1, Guangfu Rd., Sanchong Dist., New Taipei City",
-                        "fr": "2F., No. 72, Sec. 1, Guangfu Rd., Sanchong Dist., New Taipei City",
-                        "ja": "2F., No. 72, Sec. 1, Guangfu Rd., Sanchong Dist., New Taipei City",
+                        "fr": "2e étage, n° 72, section 1, route Guangfu, district de Sanchong, Nouveau Taipei 24158",
+                        "ja": "24158 新北市三重区光復路一段72号 2階",
                         "es": "2.º piso, No. 72, Sec. 1, Guangfu Rd., Distrito de Sanchong, Nuevo Taipéi 24158"
                     }
                 }
@@ -5141,16 +5135,16 @@
                     "Smart Home Hub"
                 ],
                 "fr": [
-                    "enGo AI Smart Hub",
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Smart Home Hub"
+                    "Hub intelligent enGo AI",
+                    "Système d'interrupteurs connectés",
+                    "Contrôle de l'éclairage de toute la maison",
+                    "Centrale domotique"
                 ],
                 "ja": [
-                    "enGo AI Smart Hub",
-                    "Smart Switch System",
-                    "Full House Lighting Control",
-                    "Smart Home Hub"
+                    "enGo AIスマートコントロールタブレット",
+                    "スマートスイッチシステム",
+                    "全室の照明制御",
+                    "スマートホームハブ"
                 ],
                 "es": [
                     "Tableta de control central inteligente enGo AI",
@@ -5177,12 +5171,12 @@
                 ],
                 "fr": [
                     "Partageable vers Apple HomeKit",
-                    "Scene Automation",
+                    "Automatisation des scènes",
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
                     "Apple HomeKit へ共有可能",
-                    "Scene Automation",
+                    "自動化シーン設定",
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ],
                 "es": [
@@ -5208,14 +5202,14 @@
                     "Diverse scene simulation"
                 ],
                 "fr": [
-                    "Smart home integration with interior design",
-                    "On-site voice and App control experience",
-                    "Diverse scene simulation"
+                    "Intégration de la maison connectée à l'aménagement intérieur",
+                    "Expérience sur place du contrôle vocal et par application",
+                    "Simulation de scènes variées"
                 ],
                 "ja": [
-                    "Smart home integration with interior design",
-                    "On-site voice and App control experience",
-                    "Diverse scene simulation"
+                    "スマートホーム機器と内装の統合を展示",
+                    "音声とスマートフォンのアプリ操作を会場で体験",
+                    "多彩なシーンモードのシミュレーション"
                 ],
                 "es": [
                     "Muestra de la integración de los dispositivos de hogar inteligente con los acabados interiores",
@@ -5273,8 +5267,8 @@
                 "zh": "大雅廚具智慧廚房展間，展示 AI 智慧管家在現代廚房空間的多元應用。",
                 "zhCN": "大雅厨具智慧厨房展间，展示 AI 智慧管家在现代厨房空间的多元应用。",
                 "en": "Taya Kitchen smart kitchen showroom, showcasing various AI smart hub applications in modern kitchen spaces.",
-                "fr": "Taya Kitchen smart kitchen showroom, showcasing various AI smart hub applications in modern kitchen spaces.",
-                "ja": "Taya Kitchen smart kitchen showroom, showcasing various AI smart hub applications in modern kitchen spaces.",
+                "fr": "Showroom de cuisine connectée de Taya Kitchen, présentant diverses applications de la centrale intelligente AI dans les cuisines modernes.",
+                "ja": "大雅キッチンのスマートキッチン展示ルームです。現代的なキッチン空間における、AIスマートハブのさまざまな活用例をご紹介しています。",
                 "es": "Sala de exhibición de cocina inteligente de Taya Kitchen, que muestra diversas aplicaciones del hub inteligente con IA en espacios de cocina modernos."
             },
             "basic_info": [
@@ -5291,8 +5285,8 @@
                         "zh": "台中市大雅區",
                         "zhCN": "台中市大雅区",
                         "en": "Daya, Taichung City",
-                        "fr": "Daya, Taichung City",
-                        "ja": "Daya, Taichung City",
+                        "fr": "Daya, Taichung",
+                        "ja": "台中市大雅区",
                         "es": "Distrito de Daya, Taichung"
                     }
                 },
@@ -5309,8 +5303,8 @@
                         "zh": "中清路三段 739號 5樓",
                         "zhCN": "中清路三段 739号 5楼",
                         "en": "5F., No. 739, Sec. 3, Zhongqing Rd., Daya Dist., Taichung City",
-                        "fr": "5F., No. 739, Sec. 3, Zhongqing Rd., Daya Dist., Taichung City",
-                        "ja": "5F., No. 739, Sec. 3, Zhongqing Rd., Daya Dist., Taichung City",
+                        "fr": "5e étage, n° 739, section 3, route Zhongqing, district de Daya, Taichung",
+                        "ja": "中清路三段739号 5階",
                         "es": "5.º piso, No. 739, Sec. 3, Zhongqing Rd., Distrito de Daya, Taichung"
                     }
                 }
@@ -5335,16 +5329,16 @@
                     "Smart Home Hub"
                 ],
                 "fr": [
-                    "enGo AI Smart Hub",
+                    "Hub intelligent enGo AI",
                     "Aiox AI Smart Water Purifier",
-                    "Smart Lighting Control",
-                    "Smart Home Hub"
+                    "Contrôle intelligent de l'éclairage",
+                    "Centrale domotique"
                 ],
                 "ja": [
-                    "enGo AI Smart Hub",
+                    "enGo AIスマートコントロールタブレット",
                     "Aiox AI Smart Water Purifier",
-                    "Smart Lighting Control",
-                    "Smart Home Hub"
+                    "スマート照明制御",
+                    "スマートホームハブ"
                 ],
                 "es": [
                     "Tableta de control central inteligente enGo AI",
@@ -5371,12 +5365,12 @@
                 ],
                 "fr": [
                     "Partageable vers Apple HomeKit",
-                    "Kitchen Scene Automation",
+                    "Automatisation des scènes de cuisine",
                     "Appareils partagés commandables avec Siri via l'app Maison d'Apple"
                 ],
                 "ja": [
                     "Apple HomeKit へ共有可能",
-                    "Kitchen Scene Automation",
+                    "キッチンの自動化シーン",
                     "共有したデバイスは Apple のホームアプリから Siri で操作可能"
                 ],
                 "es": [
@@ -5402,14 +5396,14 @@
                     "On-site voice recipes and smart cooking experience"
                 ],
                 "fr": [
-                    "Smart kitchen spatial integration",
-                    "Demonstration of water purifier and hub linkage",
-                    "On-site voice recipes and smart cooking experience"
+                    "Intégration de la cuisine connectée dans l'espace",
+                    "Démonstration de la liaison entre le purificateur d'eau et la centrale",
+                    "Expérience sur place des recettes vocales et de la cuisine intelligente"
                 ],
                 "ja": [
-                    "Smart kitchen spatial integration",
-                    "Demonstration of water purifier and hub linkage",
-                    "On-site voice recipes and smart cooking experience"
+                    "スマートキッチン空間の統合体験",
+                    "浄水器とコントロールシステムの連動を展示",
+                    "音声レシピとスマート調理を会場で体験"
                 ],
                 "es": [
                     "Experiencia de integración inteligente del espacio de cocina",

@@ -101,6 +101,30 @@ describe('data files carry ja, fr and es for every localized value', () => {
     })
 })
 
+// A key that is present but still holds the English text passes the presence test above, so compare values too.
+describe('ja / fr / es data strings are translated, not copies of the English value', () => {
+    const FILES = ['cases', 'howto', 'knowledge_base', 'faqs', 'news']
+    // Proper nouns (project, partner and product names) that are written the same way in every language.
+    const SAME_AS_EN = new Set([
+        'Aiox AI Smart Water Purifier', 'Taipei Nangang Tain', 'Taichung (Huayu Daju)', 'Hong Sheng Xin', 'Chang Yi Nan Qing Shan',
+        'Lihpao Life Science', 'Taya Kitchen', 'He-Ye Wood', 'Taichung Cathay+', 'enGo AI Smart Hub', 'enGo Control Tablet'
+    ])
+    const englishWords = (s: string) => s.split(/\s+/).filter((w) => /[a-z]{2}/.test(w)).length
+    it.each(FILES)('%s.json', (name) => {
+        const bad: string[] = []
+        for (const h of localized(readJson(name))) {
+            const en: string[] = ([] as string[]).concat(h.node.en ?? [])
+            for (const l of ['ja', 'fr', 'es']) {
+                const val: string[] = ([] as string[]).concat(h.node[l] ?? [])
+                en.forEach((e, i) => {
+                    if (typeof e === 'string' && val[i] === e && englishWords(e) >= 3 && !SAME_AS_EN.has(e)) bad.push(`${l} ${h.path} ${e.slice(0, 40)}`)
+                })
+            }
+        }
+        expect(bad.slice(0, 10).join('\n')).toBe('')
+    })
+})
+
 // ---- script purity ------------------------------------------------------------------------------------
 // Characters that exist only in Traditional Chinese: see ./scriptPurity.
 const stringsOf = (o: any): string[] => {
