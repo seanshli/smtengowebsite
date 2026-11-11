@@ -4342,73 +4342,67 @@
             "hardware": {
                 "zh": [
                     "全屋智能開關（16 個）",
-                    "大金空調控制（3台）",
+                    "空調控制（3台）",
                     "電視遠程控制",
                     "電動窗簾（3組）",
                     "毫米波人體感應器",
                     "門磁感應器、PM2.5空氣偵測器",
                     "IoT Gateway",
-                    "enGo 空氣清淨器",
                     "enGo 中控平板",
                     "WIFI6 AP"
                 ],
                 "zhCN": [
                     "全屋智能开关（16 个）",
-                    "大金空调控制（3台）",
+                    "空调控制（3台）",
                     "电视远程控制",
                     "电动窗帘（3组）",
                     "毫米波人体感应器",
                     "门磁感应器、PM2.5空气侦测器",
                     "IoT Gateway",
-                    "enGo 空气清净器",
                     "enGo 中控平板",
                     "WIFI6 AP"
                 ],
                 "en": [
                     "Smart Switches (16 units)",
-                    "Daikin AC Control (3 units)",
+                    "AC Control (3 units)",
                     "TV Remote Control",
                     "Electric Curtains (3 sets)",
                     "mmWave Presence Sensor",
                     "Door/PM2.5 Sensor",
                     "IoT Gateway",
-                    "enGo Air Purifier",
                     "enGo Control Tablet",
                     "WIFI6 AP"
                 ],
                 "fr": [
                     "Interrupteurs connectés (16 unités)",
-                    "Contrôle de la climatisation Daikin (3 unités)",
+                    "Contrôle de la climatisation (3 unités)",
                     "Télécommande du téléviseur",
                     "Rideaux motorisés (3 ensembles)",
                     "Détecteur de présence à ondes millimétriques",
                     "Capteur d'ouverture de porte / capteur PM2,5",
                     "Passerelle IoT",
-                    "Purificateur d'air enGo",
                     "Tablette de contrôle enGo",
                     "WIFI6 AP"
                 ],
                 "ja": [
                     "全室スマートスイッチ（16個）",
-                    "ダイキンエアコン制御（3台）",
+                    "エアコン制御（3台）",
                     "テレビのリモコン操作",
                     "電動カーテン（3セット）",
                     "ミリ波人感センサー",
                     "ドアセンサー、PM2.5空気センサー",
                     "IoTゲートウェイ",
-                    "enGo 空気清浄機",
                     "enGo コントロールタブレット",
                     "WIFI6 AP"
                 ],
                 "es": [
                     "Interruptores inteligentes de toda la casa (16 piezas)",
-                    "Control de aire acondicionado Daikin (3 unidades)",
+                    "Control de aire acondicionado (3 unidades)",
                     "Control remoto de la televisión",
                     "Cortinas eléctricas (3 juegos)",
                     "Sensor de presencia de ondas milimétricas",
                     "Sensor de apertura de puerta y detector de calidad del aire PM2.5",
                     "Gateway IoT",
-                    "Purificador de aire enGo",
                     "Tableta de control central enGo",
                     "Punto de acceso WiFi 6"
                 ]
@@ -4454,14 +4448,14 @@
             "features": {
                 "zh": [
                     "一鍵情境控制；已分享的設備可經 Apple 家庭 App 以 Siri 語音控制",
-                    "全屋空氣品質監測與過動化（空氣清淨機聯動）",
+                    "全屋空氣品質監測與自動化",
                     "環境自動化：睡前儀式光源聯動",
                     "定時空調",
                     "漏水偵測"
                 ],
                 "zhCN": [
                     "一键情境控制；已分享的设备可经 Apple 家庭 App 以 Siri 语音控制",
-                    "全屋空气品质监测与过动化（空气净化器联动）",
+                    "全屋空气品质监测与自动化",
                     "环境自动化：睡前仪式光源联动",
                     "定时空调",
                     "漏水侦测"
@@ -4475,21 +4469,21 @@
                 ],
                 "fr": [
                     "Scènes en un geste ; appareils partagés commandables avec Siri via l'app Maison d'Apple",
-                    "Surveillance de la qualité de l'air et automatisation (liaison avec le purificateur d'air)",
+                    "Surveillance de la qualité de l'air et automatisation",
                     "Éclairage lié au rituel du coucher",
                     "Climatisation programmée",
                     "Détection de fuite d'eau"
                 ],
                 "ja": [
                     "ワンタップのシーン操作。共有したデバイスは Apple のホームアプリから Siri で操作可能",
-                    "全室の空気質モニタリングと自動化（空気清浄機の連動）",
+                    "全室の空気質モニタリングと自動化",
                     "環境の自動化：就寝前の照明連動",
                     "タイマーエアコン",
                     "水漏れ検知"
                 ],
                 "es": [
                     "Control de escenas con un toque; los dispositivos compartidos se pueden controlar con Siri mediante la app Casa de Apple",
-                    "Monitoreo de la calidad del aire de toda la casa y automatización (enlace con el purificador de aire)",
+                    "Monitoreo de la calidad del aire de toda la casa y automatización",
                     "Automatización del ambiente: enlace de la iluminación para la rutina antes de dormir",
                     "Aire acondicionado programado",
                     "Detección de fugas de agua"
