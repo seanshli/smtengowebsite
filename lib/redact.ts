@@ -35,3 +35,16 @@ export const redactSubmission = <T extends Record<string, unknown>>(row: T): T =
   phone: maskPhone(row.phone),
   address: maskAddress(row.address)
 })
+
+/**
+ * Free text typed into the chatbot can hold anything. Before a question is shown
+ * on the dashboard, remove the identifiers that are cheap to recognise: emails,
+ * links, Taiwan national ID numbers and phone / long digit runs. This is a
+ * best-effort filter, not a guarantee: names and addresses in prose are not caught.
+ */
+export const redactFreeText = (value: string): string =>
+  value
+    .replace(/[\w.+-]+@[\w-]+(?:\.[\w-]+)+/g, '[email]')
+    .replace(/https?:\/\/\S+/gi, '[url]')
+    .replace(/\b[A-Za-z][12]\d{8}\b/g, '[id]')
+    .replace(/\+?\d[\d\s\-()]{4,}\d/g, '[number]')
