@@ -212,31 +212,31 @@ export const jaLocale = {
     vision5: '多角化展開',
     vision6: 'enGoトークン還元システム',
     vision7: 'B2B2Cインタラクティブ・アーキテクチャ',
+    ecosystemTitle: 'enGoエコシステム',
 
-    // TODO: translate — English placeholder so nothing renders blank
     vision: {
       sun: {
-        title: 'Sunlight, living with the natural day',
-        copy: 'enGo uses AIoT daylight control so sunlight becomes a natural companion at home, brighter mornings, calmer evenings, and comfort that follows the sun.'
+        title: '太陽光、自然な一日とともに暮らす',
+        copy: 'enGoはAIoTによる採光制御で、太陽光を暮らしの自然なパートナーにします。朝はより明るく、夜はより穏やかに、太陽に寄り添う心地よさを届けます。'
       },
       air: {
-        title: 'Air, breathe without a second thought',
-        copy: 'An AI-driven air quality system keeps every room fresh and clean, filtering particulates while lowering allergen and virus risk, with air quality you can see at a glance.'
+        title: '空気、何も考えずに呼吸できる',
+        copy: 'AI搭載の空気質システムが各部屋を新鮮で清潔に保ち、微粒子を取り除いてアレルゲンやウイルスのリスクを下げます。空気の状態もひと目で確認できます。'
       },
       water: {
-        title: 'Water, protection you can see',
-        copy: 'enGo pairs high-performance filtration with precise AI monitoring to deliver genuinely pure drinking water. No more guessing when a filter is due, and no water wasted along the way. Every glass is the best it can be.'
+        title: '水、目に見える安心',
+        copy: 'enGoは高性能ろ過と精密なAIモニタリングを組み合わせ、本当に清らかな飲み水をお届けします。フィルター交換時期を推測する必要も、水の無駄もありません。一杯一杯が最高の状態です。'
       },
       food: {
-        title: 'Food safety, health you stay on top of',
-        copy: 'enGo\'s intelligent management system provides end-to-end food safety assurance, so every meal on your table is one you can trust.'
+        title: '食の安全、いつでも把握できる健康',
+        copy: 'enGoのインテリジェント管理システムが食の安全を端から端まで見守り、食卓に並ぶ一食一食を安心してお召し上がりいただけます。'
       },
       safety: {
-        title: 'Security, watching over every moment at home',
-        copy: 'Leading smart security technology protects your home around the clock, so you can enjoy family life without worry, and share in the value a connected community creates.'
+        title: 'セキュリティ、家の中のあらゆる瞬間を見守る',
+        copy: '先進のスマートセキュリティ技術が24時間ご自宅を守ります。心配なく家族の時間を楽しみ、つながるコミュニティが生み出す価値も分かち合えます。'
       },
       closing:
-        'enGo brings warmth to the home through technology: AI that saves energy, cuts carbon, and quietly takes care of the everyday. A smart housekeeper is no longer a dream. enGo is here to look after your home for the long run.'
+        'enGoはテクノロジーで家にぬくもりを届けます。省エネ・脱炭素を実現し、日々の暮らしをそっと支えるAI。スマートな家政婦はもう夢ではありません。enGoは末永くご自宅を見守ります。'
     },
 
     // product

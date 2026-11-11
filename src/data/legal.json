@@ -22,12 +22,18 @@
       "title": {
         "zh": "服務條款",
         "zhCN": "服务条款",
-        "en": "Terms of Service"
+        "en": "Terms of Service",
+        "ja": "利用規約",
+        "fr": "Conditions d'utilisation",
+        "es": "Términos de servicio"
       },
       "summary": {
         "zh": "使用 enGo 智慧管家 App、牆掛平板、社區服務與 enGo 安購商城的共同約定：帳號、服務範圍、社區守則、智慧財產與準據法。",
         "zhCN": "使用 enGo 智慧管家 App、墙挂平板、社区服务与 enGo 安购商城的共同约定：帐号、服务范围、社区守则、智慧财产与准据法。",
-        "en": "The shared agreement for the enGo app, wall tablet, community services and enGo Shop: accounts, scope of service, community conduct, intellectual property and governing law."
+        "en": "The shared agreement for the enGo app, wall tablet, community services and enGo Shop: accounts, scope of service, community conduct, intellectual property and governing law.",
+        "ja": "enGo アプリ、壁掛けタブレット、コミュニティサービス、enGo Shop をご利用いただく際の共通の取り決めです。アカウント、サービスの範囲、コミュニティのルール、知的財産、準拠法について定めています。",
+        "fr": "L'accord commun applicable à l'application enGo, à la tablette murale, aux services communautaires et à enGo Shop : comptes, périmètre du service, règles de conduite de la communauté, propriété intellectuelle et droit applicable.",
+        "es": "El acuerdo común para la app enGo, la tableta de pared, los servicios de la comunidad y enGo Shop: cuentas, alcance del servicio, conducta en la comunidad, propiedad intelectual y ley aplicable."
       },
       "href": {
         "zh": "/terms.html",
@@ -74,12 +80,18 @@
       "title": {
         "zh": "隱私權政策",
         "zhCN": "隐私权政策",
-        "en": "Privacy Policy"
+        "en": "Privacy Policy",
+        "ja": "プライバシーポリシー",
+        "fr": "Politique de confidentialité",
+        "es": "Política de privacidad"
       },
       "summary": {
         "zh": "我們蒐集哪些個人資料、為了什麼目的、與哪些第三方（金流、物流）分享、Cookie 的使用，以及您依個資法享有的權利。",
         "zhCN": "我们搜集哪些个人数据、为了什么目的、与哪些第三方（金流、物流）分享、Cookie 的使用，以及您依个资法享有的权利。",
-        "en": "What personal data we collect and why, which third parties (payment, logistics) receive it, how cookies are used, and your rights under Taiwan's Personal Data Protection Act."
+        "en": "What personal data we collect and why, which third parties (payment, logistics) receive it, how cookies are used, and your rights under Taiwan's Personal Data Protection Act.",
+        "ja": "収集する個人情報の種類とその目的、情報を共有する第三者（決済・物流）、Cookie の利用、および台湾の個人情報保護法に基づくお客様の権利について説明します。",
+        "fr": "Les données personnelles collectées et leur finalité, les tiers (paiement, logistique) qui les reçoivent, l'utilisation des cookies, ainsi que les droits dont vous disposez en vertu de la loi taïwanaise sur la protection des données personnelles.",
+        "es": "Qué datos personales recopilamos y por qué, qué terceros (pagos, logística) los reciben, cómo se usan las cookies y cuáles son tus derechos conforme a la Ley de Protección de Datos Personales de Taiwán."
       },
       "href": {
         "zh": "/privacy.html",
@@ -126,12 +138,18 @@
       "title": {
         "zh": "退貨與保固政策",
         "zhCN": "退货与保固政策",
-        "en": "Return & Warranty Policy"
+        "en": "Return & Warranty Policy",
+        "ja": "返品・保証ポリシー",
+        "fr": "Politique de retour et de garantie",
+        "es": "Política de devoluciones y garantía"
       },
       "summary": {
         "zh": "透過 smtengo.com 或 enGo 安購商城直接向本公司購買的商品：七日鑑賞期、一年保固、生鮮與耗材的例外、退款流程與設備損壞條款。",
         "zhCN": "透过 smtengo.com 或 enGo 安购商城直接向本公司购买的商品：七日鉴赏期、一年保固、生鲜与耗材的例外、退款流程与设备损坏条款。",
-        "en": "For goods bought directly from the company via smtengo.com or enGo Shop: the 7-day inspection period, one-year warranty, perishable and consumable exceptions, refund process and equipment damage clause."
+        "en": "For goods bought directly from the company via smtengo.com or enGo Shop: the 7-day inspection period, one-year warranty, perishable and consumable exceptions, refund process and equipment damage clause.",
+        "ja": "smtengo.com または enGo Shop を通じて当社から直接ご購入いただいた商品が対象です。7日間の確認期間、1年間の保証、生鮮品・消耗品の例外、返金手続き、機器の破損に関する条項について定めています。",
+        "fr": "Pour les produits achetés directement auprès de la société via smtengo.com ou enGo Shop : période d'examen de 7 jours, garantie d'un an, exceptions pour les produits périssables et les consommables, procédure de remboursement et clause relative aux dommages causés à l'équipement.",
+        "es": "Para los productos comprados directamente a la empresa a través de smtengo.com o enGo Shop: periodo de inspección de 7 días, garantía de un año, excepciones para productos perecederos y consumibles, proceso de reembolso y cláusula de daños al equipo."
       },
       "href": {
         "zh": "/return-policy.html",
@@ -169,12 +187,18 @@
       "label": {
         "zh": "商城買家",
         "zhCN": "商城买家",
-        "en": "Store customers"
+        "en": "Store customers",
+        "ja": "ストアのお客様",
+        "fr": "Clients de la boutique",
+        "es": "Clientes de la tienda"
       },
       "who": {
         "zh": "在 enGo 安購商城購買商品、訂閱社區服務的消費者。",
         "zhCN": "在 enGo 安购商城购买商品、订阅社区服务的消费者。",
-        "en": "Consumers buying goods or community subscriptions in enGo Shop."
+        "en": "Consumers buying goods or community subscriptions in enGo Shop.",
+        "ja": "enGo Shop で商品を購入、またはコミュニティサービスを定期利用される消費者の方。",
+        "fr": "Consommateurs achetant des produits ou des abonnements communautaires dans enGo Shop.",
+        "es": "Consumidores que compran productos o suscripciones de la comunidad en enGo Shop."
       },
       "documents": [
         "terms",
@@ -187,12 +211,18 @@
       "label": {
         "zh": "住戶",
         "zhCN": "住户",
-        "en": "Households"
+        "en": "Households",
+        "ja": "ご家庭",
+        "fr": "Foyers",
+        "es": "Hogares"
       },
       "who": {
         "zh": "使用 enGo 牆掛平板與 enGo智慧管家 App 的家庭用戶。",
         "zhCN": "使用 enGo 墙挂平板与 enGo智慧管家 App 的家庭用户。",
-        "en": "Households using the enGo wall tablet and the enGo智慧管家 app."
+        "en": "Households using the enGo wall tablet and the enGo智慧管家 app.",
+        "ja": "enGo 壁掛けタブレットと enGo智慧管家 アプリをご利用になるご家庭。",
+        "fr": "Foyers utilisant la tablette murale enGo et l'application enGo智慧管家.",
+        "es": "Hogares que usan la tableta de pared enGo y la app enGo智慧管家."
       },
       "documents": [
         "terms",
@@ -204,12 +234,18 @@
       "label": {
         "zh": "建案與社區",
         "zhCN": "建案与社区",
-        "en": "Developments & communities"
+        "en": "Developments & communities",
+        "ja": "開発物件・コミュニティ",
+        "fr": "Programmes immobiliers et communautés",
+        "es": "Desarrollos y comunidades"
       },
       "who": {
         "zh": "導入 enGo 社區服務的建商、管委會與物業管理單位。",
         "zhCN": "导入 enGo 社区服务的建商、管委会与物业管理单位。",
-        "en": "Developers, management committees and property managers running enGo community services."
+        "en": "Developers, management committees and property managers running enGo community services.",
+        "ja": "enGo コミュニティサービスを導入するデベロッパー、管理組合、物件管理会社。",
+        "fr": "Promoteurs, comités de gestion et gestionnaires immobiliers exploitant les services communautaires enGo.",
+        "es": "Desarrolladores, comités de administración y administradores de inmuebles que operan los servicios de comunidad enGo."
       },
       "documents": [
         "terms",
@@ -221,12 +257,18 @@
       "label": {
         "zh": "合作夥伴",
         "zhCN": "合作伙伴",
-        "en": "Partners & merchants"
+        "en": "Partners & merchants",
+        "ja": "パートナー・加盟店",
+        "fr": "Partenaires et commerçants",
+        "es": "Socios y comercios"
       },
       "who": {
         "zh": "裝修、廚具、設備與商城上架的合作廠商。個別合作協議由專人另行提供。",
         "zhCN": "装修、厨具、设备与商城上架的合作厂商。个别合作协议由专人另行提供。",
-        "en": "Renovation, kitchen, equipment and marketplace partners. Individual partner agreements are provided separately by our team."
+        "en": "Renovation, kitchen, equipment and marketplace partners. Individual partner agreements are provided separately by our team.",
+        "ja": "リフォーム、キッチン、設備、マーケットプレイスのパートナー企業。個別のパートナー契約は、担当者より別途ご案内します。",
+        "fr": "Partenaires de rénovation, de cuisine, d'équipement et de place de marché. Les accords individuels avec les partenaires sont fournis séparément par notre équipe.",
+        "es": "Socios de remodelación, cocinas, equipamiento y de la tienda en línea. Los acuerdos individuales con socios los proporciona nuestro equipo por separado."
       },
       "documents": [
         "terms",

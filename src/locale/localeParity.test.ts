@@ -38,6 +38,20 @@ describe('Simplified Chinese locale covers every customer-facing zh key', () => 
     })
 })
 
+describe('Japanese, French and Spanish locales cover every customer-facing zh key', () => {
+    // paragraph1-4 and threeCoreValue1-3 are zh-only legacy keys, the same list en leaves out.
+    const ZH_ONLY = new Set(['paragraph1', 'paragraph2', 'paragraph3', 'paragraph4', 'threeCoreValue1', 'threeCoreValue2', 'threeCoreValue3'])
+    it.each([['ja', ja], ['fr', fr], ['es', es]] as const)('%s has every non-admin zh key', (_n, loc) => {
+        const keys = new Set(leaves(loc))
+        const missing = leaves(zh).filter((k) => !k.startsWith('admin.') && !ZH_ONLY.has(k) && !keys.has(k))
+        expect(missing, missing.join(', ')).toEqual([])
+    })
+    it.each([['ja', ja], ['fr', fr], ['es', es]] as const)('%s has no English placeholder in the vision block', (_n, loc) => {
+        const sun = get(loc, 'vision.sun.title')
+        expect(sun).not.toBe(get(en, 'vision.sun.title'))
+    })
+})
+
 describe('no locale renders a raw key', () => {
     it.each([
         ['zh', zh], ['zhCN', zhCN], ['en', en], ['fr', fr], ['ja', ja], ['es', es]
@@ -75,6 +89,14 @@ describe('data files carry zh, zhCN and en for every localized value', () => {
         const hits = localized(readJson(name))
         expect(hits.length).toBeGreaterThan(0)
         const bad = hits.filter((h) => !filled(h.node.zhCN) || !filled(h.node.en)).map((h) => h.path)
+        expect(bad, bad.slice(0, 10).join('\n')).toEqual([])
+    })
+})
+
+describe('data files carry ja, fr and es for every localized value', () => {
+    it.each(DATA)('%s.json', (name) => {
+        const hits = localized(readJson(name))
+        const bad = hits.flatMap((h) => ['ja', 'fr', 'es'].filter((l) => !filled(h.node[l])).map((l) => `${l} ${h.path}`))
         expect(bad, bad.slice(0, 10).join('\n')).toEqual([])
     })
 })

@@ -6,14 +6,16 @@
       "zhCN": "个人用户",
       "en": "For Individuals",
       "fr": "Pour les particuliers",
-      "ja": "個人ユーザー向け"
+      "ja": "個人ユーザー向け",
+      "es": "Para usuarios individuales"
     },
     "description": {
       "zh": "運用 AI 智慧家居解決方案，賦能您的日常生活。",
       "zhCN": "运用 AI 智慧家居解决方案，赋能您的日常生活。",
       "en": "Empowering your daily life with AI-driven smart home solutions.",
       "fr": "Améliorez votre quotidien grâce aux solutions de maison intelligente pilotées par IA.",
-      "ja": "AIを活用したスマートホームソリューションで、日常生活をより豊かに。"
+      "ja": "AIを活用したスマートホームソリューションで、日常生活をより豊かに。",
+      "es": "Impulsa tu vida diaria con soluciones de hogar inteligente basadas en IA."
     },
     "steps": [
       {
@@ -22,14 +24,16 @@
           "zhCN": "设置中枢",
           "en": "Setup Hub",
           "fr": "Configurer le concentrateur",
-          "ja": "ハブのセットアップ"
+          "ja": "ハブのセットアップ",
+          "es": "Configurar el Hub"
         },
         "content": {
           "zh": "開箱並將您的 enGo AI 中樞連接到家庭網路。",
           "zhCN": "开箱并将您的 enGo AI 中枢连接到家庭网络。",
           "en": "Unbox and connect your enGo AI Hub to your home network.",
           "fr": "Déballez et connectez votre concentrateur enGo AI à votre réseau domestique.",
-          "ja": "enGo AIハブを開封し、自宅のネットワークに接続します。"
+          "ja": "enGo AIハブを開封し、自宅のネットワークに接続します。",
+          "es": "Desempaca y conecta tu enGo AI Hub a la red de tu hogar."
         }
       },
       {
@@ -38,14 +42,16 @@
           "zhCN": "连接设备",
           "en": "Connect Devices",
           "fr": "Connecter les appareils",
-          "ja": "デバイスの接続"
+          "ja": "デバイスの接続",
+          "es": "Conectar dispositivos"
         },
         "content": {
           "zh": "同步您的照明、窗簾、空調與感測器。",
           "zhCN": "同步您的照明、窗帘、空调与传感器。",
           "en": "Pair your lighting, curtains, air conditioning and sensors.",
           "fr": "Appairez vos éclairages, rideaux, climatisation et capteurs.",
-          "ja": "照明、カーテン、空調、センサーをペアリングします。"
+          "ja": "照明、カーテン、空調、センサーをペアリングします。",
+          "es": "Vincula tu iluminación, cortinas, aire acondicionado y sensores."
         }
       },
       {
@@ -54,14 +60,16 @@
           "zhCN": "语音控制",
           "en": "Voice Control",
           "fr": "Commande vocale",
-          "ja": "音声操作"
+          "ja": "音声操作",
+          "es": "Control por voz"
         },
         "content": {
           "zh": "配置語音指令以實現無縫互動。",
           "zhCN": "配置语音指令以实现无缝交互。",
           "en": "Configure voice commands for seamless interaction.",
           "fr": "Configurez les commandes vocales pour une interaction fluide.",
-          "ja": "シームレスな操作のために音声コマンドを設定します。"
+          "ja": "シームレスな操作のために音声コマンドを設定します。",
+          "es": "Configura comandos de voz para una interacción fluida."
         }
       },
       {
@@ -70,14 +78,16 @@
           "zhCN": "套装方案建议",
           "en": "Package Suggestion",
           "fr": "Suggestion de forfaits",
-          "ja": "セットプランの提案"
+          "ja": "セットプランの提案",
+          "es": "Sugerencia de paquete"
         },
         "content": {
           "zh": "挑選適合您預算與需求的 [套裝方案](/packages)。",
           "zhCN": "挑选适合您预算与需求的 [套装方案](/packages)。",
           "en": "Choose the [Package Plans](/packages) that best fits your budget and needs.",
           "fr": "Choisissez les [Forfaits](/packages) qui correspondent le mieux à votre budget et à vos besoins.",
-          "ja": "ご予算やニーズに合わせた [セットプラン](/packages) をお選びください。"
+          "ja": "ご予算やニーズに合わせた [セットプラン](/packages) をお選びください。",
+          "es": "Elige los [paquetes](/packages) que mejor se adapten a tu presupuesto y necesidades."
         }
       }
     ]
@@ -89,14 +99,16 @@
       "zhCN": "室内设计师",
       "en": "For Interior Designers",
       "fr": "Pour les architectes d'intérieur",
-      "ja": "インテリアデザイナー向け"
+      "ja": "インテリアデザイナー向け",
+      "es": "Para diseñadores de interiores"
     },
     "description": {
       "zh": "為您的客戶將科技與美學完美結合。",
       "zhCN": "为您的客户将科技与美学完美结合。",
       "en": "Integrating technology with aesthetics for your clients.",
       "fr": "Intégrez la technologie à l'esthétique pour vos clients.",
-      "ja": "クライアントのために、テクノロジーと美学を融合。"
+      "ja": "クライアントのために、テクノロジーと美学を融合。",
+      "es": "Integra tecnología y estética para tus clientes."
     },
     "steps": [
       {
@@ -105,14 +117,16 @@
           "zhCN": "设计规划",
           "en": "Design Planning",
           "fr": "Planification de la conception",
-          "ja": "デザイン計画"
+          "ja": "デザイン計画",
+          "es": "Planeación del diseño"
         },
         "content": {
           "zh": "在早期設計階段納入智慧家居佈線。",
           "zhCN": "在早期设计阶段纳入智慧家居布线。",
           "en": "Incorporate smart home wiring in your early design phase.",
           "fr": "Incorporez le câblage de la maison intelligente dès la phase de conception initiale.",
-          "ja": "設計の初期段階でスマートホームの配線を組み込みます。"
+          "ja": "設計の初期段階でスマートホームの配線を組み込みます。",
+          "es": "Incorpora el cableado del hogar inteligente desde la etapa temprana del diseño."
         }
       },
       {
@@ -121,14 +135,16 @@
           "zhCN": "产品选择",
           "en": "Product Selection",
           "fr": "Sélection de produits",
-          "ja": "製品の選択"
+          "ja": "製品の選択",
+          "es": "Selección de productos"
         },
         "content": {
           "zh": "根據您的設計風格選擇合適的 enGo 模組。",
           "zhCN": "根据您的设计风格选择合适的 enGo 模块。",
           "en": "Choose the right enGo modules for your design style.",
           "fr": "Choisissez les modules enGo adaptés à votre style de conception.",
-          "ja": "デザインスタイルに合わせて最適なenGoモジュールを選択。"
+          "ja": "デザインスタイルに合わせて最適なenGoモジュールを選択。",
+          "es": "Elige los módulos enGo adecuados para tu estilo de diseño."
         }
       },
       {
@@ -137,14 +153,16 @@
           "zhCN": "套装方案建议",
           "en": "Package Suggestion",
           "fr": "Suggestion de forfaits",
-          "ja": "セットプランの提案"
+          "ja": "セットプランの提案",
+          "es": "Sugerencia de paquete"
         },
         "content": {
           "zh": "為您的建案選擇最合算的 [套裝方案](/packages)。",
           "zhCN": "为您的建案选择最合算的 [套装方案](/packages)。",
           "en": "Choose the best value [Package Plans](/packages) for your projects.",
           "fr": "Choisissez les meilleurs [Forfaits](/packages) pour vos projets.",
-          "ja": "プロジェクトに最適な [セットプラン](/packages) を選択してください。"
+          "ja": "プロジェクトに最適な [セットプラン](/packages) を選択してください。",
+          "es": "Elige los [paquetes](/packages) de mejor valor para tus proyectos."
         }
       }
     ]
@@ -156,14 +174,16 @@
       "zhCN": "建商与合作伙伴",
       "en": "For Builders & Partners",
       "fr": "Pour les constructeurs et partenaires",
-      "ja": "建設業者・パートナー向け"
+      "ja": "建設業者・パートナー向け",
+      "es": "Para constructores y socios"
     },
     "description": {
       "zh": "為大型專案標準化智慧家居基礎設施。",
       "zhCN": "为大型项目标准化智慧家居基础设施。",
       "en": "Standardizing smart home infrastructure for large-scale projects.",
       "fr": "Standardisez l'infrastructure de la maison intelligente pour les projets à grande échelle.",
-      "ja": "大規模プロジェクト向けに、スマートホームのインフラを標準化。"
+      "ja": "大規模プロジェクト向けに、スマートホームのインフラを標準化。",
+      "es": "Estandariza la infraestructura de hogar inteligente en proyectos de gran escala."
     },
     "steps": [
       {
@@ -172,14 +192,16 @@
           "zhCN": "预先布线",
           "en": "Pre-wiring",
           "fr": "Pré-câblage",
-          "ja": "事前配線"
+          "ja": "事前配線",
+          "es": "Precableado"
         },
         "content": {
           "zh": "在新建案中實施 enGo 就緒的基礎設施。",
           "zhCN": "在新建案中实施 enGo 就绪的基础设施。",
           "en": "Implementation of enGo ready infrastructure in new builds.",
           "fr": "Mise en œuvre d'une infrastructure prête pour enGo dans les nouvelles constructions.",
-          "ja": "新築物件にenGo対応のインフラを実装します。"
+          "ja": "新築物件にenGo対応のインフラを実装します。",
+          "es": "Implementación de infraestructura compatible con enGo en obras nuevas."
         }
       },
       {
@@ -188,14 +210,16 @@
           "zhCN": "整案管理",
           "en": "Fleet Management",
           "fr": "Gestion de flotte",
-          "ja": "一括管理"
+          "ja": "一括管理",
+          "es": "Administración de todo el proyecto"
         },
         "content": {
           "zh": "透過 enGo 企業儀表板管理多個單元。",
           "zhCN": "透过 enGo 企业仪表板管理多个单元。",
           "en": "Manage multiple units via the enGo enterprise dashboard.",
           "fr": "Gérez plusieurs unités via le tableau de bord d'entreprise enGo.",
-          "ja": "enGoエンタープライズダッシュボードで複数のユニットを管理。"
+          "ja": "enGoエンタープライズダッシュボードで複数のユニットを管理。",
+          "es": "Administra varias unidades mediante el panel empresarial de enGo."
         }
       }
     ],
@@ -206,14 +230,16 @@
           "zhCN": "新风除湿",
           "en": "Fresh-air dehumidifiers",
           "ja": "換気除湿機",
-          "fr": "Déshumidificateurs à air neuf"
+          "fr": "Déshumidificateurs à air neuf",
+          "es": "Deshumidificadores de aire fresco"
         },
         "name": {
           "zh": "米多力",
           "zhCN": "米多力",
           "en": "Medole",
           "ja": "米多力",
-          "fr": "Medole"
+          "fr": "Medole",
+          "es": "Medole"
         },
         "url": "https://www.medole.com.tw/list/hanging-hidden-air-duct-dehumidifier.htm"
       },
@@ -223,14 +249,16 @@
           "zhCN": "厨具",
           "en": "Kitchenware",
           "ja": "厨房機器",
-          "fr": "Ustensiles de cuisine"
+          "fr": "Ustensiles de cuisine",
+          "es": "Cocinas"
         },
         "name": {
           "zh": "大雅",
           "zhCN": "大雅",
           "en": "Taya Kitchen",
           "ja": "大雅廚具",
-          "fr": "Cuisine Taya"
+          "fr": "Cuisine Taya",
+          "es": "Taya Kitchen"
         },
         "url": "https://www.tayakitchen.com.tw"
       },
@@ -240,14 +268,16 @@
           "zhCN": "功能柜",
           "en": "Functional Cabinets",
           "ja": "機能的なキャビネット",
-          "fr": "Armoires fonctionnelles"
+          "fr": "Armoires fonctionnelles",
+          "es": "Gabinetes funcionales"
         },
         "name": {
           "zh": "合野木業",
           "zhCN": "合野木业",
           "en": "He-Ye Wood",
           "ja": "合野木業",
-          "fr": "Bois He-Ye"
+          "fr": "Bois He-Ye",
+          "es": "He-Ye Wood"
         },
         "url": "https://www.he-ye.com/heye/f_f_map.aspx"
       },
@@ -257,14 +287,16 @@
           "zhCN": "能源管理",
           "en": "Energy Management",
           "ja": "エネルギー管理",
-          "fr": "Gestion de l'énergie"
+          "fr": "Gestion de l'énergie",
+          "es": "Administración de energía"
         },
         "name": {
           "zh": "嘉義達光電",
           "zhCN": "嘉义达光电",
           "en": "LedaPlus",
           "ja": "嘉義達光電",
-          "fr": "LedaPlus"
+          "fr": "LedaPlus",
+          "es": "LedaPlus"
         },
         "url": "https://www.ledaplus.com.tw"
       },
@@ -274,14 +306,16 @@
           "zhCN": "能源管理",
           "en": "Energy Management",
           "ja": "エネルギー管理",
-          "fr": "Gestion de l'énergie"
+          "fr": "Gestion de l'énergie",
+          "es": "Administración de energía"
         },
         "name": {
           "zh": "金毅泰節能科技",
           "zhCN": "金毅泰节能科技",
           "en": "JYT AIEMS",
           "ja": "金毅泰節能科技",
-          "fr": "JYT AIEMS"
+          "fr": "JYT AIEMS",
+          "es": "JYT AIEMS"
         },
         "url": "https://jyt-aiems.com/"
       },
@@ -291,14 +325,16 @@
           "zhCN": "智能富氧舱优化合作",
           "en": "Smart Oxygen Chamber optimization",
           "ja": "スマート高濃度酸素ルーム最適化協力",
-          "fr": "Optimisation de la chambre à oxygène intelligente"
+          "fr": "Optimisation de la chambre à oxygène intelligente",
+          "es": "Optimización de cámara inteligente de oxígeno"
         },
         "name": {
           "zh": "麗寶生醫",
           "zhCN": "丽宝生医",
           "en": "Lihpao Life Science",
           "ja": "麗寶生醫",
-          "fr": "Lihpao Life Science"
+          "fr": "Lihpao Life Science",
+          "es": "Lihpao Life Science"
         },
         "url": "https://libobio.com/?page_id=6002"
       }
