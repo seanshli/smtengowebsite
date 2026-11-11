@@ -3,7 +3,7 @@
     <div class="catalog-menu-modal">
       <button class="close-btn" @click="close">×</button>
       <div class="menu-header">
-        <h2>{{ $t('product.packages.otherOptions') || '其他選項 (目錄)' }}</h2>
+        <h2>{{ $t('product.packages.otherOptions') }}</h2>
       </div>
       
       <div class="menu-grid">
@@ -17,7 +17,7 @@
             <img :src="getImageUrl(item.image)" :alt="item.name.zh" />
           </div>
           <h4 class="item-name">{{ (item.name as any)[locale] || item.name['zh'] }}</h4>
-          <span class="view-details">{{ $t('product.viewDetails') || '查看詳情' }} →</span>
+          <span class="view-details">{{ $t('product.viewDetails') }} →</span>
         </div>
       </div>
     </div>

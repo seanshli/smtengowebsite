@@ -15,12 +15,12 @@
           
           <div class="product-info">
             <div class="description-section">
-              <h3>{{ $t('product.description') || '產品介紹' }}</h3>
+              <h3>{{ $t('product.description') }}</h3>
               <p>{{ (product.description as any)[locale] || product.description['zh'] }}</p>
             </div>
             
             <div v-if="product.specs && Object.keys(product.specs).length" class="specs-section">
-              <h3>{{ $t('product.specs') || '產品規格' }}</h3>
+              <h3>{{ $t('product.specs') }}</h3>
               
               <table class="specs-table">
                 <tbody>

@@ -19,20 +19,20 @@ export const MANUALS = [
   {
     id: 'customer',
     file: 'shop-customer',
-    title: { zh: '顧客端使用手冊', en: 'Customer manual' },
-    audience: { zh: '住戶與一般買家：註冊、購物、付款、訂閱、退款、通知', en: 'Residents and shoppers: sign-up, shopping, payment, subscriptions, refunds, notifications' },
+    title: { zh: '顧客端使用手冊', zhCN: '顾客端使用手册', en: 'Customer manual' },
+    audience: { zh: '住戶與一般買家：註冊、購物、付款、訂閱、退款、通知', zhCN: '住户与一般买家：注册、购物、付款、订阅、退款、通知', en: 'Residents and shoppers: sign-up, shopping, payment, subscriptions, refunds, notifications' },
   },
   {
     id: 'merchant',
     file: 'shop-merchant',
-    title: { zh: '商家端使用手冊', en: 'Merchant manual' },
-    audience: { zh: '商家與品牌總部：商品、庫存、訂單、售後、結算撥款、團隊權限', en: 'Merchants and brand HQ: products, stock, orders, after-sales, settlement, team roles' },
+    title: { zh: '商家端使用手冊', zhCN: '商家端使用手册', en: 'Merchant manual' },
+    audience: { zh: '商家與品牌總部：商品、庫存、訂單、售後、結算撥款、團隊權限', zhCN: '商家与品牌总部：商品、库存、订单、售后、结算拨款、团队权限', en: 'Merchants and brand HQ: products, stock, orders, after-sales, settlement, team roles' },
   },
   {
     id: 'franchise',
     file: 'shop-franchise',
-    title: { zh: '加盟店端使用手冊', en: 'Franchise store manual' },
-    audience: { zh: '加盟店負責人與財務：加盟主資料、銀行帳戶、撥款、退款歸屬', en: 'Franchise owners and finance staff: franchisee details, bank account, payouts, refunds' },
+    title: { zh: '加盟店端使用手冊', zhCN: '加盟店端使用手册', en: 'Franchise store manual' },
+    audience: { zh: '加盟店負責人與財務：加盟主資料、銀行帳戶、撥款、退款歸屬', zhCN: '加盟店负责人与财务：加盟主数据、银行帐户、拨款、退款归属', en: 'Franchise owners and finance staff: franchisee details, bank account, payouts, refunds' },
   },
 ]
 

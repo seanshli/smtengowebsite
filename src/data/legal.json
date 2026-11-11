@@ -21,11 +21,13 @@
       "classification": "可對外",
       "title": {
         "zh": "服務條款",
+        "zhCN": "服务条款",
         "en": "Terms of Service"
       },
       "summary": {
-        "zh": "使用 enGo 智慧管家 App、牆掛平板、社區服務與智管家商城的共同約定：帳號、服務範圍、社區守則、智慧財產與準據法。",
-        "en": "The shared agreement for the enGo app, wall tablet, community services and the enGo Store: accounts, scope of service, community conduct, intellectual property and governing law."
+        "zh": "使用 enGo 智慧管家 App、牆掛平板、社區服務與 enGo 安購商城的共同約定：帳號、服務範圍、社區守則、智慧財產與準據法。",
+        "zhCN": "使用 enGo 智慧管家 App、墙挂平板、社区服务与 enGo 安购商城的共同约定：帐号、服务范围、社区守则、智慧财产与准据法。",
+        "en": "The shared agreement for the enGo app, wall tablet, community services and enGo Shop: accounts, scope of service, community conduct, intellectual property and governing law."
       },
       "href": {
         "zh": "/terms.html",
@@ -71,10 +73,12 @@
       "classification": "可對外",
       "title": {
         "zh": "隱私權政策",
+        "zhCN": "隐私权政策",
         "en": "Privacy Policy"
       },
       "summary": {
         "zh": "我們蒐集哪些個人資料、為了什麼目的、與哪些第三方（金流、物流）分享、Cookie 的使用，以及您依個資法享有的權利。",
+        "zhCN": "我们搜集哪些个人数据、为了什么目的、与哪些第三方（金流、物流）分享、Cookie 的使用，以及您依个资法享有的权利。",
         "en": "What personal data we collect and why, which third parties (payment, logistics) receive it, how cookies are used, and your rights under Taiwan's Personal Data Protection Act."
       },
       "href": {
@@ -121,11 +125,13 @@
       "classification": "可對外",
       "title": {
         "zh": "退貨與保固政策",
+        "zhCN": "退货与保固政策",
         "en": "Return & Warranty Policy"
       },
       "summary": {
-        "zh": "透過 smtengo.com 或智管家商城直接向本公司購買的商品：七日鑑賞期、一年保固、生鮮與耗材的例外、退款流程與設備損壞條款。",
-        "en": "For goods bought directly from the company via smtengo.com or the enGo Store: the 7-day inspection period, one-year warranty, perishable and consumable exceptions, refund process and equipment damage clause."
+        "zh": "透過 smtengo.com 或 enGo 安購商城直接向本公司購買的商品：七日鑑賞期、一年保固、生鮮與耗材的例外、退款流程與設備損壞條款。",
+        "zhCN": "透过 smtengo.com 或 enGo 安购商城直接向本公司购买的商品：七日鉴赏期、一年保固、生鲜与耗材的例外、退款流程与设备损坏条款。",
+        "en": "For goods bought directly from the company via smtengo.com or enGo Shop: the 7-day inspection period, one-year warranty, perishable and consumable exceptions, refund process and equipment damage clause."
       },
       "href": {
         "zh": "/return-policy.html",
@@ -162,11 +168,13 @@
       "id": "shop_buyer",
       "label": {
         "zh": "商城買家",
+        "zhCN": "商城买家",
         "en": "Store customers"
       },
       "who": {
-        "zh": "在智管家商城購買商品、訂閱社區服務的消費者。",
-        "en": "Consumers buying goods or community subscriptions in the enGo Store."
+        "zh": "在 enGo 安購商城購買商品、訂閱社區服務的消費者。",
+        "zhCN": "在 enGo 安购商城购买商品、订阅社区服务的消费者。",
+        "en": "Consumers buying goods or community subscriptions in enGo Shop."
       },
       "documents": [
         "terms",
@@ -178,10 +186,12 @@
       "id": "household",
       "label": {
         "zh": "住戶",
+        "zhCN": "住户",
         "en": "Households"
       },
       "who": {
         "zh": "使用 enGo 牆掛平板與 enGo智慧管家 App 的家庭用戶。",
+        "zhCN": "使用 enGo 墙挂平板与 enGo智慧管家 App 的家庭用户。",
         "en": "Households using the enGo wall tablet and the enGo智慧管家 app."
       },
       "documents": [
@@ -193,10 +203,12 @@
       "id": "building",
       "label": {
         "zh": "建案與社區",
+        "zhCN": "建案与社区",
         "en": "Developments & communities"
       },
       "who": {
         "zh": "導入 enGo 社區服務的建商、管委會與物業管理單位。",
+        "zhCN": "导入 enGo 社区服务的建商、管委会与物业管理单位。",
         "en": "Developers, management committees and property managers running enGo community services."
       },
       "documents": [
@@ -208,10 +220,12 @@
       "id": "partner",
       "label": {
         "zh": "合作夥伴",
+        "zhCN": "合作伙伴",
         "en": "Partners & merchants"
       },
       "who": {
         "zh": "裝修、廚具、設備與商城上架的合作廠商。個別合作協議由專人另行提供。",
+        "zhCN": "装修、厨具、设备与商城上架的合作厂商。个别合作协议由专人另行提供。",
         "en": "Renovation, kitchen, equipment and marketplace partners. Individual partner agreements are provided separately by our team."
       },
       "documents": [

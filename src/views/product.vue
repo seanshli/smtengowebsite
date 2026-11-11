@@ -162,10 +162,10 @@
                Android tw.smtengo.engohome.android). -->
           <p data-reveal class="interfaces-stores">
             <a href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="product:app-store">
-              <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" alt="Download on the App Store" height="40" loading="lazy" />
+              <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="tx('在 App Store 下載', '在 App Store 下载', 'Download on the App Store')" height="40" loading="lazy" />
             </a>
             <a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="product:google-play">
-              <img class="badge-google" src="/images/badges/google-play-en.png" alt="Get it on Google Play" height="60" loading="lazy" />
+              <img class="badge-google" src="/images/badges/google-play-en.png" :alt="tx('在 Google Play 取得', '在 Google Play 获取', 'Get it on Google Play')" height="60" loading="lazy" />
             </a>
           </p>
           <!-- Phase 2: ENGO-WEB-001 §3.2 shots #6 (iPhone home) and #7 (Android home). -->
@@ -241,8 +241,8 @@
           </header>
           <img data-reveal class="pd-oxygen-photo pd-desk-lg" src="/images/filterwtablet.png" :alt="$t('product.engo_products.title01')" loading="lazy" />
           <div class="pd-two-machines pd-mob-lg">
-            <img class="pd-m01" src="/assets/two-machines01.png" alt="兩機一體" loading="lazy" />
-            <img class="pd-m02" src="/assets/two-machines02.png" alt="兩機一體" loading="lazy" />
+            <img class="pd-m01" src="/assets/two-machines01.png" :alt="tx('兩機一體', '两机一体', 'Two machines in one')" loading="lazy" />
+            <img class="pd-m02" src="/assets/two-machines02.png" :alt="tx('兩機一體', '两机一体', 'Two machines in one')" loading="lazy" />
           </div>
         </div>
       </section>
@@ -272,8 +272,8 @@
           <!-- The three renders below carry white callout text baked into the PNG, so
                each sits on a dark stage inside the light tile. -->
           <div data-reveal class="pd-stage filter-core">
-            <img class="pd-desk" src="/images/filter_side.png" alt="濾芯" loading="lazy" />
-            <img class="pd-mob pd-stage-small" src="/images/filter_core.png" alt="濾芯" loading="lazy" />
+            <img class="pd-desk" src="/images/filter_side.png" :alt="tx('濾芯', '滤芯', 'Filter cartridge')" loading="lazy" />
+            <img class="pd-mob pd-stage-small" src="/images/filter_core.png" :alt="tx('濾芯', '滤芯', 'Filter cartridge')" loading="lazy" />
             <ol class="pd-mob pd-stage-list">
               <!-- 1. 一體式水路板 -->
               <li>{{ $t('product.water_filter.filterCore01') }}</li>
@@ -282,7 +282,7 @@
             </ol>
             <div class="qr-code-container">
               <img src="/images/qr-code.png" alt="Insurance certificate QR code" />
-              <div>投保證書</div>
+              <div>{{ tx('投保證書', '投保证书', 'Insurance certificate') }}</div>
             </div>
           </div>
         </div>
@@ -301,8 +301,8 @@
             </p>
           </header>
           <div data-reveal class="pd-stage water-loop">
-            <img class="pd-desk" src="/images/water_loop.png" alt="強效過濾濾芯" loading="lazy" />
-            <img class="pd-mob pd-stage-small" src="/images/water_loop_mob.png" alt="強效過濾濾芯" loading="lazy" />
+            <img class="pd-desk" src="/images/water_loop.png" :alt="tx('強效過濾濾芯', '强效过滤滤芯', 'High-efficiency filter cartridge')" loading="lazy" />
+            <img class="pd-mob pd-stage-small" src="/images/water_loop_mob.png" :alt="tx('強效過濾濾芯', '强效过滤滤芯', 'High-efficiency filter cartridge')" loading="lazy" />
             <ol class="pd-mob pd-stage-list">
               <!-- 1. 減少管路連接 -->
               <li>{{ $t('product.filter_strength.water_loop01') }}</li>
@@ -326,7 +326,7 @@
             </h2>
           </header>
           <div data-reveal class="pd-stage pd-desk">
-            <img src="/images/filter_types.png" alt="強效過濾濾心" loading="lazy" />
+            <img src="/images/filter_types.png" :alt="tx('強效過濾濾心', '强效过滤滤心', 'High-efficiency filter cartridges')" loading="lazy" />
           </div>
           <div class="pd-swipe pd-mob">
             <swiper
@@ -343,13 +343,13 @@
               }"
             >
               <swiper-slide>
-                <img src="/images/SRM.png" alt="SRM 富鍶礦化濾心" />
+                <img src="/images/SRM.png" :alt="tx('SRM 富鍶礦化濾心', 'SRM 富锶矿化滤心', 'SRM strontium-enriched mineralizing filter')" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/RO.png" alt="RO逆滲透膜" />
+                <img src="/images/RO.png" :alt="tx('RO逆滲透膜', 'RO逆渗透膜', 'RO reverse-osmosis membrane')" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/PPC.png" alt="PPC複合濾芯" />
+                <img src="/images/PPC.png" :alt="tx('PPC複合濾芯', 'PPC复合滤芯', 'PPC composite filter')" />
               </swiper-slide>
             </swiper>
           </div>
@@ -449,7 +449,7 @@
               <p>{{ $t(`product.filter_list.list0${n}.desc`) }}</p>
             </div>
             <div class="filter_list filter_list-fault">
-              <img class="pd-adv-icon" src="/assets/fault.svg" alt="傳統淨水器" />
+              <img class="pd-adv-icon" src="/assets/fault.svg" :alt="tx('傳統淨水器', '传统净水器', 'Conventional water purifier')" />
               <h3>{{ $t('product.filter_list.list04.title') }}</h3>
               <ul>
                 <li>{{ $t('product.filter_list.list04.desc01') }}</li>
@@ -488,13 +488,13 @@
               :lazy="true"
             >
               <swiper-slide>
-                <img src="/images/M3_brand_engo.png" alt="3 牌淨水系統" />
+                <img src="/images/M3_brand_engo.png" :alt="tx('3 牌淨水系統', '3 牌净水系统', 'Brand 3 water system')" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/B_brand_engo.png" alt="B 牌淨水系統" />
+                <img src="/images/B_brand_engo.png" :alt="tx('B 牌淨水系統', 'B 牌净水系统', 'Brand B water system')" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/S_brand_engo.png" alt="S 牌淨水系統" />
+                <img src="/images/S_brand_engo.png" :alt="tx('S 牌淨水系統', 'S 牌净水系统', 'Brand S water system')" />
               </swiper-slide>
             </swiper>
           </div>
@@ -505,7 +505,7 @@
       <section class="pd-tile pd-parchment wf-price-section">
         <div class="pd-wrap">
           <div data-reveal class="wf-price-card">
-            <div class="wf-price-flag">早鳥優惠</div>
+            <div class="wf-price-flag">{{ tx('早鳥優惠', '早鸟优惠', 'Early-bird offer') }}</div>
             <div class="wf-price-amounts">
               <span class="wf-price-msrp">
                 <span class="wf-price-msrp-label">MSRP</span>
@@ -513,7 +513,7 @@
               </span>
               <span class="wf-price-promo">NT$18,000</span>
             </div>
-            <div class="wf-price-bonus">★ 通過 SGS 水質檢測 · BSMI 商品檢驗 雙重認證</div>
+            <div class="wf-price-bonus">{{ tx('★ 通過 SGS 水質檢測 · BSMI 商品檢驗 雙重認證', '★ 通过 SGS 水质检测 · BSMI 商品检验 双重认证', '★ SGS water-quality tested · BSMI product-inspected: dual certification') }}</div>
             <button class="pd-pill pd-pill-primary wf-buy-btn-card" @click="buyNow">
               {{ $t('product.purchase.btn') }} →
             </button>
@@ -521,9 +521,9 @@
         </div>
       </section>
 
-      <!-- 智管家商城: the fifth product line (Sean 2026-09-27). A separate site
+      <!-- enGo 安購商城: the fifth product line (Sean 2026-09-27). A separate site
            (shoph5.smtengo.com), so this section describes and links, never sells here.
-           Copy follows KB-001 A.15: same store as the former 安購商城, new version. -->
+           Copy follows KB-001 A.15: same store, new version. -->
       <section id="shop" class="pd-tile pd-white shop-line">
         <div class="pd-wrap">
           <header class="pd-head pd-center" data-reveal>
@@ -584,6 +584,7 @@ import { injectProductSchemas, cleanupProductSchemas } from '@/utils/productSche
 import { useEditorialMotion } from '@/composables/useEditorialMotion'
 import SectionDots from '@/components/SectionDots.vue'
 import { useI18n } from 'vue-i18n'
+import { useLocaleText } from '../composables/useLocaleText'
 
 export default defineComponent({
   name: 'Product',
@@ -597,6 +598,7 @@ export default defineComponent({
   },
   setup() {
     const { t, locale } = useI18n()
+    const { tx } = useLocaleText()
     const observeTarget = ref(null)
     const targetIsVisible = ref(false)
 
@@ -773,6 +775,7 @@ const targetExpand = ref(false)
       interfaceImages,
       scrollToTop,
       locale,
+      tx,
       toMall,
       isCatalogOpen,
       isCatalogMenuOpen,
@@ -1087,7 +1090,7 @@ const targetExpand = ref(false)
 .wf-price-bonus { font-size: 1.0625rem; line-height: 1.47; color: $ink-80; }
 .wf-buy-btn-card { margin-top: 6px; padding-inline: 36px; }
 
-// ─── 智管家商城 ───────────────────────────────────────────────────────────
+// ─── enGo 安購商城 ───────────────────────────────────────────────────────────
 .shop-line-figure {
   margin: 0 auto; max-width: 1000px;
   figcaption { margin-top: 18px; text-align: center; font-size: .875rem; line-height: 1.43; color: $ink-80; }

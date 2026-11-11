@@ -3,7 +3,7 @@ export const zhLocale = {
   homeTitle: '首頁',
   aboutTitle: '關於enGo',
   productTitle: 'enGo產品',
-  mallTitle: '智管家商城',
+  mallTitle: 'enGo 商城',
   contactTitle: '聯絡我們',
   contactOnLine: '用 LINE 聯繫我們',
   tutorialTitle: '使用教學',
@@ -26,8 +26,8 @@ export const zhLocale = {
       description: 'enGo 以 AI 整合陽光、空氣、水與食物，從健康、安心到便利，打造智慧生活的核心價值。'
     },
     brand: {
-      title: '品牌故事 | enGo「安購」的起源',
-      description: '了解 enGo「安購」的創立初衷與品牌故事，我們如何用科技讓每個家庭享有高品質的智慧生活。'
+      title: '品牌故事 | enGo 的起源',
+      description: '了解 enGo 的創立初衷與品牌故事，我們如何用科技讓每個家庭享有高品質的智慧生活。'
     },
     mission: {
       title: '我們的使命 | enGo',
@@ -47,20 +47,20 @@ export const zhLocale = {
     },
     ecosystem: {
       title: '智慧生態系 | enGo AIoT 整合平台',
-      description: '探索 enGo 智慧生態系：牆掛平板、手機 App 與智管家商城三個入口，五條產品線與合作夥伴，串連家中每一個智慧裝置。'
+      description: '探索 enGo 智慧生態系：牆掛平板、手機 App 與 enGo 商城三個入口，五條產品線與合作夥伴，串連家中每一個智慧裝置。'
     },
     default: {
       title: 'enGo - 住家與社區合一的智慧生活系統',
-      description: 'enGo「安購」運用 AI 將陽光、空氣、水與食物智慧整合，打造一站式智慧生活平台。',
+      description: 'enGo 運用 AI 將陽光、空氣、水與食物智慧整合，打造一站式智慧生活平台。',
       keywords: '智管家, enGo, 智慧家居, 智能家居, AIot, 淨水器, 庫存管理'
     },
     home: {
       title: 'enGo - 住家與社區合一的智慧生活系統',
-      description: 'enGo 是住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務，管理家中照明、空調、窗簾與感測器，以及社區公告、報修、公設預約；智管家商城提供社區訂閱與鄰里市集。'
+      description: 'enGo 是住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務，管理家中照明、空調、窗簾與感測器，以及社區公告、報修、公設預約；enGo 安購商城提供社區訂閱與鄰里市集。'
     },
     product: {
-      title: '產品介紹 | enGo AI智慧中控系統、淨水系統與智管家商城',
-      description: '探索 enGo AI智慧中控平板、水維氧智慧淨水系統與智慧環控，以及智管家商城的社區訂閱與鄰里市集。'
+      title: '產品介紹 | enGo AI智慧中控系統、淨水系統與 enGo 商城',
+      description: '探索 enGo AI智慧中控平板、水維氧智慧淨水系統與智慧環控，以及 enGo 安購商城的社區訂閱與鄰里市集。'
     },
     cases: {
       title: '案例分享 | 智慧家居實作紀錄',
@@ -147,7 +147,7 @@ export const zhLocale = {
   // index (Top Level)
   pageTitle: 'AI 賦能家',
   intextLogo: '理家！蝦咪攏嘸驚！',
-  paragraph1: 'enGo「安購」運用 AI 將陽光、空氣、水與食物智慧整合，讓家更健康、更安心。',
+  paragraph1: 'enGo 運用 AI 將陽光、空氣、水與食物智慧整合，讓家更健康、更安心。',
   paragraph2: '☀ 自然採光 , 💨 空氣淨化 , 💧 水質守護 , 🥗 食材管理 , 🔒 智慧安防',
   paragraph3: '從生活細節到安全防護，enGo 讓科技充滿溫度，守護每一個家。',
   paragraph4: '節能減碳，智慧永續，enGo 讓幸福生活每一刻都更美好。',
@@ -206,13 +206,13 @@ export const zhLocale = {
   fiveValues5: '節能減碳與企業永續責任',
   missionConclusion: '從台灣出發，enGo 正在重新定義「家」的意義。我們不只是賣產品，<font color="e05a35">我們打造讓全家人都能微笑的生活方式。</font>',
   visionTitle: '公司願景',
-  visionIntextLogo: '「安購」運用尖端AI技術，將陽光、空氣、水和食物智能化地整合進家庭生活。打造節能、健康、減少浪費的愛地球智慧宅。',
+  visionIntextLogo: 'enGo 運用尖端AI技術，將陽光、空氣、水和食物智能化地整合進家庭生活。打造節能、健康、減少浪費的愛地球智慧宅。',
   vision1: '拓展運用場景',
   vision2: '技術智能化',
   vision3: '品牌經營',
   vision4: '技術貨架化',
   vision5: '多元化發展',
-  vision6: 'enGo 安購幣回饋機制',
+  vision6: 'enGo 幣回饋機制',
   vision7: 'B2B2C的互動架構',
 
   // vision page — 五大元素 body copy
@@ -238,7 +238,7 @@ export const zhLocale = {
       copy: '領先的智慧安防技術全天候守護您的家園，讓您無憂無慮地享受高品質的家庭生活，體驗社區經濟帶來的價值。'
     },
     closing:
-      'enGo「安購」，用科技溫暖您的心靈，讓 AI 幫您節能減碳，打造完美的家居生活。智慧管家不再是夢想，智慧家居 enGo「安購」將永遠守護您。'
+      'enGo，用科技溫暖您的心靈，讓 AI 幫您節能減碳，打造完美的家居生活。智慧管家不再是夢想，智慧家居 enGo 將永遠守護您。'
   },
 
   // ecosystem (Top Level)
@@ -247,6 +247,7 @@ export const zhLocale = {
   // Forms / Misc (Top Level)
   name: '姓名',
   chatbotTitle: 'enGo 小精靈',
+  login: '登入',
   brandName: 'enGo',
   reviewNamePlaceholder: '您的姓名',
   reviewCommentPlaceholder: '您的寶貴意見...',
@@ -324,6 +325,7 @@ export const zhLocale = {
   // Chatbot (Top Level)
   chatbot: {
     welcome: '你好！我是 enGo 助手。有什麼我可以幫您的嗎？',
+    online: '線上',
     inputPlaceholder: '問我任何問題...',
     specs: '規格',
     features: '特色',
@@ -348,7 +350,7 @@ export const zhLocale = {
       product: '我們的 AI 智慧中控平板整合了家電管理、安全監控與水處理系統。您可以前往「產品介紹」頁面查看更多。',
       tutorial: '我們有針對個人、設計師與建築商的專屬教學。您可以前往「使用教學」頁面了解詳情。',
       contact: '您可以撥打 02-27510218，或在「聯絡我們」頁面留下您的資料，我們將盡快聯繫您。',
-      purchase: '您可以點擊選單中的「安購商城」連結前往選購，或關注我們的早鳥優惠活動。',
+      purchase: '您可以點擊選單中的「enGo 商城」連結前往選購，或關注我們的早鳥優惠活動。',
       default: '感謝您的詢問，我們會盡快派真人客服為您服務。'
     }
   },
@@ -533,18 +535,18 @@ export const zhLocale = {
       }
     },
     shop: {
-      title: '智管家商城',
+      title: 'enGo 安購商城',
       lede: '社區訂閱與鄰里市集，送到您家門口。向社區信賴的商家訂購生鮮、日用與智慧家居，商品送達社區大廳後，系統會通知您取貨。',
       points: {
         p1: { title: '鄰里市集', body: '社區信賴的商家上架生鮮、日用品、保健食品與智慧家居配件；搜尋或瀏覽後加入購物車結帳，社區內配送。' },
         p2: { title: '訂閱方案', body: '銀卡、金卡、白金卡三種方案：每週生鮮直送、每月日用補給、全站專屬折扣，可隨時暫停或變更，沒有綁約。' },
         p3: { title: '在商城網站購物', body: '購物本身在商城網站進行。' }
       },
-      note: '智管家商城是原「安購商城」的新版本：同一個商城、新的平台與名稱。商城訂單、退換貨與物流問題請洽商城客服。',
-      cta: '前往智管家商城',
+      note: 'enGo 安購商城已升級為新版本：同一個商城、新的平台。商城訂單、退換貨與物流問題請洽商城客服。',
+      cta: '前往 enGo 安購商城',
       ctaPlans: '看訂閱方案',
-      alt: '智管家商城首頁',
-      caption: '智管家商城 shoph5.smtengo.com，2026 年 9 月上線的新版商城。'
+      alt: 'enGo 安購商城首頁',
+      caption: 'enGo 安購商城 shoph5.smtengo.com，2026 年 9 月上線的新版商城。'
     },
     packages: {
       tag: '套裝方案',

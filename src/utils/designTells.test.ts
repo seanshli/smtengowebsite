@@ -133,7 +133,7 @@ describe('page templates carry no template tells', () => {
         expect(mod).not.toMatch(/smtengoh5|h5\.smtengo\.com\/pages/)
         expect(templateOf('packages.vue')).not.toMatch(/product-reviews|submitReview/)
     })
-    it('智管家商城 is a product line: /product has the #shop section with a real store screenshot, nav and footer link it', () => {
+    it('enGo 安購商城 is a product line: /product has the #shop section with a real store screenshot, nav and footer link it', () => {
         const tpl = templateOf('product.vue')
         expect(tpl).toContain('id="shop"')
         expect(tpl).toContain('/images/screens/13-shop-home.jpg')

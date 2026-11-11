@@ -13,7 +13,7 @@
           </div>
           <div>
             <h3>{{ $t('chatbotTitle') }}</h3>
-            <span class="chat-header-status">{{ $t('chatbot.online') || 'Online' }}</span>
+            <span class="chat-header-status">{{ $t('chatbot.online') }}</span>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
           <input
             v-model="userQuery"
             @keyup.enter="handleSearch"
-            :placeholder="$t('chatbot.inputPlaceholder') || 'Ask me anything...'"
+            :placeholder="$t('chatbot.inputPlaceholder')"
             class="chat-input"
           />
           <button @click="handleSearch" class="send-btn">
@@ -77,6 +77,7 @@ import { ref, nextTick, onMounted } from 'vue'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import knowledgeBase from '@/data/knowledge_base.json'
+import { videoTitle } from '@/utils/videoTitle'
 import { normalizeQuery, expandQuery, rankKnowledge, prefersShopKnowledge } from '@/utils/chatbotMatch'
 import { askShopKnowledge } from '../../lib/shop-knowledge'
 
@@ -240,7 +241,7 @@ const handleSearch = () => {
       if (bestMatch.type === 'youtube') {
         const videoId = bestMatch.url.split('v=')[1] || bestMatch.url.split('/').pop()
         const embedUrl = `https://www.youtube.com/embed/${videoId}`
-        response = `${t('chatbot.found_video')} ${bestMatch.title}\n`
+        response = `${t('chatbot.found_video')} ${videoTitle(bestMatch, locale.value)}\n`
         messages.value.push({
           role: 'assistant',
           text: response,

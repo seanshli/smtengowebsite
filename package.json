@@ -18,6 +18,7 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
+    "i18n:zhcn": "node scripts/fill-zhcn.mjs",
     "postbuild": "node scripts/prerender-meta.mjs"
   },
   "dependencies": {
@@ -50,6 +51,7 @@
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^24.1.0",
     "npm-run-all2": "^6.2.0",
+    "opencc-js": "^1.4.2",
     "prettier": "^3.2.5",
     "sass": "^1.77.8",
     "typescript": "~5.4.0",

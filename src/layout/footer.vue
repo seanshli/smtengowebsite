@@ -5,9 +5,9 @@
     <div class="ft-inner">
       <div class="ft-top">
         <div class="ft-brand">
-          <FooterMark :label="isZh ? 'enGo 首頁' : 'enGo home'" />
+          <FooterMark :label="tx('enGo 首頁', 'enGo 首页', 'enGo home')" />
           <p class="ft-tag">
-            {{ isZh ? '把智慧生活，寫進每一天。' : 'Smart living, written into every day.' }}
+            {{ tx('把智慧生活，寫進每一天。', '把智慧生活，写进每一天。', 'Smart living, written into every day.') }}
           </p>
         </div>
 
@@ -40,7 +40,7 @@
             <router-link :to="{ path: '/tutorial', hash: '#faq' }">{{ $t('faqTitle') }}</router-link>
             <router-link to="/cases">{{ $t('casesTitle') }}</router-link>
             <router-link to="/contact">{{ $t('footer.contactUs') }}</router-link>
-            <router-link to="/login">{{ $t('login') || '登入' }}</router-link>
+            <router-link to="/login">{{ $t('login') }}</router-link>
           </div>
         </nav>
       </div>
@@ -67,7 +67,7 @@
             <i>·</i>
             <a :href="legalDoc('terms')">{{ $t('footer.termsOfService') }}</a>
             <i>·</i>
-            <router-link to="/legal" data-track="footer:legal">{{ isZh ? '法務文件中心' : 'Legal Center' }}</router-link>
+            <router-link to="/legal" data-track="footer:legal">{{ tx('法務文件中心', '法务文件中心', 'Legal Center') }}</router-link>
           </span>
         </div>
       </div>
@@ -78,6 +78,7 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useLocaleText } from '../composables/useLocaleText'
 import { useRouter } from 'vue-router'
 import FooterMark from '../components/FooterMark.vue'
 
@@ -85,10 +86,10 @@ export default defineComponent({
   name: 'Footer',
   components: { FooterMark },
   setup() {
-    const { t, locale } = useI18n()
+    const { t } = useI18n()
+    const { isZh, tx } = useLocaleText()
     const router = useRouter()
 
-    const isZh = computed(() => locale.value.startsWith('zh'))
 
     // The legal documents are static pages, not routes, and exist in two
     // languages only. Chinese readers get the Traditional Chinese originals
@@ -108,7 +109,7 @@ export default defineComponent({
       router.push({ name: 'product', query: { jump: 'oxygen1' } })
     }
 
-    return { isZh, copyright, jumpToProduct, jumpToProduct1, legalDoc }
+    return { isZh, tx, copyright, jumpToProduct, jumpToProduct1, legalDoc }
   }
 })
 </script>

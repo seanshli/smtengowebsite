@@ -80,17 +80,17 @@ describe('prerender structured data (AI-SEO)', () => {
     }
     expect(jsonLdFor('/cases', 'zh')).toEqual([])
   })
-  it('智管家商城 appears as an OnlineStore on / and /product (own site, owned by the company), and the product meta names it', () => {
+  it('enGo 安購商城 appears as an OnlineStore on / and /product (own site, owned by the company), and the product meta names it', () => {
     for (const route of ['/', '/product']) for (const lang of ['zh', 'en']) {
       const store = jsonLdFor(route, lang).find((b: any) => b['@type'] === 'OnlineStore') as any
       expect(store.url).toBe('https://shoph5.smtengo.com/')
-      expect(store.name).toBe('智管家商城')
-      expect(store.parentOrganization.name).toBe('智管家科技股份有限公司')
+      expect(store.name).toBe(lang === 'en' ? 'enGo Shop' : 'enGo 安購商城')
+      expect(store.parentOrganization.name).toBe(lang === 'en' ? 'Smart enGo Home Technology Corp.' : '智管家科技股份有限公司')
       expect(store.description).not.toMatch(/合併|轉移|收購/)
     }
     expect(jsonLdFor('/cases', 'zh').find((b: any) => b['@type'] === 'OnlineStore')).toBeUndefined()
     const html = buildHtml(TEMPLATE, '/product', 'zh')
-    expect(html).toMatch(/<title>[^<]*智管家商城/)
+    expect(html).toMatch(/<title>[^<]*enGo 商城/)
     expect(count(html, /"@type":"OnlineStore"/g)).toBe(1)
   })
   it('the postbuild pass does not duplicate structured data', () => {
@@ -125,7 +125,7 @@ describe('prerender buildHtml', () => {
 })
 
 describe('brand: enGo is the official name (Sean, 2026-11-09)', () => {
-  // 智管家 stays only in the legal entity (智管家科技股份有限公司), the 智管家商城
+  // 智管家 stays only in the legal entity (智管家科技股份有限公司), the enGo 安購商城
   // product name and the App Store listing name. The unsupported 「第一品牌」
   // superlative is gone from every title.
   const files = ['index.html', 'scripts/prerender-meta.mjs', 'src/locale/zh.ts', 'src/locale/zhCN.ts', 'src/locale/en.ts', 'src/utils/seo.ts']

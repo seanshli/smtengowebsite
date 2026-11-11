@@ -162,7 +162,7 @@ export default defineComponent({
       changeLocale(lang)
     }
 
-    // 安購商城: front page of the new storefront (utils/shopUrl)
+    // enGo 安購商城: front page of the new storefront (utils/shopUrl)
     const toMall = () => {
       openShop()
     }

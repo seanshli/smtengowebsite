@@ -112,9 +112,9 @@
       <button class="contact-form-submit ap-pill ap-pill-primary" @click="submitForm">{{ $t('submitForm') }}</button>
       </div>
 
-          <aside class="cf-aside" :aria-label="isZh ? '其他聯絡方式' : 'Other ways to reach us'">
+          <aside class="cf-aside" :aria-label="tx('其他聯絡方式', '其他联系方式', 'Other ways to reach us')">
             <div class="cf-aside-block">
-              <h2 class="cf-aside-title">{{ isZh ? '直接來電' : 'Call us' }}</h2>
+              <h2 class="cf-aside-title">{{ tx('直接來電', '直接来电', 'Call us') }}</h2>
               <a class="cf-aside-phone" href="tel:+886-2-27510218" data-track="contact:phone">{{ $t('footer.phone') }}</a>
               <p class="cf-aside-note">{{ $t('footer.time') }}</p>
             </div>
@@ -126,7 +126,7 @@
               </button>
             </div>
             <div class="cf-aside-block" v-if="showrooms.length">
-              <h2 class="cf-aside-title">{{ isZh ? '展示間' : 'Showrooms' }}</h2>
+              <h2 class="cf-aside-title">{{ tx('展示間', '展示间', 'Showrooms') }}</h2>
               <ul class="cf-showrooms">
                 <li v-for="s in showrooms" :key="s.id">
                   <router-link :to="'/cases/' + s.id">{{ pick(s.title) }}</router-link>
@@ -144,6 +144,7 @@
 import { defineComponent, ref, computed, onMounted } from 'vue'
 import { config } from '../configs/systemConfig'
 import { useI18n } from 'vue-i18n'
+import { useLocaleText } from '../composables/useLocaleText'
 import { useRoute, useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 import casesData from '@/data/cases.json'
@@ -172,8 +173,8 @@ export default defineComponent({
 
     // Same source as the home page's showroom list, so the two never disagree.
     const showrooms = (casesData as any[]).filter((c) => c.category?.en === 'Showroom')
-    const isZh = computed(() => String(locale.value).startsWith('zh'))
-    const pick = (o: any) => (o && (o[isZh.value ? 'zh' : 'en'] ?? o.zh)) || ''
+    const { isZh, tx, lt } = useLocaleText()
+    const pick = (o: any) => (o && lt(o)) || ''
 
     const route = useRoute()
     const router = useRouter()
@@ -184,7 +185,7 @@ const jumpToLine = () => {
     }
 
     const handleError = () => {
-      errorMessage.value = 'Something went wrong. Please try again later.'
+      errorMessage.value = tx('發生錯誤，請稍後再試。', '发生错误，请稍后再试。', 'Something went wrong. Please try again later.')
       trackEvent('form_submit_error', { error: errorMessage.value })
     }
 
@@ -335,6 +336,7 @@ const jumpToLine = () => {
       jumpToLine,
       showrooms,
       isZh,
+      tx,
       pick,
     }
   }

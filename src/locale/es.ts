@@ -3,7 +3,7 @@ export const esLocale = {
   homeTitle: 'Inicio',
   aboutTitle: 'Acerca de enGo',
   productTitle: 'Producto enGo',
-  mallTitle: 'Tienda enGo',
+  mallTitle: 'enGo Shop',
   contactTitle: 'Contáctenos',
   contactOnLine: 'Contáctenos por LINE',
   tutorialTitle: 'Tutorial',
@@ -248,6 +248,7 @@ export const esLocale = {
   contactUsSubtitle2: 'no dude en ponerse en contacto con nosotros.',
   name: 'Nombre',
   chatbotTitle: 'Asistente enGo',
+  login: 'Iniciar sesión',
   brandName: 'enGo Smart Home',
   reviewNamePlaceholder: 'Tu nombre',
   reviewCommentPlaceholder: 'Tu opinión...',
@@ -383,7 +384,7 @@ export const esLocale = {
     contactUs: 'Contáctenos',
     tutorial: 'Tutorial',
     cases: 'Compartir Casos',
-    copyright: 'Copyright © 2024, SmtenGo. Todos los derechos reservados.',
+    copyright: 'Copyright © 2024, Smart enGo Home Technology Corp. Todos los derechos reservados.',
     time: 'Lun-Vie 9:00-18:00',
     phone: '02-27510218',
     customer: 'Servicio al Cliente'
@@ -400,6 +401,7 @@ export const esLocale = {
 
   chatbot: {
     welcome: 'Hola! Soy el Asistente enGo. ¿Cómo puedo ayudarte hoy?',
+    online: 'En línea',
     inputPlaceholder: 'Pregúntame cualquier cosa...',
     specs: 'Especificaciones',
     features: 'Características',
@@ -424,7 +426,7 @@ export const esLocale = {
       product: 'Nuestro Centro Inteligente AI integra electrodomésticos del hogar, seguridad y filtración de agua. Visita nuestra página de Producto para más detalles.',
       tutorial: 'Proporcionamos guías especializadas para individuos, diseñadores y constructores. Consulta nuestra página de Tutoriales.',
       contact: 'Llámanos al 02-27510218 o deja tus detalles en la página de Contacto, y nos pondremos en contacto contigo.',
-      purchase: 'Visita nuestra Tienda enGo para comprar en línea o sigue nuestras promociones para usuarios tempranos.',
+      purchase: 'Visita enGo Shop para comprar en línea o sigue nuestras promociones para usuarios tempranos.',
       default: 'Gracias por tu consulta. Un representante te asistirá en breve.'
     }
   }
