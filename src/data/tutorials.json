@@ -287,18 +287,18 @@
       },
       {
         "category": {
-          "zh": "智能富氧艙",
-          "zhCN": "智能富氧舱",
-          "en": "Smart Oxygen Chamber",
-          "ja": "スマート高濃度酸素ルーム",
-          "fr": "Chambre à oxygène intelligente"
+          "zh": "智能富氧艙優化合作",
+          "zhCN": "智能富氧舱优化合作",
+          "en": "Smart Oxygen Chamber optimization",
+          "ja": "スマート高濃度酸素ルーム最適化協力",
+          "fr": "Optimisation de la chambre à oxygène intelligente"
         },
         "name": {
-          "zh": "麗寶生技",
-          "zhCN": "丽宝生技",
-          "en": "Lihpao Biotech",
-          "ja": "麗寶生技",
-          "fr": "Lihpao Biotech"
+          "zh": "麗寶生醫",
+          "zhCN": "丽宝生医",
+          "en": "Lihpao Life Science",
+          "ja": "麗寶生醫",
+          "fr": "Lihpao Life Science"
         },
         "url": "https://libobio.com/?page_id=6002"
       }
