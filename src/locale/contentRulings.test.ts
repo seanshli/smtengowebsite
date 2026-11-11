@@ -90,4 +90,12 @@ describe('content rulings 2026-11-10', () => {
     expect(all).toContain('Lihpao Life Science')
     expect(all).toContain('智能富氧艙優化合作')
   })
+  it('case records carry no vendor name and no door-lock product or requirement', () => {
+    const text = COPY['src/data/cases.json']
+    expect(text).not.toMatch(/Aqara/i)
+    // No vendor names and no retired enGo air purifier (EAP-01) in case hardware lists.
+    expect(text).not.toMatch(/Daikin|大金|ダイキン/i)
+    expect(text).not.toMatch(/空氣清淨|空气清净|Air Purifier|Purificateur d'air|Purificador de aire|空気清浄機/i)
+    expect(text).not.toMatch(/門鎖|门锁|smart locks?|door ?locks?|serrure|cerradura|スマートロック|ドアロック/i)
+  })
 })
