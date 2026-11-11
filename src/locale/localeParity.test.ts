@@ -7,6 +7,7 @@ import { enLocale as en } from './en'
 import { frLocale as fr } from './fr'
 import { jaLocale as ja } from './ja'
 import { esLocale as es } from './es'
+import { traditionalIn } from './scriptPurity'
 
 // /en is an indexed locale (hreflang, sitemap). A key that exists only in zh falls
 // back to Chinese on the English page silently, which is how the whole water
@@ -79,17 +80,7 @@ describe('data files carry zh, zhCN and en for every localized value', () => {
 })
 
 // ---- script purity ------------------------------------------------------------------------------------
-// Characters that exist only in Traditional Chinese (their Simplified forms differ). Tuned against the real
-// copy; add a character only if it has no Simplified-identical use. Proper nouns that legitimately keep a
-// Traditional form go in ALLOW below with the reason.
-const TRADITIONAL = '們個這來說為與發體區設產線圖點術選擇實際應開關後時間電燈話對於從會讓還進過動務員專業學樣種類藝網據機計運連達護環邊鍵顯換數錄級縣灣臺訊裝備當聯統寫認識場層塊處條續輯複簡經驗廠帳號戶門顧買賣價費購貨訂單質檢測課題風險權責貼儲'
-const ALLOW: string[] = [
-    // 「繁體中文」 names the Traditional-Chinese legal documents on purpose.
-    '繁體中文'
-]
-const stripAllowed = (s: string) => ALLOW.reduce((a, w) => a.split(w).join(''), s)
-const traditionalIn = (s: string) => [...new Set([...stripAllowed(s)].filter((c) => TRADITIONAL.includes(c)))]
-
+// Characters that exist only in Traditional Chinese: see ./scriptPurity.
 const stringsOf = (o: any): string[] => {
     if (typeof o === 'string') return [o]
     if (Array.isArray(o)) return o.flatMap((x) => stringsOf(x))

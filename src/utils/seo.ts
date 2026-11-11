@@ -5,7 +5,7 @@ import { rawMessageIn } from './rawMessage'
 
 const LOCALE_TO_HTML_LANG: Record<string, string> = {
   zh: 'zh-TW',
-  zhCN: 'zh-CN',
+  zhCN: 'zh-Hans',
   en: 'en',
   fr: 'fr',
   ja: 'ja',

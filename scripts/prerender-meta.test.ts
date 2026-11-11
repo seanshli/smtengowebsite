@@ -1,5 +1,13 @@
 import { describe, expect, it } from 'vitest'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { buildHtml, jsonLdFor } from './prerender-meta.mjs'
+// @ts-expect-error -- plain .mjs build script, no type declarations for these exports
+import { ROUTES, PREFIXES, LANGS } from './prerender-meta.mjs'
+import { LOCALE_PREFIXES } from '../src/utils/localePaths'
+import { zhCNLocale } from '../src/locale/zhCN'
+import { traditionalIn } from '../src/locale/scriptPurity'
+import { rawMessageIn } from '../src/utils/rawMessage'
 
 // Minimal stand-in for index.html: the tags the prerenderer rewrites, in the
 // order they appear in the real shell.
@@ -143,5 +151,133 @@ describe('brand: enGo is the official name (Sean, 2026-11-09)', () => {
         expect(html, `${loc} ${route}`).toMatch(/<title>[^<]*enGo/)
       }
     }
+  })
+})
+
+// ---- /zh-cn: Simplified Chinese gets its own indexable URLs (2026-11-11) -------------------------------
+const BASE = 'https://www.smtengo.com'
+const routes = Object.keys(ROUTES as Record<string, unknown>)
+const urlOf = (route: string, lang: 'zh' | 'zhCN' | 'en') =>
+  BASE + LOCALE_PREFIXES[lang] + (route === '/' && LOCALE_PREFIXES[lang] ? '' : route)
+const linkTags = (html: string) => [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)" \/>/g)].map((m) => [m[1], m[2]])
+
+describe('/zh-cn shells', () => {
+  it('prerender prefixes match the router/util prefixes, and every locale has a shell', () => {
+    expect(PREFIXES).toEqual(LOCALE_PREFIXES)
+    expect([...LANGS].sort()).toEqual(['en', 'zh', 'zhCN'])
+  })
+
+  it.each(routes)('%s: zh, zh-cn and en shells exist, are self-canonical and carry the full 4-entry hreflang set', (route) => {
+    for (const lang of ['zh', 'zhCN', 'en'] as const) {
+      const html = buildHtml(TEMPLATE, route, lang)
+      expect(count(html, /rel="canonical"/g)).toBe(1)
+      expect(html).toContain(`<link rel="canonical" href="${urlOf(route, lang)}" />`)
+      expect(linkTags(html)).toEqual([
+        ['zh-Hant', urlOf(route, 'zh')],
+        ['zh-Hans', urlOf(route, 'zhCN')],
+        ['en', urlOf(route, 'en')],
+        ['x-default', urlOf(route, 'zh')]
+      ])
+      expect(html).toContain(`<meta property="og:url" content="${urlOf(route, lang)}" />`)
+    }
+  })
+
+  it('declares html lang zh-Hans and og:locale zh_CN (script subtags, like the zh-Hant / en shells)', () => {
+    const html = buildHtml(TEMPLATE, '/product', 'zhCN')
+    expect(html).toContain('<html lang="zh-Hans"')
+    expect(html).toContain('<meta property="og:locale" content="zh_CN" />')
+    expect(html).toContain('<main class="pf" lang="zh-Hans">')
+    expect(buildHtml(TEMPLATE, '/product', 'zh')).toContain('<html lang="zh-Hant"')
+    expect(buildHtml(TEMPLATE, '/product', 'zh')).toContain('content="zh_TW"')
+  })
+
+  it('fallback content is Simplified and links stay inside /zh-cn', () => {
+    const html = buildHtml(TEMPLATE, '/product', 'zhCN')
+    expect(count(html, /<h1>/g)).toBe(1)
+    expect(html).toContain('<h1>产品介绍</h1>')
+    expect(html).toContain('href="/zh-cn/tutorial"')
+    expect(html).toContain('<a href="/zh-cn">')
+    expect(html).not.toContain('href="/tutorial"')
+    expect(html).not.toContain('href="/en/')
+    const block = html.slice(html.indexOf('<!--prerender:fallback-->'), html.indexOf('<!--/prerender:fallback-->'))
+    expect(traditionalIn(block)).toEqual([])
+  })
+
+  it.each(routes)('%s: zh-cn title and description come from the zhCN locale and are free of Traditional-only characters', (route) => {
+    const key = route === '/' ? 'home' : route.slice(1)
+    const [title, desc] = (ROUTES as any)[route].zhCN as [string, string]
+    expect(rawMessageIn(zhCNLocale, `seo.${key}.title`)).toBe(title)
+    expect(rawMessageIn(zhCNLocale, `seo.${key}.description`)).toBe(desc)
+    expect(traditionalIn(title + desc)).toEqual([])
+    const html = buildHtml(TEMPLATE, route, 'zhCN')
+    expect(html).toContain(`<title>${title.replace(/&/g, '&amp;')}</title>`)
+  })
+
+  it('structured data on /zh-cn shells is Simplified and points at /zh-cn', () => {
+    const blocks = jsonLdFor('/product', 'zhCN') as any[]
+    const store = blocks.find((b) => b['@type'] === 'OnlineStore')
+    expect(store.name).toBe('enGo 安购商城')
+    expect(store.sameAs).toEqual([`${BASE}/zh-cn/product#shop`])
+    expect(traditionalIn(JSON.stringify(blocks))).toEqual([])
+    const tut = buildHtml(TEMPLATE, '/tutorial', 'zhCN')
+    expect(tut).toContain(`${BASE}/zh-cn/tutorial#howto-device`)
+  })
+
+  it('the postbuild re-read of a generated zh-cn shell does not duplicate hreflang or leak the previous route', () => {
+    const first = buildHtml(TEMPLATE, '/', 'zhCN')
+    const second = buildHtml(first, '/contact', 'zhCN')
+    expect(count(second, /hreflang=/g)).toBe(4)
+    expect(count(second, /rel="canonical"/g)).toBe(1)
+    expect(second).toContain(`href="${BASE}/zh-cn/contact"`)
+  })
+})
+
+describe('sitemap.xml lists /zh-cn', () => {
+  const xml = readFileSync(resolve(__dirname, '../public/sitemap.xml'), 'utf-8')
+  const entries = xml.split('<url>').slice(1).map((b) => ({
+    loc: /<loc>(.*?)<\/loc>/.exec(b)![1],
+    alts: [...b.matchAll(/<xhtml:link rel="alternate" hreflang="([^"]+)" href="([^"]+)"\/>/g)].map((m) => [m[1], m[2]])
+  }))
+
+  it.each(routes)('%s: each language URL appears exactly once, each with the 4 alternates', (route) => {
+    for (const lang of ['zh', 'zhCN', 'en'] as const) {
+      const loc = urlOf(route, lang)
+      const hits = entries.filter((e) => e.loc === loc)
+      expect(hits.length, loc).toBe(1)
+      expect(hits[0].alts).toEqual([
+        ['zh-Hant', urlOf(route, 'zh')],
+        ['zh-Hans', urlOf(route, 'zhCN')],
+        ['en', urlOf(route, 'en')],
+        ['x-default', urlOf(route, 'zh')]
+      ])
+    }
+  })
+
+  it('has no duplicate <loc> and no uppercase /zh-CN URL', () => {
+    const locs = entries.map((e) => e.loc)
+    expect(new Set(locs).size).toBe(locs.length)
+    expect(locs.filter((l) => /zh-cn/i.test(l)).every((l) => l.includes('/zh-cn'))).toBe(true)
+  })
+})
+
+describe('vercel.json and llms.txt', () => {
+  const vercel = JSON.parse(readFileSync(resolve(__dirname, '../vercel.json'), 'utf-8'))
+  it('has a rewrite to the static shell for every /en shell route that has one, mirrored for /zh-cn', () => {
+    const rewrites = vercel.rewrites.map((r: any) => [r.source, r.destination])
+    const en = rewrites.filter(([s]: string[]) => s === '/en' || s.startsWith('/en/'))
+    expect(en.length).toBeGreaterThan(5)
+    for (const [src, dest] of en) {
+      const z = src.replace(/^\/en/, '/zh-cn')
+      expect(rewrites).toContainEqual([z, dest.replace(/^\/en/, '/zh-cn')])
+    }
+  })
+  it('301-redirects /zh-hans to /zh-cn and leaves the host redirects alone', () => {
+    const red = vercel.redirects
+    expect(red).toContainEqual({ source: '/zh-hans', destination: '/zh-cn', permanent: true })
+    expect(red).toContainEqual({ source: '/zh-hans/:path*', destination: '/zh-cn/:path*', permanent: true })
+    expect(red.filter((r: any) => r.has?.[0]?.type === 'host').map((r: any) => r.has[0].value)).toEqual(['web.smtengo.com', 'w2.smtengo.com'])
+  })
+  it('llms.txt points to the Simplified Chinese version under /zh-cn', () => {
+    expect(readFileSync(resolve(__dirname, '../public/llms.txt'), 'utf-8')).toContain('https://www.smtengo.com/zh-cn')
   })
 })

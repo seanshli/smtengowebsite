@@ -25,6 +25,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, onUnmounted } from 'vue'
 import { useLocaleText } from '../composables/useLocaleText'
+import { withLocalePrefix } from '../utils/localePaths'
 
 // A Vue SPA behind Vercel's catch-all rewrite cannot return a real 404 status:
 // the platform has already answered 200 with index.html before any JS runs.
@@ -39,11 +40,12 @@ export default defineComponent({
   setup() {
     const { isZh, tx, locale } = useLocaleText()
 
-    // English is the one prefixed locale (zh is unprefixed, fr/ja/es reuse the
-    // unprefixed routes). Without this the recovery links carried English
-    // labels to Chinese pages, pushing every English visitor off the /en site.
+    // English and Simplified Chinese are the prefixed locales (zh is
+    // unprefixed, fr/ja/es reuse the unprefixed routes). Without this the
+    // recovery links carried translated labels to Chinese pages, pushing every
+    // English / Simplified visitor off their own site.
     const localePath = (path: string) =>
-      locale.value === 'en' ? (path === '/' ? '/en' : `/en${path}`) : path
+      locale.value === 'en' || locale.value === 'zhCN' ? withLocalePrefix(path, locale.value) : path
 
     // The catch-all rewrite serves the home shell for every unmatched URL, so
     // a 404 arrives carrying the home page's canonical and hreflang set. Left

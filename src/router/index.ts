@@ -3,230 +3,26 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { useSeo } from '@/utils/seo'
 import { useAnalytics } from '@/utils/analytics'
 import { changeLocale, i18n } from '@/main'
+import {
+  LOCALE_PREFIXES,
+  LOCALIZED,
+  canonicalZhCnPath,
+  isLocalizedPath,
+  localeFromPath,
+  routePrefixName,
+  withLocalePrefix
+} from '@/utils/localePaths'
+import { routes } from './routes'
 
 // Traditional Chinese is the default and stays unprefixed, so every existing
 // URL and backlink keeps working. English mirrors the content routes under
-// /en/*. Only these two are real for search — see public/sitemap.xml.
-export const LOCALE_PREFIXES = { zh: '', en: '/en' } as const
-
-// Pages worth indexing per language. login/success/display/admin are tools,
-// not content, so they stay single-locale.
-const LOCALIZED = new Set([
-  'home', 'core', 'brand', 'mission', 'team', 'enviro', 'vision',
-  'ecosystem', 'product', 'contact', 'packages', 'tutorial', 'cases',
-  'case-detail'
-])
-
-const baseRoutes: any[] = [
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('@/views/index.vue'),
-      meta: {
-        titleKey: 'seo.home.title',
-        descKey: 'seo.home.description'
-      }
-    },
-    {
-      path: '/core',
-      name: 'core',
-      component: () => import('@/views/coreValue.vue'),
-      meta: {
-        titleKey: 'seo.core.title',
-        descKey: 'seo.core.description'
-      }
-    },
-    {
-      path: '/brand',
-      name: 'brand',
-      component: () => import('@/views/brandStory.vue'),
-      meta: {
-        titleKey: 'seo.brand.title',
-        descKey: 'seo.brand.description'
-      }
-    },
-    {
-      path: '/mission',
-      name: 'mission',
-      component: () => import('@/views/mission.vue'),
-      meta: {
-        titleKey: 'seo.mission.title',
-        descKey: 'seo.mission.description'
-      }
-    },
-    {
-      path: '/team',
-      name: 'team',
-      component: () => import('@/views/team.vue'),
-      meta: {
-        titleKey: 'seo.team.title',
-        descKey: 'seo.team.description'
-      }
-    },
-    {
-      path: '/enviro',
-      name: 'enviro',
-      component: () => import('@/views/enviro.vue'),
-      meta: {
-        titleKey: 'seo.enviro.title',
-        descKey: 'seo.enviro.description'
-      }
-    },
-    {
-      path: '/vision',
-      name: 'vision',
-      component: () => import('@/views/vision.vue'),
-      meta: {
-        titleKey: 'seo.vision.title',
-        descKey: 'seo.vision.description'
-      }
-    },
-    {
-      path: '/ecosystem',
-      name: 'ecosystem',
-      component: () => import('@/views/ecosystem.vue'),
-      meta: {
-        titleKey: 'seo.ecosystem.title',
-        descKey: 'seo.ecosystem.description'
-      }
-    },
-    {
-      path: '/product',
-      name: 'product',
-      component: () => import('@/views/product.vue'),
-      meta: {
-        titleKey: 'seo.product.title',
-        descKey: 'seo.product.description'
-      }
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('@/views/contact.vue'),
-      meta: {
-        titleKey: 'seo.contact.title',
-        descKey: 'seo.contact.description'
-      }
-    },
-    {
-      path: '/legal',
-      name: 'legal',
-      component: () => import('@/views/legal.vue'),
-      meta: {
-        titleKey: 'seo.legal.title',
-        descKey: 'seo.legal.description'
-      }
-    },
-    {
-      path: '/packages',
-      name: 'packages',
-      component: () => import('@/views/packages.vue'),
-      meta: {
-        titleKey: 'seo.packages.title',
-        descKey: 'seo.packages.description'
-      }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: () => import('@/views/login.vue'),
-      meta: {
-        titleKey: 'seo.login.title',
-        descKey: 'seo.login.description'
-      }
-    },
-    {
-      path: '/tutorial',
-      name: 'tutorial',
-      component: () => import('@/views/tutorial.vue'),
-      meta: {
-        titleKey: 'seo.tutorial.title',
-        descKey: 'seo.tutorial.description'
-      }
-    },
-    {
-      path: '/cases',
-      name: 'cases',
-      component: () => import('@/views/cases.vue'),
-      meta: {
-        titleKey: 'seo.cases.title',
-        descKey: 'seo.cases.description'
-      }
-    },
-    {
-      path: '/cases/:id',
-      name: 'case-detail',
-      component: () => import('@/views/CaseDetail.vue'),
-      meta: {
-        titleKey: 'seo.cases.title'
-      }
-    },
-    {
-      path: '/success',
-      name: 'success',
-      component: () => import('@/views/success.vue'),
-      meta: { title: 'Success | enGo' }
-    },
-    {
-      path: '/display',
-      name: 'display',
-      component: () => import('@/views/product.vue'),
-      meta: { titleKey: 'seo.product.title' }
-    },
-    {
-      path: '/admin',
-      component: () => import('@/layout/AdminLayout.vue'),
-      meta: { requiresAuth: true },
-      children: [
-        {
-          path: '',
-          name: 'admin-dashboard',
-          component: () => import('@/views/admin/Dashboard.vue'),
-          meta: { title: 'Admin Dashboard' }
-        },
-        {
-          path: 'members',
-          name: 'admin-members',
-          component: () => import('@/views/admin/Members.vue'),
-          meta: { title: 'Member Management', requiresAuth: true, role: 'superuser' }
-        },
-        {
-          path: 'profile',
-          name: 'admin-profile',
-          component: () => import('@/views/admin/Profile.vue'),
-          meta: { title: 'My Profile', requiresAuth: true }
-        }
-      ]
-    },
-    {
-      // Rendering HomeView here made every bad URL a 200 duplicate of the home
-      // page — an unbounded set of indexable soft-404s.
-      path: '/:pathMatch(.*)*',
-      name: 'Not Found',
-      component: () => import('@/views/NotFound.vue'),
-      // Without its own meta, seo.ts falls through to the home page's title
-      // and description, so every bad URL introduced itself as the home page.
-      meta: { titleKey: 'seo.notFound.title', descKey: 'seo.notFound.description' }
-    }
-]
-
-// The catch-all has to stay last or it swallows /en/* before those routes are
-// ever reached.
-const catchAll = baseRoutes.filter((r) => String(r.path).startsWith('/:pathMatch'))
-const normal = baseRoutes.filter((r) => !String(r.path).startsWith('/:pathMatch'))
-
-const enRoutes = normal
-  .filter((r) => LOCALIZED.has(String(r.name)))
-  .map((r) => ({
-    ...r,
-    path: r.path === '/' ? '/en' : `/en${r.path}`,
-    name: `en-${String(r.name)}`,
-    meta: { ...(r.meta || {}), locale: 'en' }
-  }))
+// /en/* and Simplified Chinese under /zh-cn/* (see utils/localePaths.ts).
+// Only these three are real for search — see public/sitemap.xml.
+export { LOCALE_PREFIXES }
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [...normal, ...enRoutes, ...catchAll],
+  routes,
   scrollBehavior(to, from, savedPosition) {
     // Honour #news and friends — without this, linking to /#news from another
     // page lands at the top and the section the user asked for is off-screen.
@@ -236,6 +32,41 @@ const router = createRouter({
     return { top: 0 }
   }
 })
+
+// ─── Keep internal links inside the visitor's language ───
+// Links are written once, unprefixed ('/product'). While the visitor is on an
+// /en or /zh-cn page, route them to the prefixed twin instead, otherwise the
+// first click would drop them back to Traditional Chinese (beforeEach resets
+// the locale to match the URL). Applied in resolve() so <router-link> hrefs are
+// right, and in push()/replace() because RouterLink and code navigate with the
+// original target. The header's language switcher uses pushUnlocalized().
+type Target = any
+const localizeTarget = (to: Target): Target => {
+  const loc = localeFromPath(router.currentRoute.value.path)
+  if (loc === 'zh') return to
+  if (typeof to === 'string') {
+    const path = to.split(/[?#]/)[0]
+    return isLocalizedPath(path) ? withLocalePrefix(path, loc) + to.slice(path.length) : to
+  }
+  if (to && typeof to === 'object') {
+    if (typeof to.path === 'string' && isLocalizedPath(to.path)) {
+      return { ...to, path: withLocalePrefix(to.path, loc) }
+    }
+    if (typeof to.name === 'string' && LOCALIZED.has(to.name)) {
+      return { ...to, name: routePrefixName(loc, to.name) }
+    }
+  }
+  return to
+}
+const rawResolve = router.resolve.bind(router)
+const rawPush = router.push.bind(router)
+const rawReplace = router.replace.bind(router)
+router.resolve = ((to: Target, current?: any) => rawResolve(localizeTarget(to), current)) as typeof router.resolve
+router.push = ((to: Target) => rawPush(localizeTarget(to))) as typeof router.push
+router.replace = ((to: Target) => rawReplace(localizeTarget(to))) as typeof router.replace
+
+/** Navigate to exactly this target (no language-prefix rewriting). */
+export const pushUnlocalized = (to: Target) => rawPush(to)
 
 const { updateMeta } = useSeo()
 const { trackPageView } = useAnalytics()
@@ -293,16 +124,22 @@ const isExpired = (token: string): boolean => {
 }
 
 router.beforeEach((to, from, next) => {
-  // The URL is the source of truth for language on the two indexed locales, so
-  // /en/team renders English for a crawler — and for anyone opening the link —
-  // without needing a click on the switcher first.
-  const wantsEn = to.path === '/en' || to.path.startsWith('/en/')
+  // /zh-CN and /zh-hans are aliases (vue-router matches case-insensitively, so
+  // /zh-CN/product would otherwise render under a second, non-canonical URL).
+  const alias = canonicalZhCnPath(to.path)
+  if (alias) return next({ path: alias, query: to.query, hash: to.hash, replace: true })
+
+  // The URL is the source of truth for language on the three indexed locales,
+  // so /en/team and /zh-cn/team render English / Simplified for a crawler, and
+  // for anyone opening the link, without a click on the switcher first.
+  const urlLocale = localeFromPath(to.path)
   const current = i18n.global.locale.value
-  if (wantsEn && current !== 'en') {
-    changeLocale('en')
-  } else if (!wantsEn && current === 'en') {
-    // Leaving an /en URL: fall back to the default rather than staying English
-    // on a Chinese URL, which would contradict that page's own hreflang.
+  if (urlLocale !== 'zh') {
+    if (current !== urlLocale) changeLocale(urlLocale)
+  } else if (current === 'en' || current === 'zhCN') {
+    // Leaving a prefixed URL: fall back to the default rather than staying in
+    // that language on a Traditional URL, which would contradict that page's
+    // own hreflang. (ja / fr / es have no URL, so they are left alone.)
     changeLocale('zh')
   }
 

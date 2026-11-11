@@ -116,6 +116,8 @@ import { defineComponent, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { changeLocale, type LanguageType, i18n } from '../main'
 import { openShop, SHOP_URL } from '@/utils/shopUrl'
+import { pushUnlocalized } from '@/router'
+import { stripLocalePrefix, withLocalePrefix } from '@/utils/localePaths'
 
 export default defineComponent({
   name: 'Header',
@@ -141,24 +143,22 @@ export default defineComponent({
       }
     }
 
-    // zh and en are the two locales with real URLs, so switching between them
-    // has to move the address bar — otherwise the page contradicts its own
-    // hreflang and the visitor cannot share what they are looking at.
+    // zh, zhCN and en are the locales with real URLs (/, /zh-cn, /en), so
+    // switching between them has to move the address bar — otherwise the page
+    // contradicts its own hreflang and the visitor cannot share what they are
+    // looking at. Uses pushUnlocalized: the router would otherwise rewrite the
+    // target back into the language of the page being left.
     const changeLanguage = () => {
       const lang = selectedLanguage.value
-      const path = router.currentRoute.value.path
-      const bare = path === '/en' ? '/' : path.startsWith('/en/') ? path.slice(3) : path
+      const { path, query, hash } = router.currentRoute.value
+      const bare = stripLocalePrefix(path)
 
-      if (lang === 'en') {
-        router.push(bare === '/' ? '/en' : `/en${bare}`)
-        return
-      }
-      if (lang === 'zh') {
-        router.push(bare)
+      if (lang === 'en' || lang === 'zhCN' || lang === 'zh') {
+        pushUnlocalized({ path: withLocalePrefix(bare, lang), query, hash })
         return
       }
       // The remaining locales have no URL of their own yet: switch in place.
-      if (path !== bare) router.push(bare)
+      if (path !== bare) pushUnlocalized({ path: bare, query, hash })
       changeLocale(lang)
     }
 
