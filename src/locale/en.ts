@@ -17,7 +17,7 @@ export const enLocale = {
   // SEO
   seo: {
     notFound: {
-      title: 'Page Not Found | enGo Smart Home',
+      title: 'Page Not Found | enGo',
       description: 'This link may have changed or expired. Return to the home page, or browse our products, case studies and contact details.'
     },
     core: {
@@ -29,19 +29,19 @@ export const enLocale = {
       description: 'How enGo began, and why we build technology that gives every household a genuinely better everyday life.'
     },
     mission: {
-      title: 'Our Mission | enGo Smart Home',
+      title: 'Our Mission | enGo',
       description: 'Using AIoT to make the smart home an affordable necessity rather than a luxury.'
     },
     team: {
-      title: 'Leadership Team | enGo Smart Home',
+      title: 'Leadership Team | enGo',
       description: 'Meet the founders and board advisor behind enGo, spanning AI, operations, design and technology strategy.'
     },
     enviro: {
-      title: 'Environmental Control | enGo Smart Home',
+      title: 'Environmental Control | enGo',
       description: 'One system for sunlight and temperature, air quality, water management and kitchen safety.'
     },
     vision: {
-      title: 'Our Vision | enGo Smart Home',
+      title: 'Our Vision | enGo',
       description: 'Cloud storage, connected devices and everyday purchasing on a single platform for the smart home.'
     },
     ecosystem: {
@@ -54,7 +54,7 @@ export const enLocale = {
       keywords: 'enGo, Smart Home, AIot, Water Purifier, Home Automation'
     },
     home: {
-      title: 'enGo Smart Home: AI for Sunlight, Air, Water & Food',
+      title: 'enGo: AI for Sunlight, Air, Water & Food',
       description: 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.'
     },
     product: {
@@ -82,7 +82,7 @@ export const enLocale = {
       description: 'Interested in enGo? Send us a message or reach us on LINE and a specialist will get back to you.'
     },
     packages: {
-      title: 'Packages | enGo Smart Home',
+      title: 'Packages | enGo',
       description: 'Choose the smart home package that fits your space, your budget and how you actually live.'
     },
     login: {
@@ -249,7 +249,7 @@ export const enLocale = {
   name: 'Name',
   chatbotTitle: 'enGo Assistant',
   login: 'Log in',
-  brandName: 'enGo Smart Home',
+  brandName: 'enGo',
   reviewNamePlaceholder: 'Your name',
   reviewCommentPlaceholder: 'Your feedback...',
   reviewThanks: 'Thank you for your review!',
@@ -299,7 +299,7 @@ export const enLocale = {
   loginPage: {
     userLogin: 'User Login',
     workerLogin: 'Employee Login',
-    welcome: 'Welcome to enGo Smart Home System',
+    welcome: 'Welcome to enGo',
     username: 'Username / Email',
     password: 'Password',
     submit: 'Login',

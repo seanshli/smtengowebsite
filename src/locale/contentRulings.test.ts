@@ -31,9 +31,30 @@ for (const f of ['public/llms.txt', 'scripts/prerender-meta.mjs', 'index.html'])
 describe('content rulings 2026-11-10', () => {
   it('安購 / 安购 appears only inside the store full name 「enGo 安購商城」 / 「enGo 安购商城」', () => {
     for (const [f, text] of Object.entries(COPY)) {
-      const rest = text.replace(/enGo 安購商城/g, '').replace(/enGo 安购商城/g, '')
+      // Sole exception: the Simplified Chinese homepage slogan 「安购理家！什么都不要怕！」 (Sean 2026-11-11).
+      const rest = text.replace(/enGo 安購商城/g, '').replace(/enGo 安购商城/g, '').replace(/安购理家！什么都不要怕！/g, '')
       expect(rest, f).not.toMatch(/安購|安购/)
     }
+  })
+  it('the zhCN slogan is the Mandarin line, not the Hokkien one (Sean 2026-11-11)', () => {
+    expect(read('src/locale/zhCN.ts')).toContain("intextLogo: '安购理家！什么都不要怕！'")
+    expect(read('src/locale/zhCN.ts')).not.toMatch(/虾咪|攏嘸/)
+  })
+  it('news credits partnerships to enGo, not 智管家 (Sean 2026-11-11)', () => {
+    expect(stripKeywords(read('src/data/news.json'))).not.toMatch(/智管家(?!科技)/)
+  })
+  it('legal documents use the enGo brand, keeping only the legal entity names (LG-001..003 A.3)', () => {
+    for (const f of ['terms', 'privacy', 'return-policy']) {
+      const zh = read(`public/${f}.html`)
+      const en = read(`public/${f}-en.html`)
+      expect(zh, f).not.toMatch(/ENGO 智管家|enGo ?智管家|智管家 ?APP|智管家用戶/)
+      expect(zh.replace(/智管家科技股份有限公司/g, ''), f).not.toMatch(/智管家/)
+      expect(en, f).not.toMatch(/enGo Smart Home|enGo智管家/)
+    }
+  })
+  it('English pages call the brand enGo, not enGo Smart Home', () => {
+    expect(read('src/locale/en.ts')).not.toMatch(/enGo Smart Home/)
+    expect(read('scripts/prerender-meta.mjs')).not.toMatch(/enGo Smart Home/)
   })
   it('the old store name 智管家商城 is gone from customer copy', () => {
     for (const [f, text] of Object.entries(COPY)) expect(text, f).not.toMatch(/智管家商城/)

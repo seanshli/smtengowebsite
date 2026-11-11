@@ -11,10 +11,10 @@
     {
       "id": "terms",
       "docNo": "ENGO-LG-001",
-      "revision": "A.2",
-      "issued": "2026-11-09",
+      "revision": "A.3",
+      "issued": "2026-11-11",
       "effective": "2024-01-15",
-      "nextReview": "2027-11-09",
+      "nextReview": "2027-11-11",
       "owner": "Van Lee",
       "approvedBy": "Sean Li",
       "approvedOn": "2026-10-19",
@@ -57,16 +57,25 @@
             "zh": "4c211b2dfb89d873753d83d709bbb924f6e0a3e1644604b0d39b5d4ffafa8c7e",
             "en": "d9322c21b4d5b0123c2ffda3adabf690ec9ea0a06575210da2df77c0a7188912"
           }
+        },
+        {
+          "revision": "A.3",
+          "date": "2026-11-11",
+          "change": "品牌名稱統一：服務名稱「ENGO 智管家」「enGo 智管家」改為 enGo；App 名稱改為 enGo智慧管家 App；商城一律為 enGo 安購商城（英文 enGo Shop）；英文版 enGo Smart Home 改為 enGo。公司法定名稱（智管家科技股份有限公司／Smart enGo Home Technology Corp.）與條文權利義務均未變更。",
+          "sha256": {
+            "zh": "cc702b6fe2284236753eea7d30e8c90a8659610543101eb69fa30a048ecc3e1b",
+            "en": "946ae9e2f00e18550379475587d10fbedd5ddf2dab5462b7a371e6c37b3163d2"
+          }
         }
       ]
     },
     {
       "id": "privacy",
       "docNo": "ENGO-LG-002",
-      "revision": "A.2",
-      "issued": "2026-11-09",
+      "revision": "A.3",
+      "issued": "2026-11-11",
       "effective": "2026-04",
-      "nextReview": "2027-11-09",
+      "nextReview": "2027-11-11",
       "owner": "Van Lee",
       "approvedBy": "Sean Li",
       "approvedOn": "2026-10-19",
@@ -109,16 +118,25 @@
             "zh": "511e908ce2b3b30c5e5e15dc9d1224645a1cfb53f944ebe88676fcda901b2a29",
             "en": "30dd3c276a72886693686f0f89f2e15dd7017b077b25a59d7226683f64dd299e"
           }
+        },
+        {
+          "revision": "A.3",
+          "date": "2026-11-11",
+          "change": "品牌名稱統一：服務名稱「ENGO 智管家」「enGo 智管家」改為 enGo；App 名稱改為 enGo智慧管家 App；商城一律為 enGo 安購商城（英文 enGo Shop）；英文版 enGo Smart Home 改為 enGo。公司法定名稱（智管家科技股份有限公司／Smart enGo Home Technology Corp.）與條文權利義務均未變更。",
+          "sha256": {
+            "zh": "399bdf763b723ed649f6994841e4bff2c056fd0d298acd417b90da40014cdb7b",
+            "en": "454e526d3d14009e2c311b66fb4301977d0efcfa9e4811832b1040fc63ea31c6"
+          }
         }
       ]
     },
     {
       "id": "return-policy",
       "docNo": "ENGO-LG-003",
-      "revision": "A.2",
-      "issued": "2026-11-09",
+      "revision": "A.3",
+      "issued": "2026-11-11",
       "effective": "2026-04",
-      "nextReview": "2027-11-09",
+      "nextReview": "2027-11-11",
       "owner": "Van Lee",
       "approvedBy": "Sean Li",
       "approvedOn": "2026-10-19",
@@ -158,6 +176,15 @@
           "sha256": {
             "zh": "a4f14b0979dc16a5d4e349f4eada87494f92db3f45b155ad013ed6dd823bf25b",
             "en": "57e50bad2fc85d7ac0b42d524004754420d9543ab58dcaf1fe9ef3e88b3f8da8"
+          }
+        },
+        {
+          "revision": "A.3",
+          "date": "2026-11-11",
+          "change": "品牌名稱統一：服務名稱「ENGO 智管家」「enGo 智管家」改為 enGo；App 名稱改為 enGo智慧管家 App；商城一律為 enGo 安購商城（英文 enGo Shop）；英文版 enGo Smart Home 改為 enGo。公司法定名稱（智管家科技股份有限公司／Smart enGo Home Technology Corp.）與條文權利義務均未變更。",
+          "sha256": {
+            "zh": "46dfa7df81f66afe440ecd8e4728ec67e3341c0333020860c617d28b18251a45",
+            "en": "f2a0709508d31ce3f68a808fd70801acfa4f8306373e96fbb2b068fb2c9cbfdf"
           }
         }
       ]
