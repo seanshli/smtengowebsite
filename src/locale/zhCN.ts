@@ -146,7 +146,7 @@ export const zhCNLocale = {
 
   // index (Top Level)
   pageTitle: 'AI 赋能家',
-  intextLogo: '理家！虾咪攏嘸惊！',
+  intextLogo: '安购理家！什么都不要怕！',
   paragraph1: 'enGo 运用 AI 将阳光、空气、水与食物智慧集成，让家更健康、更安心。',
   paragraph2: '☀ 自然采光 , 💨 空气净化 , 💧 水质守护 , 🥗 食材管理 , 🔒 智慧安防',
   paragraph3: '从生活细节到安全防护，enGo 让科技充满温度，守护每一个家。',
