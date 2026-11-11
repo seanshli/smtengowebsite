@@ -17,13 +17,13 @@ export const LOCALE_PREFIXES: Record<UrlLocale, string> = { zh: '', en: '/en', z
 export const LOCALIZED = new Set([
   'home', 'core', 'brand', 'mission', 'team', 'enviro', 'vision',
   'ecosystem', 'product', 'contact', 'packages', 'tutorial', 'cases',
-  'case-detail'
+  'case-detail', 'legal'
 ])
 
 // First path segment of every localized route ('' = home). case-detail shares 'cases'.
 export const LOCALIZED_SEGMENTS = new Set([
   '', 'core', 'brand', 'mission', 'team', 'enviro', 'vision',
-  'ecosystem', 'product', 'contact', 'packages', 'tutorial', 'cases'
+  'ecosystem', 'product', 'contact', 'packages', 'tutorial', 'cases', 'legal'
 ])
 
 /** Route name of the prefixed twin: en-product, zhcn-product. */

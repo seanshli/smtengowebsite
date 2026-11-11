@@ -30,7 +30,7 @@ describe('/zh-cn routes', () => {
       router.getRoutes().filter((r) => r.path === prefix || r.path.startsWith(`${prefix}/`)).map((r) => r.path.slice(prefix.length) || '/').sort()
     expect(names('/zh-cn')).toEqual(names('/en'))
     expect(names('/zh-cn')).toContain('/cases/:id')
-    expect(names('/zh-cn').length).toBe(14)
+    expect(names('/zh-cn').length).toBe(15)
   })
 
   it('resolves home, cases/:id, ecosystem and packages under /zh-cn', () => {
@@ -39,6 +39,12 @@ describe('/zh-cn routes', () => {
     expect(router.resolve('/zh-cn/cases/5').params.id).toBe('5')
     expect(router.resolve('/zh-cn/ecosystem').name).toBe('zhcn-ecosystem')
     expect(router.resolve('/zh-cn/packages').name).toBe('zhcn-packages')
+  })
+
+  it('/en/legal and /zh-cn/legal render the Legal Center (they have shells + sitemap entries; Not Found would noindex them)', () => {
+    expect(router.resolve('/en/legal').name).toBe('en-legal')
+    expect(router.resolve('/zh-cn/legal').name).toBe('zhcn-legal')
+    expect(router.resolve('/zh-cn/legal').meta.locale).toBe('zhCN')
   })
 
   it('does not invent routes: /zh-cn/login and /zh-cn/admin fall to Not Found', () => {
@@ -69,7 +75,8 @@ describe('locale path helpers', () => {
     expect(isLocalizedPath('/product')).toBe(true)
     expect(isLocalizedPath('/cases/12')).toBe(true)
     expect(isLocalizedPath('/')).toBe(true)
-    for (const p of ['/login', '/admin', '/success', '/display', '/legal', '/zh-cn/product']) expect(isLocalizedPath(p)).toBe(false)
+    expect(isLocalizedPath('/legal')).toBe(true)
+    for (const p of ['/login', '/admin', '/success', '/display', '/zh-cn/product']) expect(isLocalizedPath(p)).toBe(false)
     expect(LOCALIZED_SEGMENTS.has('product')).toBe(true)
   })
   it('redirects /zh-CN and /zh-hans spellings to lowercase /zh-cn and leaves /zh-cn alone', () => {
