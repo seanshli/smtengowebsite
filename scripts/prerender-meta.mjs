@@ -36,7 +36,7 @@ export const ROUTES = {
   '/': {
     zh: ['enGo - 住家與社區合一的智慧生活系統', 'enGo 是住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務，管理家中照明、空調、窗簾與感測器，以及社區公告、報修、公設預約；enGo 安購商城提供社區訂閱與鄰里市集。'],
     zhCN: ['enGo - 住家与社区合一的智慧生活系统', 'enGo 是住家与社区合一的智慧生活系统：墙挂平板、手机 App 与云端服务，管理家中照明、空调、窗帘与传感器，以及社区公告、报修、公设预约；enGo 安购商城提供社区订阅与邻里市集。'],
-    en: ['enGo Smart Home: AI for Sunlight, Air, Water & Food', 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.']
+    en: ['enGo: AI for Sunlight, Air, Water & Food', 'enGo integrates sunlight, air, water and food with AI, connecting your whole home through one intelligent hub.']
   },
   '/core': {
     zh: ['核心價值 | enGo 的設計理念', 'enGo 以 AI 整合陽光、空氣、水與食物，從健康、安心到便利，打造智慧生活的核心價值。'],
@@ -51,22 +51,22 @@ export const ROUTES = {
   '/mission': {
     zh: ['我們的使命 | enGo', 'enGo 的使命：運用 AIoT 技術，讓智慧居家成為人人都能負擔的生活必需品。'],
     zhCN: ['我们的使命 | enGo', 'enGo 的使命：运用 AIoT 技术，让智慧居家成为人人都能负担的生活必需品。'],
-    en: ['Our Mission | enGo Smart Home', 'Using AIoT to make the smart home an affordable necessity rather than a luxury.']
+    en: ['Our Mission | enGo', 'Using AIoT to make the smart home an affordable necessity rather than a luxury.']
   },
   '/team': {
     zh: ['經營團隊 | enGo', '認識 enGo 的創始團隊與董事顧問：跨越 AI、營運、設計與技術戰略的四位掌舵者。'],
     zhCN: ['经营团队 | enGo', '认识 enGo 的创始团队与董事顾问：跨越 AI、运营、设计与技术战略的四位掌舵者。'],
-    en: ['Leadership Team | enGo Smart Home', 'Meet the founders and board advisor behind enGo, spanning AI, operations, design and technology strategy.']
+    en: ['Leadership Team | enGo', 'Meet the founders and board advisor behind enGo, spanning AI, operations, design and technology strategy.']
   },
   '/enviro': {
     zh: ['智慧環控 | enGo', '整合陽光、空氣、水與智慧廚房的全方位環控方案：動態控溫、空氣淨化監測、智慧水務與廚房安全。'],
     zhCN: ['智慧环控 | enGo', '整合阳光、空气、水与智慧厨房的全方位环控方案：动态控温、空气净化监测、智慧水务与厨房安全，一套系统全部联动。'],
-    en: ['Environmental Control | enGo Smart Home', 'One system for sunlight and temperature, air quality, water management and kitchen safety.']
+    en: ['Environmental Control | enGo', 'One system for sunlight and temperature, air quality, water management and kitchen safety.']
   },
   '/vision': {
     zh: ['未來願景 | enGo', 'enGo 的願景：整合雲端倉儲、聯網設備與生活採購，打造定義未來的一站式智慧生活平台。'],
     zhCN: ['未来愿景 | enGo', 'enGo 的愿景：整合云端仓储、联网设备与生活采购，打造定义未来的一站式智慧生活平台。'],
-    en: ['Our Vision | enGo Smart Home', 'Cloud storage, connected devices and everyday purchasing on a single platform for the smart home.']
+    en: ['Our Vision | enGo', 'Cloud storage, connected devices and everyday purchasing on a single platform for the smart home.']
   },
   '/ecosystem': {
     zh: ['智慧生態系 | enGo AIoT 整合平台', '探索 enGo 智慧生態系：牆掛平板、手機 App 與 enGo 商城三個入口，五條產品線與合作夥伴，串連家中每一個智慧裝置。'],
@@ -81,7 +81,7 @@ export const ROUTES = {
   '/packages': {
     zh: ['套裝方案 | enGo', '挑選最適合您的智慧家庭套裝方案，提升家居舒適度與安全性。'],
     zhCN: ['套装方案 | enGo', '挑选最适合您的智慧家庭套装方案，提升家居舒适度与安全性。'],
-    en: ['Packages | enGo Smart Home', 'Choose the smart home package that fits your space, your budget and how you actually live.']
+    en: ['Packages | enGo', 'Choose the smart home package that fits your space, your budget and how you actually live.']
   },
   '/tutorial': {
     zh: ['使用教學 | 開啟您的智慧生活', '詳細的 enGo 產品使用教學與影音指南，幫助您輕鬆上手智慧家庭系統。'],
