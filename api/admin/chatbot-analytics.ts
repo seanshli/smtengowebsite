@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { authenticate } from '../../lib/session.js'
 import { supabaseAdmin as supabase } from '../../lib/supabase-admin.js'
+import { fetchAllPages } from '../../lib/fetch-all.js'
 import { aggregateChatbotRows, type LogRow } from '../../lib/analytics-events.js'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -29,20 +30,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString()
 
     try {
-        // Pull everything in window — table is append-only and light, so this is fine for now.
-        // If volume grows past ~50k/month we switch to paginated aggregation via SQL view.
-        const { data, error } = await supabase
-            .from('chatbot_analytics')
-            .select('id, keyword, locale, match_found, created_at')
-            .gte('created_at', since)
-            .order('created_at', { ascending: false })
-
-        if (error) throw error
-
-        const rows: LogRow[] = (data || []) as LogRow[]
+        // Page through the window: one query is silently capped at PostgREST max_rows (1000 by default).
+        // Oldest first so inserts during paging cannot shift offsets; reversed below for newest-first lists.
+        const { rows: fetched, truncated } = await fetchAllPages<LogRow>((from, to) =>
+            supabase
+                .from('chatbot_analytics')
+                .select('id, keyword, locale, match_found, created_at')
+                .gte('created_at', since)
+                .order('created_at', { ascending: true })
+                .order('id', { ascending: true })
+                .range(from, to) as any)
+        const rows: LogRow[] = fetched.reverse()
         // howto:<module> / kb:<entry> event rows are split out inside the aggregator so
         // the chatbot totals and match rate only count questions visitors typed.
-        return res.status(200).json({ window: { days, since }, ...aggregateChatbotRows(rows, limit) })
+        return res.status(200).json({ window: { days, since }, truncated, rowsRead: rows.length, ...aggregateChatbotRows(rows, limit) })
     } catch (err: any) {
         console.error('chatbot-analytics error:', err)
         return res.status(500).json({ error: 'Could not load analytics' })
