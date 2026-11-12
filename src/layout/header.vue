@@ -117,7 +117,7 @@ import { useRouter } from 'vue-router'
 import { changeLocale, type LanguageType, i18n } from '../main'
 import { openShop, SHOP_URL } from '@/utils/shopUrl'
 import { pushUnlocalized } from '@/router'
-import { stripLocalePrefix, withLocalePrefix } from '@/utils/localePaths'
+import { planLanguageSwitch } from '@/utils/localePaths'
 
 export default defineComponent({
   name: 'Header',
@@ -151,15 +151,11 @@ export default defineComponent({
     const changeLanguage = () => {
       const lang = selectedLanguage.value
       const { path, query, hash } = router.currentRoute.value
-      const bare = stripLocalePrefix(path)
-
-      if (lang === 'en' || lang === 'zhCN' || lang === 'zh') {
-        pushUnlocalized({ path: withLocalePrefix(bare, lang), query, hash })
-        return
-      }
-      // The remaining locales have no URL of their own yet: switch in place.
-      if (path !== bare) pushUnlocalized({ path: bare, query, hash })
-      changeLocale(lang)
+      const plan = planLanguageSwitch(path, lang)
+      // Set the locale first: when the address does not change (fr → 中文 on
+      // /product) no navigation runs, so the router guard never would.
+      changeLocale(plan.setLocale)
+      if (plan.push) pushUnlocalized({ path: plan.push, query, hash })
     }
 
     // enGo 安購商城: front page of the new storefront (utils/shopUrl)
