@@ -71,3 +71,20 @@ export function canonicalZhCnPath(path: string): string | null {
   if (!m || m[1] === 'zh-cn') return null
   return `/zh-cn${path.slice(m[0].length)}`
 }
+
+export type AnyLocale = UrlLocale | 'fr' | 'ja' | 'es'
+
+/**
+ * What the language switcher has to do to show `lang` while on `path`.
+ *
+ * `push` is the address to navigate to (null when the address does not change).
+ * `setLocale` is always the requested language: the router guard only sets the
+ * locale when a navigation actually runs, and a push to the current address is
+ * a no-op, so ja / fr / es → 中文 on /product used to do nothing at all
+ * (team report 2026-11-12, every device).
+ */
+export function planLanguageSwitch(path: string, lang: AnyLocale): { push: string | null; setLocale: AnyLocale } {
+  const bare = stripLocalePrefix(path)
+  const target = lang === 'zh' || lang === 'en' || lang === 'zhCN' ? withLocalePrefix(bare, lang) : bare
+  return { push: target === path ? null : target, setLocale: lang }
+}
