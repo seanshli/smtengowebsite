@@ -66,7 +66,7 @@
 
         <!-- paper back, visible on the left pile after the turn -->
         <div class="folio-verso" aria-hidden="true">
-          <span class="folio-verso-ghost">{{ tr(item.title) }}</span>
+          <span class="folio-verso-ghost" :data-ghost="tr(item.title)"></span>
         </div>
       </article>
       </div>
@@ -326,7 +326,11 @@ export default defineComponent({
   padding: 22px;
   border-radius: 18px 0 0 18px;
 
-  .folio-verso-ghost {
+  // Decorative mirror of the title on the paper's back (aria-hidden). Drawn as a
+  // pseudo-element so it is not page text: as real text at 40% it read 2.2:1 and
+  // failed the colour-contrast audit (review 2026-11-13 P0-2).
+  .folio-verso-ghost::after {
+    content: attr(data-ghost);
     font-size: 14px;
     color: $ink-80;
     opacity: 0.4;

@@ -415,18 +415,6 @@ export const enLocale = {
       desc: '*Includes the enGo AI control tablet, the Shui Wei Yang AI smart water system, three years of filter cartridges and installation',
       btn: 'Buy Now'
     },
-    reviews: {
-      title: 'User Reviews',
-      add: 'Write a Review',
-      sample1: {
-        name: 'Xiao Ming',
-        comment: 'The AI Hub is fantastic, voice control is very responsive!'
-      },
-      sample2: {
-        name: 'Li Hua',
-        comment: 'Water quality improved noticeably, the Sr water tastes sweet.'
-      }
-    },
     shop: {
       title: 'enGo Shop',
       lede: 'Community subscriptions and a neighbourhood marketplace, delivered to your door. Order fresh food, daily essentials and smart-home add-ons from merchants your community trusts; when the parcel reaches the lobby, the system tells you to pick it up.',

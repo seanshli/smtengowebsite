@@ -529,7 +529,7 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 .hm-moment {
   position: relative; display: grid; grid-template-columns: auto 1fr; column-gap: 18px; row-gap: 4px; align-items: baseline;
   width: 100%; padding: 16px 0 18px; text-align: left; font: inherit; color: inherit; background: none; border: 0;
-  border-top: 1px solid rgba(255, 255, 255, .18); cursor: pointer; opacity: .5; transition: opacity .3s ease;
+  border-top: 1px solid rgba(255, 255, 255, .18); cursor: pointer; opacity: .7; transition: opacity .3s ease; // .7 keeps the dimmed body text at 5.3:1 on $tile-dark (.5 was 3.45:1, WCAG AA fail)
   &:hover, &.is-on { opacity: 1; }
   &:focus-visible { outline: 2px solid $orange2; outline-offset: 4px; opacity: 1; }
 }
