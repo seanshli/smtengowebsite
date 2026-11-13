@@ -56,20 +56,20 @@
       },
       {
         "title": {
-          "zh": "語音控制",
-          "zhCN": "语音控制",
-          "en": "Voice Control",
-          "fr": "Commande vocale",
-          "ja": "音声操作",
-          "es": "Control por voz"
+          "zh": "語音控制（牆掛平板）",
+          "zhCN": "语音控制（墙挂平板）",
+          "en": "Voice Control (wall tablet)",
+          "fr": "Commande vocale (tablette murale)",
+          "ja": "音声操作（壁掛けタブレット）",
+          "es": "Control por voz (tableta de pared)"
         },
         "content": {
-          "zh": "配置語音指令以實現無縫互動。",
-          "zhCN": "配置语音指令以实现无缝交互。",
-          "en": "Configure voice commands for seamless interaction.",
-          "fr": "Configurez les commandes vocales pour une interaction fluide.",
-          "ja": "シームレスな操作のために音声コマンドを設定します。",
-          "es": "Configura comandos de voz para una interacción fluida."
+          "zh": "語音操作為 enGo 牆掛平板專屬，手機 App 不提供；啟用方式請洽專人。",
+          "zhCN": "语音操作为 enGo 墙挂平板专属，手机 App 不提供；启用方式请洽专人。",
+          "en": "Voice control is available only on the enGo wall tablet, not in the phone app. Contact our team to set it up.",
+          "fr": "La commande vocale est disponible uniquement sur la tablette murale enGo, pas dans l'application mobile. Contactez notre équipe pour la configurer.",
+          "ja": "音声操作は enGo 壁掛けタブレット専用で、スマートフォンアプリでは利用できません。設定方法は担当者にお問い合わせください。",
+          "es": "El control por voz solo está disponible en la tableta de pared enGo, no en la app del celular. Contacta a nuestro equipo para configurarlo."
         }
       },
       {
@@ -206,20 +206,20 @@
       },
       {
         "title": {
-          "zh": "整案管理",
-          "zhCN": "整案管理",
-          "en": "Fleet Management",
-          "fr": "Gestion de flotte",
-          "ja": "一括管理",
-          "es": "Administración de todo el proyecto"
+          "zh": "整案導入",
+          "zhCN": "整案导入",
+          "en": "Whole-project rollout",
+          "fr": "Déploiement sur l'ensemble du projet",
+          "ja": "プロジェクト全体への導入",
+          "es": "Implementación en todo el proyecto"
         },
         "content": {
-          "zh": "透過 enGo 企業儀表板管理多個單元。",
-          "zhCN": "透过 enGo 企业仪表板管理多个单元。",
-          "en": "Manage multiple units via the enGo enterprise dashboard.",
-          "fr": "Gérez plusieurs unités via le tableau de bord d'entreprise enGo.",
-          "ja": "enGoエンタープライズダッシュボードで複数のユニットを管理。",
-          "es": "Administra varias unidades mediante el panel empresarial de enGo."
+          "zh": "多戶建案由 enGo 團隊協助規劃、安裝與設定，並可導入社區公告、報修與公設預約；細節請洽專人。",
+          "zhCN": "多户建案由 enGo 团队协助规划、安装与设置，并可导入社区公告、报修与公设预约；细节请洽专人。",
+          "en": "For multi-unit developments, the enGo team helps plan, install and set up the system, including community announcements, repair requests and shared-facility booking. Contact us for details.",
+          "fr": "Pour les programmes de plusieurs logements, l'équipe enGo accompagne la planification, l'installation et la configuration, avec annonces de la résidence, demandes de réparation et réservation des espaces communs. Contactez-nous pour en savoir plus.",
+          "ja": "複数戸の物件では、enGo チームが計画・設置・設定を支援し、コミュニティのお知らせ、修理依頼、共用施設の予約も導入できます。詳しくは担当者にお問い合わせください。",
+          "es": "En desarrollos de varias unidades, el equipo de enGo ayuda a planear, instalar y configurar el sistema, incluidos avisos de la comunidad, solicitudes de reparación y reservación de áreas comunes. Contáctanos para más detalles."
         }
       }
     ],

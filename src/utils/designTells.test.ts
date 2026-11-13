@@ -256,3 +256,25 @@ describe('case studies name places, not customers (2026-11-05)', () => {
         expect(text).not.toMatch(/無資料|結案|\(Finished\)/)
     })
 })
+
+describe('mobile layout stability and contrast (review 2026-11-13 P0-2)', () => {
+  const src = (p: string) => readFileSync(resolve(__dirname, '../..', p), 'utf-8')
+  it('the app mounts only after the first route resolves, so the footer never flashes at the top (CLS 1.00)', () => {
+    expect(src('src/main.ts')).toMatch(/router\.isReady\(\)\.then\(/)
+    expect(src('src/main.ts')).not.toMatch(/^app\.mount\('#app'\)/m)
+  })
+  it('dimmed day moments keep AA contrast on the dark tile', () => {
+    expect(src('src/views/index.vue')).not.toMatch(/\.hm-moment \{[^}]*opacity: \.5;/)
+  })
+  it('the decorative folio ghost title is a pseudo-element, not page text', () => {
+    expect(src('src/components/NewsFolio.vue')).toContain(':data-ghost="tr(item.title)"')
+    expect(src('src/components/NewsFolio.vue')).toContain('content: attr(data-ghost)')
+  })
+})
+
+describe('/product hero reserves its space (review 2026-11-13 P0-2, CLS 0.143)', () => {
+  it('the hero device image carries intrinsic width and height', () => {
+    const v = readFileSync(resolve(__dirname, '../..', 'src/views/product.vue'), 'utf-8')
+    expect(v).toMatch(/class="pd-hero-device"[^>]*width="1920" height="1236"/)
+  })
+})
