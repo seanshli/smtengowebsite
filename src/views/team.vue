@@ -13,7 +13,7 @@
             <figure class="ap-photo tm-plate">
               <img :src="m.photo" :alt="pick(m.name)" decoding="async" :loading="i === 0 ? 'eager' : 'lazy'" />
               <figcaption v-if="m.advisor">
-                <span class="tm-advisor-tag">{{ tx('顧問', '顾问', 'Advisor') }}</span>
+                <span class="tm-advisor-tag">{{ tx('顧問', '顾问', 'Advisor', { ja: 'アドバイザー', fr: 'Conseiller', es: 'Asesor' }) }}</span>
               </figcaption>
             </figure>
 
@@ -44,6 +44,9 @@ interface Bi<T> {
   zh: T
   zhCN: T
   en: T
+  ja?: T
+  fr?: T
+  es?: T
 }
 
 interface Member {
@@ -64,12 +67,15 @@ const MEMBERS: Member[] = [
     id: 'sean-li',
     photo: '/images/team/sean-li.jpg',
     nameEn: 'Sean Li',
-    name: { zh: '黎世宏', zhCN: '黎世宏', en: 'Sean Li' },
-    role: { zh: '共同創辦人・董事長暨總經理', zhCN: '共同创办人・董事长暨总经理', en: 'Co-founder · Chairman & CEO' },
+    name: { zh: '黎世宏', zhCN: '黎世宏', en: 'Sean Li', ja: '黎世宏', fr: 'Sean Li', es: 'Sean Li' },
+    role: { zh: '共同創辦人・董事長暨總經理', zhCN: '共同创办人・董事长暨总经理', en: 'Co-founder · Chairman & CEO', ja: '共同創業者・会長兼CEO', fr: 'Cofondateur · Président-directeur général', es: 'Cofundador · Presidente y director general' },
     story: {
       zh: '美國麻省理工學院（MIT）博士，主修人工智慧、機器人與精密機械設計，累計逾二十八年產業經歷。曾於 Apple 參與 iPod／iPad／iPhone 產品開發，歷任敦南科技策略長、敦宏科技董事長、達爾科技亞太區新業務戰略與發展副總裁。於 enGo 主導自研 enGoCLC／MultiLink 跨設備整合中介層，以及公司二十四項專利的佈局。',
       zhCN: '美国麻省理工学院（MIT）博士，主修人工智慧、机器人与精密机械设计，累计逾二十八年产业经历。曾于 Apple 参与 iPod／iPad／iPhone 产品开发，历任敦南科技策略长、敦宏科技董事长、达尔科技亚太区新业务战略与发展副总裁。于 enGo 主导自研 enGoCLC／MultiLink 跨设备集成中介层，以及公司二十四项专利的布局。',
-      en: 'MIT Ph.D. in AI, robotics, and precision machine design, with over 28 years across hardware, software, and operations. At Apple he helped ship iPod, iPad, and iPhone; he has served as CSO of Lite-On Semiconductor, Chairman of Dyna Image, and VP of APAC New Business Strategy at Diodes Inc. At enGo he leads the enGoCLC/MultiLink integration layer and the company\'s 24-patent portfolio.'
+      en: 'MIT Ph.D. in AI, robotics, and precision machine design, with over 28 years across hardware, software, and operations. At Apple he helped ship iPod, iPad, and iPhone; he has served as CSO of Lite-On Semiconductor, Chairman of Dyna Image, and VP of APAC New Business Strategy at Diodes Inc. At enGo he leads the enGoCLC/MultiLink integration layer and the company\'s 24-patent portfolio.',
+      ja: '米マサチューセッツ工科大学（MIT）博士。人工知能、ロボティクス、精密機械設計を専攻し、ハードウェア、ソフトウェア、オペレーションにわたり28年以上の経験を持つ。AppleではiPod、iPad、iPhoneの製品化に携わり、敦南科技（Lite-On Semiconductor）の最高戦略責任者、敦宏科技（Dyna Image）の会長、達爾科技（Diodes Inc.）のアジア太平洋地域新規事業戦略・開発担当副社長を歴任。enGoでは、自社開発のenGoCLC／MultiLink機器間連携ミドルレイヤーと、会社の24件の特許ポートフォリオを主導している。',
+      fr: 'Docteur du MIT en intelligence artificielle, robotique et conception mécanique de précision, avec plus de 28 ans d’expérience dans le matériel, le logiciel et les opérations. Chez Apple, il a contribué au lancement de l’iPod, de l’iPad et de l’iPhone ; il a été directeur de la stratégie (CSO) de Lite-On Semiconductor, président de Dyna Image et vice-président de la stratégie et du développement de nouvelles activités Asie-Pacifique chez Diodes Inc. Chez enGo, il dirige la couche d’intégration enGoCLC/MultiLink et le portefeuille de 24 brevets de l’entreprise.',
+      es: 'Doctor por el MIT en inteligencia artificial, robótica y diseño de maquinaria de precisión, con más de 28 años de experiencia en hardware, software y operaciones. En Apple participó en el lanzamiento del iPod, el iPad y el iPhone; ha sido director de estrategia (CSO) de Lite-On Semiconductor, presidente de Dyna Image y vicepresidente de estrategia de nuevos negocios para Asia-Pacífico en Diodes Inc. En enGo lidera la capa de integración enGoCLC/MultiLink y el portafolio de 24 patentes de la empresa.'
     },
     creds: {
       zh: [
@@ -98,6 +104,33 @@ const MEMBERS: Member[] = [
         'Director of Technology, Asyst (AMHS) · Sr. Engineer, Applied Materials',
         'M.S. & Ph.D., MIT',
         'EMBA, National Taiwan University / Fudan University'
+      ],
+      ja: [
+        'Atlas Magnetics Corp. 最高戦略責任者',
+        'Diodes Inc.（US: DIOD）アジア太平洋地域新規事業戦略・開発担当副社長',
+        '敦南科技（Lite-On Semiconductor）最高戦略責任者・敦宏科技（Dyna Image）会長',
+        'Apple Inc. プロジェクトマネージャー（iPod／iPad／iPhone）',
+        'Asyst 技術ディレクター（AMHS）・アプライド マテリアルズ シニアエンジニア',
+        'MIT 修士・博士',
+        '国立台湾大学／復旦大学 EMBA'
+      ],
+      fr: [
+        'Directeur de la stratégie (CSO), Atlas Magnetics Corp.',
+        'Vice-président de la stratégie et du développement de nouvelles activités Asie-Pacifique, Diodes Inc. (US : DIOD)',
+        'CSO de Lite-On Semiconductor · Président de Dyna Image',
+        'Chef de programme, Apple Inc. (iPod / iPad / iPhone)',
+        'Directeur technique, Asyst (AMHS) · Ingénieur senior, Applied Materials',
+        'Master et doctorat, MIT',
+        'EMBA, Université nationale de Taïwan / Université Fudan'
+      ],
+      es: [
+        'Director de estrategia (CSO), Atlas Magnetics Corp.',
+        'Vicepresidente de estrategia y desarrollo de nuevos negocios para Asia-Pacífico, Diodes Inc. (US: DIOD)',
+        'CSO de Lite-On Semiconductor · Presidente de Dyna Image',
+        'Gerente de programa, Apple Inc. (iPod / iPad / iPhone)',
+        'Director de tecnología, Asyst (AMHS) · Ingeniero sénior, Applied Materials',
+        'Maestría y doctorado, MIT',
+        'EMBA, Universidad Nacional de Taiwán / Universidad Fudan'
       ]
     }
   },
@@ -105,12 +138,15 @@ const MEMBERS: Member[] = [
     id: 'enzo-chang',
     photo: '/images/team/enzo-chang.jpg',
     nameEn: 'Enzo Chang',
-    name: { zh: '張允融', zhCN: '张允融', en: 'Enzo Chang' },
-    role: { zh: '共同創辦人・設計總監', zhCN: '共同创办人・设计总监', en: 'Co-founder · Design Director' },
+    name: { zh: '張允融', zhCN: '张允融', en: 'Enzo Chang', ja: '張允融', fr: 'Enzo Chang', es: 'Enzo Chang' },
+    role: { zh: '共同創辦人・設計總監', zhCN: '共同创办人・设计总监', en: 'Co-founder · Design Director', ja: '共同創業者・デザインディレクター', fr: 'Cofondatrice · Directrice du design', es: 'Cofundadora · Directora de diseño' },
     story: {
       zh: '旅法設計家與品牌經營者，現任 Belber 1891（盧森堡）執行董事暨設計總監，將百年工藝品牌的美學語言與藝術品管理視角，帶進 enGo 的產品與空間設計。',
       zhCN: '旅法设计家与品牌经营者，现任 Belber 1891（卢森堡）执行董事暨设计总监，将百年工艺品牌的美学语言与艺术品管理视角，带进 enGo 的产品与空间设计。',
-      en: 'A Paris-trained designer and brand steward, currently Executive Director and Design Director of Belber 1891 (Luxembourg). She brings the aesthetic language of a heritage craft house, and an art-management eye, into enGo\'s product and spatial design.'
+      en: 'A Paris-trained designer and brand steward, currently Executive Director and Design Director of Belber 1891 (Luxembourg). She brings the aesthetic language of a heritage craft house, and an art-management eye, into enGo\'s product and spatial design.',
+      ja: 'フランスで学んだデザイナーであり、ブランドの舵取り役。現在はBelber 1891（ルクセンブルク）の業務執行取締役兼デザインディレクター。伝統工芸ブランドの美意識とアートマネジメントの視点を、enGoの製品と空間のデザインに取り入れている。',
+      fr: 'Designeuse formée à Paris et gardienne de marque, actuellement directrice exécutive et directrice du design de Belber 1891 (Luxembourg). Elle apporte le langage esthétique d’une maison d’artisanat d’exception, ainsi qu’un regard de gestionnaire d’art, à la conception des produits et des espaces enGo.',
+      es: 'Diseñadora formada en París y gestora de marca, actualmente directora ejecutiva y directora de diseño de Belber 1891 (Luxemburgo). Aporta el lenguaje estético de una casa artesanal con tradición, y una mirada de gestión del arte, al diseño de los productos y espacios de enGo.'
     },
     creds: {
       zh: [
@@ -139,6 +175,33 @@ const MEMBERS: Member[] = [
         'École d\'Art et de Culture, Paris: Sotheby\'s art management certification',
         'EMBA (\'18), Fudan University · Fudan private board',
         'Harvard Business School global executive leadership program'
+      ],
+      ja: [
+        'Belber 1891 International Ltd.（ルクセンブルク）業務執行取締役／デザインディレクター',
+        'フランス ESSEC ビジネススクール 修士',
+        '英国王立芸術大学（RCA）イノベーション顧問',
+        'フランス高等応用芸術学院（DSAA）修士',
+        'パリ École d’Art et de Culture：ソザビーズ・アートマネジメント認定資格',
+        '復旦大学 EMBA（’18）・復旦プライベートボード',
+        'ハーバード・ビジネス・スクール グローバル・エグゼクティブ・リーダーシップ・プログラム'
+      ],
+      fr: [
+        'Directrice exécutive / directrice du design, Belber 1891 International Ltd. (Luxembourg)',
+        'Master, ESSEC Business School, France',
+        'Conseillère en innovation, Royal College of Art (RCA), Royaume-Uni',
+        'Master, École supérieure d’arts appliqués (DSAA), France',
+        'École d’Art et de Culture, Paris : certification en gestion de l’art de Sotheby’s',
+        'EMBA (’18), Université Fudan · Fudan private board',
+        'Programme mondial de leadership pour cadres dirigeants, Harvard Business School'
+      ],
+      es: [
+        'Directora ejecutiva / directora de diseño, Belber 1891 International Ltd. (Luxemburgo)',
+        'Maestría, ESSEC Business School, Francia',
+        'Asesora de innovación, Royal College of Art (RCA), Reino Unido',
+        'Maestría, École supérieure d’arts appliqués (DSAA), Francia',
+        'École d’Art et de Culture, París: certificación en gestión de arte de Sotheby’s',
+        'EMBA (’18), Universidad de Fudan · Fudan private board',
+        'Programa global de liderazgo ejecutivo, Harvard Business School'
       ]
     }
   },
@@ -146,12 +209,15 @@ const MEMBERS: Member[] = [
     id: 'jacky-chang',
     photo: '/images/team/jacky-chang.jpg',
     nameEn: 'Jacky Chang',
-    name: { zh: '張宏彰', zhCN: '张宏彰', en: 'Jacky Chang' },
-    role: { zh: '業務營運長', zhCN: '业务首席运营官', en: 'VP of Business Operations' },
+    name: { zh: '張宏彰', zhCN: '张宏彰', en: 'Jacky Chang', ja: '張宏彰', fr: 'Jacky Chang', es: 'Jacky Chang' },
+    role: { zh: '業務營運長', zhCN: '业务首席运营官', en: 'VP of Business Operations', ja: '業務運営担当副社長', fr: 'Vice-président des opérations commerciales', es: 'Vicepresidente de operaciones comerciales' },
     story: {
       zh: '橫跨環保建材、數智實業、家居製造與地產開發的連續創業者，長年深耕兩岸與日本市場，深諳供應鏈與跨國營運。於 enGo 掌管營運、供應鏈與通路合作。',
       zhCN: '横跨环保建材、数智实业、家居制造与地产开发的连续创业者，长年深耕两岸与日本市场，深谙供应链与跨国营运。于 enGo 掌管营运、供应链与通路合作。',
-      en: 'A serial entrepreneur across green building materials, digital industry, home manufacturing, and property development, with deep supply-chain and cross-border operating experience spanning Taiwan, China, and Japan. At enGo he runs operations, supply chain, and channel partnerships.'
+      en: 'A serial entrepreneur across green building materials, digital industry, home manufacturing, and property development, with deep supply-chain and cross-border operating experience spanning Taiwan, China, and Japan. At enGo he runs operations, supply chain, and channel partnerships.',
+      ja: '環境配慮型建材、デジタル・インテリジェント産業、住宅設備製造、不動産開発にまたがる連続起業家。台湾・中国・日本にまたがるサプライチェーンと国際オペレーションに精通している。enGoでは、運営、サプライチェーン、チャネルパートナーシップを統括している。',
+      fr: 'Entrepreneur en série dans les matériaux de construction écologiques, l’industrie numérique, la fabrication d’équipements pour la maison et la promotion immobilière, doté d’une solide expérience de la chaîne d’approvisionnement et des opérations transfrontalières entre Taïwan, la Chine et le Japon. Chez enGo, il dirige les opérations, la chaîne d’approvisionnement et les partenariats de distribution.',
+      es: 'Emprendedor serial en materiales de construcción ecológicos, industria digital, manufactura para el hogar y desarrollo inmobiliario, con amplia experiencia en cadena de suministro y operaciones transfronterizas entre Taiwán, China y Japón. En enGo dirige las operaciones, la cadena de suministro y las alianzas de canal.'
     },
     creds: {
       zh: [
@@ -186,6 +252,39 @@ const MEMBERS: Member[] = [
         'NTCUST Japanese · Kyoto University of Education, Economics',
         'EMBA, National Chung Hsing University',
         'Ph.D. candidate in Finance, National Changhua University of Education'
+      ],
+      ja: [
+        'Smart enGo Home Technology Corp. 業務運営担当副社長',
+        '睿呈環保實業有限公司 代表',
+        '珐興數智實業有限公司 総経理',
+        '廈門松粽家居股份有限公司 運営ディレクター',
+        '帝觀地產開發股份有限公司 会長',
+        '日商台灣變克工業股份有限公司 取締役パートナー',
+        '国立台中科技大学 日本語学科・京都教育大学 経済学',
+        '国立中興大学 EMBA（経営学修士）',
+        '国立彰化師範大学 財政金融博士課程候補'
+      ],
+      fr: [
+        'Vice-président des opérations commerciales, Smart enGo Home Technology Corp.',
+        'Dirigeant, Ruicheng Green Materials',
+        'Directeur général, Faxing Digital Industry',
+        'Directeur des opérations, Xiamen Songzong Home',
+        'Président, Diguan Property Development',
+        'Partenaire du conseil, Vector Industry Taiwan (Japon)',
+        'Japonais, NTCUST · Économie, Université d’éducation de Kyoto',
+        'EMBA, Université nationale Chung Hsing',
+        'Doctorant en finance, Université nationale d’éducation de Changhua'
+      ],
+      es: [
+        'Vicepresidente de operaciones comerciales, Smart enGo Home Technology Corp.',
+        'Director, Ruicheng Green Materials',
+        'Director general, Faxing Digital Industry',
+        'Director de operaciones, Xiamen Songzong Home',
+        'Presidente, Diguan Property Development',
+        'Socio del consejo, Vector Industry Taiwan (Japón)',
+        'Japonés, NTCUST · Economía, Universidad de Educación de Kioto',
+        'EMBA, Universidad Nacional Chung Hsing',
+        'Candidato a doctor en finanzas, Universidad Nacional de Educación de Changhua'
       ]
     }
   },
@@ -194,12 +293,15 @@ const MEMBERS: Member[] = [
     photo: '/images/team/eric-chang.jpg',
     nameEn: 'Eric Chang',
     advisor: true,
-    name: { zh: '張益肇', zhCN: '张益肇', en: 'Eric Chang' },
-    role: { zh: '董事顧問・技術與風險', zhCN: '董事顾问・技术与风险', en: 'Board Advisor · Technology & Risk' },
+    name: { zh: '張益肇', zhCN: '张益肇', en: 'Eric Chang', ja: '張益肇', fr: 'Eric Chang', es: 'Eric Chang' },
+    role: { zh: '董事顧問・技術與風險', zhCN: '董事顾问・技术与风险', en: 'Board Advisor · Technology & Risk', ja: '取締役アドバイザー・技術とリスク', fr: 'Conseiller du conseil · Technologie et risques', es: 'Asesor del consejo · Tecnología y riesgos' },
     story: {
       zh: 'AI 智能與語意專家，麻省理工學院學士、碩士、博士。曾任香港感知與互動智能中心（CPII）暨微軟亞洲研究院技術戰略合夥人總監，為 enGo 把關技術路線與風險治理。',
       zhCN: 'AI 智能与语意专家，麻省理工学院学士、硕士、博士。曾任香港感知与交互智能中心（CPII）暨微软亚洲研究院技术战略合伙人总监，为 enGo 把关技术路线与风险治理。',
-      en: 'An AI and semantics expert with B.S., M.S., and Ph.D. degrees from MIT. Formerly Director of Technology Strategy Partnerships at the Centre for Perceptual and Interactive Intelligence (CPII) in Hong Kong and Microsoft Research Asia, he stewards enGo\'s technology roadmap and risk governance.'
+      en: 'An AI and semantics expert with B.S., M.S., and Ph.D. degrees from MIT. Formerly Director of Technology Strategy Partnerships at the Centre for Perceptual and Interactive Intelligence (CPII) in Hong Kong and Microsoft Research Asia, he stewards enGo\'s technology roadmap and risk governance.',
+      ja: 'AI（人工知能）とセマンティクスの専門家。MITで学士・修士・博士の学位を取得。香港の感知・インタラクティブ知能センター（CPII）およびMicrosoft Research Asiaで技術戦略パートナーシップ・ディレクターを務め、enGoの技術ロードマップとリスクガバナンスを担っている。',
+      fr: 'Expert en IA et en sémantique, titulaire d’une licence, d’un master et d’un doctorat du MIT. Ancien directeur des partenariats de stratégie technologique au Centre for Perceptual and Interactive Intelligence (CPII) de Hong Kong et chez Microsoft Research Asia, il pilote la feuille de route technologique et la gouvernance des risques d’enGo.',
+      es: 'Experto en IA y semántica, con licenciatura, maestría y doctorado por el MIT. Fue director de alianzas de estrategia tecnológica en el Centre for Perceptual and Interactive Intelligence (CPII) de Hong Kong y en Microsoft Research Asia; guía la hoja de ruta tecnológica y la gobernanza de riesgos de enGo.'
     },
     creds: {
       zh: [
@@ -222,6 +324,27 @@ const MEMBERS: Member[] = [
         'AI intelligence & semantics expert',
         'B.S., M.S. & Ph.D., MIT',
         'Stanford University innovation programs'
+      ],
+      ja: [
+        '技術・リスク担当ディレクター',
+        '技術戦略パートナーシップ・ディレクター、CPII（香港）・Microsoft Research Asia',
+        'AI・セマンティクスの専門家',
+        'MIT 学士・修士・博士',
+        'スタンフォード大学 イノベーションプログラム'
+      ],
+      fr: [
+        'Directeur, Technologie et risques',
+        'Directeur des partenariats de stratégie technologique, CPII (Hong Kong) · Microsoft Research Asia',
+        'Expert en intelligence artificielle et en sémantique',
+        'Licence, master et doctorat, MIT',
+        'Programmes d’innovation de l’Université Stanford'
+      ],
+      es: [
+        'Director de tecnología y riesgos',
+        'Director de alianzas de estrategia tecnológica, CPII (Hong Kong) · Microsoft Research Asia',
+        'Experto en inteligencia artificial y semántica',
+        'Licenciatura, maestría y doctorado, MIT',
+        'Programas de innovación de la Universidad de Stanford'
       ]
     }
   }

@@ -26,7 +26,7 @@
              page's masthead already; repeating them here read as a duplicate. -->
         <figcaption v-if="current && current.image" class="folio-plate-cap">
           <span class="folio-plate-note">
-            {{ tx('示意圖', '示意图', 'Illustration') }}
+            {{ tx('示意圖', '示意图', 'Illustration', { ja: 'イメージ図', fr: 'Illustration', es: 'Ilustración' }) }}
           </span>
         </figcaption>
       </div>
@@ -76,7 +76,7 @@
       <button
         class="folio-btn"
         :disabled="page === 0 || flipping"
-        :aria-label="tx('上一頁', '上一页', 'Prev')"
+        :aria-label="tx('上一頁', '上一页', 'Prev', { ja: '前へ', fr: 'Précédent', es: 'Anterior' })"
         @click="prev"
       >
         <span aria-hidden="true">←</span>
@@ -85,7 +85,7 @@
       <button
         class="folio-btn"
         :disabled="page === items.length - 1 || flipping"
-        :aria-label="tx('下一頁', '下一页', 'Next')"
+        :aria-label="tx('下一頁', '下一页', 'Next', { ja: '次へ', fr: 'Suivant', es: 'Siguiente' })"
         @click="next"
       >
         <span aria-hidden="true">→</span>

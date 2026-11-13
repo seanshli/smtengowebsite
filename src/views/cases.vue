@@ -82,7 +82,7 @@
         </div>
 
         <div class="cs-records" v-if="recordCases.length">
-          <h2 class="cs-records-title">{{ tx('更多實作紀錄', '更多实作纪录', 'More projects') }}</h2>
+          <h2 class="cs-records-title">{{ tx('更多實作紀錄', '更多实作纪录', 'More projects', { ja: 'その他の施工事例', fr: 'Autres réalisations', es: 'Más proyectos' }) }}</h2>
           <ul class="cs-list">
             <li
               v-for="item in recordCases"

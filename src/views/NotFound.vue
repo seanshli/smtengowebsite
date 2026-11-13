@@ -3,10 +3,10 @@
     <div class="ap-tile ap-tile-first ap-white nf-tile">
       <div class="ap-wrap ap-wrap-text">
         <h1 class="ap-title">
-          {{ tx('這個頁面不存在。', '这个页面不存在。', 'This page does not exist.') }}
+          {{ tx('這個頁面不存在。', '这个页面不存在。', 'This page does not exist.', { ja: 'このページは存在しません。', fr: 'Cette page n’existe pas.', es: 'Esta página no existe.' }) }}
         </h1>
         <p class="ap-lead">
-          {{ tx('連結可能已經變更或失效。以下是幾個常去的地方：', '链接可能已经变更或失效。以下是几个常去的地方：', 'The link may have changed or expired. Here are some places to go instead:') }}
+          {{ tx('連結可能已經變更或失效。以下是幾個常去的地方：', '链接可能已经变更或失效。以下是几个常去的地方：', 'The link may have changed or expired. Here are some places to go instead:', { ja: 'リンクが変更されたか、無効になっている可能性があります。代わりに、よくご覧いただくページをご案内します。', fr: 'Le lien a peut-être changé ou expiré. Voici quelques pages à consulter :', es: 'Es posible que el enlace haya cambiado o haya expirado. Estas son algunas páginas que pueden servir:' }) }}
         </p>
 
         <div class="ap-links nf-links">
