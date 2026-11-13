@@ -281,7 +281,7 @@
               <li>{{ $t('product.water_filter.filterCore02') }}</li>
             </ol>
             <div class="qr-code-container">
-              <img src="/images/qr-code.png" alt="Insurance certificate QR code" />
+              <img src="/images/qr-code.png" :alt="tx('投保證書 QR Code', '投保证书 QR Code', 'Insurance certificate QR code', { ja: '保険証書の QR コード', fr: 'QR code du certificat d’assurance', es: 'Código QR del certificado de seguro' })" />
               <div>{{ tx('投保證書', '投保证书', 'Insurance certificate', { ja: '保険証書', fr: 'Certificat d’assurance', es: 'Certificado de seguro' }) }}</div>
             </div>
           </div>
