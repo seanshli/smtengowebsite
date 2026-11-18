@@ -162,10 +162,10 @@
                Android tw.smtengo.engohome.android). -->
           <p data-reveal class="interfaces-stores">
             <a href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="product:app-store">
-              <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="tx('在 App Store 下載', '在 App Store 下载', 'Download on the App Store')" height="40" loading="lazy" />
+              <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="tx('在 App Store 下載', '在 App Store 下载', 'Download on the App Store', { ja: 'App Storeでダウンロード', fr: 'Télécharger dans l’App Store', es: 'Descargar en App Store' })" height="40" loading="lazy" />
             </a>
             <a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="product:google-play">
-              <img class="badge-google" src="/images/badges/google-play-en.png" :alt="tx('在 Google Play 取得', '在 Google Play 获取', 'Get it on Google Play')" height="60" loading="lazy" />
+              <img class="badge-google" src="/images/badges/google-play-en.png" :alt="tx('在 Google Play 取得', '在 Google Play 获取', 'Get it on Google Play', { ja: 'Google Playで手に入れよう', fr: 'Disponible sur Google Play', es: 'Disponible en Google Play' })" height="60" loading="lazy" />
             </a>
           </p>
           <!-- Phase 2: ENGO-WEB-001 §3.2 shots #6 (iPhone home) and #7 (Android home). -->
@@ -241,8 +241,8 @@
           </header>
           <img data-reveal class="pd-oxygen-photo pd-desk-lg" src="/images/filterwtablet.png" :alt="$t('product.engo_products.title01')" loading="lazy" />
           <div class="pd-two-machines pd-mob-lg">
-            <img class="pd-m01" src="/assets/two-machines01.png" :alt="tx('兩機一體', '两机一体', 'Two machines in one')" loading="lazy" />
-            <img class="pd-m02" src="/assets/two-machines02.png" :alt="tx('兩機一體', '两机一体', 'Two machines in one')" loading="lazy" />
+            <img class="pd-m01" src="/assets/two-machines01.png" :alt="tx('兩機一體', '两机一体', 'Two machines in one', { ja: '2機一体', fr: 'Deux appareils en un', es: 'Dos equipos en uno' })" loading="lazy" />
+            <img class="pd-m02" src="/assets/two-machines02.png" :alt="tx('兩機一體', '两机一体', 'Two machines in one', { ja: '2機一体', fr: 'Deux appareils en un', es: 'Dos equipos en uno' })" loading="lazy" />
           </div>
         </div>
       </section>
@@ -272,8 +272,8 @@
           <!-- The three renders below carry white callout text baked into the PNG, so
                each sits on a dark stage inside the light tile. -->
           <div data-reveal class="pd-stage filter-core">
-            <img class="pd-desk" src="/images/filter_side.png" :alt="tx('濾芯', '滤芯', 'Filter cartridge')" loading="lazy" />
-            <img class="pd-mob pd-stage-small" src="/images/filter_core.png" :alt="tx('濾芯', '滤芯', 'Filter cartridge')" loading="lazy" />
+            <img class="pd-desk" src="/images/filter_side.png" :alt="tx('濾芯', '滤芯', 'Filter cartridge', { ja: 'フィルターカートリッジ', fr: 'Cartouche filtrante', es: 'Cartucho filtrante' })" loading="lazy" />
+            <img class="pd-mob pd-stage-small" src="/images/filter_core.png" :alt="tx('濾芯', '滤芯', 'Filter cartridge', { ja: 'フィルターカートリッジ', fr: 'Cartouche filtrante', es: 'Cartucho filtrante' })" loading="lazy" />
             <ol class="pd-mob pd-stage-list">
               <!-- 1. 一體式水路板 -->
               <li>{{ $t('product.water_filter.filterCore01') }}</li>
@@ -281,8 +281,8 @@
               <li>{{ $t('product.water_filter.filterCore02') }}</li>
             </ol>
             <div class="qr-code-container">
-              <img src="/images/qr-code.png" alt="Insurance certificate QR code" />
-              <div>{{ tx('投保證書', '投保证书', 'Insurance certificate') }}</div>
+              <img src="/images/qr-code.png" :alt="tx('投保證書 QR Code', '投保证书 QR Code', 'Insurance certificate QR code', { ja: '保険証書の QR コード', fr: 'QR code du certificat d’assurance', es: 'Código QR del certificado de seguro' })" />
+              <div>{{ tx('投保證書', '投保证书', 'Insurance certificate', { ja: '保険証書', fr: 'Certificat d’assurance', es: 'Certificado de seguro' }) }}</div>
             </div>
           </div>
         </div>
@@ -301,8 +301,8 @@
             </p>
           </header>
           <div data-reveal class="pd-stage water-loop">
-            <img class="pd-desk" src="/images/water_loop.png" :alt="tx('強效過濾濾芯', '强效过滤滤芯', 'High-efficiency filter cartridge')" loading="lazy" />
-            <img class="pd-mob pd-stage-small" src="/images/water_loop_mob.png" :alt="tx('強效過濾濾芯', '强效过滤滤芯', 'High-efficiency filter cartridge')" loading="lazy" />
+            <img class="pd-desk" src="/images/water_loop.png" :alt="tx('強效過濾濾芯', '强效过滤滤芯', 'High-efficiency filter cartridge', { ja: '高性能ろ過フィルター', fr: 'Cartouche filtrante haute efficacité', es: 'Cartucho filtrante de alta eficiencia' })" loading="lazy" />
+            <img class="pd-mob pd-stage-small" src="/images/water_loop_mob.png" :alt="tx('強效過濾濾芯', '强效过滤滤芯', 'High-efficiency filter cartridge', { ja: '高性能ろ過フィルター', fr: 'Cartouche filtrante haute efficacité', es: 'Cartucho filtrante de alta eficiencia' })" loading="lazy" />
             <ol class="pd-mob pd-stage-list">
               <!-- 1. 減少管路連接 -->
               <li>{{ $t('product.filter_strength.water_loop01') }}</li>
@@ -326,7 +326,7 @@
             </h2>
           </header>
           <div data-reveal class="pd-stage pd-desk">
-            <img src="/images/filter_types.png" :alt="tx('強效過濾濾心', '强效过滤滤心', 'High-efficiency filter cartridges')" loading="lazy" />
+            <img src="/images/filter_types.png" :alt="tx('強效過濾濾心', '强效过滤滤心', 'High-efficiency filter cartridges', { ja: '高性能ろ過フィルター', fr: 'Cartouches filtrantes haute efficacité', es: 'Cartuchos filtrantes de alta eficiencia' })" loading="lazy" />
           </div>
           <div class="pd-swipe pd-mob">
             <swiper
@@ -343,13 +343,13 @@
               }"
             >
               <swiper-slide>
-                <img src="/images/SRM.png" :alt="tx('SRM 富鍶礦化濾心', 'SRM 富锶矿化滤心', 'SRM strontium-enriched mineralizing filter')" />
+                <img src="/images/SRM.png" :alt="tx('SRM 富鍶礦化濾心', 'SRM 富锶矿化滤心', 'SRM strontium-enriched mineralizing filter', { ja: 'SRM ストロンチウム豊富ミネラル化フィルター', fr: 'Filtre minéralisant SRM enrichi en strontium', es: 'Filtro mineralizante SRM enriquecido con estroncio' })" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/RO.png" :alt="tx('RO逆滲透膜', 'RO逆渗透膜', 'RO reverse-osmosis membrane')" />
+                <img src="/images/RO.png" :alt="tx('RO逆滲透膜', 'RO逆渗透膜', 'RO reverse-osmosis membrane', { ja: 'RO逆浸透膜', fr: 'Membrane d’osmose inverse RO', es: 'Membrana de ósmosis inversa RO' })" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/PPC.png" :alt="tx('PPC複合濾芯', 'PPC复合滤芯', 'PPC composite filter')" />
+                <img src="/images/PPC.png" :alt="tx('PPC複合濾芯', 'PPC复合滤芯', 'PPC composite filter', { ja: 'PPC複合フィルター', fr: 'Filtre composite PPC', es: 'Filtro compuesto PPC' })" />
               </swiper-slide>
             </swiper>
           </div>
@@ -449,7 +449,7 @@
               <p>{{ $t(`product.filter_list.list0${n}.desc`) }}</p>
             </div>
             <div class="filter_list filter_list-fault">
-              <img class="pd-adv-icon" src="/assets/fault.svg" :alt="tx('傳統淨水器', '传统净水器', 'Conventional water purifier')" />
+              <img class="pd-adv-icon" src="/assets/fault.svg" :alt="tx('傳統淨水器', '传统净水器', 'Conventional water purifier', { ja: '従来型浄水器', fr: 'Purificateur d’eau classique', es: 'Purificador de agua convencional' })" />
               <h3>{{ $t('product.filter_list.list04.title') }}</h3>
               <ul>
                 <li>{{ $t('product.filter_list.list04.desc01') }}</li>
@@ -488,13 +488,13 @@
               :lazy="true"
             >
               <swiper-slide>
-                <img src="/images/M3_brand_engo.png" :alt="tx('3 牌淨水系統', '3 牌净水系统', 'Brand 3 water system')" />
+                <img src="/images/M3_brand_engo.png" :alt="tx('3 牌淨水系統', '3 牌净水系统', 'Brand 3 water system', { ja: 'ブランド3の浄水システム', fr: 'Système d’eau de la marque 3', es: 'Sistema de agua de la marca 3' })" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/B_brand_engo.png" :alt="tx('B 牌淨水系統', 'B 牌净水系统', 'Brand B water system')" />
+                <img src="/images/B_brand_engo.png" :alt="tx('B 牌淨水系統', 'B 牌净水系统', 'Brand B water system', { ja: 'ブランドBの浄水システム', fr: 'Système d’eau de la marque B', es: 'Sistema de agua de la marca B' })" />
               </swiper-slide>
               <swiper-slide>
-                <img src="/images/S_brand_engo.png" :alt="tx('S 牌淨水系統', 'S 牌净水系统', 'Brand S water system')" />
+                <img src="/images/S_brand_engo.png" :alt="tx('S 牌淨水系統', 'S 牌净水系统', 'Brand S water system', { ja: 'ブランドSの浄水システム', fr: 'Système d’eau de la marque S', es: 'Sistema de agua de la marca S' })" />
               </swiper-slide>
             </swiper>
           </div>
@@ -505,7 +505,7 @@
       <section class="pd-tile pd-parchment wf-price-section">
         <div class="pd-wrap">
           <div data-reveal class="wf-price-card">
-            <div class="wf-price-flag">{{ tx('早鳥優惠', '早鸟优惠', 'Early-bird offer') }}</div>
+            <div class="wf-price-flag">{{ tx('早鳥優惠', '早鸟优惠', 'Early-bird offer', { ja: '早期申込特典', fr: 'Offre pour les premiers acheteurs', es: 'Oferta para primeros compradores' }) }}</div>
             <div class="wf-price-amounts">
               <span class="wf-price-msrp">
                 <span class="wf-price-msrp-label">MSRP</span>
@@ -513,7 +513,7 @@
               </span>
               <span class="wf-price-promo">NT$18,000</span>
             </div>
-            <div class="wf-price-bonus">{{ tx('★ 通過 SGS 水質檢測 · BSMI 商品檢驗 雙重認證', '★ 通过 SGS 水质检测 · BSMI 商品检验 双重认证', '★ SGS water-quality tested · BSMI product-inspected: dual certification') }}</div>
+            <div class="wf-price-bonus">{{ tx('★ 通過 SGS 水質檢測 · BSMI 商品檢驗 雙重認證', '★ 通过 SGS 水质检测 · BSMI 商品检验 双重认证', '★ SGS water-quality tested · BSMI product-inspected: dual certification', { ja: '★ SGS水質検査・BSMI商品検査の二重認証取得', fr: '★ Testé en qualité d’eau SGS · Inspecté BSMI : double certification', es: '★ Pruebas de calidad del agua SGS · Inspección de producto BSMI: doble certificación' }) }}</div>
             <button class="pd-pill pd-pill-primary wf-buy-btn-card" @click="buyNow">
               {{ $t('product.purchase.btn') }} →
             </button>

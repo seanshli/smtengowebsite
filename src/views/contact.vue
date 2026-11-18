@@ -112,9 +112,9 @@
       <button class="contact-form-submit ap-pill ap-pill-primary" @click="submitForm">{{ $t('submitForm') }}</button>
       </div>
 
-          <aside class="cf-aside" :aria-label="tx('其他聯絡方式', '其他联系方式', 'Other ways to reach us')">
+          <aside class="cf-aside" :aria-label="tx('其他聯絡方式', '其他联系方式', 'Other ways to reach us', { ja: 'その他のお問い合わせ方法', fr: 'Autres moyens de nous joindre', es: 'Otras formas de contactarnos' })">
             <div class="cf-aside-block">
-              <h2 class="cf-aside-title">{{ tx('直接來電', '直接来电', 'Call us') }}</h2>
+              <h2 class="cf-aside-title">{{ tx('直接來電', '直接来电', 'Call us', { ja: 'お電話', fr: 'Appelez-nous', es: 'Llámenos' }) }}</h2>
               <a class="cf-aside-phone" href="tel:+886-2-27510218" data-track="contact:phone">{{ $t('footer.phone') }}</a>
               <p class="cf-aside-note">{{ $t('footer.time') }}</p>
             </div>
@@ -126,7 +126,7 @@
               </button>
             </div>
             <div class="cf-aside-block" v-if="showrooms.length">
-              <h2 class="cf-aside-title">{{ tx('展示間', '展示间', 'Showrooms') }}</h2>
+              <h2 class="cf-aside-title">{{ tx('展示間', '展示间', 'Showrooms', { ja: 'ショールーム', fr: 'Salles d’exposition', es: 'Salas de exhibición' }) }}</h2>
               <ul class="cf-showrooms">
                 <li v-for="s in showrooms" :key="s.id">
                   <router-link :to="'/cases/' + s.id">{{ pick(s.title) }}</router-link>
@@ -185,7 +185,7 @@ const jumpToLine = () => {
     }
 
     const handleError = () => {
-      errorMessage.value = tx('發生錯誤，請稍後再試。', '发生错误，请稍后再试。', 'Something went wrong. Please try again later.')
+      errorMessage.value = tx('發生錯誤，請稍後再試。', '发生错误，请稍后再试。', 'Something went wrong. Please try again later.', { ja: 'エラーが発生しました。しばらくしてからもう一度お試しください。', fr: 'Une erreur s’est produite. Veuillez réessayer plus tard.', es: 'Ocurrió un error. Inténtelo de nuevo más tarde.' })
       trackEvent('form_submit_error', { error: errorMessage.value })
     }
 

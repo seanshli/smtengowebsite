@@ -2,18 +2,18 @@
   <section class="bms" ref="root" aria-label="enGo HMS and BMS integration">
     <header class="bms-head">
       <p class="bms-kicker">
-        HMS × BMS・{{ tx('家與大樓，即時互通', '家与大楼，实时互通', 'HOME & BUILDING, IN CONVERSATION') }}
+        HMS × BMS・{{ tx('家與大樓，即時互通', '家与大楼，实时互通', 'HOME & BUILDING, IN CONVERSATION', { ja: '家とビル、リアルタイムでつながる', fr: 'LE FOYER ET L’IMMEUBLE, EN DIALOGUE', es: 'EL HOGAR Y EL EDIFICIO, EN CONVERSACIÓN' }) }}
       </p>
       <h3 class="bms-title">
-        {{ tx('一棟大樓，一個大腦。', '一栋大楼，一个大脑。', 'One Brain. Every Building.') }}
+        {{ tx('一棟大樓，一個大腦。', '一栋大楼，一个大脑。', 'One Brain. Every Building.', { ja: '一棟のビルに、ひとつの頭脳。', fr: 'Un immeuble, un cerveau.', es: 'Un edificio, un cerebro.' }) }}
       </h3>
       <p class="bms-sub">
-        {{ tx('每一戶的 HMS，公布欄、物業管理、家居系統、通訊警報、AIoT，與大樓的智能櫃、監控、智能信箱、能源管理，透過樓中央的 enGo 中樞即時雙向連動。', '每一户的 HMS，公布栏、物业管理、家居系统、通信警报、AIoT，与大楼的智能柜、监控、智能信箱、能源管理，透过楼中央的 enGo 中枢实时双向连动。', 'Every unit\'s HMS, bulletin, property services, home systems, alerts, AIoT, links live and both ways with the building\'s smart lockers, surveillance, smart mailboxes, and energy management, through the enGo hub at the building\'s core.') }}
+        {{ tx('每一戶的 HMS，公布欄、物業管理、家居系統、通訊警報、AIoT，與大樓的智能櫃、監控、智能信箱、能源管理，透過樓中央的 enGo 中樞即時雙向連動。', '每一户的 HMS，公布栏、物业管理、家居系统、通信警报、AIoT，与大楼的智能柜、监控、智能信箱、能源管理，透过楼中央的 enGo 中枢实时双向连动。', 'Every unit\'s HMS, bulletin, property services, home systems, alerts, AIoT, links live and both ways with the building\'s smart lockers, surveillance, smart mailboxes, and energy management, through the enGo hub at the building\'s core.', { ja: '各戸のHMS（掲示板、物件管理、ホームシステム、通信・警報、AIoT）は、ビルのスマートロッカー、監視、スマート郵便受け、エネルギー管理と、建物中央のenGoハブを介してリアルタイムに双方向で連携します。', fr: 'Le HMS de chaque logement (panneau d’affichage, gestion immobilière, systèmes domestiques, alertes, AIoT) communique en temps réel, dans les deux sens, avec les consignes intelligentes, la vidéosurveillance, les boîtes aux lettres intelligentes et la gestion de l’énergie de l’immeuble, via le hub enGo au cœur du bâtiment.', es: 'El HMS de cada unidad (tablero de avisos, administración del inmueble, sistemas del hogar, alertas, AIoT) se conecta en tiempo real y en ambos sentidos con los casilleros inteligentes, la videovigilancia, los buzones inteligentes y la gestión de energía del edificio, a través del concentrador enGo en el corazón del edificio.' }) }}
       </p>
     </header>
 
     <svg class="bms-scene" viewBox="0 0 800 700" fill="none" role="img"
-      :aria-label="tx('enGo HMS 與 BMS 雙向連動示意', 'enGo HMS 与 BMS 双向连动示意', 'enGo HMS and BMS two-way integration diagram')">
+      :aria-label="tx('enGo HMS 與 BMS 雙向連動示意', 'enGo HMS 与 BMS 双向连动示意', 'enGo HMS and BMS two-way integration diagram', { ja: 'enGo HMSとBMSの双方向連携図', fr: 'Schéma d’intégration bidirectionnelle enGo HMS et BMS', es: 'Diagrama de integración bidireccional de enGo HMS y BMS' })">
       <!-- ground -->
       <line class="bms-ground" x1="60" y1="640" x2="760" y2="640" />
 
@@ -57,7 +57,7 @@
         <rect class="bms-card" x="0" y="0" width="252" height="322" rx="6" />
         <image href="/images/cases/case-home.jpg" x="12" y="12" width="228" height="76" preserveAspectRatio="xMidYMid slice" />
         <rect x="12" y="12" width="228" height="76" fill="none" stroke="rgba(21,41,57,0.35)" stroke-width="1.5" />
-        <text class="bms-card-title" x="36" y="116">HMS・{{ tx('每一戶', '每一户', 'Every Unit') }}</text>
+        <text class="bms-card-title" x="36" y="116">HMS・{{ tx('每一戶', '每一户', 'Every Unit', { ja: '各戸', fr: 'Chaque logement', es: 'Cada unidad' }) }}</text>
         <line class="bms-card-rule" x1="36" y1="130" x2="216" y2="130" />
         <!-- x=36 matches the title inset, and every glyph is boxed 0..16, so the
              icon column and the title start on exactly the same edge -->
@@ -72,7 +72,7 @@
         <rect class="bms-card" x="0" y="0" width="252" height="272" rx="6" />
         <image href="/images/home/bms-lobby.jpg" x="12" y="12" width="228" height="76" preserveAspectRatio="xMidYMid slice" />
         <rect x="12" y="12" width="228" height="76" fill="none" stroke="rgba(21,41,57,0.35)" stroke-width="1.5" />
-        <text class="bms-card-title" x="36" y="116">BMS・{{ tx('整棟公設', '整栋公设', 'The Building') }}</text>
+        <text class="bms-card-title" x="36" y="116">BMS・{{ tx('整棟公設', '整栋公设', 'The Building', { ja: 'ビル全体', fr: 'L’immeuble', es: 'El edificio' }) }}</text>
         <line class="bms-card-rule" x1="36" y1="130" x2="216" y2="130" />
         <g v-for="(f, i) in bmsRows" :key="'b'+i" ref="bmsRowEls" :transform="`translate(36, ${156 + i * 30})`">
           <g class="bms-row-icon bms-row-icon--bms" v-html="f.icon"></g>
@@ -109,17 +109,17 @@ const I = {
 }
 
 const HMS_ROWS = [
-  { zh: '公布欄', zhCN: '公布栏', en: 'Bulletin board', icon: I.bulletin },
-  { zh: '物業管理', zhCN: '物业管理', en: 'Property services', icon: I.property },
-  { zh: '家居系統管理', zhCN: '家居系统管理', en: 'Home system control', icon: I.sliders },
-  { zh: '通訊警報', zhCN: '通信警报', en: 'Comms & alerts', icon: I.bell },
-  { zh: 'AIoT 智慧連動', zhCN: 'AIoT 智慧连动', en: 'AIoT automation', icon: I.chip }
+  { zh: '公布欄', zhCN: '公布栏', en: 'Bulletin board', ja: '掲示板', fr: 'Panneau d’affichage', es: 'Tablero de avisos', icon: I.bulletin },
+  { zh: '物業管理', zhCN: '物业管理', en: 'Property services', ja: '物件管理', fr: 'Gestion immobilière', es: 'Administración del inmueble', icon: I.property },
+  { zh: '家居系統管理', zhCN: '家居系统管理', en: 'Home system control', ja: 'ホームシステム管理', fr: 'Pilotage du système domestique', es: 'Control del sistema del hogar', icon: I.sliders },
+  { zh: '通訊警報', zhCN: '通信警报', en: 'Comms & alerts', ja: '通信・警報', fr: 'Communications et alertes', es: 'Comunicaciones y alertas', icon: I.bell },
+  { zh: 'AIoT 智慧連動', zhCN: 'AIoT 智慧连动', en: 'AIoT automation', ja: 'AIoT スマート連動', fr: 'Automatisation AIoT', es: 'Automatización AIoT', icon: I.chip }
 ]
 const BMS_ROWS = [
-  { zh: '智能櫃', zhCN: '智能柜', en: 'Smart lockers', icon: I.locker },
-  { zh: '監控系統', zhCN: '监控系统', en: 'Surveillance', icon: I.camera },
-  { zh: '智能信箱', zhCN: '智能信箱', en: 'Smart mailboxes', icon: I.mailbox },
-  { zh: '能源管理', zhCN: '能源管理', en: 'Energy management', icon: I.bolt }
+  { zh: '智能櫃', zhCN: '智能柜', en: 'Smart lockers', ja: 'スマートロッカー', fr: 'Consignes intelligentes', es: 'Casilleros inteligentes', icon: I.locker },
+  { zh: '監控系統', zhCN: '监控系统', en: 'Surveillance', ja: '監視システム', fr: 'Vidéosurveillance', es: 'Videovigilancia', icon: I.camera },
+  { zh: '智能信箱', zhCN: '智能信箱', en: 'Smart mailboxes', ja: 'スマート郵便受け', fr: 'Boîtes aux lettres intelligentes', es: 'Buzones inteligentes', icon: I.mailbox },
+  { zh: '能源管理', zhCN: '能源管理', en: 'Energy management', ja: 'エネルギー管理', fr: 'Gestion de l’énergie', es: 'Gestión de energía', icon: I.bolt }
 ]
 
 export default defineComponent({

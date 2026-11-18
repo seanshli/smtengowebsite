@@ -5,9 +5,9 @@
     <div class="ft-inner">
       <div class="ft-top">
         <div class="ft-brand">
-          <FooterMark :label="tx('enGo 首頁', 'enGo 首页', 'enGo home')" />
+          <FooterMark :label="tx('enGo 首頁', 'enGo 首页', 'enGo home', { ja: 'enGo ホーム', fr: 'Accueil enGo', es: 'Inicio de enGo' })" />
           <p class="ft-tag">
-            {{ tx('把智慧生活，寫進每一天。', '把智慧生活，写进每一天。', 'Smart living, written into every day.') }}
+            {{ tx('把智慧生活，寫進每一天。', '把智慧生活，写进每一天。', 'Smart living, written into every day.', { ja: 'スマートな暮らしを、毎日に刻む。', fr: 'Une vie connectée, écrite dans chaque journée.', es: 'La vida inteligente, escrita en cada día.' }) }}
           </p>
         </div>
 
@@ -67,7 +67,7 @@
             <i>·</i>
             <a :href="legalDoc('terms')">{{ $t('footer.termsOfService') }}</a>
             <i>·</i>
-            <router-link to="/legal" data-track="footer:legal">{{ tx('法務文件中心', '法务文件中心', 'Legal Center') }}</router-link>
+            <router-link to="/legal" data-track="footer:legal">{{ tx('法務文件中心', '法务文件中心', 'Legal Center', { ja: '法務ドキュメントセンター', fr: 'Centre juridique', es: 'Centro legal' }) }}</router-link>
           </span>
         </div>
       </div>
