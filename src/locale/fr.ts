@@ -467,18 +467,6 @@ export const frLocale = {
       desc: '*Comprend le panneau, le système de purification d\'eau, 3 ans de filtres et l\'installation',
       btn: 'Acheter maintenant'
     },
-    reviews: {
-      title: 'Avis des utilisateurs',
-      add: 'Écrire un avis',
-      sample1: {
-        name: 'Jean Dupont',
-        comment: 'Le hub AI est fantastique, la commande vocale est très réactive !'
-      },
-      sample2: {
-        name: 'Marie Claire',
-        comment: 'La qualité de l\'eau s\'est améliorée de façon notable, l\'eau Sr a un goût sucré.'
-      }
-    },
     shop: {
       title: 'enGo Shop',
       lede: 'Abonnements de résidence et marché de quartier, livrés à votre porte. Commandez produits frais, articles du quotidien et accessoires de maison intelligente auprès de commerçants en qui votre résidence a confiance ; lorsque le colis arrive dans le hall, le système vous prévient de venir le récupérer.',

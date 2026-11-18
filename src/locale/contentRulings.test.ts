@@ -99,3 +99,18 @@ describe('content rulings 2026-11-10', () => {
     expect(text).not.toMatch(/門鎖|门锁|smart locks?|door ?locks?|serrure|cerradura|スマートロック|ドアロック/i)
   })
 })
+
+describe('benchmark review fixes (2026-11-13)', () => {
+  const tutorials = JSON.parse(read('src/data/tutorials.json'))
+  it('the tutorial voice step says wall tablet only, in every language', () => {
+    const voice = tutorials.find((c: any) => c.id === 'individual').steps.find((s: any) => /語音/.test(s.title.zh))
+    expect(voice.title.zh).toContain('牆掛平板')
+    for (const l of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) expect(voice.content[l], l).toMatch(/牆掛平板|墙挂平板|wall tablet|tablette murale|壁掛けタブレット|tableta de pared/)
+  })
+  it('no unverified "enterprise dashboard" claim', () => {
+    expect(read('src/data/tutorials.json')).not.toMatch(/企業儀表板|企业仪表板|enterprise dashboard|tableau de bord d'entreprise|エンタープライズダッシュボード|panel empresarial/i)
+  })
+  it('no placeholder customer reviews in any locale', () => {
+    for (const f of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) expect(read(`src/locale/${f}.ts`), f).not.toMatch(/王小明|Li Hua|reviews: \{/)
+  })
+})

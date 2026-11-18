@@ -522,18 +522,6 @@ export const zhCNLocale = {
       title: '早鸟优惠价',
       desc: '*含enGo AI智慧中控平板、水维氧 AI智慧净水系统、三年份滤心、安装费'
     },
-    reviews: {
-      title: '用户评价',
-      add: '发表评论',
-      sample1: {
-        name: '王小明',
-        comment: 'AI 中控平板真的很好用，语音控制非常灵敏！'
-      },
-      sample2: {
-        name: 'Li Hua',
-        comment: '水质明显改善了，锶水喝起来甜甜的。'
-      }
-    },
     shop: {
       title: 'enGo 安购商城',
       lede: '社区订阅与邻里市集，送到您家门口。向社区信赖的商家订购生鲜、日用与智慧家居，商品送达社区大厅后，系统会通知您取货。',
