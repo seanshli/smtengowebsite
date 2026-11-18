@@ -50,7 +50,7 @@ describe('content rulings 2026-11-10', () => {
       expect(zh, f).not.toMatch(/ENGO 智管家|enGo ?智管家|智管家 ?APP|智管家用戶/)
       expect(zh.replace(/智管家科技股份有限公司/g, ''), f).not.toMatch(/智管家/)
       expect(en, f).not.toMatch(/enGo Smart Home|enGo智管家/)
-      expect(zh + en, f).not.toMatch(/安購幣|enGo Coin/) // Shop UI names the points 「engo 幣」
+      expect(zh + en, f).not.toMatch(/安購幣|enGo Coin|engo 幣|engo coins/) // Shop UI names the points 「enGo 幣」 (Shop 2026-11-16)
     }
   })
   it('English pages call the brand enGo, not enGo Smart Home', () => {
@@ -112,5 +112,12 @@ describe('benchmark review fixes (2026-11-13)', () => {
   })
   it('no placeholder customer reviews in any locale', () => {
     for (const f of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) expect(read(`src/locale/${f}.ts`), f).not.toMatch(/王小明|Li Hua|reviews: \{/)
+  })
+})
+
+describe('Shop points name follows the Shop app (enGo 幣, 2026-11-18)', () => {
+  it('the return policy names the points 「enGo 幣」 / enGo coins', () => {
+    expect(read('public/return-policy.html')).toContain('enGo 幣／紅利')
+    expect(read('public/return-policy-en.html')).toContain('enGo coins / reward points')
   })
 })

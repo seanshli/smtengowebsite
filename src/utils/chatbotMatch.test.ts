@@ -193,7 +193,7 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     expect(home3.body.zh).toMatch(/手機[\s\S]*☰/)
     const dd = (howto as any).modules.find((m: any) => m.id === 'devicedata')
     expect(dd.steps[0].body.zh).toMatch(/平板：首頁右上角的第二顆圖示[\s\S]*手機：從裝置頁進入/)
-    expect((howto as any).meta.updated).toBe('2026-11-09')   // moved from 2026-11-05 by the UM-001 A.24 sync
+    expect((howto as any).meta.updated).toBe('2026-11-18')   // moved from 2026-11-09 by the UM-001 A.27 sync (2026-11-18)
     const bot = (kb as any).howto.find((e: any) => e.id === 'howto-devicedata')
     expect(bot.answer.zh).toContain('(/tutorial#howto-devicedata)')
     expect(bot.answer.zh).toMatch(/第二顆圖示/)
@@ -308,15 +308,56 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
     // 無線情境按鍵 vs 無線開關 and the gear stay distinct, and nothing leaks the retired air purifier or a door lock
     expect(dc.answer.zh).toMatch(/無線情境按鍵[\s\S]*無線開關/)
     expect(JSON.stringify(dc)).not.toMatch(/空氣清淨機|門鎖|Alexa/)
-    // A.22 provenance: the how-to no longer calls 3.6.2 the whole current app, and the pin is 2026-11-09
+    // A.22 provenance: the how-to no longer calls 3.6.2 the whole current app, and the pin is 2026-11-18 (UM-001 A.27 sync)
     expect((howto as any).meta.generatedFor.zh).toMatch(/3\.6\.2 為底[\s\S]*3\.11\.0/)
     expect((howto as any).meta.generatedFor.en).toMatch(/Based on enGo 3\.6\.2[\s\S]*3\.11\.0/)
-    expect((howto as any).meta.updated).toBe('2026-11-09')
+    expect((howto as any).meta.updated).toBe('2026-11-18')
     // every howto module still has a bot entry mirroring its steps
     for (const m of (howto as any).modules.filter((x: any) => ['home', 'community'].includes(x.id))) {
       const e = (kb as any).howto.find((x: any) => x.id === `howto-${m.id}`)
       for (const st of m.steps) expect(e.answer.zh, `${m.id}/${st.title.zh}`).toContain(st.body.zh)
     }
+  })
+  it('UM-001 A.25-A.27 sync (2026-11-18): room air-quality tags, air box, main water valve; the menu stays 設置 and the valve schedule is a known issue', () => {
+    const locs = ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']
+    const gen = (id: string) => (kb as any).general.find((e: any) => e.id === id)
+    const faq = (id: number) => (faqs as any[]).find((f) => f.id === id)
+    const home = (howto as any).modules.find((m: any) => m.id === 'home')
+    const llms = readFileSync(resolve(process.cwd(), 'public/llms.txt'), 'utf-8')
+    for (const loc of locs) {
+      for (const e of [gen('room-air-quality'), gen('water-main-valve'), faq(56), faq(57)]) {
+        expect((e.answer ?? {})[loc], `${e.id} ${loc}`).toBeTruthy()
+      }
+      expect(gen('room-air-quality').answer[loc], loc).toMatch(/mg\/m³/)
+    }
+    // the menu is 設置 (product owner 2026-11-09), never the doc's 設定
+    expect(gen('room-air-quality').answer.zh).toMatch(/「設置」→「房間空氣品質」/)
+    expect(JSON.stringify([gen('room-air-quality'), faq(56), home.steps[5]])).not.toMatch(/設定→|設定 ?→/)
+    // CO2 colour is uncalibrated: read the number only; VOC unit label is wrong
+    expect(gen('room-air-quality').answer.zh).toMatch(/二氧化碳請只看數字/)
+    expect(faq(56).answer.zh).toMatch(/二氧化碳請只看數字/)
+    // the valve schedule does not fire in the current release: say so and point to scenes, never promise it works
+    for (const t of [gen('water-main-valve').answer.zh, faq(57).answer.zh]) {
+      expect(t).toMatch(/「定時」排了不會到點執行|「定時」在現行正式版不會到點執行/)
+      expect(t).toMatch(/改用情境/)
+      expect(t).not.toMatch(/定時(關水|澆灌)(功能)?(可以|可用|已)/)
+    }
+    expect(llms).toMatch(/「定時」在現行正式版不會到點執行/)
+    // routing
+    expect(top('房名旁邊的標籤怎麼設定').item.id).toBe('room-air-quality')
+    expect(top('二氧化碳為什麼一直紅色').item.id).toBe('room-air-quality')
+    expect(top('入戶總閥定時沒有動作').item.id).toBe('water-main-valve')
+    expect(top('water main valve schedule not working').item.id).toBe('water-main-valve')
+    // the control-pages answer and the home how-to carry the air box and the main valve, and the new step mirrors into the bot entry
+    for (const loc of locs) expect(gen('device-control-pages').answer[loc], loc).toMatch(/🌫️/)
+    expect(home.steps.map((s: any) => s.title.zh)).toContain('房間名稱旁的空氣品質標籤')
+    expect(home.steps[4].body.zh).toMatch(/空氣盒子[\s\S]*入戶總閥/)
+    // llms.txt: legal docs at A.3, points named 「enGo 幣」 as the Shop shows them, languages as they really are, no duplicated bullet
+    expect(llms).toMatch(/ENGO-LG-001 服務條款（版次 A\.3/)
+    expect(llms).toContain('「enGo 幣」')
+    expect(llms).toMatch(/\/zh-cn[\s\S]*日文、法文、墨西哥西班牙文[\s\S]*沒有各自獨立的網址/)
+    expect(llms.match(/語音操作為牆掛平板專屬/g)?.length).toBe(1)
+    expect(llms).toMatch(/檔案：llms\.txt · 版本 v2026\.11 · 2026 年 11 月/)
   })
   it('product feedback 2026-11-09: no standby photo wall, 電鈴通知 is settings/dial pad, the menu is 設置, no Shop push into 訊息', () => {
     const root = process.cwd()
