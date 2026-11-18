@@ -34,3 +34,21 @@ describe('aggregateChatbotRows keeps events out of the chatbot statistics', () =
         expect(e.howtoOpens).toEqual([])
     })
 })
+
+describe('aggregateChatbotRows coverage and redaction', () => {
+    it('adds a weekly series that excludes event rows', () => {
+        const out = aggregateChatbotRows([row('a'), row('b', false), row(`${HOWTO_PREFIX}x`), row(`${ANSWER_PREFIX}y`)])
+        expect(out.weekly).toHaveLength(1)
+        expect(out.weekly[0]).toMatchObject({ weekStart: '2026-09-21', total: 2, matched: 1, insufficient: true })
+    })
+    it('redacts PII in unmatched, keyword and recent lists and merges counts', () => {
+        const out = aggregateChatbotRows([row('找我 0912-345-678', false), row('找我 0912 345 678', false), row('mail a@b.co', false)])
+        expect(out.topUnmatched).toEqual([{ keyword: '找我 [number]', count: 2 }, { keyword: 'mail [email]', count: 1 }])
+        expect(out.recent.map((r) => r.keyword).join(' ')).not.toMatch(/0912|a@b/)
+    })
+    it('caps the unmatched ranking at 25', () => {
+        const rows = Array.from({ length: 40 }, (_, i) => row(`q${i}`, false))
+        expect(aggregateChatbotRows(rows).topUnmatched).toHaveLength(25)
+    })
+})
+

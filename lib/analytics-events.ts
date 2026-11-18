@@ -8,6 +8,9 @@
 //   kb:<entry-id>    the chatbot answered with this knowledge-base entry
 //
 // Everything else in the column is free text a visitor typed into the chatbot.
+import { redactFreeText } from './redact.js'
+import { weeklyCoverage } from './coverage-stats.js'
+
 export const HOWTO_PREFIX = 'howto:'
 export const ANSWER_PREFIX = 'kb:'
 
@@ -43,6 +46,7 @@ export function aggregateChatbotRows(rows: LogRow[], limit = 200) {
     const howtoOpens: Counter = {}
     const topAnswers: Counter = {}
     const recentRows: LogRow[] = []
+    const typed: LogRow[] = []
 
     for (const r of rows) {
         const kwRaw = (r.keyword || '').trim()
@@ -58,10 +62,13 @@ export function aggregateChatbotRows(rows: LogRow[], limit = 200) {
         byLocale[loc].total += 1
         if (hit) byLocale[loc].matched += 1
         if (kw) {
-            bump(topKeywords, kw)
-            if (!hit) bump(topUnmatched, kw)
+            // Redact before counting so two spellings of the same phone number merge.
+            const shown = redactFreeText(kw)
+            bump(topKeywords, shown)
+            if (!hit) bump(topUnmatched, shown)
         }
         if (recentRows.length < limit) recentRows.push(r)
+        typed.push(r)
     }
 
     return {
@@ -73,6 +80,7 @@ export function aggregateChatbotRows(rows: LogRow[], limit = 200) {
         topUnmatched: topN(topUnmatched, 25),
         howtoOpens: topN(howtoOpens, 25),
         topAnswers: topN(topAnswers, 25),
-        recent: recentRows.map((r) => ({ id: r.id, keyword: r.keyword, locale: r.locale, matchFound: !!r.match_found, createdAt: r.created_at })),
+        weekly: weeklyCoverage(typed),
+        recent: recentRows.map((r) => ({ id: r.id, keyword: r.keyword == null ? r.keyword : redactFreeText(r.keyword), locale: r.locale, matchFound: !!r.match_found, createdAt: r.created_at })),
     }
 }

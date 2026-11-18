@@ -38,6 +38,44 @@
           <p v-else class="insight-empty">{{ L.empty }}</p>
         </div>
       </div>
+      <div class="coverage">
+        <h3>{{ L.coverageTitle }}</h3>
+        <p v-if="insights.truncated" class="trunc" role="alert">{{ L.truncated }}</p>
+        <p v-if="!weeks.length" class="insight-empty">{{ L.empty }}</p>
+        <template v-else>
+          <svg class="cov-chart" :viewBox="`0 0 ${CW} ${CH}`" role="img" :aria-label="L.coverageTitle">
+            <g v-for="g in [0, 0.5, 1]" :key="g">
+              <line :x1="PL" :x2="CW - PR" :y1="yOf(g)" :y2="yOf(g)" class="grid" />
+              <text :x="PL - 6" :y="yOf(g) + 4" text-anchor="end" class="axis">{{ Math.round(g * 100) }}%</text>
+            </g>
+            <polyline v-for="(seg, i) in covSegments" :key="'s' + i" :points="seg" class="cov-line" />
+            <g v-for="(w, i) in weeks" :key="w.weekStart">
+              <template v-if="!w.insufficient && w.ci">
+                <line :x1="xOf(i)" :x2="xOf(i)" :y1="yOf(w.ci.lo)" :y2="yOf(w.ci.hi)" class="cov-ci" />
+                <circle :cx="xOf(i)" :cy="yOf(w.rate!)" r="4" class="cov-dot" />
+              </template>
+              <text v-else :x="xOf(i)" :y="yOf(0) - 6" text-anchor="middle" class="axis">·</text>
+              <text v-if="i % labelEvery === 0" :x="xOf(i)" :y="CH - 8" text-anchor="middle" class="axis">{{ w.weekStart.slice(5) }}</text>
+            </g>
+          </svg>
+          <p class="cov-note">{{ L.coverageNote }}</p>
+          <div class="cov-table-wrap">
+            <table class="cov-table">
+              <thead><tr><th>{{ L.locale }}</th><th v-for="w in weeks" :key="w.weekStart">{{ w.weekStart.slice(5) }}</th></tr></thead>
+              <tbody>
+                <tr v-for="loc in covLocales" :key="loc">
+                  <th scope="row">{{ loc }}</th>
+                  <td v-for="w in weeks" :key="w.weekStart" :class="{ weak: !w.byLocale[loc] || w.byLocale[loc].insufficient }">
+                    <template v-if="!w.byLocale[loc]">–</template>
+                    <template v-else-if="w.byLocale[loc].insufficient">{{ L.insufficient }}</template>
+                    <template v-else>{{ pct(w.byLocale[loc].rate) }} <small>{{ pct(w.byLocale[loc].ci.lo) }}–{{ pct(w.byLocale[loc].ci.hi) }} · n={{ w.byLocale[loc].total }}</small></template>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </template>
+      </div>
       <p class="insights-foot">
         {{ L.questions }}: {{ insights.totals.queries }} · {{ L.matchRate }}: {{ Math.round(insights.totals.matchRate * 100) }}%
       </p>
@@ -55,6 +93,7 @@
       </div>
       <p v-if="site.tableMissing" class="insight-empty">{{ LS.missing }}</p>
       <template v-else>
+        <p v-if="site.truncated" class="trunc" role="alert">{{ LS.truncated }}</p>
         <p class="insights-foot" style="margin: 0 0 14px">
           {{ LS.pv }}: {{ site.totals.pageViews }} · {{ LS.events }}: {{ site.totals.events }} ·
           {{ LS.depth }}: 25% {{ pct(site.scrollDepth['25']) }} / 50% {{ pct(site.scrollDepth['50']) }} / 75% {{ pct(site.scrollDepth['75']) }} / 100% {{ pct(site.scrollDepth['100']) }}
@@ -227,12 +266,39 @@ const { t, locale } = useI18n()
 // screen, zh with an en fallback is all it needs.
 const INSIGHT_LABELS: Record<string, Record<string, string>> = {
   zh: { title: '使用洞察', window: '天數', howto: '操作指南：最常被點開的模組', answers: '客服小精靈：最常回答的條目',
-        unmatched: '客服小精靈：最常問但沒答到', empty: '尚無資料', questions: '問答次數', matchRate: '命中率' },
+        unmatched: '客服小精靈：最常問但沒答到（前 25，已遮蔽個資）', empty: '尚無資料', questions: '問答次數', matchRate: '命中率',
+        coverageTitle: '客服小精靈每週命中率（Wilson 95% 信賴區間）', locale: '語系', insufficient: '資料不足',
+        coverageNote: '週一起算（UTC）。縱軸 0–100%；每週少於 5 則提問不顯示百分比（·）。為相關性觀察，非因果。',
+        truncated: '資料量超過讀取上限，以下統計僅涵蓋部分資料，數字偏低。' },
   en: { title: 'Usage insights', window: 'Days', howto: 'How-to: most opened modules', answers: 'Chatbot: most used answers',
-        unmatched: 'Chatbot: asked but unanswered', empty: 'No data yet', questions: 'Questions', matchRate: 'Match rate' },
+        unmatched: 'Chatbot: asked but unanswered (top 25, PII redacted)', empty: 'No data yet', questions: 'Questions', matchRate: 'Match rate',
+        coverageTitle: 'Chatbot weekly match rate (Wilson 95% CI)', locale: 'Locale', insufficient: 'Insufficient data',
+        coverageNote: 'Weeks start Monday (UTC). Axis 0-100%; weeks with fewer than 5 questions show no percentage (·). Association only, not causal.',
+        truncated: 'The row limit was reached; these figures cover only part of the data and understate the totals.' },
 }
 const L = computed(() => INSIGHT_LABELS[locale.value] || INSIGHT_LABELS.zh)
 const insights = ref<any>(null)
+// ── Coverage trend chart (hand-built SVG) ──
+const CW = 640, CH = 200, PL = 40, PR = 12, PT = 12, PB = 28
+const weeks = computed<any[]>(() => insights.value?.weekly ?? [])
+const xOf = (i: number) => weeks.value.length <= 1 ? (PL + CW - PR) / 2 : PL + (i * (CW - PL - PR)) / (weeks.value.length - 1)
+const yOf = (v: number) => PT + (1 - v) * (CH - PT - PB)
+const labelEvery = computed(() => Math.ceil(weeks.value.length / 8) || 1)
+const covSegments = computed(() => {
+  const segs: string[] = []
+  let cur: string[] = []
+  weeks.value.forEach((w, i) => {
+    if (w.insufficient) { if (cur.length > 1) segs.push(cur.join(' ')); cur = []; return }
+    cur.push(`${xOf(i)},${yOf(w.rate)}`)
+  })
+  if (cur.length > 1) segs.push(cur.join(' '))
+  return segs
+})
+const covLocales = computed(() => {
+  const tot: Record<string, number> = {}
+  for (const w of weeks.value) for (const [l, c] of Object.entries<any>(w.byLocale)) tot[l] = (tot[l] || 0) + c.total
+  return Object.keys(tot).sort((a, b) => tot[b] - tot[a])
+})
 const insightDays = ref(30)
 const howtoTitle = (id: string) => {
   const m = (howtoData as any).modules.find((x: any) => x.id === id)
@@ -243,9 +309,11 @@ const howtoTitle = (id: string) => {
 const SITE_LABELS: Record<string, Record<string, string>> = {
   zh: { title: '站內行為：大家看什麼、點什麼', pv: '頁面瀏覽', events: '事件數', depth: '捲動深度（到達比例）',
         pages: '最多人看的頁面', sections: '最多人看到的區塊', clicks: '最多人點的元素', cta: '預約體驗按鈕（依位置）', outbound: '外部連結',
+        truncated: '資料量超過讀取上限，以下統計僅涵蓋部分資料。',
         missing: '尚未建立 site_events 資料表。請在 Supabase SQL 編輯器執行 repo 內的 supabase_site_events.sql，之後這裡就會開始有資料。' },
   en: { title: 'On-site behaviour: what people view and click', pv: 'Page views', events: 'Events', depth: 'Scroll depth (share reaching)',
         pages: 'Most viewed pages', sections: 'Most seen sections', clicks: 'Most clicked elements', cta: 'Book-a-visit clicks by location', outbound: 'Outbound links',
+        truncated: 'The row limit was reached; these figures cover only part of the data.',
         missing: 'The site_events table does not exist yet. Run supabase_site_events.sql in the Supabase SQL editor and data will start to appear here.' },
 }
 const LS = computed(() => SITE_LABELS[locale.value] || SITE_LABELS.zh)
@@ -440,6 +508,21 @@ onMounted(() => { fetchData(); fetchInsights(); fetchSite(); fetchLegal() })
 .insight-card li { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px dashed #eee; }
 .insight-card li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .insight-card li b { flex-shrink: 0; color: #e05a35; }
+.coverage { margin-top: 18px; }
+.coverage h3 { font-size: 14px; margin: 0 0 8px; color: #444; }
+.trunc { margin: 0 0 10px; padding: 8px 12px; background: #fff4e5; border: 1px solid #f0b86e; border-radius: 8px; font-size: 13px; color: #7a4a00; }
+.cov-chart { width: 100%; max-width: 640px; height: auto; display: block; }
+.cov-chart .grid { stroke: #e3e6ea; stroke-width: 1; }
+.cov-chart .axis { font-size: 11px; fill: #666; }
+.cov-chart .cov-line { fill: none; stroke: #2b6cb0; stroke-width: 2; }
+.cov-chart .cov-ci { stroke: #2b6cb0; stroke-width: 2; opacity: .35; }
+.cov-chart .cov-dot { fill: #2b6cb0; stroke: #fff; stroke-width: 1.5; }
+.cov-note { font-size: 12px; color: #666; margin: 6px 0 10px; }
+.cov-table-wrap { overflow-x: auto; }
+.cov-table { border-collapse: collapse; font-size: 12px; min-width: 100%; }
+.cov-table th, .cov-table td { padding: 4px 8px; border-bottom: 1px solid #eee; text-align: left; white-space: nowrap; }
+.cov-table td.weak { color: #888; }
+.cov-table small { color: #777; }
 .insight-empty { font-size: 13px; color: #999; margin: 0; }
 .legal-tools { display: flex; gap: 12px; align-items: center; }
 .legal-csv { padding: 6px 14px; border: 1px solid #b8431f; border-radius: 9999px; background: transparent; color: #b8431f; font-size: 13px; cursor: pointer; }

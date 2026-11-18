@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { maskEmail, maskPhone, maskAddress, redactSubmission } from './redact'
+import { maskEmail, maskPhone, maskAddress, redactSubmission, redactFreeText } from './redact'
 
 describe('maskEmail', () => {
   it('keeps the first character and the domain', () => {
@@ -57,5 +57,19 @@ describe('redactSubmission', () => {
     const copy = { ...row }
     redactSubmission(row)
     expect(row).toEqual(copy)
+  })
+})
+
+describe('redactFreeText', () => {
+  it('removes emails, links, ids and phone numbers', () => {
+    expect(redactFreeText('寄到 wang@gmail.com 謝謝')).toBe('寄到 [email] 謝謝')
+    expect(redactFreeText('see https://x.example/a?b=1 now')).toBe('see [url] now')
+    expect(redactFreeText('A123456789 申請')).toBe('[id] 申請')
+    expect(redactFreeText('call 0912-345-678 please')).toBe('call [number] please')
+    expect(redactFreeText('+886 912 345 678')).toBe('[number]')
+  })
+  it('leaves ordinary questions and short numbers alone', () => {
+    expect(redactFreeText('配網失敗怎麼辦')).toBe('配網失敗怎麼辦')
+    expect(redactFreeText('can I use 2 locks in 3 rooms')).toBe('can I use 2 locks in 3 rooms')
   })
 })
