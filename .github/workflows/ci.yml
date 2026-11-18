@@ -1,0 +1,54 @@
+# CI — the same gates CLAUDE.md asks you to run locally.
+# Vercel builds every PR (preview) and main (production); this workflow does NOT rebuild.
+# ESLint is deliberately absent: the current config throws parse errors (see CLAUDE.md).
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gates:
+    name: 型別 · 測試 · 法律文件登錄
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 🧰 Node 24（與 Vercel 相同）
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: 📦 npm ci
+        run: npm ci --no-audit --no-fund
+
+      - name: 🔎 type-check (vue-tsc)
+        run: npm run type-check
+
+      - name: 🧪 vitest
+        run: npx vitest run --reporter=dot
+
+      - name: 📜 legal register check（受控文件 stamps / hashes）
+        run: node scripts/legal-register.mjs check
+
+      - name: 🧭 失敗時怎麼辦
+        if: failure()
+        run: |
+          cat <<'MSG'
+          一個 gate 紅了。本機重現：
+            npm ci && npm run type-check && npx vitest run && node scripts/legal-register.mjs check
+          若是 legal register：public/<doc>.html 改了卻沒 bump →
+            node scripts/legal-register.mjs bump <id> <A.n> "<change>"
+          若是 localeParity：新字串沒有進全部 7 個 locale 檔。
+          MSG
