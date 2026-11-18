@@ -20,7 +20,7 @@
         </div>
         <!-- ENGO-WEB-001 §3.2 shot #1 composited onto the enGo tablet render (screen
              pixels untouched, cover-fit into the 1755×1054 panel). -->
-        <img data-reveal class="pd-hero-device" src="/images/screens/01-home-tablet-device.png" :alt="$t('product.tablet_intro.title')" loading="eager" />
+        <img data-reveal class="pd-hero-device" src="/images/screens/01-home-tablet-device.png" :alt="$t('product.tablet_intro.title')" width="1920" height="1236" loading="eager" fetchpriority="high" />
       </section>
 
       <!-- ─── INTRO TILE (parchment): ENGO-WEB-001 §2.2. One copy for every breakpoint. -->

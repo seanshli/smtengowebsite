@@ -465,18 +465,6 @@ export const esLocale = {
       desc: '*Incluye la tableta de control enGo AI, el sistema de agua inteligente con IA Shui Wei Yang, tres años de cartuchos de filtro e instalación',
       btn: 'Comprar Ahora'
     },
-    reviews: {
-      title: 'Reseñas de Usuarios',
-      add: 'Escribir una Reseña',
-      sample1: {
-        name: 'Xiao Ming',
-        comment: '¡El Centro AI es fantástico, el control por voz es muy receptivo!'
-      },
-      sample2: {
-        name: 'Li Hua',
-        comment: 'La calidad del agua mejoró notablemente, el agua Sr tiene un sabor dulce.'
-      }
-    },
     shop: {
       title: 'enGo Shop',
       lede: 'Suscripciones comunitarias y un mercado vecinal, entregados en tu puerta. Pide productos frescos, artículos de uso diario y accesorios de hogar inteligente a comercios en los que confía tu comunidad; cuando el paquete llegue al vestíbulo, el sistema te avisa para que lo recojas.',
