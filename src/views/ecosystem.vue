@@ -45,7 +45,7 @@
           <article class="ap-card eco-door fade-in">
             <div class="eco-media">
               <div class="eco-frame eco-frame-tablet">
-                <img src="/images/screens/01-home-tablet.png" :alt="tx('enGo 牆掛平板首頁', 'enGo 墙挂平板首页', 'enGo wall tablet home screen', { ja: 'enGo壁掛けタブレットのホーム画面', fr: 'Écran d’accueil de la tablette murale enGo', es: 'Pantalla de inicio de la tableta de pared enGo' })" width="2000" height="1200" loading="lazy" />
+                <picture class="pic-block"><source type="image/webp" srcset="/images/screens/01-home-tablet-1000.webp 1000w, /images/screens/01-home-tablet.webp 2000w" sizes="(max-width: 760px) 92vw, 640px" /><img src="/images/screens/01-home-tablet.png" :alt="tx('enGo 牆掛平板首頁', 'enGo 墙挂平板首页', 'enGo wall tablet home screen', { ja: 'enGo壁掛けタブレットのホーム画面', fr: 'Écran d’accueil de la tablette murale enGo', es: 'Pantalla de inicio de la tableta de pared enGo' })" width="2000" height="1200" loading="lazy" /></picture>
               </div>
             </div>
             <div class="eco-door-text">
@@ -57,7 +57,7 @@
           <article class="ap-card eco-door fade-in">
             <div class="eco-media">
               <div class="eco-frame eco-frame-phone">
-                <img src="/images/screens/12-home-iphone.png" :alt="tx('enGo智慧管家 手機 App 首頁', 'enGo智慧管家 手机 App 首页', 'enGo home app on a phone', { ja: 'enGo智慧管家 スマートフォンアプリのホーム画面', fr: 'Écran d’accueil de l’application enGo智慧管家 sur téléphone', es: 'Pantalla de inicio de la app enGo智慧管家 en un celular' })" width="800" height="1731" loading="lazy" />
+                <picture class="pic-block"><source type="image/webp" srcset="/images/screens/12-home-iphone-400.webp 400w, /images/screens/12-home-iphone.webp 800w" sizes="(max-width: 760px) 70vw, 360px" /><img src="/images/screens/12-home-iphone.png" :alt="tx('enGo智慧管家 手機 App 首頁', 'enGo智慧管家 手机 App 首页', 'enGo home app on a phone', { ja: 'enGo智慧管家 スマートフォンアプリのホーム画面', fr: 'Écran d’accueil de l’application enGo智慧管家 sur téléphone', es: 'Pantalla de inicio de la app enGo智慧管家 en un celular' })" width="800" height="1731" loading="lazy" /></picture>
               </div>
             </div>
             <div class="eco-door-text">
