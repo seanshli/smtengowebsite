@@ -278,3 +278,20 @@ describe('/product hero reserves its space (review 2026-11-13 P0-2, CLS 0.143)',
     expect(v).toMatch(/class="pd-hero-device"[^>]*width="1920" height="1236"/)
   })
 })
+
+describe('page weight (review 2026-11-23: first paint 5.8 s on slow 4G)', () => {
+  const src = (p: string) => readFileSync(resolve(__dirname, '../..', p), 'utf-8')
+  it('loads one variable Noto Sans TC and no Noto Serif TC (render-blocking CSS 311 kB → 35 kB gzipped)', () => {
+    const html = src('index.html')
+    expect(html).toContain('family=Noto+Sans+TC:wght@300..700&display=swap')
+    expect(html).not.toMatch(/Noto\+Serif\+TC/)
+  })
+  it('the two home screenshots ship WebP with a PNG fallback', () => {
+    for (const f of ['src/views/index.vue', 'src/views/ecosystem.vue']) {
+      expect(src(f), f).toContain('/images/screens/12-home-iphone-400.webp 400w')
+      expect(src(f), f).toContain('/images/screens/01-home-tablet-1000.webp 1000w')
+    }
+    for (const w of ['12-home-iphone.webp', '12-home-iphone-400.webp', '01-home-tablet.webp', '01-home-tablet-1000.webp'])
+      expect(existsSync(resolve(__dirname, '../../public/images/screens', w)), w).toBe(true)
+  })
+})

@@ -12,11 +12,14 @@
        Google needs for large image and rich results. -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Display serif for the editorial redesign (design/live-redesign). Body stays Noto Sans TC. -->
+  <!-- One variable Noto Sans TC (300–700) covers every weight in use. The site no longer uses
+       Noto Serif TC (see _typography.scss); loading it plus 9 static weights made this
+       render-blocking stylesheet 311 kB gzipped and held first paint ~4.4 s on slow 4G
+       (review 2026-11-23). The variable axis is 35 kB gzipped. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300..700&display=swap"
     rel="stylesheet" />
   <title>enGo - 住家與社區合一的智慧生活系統</title>
   <meta name="description" content="enGo 是住家與社區合一的智慧生活系統：牆掛平板、手機 App 與雲端服務，管理家中照明、空調、窗簾與感測器，以及社區公告、報修、公設預約；enGo 安購商城提供社區訂閱與鄰里市集。" />

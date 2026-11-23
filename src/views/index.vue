@@ -37,13 +37,13 @@
         </header>
         <div class="hm-if-grid" data-reveal-group>
           <div class="hm-if-item hm-if-tablet">
-            <div class="hm-plate"><img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="lazy" /></div>
+            <div class="hm-plate"><picture class="pic-block"><source type="image/webp" srcset="/images/screens/01-home-tablet-1000.webp 1000w, /images/screens/01-home-tablet.webp 2000w" sizes="(max-width: 760px) 92vw, 640px" /><img src="/images/screens/01-home-tablet.png" :alt="T.altTablet" width="2000" height="1200" loading="lazy" /></picture></div>
             <p class="hm-cap"><strong>{{ T.ifTablet }}</strong>{{ T.ifTabletCap }}</p>
           </div>
           <!-- One phone column for both stores (review 2026-11-05): the Android column was
                an empty box holding a badge, and there is no Android screenshot to put in it. -->
           <div class="hm-if-item hm-if-phone">
-            <div class="hm-iphone"><img src="/images/screens/12-home-iphone.png" :alt="T.altPhone" width="800" height="1731" loading="lazy" /></div>
+            <div class="hm-iphone"><picture class="pic-block"><source type="image/webp" srcset="/images/screens/12-home-iphone-400.webp 400w, /images/screens/12-home-iphone.webp 800w" sizes="(max-width: 760px) 70vw, 360px" /><img src="/images/screens/12-home-iphone.png" :alt="T.altPhone" width="800" height="1731" loading="lazy" /></picture></div>
             <p class="hm-cap"><strong>iPhone / iPad</strong>{{ T.ifIosCap }}</p>
             <p class="hm-cap"><strong>{{ T.ifAndroid }}</strong>{{ T.ifAndroidCap }}</p>
             <div class="hm-if-stores">
