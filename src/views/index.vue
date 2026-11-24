@@ -1,32 +1,10 @@
 <template>
   <main class="hm" ref="motionRoot">
-    <!-- ─── HERO (white): copy left, the living house right. Design pass 2026-11-05
-         ("more active, not so AI like"): the centred stack + a second copy of the
-         tablet mockup read as template. The house is enGo's own illustrated loop
-         (video/src/HeroLoop.tsx, Aug 2026): rooms light when people come home and go
-         dark when they leave, the 回家 / 離家 scenes made visible. The real tablet
-         and phone screens stay in the next tile. -->
-    <section id="home" class="hm-tile hm-tile-white hm-hero">
-      <div class="hm-wrap hm-hero-grid">
-        <div class="hm-hero-copy">
-          <h1 class="hm-title">{{ $t('pageTitle') }}</h1>
-          <p class="hm-lede">{{ locale.startsWith('zh') ? $t('paragraph1') : $t('paragraphEn') }}</p>
-          <p class="hm-kicker">{{ $t('intextLogo') }}</p>
-          <div class="hm-cta-row">
-            <router-link to="/contact" class="hm-pill hm-pill-primary" @click="trackCta('hero')">{{ T.cta }}</router-link>
-            <router-link to="/product" class="hm-pill hm-pill-ghost">{{ T.seeProduct }}</router-link>
-          </div>
-          <a href="https://lin.ee/THIUSjW" class="hm-link" target="_blank" rel="noopener" data-track="home:line" @click="trackCta('line')">{{ T.lineCta }}<span class="hm-chev" aria-hidden="true">›</span></a>
-        </div>
-        <figure class="hm-hero-house">
-          <video ref="heroVideo" class="hm-house-video" autoplay muted loop playsinline preload="metadata"
-                 poster="/images/hero-home.jpg" :aria-label="T.houseAlt" width="1080" height="1350">
-            <source src="/videos/hero-loop.mp4" type="video/mp4" />
-          </video>
-          <figcaption class="hm-cap hm-house-cap">{{ T.houseCap }}</figcaption>
-        </figure>
-      </div>
-    </section>
+    <!-- ─── HERO: the building you already live in (facelift 2026-11-24, Sean approved the
+         realistic comp). One ordinary Taiwanese mixed-use building at dusk; each lit window
+         opens a solution, the front desk by the lobby door starts the conversation. -->
+    <BuildingHero id="home" />
+    <SolutionRooms />
 
     <!-- ─── THREE INTERFACES, ONE ACCOUNT (parchment tile; copy mirrors /product §2.3) -->
     <section id="interfaces" class="hm-tile hm-tile-parchment">
@@ -47,7 +25,7 @@
             <p class="hm-cap"><strong>iPhone / iPad</strong>{{ T.ifIosCap }}</p>
             <p class="hm-cap"><strong>{{ T.ifAndroid }}</strong>{{ T.ifAndroidCap }}</p>
             <div class="hm-if-stores">
-              <a class="hm-store" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
+              <a class="hm-store" href="https://apps.apple.com/tw/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
                 <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="T.altAppStore" width="120" height="40" loading="lazy" />
               </a>
               <a class="hm-store hm-store-google" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play">
@@ -179,15 +157,11 @@
       </div>
     </section>
 
-    <!-- ─── NEWS (folio kept, parchment) ─────────────────────────────── -->
-    <section id="news" class="hm-tile hm-tile-parchment hm-news">
-      <div class="hm-wrap">
-        <header class="hm-head" data-reveal>
-          <h2 class="hm-h2">{{ $t('newsTitle') }}</h2>
-        </header>
-        <NewsFolio :items="newsItems" />
-      </div>
-    </section>
+    <!-- ─── NEWS: the lobby notice board (building world) ─────────────── -->
+    <NewsBoard />
+
+    <!-- ─── Questions asked at the desk before starting ─────────────────── -->
+    <DeskQa />
 
     <!-- ─── CTA (dark tile) ──────────────────────────────────────────── -->
     <section id="cta" class="hm-tile hm-tile-dark hm-cta">
@@ -207,16 +181,17 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import newsData from '@/data/news.json'
 import casesData from '@/data/cases.json'
 import HomeLivingLines from '@/components/HomeLivingLines.vue'
-import NewsFolio from '@/components/NewsFolio.vue'
+import BuildingHero from '@/components/BuildingHero.vue'
+import SolutionRooms from '@/components/SolutionRooms.vue'
+import NewsBoard from '@/components/NewsBoard.vue'
+import DeskQa from '@/components/DeskQa.vue'
 import { useEditorialMotion } from '@/composables/useEditorialMotion'
 import { useAnalytics } from '@/utils/analytics'
 
 const { locale } = useI18n()
 const { trackEvent } = useAnalytics()
-const newsItems = ref(newsData as any)
 const motionRoot = ref<HTMLElement | null>(null)
 useEditorialMotion(motionRoot)
 
@@ -591,7 +566,6 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 .hm-showroom-title { font-family: $display; font-weight: 600; font-size: 1.3125rem; letter-spacing: -.01em; line-height: 1.25; margin: 0; }
 
 // ─── news + cta ───────────────────────────────────────────────────────────
-.hm-news { padding-bottom: clamp(40px, 6vw, 72px); }
 .hm-cta .hm-lead { margin-bottom: 0; }
 
 // ─── keyframes ────────────────────────────────────────────────────────────

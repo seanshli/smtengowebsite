@@ -150,6 +150,13 @@ const baseRoutes: any[] = [
       }
     },
     {
+      // One page per solution (facelift 2026-11). Unknown ids fall through to Not Found.
+      path: '/solutions/:id(home|care|building|shop|integration)',
+      name: 'solution',
+      component: () => import('@/views/solution.vue'),
+      meta: { seoFrom: 'solution' }
+    },
+    {
       path: '/success',
       name: 'success',
       component: () => import('@/views/success.vue'),

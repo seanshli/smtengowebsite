@@ -66,7 +66,7 @@ describe('no locale renders a raw key', () => {
 // ---- data files -------------------------------------------------------------------------------------
 const root = resolve(__dirname, '../..')
 const readJson = (f: string) => JSON.parse(readFileSync(resolve(root, 'src/data', `${f}.json`), 'utf-8'))
-const DATA = ['cases', 'packages', 'howto', 'knowledge_base', 'faqs', 'news', 'tutorials', 'legal']
+const DATA = ['cases', 'packages', 'howto', 'knowledge_base', 'faqs', 'news', 'tutorials', 'legal', 'solutions']
 // `{ zh, en }` objects in legal.json that are file hashes / per-language document URLs, not translations.
 const NOT_TRANSLATIONS = new Set(['sha256', 'href'])
 

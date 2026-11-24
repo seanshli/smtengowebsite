@@ -87,7 +87,8 @@ describe('page templates carry no template tells', () => {
         expect(t).toContain('/images/howto/devicedata/01-power.png')   // the bento's data cell shows a real 3.2.2 phone screen
         expect(t).not.toMatch(/03-floorplan/)                            // the floor plan is not in 3.2.2 (開發中)
         expect(t).toContain('to="/contact"')
-        expect(t).toContain('to="/product"')
+        expect(t).toContain('<BuildingHero')      // facelift 2026-11-24: the solutions are the primary actions
+        expect(t).toContain('<SolutionRooms')
         expect(t).toContain('to="/cases"')
     })
     it('home names no development project (Sean 2026-09-24): the community photo caption is generic', () => {
@@ -138,9 +139,11 @@ describe('page templates carry no template tells', () => {
         expect(tpl).toContain('id="shop"')
         expect(tpl).toContain('/images/screens/13-shop-home.jpg')
         expect(tpl).toContain(':href="SHOP_URL"')
-        for (const f of ['header.vue', 'footer.vue']) {
-            expect(readFileSync(resolve(__dirname, '../layout', f), 'utf-8'), f).toContain('to="/product#shop"')
-        }
+        // The footer links the product section; the header's 解決方案 menu lists every solution
+        // from src/data/solutions.json (facelift 2026-11-24), enGo Shop included.
+        expect(readFileSync(resolve(__dirname, '../layout', 'footer.vue'), 'utf-8')).toContain('to="/product#shop"')
+        expect(readFileSync(resolve(__dirname, '../layout', 'header.vue'), 'utf-8')).toContain('v-for="s in sol.solutions"')
+        expect(JSON.parse(readFileSync(resolve(__dirname, '../data/solutions.json'), 'utf-8')).solutions.map((s: any) => s.id)).toContain('shop')
         expect(existsSync(resolve(process.cwd(), 'public/images/screens/13-shop-home.jpg'))).toBe(true)
     })
     it('home never renders the shared case illustration as proof', () => {
@@ -209,11 +212,15 @@ describe('no em-dash or en-dash in user-visible copy (polish/no-dashes, 2026-09-
 describe('home is alive, not a template (design pass 2026-11-05, "more active, not so AI like")', () => {
     const src = readFileSync(resolve(views, 'index.vue'), 'utf-8')
     const t = templateOf('index.vue')
-    it('hero pairs the copy with enGo\'s own living-house loop, muted and inline, with a poster', () => {
-        expect(t).toContain('/videos/hero-loop.mp4')
-        expect(t).toMatch(/<video[^>]*\bmuted\b[^>]*\bplaysinline\b[^>]*poster="\/images\/hero-home\.jpg"/)
-        expect(t).not.toMatch(/hm-hero-figure/)
-        expect(existsSync(resolve(__dirname, '../../public/videos/hero-loop.mp4'))).toBe(true)
+    it('hero is the building you already live in (facelift 2026-11-24): a real-looking photo, lit windows open solutions, the front desk starts the enquiry', () => {
+        const hero = readFileSync(resolve(__dirname, '../components/BuildingHero.vue'), 'utf-8')
+        expect(hero).toContain('/images/building/hero-building-dusk-1600.webp')
+        expect(hero).toMatch(/:to="`\/solutions\/\$\{s\.id\}`"/)
+        expect(hero).toMatch(/router\.push\(\{ path: '\/contact', query: \{ area: area\.value \} \}\)/)
+        expect(hero).toContain('lt(hero.sample)')                     // generated photos are labelled 示意
+        expect(hero).toMatch(/prefers-reduced-motion: no-preference/) // motion only when the visitor allows it
+        for (const f of ['hero-building-dusk-1600', 'room-home-1600', 'room-care-1600', 'room-lobby-1600', 'room-shop-1600'])
+            expect(existsSync(resolve(__dirname, `../../public/images/building/${f}.webp.json`)), f + ' provenance').toBe(true)
     })
     it('the day player is a real tablist over the real scenes screen and respects reduced motion', () => {
         expect(t).toMatch(/role="tablist"/)
@@ -266,9 +273,34 @@ describe('mobile layout stability and contrast (review 2026-11-13 P0-2)', () => 
   it('dimmed day moments keep AA contrast on the dark tile', () => {
     expect(src('src/views/index.vue')).not.toMatch(/\.hm-moment \{[^}]*opacity: \.5;/)
   })
-  it('the decorative folio ghost title is a pseudo-element, not page text', () => {
-    expect(src('src/components/NewsFolio.vue')).toContain(':data-ghost="tr(item.title)"')
-    expect(src('src/components/NewsFolio.vue')).toContain('content: attr(data-ghost)')
+  it('news is the lobby notice board: one pinned notice, the rest as pressed-state buttons, keeps #news', () => {
+    const board = src('src/components/NewsBoard.vue')
+    expect(src('src/views/index.vue')).toContain('<NewsBoard />')
+    expect(board).toContain('id="news"')
+    expect(board).toContain(':aria-pressed="it.id === curId"')
+    expect(board).toContain('aria-live="polite"')
+    expect(board).toContain('lt(sample)')
+  })
+  it('prospect Q&A: native details, area filter as toggle buttons, ask passes the area to /contact', () => {
+    const qa = src('src/components/DeskQa.vue')
+    expect(src('src/views/index.vue')).toContain('<DeskQa />')
+    expect(src('src/views/solution.vue')).toContain('<DeskQa :area="s.id" />')
+    expect(qa).toContain('<details')
+    expect(qa).toContain(':aria-pressed="pickArea === f.id"')
+    expect(qa).toContain("query: { area: a }")
+  })
+  it('water-filter certificates are served from the site, not the 403 storage bucket', () => {
+    const product = src('src/views/product.vue')
+    expect(product).not.toContain('oss.smtengo.com/engo-bucket-prod')
+    for (const f of ['engo-w601-sgs.pdf', 'engo-w601-bsmi.pdf']) {
+      expect(product).toContain(`href="/docs/${f}"`)
+      expect(readFileSync(resolve(__dirname, '../../public/docs', f)).subarray(0, 5).toString()).toBe('%PDF-')
+    }
+  })
+  it('building-world arrows are drawn SVG, not text glyphs', () => {
+    for (const f of ['src/components/BuildingHero.vue', 'src/components/SolutionRooms.vue', 'src/views/solution.vue', 'src/components/DeskQa.vue']) {
+      expect(src(f)).not.toMatch(/[→↗]/)
+    }
   })
 })
 

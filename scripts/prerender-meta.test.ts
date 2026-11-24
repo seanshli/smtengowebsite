@@ -36,7 +36,7 @@ describe('prerender crawlable fallback content', () => {
     expect(html).toContain('<h1>產品介紹</h1>')
     expect(html).toContain('href="/tutorial"')
     expect(html).toContain('<div id="app"><!--prerender:fallback-->')
-    expect(html).toContain('href="https://apps.apple.com/app/id6680188565"')
+    expect(html).toContain('href="https://apps.apple.com/tw/app/id6680188565"')
     expect(html).toContain('href="https://shoph5.smtengo.com/"')
     expect(html).toContain('href="/knowledge-base.md"')
   })
@@ -84,7 +84,7 @@ describe('prerender structured data (AI-SEO)', () => {
       const blocks = jsonLdFor(route, 'en')
       const app = blocks.find((b: any) => b['@type'] === 'MobileApplication') as any
       expect(app.name).toBe('enGo智慧管家')
-      expect(app.installUrl).toEqual(expect.arrayContaining(['https://apps.apple.com/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android']))
+      expect(app.installUrl).toEqual(expect.arrayContaining(['https://apps.apple.com/tw/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android']))
     }
     expect(jsonLdFor('/cases', 'zh')).toEqual([])
   })
@@ -104,8 +104,10 @@ describe('prerender structured data (AI-SEO)', () => {
   it('the postbuild pass does not duplicate structured data', () => {
     const first = buildHtml(TEMPLATE, '/tutorial', 'zh')
     const second = buildHtml(first, '/', 'zh')
-    expect(count(second, /<script[^>]*data-prerender/g)).toBe(2)   // only the home page's MobileApplication + OnlineStore
-    expect(second).not.toContain('FAQPage')
+    // only the home page's MobileApplication + OnlineStore + prospect-Q&A FAQPage; the tutorial's FAQ is gone
+    expect(count(second, /<script[^>]*data-prerender/g)).toBe(3)
+    expect(count(second, /"FAQPage"/g)).toBe(1)
+    expect(second).not.toContain('如何新增裝置')
   })
 })
 
@@ -206,8 +208,11 @@ describe('/zh-cn shells', () => {
   it.each(routes)('%s: zh-cn title and description come from the zhCN locale and are free of Traditional-only characters', (route) => {
     const key = route === '/' ? 'home' : route.slice(1)
     const [title, desc] = (ROUTES as any)[route].zhCN as [string, string]
-    expect(rawMessageIn(zhCNLocale, `seo.${key}.title`)).toBe(title)
-    expect(rawMessageIn(zhCNLocale, `seo.${key}.description`)).toBe(desc)
+    // Solution pages are titled from src/data/solutions.json (see seoParity.test.ts), not seo.*.
+    if (!route.startsWith('/solutions/')) {
+      expect(rawMessageIn(zhCNLocale, `seo.${key}.title`)).toBe(title)
+      expect(rawMessageIn(zhCNLocale, `seo.${key}.description`)).toBe(desc)
+    }
     expect(traditionalIn(title + desc)).toEqual([])
     const html = buildHtml(TEMPLATE, route, 'zhCN')
     expect(html).toContain(`<title>${title.replace(/&/g, '&amp;')}</title>`)
@@ -279,5 +284,16 @@ describe('vercel.json and llms.txt', () => {
   })
   it('llms.txt points to the Simplified Chinese version under /zh-cn', () => {
     expect(readFileSync(resolve(__dirname, '../public/llms.txt'), 'utf-8')).toContain('https://www.smtengo.com/zh-cn')
+  })
+})
+
+describe('prospect Q&A structured data (facelift 2026-11-24)', () => {
+  const faqOf = (route: string, lang: string) => jsonLdFor(route, lang).find((b: any) => b['@type'] === 'FAQPage')
+  it('the home shell carries every prospect question; a solution shell carries only its own', () => {
+    const qa = JSON.parse(readFileSync(resolve(__dirname, '../src/data/solutions.json'), 'utf-8')).qa.items
+    expect(faqOf('/', 'zh').mainEntity).toHaveLength(qa.length)
+    const care = faqOf('/solutions/care', 'en').mainEntity
+    expect(care).toHaveLength(qa.filter((q: any) => q.area === 'care').length)
+    expect(JSON.stringify(care)).not.toMatch(/hospital|醫院|diagnos(?!is\b)/i)
   })
 })

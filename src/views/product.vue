@@ -161,7 +161,7 @@
                Both stores list the app as enGo智慧管家 (iOS tw.smtengo.engohome.ios = id6680188565,
                Android tw.smtengo.engohome.android). -->
           <p data-reveal class="interfaces-stores">
-            <a href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="product:app-store">
+            <a href="https://apps.apple.com/tw/app/id6680188565" target="_blank" rel="noopener" data-track="product:app-store">
               <img class="badge-apple" :src="$i18n.locale === 'zh' || $i18n.locale === 'zhCN' ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="tx('在 App Store 下載', '在 App Store 下载', 'Download on the App Store', { ja: 'App Storeでダウンロード', fr: 'Télécharger dans l’App Store', es: 'Descargar en App Store' })" height="40" loading="lazy" />
             </a>
             <a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="product:google-play">
@@ -256,13 +256,13 @@
             </h2>
             <i18n-t keypath="product.water_filter.subTitle" tag="p" class="pd-lead">
               <template v-slot:quality>
-                <a class="pd-inline-link" href="https://oss.smtengo.com/engo-bucket-prod/device/WechatIMG87.pdf" target="_blank">
+                <a class="pd-inline-link" href="/docs/engo-w601-sgs.pdf" target="_blank" rel="noopener">
                   <!-- SGS水質檢測 -->
                   {{ $t('product.water_filter.quality') }}
                 </a>
               </template>
               <template v-slot:valid>
-                <a class="pd-inline-link" href="https://oss.smtengo.com/engo-bucket-prod/device/20240719132511.pdf" target="_blank">
+                <a class="pd-inline-link" href="/docs/engo-w601-bsmi.pdf" target="_blank" rel="noopener">
                   <!-- BSMI商品檢驗 -->
                   {{ $t('product.water_filter.valid') }}
                 </a>

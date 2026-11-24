@@ -17,10 +17,18 @@
 - [聯絡我們](https://www.smtengo.com/contact): 電話 02-27510218，週一至週五 09:00-18:00。
 - 簡體中文版：與繁體中文同一份內容的簡體版本位於 https://www.smtengo.com/zh-cn 之下（例如 /zh-cn/product）。
 
+## 解決方案（2026-11 起網站主選單；狀態依產品事實表）
+
+- [住家 enGo HMS](https://www.smtengo.com/solutions/home)：已上線。牆掛平板與 enGo智慧管家 App 管理燈光、空調、窗簾與感測器；社區公告、報修、公設預約與包裹通知；語音操作僅在牆掛平板。
+- [照護 enGo Care](https://www.smtengo.com/solutions/care)：已上線，給日照與長照據點。匯入既有照護紀錄平台與設備的匯出檔，產出據點今日總覽、評鑑指標、提醒與每月證據報告。非醫療器材，不做診斷。
+- [大樓與物業 enGo BMS](https://www.smtengo.com/solutions/building)：住戶端社區功能已在 App 使用；給管委會與物業的管理平台開發中，接受試點社區。尚無正式上線的管理平台客戶。
+- [店家與通路 enGo Shop](https://www.smtengo.com/solutions/shop)：enGo 安購商城（多商家、訂閱、團購、優惠券、線上刷卡與電子發票）已上線；經銷管理開發中。
+- [系統整合](https://www.smtengo.com/solutions/integration)：與既有 ERP、CRM 或設備的串接依專案規劃，目前沒有現成的 ERP／CRM 連接器。
+
 ## 可直接引用的事實
 
 - 產品名稱：中文「enGo AI智慧中控系統」，英文「enGo HMS」。
-- 手機 App 在 App Store 與 Google Play 的名稱都是「enGo智慧管家」（所有語系相同）。App Store: https://apps.apple.com/app/id6680188565 ；Google Play: https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android 。同名相似的「engo智管家」是另一個 App，不是本產品。
+- 手機 App 在 App Store 與 Google Play 的名稱都是「enGo智慧管家」（所有語系相同）。App Store: https://apps.apple.com/tw/app/id6680188565 ；Google Play: https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android 。同名相似的「engo智管家」是另一個 App，不是本產品。
 - 三種介面：enGo 牆掛平板（家中主控台）、iPhone／iPad、Android 手機，同一組帳號。
 - 語音操作為牆掛平板專屬；設備數據（用電趨勢／用電分布／用水量／空氣品質）平板與手機都有；平面圖即時視圖開發中，尚未提供（規劃為平板專屬）。手機 App 底部為家庭／場景／工單／通知／更多五個分頁；「庫存」與「設置」在平板與手機的名稱一致（App 3.6.x 起統一，舊版曾叫「倉儲」），手機上在「更多」裡。
 - 配網：首頁右上「＋」進入「添加設備」，共六種方式：設備發現（優先）、子設備配網、Matter 配網、QR 配網、AP 配網（生態系裝置）、ESP 配網（enGo 自有裝置，如 485 轉換器）。App 3.6.x 起 AP 配網與 ESP 配網是兩個分頁；選錯分頁只會一直停在等待，認不出裝置屬於哪一種時請洽專人。

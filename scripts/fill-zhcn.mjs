@@ -20,7 +20,7 @@ import { fileURLToPath } from 'node:url'
 import { Converter } from 'opencc-js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-export const DATA_FILES = ['cases', 'packages', 'howto', 'knowledge_base', 'faqs', 'news', 'tutorials', 'legal']
+export const DATA_FILES = ['cases', 'packages', 'howto', 'knowledge_base', 'faqs', 'news', 'tutorials', 'legal', 'solutions']
 // `{ zh, en }` objects that are not translations: file hashes and per-language document URLs in legal.json.
 const SKIP_PARENTS = new Set(['sha256', 'href'])
 

@@ -439,4 +439,154 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.smtengo.com/solutions/home</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/home"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/zh-cn/solutions/home</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/home"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/en/solutions/home</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/home"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/home"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/solutions/care</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/care"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/zh-cn/solutions/care</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/care"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/en/solutions/care</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/care"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/care"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/solutions/building</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/building"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/zh-cn/solutions/building</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/building"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/en/solutions/building</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/building"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/building"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/solutions/shop</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/shop"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/zh-cn/solutions/shop</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/shop"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/en/solutions/shop</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/shop"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/solutions/integration</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/integration"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/zh-cn/solutions/integration</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/integration"/>
+  </url>
+  <url>
+    <loc>https://www.smtengo.com/en/solutions/integration</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.smtengo.com/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.smtengo.com/zh-cn/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.smtengo.com/en/solutions/integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.smtengo.com/solutions/integration"/>
+  </url>
 </urlset>

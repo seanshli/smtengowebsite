@@ -23,13 +23,12 @@
         </div>
       </div>
 
+      <!-- 解決方案 is the main entry (Sean 2026-11-24): visitors pick their area first; products sit under it. -->
       <div class="dropdown">
-        <router-link to="/product" class="dropdown-trigger" data-track="nav:product">{{ $t('productTitle') }}</router-link>
+        <router-link to="/solutions/home" class="dropdown-trigger" data-track="nav:solutions">{{ lt(sol.nav.title) }}</router-link>
         <div class="dropdown-content">
-          <router-link to="/product">{{ $t('footer.firstLink') }}</router-link>
-          <router-link to="/product?jump=oxygen">{{ $t('footer.secondLink') }}</router-link>
-          <router-link to="/enviro">{{ $t('enviroTitle') }}</router-link>
-          <router-link to="/product#shop">{{ $t('product.shop.title') }}</router-link>
+          <router-link v-for="s in sol.solutions" :key="s.id" :to="`/solutions/${s.id}`">{{ lt(s.area) }}<template v-if="s.product"> · {{ s.product }}</template></router-link>
+          <router-link to="/product">{{ lt(sol.nav.products) }}</router-link>
         </div>
       </div>
       <router-link to="/packages" data-track="nav:packages">{{ $t('product.packages.tag') }}</router-link>
@@ -96,11 +95,9 @@
         <!--<router-link to="/vision" class="sublink">{{ $t('visionTitle') }}</router-link>-->
         <router-link to="/ecosystem" class="sublink">{{ $t('ecosystemTitle') }}</router-link>
 
-        <router-link to="/product">{{ $t('productTitle') }}</router-link>
-        <router-link to="/product" class="sublink">{{ $t('footer.firstLink') }}</router-link>
-        <router-link to="/product?jump=oxygen" class="sublink">{{ $t('footer.secondLink') }}</router-link>
-        <router-link to="/enviro" class="sublink">{{ $t('enviroTitle') }}</router-link>
-        <router-link to="/product#shop" class="sublink">{{ $t('product.shop.title') }}</router-link>
+        <router-link to="/solutions/home">{{ lt(sol.nav.title) }}</router-link>
+        <router-link v-for="s in sol.solutions" :key="'m-' + s.id" :to="`/solutions/${s.id}`" class="sublink">{{ lt(s.area) }}</router-link>
+        <router-link to="/product" class="sublink">{{ lt(sol.nav.products) }}</router-link>
         <router-link to="/packages">{{ $t('product.packages.tag') }}</router-link>
         <a :href="shopUrl" target="_blank" rel="noopener" @click.prevent="toMall">{{ $t('mallTitle') }}</a>
         <router-link to="/tutorial">{{ $t('tutorialTitle') }}</router-link>
@@ -117,11 +114,15 @@ import { useRouter } from 'vue-router'
 import { changeLocale, type LanguageType, i18n } from '../main'
 import { openShop, SHOP_URL } from '@/utils/shopUrl'
 import { pushUnlocalized } from '@/router'
+import solutionsData from '@/data/solutions.json'
+import { useLocaleText } from '@/composables/useLocaleText'
 import { planLanguageSwitch } from '@/utils/localePaths'
 
 export default defineComponent({
   name: 'Header',
   setup() {
+    const { lt } = useLocaleText()
+    const sol = solutionsData as any
     const selectedLanguage = ref<LanguageType>(i18n.global.locale.value || 'zh')
     const router = useRouter()
 
@@ -165,6 +166,8 @@ export default defineComponent({
 
     return {
       selectedLanguage,
+      lt,
+      sol,
       shopUrl: SHOP_URL,
       toggleMenu,
       changeLanguage,
