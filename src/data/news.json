@@ -1,5 +1,26 @@
 [
   {
+    "id": 11,
+    "date": "2026-11-24",
+    "title": {
+      "zh": "enGo 官網改版：新增「解決方案」與導入前常見問題",
+      "zhCN": "enGo 官网改版：添加「解决方案」与导入前常见问题",
+      "en": "enGo website relaunch: new Solutions pages and pre-start Q&A",
+      "ja": "enGo 公式サイトをリニューアル：「ソリューション」と導入前のよくある質問を追加",
+      "fr": "Nouveau site enGo : des pages Solutions et des questions fréquentes avant de démarrer",
+      "es": "Nuevo sitio de enGo: páginas de Soluciones y preguntas frecuentes antes de empezar"
+    },
+    "summary": {
+      "zh": "enGo 官網全新改版。首頁用一棟大樓呈現 enGo 的五個解決方案：住家（enGo HMS）、大樓與物業（enGo BMS，接受試點）、照護（enGo Care）、店家與通路（enGo Shop），以及依專案評估的系統整合。每個方案都有專屬頁面，清楚標示現在已能使用與仍在開發的功能；另外新增「導入前，大家常問的事」，回答費用、導入方式與資料安全等問題。<a href=\"/solutions/home\">看看解決方案</a>",
+      "zhCN": "enGo 官网全新改版。首页用一栋大楼呈现 enGo 的五个解决方案：住家（enGo HMS）、大楼与物业（enGo BMS，接受试点）、照护（enGo Care）、店家与通路（enGo Shop），以及依项目评估的系统集成。每个方案都有专属页面，清楚标示现在已能使用与仍在开发的功能；另外添加「导入前，大家常问的事」，回答费用、导入方式与数据安全等问题。<a href=\"/solutions/home\">看看解决方案</a>",
+      "en": "The enGo website has been relaunched. The home page now shows enGo's five solutions as one building: Home (enGo HMS), Building and property (enGo BMS, accepting pilot sites), Care (enGo Care), Shops and channels (enGo Shop), and system integration, assessed per project. Each solution has its own page that marks clearly what is in use today and what is still in development, and a new set of questions people ask before starting covers pricing, how to get started and data security. <a href=\"/solutions/home\">See the solutions</a>",
+      "ja": "enGo 公式サイトをリニューアルしました。トップページでは、enGo の5つのソリューションを1棟の建物として紹介しています：住まい（enGo HMS）、ビル・物件管理（enGo BMS、試験導入先を募集中）、ケア（enGo Care）、店舗・流通（enGo Shop）、そして案件ごとに検討するシステム連携です。各ソリューションには専用ページがあり、すでに利用できる機能と開発中の機能を明確に示しています。また、費用、導入方法、データの安全性などにお答えする「導入前によくある質問」を新設しました。<a href=\"/solutions/home\">ソリューションを見る</a>",
+      "fr": "Le site enGo a été entièrement repensé. La page d’accueil présente désormais les cinq solutions enGo comme un seul immeuble : Logement (enGo HMS), Immeuble et gestion (enGo BMS, ouvert aux sites pilotes), Soins (enGo Care), Commerces et distribution (enGo Shop), et l’intégration de systèmes, étudiée projet par projet. Chaque solution a sa propre page, qui distingue clairement ce qui est utilisé aujourd’hui de ce qui est encore en développement, et une nouvelle rubrique de questions posées avant de démarrer couvre les tarifs, la mise en place et la sécurité des données. <a href=\"/solutions/home\">Voir les solutions</a>",
+      "es": "El sitio de enGo se renovó por completo. La página de inicio presenta ahora las cinco soluciones de enGo como un solo edificio: Hogar (enGo HMS), Edificio y administración (enGo BMS, abierto a sitios piloto), Cuidado (enGo Care), Tiendas y canales (enGo Shop) y la integración de sistemas, que se evalúa por proyecto. Cada solución tiene su propia página, que indica con claridad lo que ya está en uso y lo que sigue en desarrollo, y una nueva sección de preguntas frecuentes antes de empezar responde sobre precios, cómo comenzar y la seguridad de los datos. <a href=\"/solutions/home\">Ver las soluciones</a>"
+    },
+    "image": "/images/building/hero-building-dusk-1600.webp"
+  },
+  {
     "id": 10,
     "date": "2026-09-27",
     "title": {
