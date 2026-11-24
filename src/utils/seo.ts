@@ -106,7 +106,10 @@ export function useSeo() {
     ensureMeta('name', 'twitter:card', 'summary_large_image')
     ensureMeta('name', 'twitter:title', title)
     ensureMeta('name', 'twitter:description', description)
-    ensureMeta('name', 'twitter:image', `${BASE_URL}/og-image-1200x630.jpg`)
+    // Same image the prerendered shell carries (scripts/prerender-meta.mjs ogImageFor).
+    const ogImage = sol ? `${BASE_URL}/images/og/solution-${sol.id}.jpg` : `${BASE_URL}/og-image-1200x630.jpg`
+    ensureMeta('property', 'og:image', ogImage)
+    ensureMeta('name', 'twitter:image', ogImage)
 
     // Canonical and hreflang are NOT touched here on purpose.
     //

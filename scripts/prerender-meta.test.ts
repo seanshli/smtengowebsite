@@ -297,3 +297,15 @@ describe('prospect Q&A structured data (facelift 2026-11-24)', () => {
     expect(JSON.stringify(care)).not.toMatch(/hospital|醫院|diagnos(?!is\b)/i)
   })
 })
+
+describe('share images (2026-11-24)', () => {
+  it('each solution shell previews its own room image; other pages keep the default', () => {
+    const html = buildHtml(readFileSync(resolve(__dirname, '../index.html'), 'utf-8'), '/solutions/care', 'zh')
+    expect(html).toContain('<meta property="og:image" content="https://www.smtengo.com/images/og/solution-care.jpg" />')
+    expect(html).toContain('<meta name="twitter:image" content="https://www.smtengo.com/images/og/solution-care.jpg" />')
+    expect(buildHtml(html, '/', 'zh')).toContain('<meta property="og:image" content="https://www.smtengo.com/og-image-1200x630.jpg" />')
+    for (const id of ['home', 'care', 'building', 'shop', 'integration']) {
+      expect(readFileSync(resolve(__dirname, `../public/images/og/solution-${id}.jpg`)).subarray(0, 2).toString('hex')).toBe('ffd8')
+    }
+  })
+})
