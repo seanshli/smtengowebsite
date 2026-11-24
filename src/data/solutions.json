@@ -666,5 +666,389 @@
       "fr": "Autres étages",
       "es": "Otros pisos"
     }
+  },
+  "qa": {
+    "title": {
+      "zh": "導入前，大家常問的事",
+      "zhCN": "导入前，大家常问的事",
+      "en": "Questions people ask before starting",
+      "ja": "導入前によくいただくご質問",
+      "fr": "Questions fréquentes avant de démarrer",
+      "es": "Preguntas frecuentes antes de comenzar"
+    },
+    "all": {
+      "zh": "全部",
+      "zhCN": "全部",
+      "en": "All",
+      "ja": "すべて",
+      "fr": "Tout",
+      "es": "Todas"
+    },
+    "general": {
+      "zh": "一般",
+      "zhCN": "一般",
+      "en": "General",
+      "ja": "一般",
+      "fr": "Général",
+      "es": "General"
+    },
+    "moreTitle": {
+      "zh": "沒看到您的問題？",
+      "zhCN": "没看到您的问题？",
+      "en": "Don't see your question?",
+      "ja": "ご質問が見つかりませんか？",
+      "fr": "Votre question n’est pas dans la liste ?",
+      "es": "¿No encuentra su pregunta?"
+    },
+    "moreLede": {
+      "zh": "告訴我們您的情況，專人會與您聯繫。",
+      "zhCN": "告诉我们您的情况，专人会与您联系。",
+      "en": "Tell us about your situation and our team will contact you.",
+      "ja": "ご状況をお知らせください。担当者よりご連絡いたします。",
+      "fr": "Décrivez-nous votre situation : un membre de notre équipe vous contactera.",
+      "es": "Cuéntenos su situación y una persona de nuestro equipo se pondrá en contacto con usted."
+    },
+    "items": [
+      {
+        "id": "qa1",
+        "area": "general",
+        "q": {
+          "zh": "enGo 是什麼？跟一般的智慧家居有什麼不同？",
+          "zhCN": "enGo 是什么？跟一般的智慧家居有什么不同？",
+          "en": "What is enGo, and how is it different from a typical smart-home product?",
+          "ja": "enGo とは何ですか。一般的なスマートホームとどう違いますか。",
+          "fr": "Qu’est-ce qu’enGo, et en quoi diffère-t-il d’un produit de maison connectée classique ?",
+          "es": "¿Qué es enGo y en qué se diferencia de un producto de casa inteligente convencional?"
+        },
+        "a": {
+          "zh": "enGo 把住家、大樓、照護據點與店面的日常管理放進同一套系統，藏在您已經有的設備與流程後面。重點不是裝置，而是每天少跑幾趟、少填幾張表。住家（enGo HMS）、照護（enGo Care）與商城（enGo Shop）已在使用；大樓管理平台接受試點；系統整合依專案評估。",
+          "zhCN": "enGo 把住家、大楼、照护据点与店面的日常管理放进同一套系统，藏在您已经有的设备与流程后面。重点不是设备，而是每天少跑几趟、少填几张表。住家（enGo HMS）、照护（enGo Care）与商城（enGo Shop）已在使用；大楼管理平台接受试点；系统集成依项目评估。",
+          "en": "enGo puts the day-to-day running of homes, buildings, care sites and shops into one system that sits behind the equipment and routines you already have. The point is not the devices but fewer trips and fewer forms each day. Home (enGo HMS), Care (enGo Care) and the store (enGo Shop) are in use today; the building management platform is accepting pilot sites; system integration is assessed per project.",
+          "ja": "enGo は、住まい、ビル、ケア拠点、店舗の日々の管理を一つのシステムにまとめます。すでにお使いの設備や業務の裏側で動きます。大切なのは機器そのものではなく、毎日の移動や記入する帳票を減らすことです。住まい（enGo HMS）、ケア（enGo Care）、ストア（enGo Shop）はすでにご利用いただけます。ビル管理プラットフォームはパイロット導入を受け付けており、システム連携はプロジェクトごとに評価します。",
+          "fr": "enGo réunit la gestion quotidienne des logements, des immeubles, des sites de soins et des commerces dans un seul système, placé en arrière-plan des équipements et des habitudes de travail que vous avez déjà. L’essentiel n’est pas l’appareil, mais de réduire chaque jour les déplacements et les formulaires à remplir. Le logement (enGo HMS), les soins (enGo Care) et la boutique (enGo Shop) sont déjà en service ; la plateforme de gestion d’immeubles accepte des sites pilotes ; l’intégration de systèmes est évaluée projet par projet.",
+          "es": "enGo reúne la gestión diaria de hogares, edificios, centros de cuidado y comercios en un solo sistema que funciona detrás de los equipos y procesos que usted ya tiene. Lo importante no son los dispositivos, sino reducir cada día los traslados y los formularios por llenar. Hogar (enGo HMS), cuidado (enGo Care) y tienda (enGo Shop) ya están en uso; la plataforma de administración de edificios acepta sitios piloto; la integración de sistemas se evalúa proyecto por proyecto."
+        }
+      },
+      {
+        "id": "qa2",
+        "area": "general",
+        "q": {
+          "zh": "要把現有的設備或系統全部換掉嗎？",
+          "zhCN": "要把现有的设备或系统全部换掉吗？",
+          "en": "Do we have to replace our existing equipment or systems?",
+          "ja": "既存の設備やシステムをすべて入れ替える必要がありますか。",
+          "fr": "Faut-il remplacer tous nos équipements ou systèmes existants ?",
+          "es": "¿Es necesario reemplazar todos nuestros equipos o sistemas actuales?"
+        },
+        "a": {
+          "zh": "不必。我們會先了解您已經在用的設備、系統與流程，再決定接哪裡、怎麼接。住家設備可透過 Matter 閘道、RS-485 與紅外線連接；照護據點使用既有系統的匯出檔；與 ERP、CRM 的串接依專案規劃。",
+          "zhCN": "不必。我们会先了解您已经在用的设备、系统与流程，再决定接哪里、怎么接。住家设备可透过 Matter 闸道、RS-485 与红外线连接；照护据点使用既有系统的导出档；与 ERP、CRM 的串接依项目规划。",
+          "en": "No. We start by understanding the equipment, systems and routines you already use, then decide what to connect and how. Home devices connect through a Matter gateway, RS-485 and infrared; care sites use exports from their existing systems; links to ERP or CRM systems are planned per project.",
+          "ja": "その必要はありません。まず、すでにお使いの設備、システム、業務の流れを把握したうえで、どこへどのように接続するかを決めます。住まいの機器は Matter ゲートウェイ、RS-485、赤外線で接続できます。ケア拠点では既存システムの出力ファイルを利用します。ERP や CRM との連携はプロジェクトごとに計画します。",
+          "fr": "Non. Nous commençons par comprendre les équipements, les systèmes et les habitudes de travail que vous utilisez déjà, puis nous décidons de ce qu’il faut connecter et comment. Les appareils du logement se connectent par une passerelle Matter, par RS-485 et par infrarouge ; les sites de soins utilisent les exports de leurs systèmes existants ; les liaisons avec un ERP ou un CRM sont planifiées projet par projet.",
+          "es": "No. Primero conocemos los equipos, sistemas y procesos que usted ya utiliza y después decidimos qué conectar y cómo. Los dispositivos del hogar se conectan mediante una puerta de enlace Matter, RS-485 e infrarrojos; los centros de cuidado usan los archivos de exportación de sus sistemas actuales; la conexión con un ERP o un CRM se planea proyecto por proyecto."
+        }
+      },
+      {
+        "id": "qa3",
+        "area": "general",
+        "q": {
+          "zh": "費用怎麼計算？",
+          "zhCN": "费用怎么计算？",
+          "en": "How is pricing worked out?",
+          "ja": "費用はどのように算出されますか。",
+          "fr": "Comment le tarif est-il établi ?",
+          "es": "¿Cómo se calcula el costo?"
+        },
+        "a": {
+          "zh": "方案依場域大小、設備與需要的功能規劃，沒有一體適用的定價。請告訴我們您的情況，專人會與您聯繫並提供規劃與報價。套裝方案與商城商品可直接在網站上查看。",
+          "zhCN": "方案依场域大小、设备与需要的功能规划，没有一体适用的定价。请告诉我们您的情况，专人会与您联系并提供规划与报价。套装方案与商城商品可直接在网站上查看。",
+          "en": "Each solution is planned around the size of the site, the equipment and the functions you need, so there is no single price list. Tell us about your situation and our team will contact you with a plan and a quotation. Packages and store products can be viewed directly on the website.",
+          "ja": "ご提案は、現場の規模、設備、必要な機能に合わせて設計するため、一律の価格表はありません。ご状況をお知らせいただければ、担当者がご連絡のうえ、プランとお見積りをご提示します。パッケージプランとストアの商品は、ウェブサイトで直接ご覧いただけます。",
+          "fr": "Chaque solution est conçue en fonction de la taille du site, des équipements et des fonctions nécessaires ; il n’existe donc pas de grille tarifaire unique. Décrivez-nous votre situation : un membre de notre équipe vous contactera pour vous proposer un plan et un devis. Les forfaits et les produits de la boutique sont consultables directement sur le site.",
+          "es": "Cada solución se planea según el tamaño del sitio, los equipos y las funciones que se necesiten, por lo que no existe una lista de precios única. Cuéntenos su situación y una persona de nuestro equipo se pondrá en contacto con usted para presentarle un plan y una cotización. Los paquetes y los productos de la tienda pueden consultarse directamente en el sitio web."
+        }
+      },
+      {
+        "id": "qa4",
+        "area": "general",
+        "q": {
+          "zh": "可以先看看實際運作嗎？",
+          "zhCN": "可以先看看实际运作吗？",
+          "en": "Can we see it working first?",
+          "ja": "まず実際の動作を見ることはできますか。",
+          "fr": "Peut-on d’abord le voir fonctionner ?",
+          "es": "¿Podemos ver cómo funciona antes de decidir?"
+        },
+        "a": {
+          "zh": "可以。新北與台中各有一處體驗中心，歡迎預約參觀，親自操作牆掛平板與 App。",
+          "zhCN": "可以。新北与台中各有一处体验中心，欢迎预约参观，亲自操作墙挂平板与 App。",
+          "en": "Yes. There are experience centres in New Taipei and Taichung; book a visit to try the wall tablet and the app yourself.",
+          "ja": "はい。新北市と台中市にそれぞれ体験センターがあります。ご予約のうえご来場いただければ、壁掛けタブレットとアプリを実際に操作していただけます。",
+          "fr": "Oui. Un centre d’expérience est ouvert à Nouveau Taipei et un autre à Taichung ; vous pouvez réserver une visite pour essayer vous-même la tablette murale et l’application.",
+          "es": "Sí. Hay un centro de experiencia en Nueva Taipéi y otro en Taichung; puede reservar una visita para probar usted mismo la tableta de pared y la aplicación."
+        }
+      },
+      {
+        "id": "qa5",
+        "area": "home",
+        "q": {
+          "zh": "住家需要哪些設備才能使用？",
+          "zhCN": "住家需要哪些设备才能使用？",
+          "en": "What does a home need to use enGo?",
+          "ja": "住まいで enGo を使うには、何が必要ですか。",
+          "fr": "De quoi un logement a-t-il besoin pour utiliser enGo ?",
+          "es": "¿Qué necesita un hogar para usar enGo?"
+        },
+        "a": {
+          "zh": "基本是一台牆掛平板與 enGo智慧管家 App（iOS、Android），再依需求接上燈光、空調、窗簾與感測器。平板和手機使用同一組帳號。",
+          "zhCN": "基本是一台墙挂平板与 enGo智慧管家 App（iOS、Android），再依需求接上灯光、空调、窗帘与传感器。平板和手机使用同一组帐号。",
+          "en": "At its core, a wall tablet and the enGo智慧管家 app (iOS and Android), with lighting, air conditioning, curtains and sensors added as needed. The tablet and the phone share one account.",
+          "ja": "基本は、壁掛けタブレット1台と enGo智慧管家 アプリ（iOS、Android）です。必要に応じて、照明、エアコン、カーテン、センサーを接続します。タブレットとスマートフォンは同じアカウントで利用できます。",
+          "fr": "À la base : une tablette murale et l’application enGo智慧管家 (iOS et Android), auxquelles s’ajoutent, selon les besoins, l’éclairage, la climatisation, les rideaux et les capteurs. La tablette et le téléphone partagent un même compte.",
+          "es": "Básicamente, una tableta de pared y la aplicación enGo智慧管家 (iOS y Android), a las que se agregan, según se necesite, la iluminación, el aire acondicionado, las cortinas y los sensores. La tableta y el celular comparten una misma cuenta."
+        }
+      },
+      {
+        "id": "qa6",
+        "area": "home",
+        "q": {
+          "zh": "新成屋和已經入住的房子都能導入嗎？",
+          "zhCN": "新成屋和已经入住的房子都能导入吗？",
+          "en": "Can it go into both new and lived-in homes?",
+          "ja": "新築住宅にも、すでに入居中の住宅にも導入できますか。",
+          "fr": "Peut-il être installé aussi bien dans un logement neuf que dans un logement déjà habité ?",
+          "es": "¿Se puede instalar tanto en viviendas nuevas como en viviendas ya habitadas?"
+        },
+        "a": {
+          "zh": "都可以。建案可以在交屋前一起規劃；已入住的住家，我們會先評估現有的線路與設備，再決定要接哪些。",
+          "zhCN": "都可以。建案可以在交屋前一起规划；已入住的住家，我们会先评估现有的线路与设备，再决定要接哪些。",
+          "en": "Yes. In new developments it can be planned before handover; in homes that are already lived in, we first assess the existing wiring and devices, then decide what to connect.",
+          "ja": "どちらにも導入できます。新築の物件では、引き渡し前にあわせて計画できます。すでに入居中の住宅では、まず既存の配線と機器を評価し、そのうえで接続するものを決めます。",
+          "fr": "Oui, dans les deux cas. Dans un programme neuf, il peut être planifié avant la remise des clés ; dans un logement déjà habité, nous évaluons d’abord le câblage et les appareils existants, puis nous décidons de ce qu’il faut connecter.",
+          "es": "Sí, en ambos casos. En desarrollos nuevos se puede planear antes de la entrega; en viviendas ya habitadas, primero evaluamos el cableado y los dispositivos existentes y después decidimos qué conectar."
+        }
+      },
+      {
+        "id": "qa7",
+        "area": "home",
+        "q": {
+          "zh": "社區公告、報修和包裹通知在哪裡看？",
+          "zhCN": "社区公告、报修和包裹通知在哪里看？",
+          "en": "Where do residents see announcements, repair requests and parcel notices?",
+          "ja": "コミュニティのお知らせ、修理依頼、荷物の通知はどこで確認できますか。",
+          "fr": "Où les résidents consultent-ils les annonces, les demandes de réparation et les avis de colis ?",
+          "es": "¿Dónde ven los residentes los avisos, las solicitudes de reparación y las notificaciones de paquetes?"
+        },
+        "a": {
+          "zh": "在 enGo智慧管家 App 裡。住戶可以看社區公告、報修、預約公設與收包裹通知，前提是您的社區已開通這些服務。",
+          "zhCN": "在 enGo智慧管家 App 里。住户可以看社区公告、报修、预约公设与收包裹通知，前提是您的社区已开通这些服务。",
+          "en": "In the enGo智慧管家 app. Residents can read community announcements, request repairs, book shared facilities and receive parcel notices, provided their community has switched these services on.",
+          "ja": "enGo智慧管家 アプリで確認できます。居住者は、コミュニティのお知らせの閲覧、修理依頼、共用施設の予約、荷物の到着通知の受け取りができます。ただし、お住まいのコミュニティでこれらのサービスが有効になっていることが前提です。",
+          "fr": "Dans l’application enGo智慧管家. Les résidents peuvent y lire les annonces de la résidence, demander une réparation, réserver les équipements communs et recevoir les avis de colis, à condition que leur résidence ait activé ces services.",
+          "es": "En la aplicación enGo智慧管家. Los residentes pueden consultar los avisos de la comunidad, solicitar reparaciones, reservar áreas comunes y recibir notificaciones de paquetes, siempre que su comunidad haya activado estos servicios."
+        }
+      },
+      {
+        "id": "qa8",
+        "area": "building",
+        "q": {
+          "zh": "管委會或物業可以用 enGo 做什麼？",
+          "zhCN": "管委会或物业可以用 enGo 做什么？",
+          "en": "What can a management committee or property manager do with enGo?",
+          "ja": "管理組合や管理会社は、enGo で何ができますか。",
+          "fr": "Que peut faire un conseil de copropriété ou un gestionnaire d’immeuble avec enGo ?",
+          "es": "¿Qué pueden hacer con enGo un comité de administración o un administrador de propiedades?"
+        },
+        "a": {
+          "zh": "住戶端的公告、報修、公設預約與包裹通知，已在 enGo智慧管家 App 中使用。給管委會與物業的管理平台正在開發，現在接受試點社區。",
+          "zhCN": "住户端的公告、报修、公设预约与包裹通知，已在 enGo智慧管家 App 中使用。给管委会与物业的管理平台正在开发，现在接受试点社区。",
+          "en": "On the residents' side, announcements, repair requests, facility booking and parcel notices are already in use in the enGo智慧管家 app. The management platform for committees and property managers is in development and is accepting pilot communities now.",
+          "ja": "居住者向けのお知らせ、修理依頼、共用施設の予約、荷物の通知は、すでに enGo智慧管家 アプリでご利用いただけます。管理組合や管理会社向けの管理プラットフォームは開発中で、現在はパイロット導入のコミュニティを受け付けています。",
+          "fr": "Du côté des résidents, les annonces, les demandes de réparation, la réservation des équipements communs et les avis de colis sont déjà en service dans l’application enGo智慧管家. La plateforme de gestion destinée aux conseils et aux gestionnaires est en cours de développement et accepte dès maintenant des résidences pilotes.",
+          "es": "Del lado de los residentes, los avisos, las solicitudes de reparación, la reserva de áreas comunes y las notificaciones de paquetes ya están en uso en la aplicación enGo智慧管家. La plataforma de administración para comités y administradores de propiedades está en desarrollo y por ahora acepta comunidades piloto."
+        }
+      },
+      {
+        "id": "qa9",
+        "area": "building",
+        "q": {
+          "zh": "建商可以在建案中導入嗎？",
+          "zhCN": "建商可以在建案中导入吗？",
+          "en": "Can developers include enGo in a new development?",
+          "ja": "デベロッパーは新築プロジェクトに enGo を導入できますか。",
+          "fr": "Un promoteur peut-il intégrer enGo dans un nouveau programme ?",
+          "es": "¿Pueden los desarrolladores incluir enGo en un nuevo desarrollo?"
+        },
+        "a": {
+          "zh": "可以，依專案規劃。已有建案在交屋時一併導入 enGo，詳情可參考案例分享。",
+          "zhCN": "可以，依项目规划。已有建案在交屋时一并导入 enGo，详情可参考案例分享。",
+          "en": "Yes, planned per project. Developments have already handed over homes with enGo installed; see the case studies for details.",
+          "ja": "はい。プロジェクトごとに計画します。すでに、enGo を導入した状態で住戸を引き渡した物件があります。詳細は事例紹介をご覧ください。",
+          "fr": "Oui, selon une planification propre à chaque projet. Des programmes ont déjà livré des logements équipés d’enGo ; consultez les études de cas pour plus de détails.",
+          "es": "Sí, con planeación por proyecto. Ya hay desarrollos que entregaron viviendas con enGo instalado; consulte los casos de estudio para más detalles."
+        }
+      },
+      {
+        "id": "qa10",
+        "area": "care",
+        "q": {
+          "zh": "enGo Care 適合哪些單位？",
+          "zhCN": "enGo Care 适合哪些单位？",
+          "en": "Which organisations is enGo Care for?",
+          "ja": "enGo Care はどのような施設に向いていますか。",
+          "fr": "À quels organismes enGo Care s’adresse-t-il ?",
+          "es": "¿A qué organizaciones está dirigido enGo Care?"
+        },
+        "a": {
+          "zh": "日照中心與長照據點。它把據點每天的到園、運動與量測、評鑑資料與提醒整理在同一個地方。",
+          "zhCN": "日照中心与长照据点。它把据点每天的到园、运动与量测、评鉴数据与提醒整理在同一个地方。",
+          "en": "Day-care centres and long-term-care sites. It brings each day's attendance, exercise and measurements, evaluation data and reminders together in one place.",
+          "ja": "デイケアセンターおよび長期ケア拠点向けです。拠点の毎日の出席、運動と測定、評価資料、リマインダーを一か所にまとめます。",
+          "fr": "Aux centres d’accueil de jour et aux sites de soins de longue durée. Il rassemble en un seul endroit la présence quotidienne, les exercices et les mesures, les données d’évaluation et les rappels.",
+          "es": "A los centros de día y a los centros de cuidado de largo plazo. Reúne en un solo lugar la asistencia diaria, el ejercicio y las mediciones, los datos de evaluación y los recordatorios."
+        }
+      },
+      {
+        "id": "qa11",
+        "area": "care",
+        "q": {
+          "zh": "需要更換現有的照護紀錄系統嗎？",
+          "zhCN": "需要更换现有的照护纪录系统吗？",
+          "en": "Do we need to replace our current care-record system?",
+          "ja": "現在使っているケア記録システムを入れ替える必要がありますか。",
+          "fr": "Faut-il remplacer notre système actuel de dossiers de soins ?",
+          "es": "¿Es necesario reemplazar nuestro sistema actual de registros de cuidado?"
+        },
+        "a": {
+          "zh": "不需要。enGo Care 匯入您既有系統與設備的匯出檔，整理成據點儀表板、評鑑指標與每月證據報告。",
+          "zhCN": "不需要。enGo Care 导入您既有系统与设备的导出档，整理成据点仪表板、评鉴指针与每月证据报告。",
+          "en": "No. enGo Care imports the export files from your existing systems and devices and turns them into a site dashboard, evaluation indicators and a monthly evidence report.",
+          "ja": "必要ありません。enGo Care は、既存のシステムや機器から出力したファイルを取り込み、拠点ダッシュボード、評価指標、月次のエビデンスレポートにまとめます。",
+          "fr": "Non. enGo Care importe les fichiers d’export de vos systèmes et appareils existants et les transforme en un tableau de bord du site, en indicateurs d’évaluation et en un rapport mensuel de preuves.",
+          "es": "No. enGo Care importa los archivos de exportación de sus sistemas y dispositivos actuales y los convierte en un tablero del centro, indicadores de evaluación y un informe mensual de evidencias."
+        }
+      },
+      {
+        "id": "qa12",
+        "area": "care",
+        "q": {
+          "zh": "長輩的個人資料安全嗎？",
+          "zhCN": "长辈的个人数据安全吗？",
+          "en": "Is the elders' personal data kept safe?",
+          "ja": "高齢者の個人情報は安全に守られますか。",
+          "fr": "Les données personnelles des personnes âgées sont-elles protégées ?",
+          "es": "¿Están protegidos los datos personales de los adultos mayores?"
+        },
+        "a": {
+          "zh": "工作人員登入需要雙重驗證，個人資料加密保存，並保留稽核紀錄。",
+          "zhCN": "工作人员登录需要双重验证，个人数据加密保存，并保留审核纪录。",
+          "en": "Staff sign in with two-factor verification, personal data is stored encrypted, and an audit log is kept.",
+          "ja": "スタッフのログインには二要素認証が必要です。個人情報は暗号化して保存され、監査ログが記録されます。",
+          "fr": "Le personnel se connecte avec une double authentification, les données personnelles sont stockées chiffrées et un journal d’audit est conservé.",
+          "es": "El personal inicia sesión con verificación en dos pasos, los datos personales se almacenan cifrados y se conserva un registro de auditoría."
+        }
+      },
+      {
+        "id": "qa13",
+        "area": "care",
+        "q": {
+          "zh": "enGo Care 會判斷長輩的健康狀況嗎？",
+          "zhCN": "enGo Care 会判断长辈的健康状况吗？",
+          "en": "Does enGo Care assess an elder's health?",
+          "ja": "enGo Care は高齢者の健康状態を判断しますか。",
+          "fr": "enGo Care évalue-t-il l’état de santé d’une personne âgée ?",
+          "es": "¿enGo Care evalúa el estado de salud de un adulto mayor?"
+        },
+        "a": {
+          "zh": "不會。enGo Care 是活動與服務紀錄平台，不是醫療器材，也不做診斷。當紀錄與長輩自身近期的資料差異達到門檻時，只會提醒人員查看。",
+          "zhCN": "不会。enGo Care 是活动与服务纪录平台，不是医疗器材，也不做诊断。当纪录与长辈自身近期的数据差异达到门槛时，只会提醒人员查看。",
+          "en": "No. enGo Care is a platform for activity and service records; it is not a medical device and makes no diagnosis. When a record differs from the person's own recent data by more than a set threshold, it only reminds staff to take a look.",
+          "ja": "いいえ。enGo Care は活動とサービスの記録プラットフォームであり、医療機器ではなく、診断も行いません。記録が本人の直近のデータと設定した基準以上に異なる場合に、スタッフに確認を促すだけです。",
+          "fr": "Non. enGo Care est une plateforme de suivi des activités et des services ; ce n’est pas un dispositif médical et il ne pose aucun diagnostic. Lorsqu’un relevé s’écarte des données récentes de la personne au-delà d’un seuil défini, il se contente de rappeler au personnel d’y jeter un œil.",
+          "es": "No. enGo Care es una plataforma de registro de actividades y servicios; no es un dispositivo médico y no emite ningún diagnóstico. Cuando un registro difiere de los datos recientes de la propia persona más allá de un umbral definido, solo le recuerda al personal que lo revise."
+        }
+      },
+      {
+        "id": "qa14",
+        "area": "shop",
+        "q": {
+          "zh": "enGo 安購商城是什麼？",
+          "zhCN": "enGo 安购商城是什么？",
+          "en": "What is enGo Shop?",
+          "ja": "enGo Shop とは何ですか。",
+          "fr": "Qu’est-ce qu’enGo Shop ?",
+          "es": "¿Qué es enGo Shop?"
+        },
+        "a": {
+          "zh": "多商家的線上商城（shoph5.smtengo.com），提供商品與會員訂閱方案，支援信用卡付款與電子發票，也有鄰里團購與優惠券。",
+          "zhCN": "多商家的在线商城（shoph5.smtengo.com），提供商品与会员订阅方案，支持信用卡付款与电子发票，也有邻里团购与优惠券。",
+          "en": "A multi-merchant online store (shoph5.smtengo.com) with products and membership subscriptions, card payment with e-invoices, neighbourhood group buying and coupons.",
+          "ja": "複数の店舗が出店できるオンラインストア（shoph5.smtengo.com）です。商品と会員サブスクリプションプランを提供し、クレジットカード決済と電子インボイスに対応しています。近隣での共同購入やクーポンもご利用いただけます。",
+          "fr": "Une boutique en ligne multi-commerçants (shoph5.smtengo.com) proposant des produits et des abonnements de membre, avec paiement par carte et factures électroniques, ainsi que des achats groupés de voisinage et des coupons.",
+          "es": "Una tienda en línea con varios comerciantes (shoph5.smtengo.com) que ofrece productos y planes de suscripción para miembros, con pago con tarjeta y facturas electrónicas, además de compras grupales entre vecinos y cupones."
+        }
+      },
+      {
+        "id": "qa15",
+        "area": "shop",
+        "q": {
+          "zh": "店家或連鎖品牌可以用它管理銷售嗎？",
+          "zhCN": "店家或连锁品牌可以用它管理销售吗？",
+          "en": "Can a shop or a chain brand use it to run its sales?",
+          "ja": "店舗やチェーンブランドの販売管理にも使えますか。",
+          "fr": "Un commerce ou une enseigne peut-il s’en servir pour gérer ses ventes ?",
+          "es": "¿Puede una tienda o una marca con varias sucursales usarlo para administrar sus ventas?"
+        },
+        "a": {
+          "zh": "可以。商城已支援多商家販售、直營與加盟的連鎖多店、訂單與退款、促銷版位、優惠券與營運分析。經銷商網路功能正在開發，歡迎先與我們聯繫。",
+          "zhCN": "可以。商城已支持多商家贩售、直营与加盟的连锁多店、订单与退款、促销版位、优惠券与营运分析。经销商网络功能正在开发，欢迎先与我们联系。",
+          "en": "Yes. The store already supports multiple merchants, chains of company-owned and franchise stores, orders and refunds, promotion slots, coupons and sales analytics. Dealer-network features are in development; please contact us in the meantime.",
+          "ja": "はい。ストアはすでに、複数店舗の出店、直営店とフランチャイズによる複数店舗展開、注文と返金、プロモーション枠、クーポン、販売分析に対応しています。販売代理店ネットワーク向けの機能は開発中です。それまでの間は、お気軽にご連絡ください。",
+          "fr": "Oui. La boutique prend déjà en charge plusieurs commerçants, les chaînes de magasins en propre et en franchise, les commandes et les remboursements, les espaces promotionnels, les coupons et l’analyse des ventes. Les fonctions pour réseaux de revendeurs sont en cours de développement ; n’hésitez pas à nous contacter dans l’intervalle.",
+          "es": "Sí. La tienda ya admite varios comerciantes, cadenas de tiendas propias y franquicias, pedidos y reembolsos, espacios promocionales, cupones y análisis de ventas. Las funciones para redes de distribuidores están en desarrollo; mientras tanto, le invitamos a ponerse en contacto con nosotros."
+        }
+      },
+      {
+        "id": "qa16",
+        "area": "shop",
+        "q": {
+          "zh": "可以管理庫存嗎？",
+          "zhCN": "可以管理库存吗？",
+          "en": "Can it manage stock?",
+          "ja": "在庫を管理できますか。",
+          "fr": "Peut-il gérer les stocks ?",
+          "es": "¿Permite administrar el inventario?"
+        },
+        "a": {
+          "zh": "可以管控可售數量，未付款的訂單會暫時保留件數，也能批次調整庫存。多倉管理與 ERP 庫存同步目前不提供，如有需要可依專案討論。",
+          "zhCN": "可以管控可售数量，未付款的订单会暂时保留件数，也能批量调整库存。多仓管理与 ERP 库存同步目前不提供，如有需要可依项目讨论。",
+          "en": "It controls the quantity available for sale, holds stock for unpaid orders for a while, and lets you adjust stock in bulk. Multi-warehouse management and ERP stock sync are not offered today; they can be discussed per project.",
+          "ja": "販売可能な数量を管理でき、未払いの注文分は一定時間在庫を確保し、在庫の一括調整もできます。複数倉庫の管理と ERP との在庫同期は、現在はご提供していません。ご希望の場合は、プロジェクトごとにご相談いただけます。",
+          "fr": "Il contrôle la quantité disponible à la vente, réserve pendant un certain temps le stock des commandes non payées et permet d’ajuster les stocks en lot. La gestion multi-entrepôts et la synchronisation des stocks avec un ERP ne sont pas proposées aujourd’hui ; elles peuvent être étudiées projet par projet.",
+          "es": "Controla la cantidad disponible para la venta, reserva por un tiempo el inventario de los pedidos sin pagar y permite ajustar el inventario por lotes. La administración de varios almacenes y la sincronización de inventario con un ERP no se ofrecen actualmente; pueden analizarse proyecto por proyecto."
+        }
+      },
+      {
+        "id": "qa17",
+        "area": "integration",
+        "q": {
+          "zh": "可以和我們的 ERP 或 CRM 串接嗎？",
+          "zhCN": "可以和我们的 ERP 或 CRM 串接吗？",
+          "en": "Can enGo connect to our ERP or CRM?",
+          "ja": "お使いの ERP や CRM と連携できますか。",
+          "fr": "enGo peut-il se connecter à notre ERP ou à notre CRM ?",
+          "es": "¿Puede enGo conectarse con nuestro ERP o CRM?"
+        },
+        "a": {
+          "zh": "依專案評估。我們會先了解您的系統與流程，再規劃串接的方式與範圍；目前商城的商品資料可透過 CSV 批次匯入。",
+          "zhCN": "依项目评估。我们会先了解您的系统与流程，再规划串接的方式与范围；目前商城的商品数据可透过 CSV 批量导入。",
+          "en": "This is assessed per project. We first learn how your systems and processes work, then plan how and how far to connect them; today, product data can be bulk-imported into the store by CSV.",
+          "ja": "プロジェクトごとに評価します。まずお客様のシステムと業務の流れを把握し、そのうえで連携の方法と範囲を計画します。現在、ストアの商品データは CSV による一括取り込みが可能です。",
+          "fr": "Cela est évalué projet par projet. Nous commençons par comprendre le fonctionnement de vos systèmes et de vos processus, puis nous planifions la manière et l’étendue de la connexion ; aujourd’hui, les données produits peuvent être importées en lot dans la boutique par CSV.",
+          "es": "Se evalúa proyecto por proyecto. Primero conocemos cómo funcionan sus sistemas y procesos y después planeamos cómo y hasta dónde conectarlos; actualmente, los datos de productos pueden importarse a la tienda por lotes mediante CSV."
+        }
+      }
+    ]
   }
 }

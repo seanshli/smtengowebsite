@@ -30,8 +30,8 @@
           <h2 class="so-h2 so-h2-sub">{{ lt(data.page.productsTitle) }}</h2>
           <p class="so-products">
             <template v-for="(pr, k) in s.products" :key="k">
-              <a v-if="pr.href" :href="pr.href" target="_blank" rel="noopener" class="so-link">{{ lt(pr) }} ↗</a>
-              <router-link v-else :to="pr.to" class="so-link">{{ lt(pr) }} →</router-link>
+              <a v-if="pr.href" :href="pr.href" target="_blank" rel="noopener" class="so-link">{{ lt(pr) }} <IconArrow external /></a>
+              <router-link v-else :to="pr.to" class="so-link">{{ lt(pr) }} <IconArrow /></router-link>
             </template>
           </p>
         </template>
@@ -46,6 +46,8 @@
         </div>
       </form>
     </section>
+
+    <DeskQa :area="s.id" />
 
     <nav class="so-others" :aria-label="lt(data.page.others)">
       <h2 class="so-h2">{{ lt(data.page.others) }}</h2>
@@ -65,6 +67,8 @@
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import solutions from '@/data/solutions.json'
+import IconArrow from '@/components/IconArrow.vue'
+import DeskQa from '@/components/DeskQa.vue'
 import { useLocaleText } from '@/composables/useLocaleText'
 import { useAnalytics } from '@/utils/analytics'
 

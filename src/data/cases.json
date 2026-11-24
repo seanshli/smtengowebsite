@@ -3385,12 +3385,8 @@
                     "Detección de fugas de agua"
                 ]
             },
-            "interface_gallery": [
-                "/images/cases/16/interface1.png"
-            ],
-            "real_scene_gallery": [
-                "/images/cases/16/real1.png"
-            ]
+            "interface_gallery": [],
+            "real_scene_gallery": []
         }
     },
     {
@@ -3645,12 +3641,8 @@
                     "Detección de fugas de agua"
                 ]
             },
-            "interface_gallery": [
-                "/images/cases/17/interface1.png"
-            ],
-            "real_scene_gallery": [
-                "/images/cases/17/real1.png"
-            ]
+            "interface_gallery": [],
+            "real_scene_gallery": []
         }
     },
     {
@@ -4489,9 +4481,7 @@
                     "Detección de fugas de agua"
                 ]
             },
-            "interface_gallery": [
-                "/images/cases/20/interface1.png"
-            ],
+            "interface_gallery": [],
             "real_scene_gallery": [
                 "/images/cases/20/IMG_0492.HEIC.jpg",
                 "/images/cases/20/IMG_0551.HEIC.jpg",

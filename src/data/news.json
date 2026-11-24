@@ -18,7 +18,8 @@
       "fr": "enGo Shop a migré vers une toute nouvelle plateforme d’achat : shoph5.smtengo.com. Le lien « enGo Shop » et chaque bouton « Acheter » de ce site ouvrent désormais la nouvelle boutique, où vous pouvez rechercher et parcourir les produits et les abonnements, remplir votre panier et régler. Les formules et le système de filtration restent disponibles via ce site. <a href=\"https://shoph5.smtengo.com/\" target=\"_blank\" rel=\"noopener\">Ouvrir la boutique</a>",
       "es": "enGo Shop se ha trasladado a una plataforma de compra completamente nueva: shoph5.smtengo.com. El enlace «enGo Shop» y cada botón «Comprar ahora» de este sitio abren ahora la nueva tienda, donde puedes buscar y ver productos y planes de suscripción, añadir al carrito y pagar. Los paquetes y el sistema de agua siguen disponibles a través de este sitio. <a href=\"https://shoph5.smtengo.com/\" target=\"_blank\" rel=\"noopener\">Abrir la tienda</a>"
     },
-    "image": "/images/news/shop-h5.jpg"
+    "image": "/images/news/shop-h5.jpg",
+    "area": "shop"
   },
   {
     "id": 9,
@@ -39,7 +40,8 @@
       "fr": "enGo existe désormais en trois interfaces : la tablette murale enGo est le poste de commande de la maison ; à l’extérieur, l’application iPhone/iPad ou Android prend le relais. Commande des appareils, scènes en un geste, plan d’étage en direct, avis de la résidence, demandes de réparation, réservation des espaces communs, notifications de colis, caméras en direct et gestion des stocks sont disponibles sur les trois ; la commande vocale reste réservée à la tablette. Un seul compte pour tout, application mobile gratuite : cherchez « enGo智慧管家 » sur l’App Store et Google Play. <a href=\"/product\">Découvrir le gestionnaire de maison IA tout-en-un</a>",
       "ja": "enGo は3つのインターフェースで使えるようになりました。enGo 壁掛けタブレットは家の中の司令塔、外出先では iPhone／iPad または Android のアプリで同じように操作できます。家電操作、ワンタップのシーン、コミュニティのお知らせ・修理依頼・共用施設予約・宅配通知、カメラのライブ映像、在庫管理は3つすべてで利用可能。音声操作はタブレット専用です。アカウントは1つで共通、スマホアプリは無料。App Store と Google Play で「enGo智慧管家」を検索してください。<a href=\"/product\">AIスマートホーム・トータルマネージャーを見る</a>",
       "es": "enGo ya está disponible en tres interfaces: la tableta de pared enGo es el centro de control en casa y, fuera, la app para iPhone/iPad o Android te mantiene al mando. Control de electrodomésticos, escenas de un toque, plano en tiempo real, avisos de la comunidad, solicitudes de reparación, reserva de instalaciones, avisos de paquetes, cámaras en directo e inventario están en las tres; el control por voz es exclusivo de la tableta. Una sola cuenta para todo y la app para celular es gratuita: busca «enGo智慧管家» en el App Store y Google Play. <a href=\"/product\">Conoce el gestor de hogar con IA todo en uno</a>"
-    }
+    },
+    "area": "home"
   },
   {
     "id": 7,
@@ -60,7 +62,8 @@
       "fr": "enGo collabore avec Lihpao Life Science pour optimiser leur nouveau produit, la chambre à oxygène intelligente. <a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">Détails du produit</a>",
       "ja": "enGo は麗寶生醫と協力し、新製品「スマート高濃度酸素ルーム」の最適化を進めています。<a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">製品詳細</a>",
       "es": "enGo colabora con Lihpao Life Science para optimizar su nuevo producto, la cámara de oxígeno inteligente. <a href=\"https://libobio.com/?page_id=6002\" target=\"_blank\" rel=\"noopener\">Detalles del producto</a>"
-    }
+    },
+    "area": "home"
   },
   {
     "id": 5,
@@ -81,7 +84,8 @@
       "ja": "enGo と大雅トータルリフォームが、新北市汐止区の大規模住宅コミュニティ「宏盛心」に参画。宏盛建設による本プロジェクトは地上21階・地下3階、総戸数314戸、主力面積は約20〜39坪（1〜3LDK）です。<a href=\"https://www.sinyi-rema.com.tw/project?number=hxqq\" target=\"_blank\" rel=\"noopener\">プロジェクト公式サイト</a> · <a href=\"/cases/25\">事例を見る</a>",
       "es": "enGo y Taya Reformas Integrales entran en «Hong Sheng Xin», una gran comunidad residencial en el distrito de Xizhi, Nuevo Taipéi, desarrollada por Hong Sheng Construction. El proyecto tiene 21 plantas sobre rasante y 3 bajo rasante, con 314 viviendas de unos 20 a 39 pings (1 a 3 dormitorios). <a href=\"https://www.sinyi-rema.com.tw/project?number=hxqq\" target=\"_blank\" rel=\"noopener\">Sitio del proyecto</a> · <a href=\"/cases/25\">Ver caso</a>"
     },
-    "image": "/images/news/hongshengxin.jpg"
+    "image": "/images/news/hongshengxin.jpg",
+    "area": "building"
   },
   {
     "id": 6,
@@ -102,7 +106,8 @@
       "ja": "enGo と大雅トータルリフォームが、昌益建設による台南の分譲プロジェクト「南青山」に参画しました。<a href=\"https://nanqing.tw\" target=\"_blank\" rel=\"noopener\">プロジェクト公式サイト</a> · <a href=\"/cases/26\">事例を見る</a>",
       "es": "enGo y Taya Reformas Integrales entran en «Nan Qing Shan», una promoción de Chang Yi Construction en Tainan. <a href=\"https://nanqing.tw\" target=\"_blank\" rel=\"noopener\">Sitio del proyecto</a> · <a href=\"/cases/26\">Ver caso</a>"
     },
-    "image": "/images/news/nanqingshan.jpg"
+    "image": "/images/news/nanqingshan.jpg",
+    "area": "building"
   },
   {
     "id": 3,
@@ -123,7 +128,8 @@
       "fr": "Grands caractères, scènes en un clic et commande vocale (sur la tablette murale), la nouvelle interface enGo aide les seniors à adopter la maison connectée en toute simplicité.",
       "ja": "大きな文字、ワンタッチシーン、音声操作（壁掛けタブレット）、enGoの新インターフェースで、ご高齢の方も気軽にスマートライフを。",
       "es": "Letra grande, escenas con un toque y control por voz (en la tableta de pared), la nueva interfaz de enGo ayuda a los adultos mayores a disfrutar la vida inteligente sin complicaciones."
-    }
+    },
+    "area": "home"
   },
   {
     "id": 4,
@@ -143,7 +149,8 @@
       "fr": "Nos centres d'expérience à <a href=\"/cases/23\">Nouveau Taipei</a> et <a href=\"/cases/24\">Taichung</a> acceptent désormais les réservations. Prenez rendez-vous via notre <a href=\"/contact\">formulaire de contact</a> ou contactez-nous sur <a href=\"https://page.line.me/247cjlve?oat_content=url&openQrModal=true\" target=\"_blank\" rel=\"noopener\">LINE</a>.",
       "ja": "<a href=\"/cases/23\">新北体験センター</a>と<a href=\"/cases/24\">台中体験センター</a>が予約受付を開始しました。<a href=\"/contact\">お問い合わせフォーム</a>からのご予約、または<a href=\"https://page.line.me/247cjlve?oat_content=url&openQrModal=true\" target=\"_blank\" rel=\"noopener\">LINE 公式アカウント</a>でのご連絡を承ります。",
       "es": "Nuestros centros de experiencia en <a href=\"/cases/23\">Nuevo Taipéi</a> y <a href=\"/cases/24\">Taichung</a> ya aceptan reservas. Reserve a través de nuestro <a href=\"/contact\">formulario de contacto</a> o contáctenos por <a href=\"https://page.line.me/247cjlve?oat_content=url&openQrModal=true\" target=\"_blank\" rel=\"noopener\">LINE</a>."
-    }
+    },
+    "area": "home"
   },
   {
     "id": 8,
@@ -164,6 +171,7 @@
       "fr": "enGo s'est associé à Zhuanmei Interior Renovation, alliant l'expertise de Zhuanmei en rénovation complète et en mobilier sur mesure pour créer un showroom domotique enGo à Taipei : éclairage intelligent, surveillance environnementale et tablette de contrôle IA présentés dans un cadre de vie réel. Les partenaires intègrent également les systèmes enGo dans des projets de rénovation et de promotion immobilière.",
       "ja": "enGo は撰美室内装修有限公司と提携し、撰美のフルリノベーションとシステム収納の専門性を活かして、台北に enGo スマートホーム・ショールームを開設。スマート照明、環境モニタリング、AI中控タブレットを実際の住空間で体験できます。両社はリノベーションや建設プロジェクトへの enGo システム導入も進めています。",
       "es": "enGo se ha asociado con Zhuanmei Interior Renovation, combinando la experiencia de Zhuanmei en renovación integral y mobiliario de sistema para crear un showroom de hogar inteligente enGo en Taipéi, que presenta iluminación inteligente, monitoreo ambiental y la tableta de control con IA en un entorno real. Los socios también integran los sistemas enGo en proyectos de renovación y desarrollo inmobiliario."
-    }
+    },
+    "area": "home"
   }
 ]

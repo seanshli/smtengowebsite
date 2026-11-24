@@ -399,7 +399,6 @@ The 解決方案 dropdown (see Layout) is the main entry into the world. The hea
 
 ### Defects the build carries (recorded, not canonized)
 These exist in the code and are not rules for new surfaces:
-- Text arrow glyphs (→, ↗) as link icons in window labels, room links, floor rows and product links. New surfaces use SVG icons.
 - Status-pill sizes differ across surfaces (0.72rem 500 on hero labels, 0.75rem 700 in rooms, 0.8rem 700 on the solution hero). One size (0.75rem 700) is the token.
 - The entry animation `bh-light` and the dot and label hover transitions animate `box-shadow` and `background-color`, not only `transform` and `opacity`.
 

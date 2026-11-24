@@ -273,9 +273,26 @@ describe('mobile layout stability and contrast (review 2026-11-13 P0-2)', () => 
   it('dimmed day moments keep AA contrast on the dark tile', () => {
     expect(src('src/views/index.vue')).not.toMatch(/\.hm-moment \{[^}]*opacity: \.5;/)
   })
-  it('the decorative folio ghost title is a pseudo-element, not page text', () => {
-    expect(src('src/components/NewsFolio.vue')).toContain(':data-ghost="tr(item.title)"')
-    expect(src('src/components/NewsFolio.vue')).toContain('content: attr(data-ghost)')
+  it('news is the lobby notice board: one pinned notice, the rest as pressed-state buttons, keeps #news', () => {
+    const board = src('src/components/NewsBoard.vue')
+    expect(src('src/views/index.vue')).toContain('<NewsBoard />')
+    expect(board).toContain('id="news"')
+    expect(board).toContain(':aria-pressed="it.id === curId"')
+    expect(board).toContain('aria-live="polite"')
+    expect(board).toContain('lt(sample)')
+  })
+  it('prospect Q&A: native details, area filter as toggle buttons, ask passes the area to /contact', () => {
+    const qa = src('src/components/DeskQa.vue')
+    expect(src('src/views/index.vue')).toContain('<DeskQa />')
+    expect(src('src/views/solution.vue')).toContain('<DeskQa :area="s.id" />')
+    expect(qa).toContain('<details')
+    expect(qa).toContain(':aria-pressed="pickArea === f.id"')
+    expect(qa).toContain("query: { area: a }")
+  })
+  it('building-world arrows are drawn SVG, not text glyphs', () => {
+    for (const f of ['src/components/BuildingHero.vue', 'src/components/SolutionRooms.vue', 'src/views/solution.vue', 'src/components/DeskQa.vue']) {
+      expect(src(f)).not.toMatch(/[→↗]/)
+    }
   })
 })
 

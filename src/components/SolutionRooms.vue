@@ -18,7 +18,7 @@
             <em v-if="p.status !== 'live'" class="sr-tag">{{ lt(statusLabel[p.status]) }}</em>
           </li>
         </ul>
-        <router-link :to="`/solutions/${s.id}`" class="sr-go" :data-track="'home:room:' + s.id">{{ lt(more) }} <span aria-hidden="true">→</span></router-link>
+        <router-link :to="`/solutions/${s.id}`" class="sr-go" :data-track="'home:room:' + s.id">{{ lt(more) }} <IconArrow /></router-link>
       </div>
     </article>
   </section>
@@ -27,6 +27,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import data from '@/data/solutions.json'
+import IconArrow from '@/components/IconArrow.vue'
 import { useLocaleText } from '@/composables/useLocaleText'
 
 const { lt } = useLocaleText()

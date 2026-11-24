@@ -25,7 +25,7 @@
         <span class="bh-label">
           <span class="bh-role">{{ lt(s.role) }}<span v-if="s.status" class="bh-status">{{ lt(statusLabel[s.status]) }}</span></span>
           <span class="bh-line">{{ lt(s.line) }}</span>
-          <span class="bh-prod">{{ s.product }} <span aria-hidden="true">→</span></span>
+          <span class="bh-prod">{{ s.product }} <IconArrow /></span>
         </span>
       </router-link>
 
@@ -55,7 +55,7 @@
             <strong>{{ lt(s.role) }}<span v-if="s.status" class="bh-status bh-status-ink">{{ lt(statusLabel[s.status]) }}</span></strong>
             <span>{{ lt(s.line) }}</span>
           </span>
-          <span class="bh-list-go" aria-hidden="true">→</span>
+          <span class="bh-list-go"><IconArrow /></span>
         </router-link>
       </li>
     </ol>
@@ -66,6 +66,7 @@
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import data from '@/data/solutions.json'
+import IconArrow from '@/components/IconArrow.vue'
 import { useLocaleText } from '@/composables/useLocaleText'
 import { useAnalytics } from '@/utils/analytics'
 

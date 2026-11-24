@@ -25,7 +25,7 @@
             <p class="hm-cap"><strong>iPhone / iPad</strong>{{ T.ifIosCap }}</p>
             <p class="hm-cap"><strong>{{ T.ifAndroid }}</strong>{{ T.ifAndroidCap }}</p>
             <div class="hm-if-stores">
-              <a class="hm-store" href="https://apps.apple.com/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
+              <a class="hm-store" href="https://apps.apple.com/tw/app/id6680188565" target="_blank" rel="noopener" data-track="home:app-store">
                 <img :src="locale.startsWith('zh') ? '/images/badges/app-store-zh-tw.svg' : '/images/badges/app-store-en.svg'" :alt="T.altAppStore" width="120" height="40" loading="lazy" />
               </a>
               <a class="hm-store hm-store-google" href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android" target="_blank" rel="noopener" data-track="home:google-play">
@@ -157,15 +157,11 @@
       </div>
     </section>
 
-    <!-- ─── NEWS (folio kept, parchment) ─────────────────────────────── -->
-    <section id="news" class="hm-tile hm-tile-parchment hm-news">
-      <div class="hm-wrap">
-        <header class="hm-head" data-reveal>
-          <h2 class="hm-h2">{{ $t('newsTitle') }}</h2>
-        </header>
-        <NewsFolio :items="newsItems" />
-      </div>
-    </section>
+    <!-- ─── NEWS: the lobby notice board (building world) ─────────────── -->
+    <NewsBoard />
+
+    <!-- ─── Questions asked at the desk before starting ─────────────────── -->
+    <DeskQa />
 
     <!-- ─── CTA (dark tile) ──────────────────────────────────────────── -->
     <section id="cta" class="hm-tile hm-tile-dark hm-cta">
@@ -185,18 +181,17 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import newsData from '@/data/news.json'
 import casesData from '@/data/cases.json'
 import HomeLivingLines from '@/components/HomeLivingLines.vue'
 import BuildingHero from '@/components/BuildingHero.vue'
 import SolutionRooms from '@/components/SolutionRooms.vue'
-import NewsFolio from '@/components/NewsFolio.vue'
+import NewsBoard from '@/components/NewsBoard.vue'
+import DeskQa from '@/components/DeskQa.vue'
 import { useEditorialMotion } from '@/composables/useEditorialMotion'
 import { useAnalytics } from '@/utils/analytics'
 
 const { locale } = useI18n()
 const { trackEvent } = useAnalytics()
-const newsItems = ref(newsData as any)
 const motionRoot = ref<HTMLElement | null>(null)
 useEditorialMotion(motionRoot)
 
@@ -571,7 +566,6 @@ $display: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 .hm-showroom-title { font-family: $display; font-weight: 600; font-size: 1.3125rem; letter-spacing: -.01em; line-height: 1.25; margin: 0; }
 
 // ─── news + cta ───────────────────────────────────────────────────────────
-.hm-news { padding-bottom: clamp(40px, 6vw, 72px); }
 .hm-cta .hm-lead { margin-bottom: 0; }
 
 // ─── keyframes ────────────────────────────────────────────────────────────

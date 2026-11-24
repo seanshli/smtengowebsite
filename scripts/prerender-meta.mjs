@@ -114,6 +114,7 @@ const pickL = (o, L) => (o && (o[L] ?? o.zh ?? o.en)) || ''
 // Solution pages (facelift 2026-11-24): one shell per solution and locale, titled exactly as
 // src/utils/seo.ts titles them at runtime ("<area> · <product> | enGo"), described by the lede.
 export const SOLUTIONS = readJson('src/data/solutions.json').solutions
+export const QA_ITEMS = readJson('src/data/solutions.json').qa.items
 export const solutionTitle = (s, L) => `${pickL(s.area, L)}${s.product ? ' · ' + s.product : ''} | enGo`
 for (const s of SOLUTIONS) {
   ROUTES[`/solutions/${s.id}`] = Object.fromEntries(LANGS.map((L) => [L, [solutionTitle(s, L), plain(pickL(s.lede, L))]]))
@@ -141,7 +142,7 @@ export function jsonLdFor(route, lang) {
           ? 'enGo AI智慧中控系统的手机 App：家电控制、情境、设备数据与社区服务，iPhone、iPad 与 Android 皆可用，商店名称为 enGo智慧管家。'
           : 'enGo AI智慧中控系統的手機 App：家電控制、情境、設備數據與社區服務，iPhone、iPad 與 Android 皆可用，商店名稱為 enGo智慧管家。',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'TWD' },
-      installUrl: ['https://apps.apple.com/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android'],
+      installUrl: ['https://apps.apple.com/tw/app/id6680188565', 'https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android'],
       publisher: { '@type': 'Organization', name: LEGAL_NAME, url: BASE },
     })
     // enGo 安購商城: the fifth product line (2026-09-27). Its own site, so it is an
@@ -172,6 +173,19 @@ export function jsonLdFor(route, lang) {
       url: `${BASE}${prefix}${route}`,
       provider: { '@type': 'Organization', name: LEGAL_NAME, url: BASE },
       ...(s.image ? { image: `${BASE}/images/building/${s.image}-1600.webp` } : {}),
+    })
+  }
+  // Prospect Q&A (components/DeskQa.vue): all of it on the home page, one area's on each solution page.
+  // The same questions are visible on those pages, as FAQPage markup requires.
+  if (route === '/' || route.startsWith('/solutions/')) {
+    const area = route === '/' ? null : route.slice('/solutions/'.length)
+    const items = QA_ITEMS.filter((q) => !area || q.area === area)
+    if (items.length) blocks.push({
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: items.map((q) => ({
+        '@type': 'Question', name: plain(pickL(q.q, L)),
+        acceptedAnswer: { '@type': 'Answer', text: plain(pickL(q.a, L)) },
+      })),
     })
   }
   if (route === '/tutorial') {
@@ -234,7 +248,7 @@ function fallbackBlock(route, lang) {
   const href = (r) => (r === '/' ? prefix || '/' : prefix + r)
   const items = Object.keys(ROUTES).map((r) => `<li><a href="${esc(href(r))}">${esc(shortTitle(ROUTES[r][lang][0]))}</a></li>`)
   items.push(
-    `<li><a href="https://apps.apple.com/app/id6680188565">${esc(t.app)} (App Store)</a></li>`,
+    `<li><a href="https://apps.apple.com/tw/app/id6680188565">${esc(t.app)} (App Store)</a></li>`,
     `<li><a href="https://play.google.com/store/apps/details?id=tw.smtengo.engohome.android">${esc(t.app)} (Google Play)</a></li>`,
     `<li><a href="https://shoph5.smtengo.com/">${esc(t.shop)}</a></li>`
   )

@@ -348,11 +348,11 @@ describe('no §0.2 claim survives in the KB or the /tutorial FAQ', () => {
   it('the app is enGo智慧管家 on both stores (verified 2026-09-15): App Store id6680188565, Google Play tw.smtengo.engohome.android', () => {
     for (const s of [(kb as any).general.find((e: any) => e.id === 'app-download').answer.zh, (faqs as any[]).find((f) => f.id === 30).answer.zh]) {
       expect(s).toContain('enGo智慧管家')
-      expect(s).toContain('apps.apple.com/app/id6680188565')
+      expect(s).toContain('apps.apple.com/tw/app/id6680188565')
       expect(s).toContain('id=tw.smtengo.engohome.android')
     }
     const vue = readFileSync(resolve(process.cwd(), 'src/views/product.vue'), 'utf-8')
-    expect(vue).toContain('apps.apple.com/app/id6680188565')
+    expect(vue).toContain('apps.apple.com/tw/app/id6680188565')
     expect(vue).toContain('id=tw.smtengo.engohome.android')
     for (const f of ['app-store-zh-tw.svg', 'app-store-en.svg', 'google-play-en.png']) {
       expect(existsSync(resolve(process.cwd(), 'public/images/badges', f)), f).toBe(true)
@@ -542,5 +542,27 @@ describe('shop detail questions ask the Shop KB first', () => {
     expect(zh).toContain('play.google.com/store/apps/details?id=com.smtengo.engo.shop')
     expect(zh).toContain('iPhone 版即將推出')
     expect(zh).not.toContain('apps.apple.com')
+  })
+})
+
+describe('solution questions reach the solution entries (audit 2026-11-24)', () => {
+  const top = (q: string) => rankKnowledge(kb as any, expandQuery(normalizeQuery(q)))[0]?.item?.id
+  it.each([
+    ['enGo Care 是什麼？', 'engo-care'],
+    ['日照中心可以用嗎', 'engo-care'],
+    ['What is enGo Care?', 'engo-care'],
+    ['大樓管理平台可以報修嗎？', 'engo-bms'],
+    ['管委會可以用嗎', 'engo-bms'],
+    ['可以串接ERP嗎', 'engo-integration'],
+    ['Do you integrate with our ERP?', 'engo-integration'],
+    ['你們有哪些解決方案', 'solutions-overview'],
+    ['enGo 是什麼', 'what-is-engo'],
+  ])('%s → %s', (q, id) => expect(top(q)).toBe(id))
+  it('each solution entry links to its /solutions page in every locale', () => {
+    const g = (kb as any).general
+    for (const [id, path] of [['engo-care', '/solutions/care'], ['engo-bms', '/solutions/building'], ['engo-integration', '/solutions/integration']]) {
+      const e = g.find((x: any) => x.id === id)
+      for (const l of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) expect(e.answer[l]).toContain(`(${path})`)
+    }
   })
 })
