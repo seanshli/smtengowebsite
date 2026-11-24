@@ -85,7 +85,7 @@ import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import knowledgeBase from '@/data/knowledge_base.json'
 import { videoTitle } from '@/utils/videoTitle'
-import { normalizeQuery, expandQuery, rankKnowledge, prefersShopKnowledge } from '@/utils/chatbotMatch'
+import { normalizeQuery, expandQuery, rankKnowledge, prefersShopKnowledge, resolveQuestion } from '@/utils/chatbotMatch'
 import { askShopKnowledge } from '../../lib/shop-knowledge'
 
 const isOpen = ref(false)
@@ -104,11 +104,12 @@ const areaQuestions = computed(() => {
   if (!m) return []
   return ((solutionsData as any).qa.items as any[]).filter((q) => q.area === m[1]).slice(0, 3)
 })
-const QA_LOCALES = ['zh', 'zhCN', 'en', 'ja', 'fr', 'es'] as const
+// A prospect question, asked word for word or close to it in any language, gets its
+// fact-checked Q&A answer; the same rule the LINE bot uses (resolveQuestion).
 const qaAnswerFor = (raw: string): { id: string, text: string } | null => {
-  const n = normalizeQuery(raw)
-  const item = ((solutionsData as any).qa.items as any[]).find((q) => QA_LOCALES.some((l) => q.q[l] && normalizeQuery(q.q[l]) === n))
-  if (!item) return null
+  const r = resolveQuestion(knowledgeBase as any, (solutionsData as any).qa.items, raw)
+  if (r.kind !== 'qa') return null
+  const item = r.item
   const sol = ((solutionsData as any).solutions as any[]).find((x) => x.id === item.area)
   const link = sol ? `\n\n🔗 [${lt(sol.area)}${sol.product ? ' · ' + sol.product : ''}](/solutions/${sol.id})` : ''
   return { id: item.id, text: lt(item.a) + link }

@@ -4,7 +4,7 @@
 // answer to the same question; the Vue chatbot keeps its own richer rendering
 // (video embeds, catalog cards) in src/components/Chatbot.vue.
 
-import { normalizeQuery, expandQuery, rankKnowledge } from '../src/utils/chatbotMatch.js'
+import { resolveQuestion, type QaItem } from '../src/utils/chatbotMatch.js'
 
 export interface AnswerStrings {
   found_video: string
@@ -38,9 +38,18 @@ export function composeAnswer(
   locale: string,
   strings: AnswerStrings,
   origin = 'https://www.smtengo.com',
+  qaItems: QaItem[] = [],
+  solutions: Array<{ id: string; area: Localized; product?: string }> = [],
 ): ComposedAnswer {
-  const query = expandQuery(normalizeQuery(rawQuery || ''))
-  const scored = query ? rankKnowledge(kb, query) : []
+  // Same routing as the website chatbot: a close prospect question answers from its Q&A.
+  const resolved = resolveQuestion(kb, qaItems, rawQuery || '')
+  if (resolved.kind === 'qa') {
+    const item = resolved.item
+    const sol = solutions.find((x) => x.id === item.area)
+    const link = sol ? `\n\n🔗 [${pick(sol.area, locale)}${sol.product ? ' · ' + sol.product : ''}](${absolute('/solutions/' + sol.id, origin)})` : ''
+    return { text: pick(item.a, locale) + link, matched: true, id: item.id, cat: 'qa' }
+  }
+  const scored = resolved.ranked
   if (!scored.length) return { text: strings.no_match, matched: false, id: null, cat: null }
 
   const best = scored[0]

@@ -208,3 +208,84 @@ export const rankKnowledge = (kb: Record<string, any[] | undefined>, query: stri
   scored.sort((a, b) => b.score - a.score)
   return scored
 }
+
+// ─── Prospect Q&A (src/data/solutions.json qa) ────────────────────────────────
+// The 17 prospect questions carry fact-checked answers. A visitor question that is
+// close to one of them, in any of the six languages, is answered from it instead of
+// from keyword ranking, which sends several of them astray (連鎖 -> 門鎖).
+
+export interface QaItem {
+  id: string
+  area: string
+  q: Record<string, string>
+  a: Record<string, string>
+}
+
+// Question words every prospect question shares; they say nothing about the topic.
+const QA_STOP = new Set(['the', 'a', 'an', 'to', 'of', 'our', 'we', 'us', 'can', 'it', 'do', 'does', 'is', 'are', 'and', 'or', 'for', 'with', 'in', 'on', 'be', 'what', 'how', 'you', 'your', 'need', 'have', 'has', 'into', 'its', 'any', 'there', 'this', 'that', 'le', 'la', 'les', 'de', 'des', 'du', 'un', 'une', 'et', 'est', 'el', 'los', 'las', 'y', 'es', 'en', 'que', 'se', 'nos', 'nous', 'vous'])
+const QA_STOP_CJK = new Set(['可以', '什麼', '什么', '嗎', '吗', '我們', '我们', '需要', '能夠', '一般', '一下'])
+
+/** Character pairs for CJK / kana runs, whole words for Latin runs; question filler removed. */
+export const qaGrams = (s: string): Set<string> => {
+  // Particles (的 嗎 呢 了 …) end a run, so 「現有的系統」 does not make 「有的」「的系」 look shared.
+  const text = normalizeQuery(String(s || '')).replace(/[、。？！，,.!?;；:：'"’“”（）()\-–—/的嗎吗呢了吧啊]/g, ' ')
+  const grams = new Set<string>()
+  for (const m of text.matchAll(/[぀-ヿ㐀-鿿豈-﫿]+|[a-z0-9à-ÿ]+/g)) {
+    const run = m[0]
+    if (/^[a-z0-9à-ÿ]+$/.test(run)) {
+      if (run.length > 1 && !QA_STOP.has(run)) grams.add(run)
+      continue
+    }
+    if (run.length === 1) { grams.add(run); continue }
+    for (let i = 0; i < run.length - 1; i++) {
+      const g = run.slice(i, i + 2)
+      if (!QA_STOP_CJK.has(g)) grams.add(g)
+    }
+  }
+  return grams
+}
+
+const dice = (a: Set<string>, b: Set<string>): number => {
+  if (!a.size || !b.size) return 0
+  let both = 0
+  for (const g of a) if (b.has(g)) both++
+  return (2 * both) / (a.size + b.size)
+}
+
+/** Similarity at which a prospect question answers outright. */
+export const QA_MIN_SCORE = 0.5
+/** A looser match still answers when keyword ranking has nothing better than a passing hit. */
+export const QA_WEAK_SCORE = 0.35
+export const KB_WEAK_SCORE = 6
+
+/** Closest prospect question across all of its languages, or null when none is close enough. */
+export const matchQa = (raw: string, items: QaItem[], min = QA_MIN_SCORE): { item: QaItem; score: number } | null => {
+  const g = qaGrams(raw)
+  let best: { item: QaItem; score: number } | null = null
+  for (const item of items || []) {
+    for (const text of Object.values(item.q || {})) {
+      const score = dice(g, qaGrams(text))
+      if (!best || score > best.score) best = { item, score }
+    }
+  }
+  return best && best.score >= min ? best : null
+}
+
+export type Resolution =
+  | { kind: 'qa'; item: QaItem; score: number; ranked: Scored[] }
+  | { kind: 'kb'; ranked: Scored[] }
+  | { kind: 'none'; ranked: Scored[] }
+
+/**
+ * One routing decision shared by the website chatbot and the LINE bot: a close prospect
+ * question answers outright; a looser one answers only when keyword ranking is weak;
+ * otherwise the best knowledge-base entry answers.
+ */
+export const resolveQuestion = (kb: Record<string, any[] | undefined>, qaItems: QaItem[], raw: string): Resolution => {
+  const query = expandQuery(normalizeQuery(raw || ''))
+  const ranked = query ? rankKnowledge(kb, query) : []
+  const qa = matchQa(raw, qaItems, QA_WEAK_SCORE)
+  const kbTop = ranked[0]?.score ?? 0
+  if (qa && (qa.score >= QA_MIN_SCORE || kbTop < KB_WEAK_SCORE)) return { kind: 'qa', item: qa.item, score: qa.score, ranked }
+  return ranked.length ? { kind: 'kb', ranked } : { kind: 'none', ranked }
+}
