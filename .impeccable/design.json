@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T03:34:24Z",
+  "title": "Design System: enGo Building World",
+  "extensions": {
+    "colorMeta": {
+      "window-light": {
+        "role": "primary",
+        "displayName": "Window Light",
+        "canonical": "#f26b21",
+        "oklch": "oklch(68% 0.184 44)",
+        "tonalRamp": [
+          "#450000",
+          "#6d0000",
+          "#8f0000",
+          "#b12d00",
+          "#d45000",
+          "#f87028",
+          "#ff9c60",
+          "#ffd8b8"
+        ]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Action Orange",
+        "canonical": "#c94f12",
+        "oklch": "oklch(58% 0.168 42)",
+        "tonalRamp": [
+          "#420000",
+          "#690000",
+          "#8b0900",
+          "#ad3400",
+          "#cf551b",
+          "#f27440",
+          "#ff9f6f",
+          "#ffd9bf"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Burnt Orange",
+        "canonical": "#b3460f",
+        "oklch": "oklch(54% 0.154 42)",
+        "tonalRamp": [
+          "#3f0000",
+          "#650000",
+          "#861800",
+          "#a73b00",
+          "#c95a2a",
+          "#ec7a4b",
+          "#ffa377",
+          "#ffdbc2"
+        ]
+      },
+      "window-glow": {
+        "role": "primary",
+        "displayName": "Window Glow",
+        "canonical": "#ffd2a6",
+        "oklch": "oklch(89% 0.077 66)",
+        "tonalRamp": [
+          "#290d00",
+          "#472400",
+          "#633e13",
+          "#815a31",
+          "#a0774e",
+          "#bf956b",
+          "#e4bb93",
+          "#fee7d0"
+        ]
+      },
+      "grille-green": {
+        "role": "secondary",
+        "displayName": "Grille Green",
+        "canonical": "#2f4a3e",
+        "oklch": "oklch(38% 0.039 165)",
+        "tonalRamp": [
+          "#051b12",
+          "#1a3429",
+          "#334f42",
+          "#4f6b5e",
+          "#6b887a",
+          "#89a698",
+          "#afccbe",
+          "#e0f0e8"
+        ]
+      },
+      "tile-mint": {
+        "role": "tertiary",
+        "displayName": "Tile Mint",
+        "canonical": "#7fb7a4",
+        "oklch": "oklch(74% 0.065 171)",
+        "tonalRamp": [
+          "#001e13",
+          "#00382a",
+          "#1a5343",
+          "#396f5e",
+          "#568d7b",
+          "#74ac99",
+          "#9dd1bf",
+          "#d6f3e8"
+        ]
+      },
+      "tile-butter": {
+        "role": "tertiary",
+        "displayName": "Tile Butter",
+        "canonical": "#f2d37a",
+        "oklch": "oklch(87% 0.114 91)",
+        "tonalRamp": [
+          "#271000",
+          "#432800",
+          "#5f4300",
+          "#7c5f00",
+          "#9a7d1b",
+          "#b99b41",
+          "#dec270",
+          "#faeabf"
+        ]
+      },
+      "tile-salmon": {
+        "role": "tertiary",
+        "displayName": "Tile Salmon",
+        "canonical": "#e7a596",
+        "oklch": "oklch(78% 0.082 33)",
+        "tonalRamp": [
+          "#2f0501",
+          "#4f1b10",
+          "#6d352a",
+          "#8c5144",
+          "#ab6e60",
+          "#cc8c7d",
+          "#f1b3a5",
+          "#ffe2d9"
+        ]
+      },
+      "tile-terrazzo": {
+        "role": "tertiary",
+        "displayName": "Tile Terrazzo",
+        "canonical": "#cfc7b8",
+        "oklch": "oklch(83% 0.022 83)",
+        "tonalRamp": [
+          "#1a150c",
+          "#332d21",
+          "#4e473a",
+          "#696255",
+          "#877f71",
+          "#a59d8f",
+          "#cbc3b5",
+          "#efebe3"
+        ]
+      },
+      "sky-ink": {
+        "role": "neutral",
+        "displayName": "Dusk Ink",
+        "canonical": "#0b121c",
+        "oklch": "oklch(18% 0.023 257)",
+        "tonalRamp": [
+          "#10161f",
+          "#262e3a",
+          "#404855",
+          "#5b6471",
+          "#78818e",
+          "#959fad",
+          "#bbc5d3",
+          "#e6ecf3"
+        ]
+      },
+      "terrazzo-paper": {
+        "role": "neutral",
+        "displayName": "Terrazzo Paper",
+        "canonical": "#fbf8f2",
+        "oklch": "oklch(98% 0.009 85)",
+        "tonalRamp": [
+          "#181612",
+          "#302e29",
+          "#4a4743",
+          "#65635e",
+          "#82807b",
+          "#a19e98",
+          "#c6c4be",
+          "#ecebe8"
+        ]
+      },
+      "terrazzo-band": {
+        "role": "neutral",
+        "displayName": "Terrazzo Band",
+        "canonical": "#e6e0d5",
+        "oklch": "oklch(91% 0.016 83)",
+        "tonalRamp": [
+          "#19160f",
+          "#322d25",
+          "#4c473e",
+          "#686359",
+          "#858076",
+          "#a39e93",
+          "#c9c3b9",
+          "#eeebe5"
+        ]
+      },
+      "world-ink": {
+        "role": "neutral",
+        "displayName": "Floor Ink",
+        "canonical": "#1e2a25",
+        "oklch": "oklch(27% 0.019 168)",
+        "tonalRamp": [
+          "#0f1814",
+          "#25312c",
+          "#3e4b46",
+          "#596761",
+          "#76847e",
+          "#94a29c",
+          "#bac8c2",
+          "#e5edea"
+        ]
+      },
+      "world-muted": {
+        "role": "neutral",
+        "displayName": "Wall Muted",
+        "canonical": "#4a5650",
+        "oklch": "oklch(44% 0.018 164)",
+        "tonalRamp": [
+          "#0f1814",
+          "#26312b",
+          "#3f4b45",
+          "#5a6760",
+          "#77847d",
+          "#95a29b",
+          "#bbc8c1",
+          "#e6ede9"
+        ]
+      },
+      "label-glass": {
+        "role": "neutral",
+        "displayName": "Label Glass",
+        "canonical": "rgba(8, 13, 18, 0.74)",
+        "tonalRamp": []
+      },
+      "legacy-accent-text": {
+        "role": "legacy",
+        "displayName": "Legacy Accent Text",
+        "canonical": "#b8431f",
+        "oklch": "oklch(54% 0.159 37)",
+        "tonalRamp": [
+          "#410000",
+          "#670000",
+          "#880f00",
+          "#aa360e",
+          "#cd5633",
+          "#f07552",
+          "#ff9f7e",
+          "#ffd9c5"
+        ]
+      },
+      "legacy-parchment": {
+        "role": "legacy",
+        "displayName": "Legacy Parchment",
+        "canonical": "#f5f5f7",
+        "oklch": "oklch(97% 0.003 286)",
+        "tonalRamp": [
+          "#161617",
+          "#2e2e2f",
+          "#474749",
+          "#636365",
+          "#808082",
+          "#9e9ea0",
+          "#c4c4c6",
+          "#ebebec"
+        ]
+      },
+      "legacy-tile-dark": {
+        "role": "legacy",
+        "displayName": "Legacy Dark Tile",
+        "canonical": "#272729",
+        "oklch": "oklch(27% 0.004 286)",
+        "tonalRamp": [
+          "#161617",
+          "#2e2e30",
+          "#47474a",
+          "#636365",
+          "#808082",
+          "#9e9ea1",
+          "#c4c4c6",
+          "#ebebec"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "world-display": {
+        "displayName": "Display",
+        "purpose": "Hero and solution-page headline, 700, set left over the dark sky."
+      },
+      "world-heading": {
+        "displayName": "Heading",
+        "purpose": "Rooms section title."
+      },
+      "world-room-title": {
+        "displayName": "Room title",
+        "purpose": "Headline beside each room photograph."
+      },
+      "world-section-title": {
+        "displayName": "Section title",
+        "purpose": "Sub-heads on solution pages."
+      },
+      "world-lede": {
+        "displayName": "Lede",
+        "purpose": "Intro paragraph under a display headline, 400 at 1.75 line height."
+      },
+      "world-point": {
+        "displayName": "Point",
+        "purpose": "Room and solution bullets, 500."
+      },
+      "world-role": {
+        "displayName": "Role",
+        "purpose": "Role name on a window label, in Window Glow."
+      },
+      "world-status": {
+        "displayName": "Status",
+        "purpose": "Status pill text."
+      },
+      "world-caption": {
+        "displayName": "Caption",
+        "purpose": "The 示意圖 label on generated photographs."
+      }
+    },
+    "shadows": [
+      {
+        "name": "window-dot",
+        "value": "0 0 0 6px rgba(242,107,33,.28), 0 6px 18px rgba(0,0,0,.35)",
+        "purpose": "Halo ring and drop under the lit-window dot, on the dark photograph only; the ring widens to 10px at .32 on hover."
+      },
+      {
+        "name": "label-glass",
+        "value": "0 12px 30px rgba(0,0,0,.3)",
+        "purpose": "Window label panel (with backdrop-filter: blur(12px))."
+      },
+      {
+        "name": "desk-card",
+        "value": "0 18px 44px rgba(0,0,0,.38)",
+        "purpose": "管理室 card resting on the street."
+      },
+      {
+        "name": "room-photo",
+        "value": "0 24px 48px -18px rgba(30,42,37,.45)",
+        "purpose": "Room photograph resting on paper."
+      },
+      {
+        "name": "hero-scrim",
+        "value": "linear-gradient(90deg, rgba(11,18,28,.82) 0%, rgba(11,18,28,.55) 28%, rgba(11,18,28,0) 52%)",
+        "purpose": "Legibility layer under the hero headline. Solution heroes use linear-gradient(180deg, rgba(11,18,28,.05) 30%, rgba(11,18,28,.82) 100%)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(.22, 1, .36, 1)",
+        "purpose": "Every authored transition and keyframe in the world."
+      },
+      {
+        "name": "window-light-in",
+        "value": ".9s ease-settle, delay .35s + index x .22s",
+        "purpose": "Dot scales from .4 and fades in (keyframe bh-light; also animates box-shadow, recorded as a defect)."
+      },
+      {
+        "name": "label-rise",
+        "value": ".8s ease-settle, delay .5s + index x .22s",
+        "purpose": "Label rises 8px and fades in (bh-rise)."
+      },
+      {
+        "name": "hero-depth",
+        "value": "scroll-driven view(), exit 0% to 100%: photo translateY 12% scale 1.06; copy translateY -90% opacity .2",
+        "purpose": "Street settles as the hero scrolls away. Inside @supports (animation-timeline: view()); disabled at 900px and below."
+      },
+      {
+        "name": "room-settle",
+        "value": "scroll-driven view(), entry 0% to cover 50%: photo scale 1.08 to 1",
+        "purpose": "Room photographs settle as they enter."
+      },
+      {
+        "name": "state-hover",
+        "value": ".25s to .3s, ease-settle for transforms",
+        "purpose": "Dot scale 1.15, label lift 2px, room-link fill. Not suppressed under reduced motion (recorded as a defect)."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: no-preference) wraps all entry and scroll animation",
+        "purpose": "No entry or scroll animation runs for users who prefer reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone-stack",
+        "value": "900px",
+        "purpose": "Stage dissolves, floors become a list, rooms and solution body go single column."
+      },
+      {
+        "name": "desk-moves",
+        "value": "1279px",
+        "purpose": "Below this the desk card moves under the headline."
+      },
+      {
+        "name": "label-compact",
+        "value": "1100px",
+        "purpose": "Window label line size drops to .85rem."
+      },
+      {
+        "name": "nav-desktop",
+        "value": "1025px",
+        "purpose": "Legacy header shows the desktop menu."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Window Hotspot",
+      "kind": "custom",
+      "refersTo": "window-dot",
+      "description": "A lit window: orange dot plus blurred label, one link to that floor's solution. Shown over a dusk ground.",
+      "html": "<div class=\"ds-stage\"><a class=\"ds-spot\" href=\"#\"><span class=\"ds-dot\"></span><span class=\"ds-label\"><span class=\"ds-role\">物業總幹事<span class=\"ds-pill\">接受試點</span></span><span class=\"ds-line\">報修、公告、公設預約，不用再一件件追。</span><span class=\"ds-prod\">enGo BMS →</span></span></a></div>",
+      "css": ".ds-stage{background:#0b121c;padding:28px;color:#fff;font-family:'Noto Sans TC',system-ui,sans-serif}.ds-spot{display:flex;align-items:flex-start;gap:12px;color:#fff;text-decoration:none}.ds-dot{flex:none;width:22px;height:22px;border-radius:50%;background:#f26b21;border:3px solid #fff;box-shadow:0 0 0 6px rgba(242,107,33,.28),0 6px 18px rgba(0,0,0,.35);transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s}.ds-label{display:grid;gap:2px;width:240px;box-sizing:border-box;padding:10px 14px 11px;border-radius:12px;background:rgba(8,13,18,.74);backdrop-filter:blur(12px);box-shadow:0 12px 30px rgba(0,0,0,.3);transition:background-color .3s,transform .3s cubic-bezier(.22,1,.36,1)}.ds-role{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;font-weight:700;font-size:.88rem;color:#ffd2a6}.ds-pill{white-space:nowrap;font-weight:500;font-size:.72rem;padding:0 7px;border:1px solid currentColor;border-radius:999px;line-height:1.6}.ds-line{font-size:.95rem;line-height:1.5;font-weight:500}.ds-prod{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.82)}.ds-spot:hover .ds-dot,.ds-spot:focus-visible .ds-dot{transform:scale(1.15);box-shadow:0 0 0 10px rgba(242,107,33,.32),0 6px 18px rgba(0,0,0,.35)}.ds-spot:hover .ds-label,.ds-spot:focus-visible .ds-label{background:rgba(8,13,18,.9);transform:translateY(-2px)}.ds-spot:focus-visible{outline:none}.ds-spot:focus-visible .ds-label{box-shadow:0 0 0 2px #ffd2a6,0 12px 30px rgba(0,0,0,.3)}"
+    },
+    {
+      "name": "Desk Card",
+      "kind": "card",
+      "refersTo": "desk-card",
+      "description": "The 管理室 front desk: area picker and the primary action.",
+      "html": "<form class=\"ds-desk\"><p class=\"ds-desk-title\">管理室｜告訴我們您的需求</p><div class=\"ds-areas\" role=\"radiogroup\"><button type=\"button\" class=\"ds-area is-on\" role=\"radio\" aria-checked=\"true\">住家</button><button type=\"button\" class=\"ds-area\" role=\"radio\" aria-checked=\"false\">照護</button><button type=\"button\" class=\"ds-area\" role=\"radio\" aria-checked=\"false\">大樓與物業</button></div><button type=\"submit\" class=\"ds-ask\">開始諮詢</button></form>",
+      "css": ".ds-desk{max-width:380px;padding:16px 18px;border-radius:14px;background:#fbf8f2;color:#1e2a25;box-shadow:0 18px 44px rgba(0,0,0,.38);font-family:'Noto Sans TC',system-ui,sans-serif}.ds-desk-title{margin:0 0 10px;font-weight:700;font-size:1rem}.ds-areas{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}.ds-area{font:inherit;font-size:.8rem;font-weight:500;color:#1e2a25;cursor:pointer;padding:4px 10px;border-radius:999px;border:1px solid rgba(30,42,37,.5);background:none}.ds-area.is-on{background:#1e2a25;color:#fbf8f2;border-color:#1e2a25}.ds-area:focus-visible{outline:2px solid #c94f12;outline-offset:2px}.ds-ask{font:inherit;font-weight:700;font-size:.95rem;color:#fff;cursor:pointer;min-height:44px;padding:10px 22px;border:0;border-radius:999px;background:#c94f12}.ds-ask:hover{background:#b3460f}.ds-ask:focus-visible{outline:2px solid #1e2a25;outline-offset:3px}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action per surface: Action Orange fill, white label, full pill.",
+      "html": "<button class=\"ds-btn-primary\">開始諮詢</button>",
+      "css": ".ds-btn-primary{font:inherit;font-weight:700;display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border:0;border-radius:999px;background:#c94f12;color:#fff;cursor:pointer;font-family:'Noto Sans TC',system-ui,sans-serif}.ds-btn-primary:hover{background:#b3460f}.ds-btn-primary:focus-visible{outline:2px solid #1e2a25;outline-offset:3px}"
+    },
+    {
+      "name": "Room Link Button",
+      "kind": "button",
+      "refersTo": "button-room-link",
+      "description": "Outline pill that leads from a room to its solution page; fills ink on hover.",
+      "html": "<a class=\"ds-btn-room\" href=\"#\">了解更多 <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-btn-room{display:inline-flex;gap:8px;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid #1e2a25;color:#1e2a25;font-weight:700;text-decoration:none;font-family:'Noto Sans TC',system-ui,sans-serif;transition:background-color .25s,color .25s}.ds-btn-room:hover{background:#1e2a25;color:#fbf8f2}.ds-btn-room:focus-visible{outline:2px solid #c94f12;outline-offset:3px}"
+    },
+    {
+      "name": "Status Pills",
+      "kind": "chip",
+      "refersTo": "status-pill",
+      "description": "Outlined pills for pilot, development and project-based states; mint fill for in use.",
+      "html": "<span class=\"ds-tag\">接受試點</span> <span class=\"ds-tag\">開發中</span> <span class=\"ds-tag\">依專案洽詢</span> <span class=\"ds-tag is-live\">已在用</span>",
+      "css": ".ds-tag{display:inline-block;font-size:.75rem;font-weight:700;padding:1px 9px;border-radius:999px;border:1px solid #4a5650;color:#4a5650;white-space:nowrap;font-family:'Noto Sans TC',system-ui,sans-serif;line-height:1.6}.ds-tag.is-live{background:#7fb7a4;border-color:#7fb7a4;color:#1e2a25}"
+    },
+    {
+      "name": "Room Row",
+      "kind": "card",
+      "refersTo": "room-photo",
+      "description": "Photograph with the 示意圖 label beside the title, role swatch, bullets and room link.",
+      "html": "<article class=\"ds-room\"><figure class=\"ds-photo\"><div class=\"ds-img\"></div><figcaption>示意圖</figcaption></figure><div><h3 class=\"ds-h\">回家前，冷氣和燈已經準備好。</h3><p class=\"ds-who\"><span class=\"ds-sw\"></span>住戶 · enGo HMS</p><ul class=\"ds-points\"><li>場景一鍵切換</li><li>手機與平板同一帳號</li></ul></div></article>",
+      "css": ".ds-room{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;background:#fbf8f2;color:#1e2a25;padding:32px;font-family:'Noto Sans TC',system-ui,sans-serif}.ds-photo{position:relative;margin:0;border-radius:20px;overflow:hidden;box-shadow:0 24px 48px -18px rgba(30,42,37,.45)}.ds-img{aspect-ratio:3/2;background:linear-gradient(180deg,#5a4a3a,#2f4a3e)}.ds-photo figcaption{position:absolute;right:12px;bottom:10px;padding:2px 8px;border-radius:999px;background:rgba(0,0,0,.55);font-size:.75rem;color:#fff}.ds-h{margin:0;color:inherit;font-size:1.6rem;line-height:1.25;font-weight:700}.ds-who{display:flex;align-items:center;gap:10px;margin:14px 0 0;font-size:.95rem;font-weight:600;color:#4a5650}.ds-sw{width:14px;height:14px;border-radius:3px;background:#7fb7a4}.ds-points{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}.ds-points li{display:flex;gap:12px;align-items:baseline;font-size:1.05rem;line-height:1.6;font-weight:500}.ds-points li::before{content:'';flex:none;width:8px;height:8px;border-radius:50%;background:#f26b21;transform:translateY(-2px)}"
+    },
+    {
+      "name": "Ask Panel",
+      "kind": "card",
+      "refersTo": "ask-panel",
+      "description": "Grille-green panel on solution pages: orange primary and a Window Glow ghost button.",
+      "html": "<form class=\"ds-ask-panel\"><h2 class=\"ds-ask-h\">告訴我們您的需求</h2><p>留下聯絡方式，專人會回覆。</p><div class=\"ds-row\"><button class=\"ds-b\">開始諮詢</button><a class=\"ds-b ds-ghost\" href=\"#\">LINE</a></div></form>",
+      "css": ".ds-ask-panel{padding:24px;border-radius:16px;background:#2f4a3e;color:#fbf8f2;font-family:'Noto Sans TC',system-ui,sans-serif}.ds-ask-h{margin:0 0 18px;color:inherit;font-size:1.35rem;font-weight:700}.ds-ask-panel p{margin:0 0 18px;line-height:1.7;color:rgba(251,248,242,.88)}.ds-row{display:flex;flex-wrap:wrap;gap:10px}.ds-b{font:inherit;font-weight:700;display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;border:0;background:#c94f12;color:#fff;cursor:pointer;text-decoration:none}.ds-b:hover{background:#b3460f}.ds-b:focus-visible{outline:2px solid #ffd2a6;outline-offset:3px}.ds-ghost{background:none;border:1.5px solid #ffd2a6;color:#ffd2a6}.ds-ghost:hover{background:rgba(255,210,166,.12)}"
+    },
+    {
+      "name": "Legacy Pill (migrates later)",
+      "kind": "button",
+      "refersTo": "legacy-pill-primary",
+      "description": "Legacy Apple-profile primary pill used by tiles below the rooms: #b8431f fill, white 400 label.",
+      "html": "<a class=\"ds-legacy-pill\" href=\"#\">了解更多</a>",
+      "css": ".ds-legacy-pill{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-decoration:none;font-family:'Noto Sans TC',system-ui,sans-serif;font-size:1.0625rem;font-weight:400;letter-spacing:-.022em;padding:11px 22px;min-height:44px;border-radius:9999px;background:#b8431f;color:#fff;transition:background .2s ease}.ds-legacy-pill:hover{background:#9e391b}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Lit Window",
+    "overview": "One ordinary tiled Taiwanese building at dusk holds every enGo solution, and the light behind a window is enGo. The system is photographic rather than illustrated: a full-bleed 16:9 dusk photograph with orange dots on four windows, then paper-coloured rooms that open each floor as a larger photograph beside a short list. Colour is sampled from the photograph so interface and image read as one place. Type is Noto Sans TC set large, heavy at headline size and calm everywhere else.",
+    "keyCharacteristics": [
+      "Photograph first: the hero stage keeps the photo's exact 16:9 ratio so window hotspots stay on their windows.",
+      "Dark dusk hero, warm terrazzo-paper rooms, grille-green accents; no white tile and no cool grey inside the world.",
+      "One action colour (enGo orange), one ink (#1e2a25), one muted ink (#4a5650).",
+      "Honesty is visual: every generated photo carries 示意圖; status is an outlined pill, 'in use' is a mint pill.",
+      "No text above headings.",
+      "Motion is one authored moment plus scroll-driven depth, on transform and opacity, off under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Sampled Colour Rule",
+        "body": "A colour enters the world only if it can be found in the photograph (sky, window, tile, terrazzo, grille) or is ink on paper. New hues need a photographic source.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Action Rule",
+        "body": "#c94f12 fills one primary action per surface and always carries a white label. Orange text on paper uses #b3460f. #f26b21 is light, not ink: it marks windows and bullets on dark grounds and is never set behind or as text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Inherit Rule",
+        "body": "Global h1 to h6 carry color #1d1d1f, which would make headings vanish on dusk and green. Every heading in a world component sets color: inherit.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Kicker Rule",
+        "body": "No eyebrow, label or counter sits above a heading. The role-and-product line sits beneath the room title. The breadcrumb is navigation, not a kicker.",
+        "section": "typography"
+      },
+      {
+        "name": "The Resting Surface Rule",
+        "body": "A shadow belongs only to a surface that sits on a photograph or paper (dot, label, desk, room photo). Flat rows, pills and bands carry none.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do set every world heading to color: inherit.",
+      "Do keep orange as one fill (#c94f12, white label) per surface and as link text only at #b3460f on paper.",
+      "Do put the 示意圖 label on every generated photograph, in its alt text and in a provenance sidecar.",
+      "Do show pilot, in-development and project-based states as outlined pills and in-use as the mint pill.",
+      "Do keep entry and scroll motion on transform and opacity, wrapped in prefers-reduced-motion: no-preference, with scroll-driven effects inside @supports (animation-timeline: view()).",
+      "Do place hotspots by percentage on the exact 16:9 stage.",
+      "Do keep every action at 44px or taller."
+    ],
+    "donts": [
+      "Don't put a kicker, eyebrow, counter or caps label above a heading.",
+      "Don't use Window Light (#f26b21) as text or under white text.",
+      "Don't introduce a colour with no source in the photograph.",
+      "Don't let a generated photo ship without 示意圖.",
+      "Don't soften pilot, in-development or project-based states into an in-use look, or hide them.",
+      "Don't fill a section with Label Glass or a scrim; they exist to keep text legible on a photograph."
+    ],
+    "legacyLayer": {
+      "note": "Apple-profile layer (adopted 2026-10-18, PR #61) still governs sections below the rooms and all other pages; it migrates in later PRs. Tokens carry the legacy- prefix.",
+      "unresolvedConflicts": [
+        "Two close oranges serve one action role: world #c94f12 / #b3460f versus legacy #b8431f / #9e391b.",
+        "The rooms' paper ground (#fbf8f2) is directly followed by the legacy parchment tile (#f5f5f7): two near-identical light grounds."
+      ]
+    }
+  }
+}

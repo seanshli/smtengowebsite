@@ -111,6 +111,14 @@ const readJson = (rel) => JSON.parse(readFileSync(join(HERE, '..', rel), 'utf-8'
 const plain = (s) => String(s || '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\*\*/g, '').replace(/\s*\n+\s*/g, ' ').trim()
 const pickL = (o, L) => (o && (o[L] ?? o.zh ?? o.en)) || ''
 
+// Solution pages (facelift 2026-11-24): one shell per solution and locale, titled exactly as
+// src/utils/seo.ts titles them at runtime ("<area> · <product> | enGo"), described by the lede.
+export const SOLUTIONS = readJson('src/data/solutions.json').solutions
+export const solutionTitle = (s, L) => `${pickL(s.area, L)}${s.product ? ' · ' + s.product : ''} | enGo`
+for (const s of SOLUTIONS) {
+  ROUTES[`/solutions/${s.id}`] = Object.fromEntries(LANGS.map((L) => [L, [solutionTitle(s, L), plain(pickL(s.lede, L))]]))
+}
+
 /**
  * Structured data for crawlers and answer engines (AI-SEO). Lives in the static
  * shells, not the SPA bundle, so it is there before any JavaScript runs.
@@ -150,6 +158,20 @@ export function jsonLdFor(route, lang) {
       areaServed: 'TW', inLanguage: 'zh-Hant',
       parentOrganization: { '@type': 'Organization', name: LEGAL_NAME, url: BASE },
       sameAs: [`${BASE}${prefix}/product#shop`],
+    })
+  }
+  if (route.startsWith('/solutions/')) {
+    const s = SOLUTIONS.find((x) => `/solutions/${x.id}` === route)
+    if (s) blocks.push({
+      '@context': 'https://schema.org', '@type': 'Service',
+      name: pickL(s.area, L) + (s.product ? ` (${s.product})` : ''),
+      ...(s.product ? { alternateName: s.product } : {}),
+      description: plain(pickL(s.lede, L)),
+      serviceType: pickL(s.area, L),
+      areaServed: 'TW',
+      url: `${BASE}${prefix}${route}`,
+      provider: { '@type': 'Organization', name: LEGAL_NAME, url: BASE },
+      ...(s.image ? { image: `${BASE}/images/building/${s.image}-1600.webp` } : {}),
     })
   }
   if (route === '/tutorial') {

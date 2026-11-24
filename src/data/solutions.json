@@ -1,0 +1,670 @@
+{
+  "meta": {
+    "updated": "2026-11-24",
+    "source": "文件-網站回饋/2026-11-24_產品事實表/ (HMS: KB-001/UM-001; Care.md; BMS.md; Shop.md; ERP-CRM整合.md). status: live = 已上線; pilot = 接受試點 (in development, no production tenant); dev = 開發中; project = 依專案洽詢."
+  },
+  "hero": {
+    "image": "hero-building-dusk",
+    "title": {
+      "zh": "讓日子更輕鬆，\n就藏在您\n已經有的地方。",
+      "zhCN": "让日子更轻松，\n就藏在您\n已经有的地方。",
+      "en": "Easier days,\nhidden in what\nyou already have.",
+      "ja": "もっと楽な毎日は、\nすでにお持ちの\nものの中に。",
+      "fr": "Des journées plus simples,\ncachées dans ce que\nvous avez déjà.",
+      "es": "Días más fáciles,\nescondidos en lo que\nya tiene."
+    },
+    "lede": {
+      "zh": "enGo 在您的住家、大樓、照護據點與店面背後，把每天的小麻煩收好，讓時間留給更重要的事。",
+      "zhCN": "enGo 在您的住家、大楼、照护据点与店面背后，把每天的小麻烦收好，让时间留给更重要的事。",
+      "en": "enGo works quietly behind your home, your building, your care centre and your shop, tidying away the small daily chores so your time goes to what matters.",
+      "ja": "enGo は、お住まい、ビル、ケア拠点、店舗の裏側で、日々の小さな手間を静かに片づけ、大切なことに使う時間を生み出します。",
+      "fr": "enGo travaille discrètement en coulisses dans votre logement, votre immeuble, votre centre de soins et votre commerce : il range les petites corvées du quotidien pour que votre temps aille à l’essentiel.",
+      "es": "enGo trabaja discretamente detrás de su hogar, su edificio, su centro de cuidado y su tienda, y se encarga de las pequeñas tareas diarias para que su tiempo se dedique a lo que importa."
+    },
+    "hint": {
+      "zh": "點一扇亮著的窗，看看那一層的日常",
+      "zhCN": "点一扇亮着的窗，看看那一层的日常",
+      "en": "Tap a lit window to see that floor's day",
+      "ja": "明かりのついた窓をタップすると、そのフロアの日常をご覧いただけます",
+      "fr": "Touchez une fenêtre allumée pour voir le quotidien de cet étage",
+      "es": "Toque una ventana iluminada para ver el día a día de ese piso"
+    },
+    "counterTitle": {
+      "zh": "管理室｜告訴我們您的需求",
+      "zhCN": "管理室｜告诉我们您的需求",
+      "en": "Front desk · tell us what you need",
+      "ja": "管理室｜ご要望をお聞かせください",
+      "fr": "Accueil | Dites-nous ce dont vous avez besoin",
+      "es": "Recepción | Cuéntenos lo que necesita"
+    },
+    "counterAction": {
+      "zh": "開始諮詢",
+      "zhCN": "开始咨询",
+      "en": "Start a conversation",
+      "ja": "相談を始める",
+      "fr": "Démarrer la conversation",
+      "es": "Iniciar una conversación"
+    },
+    "sample": {
+      "zh": "示意圖",
+      "zhCN": "示意图",
+      "en": "Illustrative image",
+      "ja": "イメージ図",
+      "fr": "Image illustrative",
+      "es": "Imagen ilustrativa"
+    },
+    "roomsTitle": {
+      "zh": "亮著的窗後面，是每天的日常。",
+      "zhCN": "亮着的窗后面，是每天的日常。",
+      "en": "Behind every lit window, an ordinary day.",
+      "ja": "明かりのついた窓の向こうには、いつもの毎日があります。",
+      "fr": "Derrière chaque fenêtre allumée, une journée ordinaire.",
+      "es": "Detrás de cada ventana iluminada, un día cualquiera."
+    }
+  },
+  "solutions": [
+    {
+      "id": "home",
+      "product": "enGo HMS",
+      "tone": "mint",
+      "image": "room-home",
+      "hotspot": {
+        "x": 46.9,
+        "y": 19.1
+      },
+      "area": {
+        "zh": "住家",
+        "zhCN": "住家",
+        "en": "Home",
+        "ja": "住まい",
+        "fr": "Logement",
+        "es": "Hogar"
+      },
+      "role": {
+        "zh": "住戶",
+        "zhCN": "住户",
+        "en": "Residents",
+        "ja": "住民の方",
+        "fr": "Résidents",
+        "es": "Residentes"
+      },
+      "line": {
+        "zh": "回家前，冷氣和燈已經準備好。",
+        "zhCN": "回家前，冷气和灯已经准备好。",
+        "en": "The lights and air-con are ready before you get home.",
+        "ja": "帰宅前に、照明とエアコンの準備が整っています。",
+        "fr": "L’éclairage et la climatisation sont prêts avant votre retour.",
+        "es": "La iluminación y el aire acondicionado ya están listos antes de que llegue a casa."
+      },
+      "title": {
+        "zh": "回家前就準備好，\n出門時不用回頭檢查。",
+        "zhCN": "回家前就准备好，\n出门时不用回头检查。",
+        "en": "Ready before you're home,\nno second-guessing when you leave.",
+        "ja": "帰宅前に準備は完了。\n外出時に戻って確認する必要もありません。",
+        "fr": "Tout est prêt avant votre retour,\nplus besoin de vérifier en partant.",
+        "es": "Todo listo antes de llegar,\nsin tener que revisar al salir."
+      },
+      "lede": {
+        "zh": "一台牆掛平板、一支手機 App，管理家裡的燈、冷氣、窗簾與感測器；社區公告、報修、公設預約與包裹通知也在同一個 App。",
+        "zhCN": "一台墙挂平板、一支手机 App，管理家里的灯、冷气、窗帘与传感器；社区公告、报修、公设预约与包裹通知也在同一个 App。",
+        "en": "One wall tablet and one phone app run the lights, air-con, curtains and sensors at home, and the same app carries community notices, repair requests, facility booking and parcel alerts.",
+        "ja": "壁掛けタブレット1台とスマートフォンアプリ1つで、自宅の照明、エアコン、カーテン、センサーを管理できます。コミュニティのお知らせ、修理依頼、共用施設の予約、荷物の通知も同じアプリで確認できます。",
+        "fr": "Une tablette murale et une application mobile pilotent l’éclairage, la climatisation, les rideaux et les capteurs du logement ; la même application regroupe aussi les avis de la résidence, les demandes de réparation, la réservation des équipements communs et les alertes de colis.",
+        "es": "Una tableta de pared y una aplicación en el celular controlan las luces, el aire acondicionado, las cortinas y los sensores del hogar, y la misma aplicación reúne los avisos de la comunidad, las solicitudes de reparación, la reserva de áreas comunes y las alertas de paquetes."
+      },
+      "points": [
+        {
+          "status": "live",
+          "zh": "牆掛平板與 enGo智慧管家 App（iOS、Android），同一組帳號",
+          "zhCN": "墙挂平板与 enGo智慧管家 App（iOS、Android），同一组帐号",
+          "en": "Wall tablet plus the enGo智慧管家 app for iOS and Android, on one account",
+          "ja": "壁掛けタブレットと enGo智慧管家 アプリ（iOS、Android）を、同じアカウントで利用",
+          "fr": "Tablette murale et application enGo智慧管家 pour iOS et Android, avec un seul compte",
+          "es": "Tableta de pared y la aplicación enGo智慧管家 para iOS y Android, con una sola cuenta"
+        },
+        {
+          "status": "live",
+          "zh": "燈光、空調、窗簾與感測器；一鍵執行常用情境",
+          "zhCN": "灯光、空调、窗帘与传感器；一键运行常用情境",
+          "en": "Lights, air-con, curtains and sensors; common scenes in one tap",
+          "ja": "照明、エアコン、カーテン、センサー。よく使うシーンをワンタップで実行",
+          "fr": "Éclairage, climatisation, rideaux et capteurs ; les scènes courantes en un geste",
+          "es": "Luces, aire acondicionado, cortinas y sensores; las escenas de uso frecuente con un solo toque"
+        },
+        {
+          "status": "live",
+          "zh": "社區公告、報修、公設預約與包裹通知",
+          "zhCN": "社区公告、报修、公设预约与包裹通知",
+          "en": "Community notices, repair requests, facility booking and parcel alerts",
+          "ja": "コミュニティのお知らせ、修理依頼、共用施設の予約、荷物の通知",
+          "fr": "Avis de la résidence, demandes de réparation, réservation des équipements communs et alertes de colis",
+          "es": "Avisos de la comunidad, solicitudes de reparación, reserva de áreas comunes y alertas de paquetes"
+        },
+        {
+          "status": "live",
+          "zh": "語音操作在牆掛平板上使用",
+          "zhCN": "语音操作在墙挂平板上使用",
+          "en": "Voice control on the wall tablet",
+          "ja": "音声操作は壁掛けタブレットでご利用いただけます",
+          "fr": "Commande vocale sur la tablette murale",
+          "es": "Control por voz en la tableta de pared"
+        }
+      ],
+      "products": [
+        {
+          "zh": "enGo AI 智慧中控系統",
+          "zhCN": "enGo AI 智慧中控系统",
+          "en": "enGo AI Smart Hub",
+          "to": "/product",
+          "ja": "enGo AI Smart Hub",
+          "fr": "enGo AI Smart Hub",
+          "es": "enGo AI Smart Hub"
+        },
+        {
+          "zh": "水維氧 AI 智慧淨水系統",
+          "zhCN": "水维氧 AI 智慧净水系统",
+          "en": "Shui Wei Yang AI water system",
+          "to": "/product?jump=oxygen",
+          "ja": "Shui Wei Yang AI 浄水システム",
+          "fr": "Système d’eau AI Shui Wei Yang",
+          "es": "Sistema de agua AI Shui Wei Yang"
+        },
+        {
+          "zh": "套裝方案",
+          "zhCN": "套装方案",
+          "en": "Packages",
+          "to": "/packages",
+          "ja": "パッケージプラン",
+          "fr": "Offres packagées",
+          "es": "Paquetes"
+        }
+      ],
+      "interest": "smarthome"
+    },
+    {
+      "id": "care",
+      "product": "enGo Care",
+      "tone": "butter",
+      "image": "room-care",
+      "hotspot": {
+        "x": 54,
+        "y": 42.8
+      },
+      "area": {
+        "zh": "照護",
+        "zhCN": "照护",
+        "en": "Care",
+        "ja": "ケア",
+        "fr": "Soins",
+        "es": "Cuidado"
+      },
+      "role": {
+        "zh": "照服員",
+        "zhCN": "照服员",
+        "en": "Caregivers",
+        "ja": "介護スタッフ",
+        "fr": "Aides-soignants",
+        "es": "Cuidadores"
+      },
+      "line": {
+        "zh": "今天哪位長輩需要多一點關心，一早就看得到。",
+        "zhCN": "今天哪位长辈需要多一点关心，一早就看得到。",
+        "en": "See first thing which elders need a little more attention today.",
+        "ja": "今日、どの高齢者にもう少し気を配るべきか、朝一番でわかります。",
+        "fr": "Dès le matin, on voit quelles personnes âgées ont besoin d’un peu plus d’attention aujourd’hui.",
+        "es": "Desde temprano se ve qué adultos mayores necesitan un poco más de atención hoy."
+      },
+      "title": {
+        "zh": "時間花在長輩身上，\n不是表格上。",
+        "zhCN": "时间花在长辈身上，\n不是表格上。",
+        "en": "Time for the elders,\nnot for the forms.",
+        "ja": "時間は、書類ではなく\n高齢者のために。",
+        "fr": "Du temps pour les aînés,\npas pour les formulaires.",
+        "es": "Tiempo para los adultos mayores,\nno para los formularios."
+      },
+      "lede": {
+        "zh": "給日照與長照據點的每日管理：從您已經在用的照護紀錄與設備匯出資料，整理成今天要看的總覽、評鑑指標與每月報告。",
+        "zhCN": "给日照与长照据点的每日管理：从您已经在用的照护纪录与设备导出数据，整理成今天要看的总览、评鉴指针与每月报告。",
+        "en": "Daily management for day-care and long-term-care sites: it takes the exports from the care-record systems and devices you already use and turns them into today's overview, evaluation indicators and a monthly report.",
+        "ja": "デイケア・長期介護拠点向けの日次管理です。すでにお使いの介護記録システムや機器からエクスポートしたデータをもとに、本日の概況、評価指標、月次レポートにまとめます。",
+        "fr": "Gestion quotidienne pour les accueils de jour et les établissements de soins de longue durée : à partir des exports des systèmes de dossiers de soins et des appareils que vous utilisez déjà, elle produit la vue du jour, les indicateurs d’évaluation et un rapport mensuel.",
+        "es": "Gestión diaria para centros de día y de cuidados de largo plazo: toma las exportaciones de los sistemas de registro de cuidados y los dispositivos que ya utiliza y las convierte en el resumen del día, los indicadores de evaluación y un reporte mensual."
+      },
+      "points": [
+        {
+          "status": "live",
+          "zh": "據點今日總覽：到園、運動與量測、需要注意的長輩",
+          "zhCN": "据点今日总览：到园、运动与量测、需要注意的长辈",
+          "en": "Today's overview: attendance, exercise and measurements, who needs attention",
+          "ja": "拠点の本日の概況：出席、運動と測定、注意が必要な高齢者",
+          "fr": "Vue du jour du site : présences, exercice et mesures, personnes nécessitant de l’attention",
+          "es": "Resumen del día del centro: asistencia, ejercicio y mediciones, y quiénes requieren atención"
+        },
+        {
+          "status": "live",
+          "zh": "評鑑指標：出席、運動參與、意外事件、家屬滿意度，附 6 個月趨勢",
+          "zhCN": "评鉴指针：出席、运动参与、意外事件、家属满意度，附 6 个月趋势",
+          "en": "Evaluation indicators: attendance, exercise participation, incidents and family satisfaction, with six-month trends",
+          "ja": "評価指標：出席、運動参加、事故、家族満足度。6か月の推移つき",
+          "fr": "Indicateurs d’évaluation : présence, participation aux exercices, incidents et satisfaction des familles, avec tendances sur six mois",
+          "es": "Indicadores de evaluación: asistencia, participación en ejercicio, incidentes y satisfacción de las familias, con tendencias de seis meses"
+        },
+        {
+          "status": "live",
+          "zh": "每月證據報告自動產出",
+          "zhCN": "每月证据报告自动产出",
+          "en": "Monthly evidence report produced automatically",
+          "ja": "月次のエビデンスレポートを自動作成",
+          "fr": "Rapport mensuel de preuves produit automatiquement",
+          "es": "Reporte mensual de evidencias generado automáticamente"
+        },
+        {
+          "status": "live",
+          "zh": "設備沒資料，或與長輩自身近期紀錄差異達門檻時，提醒人員查看",
+          "zhCN": "设备没数据，或与长辈自身近期纪录差异达门槛时，提醒人员查看",
+          "en": "Reminds staff to check when a device stops sending data, or when a reading differs from the person's own recent record by more than a set threshold",
+          "ja": "機器のデータが途絶えたとき、またはご本人の最近の記録との差が設定値を超えたときに、スタッフへ確認を促します",
+          "fr": "Invite le personnel à vérifier lorsqu’un appareil ne transmet plus, ou lorsqu’une mesure s’écarte de l’historique récent de la personne au-delà d’un seuil défini",
+          "es": "Avisa al personal para que revise cuando un dispositivo deja de enviar datos o cuando una lectura difiere del registro reciente de la persona más allá de un umbral definido"
+        },
+        {
+          "status": "live",
+          "zh": "工作人員登入需雙重驗證，個資加密保存",
+          "zhCN": "工作人员登录需双重验证，个资加密保存",
+          "en": "Two-factor sign-in for staff, personal data stored encrypted",
+          "ja": "スタッフのログインは二要素認証、個人情報は暗号化して保管",
+          "fr": "Connexion à double authentification pour le personnel, données personnelles stockées chiffrées",
+          "es": "Inicio de sesión con verificación en dos pasos para el personal y datos personales almacenados cifrados"
+        }
+      ],
+      "products": [],
+      "interest": "care"
+    },
+    {
+      "id": "building",
+      "product": "enGo BMS",
+      "tone": "salmon",
+      "image": "room-lobby",
+      "hotspot": {
+        "x": 79.8,
+        "y": 45.7
+      },
+      "area": {
+        "zh": "大樓與物業",
+        "zhCN": "大楼与物业",
+        "en": "Building & property",
+        "ja": "ビル・不動産管理",
+        "fr": "Immeuble et gestion immobilière",
+        "es": "Edificio y administración de propiedades"
+      },
+      "role": {
+        "zh": "物業總幹事",
+        "zhCN": "物业总干事",
+        "en": "Property managers",
+        "ja": "管理会社の責任者",
+        "fr": "Gestionnaires d’immeuble",
+        "es": "Administradores de propiedades"
+      },
+      "line": {
+        "zh": "報修、公告、公設預約，不用再一件件追。",
+        "zhCN": "报修、公告、公设预约，不用再一件件追。",
+        "en": "Repairs, notices and bookings, without chasing each one.",
+        "ja": "修理依頼、お知らせ、施設予約を、一件ずつ追いかける必要はありません。",
+        "fr": "Réparations, avis et réservations, sans avoir à courir après chacun.",
+        "es": "Reparaciones, avisos y reservas, sin tener que perseguir cada uno."
+      },
+      "title": {
+        "zh": "少跑一趟，\n多一點時間給住戶。",
+        "zhCN": "少跑一趟，\n多一点时间给住户。",
+        "en": "One less trip,\nmore time for residents.",
+        "ja": "現場への移動を1回減らし、\n住民のための時間を増やす。",
+        "fr": "Un déplacement de moins,\nplus de temps pour les résidents.",
+        "es": "Un viaje menos,\nmás tiempo para los residentes."
+      },
+      "lede": {
+        "zh": "住戶今天就在 enGo智慧管家 App 裡看公告、報修、預約公設、收包裹通知；給管委會與物業的管理平台正在開發，接受試點社區。",
+        "zhCN": "住户今天就在 enGo智慧管家 App 里看公告、报修、预约公设、收包裹通知；给管委会与物业的管理平台正在开发，接受试点社区。",
+        "en": "Residents already read notices, report repairs, book facilities and get parcel alerts in the enGo智慧管家 app. The management platform for committees and property managers is in development, and we are taking pilot communities.",
+        "ja": "住民の方は、enGo智慧管家 アプリで、お知らせの確認、修理依頼、共用施設の予約、荷物の通知の受け取りをすでにご利用いただけます。管理組合・管理会社向けの管理プラットフォームは開発中で、パイロットコミュニティを受け付けています。",
+        "fr": "Les résidents lisent déjà les avis, signalent les réparations, réservent les équipements communs et reçoivent les alertes de colis dans l’application enGo智慧管家. La plateforme de gestion destinée aux conseils syndicaux et aux gestionnaires est en développement, et nous accueillons des résidences pilotes.",
+        "es": "Los residentes ya leen avisos, reportan reparaciones, reservan áreas comunes y reciben alertas de paquetes en la aplicación enGo智慧管家. La plataforma de administración para comités y administradores está en desarrollo y estamos recibiendo comunidades piloto."
+      },
+      "status": "pilot",
+      "points": [
+        {
+          "status": "live",
+          "zh": "社區公告、報修、公設預約、包裹通知：住戶已在 App 使用",
+          "zhCN": "社区公告、报修、公设预约、包裹通知：住户已在 App 使用",
+          "en": "Notices, repairs, facility booking and parcel alerts: residents use them in the app today",
+          "ja": "お知らせ、修理依頼、共用施設の予約、荷物の通知：住民の方は現在アプリで利用中",
+          "fr": "Avis, réparations, réservation des équipements communs et alertes de colis : les résidents les utilisent dès aujourd’hui dans l’application",
+          "es": "Avisos, reparaciones, reserva de áreas comunes y alertas de paquetes: los residentes ya los usan en la aplicación"
+        },
+        {
+          "status": "pilot",
+          "zh": "管理平台：接受試點社區",
+          "zhCN": "管理平台：接受试点社区",
+          "en": "Management platform: taking pilot communities",
+          "ja": "管理プラットフォーム：パイロットコミュニティを受付中",
+          "fr": "Plateforme de gestion : accueil de résidences pilotes",
+          "es": "Plataforma de administración: recibiendo comunidades piloto"
+        },
+        {
+          "status": "project",
+          "zh": "新建案導入：依專案洽詢",
+          "zhCN": "新建案导入：依项目洽询",
+          "en": "New developments: by project",
+          "ja": "新築物件への導入：プロジェクトごとにご相談",
+          "fr": "Programmes neufs : selon le projet",
+          "es": "Desarrollos nuevos: por proyecto"
+        }
+      ],
+      "products": [],
+      "interest": "building"
+    },
+    {
+      "id": "shop",
+      "product": "enGo Shop",
+      "tone": "terrazzo",
+      "image": "room-shop",
+      "hotspot": {
+        "x": 48.8,
+        "y": 75.2
+      },
+      "area": {
+        "zh": "店家與通路",
+        "zhCN": "店家与通路",
+        "en": "Shops & channels",
+        "ja": "店舗・販路",
+        "fr": "Commerces et réseaux de distribution",
+        "es": "Tiendas y canales"
+      },
+      "role": {
+        "zh": "店家與經銷",
+        "zhCN": "店家与经销",
+        "en": "Shops and dealers",
+        "ja": "店舗・販売代理店",
+        "fr": "Commerçants et distributeurs",
+        "es": "Tiendas y distribuidores"
+      },
+      "line": {
+        "zh": "訂單、會員、促銷，在同一個後台。",
+        "zhCN": "订单、会员、促销，在同一个后台。",
+        "en": "Orders, members and promotions in one back office.",
+        "ja": "注文、会員、プロモーションを、ひとつの管理画面で。",
+        "fr": "Commandes, membres et promotions dans un seul back-office.",
+        "es": "Pedidos, miembros y promociones en un solo panel administrativo."
+      },
+      "title": {
+        "zh": "小店也有\n一個好用的後台。",
+        "zhCN": "小店也有\n一个好用的后台。",
+        "en": "A good back office,\neven for a small shop.",
+        "ja": "小さな店にも、\n使いやすい管理画面を。",
+        "fr": "Un bon back-office,\nmême pour une petite boutique.",
+        "es": "Un buen panel administrativo,\nincluso para una tienda pequeña."
+      },
+      "lede": {
+        "zh": "enGo 安購商城讓社區店家與品牌在同一個平台上架、接單、收款、做促銷；經銷管理正在開發。",
+        "zhCN": "enGo 安购商城让社区店家与品牌在同一个平台上架、接单、收款、做促销；经销管理正在开发。",
+        "en": "enGo Shop lets neighbourhood stores and brands list products, take orders, get paid and run promotions on one platform. Dealer management is in development.",
+        "ja": "enGo Shop では、地域の店舗やブランドが、ひとつのプラットフォーム上で商品の掲載、受注、決済、プロモーションを行えます。販売代理店管理は開発中です。",
+        "fr": "enGo Shop permet aux commerces de quartier et aux marques de référencer leurs produits, de prendre des commandes, d’être payés et de lancer des promotions sur une seule plateforme. La gestion des distributeurs est en développement.",
+        "es": "enGo Shop permite a las tiendas de barrio y a las marcas publicar productos, recibir pedidos, cobrar y realizar promociones en una sola plataforma. La administración de distribuidores está en desarrollo."
+      },
+      "points": [
+        {
+          "status": "live",
+          "zh": "多商家商城與訂閱方案",
+          "zhCN": "多商家商城与订阅方案",
+          "en": "Multi-merchant store and subscriptions",
+          "ja": "複数加盟店対応のストアと定期購入プラン",
+          "fr": "Boutique multi-marchands et abonnements",
+          "es": "Tienda multicomercio y suscripciones"
+        },
+        {
+          "status": "live",
+          "zh": "團購與優惠券",
+          "zhCN": "团购与优惠券",
+          "en": "Group buying and coupons",
+          "ja": "共同購入とクーポン",
+          "fr": "Achats groupés et coupons",
+          "es": "Compras en grupo y cupones"
+        },
+        {
+          "status": "live",
+          "zh": "線上刷卡與電子發票",
+          "zhCN": "在线刷卡与电子发票",
+          "en": "Card payment and e-invoices",
+          "ja": "オンラインのカード決済と電子インボイス",
+          "fr": "Paiement par carte en ligne et factures électroniques",
+          "es": "Pago con tarjeta en línea y facturas electrónicas"
+        },
+        {
+          "status": "dev",
+          "zh": "經銷管理：開發中",
+          "zhCN": "经销管理：开发中",
+          "en": "Dealer management: in development",
+          "ja": "販売代理店管理：開発中",
+          "fr": "Gestion des distributeurs : en développement",
+          "es": "Administración de distribuidores: en desarrollo"
+        }
+      ],
+      "products": [
+        {
+          "zh": "前往 enGo 安購商城",
+          "zhCN": "前往 enGo 安购商城",
+          "en": "Open enGo Shop",
+          "href": "https://shoph5.smtengo.com/",
+          "ja": "enGo Shop を開く",
+          "fr": "Ouvrir enGo Shop",
+          "es": "Abrir enGo Shop"
+        }
+      ],
+      "interest": "shop"
+    },
+    {
+      "id": "integration",
+      "product": "",
+      "tone": "iron",
+      "image": "",
+      "hotspot": null,
+      "area": {
+        "zh": "系統整合",
+        "zhCN": "系统集成",
+        "en": "System integration",
+        "ja": "システム連携",
+        "fr": "Intégration de systèmes",
+        "es": "Integración de sistemas"
+      },
+      "role": {
+        "zh": "資訊與營運團隊",
+        "zhCN": "信息与营运团队",
+        "en": "IT and operations teams",
+        "ja": "IT・運用チーム",
+        "fr": "Équipes informatiques et d’exploitation",
+        "es": "Equipos de TI y operaciones"
+      },
+      "line": {
+        "zh": "從您已經在用的系統開始，不必全部換掉。",
+        "zhCN": "从您已经在用的系统开始，不必全部换掉。",
+        "en": "Start from the systems you already run, without replacing them.",
+        "ja": "すでにお使いのシステムから始めます。入れ替える必要はありません。",
+        "fr": "Partez des systèmes que vous utilisez déjà, sans les remplacer.",
+        "es": "Empiece con los sistemas que ya utiliza, sin reemplazarlos."
+      },
+      "title": {
+        "zh": "從您已經在用的系統開始，\n不必全部換掉。",
+        "zhCN": "从您已经在用的系统开始，\n不必全部换掉。",
+        "en": "Start from what you already run,\nwithout replacing it.",
+        "ja": "すでにお使いのシステムから始め、\nすべてを入れ替える必要はありません。",
+        "fr": "Partez de ce que vous utilisez déjà,\nsans tout remplacer.",
+        "es": "Empiece con lo que ya utiliza,\nsin reemplazarlo."
+      },
+      "lede": {
+        "zh": "與既有的 ERP、CRM 或設備的串接，依專案規劃；我們先了解您的流程，再決定接哪裡、怎麼接。",
+        "zhCN": "与既有的 ERP、CRM 或设备的串接，依项目规划；我们先了解您的流程，再决定接哪里、怎么接。",
+        "en": "Connecting to an existing ERP, CRM or equipment is planned project by project: we learn your workflow first, then decide where and how to connect.",
+        "ja": "既存の ERP、CRM、機器との連携は、プロジェクトごとに計画します。まずお客様の業務の流れを把握し、そのうえで、どこにどのように接続するかを決めます。",
+        "fr": "La connexion à un ERP, un CRM ou des équipements existants est planifiée projet par projet : nous commençons par comprendre votre flux de travail, puis nous décidons où et comment nous connecter.",
+        "es": "La conexión con un ERP, un CRM o equipos existentes se planea proyecto por proyecto: primero conocemos su flujo de trabajo y después decidimos dónde y cómo conectar."
+      },
+      "status": "project",
+      "points": [
+        {
+          "status": "project",
+          "zh": "與既有系統串接：依專案規劃",
+          "zhCN": "与既有系统串接：依项目规划",
+          "en": "Connections to existing systems: planned per project",
+          "ja": "既存システムとの連携：プロジェクトごとに計画",
+          "fr": "Connexions aux systèmes existants : planifiées par projet",
+          "es": "Conexiones con sistemas existentes: planeadas por proyecto"
+        },
+        {
+          "status": "live",
+          "zh": "商品、會員等資料可用 CSV 匯入匯出",
+          "zhCN": "商品、会员等数据可用 CSV 导入导出",
+          "en": "Products, members and similar data can be imported and exported as CSV",
+          "ja": "商品や会員などのデータは、CSV で取り込み・書き出しが可能",
+          "fr": "Les données de produits, de membres et similaires peuvent être importées et exportées en CSV",
+          "es": "Los datos de productos, miembros y similares se pueden importar y exportar en CSV"
+        }
+      ],
+      "products": [],
+      "interest": "integration"
+    }
+  ],
+  "statusLabel": {
+    "live": {
+      "zh": "已在用",
+      "zhCN": "已在用",
+      "en": "In use",
+      "ja": "ご利用中",
+      "fr": "En service",
+      "es": "En uso"
+    },
+    "pilot": {
+      "zh": "接受試點",
+      "zhCN": "接受试点",
+      "en": "Taking pilots",
+      "ja": "パイロット受付中",
+      "fr": "Pilotes ouverts",
+      "es": "Recibiendo pilotos"
+    },
+    "dev": {
+      "zh": "開發中",
+      "zhCN": "开发中",
+      "en": "In development",
+      "ja": "開発中",
+      "fr": "En développement",
+      "es": "En desarrollo"
+    },
+    "project": {
+      "zh": "依專案洽詢",
+      "zhCN": "依项目洽询",
+      "en": "By project",
+      "ja": "プロジェクトごとにご相談",
+      "fr": "Selon le projet",
+      "es": "Por proyecto"
+    }
+  },
+  "roomsMore": {
+    "zh": "看這一層怎麼運作",
+    "zhCN": "看这一层怎么运作",
+    "en": "See how this floor works",
+    "ja": "このフロアの仕組みを見る",
+    "fr": "Voir comment fonctionne cet étage",
+    "es": "Ver cómo funciona este piso"
+  },
+  "nav": {
+    "title": {
+      "zh": "解決方案",
+      "zhCN": "解决方案",
+      "en": "Solutions",
+      "ja": "ソリューション",
+      "fr": "Solutions",
+      "es": "Soluciones"
+    },
+    "products": {
+      "zh": "產品與設備",
+      "zhCN": "产品与设备",
+      "en": "Products & devices",
+      "ja": "製品とデバイス",
+      "fr": "Produits et appareils",
+      "es": "Productos y dispositivos"
+    },
+    "all": {
+      "zh": "所有解決方案",
+      "zhCN": "所有解决方案",
+      "en": "All solutions",
+      "ja": "すべてのソリューション",
+      "fr": "Toutes les solutions",
+      "es": "Todas las soluciones"
+    }
+  },
+  "page": {
+    "crumb": {
+      "zh": "解決方案",
+      "zhCN": "解决方案",
+      "en": "Solutions",
+      "ja": "ソリューション",
+      "fr": "Solutions",
+      "es": "Soluciones"
+    },
+    "pointsTitle": {
+      "zh": "現在能做的事",
+      "zhCN": "现在能做的事",
+      "en": "What it does today",
+      "ja": "現在できること",
+      "fr": "Ce que cela permet aujourd’hui",
+      "es": "Lo que hace hoy"
+    },
+    "productsTitle": {
+      "zh": "用到的產品",
+      "zhCN": "用到的产品",
+      "en": "Products involved",
+      "ja": "使用する製品",
+      "fr": "Produits concernés",
+      "es": "Productos involucrados"
+    },
+    "askTitle": {
+      "zh": "告訴我們您的情況",
+      "zhCN": "告诉我们您的情况",
+      "en": "Tell us about your situation",
+      "ja": "状況をお聞かせください",
+      "fr": "Parlez-nous de votre situation",
+      "es": "Cuéntenos su situación"
+    },
+    "askLede": {
+      "zh": "我們會從您已經有的設備與系統開始談，不必全部換掉。",
+      "zhCN": "我们会从您已经有的设备与系统开始谈，不必全部换掉。",
+      "en": "We start from the equipment and systems you already have; nothing needs replacing to begin.",
+      "ja": "すでにお持ちの機器やシステムからご相談を始めます。最初からすべてを入れ替える必要はありません。",
+      "fr": "Nous partons des équipements et des systèmes que vous avez déjà ; rien n’a besoin d’être remplacé pour commencer.",
+      "es": "Partimos de los equipos y sistemas que ya tiene; no es necesario reemplazar nada para empezar."
+    },
+    "askAction": {
+      "zh": "開始諮詢",
+      "zhCN": "开始咨询",
+      "en": "Start a conversation",
+      "ja": "相談を始める",
+      "fr": "Démarrer la conversation",
+      "es": "Iniciar una conversación"
+    },
+    "line": {
+      "zh": "LINE 洽詢",
+      "zhCN": "LINE 洽询",
+      "en": "Ask on LINE",
+      "ja": "LINE でお問い合わせ",
+      "fr": "Nous écrire sur LINE",
+      "es": "Consultar por LINE"
+    },
+    "others": {
+      "zh": "其他樓層",
+      "zhCN": "其他楼层",
+      "en": "Other floors",
+      "ja": "ほかのフロア",
+      "fr": "Autres étages",
+      "es": "Otros pisos"
+    }
+  }
+}

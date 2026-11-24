@@ -2,6 +2,8 @@ import { nextTick } from 'vue'
 import type { RouteLocationNormalized } from 'vue-router'
 import { i18n } from '../main'
 import { rawMessageIn } from './rawMessage'
+import solutionsData from '@/data/solutions.json'
+import { pickField } from '@/composables/useLocaleText'
 
 const LOCALE_TO_HTML_LANG: Record<string, string> = {
   zh: 'zh-TW',
@@ -58,8 +60,14 @@ export function useSeo() {
     const descKey = to.meta.descKey as string || ''
     const keywordsKey = to.meta.keywordsKey as string || ''
 
-    const title = t(titleKey, to.meta.title as string || 'enGo - 住家與社區合一的智慧生活系統')
-    const description = t(descKey, to.meta.description as string || 'enGo 是住家與社區合一的智慧生活系統。')
+    // Solution pages take their title and description from src/data/solutions.json.
+    const sol = to.meta.seoFrom === 'solution' ? (solutionsData.solutions as any[]).find((x) => x.id === to.params.id) : null
+    const title = sol
+      ? `${pickField(locale, sol.area)}${sol.product ? ' · ' + sol.product : ''} | enGo`
+      : t(titleKey, to.meta.title as string || 'enGo - 住家與社區合一的智慧生活系統')
+    const description = sol
+      ? pickField(locale, sol.lede)
+      : t(descKey, to.meta.description as string || 'enGo 是住家與社區合一的智慧生活系統。')
     const keywords = t(keywordsKey, '智管家, enGo, smart home, AIot, 智慧家居')
 
     // 1. Update html lang attribute

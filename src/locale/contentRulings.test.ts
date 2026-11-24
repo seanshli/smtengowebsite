@@ -23,7 +23,7 @@ const stripKeywords = (raw: string): string => {
 
 const COPY: Record<string, string> = {}
 for (const f of ['zh', 'zhCN', 'en', 'ja', 'fr', 'es']) COPY[`src/locale/${f}.ts`] = read(`src/locale/${f}.ts`)
-for (const f of ['cases', 'packages', 'howto', 'faqs', 'news', 'knowledge_base', 'tutorials', 'legal'])
+for (const f of ['cases', 'packages', 'howto', 'faqs', 'news', 'knowledge_base', 'tutorials', 'legal', 'solutions'])
   COPY[`src/data/${f}.json`] = stripKeywords(read(`src/data/${f}.json`))
 for (const f of [...walk('src/views'), ...walk('src/components'), ...walk('src/layout')].filter((p) => p.endsWith('.vue'))) COPY[f] = read(f)
 for (const f of ['public/llms.txt', 'scripts/prerender-meta.mjs', 'index.html']) COPY[f] = read(f)

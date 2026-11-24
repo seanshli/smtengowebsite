@@ -206,8 +206,11 @@ describe('/zh-cn shells', () => {
   it.each(routes)('%s: zh-cn title and description come from the zhCN locale and are free of Traditional-only characters', (route) => {
     const key = route === '/' ? 'home' : route.slice(1)
     const [title, desc] = (ROUTES as any)[route].zhCN as [string, string]
-    expect(rawMessageIn(zhCNLocale, `seo.${key}.title`)).toBe(title)
-    expect(rawMessageIn(zhCNLocale, `seo.${key}.description`)).toBe(desc)
+    // Solution pages are titled from src/data/solutions.json (see seoParity.test.ts), not seo.*.
+    if (!route.startsWith('/solutions/')) {
+      expect(rawMessageIn(zhCNLocale, `seo.${key}.title`)).toBe(title)
+      expect(rawMessageIn(zhCNLocale, `seo.${key}.description`)).toBe(desc)
+    }
     expect(traditionalIn(title + desc)).toEqual([])
     const html = buildHtml(TEMPLATE, route, 'zhCN')
     expect(html).toContain(`<title>${title.replace(/&/g, '&amp;')}</title>`)

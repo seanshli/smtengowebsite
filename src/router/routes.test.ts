@@ -30,7 +30,7 @@ describe('/zh-cn routes', () => {
       router.getRoutes().filter((r) => r.path === prefix || r.path.startsWith(`${prefix}/`)).map((r) => r.path.slice(prefix.length) || '/').sort()
     expect(names('/zh-cn')).toEqual(names('/en'))
     expect(names('/zh-cn')).toContain('/cases/:id')
-    expect(names('/zh-cn').length).toBe(15)
+    expect(names('/zh-cn').length).toBe(16)
   })
 
   it('resolves home, cases/:id, ecosystem and packages under /zh-cn', () => {

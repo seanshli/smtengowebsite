@@ -72,6 +72,8 @@
             <option value="showroom">{{ $t('interestType5') }}</option>
             <option value="smarthome">{{ $t('interestType4') }}</option>
             <option value="other">{{ $t('interestType3') }}</option>
+            <!-- Solution areas (facelift 2026-11): the home page's front desk and each solution page send ?area= -->
+            <option v-for="s in areaOptions" :key="s.interest" :value="s.interest">{{ lt(s.area) }}</option>
           </select>
         </div>
         <div class="input_wrap" v-if="interest === 'product'">
@@ -148,6 +150,7 @@ import { useLocaleText } from '../composables/useLocaleText'
 import { useRoute, useRouter } from 'vue-router'
 import { useAnalytics } from '@/utils/analytics'
 import casesData from '@/data/cases.json'
+import solutionsData from '@/data/solutions.json'
 
 export default defineComponent({
   name: 'Contact',
@@ -178,6 +181,12 @@ export default defineComponent({
 
     const route = useRoute()
     const router = useRouter()
+
+    // ?area=<solution id> (from the home page's front desk or a solution page) preselects the interest.
+    const areaOptions = (solutionsData.solutions as any[]).filter((s) => !['smarthome'].includes(s.interest))
+    const areaParam = String(route.query.area || '')
+    const fromArea = (solutionsData.solutions as any[]).find((s) => s.id === areaParam)
+    if (fromArea) interest.value = fromArea.interest
 
 const jumpToLine = () => {
       trackEvent('click_contact_line')
@@ -319,6 +328,8 @@ const jumpToLine = () => {
 
 
     return {
+      areaOptions,
+      lt,
       name,
       email,
       phone,
