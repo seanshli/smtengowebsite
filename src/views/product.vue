@@ -262,7 +262,7 @@
                 </a>
               </template>
               <template v-slot:valid>
-                <a class="pd-inline-link" href="https://oss.smtengo.com/engo-bucket-prod/device/20240719132511.pdf" target="_blank">
+                <a class="pd-inline-link" href="/docs/engo-w601-bsmi.pdf" target="_blank" rel="noopener">
                   <!-- BSMI商品檢驗 -->
                   {{ $t('product.water_filter.valid') }}
                 </a>

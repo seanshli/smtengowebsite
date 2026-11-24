@@ -289,6 +289,14 @@ describe('mobile layout stability and contrast (review 2026-11-13 P0-2)', () => 
     expect(qa).toContain(':aria-pressed="pickArea === f.id"')
     expect(qa).toContain("query: { area: a }")
   })
+  it('water-filter certificates are served from the site, not the 403 storage bucket', () => {
+    const product = src('src/views/product.vue')
+    expect(product).not.toContain('oss.smtengo.com/engo-bucket-prod')
+    for (const f of ['engo-w601-sgs.pdf', 'engo-w601-bsmi.pdf']) {
+      expect(product).toContain(`href="/docs/${f}"`)
+      expect(readFileSync(resolve(__dirname, '../../public/docs', f)).subarray(0, 5).toString()).toBe('%PDF-')
+    }
+  })
   it('building-world arrows are drawn SVG, not text glyphs', () => {
     for (const f of ['src/components/BuildingHero.vue', 'src/components/SolutionRooms.vue', 'src/views/solution.vue', 'src/components/DeskQa.vue']) {
       expect(src(f)).not.toMatch(/[→↗]/)
