@@ -63,6 +63,10 @@
           </button>
         </div>
         <div class="quick-replies" v-if="messages.length < 3">
+          <!-- On a solution page, that area's own questions come first (they answer from its KB entry). -->
+          <button v-for="q in areaQuestions" :key="q.id" class="quick-area" @click="sendAreaQuestion(q)">
+            {{ lt(q.q) }}
+          </button>
           <button v-for="key in quickReplyKeys" :key="key" @click="sendQuickReply(key)">
             {{ $t(key) }}
           </button>
@@ -73,7 +77,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, nextTick, onMounted } from 'vue'
+import { computed, ref, nextTick, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import solutionsData from '@/data/solutions.json'
+import { useLocaleText } from '@/composables/useLocaleText'
 import { useAnalytics } from '@/utils/analytics'
 import { useI18n } from 'vue-i18n'
 import knowledgeBase from '@/data/knowledge_base.json'
@@ -88,6 +95,29 @@ const isTyping = ref(false)
 const { trackEvent } = useAnalytics()
 
 const { t, locale } = useI18n()
+const { lt } = useLocaleText()
+const route = useRoute()
+
+// /solutions/<id> (any locale prefix): offer that area's prospect questions as one-tap asks.
+const areaQuestions = computed(() => {
+  const m = /\/solutions\/([a-z]+)/.exec(route.path || '')
+  if (!m) return []
+  return ((solutionsData as any).qa.items as any[]).filter((q) => q.area === m[1]).slice(0, 3)
+})
+const QA_LOCALES = ['zh', 'zhCN', 'en', 'ja', 'fr', 'es'] as const
+const qaAnswerFor = (raw: string): { id: string, text: string } | null => {
+  const n = normalizeQuery(raw)
+  const item = ((solutionsData as any).qa.items as any[]).find((q) => QA_LOCALES.some((l) => q.q[l] && normalizeQuery(q.q[l]) === n))
+  if (!item) return null
+  const sol = ((solutionsData as any).solutions as any[]).find((x) => x.id === item.area)
+  const link = sol ? `\n\n🔗 [${lt(sol.area)}${sol.product ? ' · ' + sol.product : ''}](/solutions/${sol.id})` : ''
+  return { id: item.id, text: lt(item.a) + link }
+}
+const sendAreaQuestion = (q: any) => {
+  trackEvent('chatbot_area_question', { id: q.id, area: q.area })
+  userQuery.value = lt(q.q)
+  handleSearch()
+}
 
 const messages = ref<Array<{
   role: string,
@@ -203,6 +233,21 @@ const handleSearch = () => {
   // Show typing indicator
   isTyping.value = true
   scrollToBottom()
+
+  // A prospect question asked word for word (a tapped area question, or typed in any
+  // language) gets its fact-checked Q&A answer; the keyword matcher misroutes several of them.
+  const qaHit = qaAnswerFor(rawQuery)
+  if (qaHit) {
+    setTimeout(() => {
+      isTyping.value = false
+      messages.value.push({ role: 'assistant', text: qaHit.text })
+      // Same two rows the matcher path logs: what was asked, then which entry answered.
+      logQuery(normalized, true)
+      logQuery('kb:' + qaHit.id, true)
+      scrollToBottom()
+    }, 500)
+    return
+  }
 
   setTimeout(() => {
     isTyping.value = false
@@ -619,6 +664,7 @@ const getImageUrl = (name: string) => {
     }
 
     .quick-replies {
+      .quick-area { background: rgba(201, 79, 18, .1); font-weight: 600; }
       display: flex;
       flex-wrap: wrap;
       gap: 6px;

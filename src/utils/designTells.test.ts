@@ -118,10 +118,14 @@ describe('page templates carry no template tells', () => {
     })
     it('the contact form labels every field (no placeholder-as-label)', () => {
         const tpl = templateOf('contact.vue')
-        for (const id of ['cf-name', 'cf-phone', 'cf-email', 'cf-city', 'cf-address', 'cf-interest', 'cf-message']) {
+        for (const id of ['cf-name', 'cf-phone', 'cf-email', 'cf-city', 'cf-address', 'cf-message']) {
             expect(tpl, id).toContain(`for="${id}"`)
             expect(tpl, id).toContain(`id="${id}"`)
         }
+        // The area and every area question are native radio / checkbox groups inside a fieldset with a legend.
+        expect(tpl).toContain('<legend id="cf-interest"')
+        expect(tpl).toMatch(/<input type="radio" name="interest"/)
+        expect(tpl).toMatch(/<input v-if="q.multi" type="checkbox"/)
         expect(tpl).not.toMatch(/:placeholder="`\$\{\$t\('name'\)/)
     })
     it('every store link goes through utils/shopUrl (Sean 2026-09-27: new storefront shoph5.smtengo.com, front page only)', () => {
@@ -325,5 +329,31 @@ describe('page weight (review 2026-11-23: first paint 5.8 s on slow 4G)', () => 
     }
     for (const w of ['12-home-iphone.webp', '12-home-iphone-400.webp', '01-home-tablet.webp', '01-home-tablet-1000.webp'])
       expect(existsSync(resolve(__dirname, '../../public/images/screens', w)), w).toBe(true)
+  })
+})
+
+describe('asking by area (2026-11-24)', () => {
+  const src = (p: string) => readFileSync(resolve(__dirname, '../..', p), 'utf-8')
+  it('the contact form asks each solution area its own questions and folds the answers into one message', () => {
+    const c = src('src/views/contact.vue')
+    expect(c).toContain('ask.questions[currentSol.value.id]')
+    expect(c).toContain('composeMessage()')
+    expect(c).toContain("import { isTaiwanPhone } from '@/utils/phone'")
+    expect(c).toContain(':disabled="sending"')
+    const ask = JSON.parse(src('src/data/solutions.json')).ask
+    for (const id of ['home', 'building', 'care', 'shop', 'integration']) expect(ask.questions[id]?.length, id).toBeGreaterThan(0)
+  })
+  it('the chatbot offers a solution page its own questions first', () => {
+    const bot = src('src/components/Chatbot.vue')
+    expect(bot).toContain('v-for="q in areaQuestions"')
+    expect(bot).toMatch(/\\\/solutions\\\/\(\[a-z\]\+\)/)
+  })
+})
+
+describe('chatbot answers prospect questions from the Q&A (2026-11-24)', () => {
+  it('a tapped or word-for-word prospect question is answered from solutions.json qa, not the keyword matcher', () => {
+    const bot = readFileSync(resolve(__dirname, '../components/Chatbot.vue'), 'utf-8')
+    expect(bot).toContain('const qaHit = qaAnswerFor(rawQuery)')
+    expect(bot).toMatch(/normalizeQuery\(q\.q\[l\]\) === n/)
   })
 })

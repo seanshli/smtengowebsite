@@ -266,6 +266,9 @@ function hreflangBlock(route) {
   ].join('\n')
 }
 
+export const DEFAULT_OG_IMAGE = `${BASE}/og-image-1200x630.jpg`
+export const ogImageFor = (route) => (route.startsWith('/solutions/') ? `${BASE}/images/og/solution-${route.slice('/solutions/'.length)}.jpg` : DEFAULT_OG_IMAGE)
+
 export function buildHtml(template, route, lang) {
   const [title, desc] = ROUTES[route][lang]
   const url = urlFor(route, lang)
@@ -280,6 +283,12 @@ export function buildHtml(template, route, lang) {
   html = html.replace(/<meta property="og:description"[\s\S]*?\/>/, `<meta property="og:description" content="${esc(desc)}" />`)
   html = html.replace(/<meta property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${esc(url)}" />`)
   html = html.replace(/<meta property="og:locale"[^>]*\/>/, `<meta property="og:locale" content="${OG_LOCALE[lang]}" />`)
+  // Share preview: each solution page shows its own room (LINE / Facebook previews), every
+  // other page the site default. Replaced, never appended, so re-running the pass is safe.
+  const ogImage = ogImageFor(route)
+  html = html.replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${esc(ogImage)}" />`)
+  html = html.replace(/<meta property="og:image:alt" content="[^"]*" \/>/, `<meta property="og:image:alt" content="${esc(title)}" />`)
+  html = html.replace(/<meta name="twitter:image" content="[^"]*" \/>/, `<meta name="twitter:image" content="${esc(ogImage)}" />`)
   // Same idempotency need as the alternates above: twitter:description is not
   // in index.html, this pass adds it, and the postbuild pass reads dist/index.html
   // back as its template — without stripping, every shell ends up with two.

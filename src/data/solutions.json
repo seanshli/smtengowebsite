@@ -1050,5 +1050,970 @@
         }
       }
     ]
+  },
+  "ask": {
+    "title": {
+      "zh": "告訴我們您的需求",
+      "zhCN": "告诉我们您的需求",
+      "en": "Tell us what you need",
+      "ja": "ご要望をお聞かせください",
+      "fr": "Parlez-nous de votre besoin",
+      "es": "Cuéntenos qué necesita"
+    },
+    "lede": {
+      "zh": "選一個最接近的情況，回答幾個簡單的問題，專人會依您的情況與您聯繫。",
+      "zhCN": "选一个最接近的情况，回答几个简单的问题，专人会依您的情况与您联系。",
+      "en": "Pick the situation closest to yours and answer a few short questions; our team will contact you with your situation in mind.",
+      "ja": "最も近いご状況を選び、いくつかの簡単な質問にお答えください。担当者がご状況に合わせてご連絡いたします。",
+      "fr": "Choisissez la situation la plus proche de la vôtre et répondez à quelques questions simples ; notre équipe vous contactera en tenant compte de votre situation.",
+      "es": "Elija la situación más cercana a la suya y responda unas preguntas sencillas; una persona de nuestro equipo se pondrá en contacto con usted según su caso."
+    },
+    "areaLabel": {
+      "zh": "您想聊的是",
+      "zhCN": "您想聊的是",
+      "en": "What would you like to talk about?",
+      "ja": "ご相談になりたい内容",
+      "fr": "De quoi souhaitez-vous parler ?",
+      "es": "¿Sobre qué le gustaría hablar?"
+    },
+    "groupSolutions": {
+      "zh": "解決方案",
+      "zhCN": "解决方案",
+      "en": "Solutions",
+      "ja": "ソリューション",
+      "fr": "Solutions",
+      "es": "Soluciones"
+    },
+    "groupOther": {
+      "zh": "其他事情",
+      "zhCN": "其他事情",
+      "en": "Something else",
+      "ja": "その他のご相談",
+      "fr": "Autre sujet",
+      "es": "Otro asunto"
+    },
+    "asking": {
+      "zh": "您正在詢問",
+      "zhCN": "您正在询问",
+      "en": "You are asking about",
+      "ja": "ご相談内容",
+      "fr": "Votre demande concerne",
+      "es": "Usted consulta sobre"
+    },
+    "other": [
+      {
+        "id": "product",
+        "label": {
+          "zh": "購買產品或方案",
+          "zhCN": "购买产品或方案",
+          "en": "Buy a product or package",
+          "ja": "製品・プランのご購入",
+          "fr": "Achat d’un produit ou d’une offre",
+          "es": "Compra de un producto o plan"
+        }
+      },
+      {
+        "id": "fix",
+        "label": {
+          "zh": "報修與售後",
+          "zhCN": "报修与售后",
+          "en": "Repairs and after-sales",
+          "ja": "修理・アフターサービス",
+          "fr": "Réparations et service après-vente",
+          "es": "Reparaciones y posventa"
+        }
+      },
+      {
+        "id": "showroom",
+        "label": {
+          "zh": "預約參觀體驗中心",
+          "zhCN": "预约参观体验中心",
+          "en": "Visit an experience centre",
+          "ja": "体験センターの見学予約",
+          "fr": "Réserver une visite du centre d’expérience",
+          "es": "Reservar una visita al centro de experiencia"
+        }
+      },
+      {
+        "id": "other",
+        "label": {
+          "zh": "其他",
+          "zhCN": "其他",
+          "en": "Other",
+          "ja": "その他",
+          "fr": "Autre",
+          "es": "Otro"
+        }
+      }
+    ],
+    "pickMany": {
+      "zh": "可複選",
+      "zhCN": "可复选",
+      "en": "Choose any",
+      "ja": "複数選択可",
+      "fr": "Choix multiple",
+      "es": "Puede elegir varias"
+    },
+    "situationTitle": {
+      "zh": "您的情況",
+      "zhCN": "您的情况",
+      "en": "Your situation",
+      "ja": "ご状況",
+      "fr": "Votre situation",
+      "es": "Su situación"
+    },
+    "situationLabel": {
+      "zh": "想先解決什麼？現在怎麼做？",
+      "zhCN": "想先解决什么？现在怎么做？",
+      "en": "What would you like to solve first, and how do you handle it today?",
+      "ja": "まず解決したいことは何ですか。現在はどのように対応していますか。",
+      "fr": "Que souhaitez-vous résoudre en premier, et comment procédez-vous aujourd’hui ?",
+      "es": "¿Qué le gustaría resolver primero y cómo lo hace actualmente?"
+    },
+    "situationHint": {
+      "zh": "簡單寫幾句就好，例如目前用的系統或遇到的麻煩。",
+      "zhCN": "简单写几句就好，例如目前用的系统或遇到的麻烦。",
+      "en": "A few sentences is enough, for example the system you use now or what gets in the way.",
+      "ja": "数行で結構です。たとえば、現在お使いのシステムやお困りのことなど。",
+      "fr": "Quelques phrases suffisent, par exemple le système que vous utilisez actuellement ou ce qui vous gêne.",
+      "es": "Con unas pocas frases basta, por ejemplo el sistema que usa ahora o lo que le causa problemas."
+    },
+    "contactTitle": {
+      "zh": "怎麼聯絡您",
+      "zhCN": "怎么联系您",
+      "en": "How we can reach you",
+      "ja": "ご連絡先",
+      "fr": "Comment vous joindre",
+      "es": "Cómo contactarlo"
+    },
+    "phoneHint": {
+      "zh": "手機或市話皆可",
+      "zhCN": "手机或市话皆可",
+      "en": "Mobile or landline",
+      "ja": "携帯電話・固定電話どちらでも可",
+      "fr": "Mobile ou fixe",
+      "es": "Celular o teléfono fijo"
+    },
+    "contactTime": {
+      "label": {
+        "zh": "方便聯絡的時間",
+        "zhCN": "方便联系的时间",
+        "en": "Best time to call",
+        "ja": "ご連絡可能な時間帯",
+        "fr": "Meilleur moment pour vous appeler",
+        "es": "Mejor horario para llamarle"
+      },
+      "options": [
+        {
+          "id": "am",
+          "label": {
+            "zh": "上午",
+            "zhCN": "上午",
+            "en": "Morning",
+            "ja": "午前",
+            "fr": "Matin",
+            "es": "Mañana"
+          }
+        },
+        {
+          "id": "pm",
+          "label": {
+            "zh": "下午",
+            "zhCN": "下午",
+            "en": "Afternoon",
+            "ja": "午後",
+            "fr": "Après-midi",
+            "es": "Tarde"
+          }
+        },
+        {
+          "id": "eve",
+          "label": {
+            "zh": "晚上",
+            "zhCN": "晚上",
+            "en": "Evening",
+            "ja": "夜間",
+            "fr": "Soir",
+            "es": "Noche"
+          }
+        },
+        {
+          "id": "any",
+          "label": {
+            "zh": "都可以",
+            "zhCN": "都可以",
+            "en": "Any time",
+            "ja": "いつでも可",
+            "fr": "À tout moment",
+            "es": "Cualquier hora"
+          }
+        }
+      ]
+    },
+    "sending": {
+      "zh": "送出中…",
+      "zhCN": "送出中…",
+      "en": "Sending…",
+      "ja": "送信中…",
+      "fr": "Envoi en cours…",
+      "es": "Enviando…"
+    },
+    "phoneError": {
+      "zh": "請輸入正確的電話號碼（手機或市話）。",
+      "zhCN": "请输入正确的电话号码（手机或市话）。",
+      "en": "Please enter a valid phone number (mobile or landline).",
+      "ja": "正しい電話番号（携帯電話または固定電話）をご入力ください。",
+      "fr": "Veuillez saisir un numéro de téléphone valide (mobile ou fixe).",
+      "es": "Ingrese un número de teléfono válido (celular o fijo)."
+    },
+    "deskTitle": {
+      "zh": "管理室",
+      "zhCN": "管理室",
+      "en": "Front desk",
+      "ja": "管理室",
+      "fr": "Accueil",
+      "es": "Recepción"
+    },
+    "deskLede": {
+      "zh": "我們會從您已經有的設備與系統開始談，不必全部換掉。",
+      "zhCN": "我们会从您已经有的设备与系统开始谈，不必全部换掉。",
+      "en": "We start from the equipment and systems you already have; nothing needs replacing wholesale.",
+      "ja": "まずはすでにお持ちの設備やシステムを活かすところからご相談します。すべてを入れ替える必要はありません。",
+      "fr": "Nous partons des équipements et systèmes que vous avez déjà ; rien n’oblige à tout remplacer.",
+      "es": "Partimos de los equipos y sistemas que usted ya tiene; no es necesario reemplazarlo todo."
+    },
+    "questions": {
+      "home": [
+        {
+          "id": "homeState",
+          "label": {
+            "zh": "房子的狀態",
+            "zhCN": "房子的状态",
+            "en": "Your home",
+            "ja": "住まいの状況",
+            "fr": "État du logement",
+            "es": "Estado de su vivienda"
+          },
+          "multi": false,
+          "options": [
+            {
+              "id": "homeState1",
+              "label": {
+                "zh": "新成屋或建案",
+                "zhCN": "新成屋或建案",
+                "en": "New build or development",
+                "ja": "新築・分譲プロジェクト",
+                "fr": "Logement neuf ou programme immobilier",
+                "es": "Obra nueva o desarrollo inmobiliario"
+              }
+            },
+            {
+              "id": "homeState2",
+              "label": {
+                "zh": "已入住",
+                "zhCN": "已入住",
+                "en": "Lived in",
+                "ja": "入居済み",
+                "fr": "Déjà habité",
+                "es": "Ya habitada"
+              }
+            },
+            {
+              "id": "homeState3",
+              "label": {
+                "zh": "正在裝修",
+                "zhCN": "正在装修",
+                "en": "Under renovation",
+                "ja": "改装中",
+                "fr": "En rénovation",
+                "es": "En remodelación"
+              }
+            }
+          ]
+        },
+        {
+          "id": "homeFirst",
+          "label": {
+            "zh": "想先處理的事",
+            "zhCN": "想先处理的事",
+            "en": "What to sort out first",
+            "ja": "最初に取り組みたいこと",
+            "fr": "Priorité de départ",
+            "es": "Qué atender primero"
+          },
+          "multi": true,
+          "options": [
+            {
+              "id": "homeFirst1",
+              "label": {
+                "zh": "燈光與情境",
+                "zhCN": "灯光与情境",
+                "en": "Lighting and scenes",
+                "ja": "照明とシーン",
+                "fr": "Éclairage et scènes",
+                "es": "Iluminación y escenas"
+              }
+            },
+            {
+              "id": "homeFirst2",
+              "label": {
+                "zh": "空調",
+                "zhCN": "空调",
+                "en": "Air conditioning",
+                "ja": "空調",
+                "fr": "Climatisation",
+                "es": "Aire acondicionado"
+              }
+            },
+            {
+              "id": "homeFirst3",
+              "label": {
+                "zh": "窗簾",
+                "zhCN": "窗帘",
+                "en": "Curtains",
+                "ja": "カーテン",
+                "fr": "Rideaux",
+                "es": "Cortinas"
+              }
+            },
+            {
+              "id": "homeFirst4",
+              "label": {
+                "zh": "感測與安全",
+                "zhCN": "传感与安全",
+                "en": "Sensors and safety",
+                "ja": "センサーとセキュリティ",
+                "fr": "Capteurs et sécurité",
+                "es": "Sensores y seguridad"
+              }
+            },
+            {
+              "id": "homeFirst5",
+              "label": {
+                "zh": "社區服務",
+                "zhCN": "社区服务",
+                "en": "Community services",
+                "ja": "コミュニティサービス",
+                "fr": "Services de la résidence",
+                "es": "Servicios de la comunidad"
+              }
+            }
+          ]
+        }
+      ],
+      "building": [
+        {
+          "id": "bldRole",
+          "label": {
+            "zh": "您的身分",
+            "zhCN": "您的身分",
+            "en": "You are",
+            "ja": "ご自身の立場",
+            "fr": "Votre profil",
+            "es": "Su perfil"
+          },
+          "multi": false,
+          "options": [
+            {
+              "id": "bldRole1",
+              "label": {
+                "zh": "管委會",
+                "zhCN": "管委会",
+                "en": "Management committee",
+                "ja": "管理組合",
+                "fr": "Conseil syndical",
+                "es": "Comité de administración"
+              }
+            },
+            {
+              "id": "bldRole2",
+              "label": {
+                "zh": "物業公司",
+                "zhCN": "物业公司",
+                "en": "Property manager",
+                "ja": "管理会社",
+                "fr": "Société de gestion",
+                "es": "Administradora de inmuebles"
+              }
+            },
+            {
+              "id": "bldRole3",
+              "label": {
+                "zh": "建商",
+                "zhCN": "建商",
+                "en": "Developer",
+                "ja": "デベロッパー",
+                "fr": "Promoteur",
+                "es": "Desarrolladora"
+              }
+            },
+            {
+              "id": "bldRole4",
+              "label": {
+                "zh": "住戶",
+                "zhCN": "住户",
+                "en": "Resident",
+                "ja": "居住者",
+                "fr": "Résident",
+                "es": "Residente"
+              }
+            }
+          ]
+        },
+        {
+          "id": "bldSize",
+          "label": {
+            "zh": "社區規模",
+            "zhCN": "社区规模",
+            "en": "Community size",
+            "ja": "コミュニティの規模",
+            "fr": "Taille de la résidence",
+            "es": "Tamaño de la comunidad"
+          },
+          "multi": false,
+          "options": [
+            {
+              "id": "bldSize1",
+              "label": {
+                "zh": "100 戶以下",
+                "zhCN": "100 户以下",
+                "en": "Under 100 homes",
+                "ja": "100 戸未満",
+                "fr": "Moins de 100 logements",
+                "es": "Menos de 100 viviendas"
+              }
+            },
+            {
+              "id": "bldSize2",
+              "label": {
+                "zh": "100–300 戶",
+                "zhCN": "100–300 户",
+                "en": "100–300 homes",
+                "ja": "100–300 戸",
+                "fr": "100–300 logements",
+                "es": "100–300 viviendas"
+              }
+            },
+            {
+              "id": "bldSize3",
+              "label": {
+                "zh": "300 戶以上",
+                "zhCN": "300 户以上",
+                "en": "Over 300 homes",
+                "ja": "300 戸以上",
+                "fr": "Plus de 300 logements",
+                "es": "Más de 300 viviendas"
+              }
+            }
+          ]
+        },
+        {
+          "id": "bldFirst",
+          "label": {
+            "zh": "想先改善",
+            "zhCN": "想先改善",
+            "en": "What to improve first",
+            "ja": "最初に改善したいこと",
+            "fr": "À améliorer en priorité",
+            "es": "Qué mejorar primero"
+          },
+          "multi": true,
+          "options": [
+            {
+              "id": "bldFirst1",
+              "label": {
+                "zh": "公告",
+                "zhCN": "公告",
+                "en": "Announcements",
+                "ja": "お知らせ",
+                "fr": "Annonces",
+                "es": "Avisos"
+              }
+            },
+            {
+              "id": "bldFirst2",
+              "label": {
+                "zh": "報修",
+                "zhCN": "报修",
+                "en": "Repair requests",
+                "ja": "修理依頼",
+                "fr": "Demandes de réparation",
+                "es": "Solicitudes de reparación"
+              }
+            },
+            {
+              "id": "bldFirst3",
+              "label": {
+                "zh": "公設預約",
+                "zhCN": "公设预约",
+                "en": "Facility booking",
+                "ja": "共用施設の予約",
+                "fr": "Réservation des espaces communs",
+                "es": "Reserva de áreas comunes"
+              }
+            },
+            {
+              "id": "bldFirst4",
+              "label": {
+                "zh": "包裹",
+                "zhCN": "包裹",
+                "en": "Parcels",
+                "ja": "荷物",
+                "fr": "Colis",
+                "es": "Paquetes"
+              }
+            }
+          ]
+        }
+      ],
+      "care": [
+        {
+          "id": "careType",
+          "label": {
+            "zh": "單位類型",
+            "zhCN": "单位类型",
+            "en": "Type of site",
+            "ja": "施設の種類",
+            "fr": "Type de site",
+            "es": "Tipo de centro"
+          },
+          "multi": false,
+          "options": [
+            {
+              "id": "careType1",
+              "label": {
+                "zh": "日照中心",
+                "zhCN": "日照中心",
+                "en": "Day-care centre",
+                "ja": "デイサービスセンター",
+                "fr": "Centre d’accueil de jour",
+                "es": "Centro de día"
+              }
+            },
+            {
+              "id": "careType2",
+              "label": {
+                "zh": "長照據點",
+                "zhCN": "长照据点",
+                "en": "Long-term-care site",
+                "ja": "長期ケア拠点",
+                "fr": "Site de soins de longue durée",
+                "es": "Centro de cuidados de largo plazo"
+              }
+            },
+            {
+              "id": "careType3",
+              "label": {
+                "zh": "其他",
+                "zhCN": "其他",
+                "en": "Other",
+                "ja": "その他",
+                "fr": "Autre",
+                "es": "Otro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "careSize",
+          "label": {
+            "zh": "服務的長輩人數",
+            "zhCN": "服务的长辈人数",
+            "en": "Elders served",
+            "ja": "対応している高齢者の人数",
+            "fr": "Nombre de personnes âgées accueillies",
+            "es": "Número de adultos mayores atendidos"
+          },
+          "multi": false,
+          "options": [
+            {
+              "id": "careSize1",
+              "label": {
+                "zh": "30 位以下",
+                "zhCN": "30 位以下",
+                "en": "Under 30",
+                "ja": "30名未満",
+                "fr": "Moins de 30",
+                "es": "Menos de 30"
+              }
+            },
+            {
+              "id": "careSize2",
+              "label": {
+                "zh": "30–60 位",
+                "zhCN": "30–60 位",
+                "en": "30–60",
+                "ja": "30–60名",
+                "fr": "30–60",
+                "es": "30–60"
+              }
+            },
+            {
+              "id": "careSize3",
+              "label": {
+                "zh": "60 位以上",
+                "zhCN": "60 位以上",
+                "en": "Over 60",
+                "ja": "60名以上",
+                "fr": "Plus de 60",
+                "es": "Más de 60"
+              }
+            }
+          ]
+        },
+        {
+          "id": "careFirst",
+          "label": {
+            "zh": "想先改善",
+            "zhCN": "想先改善",
+            "en": "What to improve first",
+            "ja": "最初に改善したいこと",
+            "fr": "À améliorer en priorité",
+            "es": "Qué mejorar primero"
+          },
+          "multi": true,
+          "options": [
+            {
+              "id": "careFirst1",
+              "label": {
+                "zh": "每日總覽",
+                "zhCN": "每日总览",
+                "en": "Daily overview",
+                "ja": "日次の概況",
+                "fr": "Vue d’ensemble quotidienne",
+                "es": "Resumen diario"
+              }
+            },
+            {
+              "id": "careFirst2",
+              "label": {
+                "zh": "評鑑資料",
+                "zhCN": "评鉴数据",
+                "en": "Evaluation data",
+                "ja": "評価資料",
+                "fr": "Données d’évaluation",
+                "es": "Datos de evaluación"
+              }
+            },
+            {
+              "id": "careFirst3",
+              "label": {
+                "zh": "每月報告",
+                "zhCN": "每月报告",
+                "en": "Monthly report",
+                "ja": "月次レポート",
+                "fr": "Rapport mensuel",
+                "es": "Informe mensual"
+              }
+            },
+            {
+              "id": "careFirst4",
+              "label": {
+                "zh": "提醒",
+                "zhCN": "提醒",
+                "en": "Reminders",
+                "ja": "リマインド",
+                "fr": "Rappels",
+                "es": "Recordatorios"
+              }
+            }
+          ]
+        }
+      ],
+      "shop": [
+        {
+          "id": "shopRole",
+          "label": {
+            "zh": "您是",
+            "zhCN": "您是",
+            "en": "You are",
+            "ja": "ご自身は",
+            "fr": "Vous êtes",
+            "es": "Usted es"
+          },
+          "multi": false,
+          "options": [
+            {
+              "id": "shopRole1",
+              "label": {
+                "zh": "單一店家",
+                "zhCN": "单一店家",
+                "en": "A single shop",
+                "ja": "単独店舗",
+                "fr": "Un commerce unique",
+                "es": "Una sola tienda"
+              }
+            },
+            {
+              "id": "shopRole2",
+              "label": {
+                "zh": "連鎖品牌",
+                "zhCN": "连锁品牌",
+                "en": "A chain brand",
+                "ja": "チェーンブランド",
+                "fr": "Une enseigne en réseau",
+                "es": "Una marca con cadena de tiendas"
+              }
+            },
+            {
+              "id": "shopRole3",
+              "label": {
+                "zh": "經銷商",
+                "zhCN": "经销商",
+                "en": "A dealer",
+                "ja": "販売代理店",
+                "fr": "Un distributeur",
+                "es": "Un distribuidor"
+              }
+            },
+            {
+              "id": "shopRole4",
+              "label": {
+                "zh": "團購主",
+                "zhCN": "团购主",
+                "en": "A group-buy organiser",
+                "ja": "団体購入の主催者",
+                "fr": "Organisateur d’achats groupés",
+                "es": "Organizador de compras grupales"
+              }
+            }
+          ]
+        },
+        {
+          "id": "shopSize",
+          "label": {
+            "zh": "門市數",
+            "zhCN": "门市数",
+            "en": "Number of stores",
+            "ja": "店舗数",
+            "fr": "Nombre de magasins",
+            "es": "Número de tiendas"
+          },
+          "multi": false,
+          "options": [
+            {
+              "id": "shopSize1",
+              "label": {
+                "zh": "1 間",
+                "zhCN": "1 间",
+                "en": "1",
+                "ja": "1店舗",
+                "fr": "1",
+                "es": "1"
+              }
+            },
+            {
+              "id": "shopSize2",
+              "label": {
+                "zh": "2–10 間",
+                "zhCN": "2–10 间",
+                "en": "2–10",
+                "ja": "2–10店舗",
+                "fr": "2–10",
+                "es": "2–10"
+              }
+            },
+            {
+              "id": "shopSize3",
+              "label": {
+                "zh": "10 間以上",
+                "zhCN": "10 间以上",
+                "en": "Over 10",
+                "ja": "10店舗以上",
+                "fr": "Plus de 10",
+                "es": "Más de 10"
+              }
+            }
+          ]
+        },
+        {
+          "id": "shopFirst",
+          "label": {
+            "zh": "想先處理",
+            "zhCN": "想先处理",
+            "en": "What to sort out first",
+            "ja": "最初に取り組みたいこと",
+            "fr": "Priorité de départ",
+            "es": "Qué atender primero"
+          },
+          "multi": true,
+          "options": [
+            {
+              "id": "shopFirst1",
+              "label": {
+                "zh": "上架與訂單",
+                "zhCN": "上架与订单",
+                "en": "Listings and orders",
+                "ja": "出品と注文",
+                "fr": "Mise en vente et commandes",
+                "es": "Publicaciones y pedidos"
+              }
+            },
+            {
+              "id": "shopFirst2",
+              "label": {
+                "zh": "會員與訂閱",
+                "zhCN": "会员与订阅",
+                "en": "Members and subscriptions",
+                "ja": "会員とサブスクリプション",
+                "fr": "Membres et abonnements",
+                "es": "Miembros y suscripciones"
+              }
+            },
+            {
+              "id": "shopFirst3",
+              "label": {
+                "zh": "促銷與優惠券",
+                "zhCN": "促销与优惠券",
+                "en": "Promotions and coupons",
+                "ja": "販促とクーポン",
+                "fr": "Promotions et coupons",
+                "es": "Promociones y cupones"
+              }
+            },
+            {
+              "id": "shopFirst4",
+              "label": {
+                "zh": "庫存",
+                "zhCN": "库存",
+                "en": "Stock",
+                "ja": "在庫",
+                "fr": "Stock",
+                "es": "Inventario"
+              }
+            },
+            {
+              "id": "shopFirst5",
+              "label": {
+                "zh": "團購",
+                "zhCN": "团购",
+                "en": "Group buying",
+                "ja": "団体購入",
+                "fr": "Achats groupés",
+                "es": "Compras grupales"
+              }
+            }
+          ]
+        }
+      ],
+      "integration": [
+        {
+          "id": "intSys",
+          "label": {
+            "zh": "想串接的系統",
+            "zhCN": "想串接的系统",
+            "en": "Systems to connect",
+            "ja": "連携したいシステム",
+            "fr": "Systèmes à connecter",
+            "es": "Sistemas por conectar"
+          },
+          "multi": true,
+          "options": [
+            {
+              "id": "intSys1",
+              "label": {
+                "zh": "ERP",
+                "zhCN": "ERP",
+                "en": "ERP",
+                "ja": "ERP",
+                "fr": "ERP",
+                "es": "ERP"
+              }
+            },
+            {
+              "id": "intSys2",
+              "label": {
+                "zh": "CRM",
+                "zhCN": "CRM",
+                "en": "CRM",
+                "ja": "CRM",
+                "fr": "CRM",
+                "es": "CRM"
+              }
+            },
+            {
+              "id": "intSys3",
+              "label": {
+                "zh": "POS",
+                "zhCN": "POS",
+                "en": "POS",
+                "ja": "POS",
+                "fr": "POS",
+                "es": "POS"
+              }
+            },
+            {
+              "id": "intSys4",
+              "label": {
+                "zh": "其他",
+                "zhCN": "其他",
+                "en": "Other",
+                "ja": "その他",
+                "fr": "Autre",
+                "es": "Otro"
+              }
+            }
+          ]
+        },
+        {
+          "id": "intData",
+          "label": {
+            "zh": "想串接的資料",
+            "zhCN": "想串接的数据",
+            "en": "Data to connect",
+            "ja": "連携したいデータ",
+            "fr": "Données à connecter",
+            "es": "Datos por conectar"
+          },
+          "multi": true,
+          "options": [
+            {
+              "id": "intData1",
+              "label": {
+                "zh": "商品",
+                "zhCN": "商品",
+                "en": "Products",
+                "ja": "商品",
+                "fr": "Produits",
+                "es": "Productos"
+              }
+            },
+            {
+              "id": "intData2",
+              "label": {
+                "zh": "訂單",
+                "zhCN": "订单",
+                "en": "Orders",
+                "ja": "注文",
+                "fr": "Commandes",
+                "es": "Pedidos"
+              }
+            },
+            {
+              "id": "intData3",
+              "label": {
+                "zh": "會員",
+                "zhCN": "会员",
+                "en": "Members",
+                "ja": "会員",
+                "fr": "Membres",
+                "es": "Miembros"
+              }
+            },
+            {
+              "id": "intData4",
+              "label": {
+                "zh": "庫存",
+                "zhCN": "库存",
+                "en": "Stock",
+                "ja": "在庫",
+                "fr": "Stock",
+                "es": "Inventario"
+              }
+            }
+          ]
+        }
+      ]
+    }
   }
 }
