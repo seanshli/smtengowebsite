@@ -256,7 +256,7 @@
             </h2>
             <i18n-t keypath="product.water_filter.subTitle" tag="p" class="pd-lead">
               <template v-slot:quality>
-                <a class="pd-inline-link" href="https://oss.smtengo.com/engo-bucket-prod/device/WechatIMG87.pdf" target="_blank">
+                <a class="pd-inline-link" href="/docs/engo-w601-sgs.pdf" target="_blank" rel="noopener">
                   <!-- SGS水質檢測 -->
                   {{ $t('product.water_filter.quality') }}
                 </a>
