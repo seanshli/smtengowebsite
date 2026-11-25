@@ -14,6 +14,7 @@ import { detectLocale, toLineText, type LineLocale } from './line.js'
 // bundle because the path is a literal.
 const require = createRequire(import.meta.url)
 const knowledgeBase: Record<string, any[]> = require('../src/data/knowledge_base.json')
+const solutionsData: { qa: { items: any[] }; solutions: any[] } = require('../src/data/solutions.json')
 
 /** Same wording as the website chatbot (src/locale/*.ts → chatbot.*). */
 export const LINE_STRINGS: Record<LineLocale, AnswerStrings & { welcome: string; group_hint: string }> = {
@@ -104,7 +105,7 @@ export async function processLineEvents(events: LineEvent[], deps: BotDeps): Pro
       const question = cleanQuestion(ev.message!.text!)
       const locale = detectLocale(question)
       const strings = LINE_STRINGS[locale]
-      const answer = composeAnswer(knowledgeBase as any, question, locale, strings)
+      const answer = composeAnswer(knowledgeBase as any, question, locale, strings, undefined, solutionsData.qa.items, solutionsData.solutions)
 
       // 本地知識庫沒命中時改問商城：退貨、鑑賞期、運費、訂閱、付款這些
       // 題目的真相在 Shop，我們這邊一個字都沒有（2026-09-30 實測全數落空）。

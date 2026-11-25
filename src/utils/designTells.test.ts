@@ -354,6 +354,7 @@ describe('chatbot answers prospect questions from the Q&A (2026-11-24)', () => {
   it('a tapped or word-for-word prospect question is answered from solutions.json qa, not the keyword matcher', () => {
     const bot = readFileSync(resolve(__dirname, '../components/Chatbot.vue'), 'utf-8')
     expect(bot).toContain('const qaHit = qaAnswerFor(rawQuery)')
-    expect(bot).toMatch(/normalizeQuery\(q\.q\[l\]\) === n/)
+    expect(bot).toContain('resolveQuestion(knowledgeBase as any, (solutionsData as any).qa.items, raw)')
+    expect(readFileSync(resolve(__dirname, '../../lib/chatbot-answer.ts'), 'utf-8')).toContain('resolveQuestion(kb, qaItems, rawQuery')
   })
 })

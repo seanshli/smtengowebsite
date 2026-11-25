@@ -100,14 +100,15 @@ describe('processLineEvents', () => {
       { type: 'message', replyToken: 'r1', source: { type: 'user' }, message: { type: 'text', text: '智管家商城是什麼' } },
     ]
     const out = await processLineEvents(events, { reply, log })
-    expect(out).toEqual([{ event: 'message', locale: 'zh', matched: true, id: 'shop-platform', replied: true }])
+    // Answered from the prospect Q&A (qa14 「enGo 安購商城是什麼？」), the same routing as the website chatbot.
+    expect(out).toEqual([{ event: 'message', locale: 'zh', matched: true, id: 'qa14', replied: true }])
     const [token, texts] = reply.mock.calls[0] as any
     expect(token).toBe('r1')
-    expect(texts[0]).toContain(SHOP_URL)
+    expect(texts[0]).toContain(new URL(SHOP_URL).host)
     expect(texts[0]).not.toMatch(/\*\*|\]\(/)
     expect(log.mock.calls).toEqual([
       ['智管家商城是什麼', 'line-zh', true],
-      ['kb:shop-platform', 'line-zh', true],
+      ['kb:qa14', 'line-zh', true],
     ])
   })
 
