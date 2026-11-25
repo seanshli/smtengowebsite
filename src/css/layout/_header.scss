@@ -102,13 +102,23 @@ nav a {
     right: 0px;
     background: white;
     height: 100%;
-    padding: 20px 20px 20px 40px;
+    height: 100dvh;
+    // The menu is longer than a phone screen: scroll inside the drawer, never the page behind it.
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 20px 20px calc(40px + env(safe-area-inset-bottom)) 40px;
     border-left: 1px solid $hairline;
     transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     z-index: 150;
 
     @media (max-width: 1024px) and (min-width: 769px) {
         width: 30%;
+    }
+
+    // Phones: wide enough that 我們的使命 or 店家與通路 stay on one line.
+    @media (max-width: 768px) {
+        width: min(300px, 84vw);
+        padding-left: 28px;
     }
 
     .sublink {
@@ -120,7 +130,7 @@ nav a {
         }
 
         @media (max-width: 768px) {
-            margin: 0 14%;
+            margin: 0 0 0 22px;
         }
     }
 }
@@ -210,6 +220,12 @@ nav a {
 .hidden {
     opacity: 0;
     transform: translateX(100%);
+    visibility: hidden;
+}
+
+// While the menu is open the floating chat button would sit on top of the last menu items.
+html.menu-open .chatbot-container {
+    display: none;
 }
 
 .dropdown {

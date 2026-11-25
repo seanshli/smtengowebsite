@@ -136,13 +136,18 @@ export default defineComponent({
       { immediate: true }
     )
 
+    const setMenu = (open: boolean) => {
+      const menu = document.querySelector('.collapsible-menu-container')
+      if (!menu) return
+      menu.classList.toggle('hidden', !open)
+      document.documentElement.classList.toggle('menu-open', open)
+    }
     const toggleMenu = () => {
       const menu = document.querySelector('.collapsible-menu-container')
-
-      if (menu) {
-        menu.classList.toggle('hidden')
-      }
+      setMenu(!!menu?.classList.contains('hidden'))
     }
+    // A tap on a menu link navigates: close the drawer so the new page is visible.
+    router.afterEach(() => setMenu(false))
 
     // zh, zhCN and en are the locales with real URLs (/, /zh-cn, /en), so
     // switching between them has to move the address bar — otherwise the page

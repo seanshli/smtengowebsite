@@ -54,7 +54,7 @@
           </g>
 
           <!-- label sits below the circle: gives the glyph the whole disc and
-               stops 清風除濕機 being squeezed onto two 13px lines -->
+               stops 新風除濕機 being squeezed onto two 13px lines -->
           <text class="ll-node-label" y="54">{{ label(d) }}</text>
         </g>
       </g>
@@ -124,7 +124,7 @@ const DEVICES: Device[] = [
   },
   {
     x: 88, y: 310, path: 'M 88 310 C 210 252, 330 368, 436 310',
-    zh: '清風除濕機', zhCN: '清风除湿机', en: 'Fresh Air', ja: '新風除湿',
+    zh: '新風除濕機', zhCN: '新风除湿机', en: 'Fresh Air', ja: '新風除湿',
     icon: [
       'M -10 -5 L 1 -5 A 3.2 3.2 0 1 0 -2 -8.5',
       'M -10 1 L 4 1 A 3.2 3.2 0 1 1 1 4.5',

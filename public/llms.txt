@@ -20,7 +20,7 @@
 ## 解決方案（2026-11 起網站主選單；狀態依產品事實表）
 
 - [住家 enGo HMS](https://www.smtengo.com/solutions/home)：已上線。牆掛平板與 enGo智慧管家 App 管理燈光、空調、窗簾與感測器；社區公告、報修、公設預約與包裹通知；語音操作僅在牆掛平板。
-- [照護 enGo Care](https://www.smtengo.com/solutions/care)：已上線，給日照與長照據點。匯入既有照護紀錄平台與設備的匯出檔，產出據點今日總覽、評鑑指標、提醒與每月證據報告。非醫療器材，不做診斷。
+- [照護 enGo Care](https://www.smtengo.com/solutions/care)：已上線，給日照與長照據點。匯入既有照護紀錄平台與設備的匯出檔，產出據點今日總覽、評鑑指標、提醒與每月數據報告。非醫療器材，不做診斷。
 - [大樓與物業 enGo BMS](https://www.smtengo.com/solutions/building)：住戶端社區功能已在 App 使用；給管委會與物業的管理平台開發中，接受試點社區。尚無正式上線的管理平台客戶。
 - [店家與通路 enGo Shop](https://www.smtengo.com/solutions/shop)：enGo 安購商城（多商家、訂閱、團購、優惠券、線上刷卡與電子發票）已上線；經銷管理開發中。
 - [系統整合](https://www.smtengo.com/solutions/integration)：與既有 ERP、CRM 或設備的串接依專案規劃，目前沒有現成的 ERP／CRM 連接器。
