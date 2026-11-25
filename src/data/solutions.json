@@ -251,12 +251,12 @@
         },
         {
           "status": "live",
-          "zh": "每月證據報告自動產出",
-          "zhCN": "每月证据报告自动产出",
-          "en": "Monthly evidence report produced automatically",
-          "ja": "月次のエビデンスレポートを自動作成",
-          "fr": "Rapport mensuel de preuves produit automatiquement",
-          "es": "Reporte mensual de evidencias generado automáticamente"
+          "zh": "每月數據報告自動產出",
+          "zhCN": "每月数据报告自动产出",
+          "en": "Monthly data report produced automatically",
+          "ja": "月次のデータレポートを自動作成",
+          "fr": "Rapport mensuel de données produit automatiquement",
+          "es": "Reporte mensual de datos generado automáticamente"
         },
         {
           "status": "live",
@@ -921,12 +921,12 @@
           "es": "¿Es necesario reemplazar nuestro sistema actual de registros de cuidado?"
         },
         "a": {
-          "zh": "不需要。enGo Care 匯入您既有系統與設備的匯出檔，整理成據點儀表板、評鑑指標與每月證據報告。",
-          "zhCN": "不需要。enGo Care 导入您既有系统与设备的导出档，整理成据点仪表板、评鉴指针与每月证据报告。",
-          "en": "No. enGo Care imports the export files from your existing systems and devices and turns them into a site dashboard, evaluation indicators and a monthly evidence report.",
-          "ja": "必要ありません。enGo Care は、既存のシステムや機器から出力したファイルを取り込み、拠点ダッシュボード、評価指標、月次のエビデンスレポートにまとめます。",
-          "fr": "Non. enGo Care importe les fichiers d’export de vos systèmes et appareils existants et les transforme en un tableau de bord du site, en indicateurs d’évaluation et en un rapport mensuel de preuves.",
-          "es": "No. enGo Care importa los archivos de exportación de sus sistemas y dispositivos actuales y los convierte en un tablero del centro, indicadores de evaluación y un informe mensual de evidencias."
+          "zh": "不需要。enGo Care 匯入您既有系統與設備的匯出檔，整理成據點儀表板、評鑑指標與每月數據報告。",
+          "zhCN": "不需要。enGo Care 导入您既有系统与设备的导出档，整理成据点仪表板、评鉴指针与每月数据报告。",
+          "en": "No. enGo Care imports the export files from your existing systems and devices and turns them into a site dashboard, evaluation indicators and a monthly data report.",
+          "ja": "必要ありません。enGo Care は、既存のシステムや機器から出力したファイルを取り込み、拠点ダッシュボード、評価指標、月次のデータレポートにまとめます。",
+          "fr": "Non. enGo Care importe les fichiers d’export de vos systèmes et appareils existants et les transforme en un tableau de bord du site, en indicateurs d’évaluation et en un rapport mensuel de données.",
+          "es": "No. enGo Care importa los archivos de exportación de sus sistemas y dispositivos actuales y los convierte en un tablero del centro, indicadores de evaluación y un informe mensual de datos."
         }
       },
       {

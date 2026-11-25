@@ -117,16 +117,16 @@ const PILLARS: Pillar[] = [
     icon: ICONS.air,
     title: { zh: '空氣淨化監測', zhCN: '空气净化监测', en: 'Air purification & monitoring', ja: '空気浄化モニタリング', fr: 'Purification et surveillance de l’air', es: 'Purificación y monitoreo del aire' },
     copy: {
-      zh: '全天候 PM2.5、VOC 與氣體監測，串連清風除濕與新風設備，保障室內每一口健康空氣。',
-      zhCN: '全天候 PM2.5、VOC 与气体监测，串连清风除湿与新风设备，保障室内每一口健康空气。',
+      zh: '全天候 PM2.5、VOC 與氣體監測，串連新風除濕設備，保障室內每一口健康空氣。',
+      zhCN: '全天候 PM2.5、VOC 与气体监测，串连新风除湿设备，保障室内每一口健康空气。',
       en: 'Round-the-clock PM2.5, VOC, and gas monitoring, wired to fresh-air dehumidification, every breath indoors accounted for.',
       ja: '24時間体制でPM2.5、VOC、ガスを監視し、新風除湿機器と連動。室内の空気をひと呼吸ごとに見守ります。',
       fr: 'Surveillance continue des PM2,5, des COV et des gaz, reliée à la déshumidification à air neuf : chaque respiration à l’intérieur est prise en compte.',
       es: 'Monitoreo permanente de PM2.5, COV y gases, conectado a la deshumidificación de aire fresco, para cuidar cada respiración en interiores.'
     },
     points: {
-      zh: ['PM2.5／VOC／CO₂ 即時監測', '清風除濕・新風自動連動', '異常即時推播'],
-      zhCN: ['PM2.5／VOC／CO₂ 实时监测', '清风除湿・新风自动连动', '异常实时推播'],
+      zh: ['PM2.5／VOC／CO₂ 即時監測', '新風除濕自動連動', '異常即時推播'],
+      zhCN: ['PM2.5／VOC／CO₂ 实时监测', '新风除湿自动连动', '异常实时推播'],
       en: ['Live PM2.5 / VOC / CO₂ sensing', 'Auto-linked fresh-air dehumidification', 'Instant anomaly alerts'],
       ja: ['PM2.5／VOC／CO₂をリアルタイム監視', '新風除湿を自動連動', '異常をリアルタイムで通知'],
       fr: ['Mesure en direct des PM2,5 / COV / CO₂', 'Déshumidification à air neuf liée automatiquement', 'Alertes instantanées en cas d’anomalie'],
