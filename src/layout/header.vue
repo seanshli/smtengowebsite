@@ -111,7 +111,7 @@
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { changeLocale, type LanguageType, i18n } from '../main'
+import { changeLocale, type LanguageType, i18n } from '../i18n'
 import { openShop, SHOP_URL } from '@/utils/shopUrl'
 import { pushUnlocalized } from '@/router'
 import solutionsData from '@/data/solutions.json'

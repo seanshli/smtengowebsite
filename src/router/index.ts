@@ -2,7 +2,7 @@ import { nextTick } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { useSeo } from '@/utils/seo'
 import { useAnalytics } from '@/utils/analytics'
-import { changeLocale, i18n } from '@/main'
+import { changeLocale, i18n } from '@/i18n'
 import {
   LOCALE_PREFIXES,
   LOCALIZED,
