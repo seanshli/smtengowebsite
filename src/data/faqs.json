@@ -818,5 +818,45 @@
       "ja": "**はい。同じ会社の、同じストアの新しいバージョンです。** アプリが enGo1 から enGo3 になったのと同じで、ストアも [shoph5.smtengo.com](https://shoph5.smtengo.com/) に移りました。\n\n別会社でも別店舗でもなく、会員情報とこれまでのご注文はそのままです。旧アドレスは現在の入口ではありません。\n\nご注文・返品・配送については、ストアのサポートへ直接お問い合わせください。",
       "es": "**Sí: la misma empresa y la misma tienda, solo una versión más reciente.** Igual que la app pasó de enGo1 a enGo3, la tienda se trasladó a [shoph5.smtengo.com](https://shoph5.smtengo.com/).\n\nNo es otra empresa ni otra tienda: su cuenta y sus pedidos siguen siendo los mismos. La dirección antigua ya no es el acceso.\n\nPara pedidos, devoluciones y envíos, contacte con el soporte de la tienda."
     }
+  },
+  {
+    "id": 56,
+    "category": "features",
+    "question": {
+      "zh": "房間名稱旁的 PM2.5、溫度標籤是什麼？怎麼調整？",
+      "zhCN": "房间名称旁的 PM2.5、温度标签是什么？怎么调整？",
+      "en": "What are the PM2.5 and temperature tags beside a room name, and how do I change them?",
+      "ja": "部屋名の横の PM2.5 や温度のタグは何ですか？どう変更できますか？",
+      "fr": "À quoi servent les puces PM2.5 et température à côté du nom d’une pièce, et comment les modifier ?",
+      "es": "¿Qué son las etiquetas de PM2.5 y temperatura junto al nombre de una habitación y cómo las cambio?"
+    },
+    "answer": {
+      "zh": "房名旁的小標籤是**那個房間**感測器當下量到的數值。在「設置」→「房間空氣品質」勾選要顯示的項目（可選 PM2.5、溫度、濕度、二氧化碳、甲醛、VOC，預設前三項），勾好直接關掉即可，不必存檔。同房有多台感測器時顯示平均值，離線裝置不計入；顯示「--」代表該房間沒有那項感測器，不是故障。**二氧化碳請只看數字，先不要看顏色**：顏色判讀尚未校正，空氣良好也可能顯示紅色。VOC 的數字與顏色可參考，但畫面上的單位標示有誤，正確單位是 mg/m³。",
+      "zhCN": "房名旁的小标签是**那个房间**传感器当下量到的数值。在「设置」→「房间空气品质」勾选要显示的项目（可选 PM2.5、温度、湿度、二氧化碳、甲醛、VOC，预设前三项），勾好直接关掉即可，不必保存。同房有多台传感器时显示平均值，离线设备不计入；显示「--」代表该房间没有那项传感器，不是故障。**二氧化碳请只看数字，先不要看颜色**：颜色判读尚未校正，空气良好也可能显示红色。VOC 的数字与颜色可参考，但画面上的单位标示有误，正确单位是 mg/m³。",
+      "en": "The small tags beside a room name show what **that room's** sensors are reading right now. Open 設置 (Settings) → Room air quality and tick the items to show (PM2.5, temperature, humidity, carbon dioxide, formaldehyde, VOC; the first three are on by default); just close the page, there is nothing to save. With several sensors in a room the tag shows their average and offline devices are left out; \"--\" means the room has no sensor for that item and is not a fault. **For carbon dioxide, read the number only and ignore the colour**: its colour is not calibrated yet and can show red even when the air is good. The VOC number and colour can be trusted, but the unit printed on screen is wrong; the correct unit is mg/m³.",
+      "ja": "部屋名の横の小さなタグは、**その部屋**のセンサーがいま測っている値です。「設置」（設定）→「房間空氣品質」（部屋の空気品質）で表示する項目にチェックを入れます（PM2.5、温度、湿度、二酸化炭素、ホルムアルデヒド、VOC から選択。初期設定は最初の 3 項目）。チェックしたらそのまま閉じるだけで、保存は不要です。同じ部屋にセンサーが複数ある場合は平均値が表示され、オフラインのデバイスは含まれません。「--」はその部屋に該当のセンサーがないという意味で、故障ではありません。**二酸化炭素は色ではなく数値だけをご覧ください**。色の判定がまだ調整されておらず、空気が良くても赤く表示されることがあります。VOC の数値と色は参考にできますが、画面に表示されている単位が誤っており、正しい単位は mg/m³ です。",
+      "fr": "Les petites puces à côté du nom d’une pièce indiquent ce que mesurent en ce moment **les capteurs de cette pièce**. Ouvrez 設置 (Réglages) → 房間空氣品質 (Qualité de l’air des pièces) et cochez les éléments à afficher (PM2.5, température, humidité, dioxyde de carbone, formaldéhyde, COV ; les trois premiers par défaut) ; il suffit de fermer la page, rien n’est à enregistrer. Avec plusieurs capteurs dans une pièce, la puce affiche leur moyenne et les appareils hors ligne sont ignorés ; « -- » signifie que la pièce n’a pas de capteur pour cet élément, et non une panne. **Pour le dioxyde de carbone, lisez uniquement la valeur et ignorez la couleur** : elle n’est pas encore calibrée et peut être rouge même quand l’air est bon. La valeur et la couleur du COV sont fiables, mais l’unité affichée à l’écran est erronée ; l’unité correcte est mg/m³.",
+      "es": "Las pequeñas etiquetas junto al nombre de una habitación muestran lo que miden en ese momento **los sensores de esa habitación**. Abre 設置 (Ajustes) → 房間空氣品質 (Calidad del aire de la habitación) y marca los elementos que quieras ver (PM2.5, temperatura, humedad, dióxido de carbono, formaldehído, COV; los tres primeros vienen marcados por defecto); basta con cerrar la página, no hay nada que guardar. Con varios sensores en una habitación, la etiqueta muestra el promedio y los dispositivos sin conexión no cuentan; «--» significa que la habitación no tiene sensor para ese elemento y no es una avería. **Con el dióxido de carbono, lee solo el número e ignora el color**: aún no está calibrado y puede verse rojo aunque el aire sea bueno. El número y el color del COV son confiables, pero la unidad que aparece en pantalla es incorrecta; la unidad correcta es mg/m³."
+    }
+  },
+  {
+    "id": 57,
+    "category": "features",
+    "question": {
+      "zh": "入戶總閥（斷水閥）的定時為什麼沒有動作？",
+      "zhCN": "入户总阀（断水阀）的定时为什么没有动作？",
+      "en": "Why does the schedule on the main water valve not run?",
+      "ja": "給水本管バルブ（止水弁）の「定時」が動作しないのはなぜですか？",
+      "fr": "Pourquoi la programmation de la vanne d’arrivée d’eau générale ne s’exécute-t-elle pas ?",
+      "es": "¿Por qué no se ejecuta la programación de la válvula general de agua?"
+    },
+    "answer": {
+      "zh": "入戶總閥（斷水閥）的頁面有 0 到 100% 的開度滑桿、水壓與用水讀數、用水明細，並可設定單次用水上限與長時間未用水告警；偵測到漏水會以紅色橫幅告警，並可能自動關閥。**現行正式版的「定時」排了不會到點執行**，設定看得到也存得起來，但時間到閥門不會動作。請不要依賴它做澆灌或夜間關水，需要定時請改用情境。這是已知問題，修正將隨後續版本更新。",
+      "zhCN": "入户总阀（断水阀）的页面有 0 到 100% 的开度滑杆、水压与用水读数、用水明细，并可设置单次用水上限与长时间未用水告警；侦测到漏水会以红色横幅告警，并可能自动关阀。**现行正式版的「定时」排了不会到点运行**，设置看得到也存得起来，但时间到阀门不会动作。请不要依赖它做浇灌或夜间关水，需要定时请改用情境。这是已知问题，修正将随后续版本更新。",
+      "en": "The main water valve (shut-off valve) page has a 0 to 100% opening slider, pressure and usage readings, a usage log, a per-use limit and an alert for a long time without water use; a detected leak raises a red banner and may close the valve automatically. **In the current release the schedule does not run at the set time**: it can be seen and saved, but the valve does not move when the time comes. Do not rely on it for watering or shutting the water off at night; use a scene for scheduled actions. This is a known issue and a fix will come with a later update.",
+      "ja": "給水本管バルブ（止水弁）のページには、0 から 100% の開度スライダー、水圧と使用量の表示、使用明細、1 回あたりの使用量の上限、長時間水を使っていないときの通知があります。漏水を検知すると赤いバナーで知らせ、バルブが自動で閉じる場合があります。**現行の正式版では「定時」は設定した時刻になっても実行されません**。設定は表示も保存もできますが、時刻になってもバルブは動きません。散水や夜間の止水には使わず、時刻に合わせた操作はシーンをご利用ください。既知の問題で、修正は今後のバージョンで提供されます。",
+      "fr": "La page de la vanne d’arrivée d’eau générale (vanne de coupure) propose un curseur d’ouverture de 0 à 100 %, la pression et les relevés de consommation, le détail de consommation, une limite par utilisation et une alerte en cas de longue période sans consommation ; une fuite détectée déclenche une bannière rouge et peut fermer la vanne automatiquement. **Dans la version actuelle, la programmation ne s’exécute pas à l’heure prévue** : elle s’affiche et s’enregistre, mais la vanne ne bouge pas à l’heure dite. Ne vous y fiez pas pour l’arrosage ou la coupure de l’eau la nuit ; utilisez une scène pour les actions programmées. C’est un problème connu, dont la correction viendra avec une prochaine mise à jour.",
+      "es": "La página de la válvula general de agua (válvula de corte) tiene un control deslizante de apertura de 0 a 100 %, lecturas de presión y consumo, el detalle de consumo, un límite por uso y una alerta por mucho tiempo sin consumo; si detecta una fuga muestra un aviso rojo y puede cerrar la válvula automáticamente. **En la versión actual la programación no se ejecuta a la hora fijada**: se ve y se guarda, pero la válvula no se mueve cuando llega la hora. No cuentes con ella para regar ni para cortar el agua por la noche; usa una escena para las acciones programadas. Es un problema conocido y la corrección llegará con una actualización posterior."
+    }
   }
 ]

@@ -156,7 +156,7 @@ export function jsonLdFor(route, lang) {
         : L === 'zhCN'
           ? '给 enGo 社区住户的社区订阅与邻里市集：生鲜、日用与智慧家居配件，送到社区大厅。'
           : '給 enGo 社區住戶的社區訂閱與鄰里市集：生鮮、日用與智慧家居配件，送到社區大廳。',
-      areaServed: 'TW', inLanguage: 'zh-Hant',
+      areaServed: 'TW', knowsLanguage: 'zh-Hant',
       parentOrganization: { '@type': 'Organization', name: LEGAL_NAME, url: BASE },
       sameAs: [`${BASE}${prefix}/product#shop`],
     })
