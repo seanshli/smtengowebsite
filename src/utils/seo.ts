@@ -1,6 +1,6 @@
 import { nextTick } from 'vue'
 import type { RouteLocationNormalized } from 'vue-router'
-import { i18n } from '../main'
+import { i18n } from '../i18n'
 import { rawMessageIn } from './rawMessage'
 import solutionsData from '@/data/solutions.json'
 import { pickField } from '@/composables/useLocaleText'
